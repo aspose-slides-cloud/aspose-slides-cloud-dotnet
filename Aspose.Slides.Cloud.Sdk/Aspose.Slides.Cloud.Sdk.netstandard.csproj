@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Aspose.Slides.Cloud.Sdk</AssemblyName>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>18.2.0.0</Version>
+    <Product>Aspose.Slides for Cloud SDK</Product>
+    <Authors />
+    <Company>Aspose</Company>
+    <Copyright>Copyright 2004-2018 Aspose Pty Ltd.</Copyright>
+    <Description>Client SDK for Aspose Slides Cloud API</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>

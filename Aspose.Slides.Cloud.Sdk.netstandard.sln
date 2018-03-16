@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspose.Slides.Cloud.Sdk", "Aspose.Slides.Cloud.Sdk\Aspose.Slides.Cloud.Sdk.netstandard.csproj", "{7BE9D933-9595-43C4-BCDE-C9C28EA9130D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.Slides.Cloud.Sdk.Tests", "Aspose.Slides.Cloud.Sdk.Tests\Aspose.Slides.Cloud.Sdk.Tests.netstandard.csproj", "{F7218F7D-0673-49BD-9314-ED6F2042E5A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BE9D933-9595-43C4-BCDE-C9C28EA9130D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE9D933-9595-43C4-BCDE-C9C28EA9130D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE9D933-9595-43C4-BCDE-C9C28EA9130D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE9D933-9595-43C4-BCDE-C9C28EA9130D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7218F7D-0673-49BD-9314-ED6F2042E5A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7218F7D-0673-49BD-9314-ED6F2042E5A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7218F7D-0673-49BD-9314-ED6F2042E5A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7218F7D-0673-49BD-9314-ED6F2042E5A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

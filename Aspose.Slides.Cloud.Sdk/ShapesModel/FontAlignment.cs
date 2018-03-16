@@ -1,0 +1,76 @@
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright company="Aspose" file="FontAlignment.cs">
+//   Copyright (c) 2018 Aspose.Slides for Cloud
+// </copyright>
+// <summary>
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+// 
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+// 
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.Xml.Serialization;
+
+namespace Aspose.Slides.Cloud.Sdk.Model
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <value></value>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum FontAlignment
+    {
+        
+        /// <summary>
+        /// Enum Automatic for "Automatic"
+        /// </summary>
+        Automatic,
+        
+        /// <summary>
+        /// Enum Top for "Top"
+        /// </summary>
+        Top,
+        
+        /// <summary>
+        /// Enum Center for "Center"
+        /// </summary>
+        Center,
+        
+        /// <summary>
+        /// Enum Bottom for "Bottom"
+        /// </summary>
+        Bottom,
+        
+        /// <summary>
+        /// Enum Baseline for "Baseline"
+        /// </summary>
+        Baseline,
+        
+        /// <summary>
+        /// Enum Default for "Default"
+        /// </summary>
+        Default
+    }
+
+}
