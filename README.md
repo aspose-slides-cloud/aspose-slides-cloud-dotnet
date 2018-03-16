@@ -1,4 +1,4 @@
-# Aspose.Slides Cloud SDK for .NET [![NuGet]
+# Aspose.Slides Cloud SDK for .NET
 This repository contains Aspose.Slides Cloud SDK for .NET source code. This SDK allows you to work with Aspose.Slides Cloud REST APIs in your .NET applications.
 
 ## How to use the SDK?
