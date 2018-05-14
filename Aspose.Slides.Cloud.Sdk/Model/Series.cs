@@ -115,17 +115,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public SeriesMarker Marker { get; set; }
 
         /// <summary>
-        /// Gets or sets FillFormat
+        /// Get or sets the fill format.
         /// </summary>
         public FillFormat FillFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets EffectFormat
+        /// Get or sets the effect format.
         /// </summary>
         public EffectFormat EffectFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets LineFormat
+        /// Get or sets the line format.
         /// </summary>
         public LineFormat LineFormat { get; set; }
 

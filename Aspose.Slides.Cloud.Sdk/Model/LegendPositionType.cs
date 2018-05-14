@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// the position of the legend on the chart
     /// </summary>
-    /// <value></value>
+    /// <value>the position of the legend on the chart</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum LegendPositionType
     {

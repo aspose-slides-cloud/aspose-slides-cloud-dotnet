@@ -27,6 +27,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 {
     [Method("PostNotesSlideAddNewShape")]
     [Method("PostAddNewShape")]
+    [Method("DeleteSlideShape")]
+    [Method("DeleteNotesSlideShape")]
     internal class EmptyShapePathTestInitializer : TestInitializer
     {
         public EmptyShapePathTestInitializer(string invalidPropertyName) : base(invalidPropertyName)

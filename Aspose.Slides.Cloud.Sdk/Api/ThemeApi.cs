@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public ThemeResponse GetSlidesTheme(GetSlidesThemeRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesTheme");
             }
@@ -89,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public ColorSchemeResponse GetSlidesThemeColorScheme(GetSlidesThemeColorSchemeRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesThemeColorScheme");
             }
@@ -114,7 +114,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public FontSchemeResponse GetSlidesThemeFontScheme(GetSlidesThemeFontSchemeRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesThemeFontScheme");
             }
@@ -139,7 +139,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public FormatSchemeResponse GetSlidesThemeFormatScheme(GetSlidesThemeFormatSchemeRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesThemeFormatScheme");
             }

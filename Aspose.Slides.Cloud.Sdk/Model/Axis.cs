@@ -35,187 +35,187 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Represents a chart axis
   /// </summary>  
   public class Axis 
   {                       
         /// <summary>
-        /// Gets or sets IsVisible
+        /// True if the axis is visible
         /// </summary>
         public bool? IsVisible { get; set; }
 
         /// <summary>
-        /// Gets or sets HasTitle
+        /// True if the axis has a visible title
         /// </summary>
         public bool? HasTitle { get; set; }
 
         /// <summary>
-        /// Gets or sets Position
+        /// Axis position
         /// </summary>
         public AxisPositionType Position { get; set; }
 
         /// <summary>
-        /// Gets or sets DisplayUnit
+        /// The scaling value of the display units for the value axis
         /// </summary>
         public DisplayUnitType DisplayUnit { get; set; }
 
         /// <summary>
-        /// Gets or sets BaseUnitScale
+        /// The smallest time unit that is represented on the date axis
         /// </summary>
         public TimeUnitType BaseUnitScale { get; set; }
 
         /// <summary>
-        /// Gets or sets IsAutomaticMajorUnit
+        /// True the major unit of the axis is automatically assigned
         /// </summary>
         public bool? IsAutomaticMajorUnit { get; set; }
 
         /// <summary>
-        /// Gets or sets MajorUnit
+        /// The major units for the date or value axis
         /// </summary>
         public double? MajorUnit { get; set; }
 
         /// <summary>
-        /// Gets or sets MajorUnitScale
+        /// The major unit scale for the date axis
         /// </summary>
         public TimeUnitType MajorUnitScale { get; set; }
 
         /// <summary>
-        /// Gets or sets MajorTickMark
+        /// The type of major tick mark for the specified axis
         /// </summary>
         public TickMarkType MajorTickMark { get; set; }
 
         /// <summary>
-        /// Gets or sets IsAutomaticMinorUnit
+        /// True the minor unit of the axis is automatically assigned
         /// </summary>
         public bool? IsAutomaticMinorUnit { get; set; }
 
         /// <summary>
-        /// Gets or sets MinorUnit
+        /// The minor units for the date or value axis
         /// </summary>
         public double? MinorUnit { get; set; }
 
         /// <summary>
-        /// Gets or sets MinorUnitScale
+        /// The minor unit scale for the date axis
         /// </summary>
         public TimeUnitType MinorUnitScale { get; set; }
 
         /// <summary>
-        /// Gets or sets MinorTickMark
+        /// The type of minor tick mark for the specified axis
         /// </summary>
         public TickMarkType MinorTickMark { get; set; }
 
         /// <summary>
-        /// Gets or sets IsAutomaticMaxValue
+        /// True if the max value is automatically assigned
         /// </summary>
         public bool? IsAutomaticMaxValue { get; set; }
 
         /// <summary>
-        /// Gets or sets MaxValue
+        /// The maximum value on the value axis
         /// </summary>
         public double? MaxValue { get; set; }
 
         /// <summary>
-        /// Gets or sets IsAutomaticMinValue
+        /// True if the min value is automatically assigned
         /// </summary>
         public bool? IsAutomaticMinValue { get; set; }
 
         /// <summary>
-        /// Gets or sets MinValue
+        /// The minimum value on the value axis
         /// </summary>
         public double? MinValue { get; set; }
 
         /// <summary>
-        /// Gets or sets IsLogarithmic
+        /// True if the value axis scale type is logarithmic
         /// </summary>
         public bool? IsLogarithmic { get; set; }
 
         /// <summary>
-        /// Gets or sets LogBase
+        /// The logarithmic base. Default value is 10
         /// </summary>
         public double? LogBase { get; set; }
 
         /// <summary>
-        /// Gets or sets CategoryAxisType
+        /// The type of the category axis
         /// </summary>
         public CategoryAxisType CategoryAxisType { get; set; }
 
         /// <summary>
-        /// Gets or sets AxisBetweenCategories
+        /// True if the value axis crosses the category axis between categories. This property applies only to category axes, and it doesn't apply to 3-D charts
         /// </summary>
         public bool? AxisBetweenCategories { get; set; }
 
         /// <summary>
-        /// Gets or sets LabelOffset
+        /// The distance of labels from the axis. Applied to category or date axis. Value must be between 0% and 1000%.             
         /// </summary>
         public int? LabelOffset { get; set; }
 
         /// <summary>
-        /// Gets or sets IsPlotOrderReversed
+        /// True if MS PowerPoint plots data points from last to first
         /// </summary>
         public bool? IsPlotOrderReversed { get; set; }
 
         /// <summary>
-        /// Gets or sets IsNumberFormatLinkedToSource
+        /// True if the format is linked to source data
         /// </summary>
         public bool? IsNumberFormatLinkedToSource { get; set; }
 
         /// <summary>
-        /// Gets or sets NumberFormat
+        /// the format string for the Axis Labels
         /// </summary>
         public string NumberFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets CrossType
+        /// The CrossType on the specified axis where the other axis crosses
         /// </summary>
         public CrossesType CrossType { get; set; }
 
         /// <summary>
-        /// Gets or sets CrossAt
+        /// The point on the axis where the perpendicular axis crosses it
         /// </summary>
         public double? CrossAt { get; set; }
 
         /// <summary>
-        /// Gets or sets IsAutomaticTickMarksSpacing
+        /// True for automatic tick marks spacing value
         /// </summary>
         public bool? IsAutomaticTickMarksSpacing { get; set; }
 
         /// <summary>
-        /// Gets or sets TickMarksSpacing
+        /// Specifies how many tick marks shall be skipped before the next one shall be drawn. Applied to category or series axis.
         /// </summary>
         public int? TickMarksSpacing { get; set; }
 
         /// <summary>
-        /// Gets or sets IsAutomaticTickLabelSpacing
+        /// True for automatic tick label spacing value
         /// </summary>
         public bool? IsAutomaticTickLabelSpacing { get; set; }
 
         /// <summary>
-        /// Gets or sets TickLabelSpacing
+        /// Specifies how many tick labels to skip between label that is drawn.
         /// </summary>
         public int? TickLabelSpacing { get; set; }
 
         /// <summary>
-        /// Gets or sets TickLabelPosition
+        /// The position of tick-mark labels on the specified axis.
         /// </summary>
         public TickLabelPositionType TickLabelPosition { get; set; }
 
         /// <summary>
-        /// Gets or sets TickLabelRotationAngle
+        /// Represents the rotation angle of tick labels.
         /// </summary>
         public double? TickLabelRotationAngle { get; set; }
 
         /// <summary>
-        /// Gets or sets FillFormat
+        /// Get or sets the fill format.
         /// </summary>
         public FillFormat FillFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets EffectFormat
+        /// Get or sets the effect format.
         /// </summary>
         public EffectFormat EffectFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets LineFormat
+        /// Get or sets the line format.
         /// </summary>
         public LineFormat LineFormat { get; set; }
 

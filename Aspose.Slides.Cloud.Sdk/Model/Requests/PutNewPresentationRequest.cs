@@ -45,13 +45,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PutNewPresentationRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">The document name.</param>
         /// <param name="stream"></param>
-        /// <param name="templatePath"></param>
-        /// <param name="templateStorage"></param>
-        /// <param name="password"></param>
-        /// <param name="storage"></param>
-        /// <param name="folder"></param>
+        /// <param name="templatePath">Template file path.</param>
+        /// <param name="templateStorage">Template storage name.</param>
+        /// <param name="password">The document password.</param>
+        /// <param name="storage">Document&#39;s storage.</param>
+        /// <param name="folder">Document&#39;s folder.</param>
         public PutNewPresentationRequest(string name, Stream stream = null, string templatePath = null, string templateStorage = null, string password = null, string storage = null, string folder = null)
         {
             this.Name = name;
@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// The document name.
         /// </summary>  
         public string Name { get; set; }
 
@@ -74,27 +74,27 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public Stream Stream { get; set; }
 
         /// <summary>
-        /// Gets or sets TemplatePath
+        /// Template file path.
         /// </summary>  
         public string TemplatePath { get; set; }
 
         /// <summary>
-        /// Gets or sets TemplateStorage
+        /// Template storage name.
         /// </summary>  
         public string TemplateStorage { get; set; }
 
         /// <summary>
-        /// Gets or sets Password
+        /// The document password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// Document's storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// Document's folder.
         /// </summary>  
         public string Folder { get; set; }
   }

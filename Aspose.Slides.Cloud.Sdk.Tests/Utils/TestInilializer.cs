@@ -105,13 +105,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         protected virtual string GetShapePath()
         {
-            if (m_invalidPropertyName != null
-                && (m_invalidPropertyName.Equals("shapes", StringComparison.InvariantCultureIgnoreCase)
-                    || m_invalidPropertyName.Equals("slides", StringComparison.InvariantCultureIgnoreCase)))
-            {
-                return string.Empty;
-            }
-            return "1";
+            return "3";
         }
 
         protected virtual Stream GetStream()
@@ -192,6 +186,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 {
                     return "testProperty";
                 }
+                if (propertyInfo.Name.Equals("color", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return "#FF0000dd";
+                }
                 if (propertyInfo.Name.Equals("shapePath", StringComparison.InvariantCultureIgnoreCase)
                     || propertyInfo.Name.Equals("path", StringComparison.InvariantCultureIgnoreCase))
                 {
@@ -245,7 +243,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             {
                 return new Portion
                 {
-                    FontColor = "#FFFF0000",
+                    //TODO: fix error with forntColor
+                    //FontColor = "FFFF0000",
                     FontHeight = 24,
                     Text = "testPortion"
                 };

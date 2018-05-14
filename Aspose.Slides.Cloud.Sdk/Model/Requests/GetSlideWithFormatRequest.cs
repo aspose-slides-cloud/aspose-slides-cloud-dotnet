@@ -52,7 +52,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="height"></param>
         /// <param name="folder"></param>
         /// <param name="storage"></param>
-        public GetSlideWithFormatRequest(string name, int slideIndex, SlideExportFormat format, int? width = null, int? height = null, string folder = null, string storage = null)
+        /// <param name="fontsFolder"></param>
+        public GetSlideWithFormatRequest(string name, int slideIndex, SlideExportFormat format, int? width = null, int? height = null, string folder = null, string storage = null, string fontsFolder = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
@@ -61,6 +62,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.Height = height;
             this.Folder = folder;
             this.Storage = storage;
+            this.FontsFolder = fontsFolder;
         }
 
         /// <summary>
@@ -97,5 +99,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Gets or sets Storage
         /// </summary>  
         public string Storage { get; set; }
+
+        /// <summary>
+        /// Gets or sets FontsFolder
+        /// </summary>  
+        public string FontsFolder { get; set; }
   }
 }

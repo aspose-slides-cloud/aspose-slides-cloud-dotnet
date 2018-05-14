@@ -42,7 +42,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets Format
         /// </summary>
-        public ExportFormat Format { get; set; }
+        public string Format { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object

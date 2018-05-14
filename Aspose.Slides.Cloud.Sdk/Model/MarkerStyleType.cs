@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Determines form of marker on chart&#39;s data point
     /// </summary>
-    /// <value></value>
+    /// <value>Determines form of marker on chart&#39;s data point</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum MarkerStyleType
     {

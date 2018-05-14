@@ -45,14 +45,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostSlidesSaveAsTiffRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="format"></param>
-        /// <param name="options"></param>
-        /// <param name="password"></param>
-        /// <param name="storage"></param>
-        /// <param name="folder"></param>
-        /// <param name="outPath"></param>
-        /// <param name="fontsFolder"></param>
+        /// <param name="name">The presentation name</param>
+        /// <param name="format">Export format</param>
+        /// <param name="options">Tiff export options</param>
+        /// <param name="password">The password to open presentation.</param>
+        /// <param name="storage">Document&#39;s storage.</param>
+        /// <param name="folder">The presentation folder.</param>
+        /// <param name="outPath">The optional output path.</param>
+        /// <param name="fontsFolder">The optional custom fonts folder.</param>
         public PostSlidesSaveAsTiffRequest(string name, ExportFormat format, ExportOptions options = null, string password = null, string storage = null, string folder = null, string outPath = null, string fontsFolder = null)
         {
             this.Name = name;
@@ -66,42 +66,42 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// The presentation name
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets Format
+        /// Export format
         /// </summary>  
         public ExportFormat Format { get; set; }
 
         /// <summary>
-        /// Gets or sets Options
+        /// Tiff export options
         /// </summary>  
         public ExportOptions Options { get; set; }
 
         /// <summary>
-        /// Gets or sets Password
+        /// The password to open presentation.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// Document's storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// The presentation folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or sets OutPath
+        /// The optional output path.
         /// </summary>  
         public string OutPath { get; set; }
 
         /// <summary>
-        /// Gets or sets FontsFolder
+        /// The optional custom fonts folder.
         /// </summary>  
         public string FontsFolder { get; set; }
   }

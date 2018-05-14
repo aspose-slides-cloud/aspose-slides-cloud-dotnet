@@ -50,6 +50,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public SlideExportFormat Format { get; set; }
 
         /// <summary>
+        /// Gets or sets Options
+        /// </summary>
+        public ExportOptions Options { get; set; }
+
+        /// <summary>
         /// Gets or sets Width
         /// </summary>
         public int? Width { get; set; }
@@ -75,6 +80,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  Type: ").Append(this.Type).Append("\n");
           sb.Append("  Output: ").Append(this.Output).Append("\n");
           sb.Append("  Format: ").Append(this.Format).Append("\n");
+          sb.Append("  Options: ").Append(this.Options).Append("\n");
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  Position: ").Append(this.Position).Append("\n");

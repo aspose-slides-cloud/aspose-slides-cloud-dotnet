@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public TextItemsResponse GetSlidesPresentationTextItems(GetSlidesPresentationTextItemsRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesPresentationTextItems");
             }
@@ -89,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public TextItemsResponse GetSlidesSlideTextItems(GetSlidesSlideTextItemsRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlideTextItems");
             }
@@ -115,19 +115,19 @@ namespace Aspose.Slides.Cloud.Sdk
         public PresentationStringReplaceResponse PostSlidesPresentationReplaceText(PostSlidesPresentationReplaceTextRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesPresentationReplaceText");
             }
 
             // verify the required parameter 'oldValue' is set
-            if (request.OldValue == null) 
+            if (request.OldValue == null)
             {
                 throw new ApiException(400, "Missing required parameter 'oldValue' when calling PostSlidesPresentationReplaceText");
             }
 
             // verify the required parameter 'newValue' is set
-            if (request.NewValue == null) 
+            if (request.NewValue == null)
             {
                 throw new ApiException(400, "Missing required parameter 'newValue' when calling PostSlidesPresentationReplaceText");
             }
@@ -154,19 +154,19 @@ namespace Aspose.Slides.Cloud.Sdk
         public SlideStringReplaceResponse PostSlidesSlideReplaceText(PostSlidesSlideReplaceTextRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesSlideReplaceText");
             }
 
             // verify the required parameter 'oldValue' is set
-            if (request.OldValue == null) 
+            if (request.OldValue == null)
             {
                 throw new ApiException(400, "Missing required parameter 'oldValue' when calling PostSlidesSlideReplaceText");
             }
 
             // verify the required parameter 'newValue' is set
-            if (request.NewValue == null) 
+            if (request.NewValue == null)
             {
                 throw new ApiException(400, "Missing required parameter 'newValue' when calling PostSlidesSlideReplaceText");
             }

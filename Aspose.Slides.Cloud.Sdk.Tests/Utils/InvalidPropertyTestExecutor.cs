@@ -175,7 +175,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                     return;
                 }
             }
-            else if (m_invalidPropertyName.Equals("paragraphIndex", StringComparison.InvariantCultureIgnoreCase))
+            else if (m_invalidPropertyName.Equals("paragraphIndex", StringComparison.InvariantCultureIgnoreCase)
+                || m_invalidPropertyName.Equals("paragraphs", StringComparison.InvariantCultureIgnoreCase))
             {
                 try
                 {
@@ -183,11 +184,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 }
                 catch (ApiException ex)
                 {
-                    Assert.IsTrue(ex.Message.StartsWith("Wrong paragraph index."));
+                    Assert.IsTrue(ex.Message.StartsWith("Wrong paragraph index.") || ex.Message.StartsWith("Paragraph index out of bounds"));
                     return;
                 }
             }
-            else if (m_invalidPropertyName.Equals("portionIndex", StringComparison.InvariantCultureIgnoreCase))
+            else if (m_invalidPropertyName.Equals("portionIndex", StringComparison.InvariantCultureIgnoreCase)
+                || m_invalidPropertyName.Equals("portions", StringComparison.InvariantCultureIgnoreCase))
             {
                 try
                 {
@@ -195,7 +197,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 }
                 catch (ApiException ex)
                 {
-                    Assert.IsTrue(ex.Message.StartsWith("Wrong portion index."));
+                    Assert.IsTrue(ex.Message.StartsWith("Wrong portion index.") || ex.Message.StartsWith("Portion index out of bounds"));
                     return;
                 }
             }
@@ -237,6 +239,19 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 {
                     //TODO: only the first message is actually expected
                     Assert.IsTrue(ex.Message.StartsWith("Unexpected Shapes subnode") || ex.Message.StartsWith("An error has occurred"));
+                    return;
+                }
+            }
+            else if (m_invalidPropertyName.Equals("color", StringComparison.InvariantCultureIgnoreCase))
+            {
+                try
+                {
+                    throw exception;
+                }
+                catch (ApiException ex)
+                {
+                    //TODO: only the first message is actually expected
+                    Assert.IsTrue(ex.Message.StartsWith("Color must be in format #FF000000"));
                     return;
                 }
             }

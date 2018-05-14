@@ -45,7 +45,7 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
                 return url;
             }
 
-            url = UrlHelper.AddQueryParameterToUrl(url, "appSid", m_configuration.AppSid);                      
+            url = UrlHelper.AddQueryParameterToUrl(url, "appSid", m_configuration.AppSid);
             url = Sign(url);
 
             return url;

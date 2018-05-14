@@ -35,27 +35,27 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Represents chart axes
   /// </summary>  
   public class Axes 
   {                       
         /// <summary>
-        /// Gets or sets HorizontalAxis
+        /// Gets or sets the horizontal axis.
         /// </summary>
         public Axis HorizontalAxis { get; set; }
 
         /// <summary>
-        /// Gets or sets VerticalAxis
+        /// Gets or sets the vertical axis.
         /// </summary>
         public Axis VerticalAxis { get; set; }
 
         /// <summary>
-        /// Gets or sets SecondaryHorizontalAxis
+        /// Gets or sets the secondary horizontal axis.
         /// </summary>
         public Axis SecondaryHorizontalAxis { get; set; }
 
         /// <summary>
-        /// Gets or sets SecondaryVerticalAxis
+        /// Gets or sets the secondary vertical axis.
         /// </summary>
         public Axis SecondaryVerticalAxis { get; set; }
 

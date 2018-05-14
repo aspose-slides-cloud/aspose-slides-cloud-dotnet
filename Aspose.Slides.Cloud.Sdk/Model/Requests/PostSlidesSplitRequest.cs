@@ -45,18 +45,20 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostSlidesSplitRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="format"></param>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
-        /// <param name="to"></param>
-        /// <param name="from"></param>
-        /// <param name="destFolder"></param>
-        /// <param name="storage"></param>
-        /// <param name="folder"></param>
-        public PostSlidesSplitRequest(string name, SlideExportFormat? format = null, int? width = null, int? height = null, int? to = null, int? from = null, string destFolder = null, string storage = null, string folder = null)
+        /// <param name="name">The document name.</param>
+        /// <param name="options">export options</param>
+        /// <param name="format">The format. Default value is jpeg.</param>
+        /// <param name="width">The width of created images.</param>
+        /// <param name="height">The height of created images.</param>
+        /// <param name="to">The last slide number for splitting, if is not specified splitting ends at the last slide of the document.</param>
+        /// <param name="from">The start slide number for splitting, if is not specified splitting starts from the first slide of the presentation.</param>
+        /// <param name="destFolder">Folder on storage where images are going to be uploaded. If not specified then images are uploaded to same folder as presentation.</param>
+        /// <param name="storage">The document storage.</param>
+        /// <param name="folder">The document folder.</param>
+        public PostSlidesSplitRequest(string name, ExportOptions options = null, SlideExportFormat? format = null, int? width = null, int? height = null, int? to = null, int? from = null, string destFolder = null, string storage = null, string folder = null)
         {
             this.Name = name;
+            this.Options = options;
             this.Format = format;
             this.Width = width;
             this.Height = height;
@@ -68,47 +70,52 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// The document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets Format
+        /// export options
+        /// </summary>  
+        public ExportOptions Options { get; set; }
+
+        /// <summary>
+        /// The format. Default value is jpeg.
         /// </summary>  
         public SlideExportFormat? Format { get; set; }
 
         /// <summary>
-        /// Gets or sets Width
+        /// The width of created images.
         /// </summary>  
         public int? Width { get; set; }
 
         /// <summary>
-        /// Gets or sets Height
+        /// The height of created images.
         /// </summary>  
         public int? Height { get; set; }
 
         /// <summary>
-        /// Gets or sets To
+        /// The last slide number for splitting, if is not specified splitting ends at the last slide of the document.
         /// </summary>  
         public int? To { get; set; }
 
         /// <summary>
-        /// Gets or sets From
+        /// The start slide number for splitting, if is not specified splitting starts from the first slide of the presentation.
         /// </summary>  
         public int? From { get; set; }
 
         /// <summary>
-        /// Gets or sets DestFolder
+        /// Folder on storage where images are going to be uploaded. If not specified then images are uploaded to same folder as presentation.
         /// </summary>  
         public string DestFolder { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// The document storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// The document folder.
         /// </summary>  
         public string Folder { get; set; }
   }

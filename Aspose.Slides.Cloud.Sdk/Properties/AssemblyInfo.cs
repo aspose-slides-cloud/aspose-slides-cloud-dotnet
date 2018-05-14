@@ -36,7 +36,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Aspose.Slides.Cloud.Sdk.Properties")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -54,7 +54,7 @@ using System.Runtime.InteropServices;
 //      Minor Version 
 //      Build Number
 //      Revision
-[assembly: AssemblyVersion("18.2.0.0")]
-[assembly: AssemblyFileVersion("18.2.0.0")]
+[assembly: AssemblyVersion("18.4.0.0")]
+[assembly: AssemblyFileVersion("18.4.0.0")]
 
 #endif

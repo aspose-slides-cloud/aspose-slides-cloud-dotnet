@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public System.IO.Stream GetSlidesImageWithFormat(GetSlidesImageWithFormatRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesImageWithFormat");
             }
@@ -90,7 +90,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public ImagesResponse GetSlidesImages(GetSlidesImagesRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesImages");
             }
@@ -114,7 +114,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public ImagesResponse GetSlidesSlideImages(GetSlidesSlideImagesRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlideImages");
             }

@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public DocumentResponse PostPresentationMerge(PostPresentationMergeRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostPresentationMerge");
             }
@@ -89,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public DocumentResponse PutPresentationMerge(PutPresentationMergeRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutPresentationMerge");
             }

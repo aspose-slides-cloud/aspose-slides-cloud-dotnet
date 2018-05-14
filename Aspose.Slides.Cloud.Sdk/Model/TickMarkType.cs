@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Represents the tick mark type for the specified axis.
     /// </summary>
-    /// <value></value>
+    /// <value>Represents the tick mark type for the specified axis.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum TickMarkType
     {

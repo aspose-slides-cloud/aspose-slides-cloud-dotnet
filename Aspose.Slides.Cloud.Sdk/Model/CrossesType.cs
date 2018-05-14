@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Determines where axis will cross.
     /// </summary>
-    /// <value></value>
+    /// <value>Determines where axis will cross.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum CrossesType
     {

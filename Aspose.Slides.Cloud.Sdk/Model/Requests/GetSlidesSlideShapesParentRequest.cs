@@ -47,7 +47,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Presentation name.</param>
         /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path"></param>
+        /// <param name="path">Shape path.</param>
         /// <param name="folder">Presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
         public GetSlidesSlideShapesParentRequest(string name, int slideIndex, string path, string folder = null, string storage = null)
@@ -70,7 +70,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets Path
+        /// Shape path.
         /// </summary>  
         public string Path { get; set; }
 

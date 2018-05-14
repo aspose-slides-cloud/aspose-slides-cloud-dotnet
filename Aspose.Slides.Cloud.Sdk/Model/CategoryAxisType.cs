@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Represents a type of a category axis
     /// </summary>
-    /// <value></value>
+    /// <value>Represents a type of a category axis</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum CategoryAxisType
     {

@@ -45,15 +45,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="GetNotesSlideShapeWithFormatRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="slideIndex"></param>
-        /// <param name="shapeIndex"></param>
-        /// <param name="format"></param>
-        /// <param name="folder"></param>
-        /// <param name="storage"></param>
-        /// <param name="scaleX"></param>
-        /// <param name="scaleY"></param>
-        /// <param name="bounds"></param>
+        /// <param name="name">Presentation name.</param>
+        /// <param name="slideIndex">Slide index.</param>
+        /// <param name="shapeIndex">Index of shape starting from 1</param>
+        /// <param name="format">Export picture format.</param>
+        /// <param name="folder">Presentation folder.</param>
+        /// <param name="storage">Presentation storage.</param>
+        /// <param name="scaleX">X scale ratio.</param>
+        /// <param name="scaleY">Y scale ratio.</param>
+        /// <param name="bounds">Shape thumbnail bounds type.</param>
         public GetNotesSlideShapeWithFormatRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, string bounds = null)
         {
             this.Name = name;
@@ -68,47 +68,47 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// Presentation name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets SlideIndex
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets ShapeIndex
+        /// Index of shape starting from 1
         /// </summary>  
         public int ShapeIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets Format
+        /// Export picture format.
         /// </summary>  
         public ShapeExportFormat Format { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// Presentation folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// Presentation storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Gets or sets ScaleX
+        /// X scale ratio.
         /// </summary>  
         public double? ScaleX { get; set; }
 
         /// <summary>
-        /// Gets or sets ScaleY
+        /// Y scale ratio.
         /// </summary>  
         public double? ScaleY { get; set; }
 
         /// <summary>
-        /// Gets or sets Bounds
+        /// Shape thumbnail bounds type.
         /// </summary>  
         public string Bounds { get; set; }
   }

@@ -35,32 +35,32 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Represents a chart wall
   /// </summary>  
   public class ChartWall 
   {                       
         /// <summary>
-        /// Gets or sets FillFormat
+        /// Get or sets the fill format.
         /// </summary>
         public FillFormat FillFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets EffectFormat
+        /// Get or sets the effect format.
         /// </summary>
         public EffectFormat EffectFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets LineFormat
+        /// Get or sets the line format.
         /// </summary>
         public LineFormat LineFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets Thickness
+        /// Get or sets wall thickness as a percentage of the largest dimension of the plot volume.
         /// </summary>
         public int? Thickness { get; set; }
 
         /// <summary>
-        /// Gets or sets PictureType
+        /// Get or sets mode of bar picture filling.
         /// </summary>
         public PictureType PictureType { get; set; }
 

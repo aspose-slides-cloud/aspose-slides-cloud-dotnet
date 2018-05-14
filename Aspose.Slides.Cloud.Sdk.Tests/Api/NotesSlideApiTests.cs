@@ -116,6 +116,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteNotesSlideInvalidSlideIndex()
         {
@@ -138,6 +139,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteNotesSlideInvalidFolder()
         {
@@ -160,6 +162,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteNotesSlideInvalidStorage()
         {
@@ -232,6 +235,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideInvalidSlideIndex()
         {
@@ -254,6 +258,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideInvalidFolder()
         {
@@ -276,6 +281,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideInvalidStorage()
         {
@@ -348,6 +354,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideWithFormatInvalidSlideIndex()
         {
@@ -370,6 +377,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideWithFormatInvalidFormat()
         {
@@ -392,6 +400,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideWithFormatInvalidWidth()
         {
@@ -414,6 +423,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideWithFormatInvalidHeight()
         {
@@ -436,6 +446,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideWithFormatInvalidFolder()
         {
@@ -458,6 +469,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideWithFormatInvalidStorage()
         {
@@ -530,6 +542,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostAddNotesSlideInvalidSlideIndex()
         {
@@ -552,6 +565,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostAddNotesSlideInvalidDto()
         {
@@ -574,6 +588,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostAddNotesSlideInvalidFolder()
         {
@@ -596,6 +611,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostAddNotesSlideInvalidStorage()
         {
@@ -668,6 +684,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutUpdateNotesSlideInvalidSlideIndex()
         {
@@ -690,6 +707,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutUpdateNotesSlideInvalidDto()
         {
@@ -712,6 +730,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutUpdateNotesSlideInvalidFolder()
         {
@@ -734,6 +753,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutUpdateNotesSlideInvalidStorage()
         {

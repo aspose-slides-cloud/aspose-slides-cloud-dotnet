@@ -116,6 +116,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostPresentationMergeInvalidRequest()
         {
@@ -138,6 +139,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostPresentationMergeInvalidStorage()
         {
@@ -160,6 +162,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostPresentationMergeInvalidFolder()
         {
@@ -232,6 +235,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutPresentationMergeInvalidRequest()
         {
@@ -254,6 +258,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutPresentationMergeInvalidStorage()
         {
@@ -276,6 +281,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutPresentationMergeInvalidFolder()
         {

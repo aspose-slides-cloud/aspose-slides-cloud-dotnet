@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public DocumentResponse GetSlidesDocument(GetSlidesDocumentRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesDocument");
             }
@@ -82,14 +82,14 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Export presentation to some format. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetSlidesDocumentWithFormatRequest" /></param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
         public System.IO.Stream GetSlidesDocumentWithFormat(GetSlidesDocumentWithFormatRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesDocumentWithFormat");
             }
@@ -111,26 +111,26 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Create presentation  
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesDocumentRequest" /></param> 
         /// <returns><see cref="DocumentResponse"/></returns>            
         public DocumentResponse PostSlidesDocument(PostSlidesDocumentRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesDocument");
             }
 
             // verify the required parameter 'data' is set
-            if (request.Data == null) 
+            if (request.Data == null)
             {
                 throw new ApiException(400, "Missing required parameter 'data' when calling PostSlidesDocument");
             }
 
             // verify the required parameter 'templatePath' is set
-            if (request.TemplatePath == null) 
+            if (request.TemplatePath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'templatePath' when calling PostSlidesDocument");
             }
@@ -152,7 +152,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Performs slides pipeline. Http-request contains pipeline DTO. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesPipelineRequest" /></param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
@@ -168,14 +168,14 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Saves presentation with options 
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesSaveAsTiffRequest" /></param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
         public System.IO.Stream PostSlidesSaveAsTiff(PostSlidesSaveAsTiffRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesSaveAsTiff");
             }
@@ -197,14 +197,14 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Splitting presentations. Create one image per slide. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesSplitRequest" /></param> 
         /// <returns><see cref="SplitDocumentResponse"/></returns>            
         public SplitDocumentResponse PostSlidesSplit(PostSlidesSplitRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesSplit");
             }
@@ -220,21 +220,22 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destFolder", request.DestFolder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            string contentType = "application/json";
+            string contentType;
+            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SplitDocumentResponse>(resourcePath, "POST", null, null, files, contentType);
+            return InvokeApi<SplitDocumentResponse>(resourcePath, "POST", postBody, null, files, contentType);
         }
 
         /// <summary>
-        ///  
+        /// Create presentation  
         /// </summary>
         /// <param name="request">Request. <see cref="PutNewPresentationRequest" /></param> 
         /// <returns><see cref="DocumentResponse"/></returns>            
         public DocumentResponse PutNewPresentation(PutNewPresentationRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutNewPresentation");
             }
@@ -255,7 +256,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Convert presentation from request content to format specified. 
         /// </summary>
         /// <param name="request">Request. <see cref="PutSlidesConvertRequest" /></param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
@@ -275,20 +276,20 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Create presentation document from html 
         /// </summary>
         /// <param name="request">Request. <see cref="PutSlidesDocumentFromHtmlRequest" /></param> 
         /// <returns><see cref="DocumentResponse"/></returns>            
         public DocumentResponse PutSlidesDocumentFromHtml(PutSlidesDocumentFromHtmlRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesDocumentFromHtml");
             }
 
             // verify the required parameter 'html' is set
-            if (request.Html == null) 
+            if (request.Html == null)
             {
                 throw new ApiException(400, "Missing required parameter 'html' when calling PutSlidesDocumentFromHtml");
             }
@@ -307,14 +308,14 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Set slide size for the presentation. 
         /// </summary>
         /// <param name="request">Request. <see cref="PutSlidesSlideSizeRequest" /></param> 
         /// <returns><see cref="DocumentResponse"/></returns>            
         public DocumentResponse PutSlidesSlideSize(PutSlidesSlideSizeRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSlideSize");
             }

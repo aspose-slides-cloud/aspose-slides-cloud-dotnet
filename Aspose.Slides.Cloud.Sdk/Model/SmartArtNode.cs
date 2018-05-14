@@ -45,7 +45,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public List<SmartArtNode> Nodes { get; set; }
 
         /// <summary>
-        /// Gets or sets Shapes
+        /// Gets or sets the link to shapes.
         /// </summary>
         public ResourceUriElement Shapes { get; set; }
 

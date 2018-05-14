@@ -69,6 +69,712 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test DeleteNotesSlideParagraph
+        /// </summary>
+        [Test]
+        public void DeleteNotesSlideParagraph()
+        {
+            GeneralTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse> testExecutor =
+                new GeneralTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse>("DeleteNotesSlideParagraph");
+            DeleteNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphInvalidName()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse>("DeleteNotesSlideParagraph", "Name");
+            DeleteNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse>("DeleteNotesSlideParagraph", "SlideIndex");
+            DeleteNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphInvalidPath()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse>("DeleteNotesSlideParagraph", "Path");
+            DeleteNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphInvalidParagraphIndex()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse>("DeleteNotesSlideParagraph", "ParagraphIndex");
+            DeleteNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse>("DeleteNotesSlideParagraph", "Folder");
+            DeleteNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphRequest, ParagraphListResponse>("DeleteNotesSlideParagraph", "Storage");
+            DeleteNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteNotesSlideParagraphs
+        /// </summary>
+        [Test]
+        public void DeleteNotesSlideParagraphs()
+        {
+            GeneralTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new GeneralTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse>("DeleteNotesSlideParagraphs");
+            DeleteNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphsInvalidName()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse>("DeleteNotesSlideParagraphs", "Name");
+            DeleteNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphsInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse>("DeleteNotesSlideParagraphs", "SlideIndex");
+            DeleteNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphsInvalidPath()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse>("DeleteNotesSlideParagraphs", "Path");
+            DeleteNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphsInvalidParagraphs()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse>("DeleteNotesSlideParagraphs", "Paragraphs");
+            DeleteNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphsInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse>("DeleteNotesSlideParagraphs", "Folder");
+            DeleteNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlideParagraphsInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideParagraphsRequest, ParagraphListResponse>("DeleteNotesSlideParagraphs", "Storage");
+            DeleteNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteNotesSlidePortion
+        /// </summary>
+        [Test]
+        public void DeleteNotesSlidePortion()
+        {
+            GeneralTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse> testExecutor =
+                new GeneralTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse>("DeleteNotesSlidePortion");
+            DeleteNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionInvalidName()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse>("DeleteNotesSlidePortion", "Name");
+            DeleteNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse>("DeleteNotesSlidePortion", "SlideIndex");
+            DeleteNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionInvalidPath()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse>("DeleteNotesSlidePortion", "Path");
+            DeleteNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionInvalidParagraphIndex()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse>("DeleteNotesSlidePortion", "ParagraphIndex");
+            DeleteNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionInvalidPortionIndex()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse>("DeleteNotesSlidePortion", "PortionIndex");
+            DeleteNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse>("DeleteNotesSlidePortion", "Folder");
+            DeleteNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionRequest, PortionListResponse>("DeleteNotesSlidePortion", "Storage");
+            DeleteNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteNotesSlidePortions
+        /// </summary>
+        [Test]
+        public void DeleteNotesSlidePortions()
+        {
+            GeneralTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new GeneralTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse>("DeleteNotesSlidePortions");
+            DeleteNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionsInvalidName()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse>("DeleteNotesSlidePortions", "Name");
+            DeleteNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionsInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse>("DeleteNotesSlidePortions", "SlideIndex");
+            DeleteNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionsInvalidPath()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse>("DeleteNotesSlidePortions", "Path");
+            DeleteNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionsInvalidParagraphIndex()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse>("DeleteNotesSlidePortions", "ParagraphIndex");
+            DeleteNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionsInvalidPortions()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse>("DeleteNotesSlidePortions", "Portions");
+            DeleteNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionsInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse>("DeleteNotesSlidePortions", "Folder");
+            DeleteNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteNotesSlidePortionsInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlidePortionsRequest, PortionListResponse>("DeleteNotesSlidePortions", "Storage");
+            DeleteNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test DeleteNotesSlideShape
         /// </summary>
         [Test]
@@ -116,6 +822,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteNotesSlideShapeInvalidSlideIndex()
         {
@@ -138,11 +845,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
-        public void DeleteNotesSlideShapeInvalidShapePath()
+        public void DeleteNotesSlideShapeInvalidPath()
         {
             InvalidPropertyTestExecutor<DeleteNotesSlideShapeRequest, ShapeListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<DeleteNotesSlideShapeRequest, ShapeListResponse>("DeleteNotesSlideShape", "ShapePath");
+                new InvalidPropertyTestExecutor<DeleteNotesSlideShapeRequest, ShapeListResponse>("DeleteNotesSlideShape", "Path");
             DeleteNotesSlideShapeRequest request = testExecutor.PrepareRequest();
             ShapeListResponse response = null;
             bool needAssertResponse = false;
@@ -160,6 +868,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteNotesSlideShapeInvalidShapes()
         {
@@ -182,6 +891,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteNotesSlideShapeInvalidFolder()
         {
@@ -204,6 +914,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteNotesSlideShapeInvalidStorage()
         {
@@ -215,6 +926,808 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.DeleteNotesSlideShape(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetNotesSlideParagraph
+        /// </summary>
+        [Test]
+        public void GetNotesSlideParagraph()
+        {
+            GeneralTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new GeneralTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse>("GetNotesSlideParagraph");
+            GetNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideParagraphInvalidName()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse>("GetNotesSlideParagraph", "Name");
+            GetNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideParagraphInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse>("GetNotesSlideParagraph", "SlideIndex");
+            GetNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideParagraphInvalidPath()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse>("GetNotesSlideParagraph", "Path");
+            GetNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideParagraphInvalidParagraphIndex()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse>("GetNotesSlideParagraph", "ParagraphIndex");
+            GetNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideParagraphInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse>("GetNotesSlideParagraph", "Folder");
+            GetNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideParagraphInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideParagraphRequest, ParagraphResponse>("GetNotesSlideParagraph", "Storage");
+            GetNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetNotesSlideParagraphs
+        /// </summary>
+        [Test]
+        public void GetNotesSlideParagraphs()
+        {
+            GeneralTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new GeneralTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse>("GetNotesSlideParagraphs");
+            GetNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideParagraphsInvalidName()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse>("GetNotesSlideParagraphs", "Name");
+            GetNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideParagraphsInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse>("GetNotesSlideParagraphs", "SlideIndex");
+            GetNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideParagraphsInvalidPath()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse>("GetNotesSlideParagraphs", "Path");
+            GetNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideParagraphsInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse>("GetNotesSlideParagraphs", "Folder");
+            GetNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideParagraphsInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideParagraphsRequest, ParagraphListResponse>("GetNotesSlideParagraphs", "Storage");
+            GetNotesSlideParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetNotesSlidePortion
+        /// </summary>
+        [Test]
+        public void GetNotesSlidePortion()
+        {
+            GeneralTestExecutor<GetNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new GeneralTestExecutor<GetNotesSlidePortionRequest, PortionResponse>("GetNotesSlidePortion");
+            GetNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionInvalidName()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse>("GetNotesSlidePortion", "Name");
+            GetNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse>("GetNotesSlidePortion", "SlideIndex");
+            GetNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionInvalidPath()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse>("GetNotesSlidePortion", "Path");
+            GetNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionInvalidParagraphIndex()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse>("GetNotesSlidePortion", "ParagraphIndex");
+            GetNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionInvalidPortionIndex()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse>("GetNotesSlidePortion", "PortionIndex");
+            GetNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse>("GetNotesSlidePortion", "Folder");
+            GetNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionRequest, PortionResponse>("GetNotesSlidePortion", "Storage");
+            GetNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetNotesSlidePortions
+        /// </summary>
+        [Test]
+        public void GetNotesSlidePortions()
+        {
+            GeneralTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new GeneralTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse>("GetNotesSlidePortions");
+            GetNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionsInvalidName()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse>("GetNotesSlidePortions", "Name");
+            GetNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionsInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse>("GetNotesSlidePortions", "SlideIndex");
+            GetNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionsInvalidPath()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse>("GetNotesSlidePortions", "Path");
+            GetNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionsInvalidParagraphIndex()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse>("GetNotesSlidePortions", "ParagraphIndex");
+            GetNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionsInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse>("GetNotesSlidePortions", "Folder");
+            GetNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlidePortionsInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlidePortionsRequest, PortionListResponse>("GetNotesSlidePortions", "Storage");
+            GetNotesSlidePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlidePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetNotesSlideShape
+        /// </summary>
+        [Test]
+        public void GetNotesSlideShape()
+        {
+            GeneralTestExecutor<GetNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new GeneralTestExecutor<GetNotesSlideShapeRequest, ShapeResponse>("GetNotesSlideShape");
+            GetNotesSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideShape(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideShapeInvalidName()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideShapeRequest, ShapeResponse>("GetNotesSlideShape", "Name");
+            GetNotesSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideShape(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideShapeInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideShapeRequest, ShapeResponse>("GetNotesSlideShape", "SlideIndex");
+            GetNotesSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideShape(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideShapeInvalidPath()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideShapeRequest, ShapeResponse>("GetNotesSlideShape", "Path");
+            GetNotesSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideShape(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideShapeInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideShapeRequest, ShapeResponse>("GetNotesSlideShape", "Folder");
+            GetNotesSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideShape(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideShapeInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideShapeRequest, ShapeResponse>("GetNotesSlideShape", "Storage");
+            GetNotesSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideShape(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -276,6 +1789,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeByPathInvalidSlideIndex()
         {
@@ -298,6 +1812,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeByPathInvalidPath()
         {
@@ -320,6 +1835,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeByPathInvalidFolder()
         {
@@ -342,6 +1858,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeByPathInvalidStorage()
         {
@@ -414,6 +1931,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeWithFormatInvalidSlideIndex()
         {
@@ -436,6 +1954,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeWithFormatInvalidShapeIndex()
         {
@@ -458,6 +1977,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeWithFormatInvalidFormat()
         {
@@ -480,6 +2000,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeWithFormatInvalidFolder()
         {
@@ -502,6 +2023,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeWithFormatInvalidStorage()
         {
@@ -524,6 +2046,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeWithFormatInvalidScaleX()
         {
@@ -546,6 +2069,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeWithFormatInvalidScaleY()
         {
@@ -568,6 +2092,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetNotesSlideShapeWithFormatInvalidBounds()
         {
@@ -579,6 +2104,405 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.GetNotesSlideShapeWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PostNotesSlideAddNewParagraph
+        /// </summary>
+        [Test]
+        public void PostNotesSlideAddNewParagraph()
+        {
+            GeneralTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse> testExecutor =
+                new GeneralTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse>("PostNotesSlideAddNewParagraph");
+            PostNotesSlideAddNewParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewParagraphInvalidName()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse>("PostNotesSlideAddNewParagraph", "Name");
+            PostNotesSlideAddNewParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewParagraphInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse>("PostNotesSlideAddNewParagraph", "SlideIndex");
+            PostNotesSlideAddNewParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewParagraphInvalidPath()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse>("PostNotesSlideAddNewParagraph", "Path");
+            PostNotesSlideAddNewParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewParagraphInvalidParagraphDto()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse>("PostNotesSlideAddNewParagraph", "ParagraphDto");
+            PostNotesSlideAddNewParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewParagraphInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse>("PostNotesSlideAddNewParagraph", "Folder");
+            PostNotesSlideAddNewParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewParagraphInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse>("PostNotesSlideAddNewParagraph", "Storage");
+            PostNotesSlideAddNewParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewParagraphInvalidShapeToClone()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewParagraphRequest, ParagraphResponse>("PostNotesSlideAddNewParagraph", "ShapeToClone");
+            PostNotesSlideAddNewParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PostNotesSlideAddNewPortion
+        /// </summary>
+        [Test]
+        public void PostNotesSlideAddNewPortion()
+        {
+            GeneralTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse> testExecutor =
+                new GeneralTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse>("PostNotesSlideAddNewPortion");
+            PostNotesSlideAddNewPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewPortionInvalidName()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse>("PostNotesSlideAddNewPortion", "Name");
+            PostNotesSlideAddNewPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewPortionInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse>("PostNotesSlideAddNewPortion", "SlideIndex");
+            PostNotesSlideAddNewPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewPortionInvalidPath()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse>("PostNotesSlideAddNewPortion", "Path");
+            PostNotesSlideAddNewPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewPortionInvalidParagraphIndex()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse>("PostNotesSlideAddNewPortion", "ParagraphIndex");
+            PostNotesSlideAddNewPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewPortionInvalidPortionDto()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse>("PostNotesSlideAddNewPortion", "PortionDto");
+            PostNotesSlideAddNewPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewPortionInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse>("PostNotesSlideAddNewPortion", "Folder");
+            PostNotesSlideAddNewPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewPortionInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse>("PostNotesSlideAddNewPortion", "Storage");
+            PostNotesSlideAddNewPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostNotesSlideAddNewPortionInvalidShapeToClone()
+        {
+            InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewPortionRequest, PortionResponse>("PostNotesSlideAddNewPortion", "ShapeToClone");
+            PostNotesSlideAddNewPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostNotesSlideAddNewPortion(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -640,6 +2564,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostNotesSlideAddNewShapeInvalidSlideIndex()
         {
@@ -662,11 +2587,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
-        public void PostNotesSlideAddNewShapeInvalidShapePath()
+        public void PostNotesSlideAddNewShapeInvalidPath()
         {
             InvalidPropertyTestExecutor<PostNotesSlideAddNewShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostNotesSlideAddNewShapeRequest, ShapeResponse>("PostNotesSlideAddNewShape", "ShapePath");
+                new InvalidPropertyTestExecutor<PostNotesSlideAddNewShapeRequest, ShapeResponse>("PostNotesSlideAddNewShape", "Path");
             PostNotesSlideAddNewShapeRequest request = testExecutor.PrepareRequest();
             ShapeResponse response = null;
             bool needAssertResponse = false;
@@ -684,6 +2610,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostNotesSlideAddNewShapeInvalidShapeDto()
         {
@@ -706,6 +2633,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostNotesSlideAddNewShapeInvalidFolder()
         {
@@ -728,6 +2656,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostNotesSlideAddNewShapeInvalidStorage()
         {
@@ -750,6 +2679,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostNotesSlideAddNewShapeInvalidShapeToClone()
         {
@@ -775,15 +2705,414 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test PutUpdateNotesSlideParagraph
+        /// </summary>
+        [Test]
+        public void PutUpdateNotesSlideParagraph()
+        {
+            GeneralTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new GeneralTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse>("PutUpdateNotesSlideParagraph");
+            PutUpdateNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlideParagraphInvalidName()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse>("PutUpdateNotesSlideParagraph", "Name");
+            PutUpdateNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlideParagraphInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse>("PutUpdateNotesSlideParagraph", "SlideIndex");
+            PutUpdateNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlideParagraphInvalidPath()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse>("PutUpdateNotesSlideParagraph", "Path");
+            PutUpdateNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlideParagraphInvalidParagraphIndex()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse>("PutUpdateNotesSlideParagraph", "ParagraphIndex");
+            PutUpdateNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlideParagraphInvalidDto()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse>("PutUpdateNotesSlideParagraph", "Dto");
+            PutUpdateNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlideParagraphInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse>("PutUpdateNotesSlideParagraph", "Folder");
+            PutUpdateNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlideParagraphInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideParagraphRequest, ParagraphResponse>("PutUpdateNotesSlideParagraph", "Storage");
+            PutUpdateNotesSlideParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlideParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PutUpdateNotesSlidePortion
+        /// </summary>
+        [Test]
+        public void PutUpdateNotesSlidePortion()
+        {
+            GeneralTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new GeneralTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse>("PutUpdateNotesSlidePortion");
+            PutUpdateNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlidePortionInvalidName()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse>("PutUpdateNotesSlidePortion", "Name");
+            PutUpdateNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlidePortionInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse>("PutUpdateNotesSlidePortion", "SlideIndex");
+            PutUpdateNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlidePortionInvalidPath()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse>("PutUpdateNotesSlidePortion", "Path");
+            PutUpdateNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlidePortionInvalidParagraphIndex()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse>("PutUpdateNotesSlidePortion", "ParagraphIndex");
+            PutUpdateNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlidePortionInvalidPortionIndex()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse>("PutUpdateNotesSlidePortion", "PortionIndex");
+            PutUpdateNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlidePortionInvalidDto()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse>("PutUpdateNotesSlidePortion", "Dto");
+            PutUpdateNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlidePortionInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse>("PutUpdateNotesSlidePortion", "Folder");
+            PutUpdateNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlidePortionInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlidePortionRequest, PortionResponse>("PutUpdateNotesSlidePortion", "Storage");
+            PutUpdateNotesSlidePortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlidePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test PutUpdateNotesSlideShape
         /// </summary>
         [Test]
         public void PutUpdateNotesSlideShape()
         {
-            GeneralTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse> testExecutor =
-                new GeneralTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse>("PutUpdateNotesSlideShape");
+            GeneralTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new GeneralTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse>("PutUpdateNotesSlideShape");
             PutUpdateNotesSlideShapeRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -803,10 +3132,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutUpdateNotesSlideShapeInvalidName()
         {
-            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse>("PutUpdateNotesSlideShape", "Name");
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse>("PutUpdateNotesSlideShape", "Name");
             PutUpdateNotesSlideShapeRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -822,13 +3151,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutUpdateNotesSlideShapeInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse>("PutUpdateNotesSlideShape", "SlideIndex");
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse>("PutUpdateNotesSlideShape", "SlideIndex");
             PutUpdateNotesSlideShapeRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -844,13 +3174,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutUpdateNotesSlideShapeInvalidPath()
         {
-            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse>("PutUpdateNotesSlideShape", "Path");
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse>("PutUpdateNotesSlideShape", "Path");
             PutUpdateNotesSlideShapeRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -866,13 +3197,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutUpdateNotesSlideShapeInvalidDto()
         {
-            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse>("PutUpdateNotesSlideShape", "Dto");
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse>("PutUpdateNotesSlideShape", "Dto");
             PutUpdateNotesSlideShapeRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -888,13 +3220,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutUpdateNotesSlideShapeInvalidFolder()
         {
-            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse>("PutUpdateNotesSlideShape", "Folder");
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse>("PutUpdateNotesSlideShape", "Folder");
             PutUpdateNotesSlideShapeRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -910,13 +3243,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutUpdateNotesSlideShapeInvalidStorage()
         {
-            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, SaaSposeResponse>("PutUpdateNotesSlideShape", "Storage");
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideShapeRequest, ShapeResponse>("PutUpdateNotesSlideShape", "Storage");
             PutUpdateNotesSlideShapeRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {

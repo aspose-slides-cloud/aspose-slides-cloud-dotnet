@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Represents the position type of tick-mark labels on the specified axis.
     /// </summary>
-    /// <value></value>
+    /// <value>Represents the position type of tick-mark labels on the specified axis.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum TickLabelPositionType
     {

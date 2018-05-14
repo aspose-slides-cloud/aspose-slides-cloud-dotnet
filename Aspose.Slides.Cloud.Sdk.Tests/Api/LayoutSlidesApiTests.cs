@@ -116,6 +116,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetLayoutSlideInvalidSlideIndex()
         {
@@ -138,6 +139,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetLayoutSlideInvalidFolder()
         {
@@ -160,6 +162,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetLayoutSlideInvalidStorage()
         {
@@ -232,6 +235,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetLayoutSlidesListInvalidFolder()
         {
@@ -254,6 +258,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetLayoutSlidesListInvalidStorage()
         {
@@ -326,6 +331,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostCopyLayoutSlideFromSourcePresentationInvalidCloneFrom()
         {
@@ -348,6 +354,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostCopyLayoutSlideFromSourcePresentationInvalidCloneFromPosition()
         {
@@ -370,6 +377,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostCopyLayoutSlideFromSourcePresentationInvalidCloneFromStorage()
         {
@@ -392,6 +400,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostCopyLayoutSlideFromSourcePresentationInvalidFolder()
         {
@@ -414,6 +423,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostCopyLayoutSlideFromSourcePresentationInvalidStorage()
         {
@@ -486,6 +496,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutLayoutSlideInvalidSlideIndex()
         {
@@ -508,6 +519,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutLayoutSlideInvalidSlideDto()
         {
@@ -530,6 +542,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutLayoutSlideInvalidFolder()
         {
@@ -552,6 +565,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutLayoutSlideInvalidStorage()
         {

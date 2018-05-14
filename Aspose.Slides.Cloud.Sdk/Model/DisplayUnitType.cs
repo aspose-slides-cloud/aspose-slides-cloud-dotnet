@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Determines multiplicity of the displayed data.
     /// </summary>
-    /// <value></value>
+    /// <value>Determines multiplicity of the displayed data.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum DisplayUnitType
     {

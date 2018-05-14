@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public SlideResponse DeleteNotesSlide(DeleteNotesSlideRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlide");
             }
@@ -89,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public NotesSlideResponse GetNotesSlide(GetNotesSlideRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlide");
             }
@@ -107,14 +107,14 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Convert Notes Slide to the specified picture format. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetNotesSlideWithFormatRequest" /></param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
         public System.IO.Stream GetNotesSlideWithFormat(GetNotesSlideWithFormatRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideWithFormat");
             }
@@ -142,7 +142,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public NotesSlideResponse PostAddNotesSlide(PostAddNotesSlideRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNotesSlide");
             }
@@ -168,7 +168,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public NotesSlideResponse PutUpdateNotesSlide(PutUpdateNotesSlideRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlide");
             }

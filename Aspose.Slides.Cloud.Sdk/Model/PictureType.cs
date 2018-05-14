@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Determines mode of bar picture filling.
     /// </summary>
-    /// <value></value>
+    /// <value>Determines mode of bar picture filling.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum PictureType
     {

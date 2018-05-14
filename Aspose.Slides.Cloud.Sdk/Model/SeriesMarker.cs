@@ -35,32 +35,32 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Represents a series marker
   /// </summary>  
   public class SeriesMarker 
   {                       
         /// <summary>
-        /// Gets or sets Size
+        /// size
         /// </summary>
         public int? Size { get; set; }
 
         /// <summary>
-        /// Gets or sets Symbol
+        /// symbol
         /// </summary>
         public MarkerStyleType Symbol { get; set; }
 
         /// <summary>
-        /// Gets or sets FillFormat
+        /// Get or sets the fill format.
         /// </summary>
         public FillFormat FillFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets EffectFormat
+        /// Get or sets the effect format.
         /// </summary>
         public EffectFormat EffectFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets LineFormat
+        /// Get or sets the line format.
         /// </summary>
         public LineFormat LineFormat { get; set; }
 

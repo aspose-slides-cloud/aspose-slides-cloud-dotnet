@@ -116,6 +116,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteSlideByIndexInvalidSlideIndex()
         {
@@ -138,6 +139,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteSlideByIndexInvalidFolder()
         {
@@ -160,6 +162,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteSlideByIndexInvalidStorage()
         {
@@ -232,6 +235,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteSlidesCleanSlidesListInvalidSlides()
         {
@@ -254,6 +258,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteSlidesCleanSlidesListInvalidFolder()
         {
@@ -276,6 +281,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteSlidesCleanSlidesListInvalidStorage()
         {
@@ -348,6 +354,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteSlidesSlideBackgroundInvalidSlideIndex()
         {
@@ -370,6 +377,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteSlidesSlideBackgroundInvalidFolder()
         {
@@ -392,6 +400,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void DeleteSlidesSlideBackgroundInvalidStorage()
         {
@@ -464,6 +473,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlideWithFormatInvalidSlideIndex()
         {
@@ -486,6 +496,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlideWithFormatInvalidFormat()
         {
@@ -508,6 +519,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlideWithFormatInvalidWidth()
         {
@@ -530,6 +542,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlideWithFormatInvalidHeight()
         {
@@ -552,6 +565,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlideWithFormatInvalidFolder()
         {
@@ -574,11 +588,35 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlideWithFormatInvalidStorage()
         {
             InvalidPropertyTestExecutor<GetSlideWithFormatRequest, System.IO.Stream> testExecutor =
                 new InvalidPropertyTestExecutor<GetSlideWithFormatRequest, System.IO.Stream>("GetSlideWithFormat", "Storage");
+            GetSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideWithFormatInvalidFontsFolder()
+        {
+            InvalidPropertyTestExecutor<GetSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideWithFormatRequest, System.IO.Stream>("GetSlideWithFormat", "FontsFolder");
             GetSlideWithFormatRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
@@ -646,6 +684,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlidesSlideInvalidSlideIndex()
         {
@@ -668,6 +707,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlidesSlideInvalidFolder()
         {
@@ -690,6 +730,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlidesSlideInvalidStorage()
         {
@@ -762,6 +803,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlidesSlideBackgroundInvalidSlideIndex()
         {
@@ -784,6 +826,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlidesSlideBackgroundInvalidFolder()
         {
@@ -806,6 +849,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlidesSlideBackgroundInvalidStorage()
         {
@@ -878,6 +922,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlidesSlideCommentsInvalidSlideIndex()
         {
@@ -900,6 +945,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlidesSlideCommentsInvalidFolder()
         {
@@ -922,6 +968,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlidesSlideCommentsInvalidStorage()
         {
@@ -994,6 +1041,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlidesSlidesListInvalidFolder()
         {
@@ -1016,6 +1064,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void GetSlidesSlidesListInvalidStorage()
         {
@@ -1027,6 +1076,240 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.GetSlidesSlidesList(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PostSlideSaveAs
+        /// </summary>
+        [Test]
+        public void PostSlideSaveAs()
+        {
+            GeneralTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
+                new GeneralTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs");
+            PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlideSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlideSaveAsInvalidName()
+        {
+            InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs", "Name");
+            PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlideSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlideSaveAsInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs", "SlideIndex");
+            PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlideSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlideSaveAsInvalidFormat()
+        {
+            InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs", "Format");
+            PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlideSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlideSaveAsInvalidOptions()
+        {
+            InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs", "Options");
+            PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlideSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlideSaveAsInvalidWidth()
+        {
+            InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs", "Width");
+            PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlideSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlideSaveAsInvalidHeight()
+        {
+            InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs", "Height");
+            PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlideSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlideSaveAsInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs", "Folder");
+            PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlideSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlideSaveAsInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs", "Storage");
+            PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlideSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlideSaveAsInvalidFontsFolder()
+        {
+            InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs", "FontsFolder");
+            PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlideSaveAs(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1088,6 +1371,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostSlidesReorderPositionInvalidOldPosition()
         {
@@ -1110,6 +1394,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostSlidesReorderPositionInvalidNewPosition()
         {
@@ -1132,6 +1417,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostSlidesReorderPositionInvalidSlideToCopy()
         {
@@ -1154,6 +1440,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostSlidesReorderPositionInvalidPosition()
         {
@@ -1176,6 +1463,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostSlidesReorderPositionInvalidSlideToClone()
         {
@@ -1198,6 +1486,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostSlidesReorderPositionInvalidSource()
         {
@@ -1220,6 +1509,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostSlidesReorderPositionInvalidFolder()
         {
@@ -1242,6 +1532,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostSlidesReorderPositionInvalidStorage()
         {
@@ -1264,6 +1555,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PostSlidesReorderPositionInvalidLayoutAlias()
         {
@@ -1336,6 +1628,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutSlidesSlideInvalidSlideIndex()
         {
@@ -1358,6 +1651,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutSlidesSlideInvalidSlideDto()
         {
@@ -1380,6 +1674,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutSlidesSlideInvalidFolder()
         {
@@ -1402,6 +1697,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutSlidesSlideInvalidStorage()
         {
@@ -1474,6 +1770,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutSlidesSlideBackgroundInvalidSlideIndex()
         {
@@ -1496,6 +1793,30 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
+        [Test]
+        public void PutSlidesSlideBackgroundInvalidBackground()
+        {
+            InvalidPropertyTestExecutor<PutSlidesSlideBackgroundRequest, SlideBackgroundResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSlidesSlideBackgroundRequest, SlideBackgroundResponse>("PutSlidesSlideBackground", "Background");
+            PutSlidesSlideBackgroundRequest request = testExecutor.PrepareRequest();
+            SlideBackgroundResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesSlideBackground(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
         [Test]
         public void PutSlidesSlideBackgroundInvalidFolder()
         {
@@ -1518,11 +1839,35 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 testExecutor.AssertResult(response);
             }
         }
+
         [Test]
         public void PutSlidesSlideBackgroundInvalidStorage()
         {
             InvalidPropertyTestExecutor<PutSlidesSlideBackgroundRequest, SlideBackgroundResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PutSlidesSlideBackgroundRequest, SlideBackgroundResponse>("PutSlidesSlideBackground", "Storage");
+            PutSlidesSlideBackgroundRequest request = testExecutor.PrepareRequest();
+            SlideBackgroundResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesSlideBackground(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesSlideBackgroundInvalidColor()
+        {
+            InvalidPropertyTestExecutor<PutSlidesSlideBackgroundRequest, SlideBackgroundResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSlidesSlideBackgroundRequest, SlideBackgroundResponse>("PutSlidesSlideBackground", "Color");
             PutSlidesSlideBackgroundRequest request = testExecutor.PrepareRequest();
             SlideBackgroundResponse response = null;
             bool needAssertResponse = false;

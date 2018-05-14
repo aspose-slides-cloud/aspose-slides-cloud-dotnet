@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public MasterSlideResponse GetMasterSlide(GetMasterSlideRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetMasterSlide");
             }
@@ -89,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public MasterSlideListResponse GetMasterSlidesList(GetMasterSlidesListRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetMasterSlidesList");
             }
@@ -113,13 +113,13 @@ namespace Aspose.Slides.Cloud.Sdk
         public MasterSlideResponse PostCopyMasterSlideFromSourcePresentation(PostCopyMasterSlideFromSourcePresentationRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostCopyMasterSlideFromSourcePresentation");
             }
 
             // verify the required parameter 'cloneFrom' is set
-            if (request.CloneFrom == null) 
+            if (request.CloneFrom == null)
             {
                 throw new ApiException(400, "Missing required parameter 'cloneFrom' when calling PostCopyMasterSlideFromSourcePresentation");
             }

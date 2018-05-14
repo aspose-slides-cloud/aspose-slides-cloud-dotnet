@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public SlideListResponse DeleteSlideByIndex(DeleteSlideByIndexRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideByIndex");
             }
@@ -89,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public SlideListResponse DeleteSlidesCleanSlidesList(DeleteSlidesCleanSlidesListRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlidesCleanSlidesList");
             }
@@ -114,7 +114,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public SlideBackgroundResponse DeleteSlidesSlideBackground(DeleteSlidesSlideBackgroundRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlidesSlideBackground");
             }
@@ -132,14 +132,14 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Convert slide to some format. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetSlideWithFormatRequest" /></param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
         public System.IO.Stream GetSlideWithFormat(GetSlideWithFormatRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideWithFormat");
             }
@@ -153,6 +153,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
             string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
@@ -167,7 +168,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public SlideResponse GetSlidesSlide(GetSlidesSlideRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlide");
             }
@@ -192,7 +193,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public SlideBackgroundResponse GetSlidesSlideBackground(GetSlidesSlideBackgroundRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlideBackground");
             }
@@ -217,7 +218,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public SlideCommentsResponse GetSlidesSlideComments(GetSlidesSlideCommentsRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlideComments");
             }
@@ -242,7 +243,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public SlideListResponse GetSlidesSlidesList(GetSlidesSlidesListRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlidesList");
             }
@@ -259,14 +260,44 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Convert slide to some format. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostSlideSaveAsRequest" /></param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream PostSlideSaveAs(PostSlideSaveAsRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostSlideSaveAs");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/saveAs/{format}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", request.Width);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            string contentType;
+            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, contentType);
+        }
+
+        /// <summary>
+        /// Reorder presentation slide position 
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesReorderPositionRequest" /></param> 
         /// <returns><see cref="SlideListResponse"/></returns>            
         public SlideListResponse PostSlidesReorderPosition(PostSlidesReorderPositionRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesReorderPosition");
             }
@@ -297,7 +328,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public SlideResponse PutSlidesSlide(PutSlidesSlideRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSlide");
             }
@@ -323,7 +354,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public SlideBackgroundResponse PutSlidesSlideBackground(PutSlidesSlideBackgroundRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSlideBackground");
             }
@@ -334,10 +365,12 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "color", request.Color);
+            string contentType;
+            var postBody = SerializationHelper.Serialize(request.Background, out contentType); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideBackgroundResponse>(resourcePath, "PUT", null, null, files, contentType);
+            return InvokeApi<SlideBackgroundResponse>(resourcePath, "PUT", postBody, null, files, contentType);
         }
     }
 }

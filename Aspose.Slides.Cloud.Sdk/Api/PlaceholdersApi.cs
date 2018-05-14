@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public PlaceholderResponse GetSlidesPlaceholder(GetSlidesPlaceholderRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesPlaceholder");
             }
@@ -90,7 +90,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public PlaceholdersResponse GetSlidesPlaceholders(GetSlidesPlaceholdersRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesPlaceholders");
             }

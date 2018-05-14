@@ -45,14 +45,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PutSlidesSlideSizeRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="password"></param>
-        /// <param name="storage"></param>
-        /// <param name="folder"></param>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
-        /// <param name="sizeType"></param>
-        /// <param name="scaleType"></param>
+        /// <param name="name">The document name.</param>
+        /// <param name="password">The document password.</param>
+        /// <param name="storage">The document storage.</param>
+        /// <param name="folder">The document folder.</param>
+        /// <param name="width">Slide width.</param>
+        /// <param name="height">Slide height.</param>
+        /// <param name="sizeType">Standard slide size type.</param>
+        /// <param name="scaleType">Standard slide scale type.</param>
         public PutSlidesSlideSizeRequest(string name, string password = null, string storage = null, string folder = null, int? width = null, int? height = null, SizeType? sizeType = null, ScaleType? scaleType = null)
         {
             this.Name = name;
@@ -66,42 +66,42 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// The document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets Password
+        /// The document password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// The document storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// The document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or sets Width
+        /// Slide width.
         /// </summary>  
         public int? Width { get; set; }
 
         /// <summary>
-        /// Gets or sets Height
+        /// Slide height.
         /// </summary>  
         public int? Height { get; set; }
 
         /// <summary>
-        /// Gets or sets SizeType
+        /// Standard slide size type.
         /// </summary>  
         public SizeType? SizeType { get; set; }
 
         /// <summary>
-        /// Gets or sets ScaleType
+        /// Standard slide scale type.
         /// </summary>  
         public ScaleType? ScaleType { get; set; }
   }

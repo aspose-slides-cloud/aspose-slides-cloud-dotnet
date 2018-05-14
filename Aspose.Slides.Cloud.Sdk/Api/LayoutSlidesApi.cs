@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public LayoutSlideResponse GetLayoutSlide(GetLayoutSlideRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetLayoutSlide");
             }
@@ -89,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public LayoutSlideListResponse GetLayoutSlidesList(GetLayoutSlidesListRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetLayoutSlidesList");
             }
@@ -113,13 +113,13 @@ namespace Aspose.Slides.Cloud.Sdk
         public LayoutSlideResponse PostCopyLayoutSlideFromSourcePresentation(PostCopyLayoutSlideFromSourcePresentationRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostCopyLayoutSlideFromSourcePresentation");
             }
 
             // verify the required parameter 'cloneFrom' is set
-            if (request.CloneFrom == null) 
+            if (request.CloneFrom == null)
             {
                 throw new ApiException(400, "Missing required parameter 'cloneFrom' when calling PostCopyLayoutSlideFromSourcePresentation");
             }
@@ -146,7 +146,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public LayoutSlideResponse PutLayoutSlide(PutLayoutSlideRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutLayoutSlide");
             }

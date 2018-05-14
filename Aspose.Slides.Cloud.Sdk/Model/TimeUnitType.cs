@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Represents the base unit for the category axis
     /// </summary>
-    /// <value></value>
+    /// <value>Represents the base unit for the category axis</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum TimeUnitType
     {

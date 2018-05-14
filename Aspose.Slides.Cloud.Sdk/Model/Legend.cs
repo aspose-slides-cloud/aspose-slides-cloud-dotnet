@@ -35,52 +35,52 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Represents a chart legend
   /// </summary>  
   public class Legend 
   {                       
         /// <summary>
-        /// Gets or sets Position
+        /// position
         /// </summary>
         public LegendPositionType Position { get; set; }
 
         /// <summary>
-        /// Gets or sets X
+        /// the X location
         /// </summary>
         public double? X { get; set; }
 
         /// <summary>
-        /// Gets or sets Y
+        /// the Y location
         /// </summary>
         public double? Y { get; set; }
 
         /// <summary>
-        /// Gets or sets Width
+        /// Width
         /// </summary>
         public double? Width { get; set; }
 
         /// <summary>
-        /// Gets or sets Height
+        /// Height
         /// </summary>
         public double? Height { get; set; }
 
         /// <summary>
-        /// Gets or sets Overlay
+        /// true if other elements are allowed to overlay the legend
         /// </summary>
         public bool? Overlay { get; set; }
 
         /// <summary>
-        /// Gets or sets FillFormat
+        /// Get or sets the fill format.
         /// </summary>
         public FillFormat FillFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets EffectFormat
+        /// Get or sets the effect format.
         /// </summary>
         public EffectFormat EffectFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets LineFormat
+        /// Get or sets the line format.
         /// </summary>
         public LineFormat LineFormat { get; set; }
 

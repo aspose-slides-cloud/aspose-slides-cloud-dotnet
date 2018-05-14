@@ -45,13 +45,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="GetNotesSlideWithFormatRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="slideIndex"></param>
-        /// <param name="format"></param>
+        /// <param name="name">The presentation name.</param>
+        /// <param name="slideIndex">The slide index.</param>
+        /// <param name="format">Export format.</param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="folder"></param>
-        /// <param name="storage"></param>
+        /// <param name="folder">The presentation folder.</param>
+        /// <param name="storage">Presentation storage.</param>
         public GetNotesSlideWithFormatRequest(string name, int slideIndex, NotesSlideExportFormat format, int? width = null, int? height = null, string folder = null, string storage = null)
         {
             this.Name = name;
@@ -64,17 +64,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// The presentation name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets SlideIndex
+        /// The slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets Format
+        /// Export format.
         /// </summary>  
         public NotesSlideExportFormat Format { get; set; }
 
@@ -89,12 +89,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int? Height { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// The presentation folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// Presentation storage.
         /// </summary>  
         public string Storage { get; set; }
   }

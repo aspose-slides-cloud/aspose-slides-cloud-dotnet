@@ -45,16 +45,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostSlidesReorderPositionRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="oldPosition"></param>
-        /// <param name="newPosition"></param>
-        /// <param name="slideToCopy"></param>
-        /// <param name="position"></param>
-        /// <param name="slideToClone"></param>
-        /// <param name="source"></param>
-        /// <param name="folder"></param>
-        /// <param name="storage"></param>
-        /// <param name="layoutAlias"></param>
+        /// <param name="name">The presentation name.</param>
+        /// <param name="oldPosition">The new presentation slide position.</param>
+        /// <param name="newPosition">The new presentation slide position.</param>
+        /// <param name="slideToCopy">The presentation slide to copy.</param>
+        /// <param name="position">The presentation slide position.</param>
+        /// <param name="slideToClone">The presentation slide to clone.</param>
+        /// <param name="source">The source presentation.</param>
+        /// <param name="folder">The presentation folder.</param>
+        /// <param name="storage">The presentation storage.</param>
+        /// <param name="layoutAlias">Alias of layout slide for new slide. Alias could be the type of layout, name of layout slide or index</param>
         public PostSlidesReorderPositionRequest(string name, int? oldPosition = null, int? newPosition = null, int? slideToCopy = null, int? position = null, int? slideToClone = null, string source = null, string folder = null, string storage = null, string layoutAlias = null)
         {
             this.Name = name;
@@ -70,52 +70,52 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// The presentation name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets OldPosition
+        /// The new presentation slide position.
         /// </summary>  
         public int? OldPosition { get; set; }
 
         /// <summary>
-        /// Gets or sets NewPosition
+        /// The new presentation slide position.
         /// </summary>  
         public int? NewPosition { get; set; }
 
         /// <summary>
-        /// Gets or sets SlideToCopy
+        /// The presentation slide to copy.
         /// </summary>  
         public int? SlideToCopy { get; set; }
 
         /// <summary>
-        /// Gets or sets Position
+        /// The presentation slide position.
         /// </summary>  
         public int? Position { get; set; }
 
         /// <summary>
-        /// Gets or sets SlideToClone
+        /// The presentation slide to clone.
         /// </summary>  
         public int? SlideToClone { get; set; }
 
         /// <summary>
-        /// Gets or sets Source
+        /// The source presentation.
         /// </summary>  
         public string Source { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// The presentation folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// The presentation storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Gets or sets LayoutAlias
+        /// Alias of layout slide for new slide. Alias could be the type of layout, name of layout slide or index
         /// </summary>  
         public string LayoutAlias { get; set; }
   }

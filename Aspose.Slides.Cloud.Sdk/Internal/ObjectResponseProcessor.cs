@@ -23,7 +23,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using Aspose.Slides.Cloud.Sdk.Model;
 using System.IO;
 
 namespace Aspose.Slides.Cloud.Sdk
@@ -34,14 +33,7 @@ namespace Aspose.Slides.Cloud.Sdk
         {
             if (response != null)
             {
-                T result = SerializationHelper.Deserialize<T>(response, contentType);
-                //TODO: this is a workaround for SLIDESCLOUD-356 bug. Remove this after the bug is fixed
-                SaaSposeResponse saaSposeResponse = result as SaaSposeResponse;
-                if (saaSposeResponse != null && saaSposeResponse.Code >= System.Net.HttpStatusCode.BadRequest)
-                {
-                    throw new ApiException((int)saaSposeResponse.Code, saaSposeResponse.Status);
-                }
-                return result;
+                return SerializationHelper.Deserialize<T>(response, contentType);
             }
             return null;
         }

@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public DocumentPropertiesResponse DeleteSlidesDocumentProperties(DeleteSlidesDocumentPropertiesRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlidesDocumentProperties");
             }
@@ -84,17 +84,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Delete document property. 
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteSlidesDocumentPropertyRequest" /></param> 
-        /// <returns><see cref="CommonResponse"/></returns>            
-        public CommonResponse DeleteSlidesDocumentProperty(DeleteSlidesDocumentPropertyRequest request)
+        /// <returns><see cref="DocumentPropertiesResponse"/></returns>            
+        public DocumentPropertiesResponse DeleteSlidesDocumentProperty(DeleteSlidesDocumentPropertyRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlidesDocumentProperty");
             }
 
             // verify the required parameter 'propertyName' is set
-            if (request.PropertyName == null) 
+            if (request.PropertyName == null)
             {
                 throw new ApiException(400, "Missing required parameter 'propertyName' when calling DeleteSlidesDocumentProperty");
             }
@@ -108,7 +108,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<CommonResponse>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<DocumentPropertiesResponse>(resourcePath, "DELETE", null, null, files, contentType);
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public DocumentPropertiesResponse GetSlidesDocumentProperties(GetSlidesDocumentPropertiesRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesDocumentProperties");
             }
@@ -143,13 +143,13 @@ namespace Aspose.Slides.Cloud.Sdk
         public DocumentPropertyResponse GetSlidesDocumentProperty(GetSlidesDocumentPropertyRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesDocumentProperty");
             }
 
             // verify the required parameter 'propertyName' is set
-            if (request.PropertyName == null) 
+            if (request.PropertyName == null)
             {
                 throw new ApiException(400, "Missing required parameter 'propertyName' when calling GetSlidesDocumentProperty");
             }
@@ -174,7 +174,7 @@ namespace Aspose.Slides.Cloud.Sdk
         public DocumentPropertiesResponse PostSlidesSetDocumentProperties(PostSlidesSetDocumentPropertiesRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesSetDocumentProperties");
             }
@@ -199,13 +199,13 @@ namespace Aspose.Slides.Cloud.Sdk
         public DocumentPropertyResponse PutSlidesSetDocumentProperty(PutSlidesSetDocumentPropertyRequest request)
         {
             // verify the required parameter 'name' is set
-            if (request.Name == null) 
+            if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSetDocumentProperty");
             }
 
             // verify the required parameter 'propertyName' is set
-            if (request.PropertyName == null) 
+            if (request.PropertyName == null)
             {
                 throw new ApiException(400, "Missing required parameter 'propertyName' when calling PutSlidesSetDocumentProperty");
             }

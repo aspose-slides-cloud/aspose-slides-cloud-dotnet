@@ -60,32 +60,32 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public ChartTitle Title { get; set; }
 
         /// <summary>
-        /// Gets or sets BackWall
+        /// Gets or sets the back wall.
         /// </summary>
         public ChartWall BackWall { get; set; }
 
         /// <summary>
-        /// Gets or sets SideWall
+        /// Gets or sets the side wall.
         /// </summary>
         public ChartWall SideWall { get; set; }
 
         /// <summary>
-        /// Gets or sets Floor
+        /// Gets or sets the floor.
         /// </summary>
         public ChartWall Floor { get; set; }
 
         /// <summary>
-        /// Gets or sets Legend
+        /// Gets or sets the legend.
         /// </summary>
         public Legend Legend { get; set; }
 
         /// <summary>
-        /// Gets or sets Axes
+        /// Gets or sets the axes.
         /// </summary>
         public Axes Axes { get; set; }
 
         /// <summary>
-        /// Gets or sets PlotArea
+        /// Gets or sets the plot area.
         /// </summary>
         public PlotArea PlotArea { get; set; }
 

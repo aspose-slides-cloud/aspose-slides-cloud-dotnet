@@ -50,6 +50,46 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string SubDirectoryName { get; set; }
 
         /// <summary>
+        /// Specifies whether the generated document should include hidden slides or not. Default is false. 
+        /// </summary>
+        public bool? ShowHiddenSlides { get; set; }
+
+        /// <summary>
+        /// Returns or sets a value determining the quality of the JPEG images inside PDF document.
+        /// </summary>
+        public int? JpegQuality { get; set; }
+
+        /// <summary>
+        /// Represents the pictures compression level
+        /// </summary>
+        public PicturesCompression PicturesCompression { get; set; }
+
+        /// <summary>
+        /// A boolean flag indicates if the cropped parts remain as part of the document. If true the cropped  parts will removed, if false they will be serialized in the document (which can possible lead to a  larger file)
+        /// </summary>
+        public bool? DeletePicturesCroppedAreas { get; set; }
+
+        /// <summary>
+        /// Gets or sets the position of the notes on the page.
+        /// </summary>
+        public NotesPositions NotesPosition { get; set; }
+
+        /// <summary>
+        /// Gets or sets the position of the comments on the page.
+        /// </summary>
+        public CommentsPositions CommentsPosition { get; set; }
+
+        /// <summary>
+        /// Gets or sets the width of the comment output area in pixels (Applies only if comments are displayed on the right).
+        /// </summary>
+        public int? CommentsAreaWidth { get; set; }
+
+        /// <summary>
+        /// Gets or sets the color of comments area (Applies only if comments are displayed on the right).
+        /// </summary>
+        public string CommentsAreaColor { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -60,6 +100,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  Format: ").Append(this.Format).Append("\n");
           sb.Append("  SaveAsZip: ").Append(this.SaveAsZip).Append("\n");
           sb.Append("  SubDirectoryName: ").Append(this.SubDirectoryName).Append("\n");
+          sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
+          sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
+          sb.Append("  PicturesCompression: ").Append(this.PicturesCompression).Append("\n");
+          sb.Append("  DeletePicturesCroppedAreas: ").Append(this.DeletePicturesCroppedAreas).Append("\n");
+          sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
+          sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
+          sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
+          sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }
