@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ParagraphListResponse.cs">
+// <copyright company="Aspose" file="PortionList.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,14 +35,14 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// Represents response for   DTO
+  /// Represents list of Links to Paragraphs resources
   /// </summary>  
-  public class PortionListResponse : SaaSposeResponse 
+  public class PortionList : ResourceBase 
   {                       
         /// <summary>
-        /// Represents response for   DTO
+        /// Gets or sets PortionLinks
         /// </summary>
-        public PortionList Portions { get; set; }
+        public List<ResourceUriElement> PortionLinks { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -51,10 +51,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class PortionListResponse {\n");
-          sb.Append("  Code: ").Append(this.Code).Append("\n");
-          sb.Append("  Status: ").Append(this.Status).Append("\n");
-          sb.Append("  Portions: ").Append(this.Portions).Append("\n");
+          sb.Append("class PortionList {\n");
+          sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
+          sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
+          sb.Append("  Links: ").Append(this.Links).Append("\n");
+          sb.Append("  PortionLinks: ").Append(this.PortionLinks).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

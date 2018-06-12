@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="CommonResponse.cs">
+// <copyright company="Aspose" file="PortionListResponse.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,10 +35,15 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// Represents common response for operations like Delete
+  /// Represents response for   DTO
   /// </summary>  
-  public class CommonResponse : SaaSposeResponse 
+  public class PortionListResponse : SaaSposeResponse 
   {                       
+        /// <summary>
+        /// Represents response for   DTO
+        /// </summary>
+        public PortionList Portions { get; set; }
+
         /// <summary>
         /// Get the string presentation of the object
         /// </summary>
@@ -46,9 +51,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class CommonResponse {\n");
+          sb.Append("class PortionListResponse {\n");
           sb.Append("  Code: ").Append(this.Code).Append("\n");
           sb.Append("  Status: ").Append(this.Status).Append("\n");
+          sb.Append("  Portions: ").Append(this.Portions).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

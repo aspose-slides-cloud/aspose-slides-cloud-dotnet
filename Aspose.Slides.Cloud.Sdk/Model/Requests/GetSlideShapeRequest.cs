@@ -1,6 +1,5 @@
-
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="PutUpdatePortionRequest.cs">
+// <copyright company="Aspose" file="GetSlideShapeRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,77 +30,63 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ShapesApi.PutUpdatePortion" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ShapesApi.GetSlideShape" /> operation.
   /// </summary>  
-  public class PutUpdatePortionRequest  
+  public class GetSlideShapeRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutUpdatePortionRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetSlideShapeRequest"/> class.
         /// </summary>        
-        public PutUpdatePortionRequest()
+        public GetSlideShapeRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutUpdatePortionRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetSlideShapeRequest"/> class.
         /// </summary>
-        /// <param name="name">Presentation name.</param>
-        /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path">Object path.</param>
-        /// <param name="paragraphIndex"></param>
-        /// <param name="portionIndex"></param>
-        /// <param name="dto">Shape dto.</param>
-        /// <param name="folder">Presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
-        public PutUpdatePortionRequest(string name, int slideIndex, string path, int paragraphIndex, int portionIndex, ResourceBase dto = null, string folder = null, string storage = null)
+        /// <param name="name"></param>
+        /// <param name="slideIndex"></param>
+        /// <param name="path"></param>
+        /// <param name="shapeIndex"></param>
+        /// <param name="folder"></param>
+        /// <param name="storage"></param>
+        public GetSlideShapeRequest(string name, int slideIndex, string path, int shapeIndex, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Path = path;
-            this.ParagraphIndex = paragraphIndex;
-            this.PortionIndex = portionIndex;
-            this.Dto = dto;
+            this.ShapeIndex = shapeIndex;
             this.Folder = folder;
             this.Storage = storage;
         }
 
         /// <summary>
-        /// Presentation name.
+        /// Gets or sets Name
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Slide index.
+        /// Gets or sets SlideIndex
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Object path.
+        /// Gets or sets Path
         /// </summary>  
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or sets ParagraphIndex
+        /// Gets or sets ShapeIndex
         /// </summary>  
-        public int ParagraphIndex { get; set; }
+        public int ShapeIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets PortionIndex
-        /// </summary>  
-        public int PortionIndex { get; set; }
-
-        /// <summary>
-        /// Shape dto.
-        /// </summary>  
-        public ResourceBase Dto { get; set; }
-
-        /// <summary>
-        /// Presentation folder.
+        /// Gets or sets Folder
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Gets or sets Storage
         /// </summary>  
         public string Storage { get; set; }
   }

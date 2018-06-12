@@ -57,7 +57,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Removes a shape, specified shapes or all shapes. 
+        ///  
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteNotesSlideParagraphRequest" /></param> 
         /// <returns><see cref="ParagraphListResponse"/></returns>            
@@ -76,10 +76,11 @@ namespace Aspose.Slides.Cloud.Sdk
             }
 
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs/{paragraphIndex}");
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
@@ -90,7 +91,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Removes a shape, specified shapes or all shapes. 
+        ///  
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteNotesSlideParagraphsRequest" /></param> 
         /// <returns><see cref="ParagraphListResponse"/></returns>            
@@ -109,10 +110,11 @@ namespace Aspose.Slides.Cloud.Sdk
             }
 
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs");
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "paragraphs", request.Paragraphs);
@@ -123,7 +125,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Removes a shape, specified shapes or all shapes. 
+        ///  
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteNotesSlidePortionRequest" /></param> 
         /// <returns><see cref="PortionListResponse"/></returns>            
@@ -142,10 +144,11 @@ namespace Aspose.Slides.Cloud.Sdk
             }
 
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
@@ -157,7 +160,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Removes a shape, specified shapes or all shapes. 
+        ///  
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteNotesSlidePortionsRequest" /></param> 
         /// <returns><see cref="PortionListResponse"/></returns>            
@@ -176,10 +179,11 @@ namespace Aspose.Slides.Cloud.Sdk
             }
 
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs/{paragraphIndex}/portions");
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
@@ -191,7 +195,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Removes a shape, specified shapes or all shapes. 
+        ///  
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteNotesSlideShapeRequest" /></param> 
         /// <returns><see cref="ShapeListResponse"/></returns>            
@@ -210,10 +214,43 @@ namespace Aspose.Slides.Cloud.Sdk
             }
 
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<ShapeListResponse>(resourcePath, "DELETE", null, null, files, contentType);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">Request. <see cref="DeleteNotesSlideShapesRequest" /></param> 
+        /// <returns><see cref="ShapeListResponse"/></returns>            
+        public ShapeListResponse DeleteNotesSlideShapes(DeleteNotesSlideShapesRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideShapes");
+            }
+
+            // verify the required parameter 'path' is set
+            if (request.Path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteNotesSlideShapes");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapes", request.Shapes);
@@ -224,175 +261,11 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Read Notes Slide shape info by shape&#39;s path. 
-        /// </summary>
-        /// <param name="request">Request. <see cref="GetNotesSlideParagraphRequest" /></param> 
-        /// <returns><see cref="ParagraphResponse"/></returns>            
-        public ParagraphResponse GetNotesSlideParagraph(GetNotesSlideParagraphRequest request)
-        {
-            // verify the required parameter 'name' is set
-            if (request.Name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideParagraph");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideParagraph");
-            }
-
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs/{paragraphIndex}");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
-            var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeApi<ParagraphResponse>(resourcePath, "GET", null, null, files, contentType);
-        }
-
-        /// <summary>
-        /// Read Notes Slide shape info by shape&#39;s path. 
-        /// </summary>
-        /// <param name="request">Request. <see cref="GetNotesSlideParagraphsRequest" /></param> 
-        /// <returns><see cref="ParagraphListResponse"/></returns>            
-        public ParagraphListResponse GetNotesSlideParagraphs(GetNotesSlideParagraphsRequest request)
-        {
-            // verify the required parameter 'name' is set
-            if (request.Name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideParagraphs");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideParagraphs");
-            }
-
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
-            var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeApi<ParagraphListResponse>(resourcePath, "GET", null, null, files, contentType);
-        }
-
-        /// <summary>
-        /// Read Notes Slide shape info by shape&#39;s path. 
-        /// </summary>
-        /// <param name="request">Request. <see cref="GetNotesSlidePortionRequest" /></param> 
-        /// <returns><see cref="PortionResponse"/></returns>            
-        public PortionResponse GetNotesSlidePortion(GetNotesSlidePortionRequest request)
-        {
-            // verify the required parameter 'name' is set
-            if (request.Name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlidePortion");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlidePortion");
-            }
-
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs/{paragraphIndex}/portions/{portionIndex}");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
-            var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeApi<PortionResponse>(resourcePath, "GET", null, null, files, contentType);
-        }
-
-        /// <summary>
-        /// Read Notes Slide shape info by shape&#39;s path. 
-        /// </summary>
-        /// <param name="request">Request. <see cref="GetNotesSlidePortionsRequest" /></param> 
-        /// <returns><see cref="PortionListResponse"/></returns>            
-        public PortionListResponse GetNotesSlidePortions(GetNotesSlidePortionsRequest request)
-        {
-            // verify the required parameter 'name' is set
-            if (request.Name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlidePortions");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlidePortions");
-            }
-
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs/{paragraphIndex}/portions");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
-            var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeApi<PortionListResponse>(resourcePath, "GET", null, null, files, contentType);
-        }
-
-        /// <summary>
-        /// Read Notes Slide shape info by shape&#39;s path. 
-        /// </summary>
-        /// <param name="request">Request. <see cref="GetNotesSlideShapeRequest" /></param> 
-        /// <returns><see cref="ShapeResponse"/></returns>            
-        public ShapeResponse GetNotesSlideShape(GetNotesSlideShapeRequest request)
-        {
-            // verify the required parameter 'name' is set
-            if (request.Name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShape");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShape");
-            }
-
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
-            var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeApi<ShapeResponse>(resourcePath, "GET", null, null, files, contentType);
-        }
-
-        /// <summary>
-        /// Read Notes Slide shape info by shape&#39;s path. 
+        ///  
         /// </summary>
         /// <param name="request">Request. <see cref="GetNotesSlideShapeByPathRequest" /></param> 
-        /// <returns><see cref="SaaSposeResponse"/></returns>            
-        public SaaSposeResponse GetNotesSlideShapeByPath(GetNotesSlideShapeByPathRequest request)
+        /// <returns><see cref="ShapeResponse"/></returns>            
+        public ShapeResponse GetNotesSlideShapeByPath(GetNotesSlideShapeByPathRequest request)
         {
             // verify the required parameter 'name' is set
             if (request.Name == null)
@@ -407,16 +280,153 @@ namespace Aspose.Slides.Cloud.Sdk
             }
 
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SaaSposeResponse>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<ShapeResponse>(resourcePath, "GET", null, null, files, contentType);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetNotesSlideShapeParagraphRequest" /></param> 
+        /// <returns><see cref="ParagraphResponse"/></returns>            
+        public ParagraphResponse GetNotesSlideShapeParagraph(GetNotesSlideShapeParagraphRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapeParagraph");
+            }
+
+            // verify the required parameter 'path' is set
+            if (request.Path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShapeParagraph");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<ParagraphResponse>(resourcePath, "GET", null, null, files, contentType);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetNotesSlideShapeParagraphsRequest" /></param> 
+        /// <returns><see cref="ParagraphListResponse"/></returns>            
+        public ParagraphListResponse GetNotesSlideShapeParagraphs(GetNotesSlideShapeParagraphsRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapeParagraphs");
+            }
+
+            // verify the required parameter 'path' is set
+            if (request.Path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShapeParagraphs");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<ParagraphListResponse>(resourcePath, "GET", null, null, files, contentType);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetNotesSlideShapePortionRequest" /></param> 
+        /// <returns><see cref="PortionResponse"/></returns>            
+        public PortionResponse GetNotesSlideShapePortion(GetNotesSlideShapePortionRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapePortion");
+            }
+
+            // verify the required parameter 'path' is set
+            if (request.Path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShapePortion");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<PortionResponse>(resourcePath, "GET", null, null, files, contentType);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetNotesSlideShapePortionsRequest" /></param> 
+        /// <returns><see cref="PortionListResponse"/></returns>            
+        public PortionListResponse GetNotesSlideShapePortions(GetNotesSlideShapePortionsRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapePortions");
+            }
+
+            // verify the required parameter 'path' is set
+            if (request.Path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShapePortions");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<PortionListResponse>(resourcePath, "GET", null, null, files, contentType);
         }
 
         /// <summary>
@@ -450,7 +460,39 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Create new shape. 
+        ///  
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetNotesSlideShapesRequest" /></param> 
+        /// <returns><see cref="ShapeListResponse"/></returns>            
+        public ShapeListResponse GetNotesSlideShapes(GetNotesSlideShapesRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapes");
+            }
+
+            // verify the required parameter 'path' is set
+            if (request.Path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShapes");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<ShapeListResponse>(resourcePath, "GET", null, null, files, contentType);
+        }
+
+        /// <summary>
+        ///  
         /// </summary>
         /// <param name="request">Request. <see cref="PostNotesSlideAddNewParagraphRequest" /></param> 
         /// <returns><see cref="ParagraphResponse"/></returns>            
@@ -469,22 +511,22 @@ namespace Aspose.Slides.Cloud.Sdk
             }
 
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs");
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", request.ShapeToClone);
             string contentType;
-            var postBody = SerializationHelper.Serialize(request.ParagraphDto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
             return InvokeApi<ParagraphResponse>(resourcePath, "POST", postBody, null, files, contentType);
         }
 
         /// <summary>
-        /// Create new shape. 
+        ///  
         /// </summary>
         /// <param name="request">Request. <see cref="PostNotesSlideAddNewPortionRequest" /></param> 
         /// <returns><see cref="PortionResponse"/></returns>            
@@ -503,23 +545,23 @@ namespace Aspose.Slides.Cloud.Sdk
             }
 
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs/{paragraphIndex}/portions");
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", request.ShapeToClone);
             string contentType;
-            var postBody = SerializationHelper.Serialize(request.PortionDto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
             return InvokeApi<PortionResponse>(resourcePath, "POST", postBody, null, files, contentType);
         }
 
         /// <summary>
-        /// Create new shape. 
+        ///  
         /// </summary>
         /// <param name="request">Request. <see cref="PostNotesSlideAddNewShapeRequest" /></param> 
         /// <returns><see cref="ShapeResponse"/></returns>            
@@ -538,91 +580,22 @@ namespace Aspose.Slides.Cloud.Sdk
             }
 
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", request.ShapeToClone);
             string contentType;
-            var postBody = SerializationHelper.Serialize(request.ShapeDto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
             return InvokeApi<ShapeResponse>(resourcePath, "POST", postBody, null, files, contentType);
         }
 
         /// <summary>
-        /// Update Notes Slide shape properties. 
-        /// </summary>
-        /// <param name="request">Request. <see cref="PutUpdateNotesSlideParagraphRequest" /></param> 
-        /// <returns><see cref="ParagraphResponse"/></returns>            
-        public ParagraphResponse PutUpdateNotesSlideParagraph(PutUpdateNotesSlideParagraphRequest request)
-        {
-            // verify the required parameter 'name' is set
-            if (request.Name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlideParagraph");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PutUpdateNotesSlideParagraph");
-            }
-
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs/{paragraphIndex}");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
-            var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeApi<ParagraphResponse>(resourcePath, "PUT", postBody, null, files, contentType);
-        }
-
-        /// <summary>
-        /// Update Notes Slide shape properties. 
-        /// </summary>
-        /// <param name="request">Request. <see cref="PutUpdateNotesSlidePortionRequest" /></param> 
-        /// <returns><see cref="PortionResponse"/></returns>            
-        public PortionResponse PutUpdateNotesSlidePortion(PutUpdateNotesSlidePortionRequest request)
-        {
-            // verify the required parameter 'name' is set
-            if (request.Name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlidePortion");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PutUpdateNotesSlidePortion");
-            }
-
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path + "/paragraphs/{paragraphIndex}/portions/{portionIndex}");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
-            var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeApi<PortionResponse>(resourcePath, "PUT", postBody, null, files, contentType);
-        }
-
-        /// <summary>
-        /// Update Notes Slide shape properties. 
+        ///  
         /// </summary>
         /// <param name="request">Request. <see cref="PutUpdateNotesSlideShapeRequest" /></param> 
         /// <returns><see cref="ShapeResponse"/></returns>            
@@ -641,10 +614,11 @@ namespace Aspose.Slides.Cloud.Sdk
             }
 
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType;
@@ -652,6 +626,77 @@ namespace Aspose.Slides.Cloud.Sdk
             var files = new List<FileInfo>();
             PickFiles(files, request);
             return InvokeApi<ShapeResponse>(resourcePath, "PUT", postBody, null, files, contentType);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">Request. <see cref="PutUpdateNotesSlideShapeParagraphRequest" /></param> 
+        /// <returns><see cref="ParagraphResponse"/></returns>            
+        public ParagraphResponse PutUpdateNotesSlideShapeParagraph(PutUpdateNotesSlideShapeParagraphRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlideShapeParagraph");
+            }
+
+            // verify the required parameter 'path' is set
+            if (request.Path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling PutUpdateNotesSlideShapeParagraph");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType;
+            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<ParagraphResponse>(resourcePath, "PUT", postBody, null, files, contentType);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="request">Request. <see cref="PutUpdateNotesSlideShapePortionRequest" /></param> 
+        /// <returns><see cref="PortionResponse"/></returns>            
+        public PortionResponse PutUpdateNotesSlideShapePortion(PutUpdateNotesSlideShapePortionRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlideShapePortion");
+            }
+
+            // verify the required parameter 'path' is set
+            if (request.Path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling PutUpdateNotesSlideShapePortion");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType;
+            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<PortionResponse>(resourcePath, "PUT", postBody, null, files, contentType);
         }
     }
 }

@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="DeleteNotesSlideParagraphsRequest.cs">
+// <copyright company="Aspose" file="GetSlideShapesRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -30,34 +30,30 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.NotesSlideShapesApi.DeleteNotesSlideParagraphs" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ShapesApi.GetSlideShapes" /> operation.
   /// </summary>  
-  public class DeleteNotesSlideParagraphsRequest  
+  public class GetSlideShapesRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DeleteNotesSlideParagraphsRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetSlideShapesRequest"/> class.
         /// </summary>        
-        public DeleteNotesSlideParagraphsRequest()
+        public GetSlideShapesRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DeleteNotesSlideParagraphsRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetSlideShapesRequest"/> class.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="slideIndex"></param>
         /// <param name="path"></param>
-        /// <param name="shapeIndex"></param>
-        /// <param name="paragraphs"></param>
         /// <param name="folder"></param>
         /// <param name="storage"></param>
-        public DeleteNotesSlideParagraphsRequest(string name, int slideIndex, string path, int shapeIndex, List<int> paragraphs = null, string folder = null, string storage = null)
+        public GetSlideShapesRequest(string name, int slideIndex, string path, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Path = path;
-            this.ShapeIndex = shapeIndex;
-            this.Paragraphs = paragraphs;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -76,16 +72,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Gets or sets Path
         /// </summary>  
         public string Path { get; set; }
-
-        /// <summary>
-        /// Gets or sets ShapeIndex
-        /// </summary>  
-        public int ShapeIndex { get; set; }
-
-        /// <summary>
-        /// Gets or sets Paragraphs
-        /// </summary>  
-        public List<int> Paragraphs { get; set; }
 
         /// <summary>
         /// Gets or sets Folder

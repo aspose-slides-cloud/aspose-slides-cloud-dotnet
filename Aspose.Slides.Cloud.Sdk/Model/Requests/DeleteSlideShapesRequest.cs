@@ -1,6 +1,5 @@
-
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="PutUpdateNotesSlidePortionRequest.cs">
+// <copyright company="Aspose" file="DeleteSlideShapesRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,77 +30,63 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.NotesSlideShapesApi.PutUpdateNotesSlidePortion" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ShapesApi.DeleteSlideShapes" /> operation.
   /// </summary>  
-  public class PutUpdateNotesSlidePortionRequest  
+  public class DeleteSlideShapesRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutUpdateNotesSlidePortionRequest"/> class.
+        /// Initializes a new instance of the <see cref="DeleteSlideShapesRequest"/> class.
         /// </summary>        
-        public PutUpdateNotesSlidePortionRequest()
+        public DeleteSlideShapesRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutUpdateNotesSlidePortionRequest"/> class.
+        /// Initializes a new instance of the <see cref="DeleteSlideShapesRequest"/> class.
         /// </summary>
-        /// <param name="name">Presentation name.</param>
-        /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path">Object path.</param>
-        /// <param name="paragraphIndex"></param>
-        /// <param name="portionIndex"></param>
-        /// <param name="dto">Object dto.</param>
-        /// <param name="folder">Presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
-        public PutUpdateNotesSlidePortionRequest(string name, int slideIndex, string path, int paragraphIndex, int portionIndex, ResourceBase dto = null, string folder = null, string storage = null)
+        /// <param name="name"></param>
+        /// <param name="slideIndex"></param>
+        /// <param name="path"></param>
+        /// <param name="shapes"></param>
+        /// <param name="folder"></param>
+        /// <param name="storage"></param>
+        public DeleteSlideShapesRequest(string name, int slideIndex, string path, List<int> shapes = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Path = path;
-            this.ParagraphIndex = paragraphIndex;
-            this.PortionIndex = portionIndex;
-            this.Dto = dto;
+            this.Shapes = shapes;
             this.Folder = folder;
             this.Storage = storage;
         }
 
         /// <summary>
-        /// Presentation name.
+        /// Gets or sets Name
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Slide index.
+        /// Gets or sets SlideIndex
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Object path.
+        /// Gets or sets Path
         /// </summary>  
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or sets ParagraphIndex
+        /// Gets or sets Shapes
         /// </summary>  
-        public int ParagraphIndex { get; set; }
+        public List<int> Shapes { get; set; }
 
         /// <summary>
-        /// Gets or sets PortionIndex
-        /// </summary>  
-        public int PortionIndex { get; set; }
-
-        /// <summary>
-        /// Object dto.
-        /// </summary>  
-        public ResourceBase Dto { get; set; }
-
-        /// <summary>
-        /// Presentation folder.
+        /// Gets or sets Folder
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Gets or sets Storage
         /// </summary>  
         public string Storage { get; set; }
   }

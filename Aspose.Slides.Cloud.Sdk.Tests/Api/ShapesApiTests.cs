@@ -164,6 +164,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void DeleteParagraphInvalidShapeIndex()
+        {
+            InvalidPropertyTestExecutor<DeleteParagraphRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteParagraphRequest, ParagraphListResponse>("DeleteParagraph", "ShapeIndex");
+            DeleteParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void DeleteParagraphInvalidParagraphIndex()
         {
             InvalidPropertyTestExecutor<DeleteParagraphRequest, ParagraphListResponse> testExecutor =
@@ -329,6 +352,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void DeleteParagraphsInvalidShapeIndex()
+        {
+            InvalidPropertyTestExecutor<DeleteParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteParagraphsRequest, ParagraphListResponse>("DeleteParagraphs", "ShapeIndex");
+            DeleteParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void DeleteParagraphsInvalidParagraphs()
         {
             InvalidPropertyTestExecutor<DeleteParagraphsRequest, ParagraphListResponse> testExecutor =
@@ -475,6 +521,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<DeletePortionRequest, PortionListResponse> testExecutor =
                 new InvalidPropertyTestExecutor<DeletePortionRequest, PortionListResponse>("DeletePortion", "Path");
+            DeletePortionRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeletePortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeletePortionInvalidShapeIndex()
+        {
+            InvalidPropertyTestExecutor<DeletePortionRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeletePortionRequest, PortionListResponse>("DeletePortion", "ShapeIndex");
             DeletePortionRequest request = testExecutor.PrepareRequest();
             PortionListResponse response = null;
             bool needAssertResponse = false;
@@ -682,6 +751,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void DeletePortionsInvalidShapeIndex()
+        {
+            InvalidPropertyTestExecutor<DeletePortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeletePortionsRequest, PortionListResponse>("DeletePortions", "ShapeIndex");
+            DeletePortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeletePortions(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void DeletePortionsInvalidParagraphIndex()
         {
             InvalidPropertyTestExecutor<DeletePortionsRequest, PortionListResponse> testExecutor =
@@ -870,10 +962,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void DeleteSlideShapeInvalidShapes()
+        public void DeleteSlideShapeInvalidShapeIndex()
         {
             InvalidPropertyTestExecutor<DeleteSlideShapeRequest, ShapeListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<DeleteSlideShapeRequest, ShapeListResponse>("DeleteSlideShape", "Shapes");
+                new InvalidPropertyTestExecutor<DeleteSlideShapeRequest, ShapeListResponse>("DeleteSlideShape", "ShapeIndex");
             DeleteSlideShapeRequest request = testExecutor.PrepareRequest();
             ShapeListResponse response = null;
             bool needAssertResponse = false;
@@ -940,19 +1032,19 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
-        /// Test GetParagraph
+        /// Test DeleteSlideShapes
         /// </summary>
         [Test]
-        public void GetParagraph()
+        public void DeleteSlideShapes()
         {
-            GeneralTestExecutor<GetParagraphRequest, ParagraphResponse> testExecutor =
-                new GeneralTestExecutor<GetParagraphRequest, ParagraphResponse>("GetParagraph");
-            GetParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
+            GeneralTestExecutor<DeleteSlideShapesRequest, ShapeListResponse> testExecutor =
+                new GeneralTestExecutor<DeleteSlideShapesRequest, ShapeListResponse>("DeleteSlideShapes");
+            DeleteSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraph(request);
+                response = m_instance.DeleteSlideShapes(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -966,16 +1058,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphInvalidName()
+        public void DeleteSlideShapesInvalidName()
         {
-            InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse>("GetParagraph", "Name");
-            GetParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
+            InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse>("DeleteSlideShapes", "Name");
+            DeleteSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraph(request);
+                response = m_instance.DeleteSlideShapes(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -989,16 +1081,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphInvalidSlideIndex()
+        public void DeleteSlideShapesInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse>("GetParagraph", "SlideIndex");
-            GetParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
+            InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse>("DeleteSlideShapes", "SlideIndex");
+            DeleteSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraph(request);
+                response = m_instance.DeleteSlideShapes(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1012,16 +1104,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphInvalidPath()
+        public void DeleteSlideShapesInvalidPath()
         {
-            InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse>("GetParagraph", "Path");
-            GetParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
+            InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse>("DeleteSlideShapes", "Path");
+            DeleteSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraph(request);
+                response = m_instance.DeleteSlideShapes(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1035,16 +1127,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphInvalidParagraphIndex()
+        public void DeleteSlideShapesInvalidShapes()
         {
-            InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse>("GetParagraph", "ParagraphIndex");
-            GetParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
+            InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse>("DeleteSlideShapes", "Shapes");
+            DeleteSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraph(request);
+                response = m_instance.DeleteSlideShapes(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1058,16 +1150,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphInvalidFolder()
+        public void DeleteSlideShapesInvalidFolder()
         {
-            InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse>("GetParagraph", "Folder");
-            GetParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
+            InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse>("DeleteSlideShapes", "Folder");
+            DeleteSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraph(request);
+                response = m_instance.DeleteSlideShapes(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1081,16 +1173,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphInvalidStorage()
+        public void DeleteSlideShapesInvalidStorage()
         {
-            InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetParagraphRequest, ParagraphResponse>("GetParagraph", "Storage");
-            GetParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
+            InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteSlideShapesRequest, ShapeListResponse>("DeleteSlideShapes", "Storage");
+            DeleteSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraph(request);
+                response = m_instance.DeleteSlideShapes(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1105,19 +1197,19 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
-        /// Test GetParagraphs
+        /// Test GetParagraphPortion
         /// </summary>
         [Test]
-        public void GetParagraphs()
+        public void GetParagraphPortion()
         {
-            GeneralTestExecutor<GetParagraphsRequest, ParagraphListResponse> testExecutor =
-                new GeneralTestExecutor<GetParagraphsRequest, ParagraphListResponse>("GetParagraphs");
-            GetParagraphsRequest request = testExecutor.PrepareRequest();
-            ParagraphListResponse response = null;
+            GeneralTestExecutor<GetParagraphPortionRequest, PortionResponse> testExecutor =
+                new GeneralTestExecutor<GetParagraphPortionRequest, PortionResponse>("GetParagraphPortion");
+            GetParagraphPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraphs(request);
+                response = m_instance.GetParagraphPortion(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1131,16 +1223,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphsInvalidName()
+        public void GetParagraphPortionInvalidName()
         {
-            InvalidPropertyTestExecutor<GetParagraphsRequest, ParagraphListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetParagraphsRequest, ParagraphListResponse>("GetParagraphs", "Name");
-            GetParagraphsRequest request = testExecutor.PrepareRequest();
-            ParagraphListResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse>("GetParagraphPortion", "Name");
+            GetParagraphPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraphs(request);
+                response = m_instance.GetParagraphPortion(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1154,16 +1246,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphsInvalidSlideIndex()
+        public void GetParagraphPortionInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<GetParagraphsRequest, ParagraphListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetParagraphsRequest, ParagraphListResponse>("GetParagraphs", "SlideIndex");
-            GetParagraphsRequest request = testExecutor.PrepareRequest();
-            ParagraphListResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse>("GetParagraphPortion", "SlideIndex");
+            GetParagraphPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraphs(request);
+                response = m_instance.GetParagraphPortion(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1177,16 +1269,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphsInvalidPath()
+        public void GetParagraphPortionInvalidPath()
         {
-            InvalidPropertyTestExecutor<GetParagraphsRequest, ParagraphListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetParagraphsRequest, ParagraphListResponse>("GetParagraphs", "Path");
-            GetParagraphsRequest request = testExecutor.PrepareRequest();
-            ParagraphListResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse>("GetParagraphPortion", "Path");
+            GetParagraphPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraphs(request);
+                response = m_instance.GetParagraphPortion(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1200,16 +1292,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphsInvalidFolder()
+        public void GetParagraphPortionInvalidShapeIndex()
         {
-            InvalidPropertyTestExecutor<GetParagraphsRequest, ParagraphListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetParagraphsRequest, ParagraphListResponse>("GetParagraphs", "Folder");
-            GetParagraphsRequest request = testExecutor.PrepareRequest();
-            ParagraphListResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse>("GetParagraphPortion", "ShapeIndex");
+            GetParagraphPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraphs(request);
+                response = m_instance.GetParagraphPortion(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1223,16 +1315,85 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphsInvalidStorage()
+        public void GetParagraphPortionInvalidParagraphIndex()
         {
-            InvalidPropertyTestExecutor<GetParagraphsRequest, ParagraphListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetParagraphsRequest, ParagraphListResponse>("GetParagraphs", "Storage");
-            GetParagraphsRequest request = testExecutor.PrepareRequest();
-            ParagraphListResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse>("GetParagraphPortion", "ParagraphIndex");
+            GetParagraphPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetParagraphs(request);
+                response = m_instance.GetParagraphPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetParagraphPortionInvalidPortionIndex()
+        {
+            InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse>("GetParagraphPortion", "PortionIndex");
+            GetParagraphPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetParagraphPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetParagraphPortionInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse>("GetParagraphPortion", "Folder");
+            GetParagraphPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetParagraphPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetParagraphPortionInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionRequest, PortionResponse>("GetParagraphPortion", "Storage");
+            GetParagraphPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetParagraphPortion(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1247,19 +1408,19 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
-        /// Test GetPortion
+        /// Test GetParagraphPortions
         /// </summary>
         [Test]
-        public void GetPortion()
+        public void GetParagraphPortions()
         {
-            GeneralTestExecutor<GetPortionRequest, PortionResponse> testExecutor =
-                new GeneralTestExecutor<GetPortionRequest, PortionResponse>("GetPortion");
-            GetPortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
+            GeneralTestExecutor<GetParagraphPortionsRequest, PortionListResponse> testExecutor =
+                new GeneralTestExecutor<GetParagraphPortionsRequest, PortionListResponse>("GetParagraphPortions");
+            GetParagraphPortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortion(request);
+                response = m_instance.GetParagraphPortions(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1273,16 +1434,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionInvalidName()
+        public void GetParagraphPortionsInvalidName()
         {
-            InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse>("GetPortion", "Name");
-            GetPortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse>("GetParagraphPortions", "Name");
+            GetParagraphPortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortion(request);
+                response = m_instance.GetParagraphPortions(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1296,16 +1457,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionInvalidSlideIndex()
+        public void GetParagraphPortionsInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse>("GetPortion", "SlideIndex");
-            GetPortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse>("GetParagraphPortions", "SlideIndex");
+            GetParagraphPortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortion(request);
+                response = m_instance.GetParagraphPortions(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1319,16 +1480,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionInvalidPath()
+        public void GetParagraphPortionsInvalidPath()
         {
-            InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse>("GetPortion", "Path");
-            GetPortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse>("GetParagraphPortions", "Path");
+            GetParagraphPortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortion(request);
+                response = m_instance.GetParagraphPortions(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1342,16 +1503,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionInvalidParagraphIndex()
+        public void GetParagraphPortionsInvalidShapeIndex()
         {
-            InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse>("GetPortion", "ParagraphIndex");
-            GetPortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse>("GetParagraphPortions", "ShapeIndex");
+            GetParagraphPortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortion(request);
+                response = m_instance.GetParagraphPortions(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1365,16 +1526,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionInvalidPortionIndex()
+        public void GetParagraphPortionsInvalidParagraphIndex()
         {
-            InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse>("GetPortion", "PortionIndex");
-            GetPortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse>("GetParagraphPortions", "ParagraphIndex");
+            GetParagraphPortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortion(request);
+                response = m_instance.GetParagraphPortions(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1388,16 +1549,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionInvalidFolder()
+        public void GetParagraphPortionsInvalidFolder()
         {
-            InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse>("GetPortion", "Folder");
-            GetPortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse>("GetParagraphPortions", "Folder");
+            GetParagraphPortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortion(request);
+                response = m_instance.GetParagraphPortions(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1411,16 +1572,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionInvalidStorage()
+        public void GetParagraphPortionsInvalidStorage()
         {
-            InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionRequest, PortionResponse>("GetPortion", "Storage");
-            GetPortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
+            InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetParagraphPortionsRequest, PortionListResponse>("GetParagraphPortions", "Storage");
+            GetParagraphPortionsRequest request = testExecutor.PrepareRequest();
+            PortionListResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortion(request);
+                response = m_instance.GetParagraphPortions(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1435,19 +1596,19 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
-        /// Test GetPortions
+        /// Test GetShapeParagraph
         /// </summary>
         [Test]
-        public void GetPortions()
+        public void GetShapeParagraph()
         {
-            GeneralTestExecutor<GetPortionsRequest, PortionListResponse> testExecutor =
-                new GeneralTestExecutor<GetPortionsRequest, PortionListResponse>("GetPortions");
-            GetPortionsRequest request = testExecutor.PrepareRequest();
-            PortionListResponse response = null;
+            GeneralTestExecutor<GetShapeParagraphRequest, ParagraphResponse> testExecutor =
+                new GeneralTestExecutor<GetShapeParagraphRequest, ParagraphResponse>("GetShapeParagraph");
+            GetShapeParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortions(request);
+                response = m_instance.GetShapeParagraph(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1461,16 +1622,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionsInvalidName()
+        public void GetShapeParagraphInvalidName()
         {
-            InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse>("GetPortions", "Name");
-            GetPortionsRequest request = testExecutor.PrepareRequest();
-            PortionListResponse response = null;
+            InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse>("GetShapeParagraph", "Name");
+            GetShapeParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortions(request);
+                response = m_instance.GetShapeParagraph(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1484,16 +1645,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionsInvalidSlideIndex()
+        public void GetShapeParagraphInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse>("GetPortions", "SlideIndex");
-            GetPortionsRequest request = testExecutor.PrepareRequest();
-            PortionListResponse response = null;
+            InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse>("GetShapeParagraph", "SlideIndex");
+            GetShapeParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortions(request);
+                response = m_instance.GetShapeParagraph(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1507,16 +1668,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionsInvalidPath()
+        public void GetShapeParagraphInvalidPath()
         {
-            InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse>("GetPortions", "Path");
-            GetPortionsRequest request = testExecutor.PrepareRequest();
-            PortionListResponse response = null;
+            InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse>("GetShapeParagraph", "Path");
+            GetShapeParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortions(request);
+                response = m_instance.GetShapeParagraph(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1530,16 +1691,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionsInvalidParagraphIndex()
+        public void GetShapeParagraphInvalidShapeIndex()
         {
-            InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse>("GetPortions", "ParagraphIndex");
-            GetPortionsRequest request = testExecutor.PrepareRequest();
-            PortionListResponse response = null;
+            InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse>("GetShapeParagraph", "ShapeIndex");
+            GetShapeParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortions(request);
+                response = m_instance.GetShapeParagraph(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1553,16 +1714,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionsInvalidFolder()
+        public void GetShapeParagraphInvalidParagraphIndex()
         {
-            InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse>("GetPortions", "Folder");
-            GetPortionsRequest request = testExecutor.PrepareRequest();
-            PortionListResponse response = null;
+            InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse>("GetShapeParagraph", "ParagraphIndex");
+            GetShapeParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortions(request);
+                response = m_instance.GetShapeParagraph(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1576,43 +1737,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionsInvalidStorage()
+        public void GetShapeParagraphInvalidFolder()
         {
-            InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetPortionsRequest, PortionListResponse>("GetPortions", "Storage");
-            GetPortionsRequest request = testExecutor.PrepareRequest();
-            PortionListResponse response = null;
+            InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse>("GetShapeParagraph", "Folder");
+            GetShapeParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetPortions(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test GetShape
-        /// </summary>
-        [Test]
-        public void GetShape()
-        {
-            GeneralTestExecutor<GetShapeRequest, ShapeResponse> testExecutor =
-                new GeneralTestExecutor<GetShapeRequest, ShapeResponse>("GetShape");
-            GetShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetShape(request);
+                response = m_instance.GetShapeParagraph(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1626,108 +1760,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetShapeInvalidName()
+        public void GetShapeParagraphInvalidStorage()
         {
-            InvalidPropertyTestExecutor<GetShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetShapeRequest, ShapeResponse>("GetShape", "Name");
-            GetShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
+            InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetShapeParagraphRequest, ParagraphResponse>("GetShapeParagraph", "Storage");
+            GetShapeParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetShape(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetShapeInvalidSlideIndex()
-        {
-            InvalidPropertyTestExecutor<GetShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetShapeRequest, ShapeResponse>("GetShape", "SlideIndex");
-            GetShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetShape(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetShapeInvalidPath()
-        {
-            InvalidPropertyTestExecutor<GetShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetShapeRequest, ShapeResponse>("GetShape", "Path");
-            GetShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetShape(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetShapeInvalidFolder()
-        {
-            InvalidPropertyTestExecutor<GetShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetShapeRequest, ShapeResponse>("GetShape", "Folder");
-            GetShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetShape(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetShapeInvalidStorage()
-        {
-            InvalidPropertyTestExecutor<GetShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetShapeRequest, ShapeResponse>("GetShape", "Storage");
-            GetShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetShape(request);
+                response = m_instance.GetShapeParagraph(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -1976,19 +2018,19 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
-        /// Test GetSlidesSlideShapesParent
+        /// Test GetSlideShape
         /// </summary>
         [Test]
-        public void GetSlidesSlideShapesParent()
+        public void GetSlideShape()
         {
-            GeneralTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse>("GetSlidesSlideShapesParent");
-            GetSlidesSlideShapesParentRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            GeneralTestExecutor<GetSlideShapeRequest, ShapeResponse> testExecutor =
+                new GeneralTestExecutor<GetSlideShapeRequest, ShapeResponse>("GetSlideShape");
+            GetSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSlidesSlideShapesParent(request);
+                response = m_instance.GetSlideShape(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -2002,16 +2044,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetSlidesSlideShapesParentInvalidName()
+        public void GetSlideShapeInvalidName()
         {
-            InvalidPropertyTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse>("GetSlidesSlideShapesParent", "Name");
-            GetSlidesSlideShapesParentRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse>("GetSlideShape", "Name");
+            GetSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSlidesSlideShapesParent(request);
+                response = m_instance.GetSlideShape(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -2025,16 +2067,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetSlidesSlideShapesParentInvalidSlideIndex()
+        public void GetSlideShapeInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse>("GetSlidesSlideShapesParent", "SlideIndex");
-            GetSlidesSlideShapesParentRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse>("GetSlideShape", "SlideIndex");
+            GetSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSlidesSlideShapesParent(request);
+                response = m_instance.GetSlideShape(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -2048,16 +2090,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetSlidesSlideShapesParentInvalidPath()
+        public void GetSlideShapeInvalidPath()
         {
-            InvalidPropertyTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse>("GetSlidesSlideShapesParent", "Path");
-            GetSlidesSlideShapesParentRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse>("GetSlideShape", "Path");
+            GetSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSlidesSlideShapesParent(request);
+                response = m_instance.GetSlideShape(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -2071,16 +2113,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetSlidesSlideShapesParentInvalidFolder()
+        public void GetSlideShapeInvalidShapeIndex()
         {
-            InvalidPropertyTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse>("GetSlidesSlideShapesParent", "Folder");
-            GetSlidesSlideShapesParentRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse>("GetSlideShape", "ShapeIndex");
+            GetSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSlidesSlideShapesParent(request);
+                response = m_instance.GetSlideShape(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -2094,16 +2136,346 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetSlidesSlideShapesParentInvalidStorage()
+        public void GetSlideShapeInvalidFolder()
         {
-            InvalidPropertyTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesSlideShapesParentRequest, SaaSposeResponse>("GetSlidesSlideShapesParent", "Storage");
-            GetSlidesSlideShapesParentRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse>("GetSlideShape", "Folder");
+            GetSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSlidesSlideShapesParent(request);
+                response = m_instance.GetSlideShape(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapeInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeRequest, ShapeResponse>("GetSlideShape", "Storage");
+            GetSlideShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShape(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSlideShapeParagraphs
+        /// </summary>
+        [Test]
+        public void GetSlideShapeParagraphs()
+        {
+            GeneralTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse> testExecutor =
+                new GeneralTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse>("GetSlideShapeParagraphs");
+            GetSlideShapeParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapeParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapeParagraphsInvalidName()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse>("GetSlideShapeParagraphs", "Name");
+            GetSlideShapeParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapeParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapeParagraphsInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse>("GetSlideShapeParagraphs", "SlideIndex");
+            GetSlideShapeParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapeParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapeParagraphsInvalidPath()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse>("GetSlideShapeParagraphs", "Path");
+            GetSlideShapeParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapeParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapeParagraphsInvalidShapeIndex()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse>("GetSlideShapeParagraphs", "ShapeIndex");
+            GetSlideShapeParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapeParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapeParagraphsInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse>("GetSlideShapeParagraphs", "Folder");
+            GetSlideShapeParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapeParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapeParagraphsInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapeParagraphsRequest, ParagraphListResponse>("GetSlideShapeParagraphs", "Storage");
+            GetSlideShapeParagraphsRequest request = testExecutor.PrepareRequest();
+            ParagraphListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapeParagraphs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSlideShapes
+        /// </summary>
+        [Test]
+        public void GetSlideShapes()
+        {
+            GeneralTestExecutor<GetSlideShapesRequest, ShapeListResponse> testExecutor =
+                new GeneralTestExecutor<GetSlideShapesRequest, ShapeListResponse>("GetSlideShapes");
+            GetSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapes(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapesInvalidName()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapesRequest, ShapeListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapesRequest, ShapeListResponse>("GetSlideShapes", "Name");
+            GetSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapes(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapesInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapesRequest, ShapeListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapesRequest, ShapeListResponse>("GetSlideShapes", "SlideIndex");
+            GetSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapes(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapesInvalidPath()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapesRequest, ShapeListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapesRequest, ShapeListResponse>("GetSlideShapes", "Path");
+            GetSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapes(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapesInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapesRequest, ShapeListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapesRequest, ShapeListResponse>("GetSlideShapes", "Folder");
+            GetSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapes(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideShapesInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<GetSlideShapesRequest, ShapeListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideShapesRequest, ShapeListResponse>("GetSlideShapes", "Storage");
+            GetSlideShapesRequest request = testExecutor.PrepareRequest();
+            ShapeListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideShapes(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -2213,10 +2585,33 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostAddNewParagraphInvalidParagraphDto()
+        public void PostAddNewParagraphInvalidShapeIndex()
         {
             InvalidPropertyTestExecutor<PostAddNewParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostAddNewParagraphRequest, ParagraphResponse>("PostAddNewParagraph", "ParagraphDto");
+                new InvalidPropertyTestExecutor<PostAddNewParagraphRequest, ParagraphResponse>("PostAddNewParagraph", "ShapeIndex");
+            PostAddNewParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostAddNewParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostAddNewParagraphInvalidDto()
+        {
+            InvalidPropertyTestExecutor<PostAddNewParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostAddNewParagraphRequest, ParagraphResponse>("PostAddNewParagraph", "Dto");
             PostAddNewParagraphRequest request = testExecutor.PrepareRequest();
             ParagraphResponse response = null;
             bool needAssertResponse = false;
@@ -2263,29 +2658,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<PostAddNewParagraphRequest, ParagraphResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PostAddNewParagraphRequest, ParagraphResponse>("PostAddNewParagraph", "Storage");
-            PostAddNewParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PostAddNewParagraph(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PostAddNewParagraphInvalidShapeToClone()
-        {
-            InvalidPropertyTestExecutor<PostAddNewParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostAddNewParagraphRequest, ParagraphResponse>("PostAddNewParagraph", "ShapeToClone");
             PostAddNewParagraphRequest request = testExecutor.PrepareRequest();
             ParagraphResponse response = null;
             bool needAssertResponse = false;
@@ -2401,6 +2773,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void PostAddNewPortionInvalidShapeIndex()
+        {
+            InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse>("PostAddNewPortion", "ShapeIndex");
+            PostAddNewPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostAddNewPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void PostAddNewPortionInvalidParagraphIndex()
         {
             InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse> testExecutor =
@@ -2424,10 +2819,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostAddNewPortionInvalidPortionDto()
+        public void PostAddNewPortionInvalidDto()
         {
             InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse>("PostAddNewPortion", "PortionDto");
+                new InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse>("PostAddNewPortion", "Dto");
             PostAddNewPortionRequest request = testExecutor.PrepareRequest();
             PortionResponse response = null;
             bool needAssertResponse = false;
@@ -2474,29 +2869,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse>("PostAddNewPortion", "Storage");
-            PostAddNewPortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PostAddNewPortion(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PostAddNewPortionInvalidShapeToClone()
-        {
-            InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse>("PostAddNewPortion", "ShapeToClone");
             PostAddNewPortionRequest request = testExecutor.PrepareRequest();
             PortionResponse response = null;
             bool needAssertResponse = false;
@@ -2612,10 +2984,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostAddNewShapeInvalidShapeDto()
+        public void PostAddNewShapeInvalidDto()
         {
             InvalidPropertyTestExecutor<PostAddNewShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostAddNewShapeRequest, ShapeResponse>("PostAddNewShape", "ShapeDto");
+                new InvalidPropertyTestExecutor<PostAddNewShapeRequest, ShapeResponse>("PostAddNewShape", "Dto");
             PostAddNewShapeRequest request = testExecutor.PrepareRequest();
             ShapeResponse response = null;
             bool needAssertResponse = false;
@@ -2705,15 +3077,460 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test PutSetParagraphPortionProperties
+        /// </summary>
+        [Test]
+        public void PutSetParagraphPortionProperties()
+        {
+            GeneralTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse> testExecutor =
+                new GeneralTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse>("PutSetParagraphPortionProperties");
+            PutSetParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphPortionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPortionPropertiesInvalidName()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse>("PutSetParagraphPortionProperties", "Name");
+            PutSetParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphPortionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPortionPropertiesInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse>("PutSetParagraphPortionProperties", "SlideIndex");
+            PutSetParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphPortionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPortionPropertiesInvalidPath()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse>("PutSetParagraphPortionProperties", "Path");
+            PutSetParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphPortionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPortionPropertiesInvalidShapeIndex()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse>("PutSetParagraphPortionProperties", "ShapeIndex");
+            PutSetParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphPortionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPortionPropertiesInvalidParagraphIndex()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse>("PutSetParagraphPortionProperties", "ParagraphIndex");
+            PutSetParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphPortionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPortionPropertiesInvalidPortionIndex()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse>("PutSetParagraphPortionProperties", "PortionIndex");
+            PutSetParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphPortionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPortionPropertiesInvalidDto()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse>("PutSetParagraphPortionProperties", "Dto");
+            PutSetParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphPortionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPortionPropertiesInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse>("PutSetParagraphPortionProperties", "Folder");
+            PutSetParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphPortionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPortionPropertiesInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPortionPropertiesRequest, PortionResponse>("PutSetParagraphPortionProperties", "Storage");
+            PutSetParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphPortionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PutSetParagraphProperties
+        /// </summary>
+        [Test]
+        public void PutSetParagraphProperties()
+        {
+            GeneralTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse> testExecutor =
+                new GeneralTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse>("PutSetParagraphProperties");
+            PutSetParagraphPropertiesRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPropertiesInvalidName()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse>("PutSetParagraphProperties", "Name");
+            PutSetParagraphPropertiesRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPropertiesInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse>("PutSetParagraphProperties", "SlideIndex");
+            PutSetParagraphPropertiesRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPropertiesInvalidPath()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse>("PutSetParagraphProperties", "Path");
+            PutSetParagraphPropertiesRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPropertiesInvalidShapeIndex()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse>("PutSetParagraphProperties", "ShapeIndex");
+            PutSetParagraphPropertiesRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPropertiesInvalidParagraphIndex()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse>("PutSetParagraphProperties", "ParagraphIndex");
+            PutSetParagraphPropertiesRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPropertiesInvalidDto()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse>("PutSetParagraphProperties", "Dto");
+            PutSetParagraphPropertiesRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPropertiesInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse>("PutSetParagraphProperties", "Folder");
+            PutSetParagraphPropertiesRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSetParagraphPropertiesInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSetParagraphPropertiesRequest, ParagraphResponse>("PutSetParagraphProperties", "Storage");
+            PutSetParagraphPropertiesRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSetParagraphProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test PutSlideShapeInfo
         /// </summary>
         [Test]
         public void PutSlideShapeInfo()
         {
-            GeneralTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse> testExecutor =
-                new GeneralTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse>("PutSlideShapeInfo");
+            GeneralTestExecutor<PutSlideShapeInfoRequest, ShapeResponse> testExecutor =
+                new GeneralTestExecutor<PutSlideShapeInfoRequest, ShapeResponse>("PutSlideShapeInfo");
             PutSlideShapeInfoRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -2733,10 +3550,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlideShapeInfoInvalidName()
         {
-            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse>("PutSlideShapeInfo", "Name");
+            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse>("PutSlideShapeInfo", "Name");
             PutSlideShapeInfoRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -2756,10 +3573,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlideShapeInfoInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse>("PutSlideShapeInfo", "SlideIndex");
+            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse>("PutSlideShapeInfo", "SlideIndex");
             PutSlideShapeInfoRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -2779,10 +3596,33 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlideShapeInfoInvalidPath()
         {
-            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse>("PutSlideShapeInfo", "Path");
+            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse>("PutSlideShapeInfo", "Path");
             PutSlideShapeInfoRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlideShapeInfo(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlideShapeInfoInvalidShapeIndex()
+        {
+            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse>("PutSlideShapeInfo", "ShapeIndex");
+            PutSlideShapeInfoRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -2802,10 +3642,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlideShapeInfoInvalidDto()
         {
-            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse>("PutSlideShapeInfo", "Dto");
+            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse>("PutSlideShapeInfo", "Dto");
             PutSlideShapeInfoRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -2825,10 +3665,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlideShapeInfoInvalidFolder()
         {
-            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse>("PutSlideShapeInfo", "Folder");
+            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse>("PutSlideShapeInfo", "Folder");
             PutSlideShapeInfoRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
@@ -2848,578 +3688,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlideShapeInfoInvalidStorage()
         {
-            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, SaaSposeResponse>("PutSlideShapeInfo", "Storage");
+            InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSlideShapeInfoRequest, ShapeResponse>("PutSlideShapeInfo", "Storage");
             PutSlideShapeInfoRequest request = testExecutor.PrepareRequest();
-            SaaSposeResponse response = null;
+            ShapeResponse response = null;
             bool needAssertResponse = false;
             try
             {
                 response = m_instance.PutSlideShapeInfo(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test PutUpdateParagraph
-        /// </summary>
-        [Test]
-        public void PutUpdateParagraph()
-        {
-            GeneralTestExecutor<PutUpdateParagraphRequest, ParagraphResponse> testExecutor =
-                new GeneralTestExecutor<PutUpdateParagraphRequest, ParagraphResponse>("PutUpdateParagraph");
-            PutUpdateParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateParagraph(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateParagraphInvalidName()
-        {
-            InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse>("PutUpdateParagraph", "Name");
-            PutUpdateParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateParagraph(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateParagraphInvalidSlideIndex()
-        {
-            InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse>("PutUpdateParagraph", "SlideIndex");
-            PutUpdateParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateParagraph(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateParagraphInvalidPath()
-        {
-            InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse>("PutUpdateParagraph", "Path");
-            PutUpdateParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateParagraph(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateParagraphInvalidParagraphIndex()
-        {
-            InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse>("PutUpdateParagraph", "ParagraphIndex");
-            PutUpdateParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateParagraph(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateParagraphInvalidDto()
-        {
-            InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse>("PutUpdateParagraph", "Dto");
-            PutUpdateParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateParagraph(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateParagraphInvalidFolder()
-        {
-            InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse>("PutUpdateParagraph", "Folder");
-            PutUpdateParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateParagraph(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateParagraphInvalidStorage()
-        {
-            InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateParagraphRequest, ParagraphResponse>("PutUpdateParagraph", "Storage");
-            PutUpdateParagraphRequest request = testExecutor.PrepareRequest();
-            ParagraphResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateParagraph(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test PutUpdatePortion
-        /// </summary>
-        [Test]
-        public void PutUpdatePortion()
-        {
-            GeneralTestExecutor<PutUpdatePortionRequest, PortionResponse> testExecutor =
-                new GeneralTestExecutor<PutUpdatePortionRequest, PortionResponse>("PutUpdatePortion");
-            PutUpdatePortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdatePortion(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdatePortionInvalidName()
-        {
-            InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse>("PutUpdatePortion", "Name");
-            PutUpdatePortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdatePortion(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdatePortionInvalidSlideIndex()
-        {
-            InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse>("PutUpdatePortion", "SlideIndex");
-            PutUpdatePortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdatePortion(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdatePortionInvalidPath()
-        {
-            InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse>("PutUpdatePortion", "Path");
-            PutUpdatePortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdatePortion(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdatePortionInvalidParagraphIndex()
-        {
-            InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse>("PutUpdatePortion", "ParagraphIndex");
-            PutUpdatePortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdatePortion(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdatePortionInvalidPortionIndex()
-        {
-            InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse>("PutUpdatePortion", "PortionIndex");
-            PutUpdatePortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdatePortion(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdatePortionInvalidDto()
-        {
-            InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse>("PutUpdatePortion", "Dto");
-            PutUpdatePortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdatePortion(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdatePortionInvalidFolder()
-        {
-            InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse>("PutUpdatePortion", "Folder");
-            PutUpdatePortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdatePortion(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdatePortionInvalidStorage()
-        {
-            InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdatePortionRequest, PortionResponse>("PutUpdatePortion", "Storage");
-            PutUpdatePortionRequest request = testExecutor.PrepareRequest();
-            PortionResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdatePortion(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test PutUpdateShape
-        /// </summary>
-        [Test]
-        public void PutUpdateShape()
-        {
-            GeneralTestExecutor<PutUpdateShapeRequest, ShapeResponse> testExecutor =
-                new GeneralTestExecutor<PutUpdateShapeRequest, ShapeResponse>("PutUpdateShape");
-            PutUpdateShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateShape(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateShapeInvalidName()
-        {
-            InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse>("PutUpdateShape", "Name");
-            PutUpdateShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateShape(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateShapeInvalidSlideIndex()
-        {
-            InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse>("PutUpdateShape", "SlideIndex");
-            PutUpdateShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateShape(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateShapeInvalidPath()
-        {
-            InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse>("PutUpdateShape", "Path");
-            PutUpdateShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateShape(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateShapeInvalidDto()
-        {
-            InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse>("PutUpdateShape", "Dto");
-            PutUpdateShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateShape(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateShapeInvalidFolder()
-        {
-            InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse>("PutUpdateShape", "Folder");
-            PutUpdateShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateShape(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PutUpdateShapeInvalidStorage()
-        {
-            InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutUpdateShapeRequest, ShapeResponse>("PutUpdateShape", "Storage");
-            PutUpdateShapeRequest request = testExecutor.PrepareRequest();
-            ShapeResponse response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PutUpdateShape(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)

@@ -1,4 +1,3 @@
-
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostAddNewShapeRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -45,31 +44,31 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostAddNewShapeRequest"/> class.
         /// </summary>
-        /// <param name="name">Presentation name.</param>
-        /// <param name="slideIndex">Slide index.</param>
+        /// <param name="name"></param>
+        /// <param name="slideIndex"></param>
         /// <param name="path"></param>
-        /// <param name="shapeDto"></param>
-        /// <param name="folder">Presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
-        /// <param name="shapeToClone">Optional index for clone shape instead of adding the new one.</param>
-        public PostAddNewShapeRequest(string name, int slideIndex, string path, ShapeBase shapeDto = null, string folder = null, string storage = null, int? shapeToClone = null)
+        /// <param name="dto"></param>
+        /// <param name="folder"></param>
+        /// <param name="storage"></param>
+        /// <param name="shapeToClone"></param>
+        public PostAddNewShapeRequest(string name, int slideIndex, string path, ShapeBase dto = null, string folder = null, string storage = null, int? shapeToClone = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Path = path;
-            this.ShapeDto = shapeDto;
+            this.Dto = dto;
             this.Folder = folder;
             this.Storage = storage;
             this.ShapeToClone = shapeToClone;
         }
 
         /// <summary>
-        /// Presentation name.
+        /// Gets or sets Name
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Slide index.
+        /// Gets or sets SlideIndex
         /// </summary>  
         public int SlideIndex { get; set; }
 
@@ -79,22 +78,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or sets ShapeDto
+        /// Gets or sets Dto
         /// </summary>  
-        public ShapeBase ShapeDto { get; set; }
+        public ShapeBase Dto { get; set; }
 
         /// <summary>
-        /// Presentation folder.
+        /// Gets or sets Folder
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Gets or sets Storage
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Optional index for clone shape instead of adding the new one.
+        /// Gets or sets ShapeToClone
         /// </summary>  
         public int? ShapeToClone { get; set; }
   }

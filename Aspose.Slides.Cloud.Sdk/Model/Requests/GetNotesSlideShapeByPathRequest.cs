@@ -1,4 +1,3 @@
-
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="GetNotesSlideShapeByPathRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -45,42 +44,49 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="GetNotesSlideShapeByPathRequest"/> class.
         /// </summary>
-        /// <param name="name">Presentation name.</param>
-        /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path">Shape path.</param>
-        /// <param name="folder">Presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
-        public GetNotesSlideShapeByPathRequest(string name, int slideIndex, string path, string folder = null, string storage = null)
+        /// <param name="name"></param>
+        /// <param name="slideIndex"></param>
+        /// <param name="path"></param>
+        /// <param name="shapeIndex"></param>
+        /// <param name="folder"></param>
+        /// <param name="storage"></param>
+        public GetNotesSlideShapeByPathRequest(string name, int slideIndex, string path, int shapeIndex, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Path = path;
+            this.ShapeIndex = shapeIndex;
             this.Folder = folder;
             this.Storage = storage;
         }
 
         /// <summary>
-        /// Presentation name.
+        /// Gets or sets Name
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Slide index.
+        /// Gets or sets SlideIndex
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Shape path.
+        /// Gets or sets Path
         /// </summary>  
         public string Path { get; set; }
 
         /// <summary>
-        /// Presentation folder.
+        /// Gets or sets ShapeIndex
+        /// </summary>  
+        public int ShapeIndex { get; set; }
+
+        /// <summary>
+        /// Gets or sets Folder
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Gets or sets Storage
         /// </summary>  
         public string Storage { get; set; }
   }

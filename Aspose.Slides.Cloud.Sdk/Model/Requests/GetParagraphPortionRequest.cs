@@ -1,6 +1,5 @@
-
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="GetParagraphRequest.cs">
+// <copyright company="Aspose" file="GetParagraphPortionRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,50 +30,59 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ShapesApi.GetParagraph" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ShapesApi.GetParagraphPortion" /> operation.
   /// </summary>  
-  public class GetParagraphRequest  
+  public class GetParagraphPortionRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetParagraphRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetParagraphPortionRequest"/> class.
         /// </summary>        
-        public GetParagraphRequest()
+        public GetParagraphPortionRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetParagraphRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetParagraphPortionRequest"/> class.
         /// </summary>
-        /// <param name="name">Presentation name.</param>
-        /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path">Shape path.</param>
+        /// <param name="name"></param>
+        /// <param name="slideIndex"></param>
+        /// <param name="path"></param>
+        /// <param name="shapeIndex"></param>
         /// <param name="paragraphIndex"></param>
-        /// <param name="folder">Presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
-        public GetParagraphRequest(string name, int slideIndex, string path, int paragraphIndex, string folder = null, string storage = null)
+        /// <param name="portionIndex"></param>
+        /// <param name="folder"></param>
+        /// <param name="storage"></param>
+        public GetParagraphPortionRequest(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, int portionIndex, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Path = path;
+            this.ShapeIndex = shapeIndex;
             this.ParagraphIndex = paragraphIndex;
+            this.PortionIndex = portionIndex;
             this.Folder = folder;
             this.Storage = storage;
         }
 
         /// <summary>
-        /// Presentation name.
+        /// Gets or sets Name
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Slide index.
+        /// Gets or sets SlideIndex
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Shape path.
+        /// Gets or sets Path
         /// </summary>  
         public string Path { get; set; }
+
+        /// <summary>
+        /// Gets or sets ShapeIndex
+        /// </summary>  
+        public int ShapeIndex { get; set; }
 
         /// <summary>
         /// Gets or sets ParagraphIndex
@@ -82,12 +90,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int ParagraphIndex { get; set; }
 
         /// <summary>
-        /// Presentation folder.
+        /// Gets or sets PortionIndex
+        /// </summary>  
+        public int PortionIndex { get; set; }
+
+        /// <summary>
+        /// Gets or sets Folder
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Gets or sets Storage
         /// </summary>  
         public string Storage { get; set; }
   }

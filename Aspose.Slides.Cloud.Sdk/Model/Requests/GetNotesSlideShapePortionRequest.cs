@@ -1,6 +1,5 @@
-
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="GetShapeRequest.cs">
+// <copyright company="Aspose" file="GetNotesSlideShapePortionRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,56 +30,77 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ShapesApi.GetShape" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.NotesSlideShapesApi.GetNotesSlideShapePortion" /> operation.
   /// </summary>  
-  public class GetShapeRequest  
+  public class GetNotesSlideShapePortionRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetShapeRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetNotesSlideShapePortionRequest"/> class.
         /// </summary>        
-        public GetShapeRequest()
+        public GetNotesSlideShapePortionRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetShapeRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetNotesSlideShapePortionRequest"/> class.
         /// </summary>
-        /// <param name="name">Presentation name.</param>
-        /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path">Shape path.</param>
-        /// <param name="folder">Presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
-        public GetShapeRequest(string name, int slideIndex, string path, string folder = null, string storage = null)
+        /// <param name="name"></param>
+        /// <param name="slideIndex"></param>
+        /// <param name="path"></param>
+        /// <param name="shapeIndex"></param>
+        /// <param name="paragraphIndex"></param>
+        /// <param name="portionIndex"></param>
+        /// <param name="folder"></param>
+        /// <param name="storage"></param>
+        public GetNotesSlideShapePortionRequest(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, int portionIndex, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Path = path;
+            this.ShapeIndex = shapeIndex;
+            this.ParagraphIndex = paragraphIndex;
+            this.PortionIndex = portionIndex;
             this.Folder = folder;
             this.Storage = storage;
         }
 
         /// <summary>
-        /// Presentation name.
+        /// Gets or sets Name
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Slide index.
+        /// Gets or sets SlideIndex
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Shape path.
+        /// Gets or sets Path
         /// </summary>  
         public string Path { get; set; }
 
         /// <summary>
-        /// Presentation folder.
+        /// Gets or sets ShapeIndex
+        /// </summary>  
+        public int ShapeIndex { get; set; }
+
+        /// <summary>
+        /// Gets or sets ParagraphIndex
+        /// </summary>  
+        public int ParagraphIndex { get; set; }
+
+        /// <summary>
+        /// Gets or sets PortionIndex
+        /// </summary>  
+        public int PortionIndex { get; set; }
+
+        /// <summary>
+        /// Gets or sets Folder
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Gets or sets Storage
         /// </summary>  
         public string Storage { get; set; }
   }
