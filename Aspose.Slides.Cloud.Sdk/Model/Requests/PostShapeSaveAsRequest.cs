@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="GetShapeWithFormatRequest.cs">
+// <copyright company="Aspose" file="PostShapeSaveAsRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -30,24 +30,25 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ShapesApi.GetShapeWithFormat" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ShapesApi.PostShapeSaveAs" /> operation.
   /// </summary>  
-  public class GetShapeWithFormatRequest  
+  public class PostShapeSaveAsRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetShapeWithFormatRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostShapeSaveAsRequest"/> class.
         /// </summary>        
-        public GetShapeWithFormatRequest()
+        public PostShapeSaveAsRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetShapeWithFormatRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostShapeSaveAsRequest"/> class.
         /// </summary>
         /// <param name="name">Presentation name.</param>
         /// <param name="slideIndex">Slide index.</param>
         /// <param name="shapeIndex">Index of shape starting from 1</param>
         /// <param name="format">Export picture format.</param>
+        /// <param name="options">export options</param>
         /// <param name="folder">Presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
         /// <param name="scaleX">X scale ratio.</param>
@@ -55,12 +56,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="bounds">Shape thumbnail bounds type.</param>
         /// <param name="outPath">Output path.</param>
         /// <param name="fontsFolder">Fonts folder.</param>
-        public GetShapeWithFormatRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, string bounds = null, string outPath = null, string fontsFolder = null)
+        public PostShapeSaveAsRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, IShapeExportOptions options = null, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, string bounds = null, string outPath = null, string fontsFolder = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.ShapeIndex = shapeIndex;
             this.Format = format;
+            this.Options = options;
             this.Folder = folder;
             this.Storage = storage;
             this.ScaleX = scaleX;
@@ -89,6 +91,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Export picture format.
         /// </summary>  
         public ShapeExportFormat Format { get; set; }
+
+        /// <summary>
+        /// export options
+        /// </summary>  
+        public IShapeExportOptions Options { get; set; }
 
         /// <summary>
         /// Presentation folder.

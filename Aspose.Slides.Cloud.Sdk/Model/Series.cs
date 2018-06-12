@@ -35,97 +35,97 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// A chart series.
   /// </summary>  
   public class Series 
   {                       
         /// <summary>
-        /// Gets or sets DataPointType
+        /// Data point type.
         /// </summary>
         public ChartDataPointType DataPointType { get; set; }
 
         /// <summary>
-        /// Gets or sets Type
+        /// Series type.
         /// </summary>
         public ChartType Type { get; set; }
 
         /// <summary>
-        /// Gets or sets Name
+        /// Series name.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets IsColorVaried
+        /// True if each data marker in the series has a different color.
         /// </summary>
         public bool? IsColorVaried { get; set; }
 
         /// <summary>
-        /// Gets or sets InvertedSolidFillColor
+        /// Invert solid color for the series.
         /// </summary>
         public string InvertedSolidFillColor { get; set; }
 
         /// <summary>
-        /// Gets or sets Smooth
+        /// True if curve smoothing is turned on. Applies only to line and scatter connected by lines charts.
         /// </summary>
         public bool? Smooth { get; set; }
 
         /// <summary>
-        /// Gets or sets PlotOnSecondAxis
+        /// True if the series is plotted on second value axis.
         /// </summary>
         public bool? PlotOnSecondAxis { get; set; }
 
         /// <summary>
-        /// Gets or sets Order
+        /// Series order.
         /// </summary>
         public int? Order { get; set; }
 
         /// <summary>
-        /// Gets or sets NumberFormatOfYValues
+        /// The number format for the series y values.
         /// </summary>
         public string NumberFormatOfYValues { get; set; }
 
         /// <summary>
-        /// Gets or sets NumberFormatOfXValues
+        /// The number format for the series x values.
         /// </summary>
         public string NumberFormatOfXValues { get; set; }
 
         /// <summary>
-        /// Gets or sets NumberFormatOfValues
+        /// The number format for the series values.
         /// </summary>
         public string NumberFormatOfValues { get; set; }
 
         /// <summary>
-        /// Gets or sets NumberFormatOfBubbleSizes
+        /// The number format for the series bubble sizes.
         /// </summary>
         public string NumberFormatOfBubbleSizes { get; set; }
 
         /// <summary>
-        /// Gets or sets InvertIfNegative
+        /// True if the series shall invert its colors if the value is negative. Applies to bar, column and bubble series.
         /// </summary>
         public bool? InvertIfNegative { get; set; }
 
         /// <summary>
-        /// Gets or sets Explosion
+        /// The distance of an open pie slice from the center of the pie chart is expressed as a percentage of the pie diameter.
         /// </summary>
         public int? Explosion { get; set; }
 
         /// <summary>
-        /// Gets or sets Marker
+        /// Series marker.
         /// </summary>
         public SeriesMarker Marker { get; set; }
 
         /// <summary>
-        /// Get or sets the fill format.
+        /// Fill properties set for the series.
         /// </summary>
         public FillFormat FillFormat { get; set; }
 
         /// <summary>
-        /// Get or sets the effect format.
+        /// Effect properties set for the series.
         /// </summary>
         public EffectFormat EffectFormat { get; set; }
 
         /// <summary>
-        /// Get or sets the line format.
+        /// Line properties set for the series.
         /// </summary>
         public LineFormat LineFormat { get; set; }
 

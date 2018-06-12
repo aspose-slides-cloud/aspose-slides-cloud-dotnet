@@ -105,7 +105,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         protected virtual string GetShapePath()
         {
-            return "3";
+            return string.Empty;
         }
 
         protected virtual Stream GetStream()
@@ -141,7 +141,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             if (propertyInfo.Name.Equals(m_invalidPropertyName, StringComparison.InvariantCultureIgnoreCase))
             {
                 InvalidPropertyType = propertyInfo.PropertyType;
-                return Invalidize(value, propertyInfo.PropertyType);
+                return Invalidize(m_invalidPropertyName, value, propertyInfo.PropertyType);
             }
             else
             {
@@ -271,6 +271,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             {
                 return GetStream();
             }
+            if (propertyInfo.Name.Equals("shapeIndex", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return 3;
+            }
             if (propertyInfo.Name.EndsWith("index", StringComparison.InvariantCultureIgnoreCase)
                 || propertyInfo.Name.EndsWith("position", StringComparison.InvariantCultureIgnoreCase)
                 || propertyInfo.Name.Equals("width", StringComparison.InvariantCultureIgnoreCase)
@@ -285,8 +289,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             return null;
         }
 
-        private object Invalidize(object value, Type type)
+        private object Invalidize(string fieldName, object value, Type type)
         {
+            if (fieldName.Equals("path", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return "45/shapes";
+            }
             if (type == typeof(string))
             {
                 return (string)value + "invalidValue";

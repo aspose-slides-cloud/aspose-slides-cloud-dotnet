@@ -57,7 +57,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Removes a shape, specified shapes or all shapes. 
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteNotesSlideParagraphRequest" /></param> 
         /// <returns><see cref="ParagraphListResponse"/></returns>            
@@ -91,7 +91,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Removes a shape, specified shapes or all shapes. 
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteNotesSlideParagraphsRequest" /></param> 
         /// <returns><see cref="ParagraphListResponse"/></returns>            
@@ -125,7 +125,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Removes a shape, specified shapes or all shapes. 
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteNotesSlidePortionRequest" /></param> 
         /// <returns><see cref="PortionListResponse"/></returns>            
@@ -160,7 +160,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Removes a shape, specified shapes or all shapes. 
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteNotesSlidePortionsRequest" /></param> 
         /// <returns><see cref="PortionListResponse"/></returns>            
@@ -195,7 +195,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Removes a shape, specified shapes or all shapes. 
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteNotesSlideShapeRequest" /></param> 
         /// <returns><see cref="ShapeListResponse"/></returns>            
@@ -228,7 +228,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Removes a shape, specified shapes or all shapes. 
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteNotesSlideShapesRequest" /></param> 
         /// <returns><see cref="ShapeListResponse"/></returns>            
@@ -261,22 +261,22 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Read slide shapes or shape info. 
         /// </summary>
-        /// <param name="request">Request. <see cref="GetNotesSlideShapeByPathRequest" /></param> 
+        /// <param name="request">Request. <see cref="GetNotesSlideShapeRequest" /></param> 
         /// <returns><see cref="ShapeResponse"/></returns>            
-        public ShapeResponse GetNotesSlideShapeByPath(GetNotesSlideShapeByPathRequest request)
+        public ShapeResponse GetNotesSlideShape(GetNotesSlideShapeRequest request)
         {
             // verify the required parameter 'name' is set
             if (request.Name == null)
             {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapeByPath");
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShape");
             }
 
             // verify the required parameter 'path' is set
             if (request.Path == null)
             {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShapeByPath");
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShape");
             }
 
             // create path and map variables
@@ -294,7 +294,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Read slide shapes or shape info. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetNotesSlideShapeParagraphRequest" /></param> 
         /// <returns><see cref="ParagraphResponse"/></returns>            
@@ -328,7 +328,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Read slide shapes or shape info. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetNotesSlideShapeParagraphsRequest" /></param> 
         /// <returns><see cref="ParagraphListResponse"/></returns>            
@@ -361,7 +361,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Read slide shapes or shape info. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetNotesSlideShapePortionRequest" /></param> 
         /// <returns><see cref="PortionResponse"/></returns>            
@@ -396,7 +396,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Read slide shapes or shape info. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetNotesSlideShapePortionsRequest" /></param> 
         /// <returns><see cref="PortionListResponse"/></returns>            
@@ -443,16 +443,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
 
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}");
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/saveAs/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "format", request.Format);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", request.ScaleX);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
             string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
@@ -460,7 +462,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Read slide shapes or shape info. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetNotesSlideShapesRequest" /></param> 
         /// <returns><see cref="ShapeListResponse"/></returns>            
@@ -492,7 +494,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Creates new paragraph. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostNotesSlideAddNewParagraphRequest" /></param> 
         /// <returns><see cref="ParagraphResponse"/></returns>            
@@ -518,6 +520,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
             string contentType;
             var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
             var files = new List<FileInfo>();
@@ -526,7 +529,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Creates new portion. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostNotesSlideAddNewPortionRequest" /></param> 
         /// <returns><see cref="PortionResponse"/></returns>            
@@ -553,6 +556,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
             string contentType;
             var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
             var files = new List<FileInfo>();
@@ -561,7 +565,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Creates new shape. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostNotesSlideAddNewShapeRequest" /></param> 
         /// <returns><see cref="ShapeResponse"/></returns>            
@@ -587,6 +591,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", request.ShapeToClone);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
             string contentType;
             var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
             var files = new List<FileInfo>();
@@ -595,7 +600,40 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Render shape to specified picture format. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostNotesSlideShapeSaveAsRequest" /></param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream PostNotesSlideShapeSaveAs(PostNotesSlideShapeSaveAsRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostNotesSlideShapeSaveAs");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/saveAs/{format}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", request.ScaleX);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            string contentType;
+            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, contentType);
+        }
+
+        /// <summary>
+        /// Updates shape properties. 
         /// </summary>
         /// <param name="request">Request. <see cref="PutUpdateNotesSlideShapeRequest" /></param> 
         /// <returns><see cref="ShapeResponse"/></returns>            
@@ -629,7 +667,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Updates shape properties. 
         /// </summary>
         /// <param name="request">Request. <see cref="PutUpdateNotesSlideShapeParagraphRequest" /></param> 
         /// <returns><see cref="ParagraphResponse"/></returns>            
@@ -664,7 +702,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        ///  
+        /// Updates shape properties. 
         /// </summary>
         /// <param name="request">Request. <see cref="PutUpdateNotesSlideShapePortionRequest" /></param> 
         /// <returns><see cref="PortionResponse"/></returns>            

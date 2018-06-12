@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="SaveShape.cs">
+// <copyright company="Aspose" file="ShapeImageExportOptions.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,29 +35,29 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Provides options that control how a shape is saved in thumbnail.
   /// </summary>  
-  public class SaveShape : Task 
+  public class ShapeImageExportOptions 
   {                       
         /// <summary>
-        /// Gets or sets Format
+        /// Get or sets scaling ratio by X axis.
         /// </summary>
-        public ShapeExportFormat Format { get; set; }
+        public double? ScaleX { get; set; }
 
         /// <summary>
-        /// Gets or sets ShapePath
+        /// Get or sets scaling ratio by Y axis.
         /// </summary>
-        public string ShapePath { get; set; }
+        public double? ScaleY { get; set; }
 
         /// <summary>
-        /// Gets or sets Output
+        /// Get or sets thumbnail bounds
         /// </summary>
-        public OutputFile Output { get; set; }
+        public ShapeThumbnailBounds ThumbnailBounds { get; set; }
 
         /// <summary>
-        /// Gets or sets Options
+        /// Gets export format.
         /// </summary>
-        public IShapeExportOptions Options { get; set; }
+        public string Format { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -66,12 +66,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class SaveShape {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
+          sb.Append("class ShapeImageExportOptions {\n");
+          sb.Append("  ScaleX: ").Append(this.ScaleX).Append("\n");
+          sb.Append("  ScaleY: ").Append(this.ScaleY).Append("\n");
+          sb.Append("  ThumbnailBounds: ").Append(this.ThumbnailBounds).Append("\n");
           sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("  ShapePath: ").Append(this.ShapePath).Append("\n");
-          sb.Append("  Output: ").Append(this.Output).Append("\n");
-          sb.Append("  Options: ").Append(this.Options).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

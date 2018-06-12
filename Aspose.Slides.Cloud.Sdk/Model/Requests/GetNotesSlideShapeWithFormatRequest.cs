@@ -53,7 +53,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="scaleX">X scale ratio.</param>
         /// <param name="scaleY">Y scale ratio.</param>
         /// <param name="bounds">Shape thumbnail bounds type.</param>
-        public GetNotesSlideShapeWithFormatRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, string bounds = null)
+        /// <param name="outPath">Output path.</param>
+        /// <param name="fontsFolder">Fonts folder.</param>
+        public GetNotesSlideShapeWithFormatRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, string bounds = null, string outPath = null, string fontsFolder = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
@@ -64,6 +66,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.ScaleX = scaleX;
             this.ScaleY = scaleY;
             this.Bounds = bounds;
+            this.OutPath = outPath;
+            this.FontsFolder = fontsFolder;
         }
 
         /// <summary>
@@ -110,5 +114,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Shape thumbnail bounds type.
         /// </summary>  
         public string Bounds { get; set; }
+
+        /// <summary>
+        /// Output path.
+        /// </summary>  
+        public string OutPath { get; set; }
+
+        /// <summary>
+        /// Fonts folder.
+        /// </summary>  
+        public string FontsFolder { get; set; }
   }
 }

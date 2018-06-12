@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ShapeExportOptions.cs">
+// <copyright company="Aspose" file="IShapeExportOptions.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,29 +35,14 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// Provides options that control how a shape is saved in thumbnail.
+  /// Represents export options for whole presentation.
   /// </summary>  
-  public class ShapeExportOptions 
+  public class IShapeExportOptions 
   {                       
         /// <summary>
-        /// Get or sets scaling ratio by X axis.
+        /// Gets or sets Format
         /// </summary>
-        public double? ScaleX { get; set; }
-
-        /// <summary>
-        /// Get or sets scaling ratio by Y axis.
-        /// </summary>
-        public double? ScaleY { get; set; }
-
-        /// <summary>
-        /// Get or sets thumbnail bounds
-        /// </summary>
-        public ShapeThumbnailBounds ThumbnailBounds { get; set; }
-
-        /// <summary>
-        /// Gets export format.
-        /// </summary>
-        public ShapeExportFormat Format { get; set; }
+        public string Format { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -66,10 +51,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
           var sb = new StringBuilder();
-          sb.Append("class ShapeExportOptions {\n");
-          sb.Append("  ScaleX: ").Append(this.ScaleX).Append("\n");
-          sb.Append("  ScaleY: ").Append(this.ScaleY).Append("\n");
-          sb.Append("  ThumbnailBounds: ").Append(this.ThumbnailBounds).Append("\n");
+          sb.Append("class IShapeExportOptions {\n");
           sb.Append("  Format: ").Append(this.Format).Append("\n");
           sb.Append("}\n");
           return sb.ToString();

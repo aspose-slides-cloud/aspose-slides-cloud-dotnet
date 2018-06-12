@@ -44,13 +44,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostSlidesSlideReplaceTextRequest"/> class.
         /// </summary>
-        /// <param name="name">Presentation name.</param>
-        /// <param name="slideIndex">Slide&#39;s index.</param>
-        /// <param name="oldValue">Text to replace.</param>
-        /// <param name="newValue">New text value.</param>
-        /// <param name="ignoreCase">Is case must be ignored.</param>
-        /// <param name="folder">Presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
+        /// <param name="name">Document name.</param>
+        /// <param name="slideIndex">Slide index.</param>
+        /// <param name="oldValue">Text value to be replaced.</param>
+        /// <param name="newValue">Text value to replace with.</param>
+        /// <param name="ignoreCase">True if character case must be ignored.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         public PostSlidesSlideReplaceTextRequest(string name, int slideIndex, string oldValue, string newValue, bool? ignoreCase = null, string folder = null, string storage = null)
         {
             this.Name = name;
@@ -63,37 +63,37 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Presentation name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Slide's index.
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Text to replace.
+        /// Text value to be replaced.
         /// </summary>  
         public string OldValue { get; set; }
 
         /// <summary>
-        /// New text value.
+        /// Text value to replace with.
         /// </summary>  
         public string NewValue { get; set; }
 
         /// <summary>
-        /// Is case must be ignored.
+        /// True if character case must be ignored.
         /// </summary>  
         public bool? IgnoreCase { get; set; }
 
         /// <summary>
-        /// Presentation folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
   }

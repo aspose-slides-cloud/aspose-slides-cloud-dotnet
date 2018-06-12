@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Vertical text writing mode
     /// </summary>
-    /// <value></value>
+    /// <value>Vertical text writing mode</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum TextVerticalType
     {

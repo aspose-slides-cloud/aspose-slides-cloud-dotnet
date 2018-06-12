@@ -44,12 +44,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostSlidesPresentationReplaceTextRequest"/> class.
         /// </summary>
-        /// <param name="name">The presentation name.</param>
-        /// <param name="oldValue">Text value to replace.</param>
-        /// <param name="newValue">The new text value.</param>
-        /// <param name="ignoreCase">Is case must be ignored.</param>
-        /// <param name="folder">The presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
+        /// <param name="name">Document name.</param>
+        /// <param name="oldValue">Text value to be replaced.</param>
+        /// <param name="newValue">Text value to replace with.</param>
+        /// <param name="ignoreCase">True if character case must be ignored.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         public PostSlidesPresentationReplaceTextRequest(string name, string oldValue, string newValue, bool? ignoreCase = null, string folder = null, string storage = null)
         {
             this.Name = name;
@@ -61,32 +61,32 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// The presentation name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Text value to replace.
+        /// Text value to be replaced.
         /// </summary>  
         public string OldValue { get; set; }
 
         /// <summary>
-        /// The new text value.
+        /// Text value to replace with.
         /// </summary>  
         public string NewValue { get; set; }
 
         /// <summary>
-        /// Is case must be ignored.
+        /// True if character case must be ignored.
         /// </summary>  
         public bool? IgnoreCase { get; set; }
 
         /// <summary>
-        /// The presentation folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
   }

@@ -44,13 +44,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteNotesSlideParagraphRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="slideIndex"></param>
-        /// <param name="path"></param>
-        /// <param name="shapeIndex"></param>
-        /// <param name="paragraphIndex"></param>
-        /// <param name="folder"></param>
-        /// <param name="storage"></param>
+        /// <param name="name">Presentation name.</param>
+        /// <param name="slideIndex">Slide index.</param>
+        /// <param name="path">Shape path.</param>
+        /// <param name="shapeIndex">Shape index.</param>
+        /// <param name="paragraphIndex">Paragraph index.</param>
+        /// <param name="folder">Presentation folder.</param>
+        /// <param name="storage">Presentation storage.</param>
         public DeleteNotesSlideParagraphRequest(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, string folder = null, string storage = null)
         {
             this.Name = name;
@@ -63,37 +63,37 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// Presentation name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets SlideIndex
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets Path
+        /// Shape path.
         /// </summary>  
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or sets ShapeIndex
+        /// Shape index.
         /// </summary>  
         public int ShapeIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets ParagraphIndex
+        /// Paragraph index.
         /// </summary>  
         public int ParagraphIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// Presentation folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// Presentation storage.
         /// </summary>  
         public string Storage { get; set; }
   }

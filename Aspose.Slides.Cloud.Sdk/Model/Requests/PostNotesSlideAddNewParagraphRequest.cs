@@ -44,14 +44,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostNotesSlideAddNewParagraphRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="slideIndex"></param>
-        /// <param name="path"></param>
-        /// <param name="shapeIndex"></param>
-        /// <param name="dto"></param>
-        /// <param name="folder"></param>
-        /// <param name="storage"></param>
-        public PostNotesSlideAddNewParagraphRequest(string name, int slideIndex, string path, int shapeIndex, Paragraph dto = null, string folder = null, string storage = null)
+        /// <param name="name">Presentation name.</param>
+        /// <param name="slideIndex">Slide index.</param>
+        /// <param name="path">Shape path.</param>
+        /// <param name="shapeIndex">Shape index.</param>
+        /// <param name="dto">Shape dto.</param>
+        /// <param name="folder">Presentation folder.</param>
+        /// <param name="storage">Presentation storage.</param>
+        /// <param name="position">Position of the new paragraph in the list. Default is at the end of the list.</param>
+        public PostNotesSlideAddNewParagraphRequest(string name, int slideIndex, string path, int shapeIndex, Paragraph dto = null, string folder = null, string storage = null, int? position = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
@@ -60,41 +61,47 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.Dto = dto;
             this.Folder = folder;
             this.Storage = storage;
+            this.Position = position;
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// Presentation name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets SlideIndex
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets Path
+        /// Shape path.
         /// </summary>  
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or sets ShapeIndex
+        /// Shape index.
         /// </summary>  
         public int ShapeIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets Dto
+        /// Shape dto.
         /// </summary>  
         public Paragraph Dto { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// Presentation folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// Presentation storage.
         /// </summary>  
         public string Storage { get; set; }
+
+        /// <summary>
+        /// Position of the new paragraph in the list. Default is at the end of the list.
+        /// </summary>  
+        public int? Position { get; set; }
   }
 }

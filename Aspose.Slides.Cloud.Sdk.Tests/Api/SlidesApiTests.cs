@@ -613,6 +613,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void GetSlideWithFormatInvalidOutPath()
+        {
+            InvalidPropertyTestExecutor<GetSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlideWithFormatRequest, System.IO.Stream>("GetSlideWithFormat", "OutPath");
+            GetSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void GetSlideWithFormatInvalidFontsFolder()
         {
             InvalidPropertyTestExecutor<GetSlideWithFormatRequest, System.IO.Stream> testExecutor =
@@ -1281,6 +1304,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
                 new InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs", "Storage");
+            PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlideSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlideSaveAsInvalidOutPath()
+        {
+            InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlideSaveAsRequest, System.IO.Stream>("PostSlideSaveAs", "OutPath");
             PostSlideSaveAsRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;

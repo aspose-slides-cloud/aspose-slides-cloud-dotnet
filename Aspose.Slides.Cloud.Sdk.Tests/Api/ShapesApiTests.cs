@@ -2016,6 +2016,52 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             }
         }
 
+        [Test]
+        public void GetShapeWithFormatInvalidOutPath()
+        {
+            InvalidPropertyTestExecutor<GetShapeWithFormatRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<GetShapeWithFormatRequest, System.IO.Stream>("GetShapeWithFormat", "OutPath");
+            GetShapeWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetShapeWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetShapeWithFormatInvalidFontsFolder()
+        {
+            InvalidPropertyTestExecutor<GetShapeWithFormatRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<GetShapeWithFormatRequest, System.IO.Stream>("GetShapeWithFormat", "FontsFolder");
+            GetShapeWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetShapeWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
         
         /// <summary>
         /// Test GetSlideShape
@@ -2676,6 +2722,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             }
         }
 
+        [Test]
+        public void PostAddNewParagraphInvalidPosition()
+        {
+            InvalidPropertyTestExecutor<PostAddNewParagraphRequest, ParagraphResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostAddNewParagraphRequest, ParagraphResponse>("PostAddNewParagraph", "Position");
+            PostAddNewParagraphRequest request = testExecutor.PrepareRequest();
+            ParagraphResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostAddNewParagraph(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
         
         /// <summary>
         /// Test PostAddNewPortion
@@ -2887,6 +2956,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             }
         }
 
+        [Test]
+        public void PostAddNewPortionInvalidPosition()
+        {
+            InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostAddNewPortionRequest, PortionResponse>("PostAddNewPortion", "Position");
+            PostAddNewPortionRequest request = testExecutor.PrepareRequest();
+            PortionResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostAddNewPortion(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
         
         /// <summary>
         /// Test PostAddNewShape
@@ -3063,6 +3155,332 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.PostAddNewShape(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostAddNewShapeInvalidPosition()
+        {
+            InvalidPropertyTestExecutor<PostAddNewShapeRequest, ShapeResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostAddNewShapeRequest, ShapeResponse>("PostAddNewShape", "Position");
+            PostAddNewShapeRequest request = testExecutor.PrepareRequest();
+            ShapeResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostAddNewShape(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PostShapeSaveAs
+        /// </summary>
+        [Test]
+        public void PostShapeSaveAs()
+        {
+            GeneralTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new GeneralTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidName()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "Name");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "SlideIndex");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidShapeIndex()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "ShapeIndex");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidFormat()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "Format");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidOptions()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "Options");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "Folder");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "Storage");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidScaleX()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "ScaleX");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidScaleY()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "ScaleY");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidBounds()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "Bounds");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidOutPath()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "OutPath");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostShapeSaveAsInvalidFontsFolder()
+        {
+            InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostShapeSaveAsRequest, System.IO.Stream>("PostShapeSaveAs", "FontsFolder");
+            PostShapeSaveAsRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostShapeSaveAs(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)

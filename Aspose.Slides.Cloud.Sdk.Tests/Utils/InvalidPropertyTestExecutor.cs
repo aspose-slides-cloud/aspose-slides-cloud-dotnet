@@ -158,7 +158,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 }
                 catch (ApiException ex)
                 {
-                    Assert.IsTrue(ex.Message.StartsWith("Wrong slide index.") || ex.Message.StartsWith("Invalid index:"));
+                    Assert.IsTrue(ex.Message.StartsWith("Wrong slide index.")
+                        || ex.Message.StartsWith("Invalid index:")
+                        || ex.Message.StartsWith("Placeholder with specified index doesn't exist"));
                     return;
                 }
             }
@@ -238,7 +240,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 catch (ApiException ex)
                 {
                     //TODO: only the first message is actually expected
-                    Assert.IsTrue(ex.Message.StartsWith("Unexpected Shapes subnode") || ex.Message.StartsWith("An error has occurred"));
+                    Assert.IsTrue(ex.Message.StartsWith("Unexpected Shapes subnode")
+                        || ex.Message.StartsWith("An error has occurred")
+                        || ex.Message.StartsWith("Shape index out of bounds"));
                     return;
                 }
             }

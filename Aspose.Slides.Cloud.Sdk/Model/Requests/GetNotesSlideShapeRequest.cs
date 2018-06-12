@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="GetNotesSlideShapeByPathRequest.cs">
+// <copyright company="Aspose" file="GetNotesSlideShapeRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -30,27 +30,27 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.NotesSlideShapesApi.GetNotesSlideShapeByPath" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.NotesSlideShapesApi.GetNotesSlideShape" /> operation.
   /// </summary>  
-  public class GetNotesSlideShapeByPathRequest  
+  public class GetNotesSlideShapeRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetNotesSlideShapeByPathRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetNotesSlideShapeRequest"/> class.
         /// </summary>        
-        public GetNotesSlideShapeByPathRequest()
+        public GetNotesSlideShapeRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetNotesSlideShapeByPathRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetNotesSlideShapeRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="slideIndex"></param>
-        /// <param name="path"></param>
-        /// <param name="shapeIndex"></param>
-        /// <param name="folder"></param>
-        /// <param name="storage"></param>
-        public GetNotesSlideShapeByPathRequest(string name, int slideIndex, string path, int shapeIndex, string folder = null, string storage = null)
+        /// <param name="name">Presentation name.</param>
+        /// <param name="slideIndex">Slide index.</param>
+        /// <param name="path">Shape path.</param>
+        /// <param name="shapeIndex">Shape index.</param>
+        /// <param name="folder">Presentation folder.</param>
+        /// <param name="storage">Presentation storage.</param>
+        public GetNotesSlideShapeRequest(string name, int slideIndex, string path, int shapeIndex, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
@@ -61,32 +61,32 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// Presentation name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets SlideIndex
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets Path
+        /// Shape path.
         /// </summary>  
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or sets ShapeIndex
+        /// Shape index.
         /// </summary>  
         public int ShapeIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// Presentation folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// Presentation storage.
         /// </summary>  
         public string Storage { get; set; }
   }

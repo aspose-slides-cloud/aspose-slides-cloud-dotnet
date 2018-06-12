@@ -40,82 +40,82 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class TableCell 
   {                       
         /// <summary>
-        /// Gets or sets Text
+        /// Cell text.
         /// </summary>
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or sets RowSpan
+        /// The number of rows spanned by a merged cell.
         /// </summary>
         public int? RowSpan { get; set; }
 
         /// <summary>
-        /// Gets or sets ColSpan
+        /// The number of columns spanned by a merged cell.
         /// </summary>
         public int? ColSpan { get; set; }
 
         /// <summary>
-        /// Gets or sets MarginTop
+        /// The top margin of the cell.
         /// </summary>
         public double? MarginTop { get; set; }
 
         /// <summary>
-        /// Gets or sets MarginRight
+        /// The right margin of the cell.
         /// </summary>
         public double? MarginRight { get; set; }
 
         /// <summary>
-        /// Gets or sets MarginLeft
+        /// The left margin of the cell.
         /// </summary>
         public double? MarginLeft { get; set; }
 
         /// <summary>
-        /// Gets or sets MarginBottom
+        /// The bottom margin of the cell.
         /// </summary>
         public double? MarginBottom { get; set; }
 
         /// <summary>
-        /// Gets or sets TextAnchorType
+        /// Text anchor type.
         /// </summary>
         public TextAnchorType TextAnchorType { get; set; }
 
         /// <summary>
-        /// Gets or sets TextVerticalType
+        /// The type of vertical text.
         /// </summary>
         public TextVerticalType TextVerticalType { get; set; }
 
         /// <summary>
-        /// Gets or sets FillFormat
+        /// Fill properties set of the cell.
         /// </summary>
         public FillFormat FillFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets BorderTop
+        /// Line properties set for the top border of the cell.
         /// </summary>
         public LineFormat BorderTop { get; set; }
 
         /// <summary>
-        /// Gets or sets BorderRight
+        /// Line properties set for the right border of the cell.
         /// </summary>
         public LineFormat BorderRight { get; set; }
 
         /// <summary>
-        /// Gets or sets BorderLeft
+        /// Line properties set for the left border of the cell.
         /// </summary>
         public LineFormat BorderLeft { get; set; }
 
         /// <summary>
-        /// Gets or sets BorderBottom
+        /// Line properties set for the bottom border of the cell.
         /// </summary>
         public LineFormat BorderBottom { get; set; }
 
         /// <summary>
-        /// Gets or sets BorderDiagonalUp
+        /// Line properties set for the diagonal up border of the cell.
         /// </summary>
         public LineFormat BorderDiagonalUp { get; set; }
 
         /// <summary>
-        /// Gets or sets BorderDiagonalDown
+        /// Line properties set for the diagonal down border of the cell.
         /// </summary>
         public LineFormat BorderDiagonalDown { get; set; }
 

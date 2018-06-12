@@ -65,7 +65,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Enum Tiff for 4
         /// </summary>
-        Tiff
+        Tiff,
+        
+        /// <summary>
+        /// Enum Svg for 5
+        /// </summary>
+        Svg
     }
 
 }

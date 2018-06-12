@@ -108,7 +108,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Replace text by a new value. 
+        /// Replace text with a new value. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesPresentationReplaceTextRequest" /></param> 
         /// <returns><see cref="PresentationStringReplaceResponse"/></returns>            
@@ -147,7 +147,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Replace text by a new value. 
+        /// Replace text with a new value. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesSlideReplaceTextRequest" /></param> 
         /// <returns><see cref="SlideStringReplaceResponse"/></returns>            

@@ -37,20 +37,11 @@ namespace Aspose.Slides.Cloud.Sdk
     {
         public static string AddPathParameter(string url, string parameterName, object parameterValue)
         {
-            if (parameterName == "path")
+            if (parameterValue == null || string.IsNullOrEmpty(parameterValue.ToString()))
             {
-                url += "/" + parameterValue;
+                return url.Replace("/{" + parameterName + "}", string.Empty);
             }
-            else if (parameterValue == null || string.IsNullOrEmpty(parameterValue.ToString()))
-            {
-                url = url.Replace("/{" + parameterName + "}", string.Empty);
-            }
-            else
-            {
-                url = url.Replace("{" + parameterName + "}", parameterValue.ToString());
-            }
-
-            return url;
+            return url.Replace("{" + parameterName + "}", parameterValue.ToString());
         }        
 
         public static string AddQueryParameterToUrl(string url, string parameterName, object parameterValue)
