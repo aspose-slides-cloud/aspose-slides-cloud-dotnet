@@ -49,15 +49,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="format">Export format.</param>
         /// <param name="width"></param>
         /// <param name="height"></param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">The presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
-        public GetNotesSlideWithFormatRequest(string name, int slideIndex, NotesSlideExportFormat format, int? width = null, int? height = null, string folder = null, string storage = null)
+        public GetNotesSlideWithFormatRequest(string name, int slideIndex, NotesSlideExportFormat format, int? width = null, int? height = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Format = format;
             this.Width = width;
             this.Height = height;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -86,6 +88,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Gets or sets Height
         /// </summary>  
         public int? Height { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// The presentation folder.

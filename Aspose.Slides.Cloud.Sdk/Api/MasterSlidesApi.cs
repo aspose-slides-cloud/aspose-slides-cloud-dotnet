@@ -73,6 +73,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/{name}/masterSlides/{slideIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType = "application/json";
@@ -97,6 +98,7 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/masterSlides");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType = "application/json";
@@ -129,8 +131,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFrom", request.CloneFrom);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFromPosition", request.CloneFromPosition);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFromPassword", request.CloneFromPassword);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFromStorage", request.CloneFromStorage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "applyToAll", request.ApplyToAll);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType = "application/json";

@@ -45,6 +45,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public List<string> PresentationPaths { get; set; }
 
         /// <summary>
+        /// Gets or sets the presentation passwords.
+        /// </summary>
+        public List<string> PresentationPasswords { get; set; }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -53,6 +58,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           var sb = new StringBuilder();
           sb.Append("class PresentationsMergeRequest {\n");
           sb.Append("  PresentationPaths: ").Append(this.PresentationPaths).Append("\n");
+          sb.Append("  PresentationPasswords: ").Append(this.PresentationPasswords).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

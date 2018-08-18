@@ -40,27 +40,27 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class SmartArt : ShapeBase 
   {                       
         /// <summary>
-        /// Gets or sets Layout
+        /// Layout type.
         /// </summary>
         public SmartArtLayoutType Layout { get; set; }
 
         /// <summary>
-        /// Gets or sets QuickStyle
+        /// Quick style.
         /// </summary>
         public SmartArtQuickStyleType QuickStyle { get; set; }
 
         /// <summary>
-        /// Gets or sets ColorStyle
+        /// Color style.
         /// </summary>
         public SmartArtColorType ColorStyle { get; set; }
 
         /// <summary>
-        /// Gets or sets Nodes
+        /// Collection of nodes in SmartArt object.             
         /// </summary>
         public List<SmartArtNode> Nodes { get; set; }
 
         /// <summary>
-        /// Gets or sets IsReversed
+        /// The state of the SmartArt diagram with regard to (left-to-right) LTR or (right-to-left) RTL, if the diagram supports reversal.
         /// </summary>
         public bool? IsReversed { get; set; }
 

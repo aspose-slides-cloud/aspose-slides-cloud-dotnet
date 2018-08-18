@@ -118,6 +118,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void DeleteSlidesDocumentPropertiesInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<DeleteSlidesDocumentPropertiesRequest, DocumentPropertiesResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteSlidesDocumentPropertiesRequest, DocumentPropertiesResponse>("DeleteSlidesDocumentProperties", "Password");
+            DeleteSlidesDocumentPropertiesRequest request = testExecutor.PrepareRequest();
+            DocumentPropertiesResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSlidesDocumentProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void DeleteSlidesDocumentPropertiesInvalidFolder()
         {
             InvalidPropertyTestExecutor<DeleteSlidesDocumentPropertiesRequest, DocumentPropertiesResponse> testExecutor =
@@ -237,6 +260,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void DeleteSlidesDocumentPropertyInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<DeleteSlidesDocumentPropertyRequest, DocumentPropertiesResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteSlidesDocumentPropertyRequest, DocumentPropertiesResponse>("DeleteSlidesDocumentProperty", "Password");
+            DeleteSlidesDocumentPropertyRequest request = testExecutor.PrepareRequest();
+            DocumentPropertiesResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSlidesDocumentProperty(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void DeleteSlidesDocumentPropertyInvalidFolder()
         {
             InvalidPropertyTestExecutor<DeleteSlidesDocumentPropertyRequest, DocumentPropertiesResponse> testExecutor =
@@ -314,6 +360,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<GetSlidesDocumentPropertiesRequest, DocumentPropertiesResponse> testExecutor =
                 new InvalidPropertyTestExecutor<GetSlidesDocumentPropertiesRequest, DocumentPropertiesResponse>("GetSlidesDocumentProperties", "Name");
+            GetSlidesDocumentPropertiesRequest request = testExecutor.PrepareRequest();
+            DocumentPropertiesResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesDocumentProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesDocumentPropertiesInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<GetSlidesDocumentPropertiesRequest, DocumentPropertiesResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlidesDocumentPropertiesRequest, DocumentPropertiesResponse>("GetSlidesDocumentProperties", "Password");
             GetSlidesDocumentPropertiesRequest request = testExecutor.PrepareRequest();
             DocumentPropertiesResponse response = null;
             bool needAssertResponse = false;
@@ -452,6 +521,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void GetSlidesDocumentPropertyInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<GetSlidesDocumentPropertyRequest, DocumentPropertyResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlidesDocumentPropertyRequest, DocumentPropertyResponse>("GetSlidesDocumentProperty", "Password");
+            GetSlidesDocumentPropertyRequest request = testExecutor.PrepareRequest();
+            DocumentPropertyResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesDocumentProperty(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void GetSlidesDocumentPropertyInvalidFolder()
         {
             InvalidPropertyTestExecutor<GetSlidesDocumentPropertyRequest, DocumentPropertyResponse> testExecutor =
@@ -552,6 +644,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<PostSlidesSetDocumentPropertiesRequest, DocumentPropertiesResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PostSlidesSetDocumentPropertiesRequest, DocumentPropertiesResponse>("PostSlidesSetDocumentProperties", "Properties");
+            PostSlidesSetDocumentPropertiesRequest request = testExecutor.PrepareRequest();
+            DocumentPropertiesResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesSetDocumentProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesSetDocumentPropertiesInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PostSlidesSetDocumentPropertiesRequest, DocumentPropertiesResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesSetDocumentPropertiesRequest, DocumentPropertiesResponse>("PostSlidesSetDocumentProperties", "Password");
             PostSlidesSetDocumentPropertiesRequest request = testExecutor.PrepareRequest();
             DocumentPropertiesResponse response = null;
             bool needAssertResponse = false;
@@ -694,6 +809,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<PutSlidesSetDocumentPropertyRequest, DocumentPropertyResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PutSlidesSetDocumentPropertyRequest, DocumentPropertyResponse>("PutSlidesSetDocumentProperty", "Property");
+            PutSlidesSetDocumentPropertyRequest request = testExecutor.PrepareRequest();
+            DocumentPropertyResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesSetDocumentProperty(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesSetDocumentPropertyInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PutSlidesSetDocumentPropertyRequest, DocumentPropertyResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutSlidesSetDocumentPropertyRequest, DocumentPropertyResponse>("PutSlidesSetDocumentProperty", "Password");
             PutSlidesSetDocumentPropertyRequest request = testExecutor.PrepareRequest();
             DocumentPropertyResponse response = null;
             bool needAssertResponse = false;

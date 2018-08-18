@@ -47,15 +47,19 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="name">The presentation name.</param>
         /// <param name="cloneFrom">Source presentation to clone layoutSlide from.</param>
         /// <param name="cloneFromPosition">Position of cloning layout slide.</param>
+        /// <param name="cloneFromPassword">Source presentation password.</param>
         /// <param name="cloneFromStorage">Storage source presentation to clone layoutSlide from.</param>
+        /// <param name="password">The presentation password.</param>
         /// <param name="folder">The presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
-        public PostCopyLayoutSlideFromSourcePresentationRequest(string name, string cloneFrom, int cloneFromPosition, string cloneFromStorage = null, string folder = null, string storage = null)
+        public PostCopyLayoutSlideFromSourcePresentationRequest(string name, string cloneFrom, int cloneFromPosition, string cloneFromPassword = null, string cloneFromStorage = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.CloneFrom = cloneFrom;
             this.CloneFromPosition = cloneFromPosition;
+            this.CloneFromPassword = cloneFromPassword;
             this.CloneFromStorage = cloneFromStorage;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -76,9 +80,19 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int CloneFromPosition { get; set; }
 
         /// <summary>
+        /// Source presentation password.
+        /// </summary>  
+        public string CloneFromPassword { get; set; }
+
+        /// <summary>
         /// Storage source presentation to clone layoutSlide from.
         /// </summary>  
         public string CloneFromStorage { get; set; }
+
+        /// <summary>
+        /// The presentation password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// The presentation folder.

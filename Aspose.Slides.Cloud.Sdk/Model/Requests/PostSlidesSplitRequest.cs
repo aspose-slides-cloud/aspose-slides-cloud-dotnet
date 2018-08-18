@@ -52,9 +52,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="to">The last slide number for splitting, if is not specified splitting ends at the last slide of the document.</param>
         /// <param name="from">The start slide number for splitting, if is not specified splitting starts from the first slide of the presentation.</param>
         /// <param name="destFolder">Folder on storage where images are going to be uploaded. If not specified then images are uploaded to same folder as presentation.</param>
+        /// <param name="password">The document password.</param>
         /// <param name="storage">The document storage.</param>
         /// <param name="folder">The document folder.</param>
-        public PostSlidesSplitRequest(string name, ExportOptions options = null, SlideExportFormat? format = null, int? width = null, int? height = null, int? to = null, int? from = null, string destFolder = null, string storage = null, string folder = null)
+        public PostSlidesSplitRequest(string name, ExportOptions options = null, SlideExportFormat? format = null, int? width = null, int? height = null, int? to = null, int? from = null, string destFolder = null, string password = null, string storage = null, string folder = null)
         {
             this.Name = name;
             this.Options = options;
@@ -64,6 +65,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.To = to;
             this.From = from;
             this.DestFolder = destFolder;
+            this.Password = password;
             this.Storage = storage;
             this.Folder = folder;
         }
@@ -107,6 +109,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Folder on storage where images are going to be uploaded. If not specified then images are uploaded to same folder as presentation.
         /// </summary>  
         public string DestFolder { get; set; }
+
+        /// <summary>
+        /// The document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// The document storage.

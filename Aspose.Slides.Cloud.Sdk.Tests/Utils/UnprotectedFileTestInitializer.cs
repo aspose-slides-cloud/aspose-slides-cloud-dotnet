@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="PresentationToMerge.cs">
+// <copyright company="Aspose" file="PutSlidesConvertTestInitializer.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,51 +23,26 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
-using System.Text;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System.Xml.Serialization;
-
-namespace Aspose.Slides.Cloud.Sdk.Model
+namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 {
-  /// <summary>
-  /// Represents presentation to merge
-  /// </summary>  
-  public class PresentationToMerge 
-  {                       
-        /// <summary>
-        /// Get or sets the presentation path
-        /// </summary>
-        public string Path { get; set; }
-
-        /// <summary>
-        /// Get or sets the presentation password
-        /// </summary>
-        public string Password { get; set; }
-
-        /// <summary>
-        /// Get or sets the indexes of slides to merge
-        /// </summary>
-        public List<int?> Slides { get; set; }
-
-        /// <summary>
-        /// Get the string presentation of the object
-        /// </summary>
-        /// <returns>String presentation of the object</returns>
-        public override string ToString()  
+    //A workaround for SLIDESCLOUD-470 issue. The class should be removed after the bug is fixed.
+    [Method("PutSlidesSlide")]
+    [Method("DeleteSlidesCleanSlidesList")]
+    [Method("PostSlidesReorderPosition")]
+    internal class UnprotectedFileTestInitializer : TestInitializer
+    {
+        public UnprotectedFileTestInitializer(string invalidPropertyName) : base(invalidPropertyName)
         {
-          var sb = new StringBuilder();
-          sb.Append("class PresentationToMerge {\n");
-          sb.Append("  Path: ").Append(this.Path).Append("\n");
-          sb.Append("  Password: ").Append(this.Password).Append("\n");
-          sb.Append("  Slides: ").Append(this.Slides).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+        }
+
+        protected override string GetName()
+        {
+            return "test-unprotected.ppt";
+        }
+
+        protected override string GetPassword()
+        {
+            return null;
         }
     }
-
 }

@@ -45,11 +45,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Initializes a new instance of the <see cref="GetSlidesDocumentPropertiesRequest"/> class.
         /// </summary>
         /// <param name="name">Document name.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public GetSlidesDocumentPropertiesRequest(string name, string folder = null, string storage = null)
+        public GetSlidesDocumentPropertiesRequest(string name, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -58,6 +60,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Document name.
         /// </summary>  
         public string Name { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Document folder.

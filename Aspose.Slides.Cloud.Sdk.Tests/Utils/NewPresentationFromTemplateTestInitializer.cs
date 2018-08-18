@@ -53,7 +53,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
         }
 
         //TODO: a workaround for SLIDESCLOUD-365 bug. Remove this overriding after fix
-        public override bool OKToFail { get { return m_propertyName == null || m_propertyName == "IsImageDataEmbeeded"; } }
+        public override bool OKToFail { get { return m_propertyName == null || m_propertyName == "IsImageDataEmbeeded" || m_propertyName == "Password"; } }
 
         private string m_propertyName;
     }

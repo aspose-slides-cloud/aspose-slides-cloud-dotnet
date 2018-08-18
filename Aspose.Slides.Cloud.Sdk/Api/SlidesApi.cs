@@ -73,6 +73,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType = "application/json";
@@ -97,6 +98,7 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", request.Slides);
@@ -123,6 +125,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/background");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType = "application/json";
@@ -151,6 +154,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", request.Width);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
@@ -178,6 +182,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType = "application/json";
@@ -203,6 +208,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/background");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType = "application/json";
@@ -228,6 +234,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/comments");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType = "application/json";
@@ -252,6 +259,7 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType = "application/json";
@@ -280,6 +288,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", request.Width);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
@@ -313,6 +322,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slideToClone", request.SlideToClone);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "source", request.Source);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "layoutAlias", request.LayoutAlias);
@@ -339,6 +349,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             string contentType;
@@ -366,6 +377,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "color", request.Color);
             string contentType;

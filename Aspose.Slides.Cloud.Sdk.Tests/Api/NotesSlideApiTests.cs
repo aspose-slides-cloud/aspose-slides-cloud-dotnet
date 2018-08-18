@@ -141,6 +141,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void DeleteNotesSlideInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<DeleteNotesSlideRequest, SlideResponse> testExecutor =
+                new InvalidPropertyTestExecutor<DeleteNotesSlideRequest, SlideResponse>("DeleteNotesSlide", "Password");
+            DeleteNotesSlideRequest request = testExecutor.PrepareRequest();
+            SlideResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteNotesSlide(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void DeleteNotesSlideInvalidFolder()
         {
             InvalidPropertyTestExecutor<DeleteNotesSlideRequest, SlideResponse> testExecutor =
@@ -241,6 +264,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<GetNotesSlideRequest, NotesSlideResponse> testExecutor =
                 new InvalidPropertyTestExecutor<GetNotesSlideRequest, NotesSlideResponse>("GetNotesSlide", "SlideIndex");
+            GetNotesSlideRequest request = testExecutor.PrepareRequest();
+            NotesSlideResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlide(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideRequest, NotesSlideResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideRequest, NotesSlideResponse>("GetNotesSlide", "Password");
             GetNotesSlideRequest request = testExecutor.PrepareRequest();
             NotesSlideResponse response = null;
             bool needAssertResponse = false;
@@ -448,6 +494,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void GetNotesSlideWithFormatInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<GetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<GetNotesSlideWithFormatRequest, System.IO.Stream>("GetNotesSlideWithFormat", "Password");
+            GetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void GetNotesSlideWithFormatInvalidFolder()
         {
             InvalidPropertyTestExecutor<GetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
@@ -590,6 +659,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void PostAddNotesSlideInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PostAddNotesSlideRequest, NotesSlideResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostAddNotesSlideRequest, NotesSlideResponse>("PostAddNotesSlide", "Password");
+            PostAddNotesSlideRequest request = testExecutor.PrepareRequest();
+            NotesSlideResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostAddNotesSlide(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void PostAddNotesSlideInvalidFolder()
         {
             InvalidPropertyTestExecutor<PostAddNotesSlideRequest, NotesSlideResponse> testExecutor =
@@ -713,6 +805,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<PutUpdateNotesSlideRequest, NotesSlideResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PutUpdateNotesSlideRequest, NotesSlideResponse>("PutUpdateNotesSlide", "Dto");
+            PutUpdateNotesSlideRequest request = testExecutor.PrepareRequest();
+            NotesSlideResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutUpdateNotesSlide(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutUpdateNotesSlideInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PutUpdateNotesSlideRequest, NotesSlideResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutUpdateNotesSlideRequest, NotesSlideResponse>("PutUpdateNotesSlide", "Password");
             PutUpdateNotesSlideRequest request = testExecutor.PrepareRequest();
             NotesSlideResponse response = null;
             bool needAssertResponse = false;

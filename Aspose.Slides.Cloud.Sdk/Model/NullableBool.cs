@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ExportFormat.cs">
+// <copyright company="Aspose" file="NullableBool.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,87 +35,27 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Available export formats
+    /// 
     /// </summary>
-    /// <value>Available export formats</value>
+    /// <value></value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum ExportFormat
+    public enum NullableBool
     {
         
         /// <summary>
-        /// Enum Pdf for 0
+        /// Enum False for 0
         /// </summary>
-        Pdf,
+        False,
         
         /// <summary>
-        /// Enum Xps for 1
+        /// Enum True for 1
         /// </summary>
-        Xps,
+        True,
         
         /// <summary>
-        /// Enum Tiff for 2
+        /// Enum NotDefined for -1
         /// </summary>
-        Tiff,
-        
-        /// <summary>
-        /// Enum Pptx for 3
-        /// </summary>
-        Pptx,
-        
-        /// <summary>
-        /// Enum Odp for 4
-        /// </summary>
-        Odp,
-        
-        /// <summary>
-        /// Enum Otp for 5
-        /// </summary>
-        Otp,
-        
-        /// <summary>
-        /// Enum Ppt for 6
-        /// </summary>
-        Ppt,
-        
-        /// <summary>
-        /// Enum Pps for 7
-        /// </summary>
-        Pps,
-        
-        /// <summary>
-        /// Enum Ppsx for 8
-        /// </summary>
-        Ppsx,
-        
-        /// <summary>
-        /// Enum Pptm for 9
-        /// </summary>
-        Pptm,
-        
-        /// <summary>
-        /// Enum Ppsm for 10
-        /// </summary>
-        Ppsm,
-        
-        /// <summary>
-        /// Enum Potx for 11
-        /// </summary>
-        Potx,
-        
-        /// <summary>
-        /// Enum Potm for 12
-        /// </summary>
-        Potm,
-        
-        /// <summary>
-        /// Enum Html for 13
-        /// </summary>
-        Html,
-        
-        /// <summary>
-        /// Enum Swf for 14
-        /// </summary>
-        Swf
+        NotDefined
     }
 
 }

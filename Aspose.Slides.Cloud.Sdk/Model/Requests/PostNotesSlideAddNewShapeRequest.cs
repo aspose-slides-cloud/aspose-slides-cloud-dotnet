@@ -48,16 +48,18 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="slideIndex">Slide index.</param>
         /// <param name="path">Shape path.</param>
         /// <param name="dto">Shape dto.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">Presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
         /// <param name="shapeToClone">Optional index for clone shape instead of adding the new one.</param>
         /// <param name="position">Position of the new shape in the list. Default is at the end of the list.</param>
-        public PostNotesSlideAddNewShapeRequest(string name, int slideIndex, string path, ShapeBase dto = null, string folder = null, string storage = null, int? shapeToClone = null, int? position = null)
+        public PostNotesSlideAddNewShapeRequest(string name, int slideIndex, string path, ShapeBase dto = null, string password = null, string folder = null, string storage = null, int? shapeToClone = null, int? position = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Path = path;
             this.Dto = dto;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
             this.ShapeToClone = shapeToClone;
@@ -83,6 +85,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Shape dto.
         /// </summary>  
         public ShapeBase Dto { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Presentation folder.

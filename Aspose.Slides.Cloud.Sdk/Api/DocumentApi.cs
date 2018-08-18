@@ -218,6 +218,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "to", request.To);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "from", request.From);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destFolder", request.DestFolder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             string contentType;
@@ -244,6 +245,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/{name}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "templatePath", request.TemplatePath);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "templatePassword", request.TemplatePassword);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "templateStorage", request.TemplateStorage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);

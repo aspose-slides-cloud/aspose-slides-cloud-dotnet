@@ -34,7 +34,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         public PutNewPresentationTestInitializer(string invalidPropertyName) : base(invalidPropertyName)
         {
-            //TODO: a temporary solution to work around the bug with GetSlidesDocument password. Remove after fix
             m_okToNotFail = invalidPropertyName == null
                 || invalidPropertyName.Equals("folder", System.StringComparison.InvariantCultureIgnoreCase)
                 || invalidPropertyName.Equals("password", System.StringComparison.InvariantCultureIgnoreCase);

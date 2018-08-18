@@ -50,11 +50,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="options">export options</param>
         /// <param name="width"></param>
         /// <param name="height"></param>
+        /// <param name="password"></param>
         /// <param name="folder"></param>
         /// <param name="storage"></param>
         /// <param name="outPath"></param>
         /// <param name="fontsFolder"></param>
-        public PostSlideSaveAsRequest(string name, int slideIndex, SlideExportFormat format, ExportOptions options = null, int? width = null, int? height = null, string folder = null, string storage = null, string outPath = null, string fontsFolder = null)
+        public PostSlideSaveAsRequest(string name, int slideIndex, SlideExportFormat format, ExportOptions options = null, int? width = null, int? height = null, string password = null, string folder = null, string storage = null, string outPath = null, string fontsFolder = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
@@ -62,6 +63,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.Options = options;
             this.Width = width;
             this.Height = height;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
             this.OutPath = outPath;
@@ -97,6 +99,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Gets or sets Height
         /// </summary>  
         public int? Height { get; set; }
+
+        /// <summary>
+        /// Gets or sets Password
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Gets or sets Folder

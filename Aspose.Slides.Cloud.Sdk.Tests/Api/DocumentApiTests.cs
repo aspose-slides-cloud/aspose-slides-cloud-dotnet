@@ -1081,6 +1081,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void PostSlidesSplitInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PostSlidesSplitRequest, SplitDocumentResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesSplitRequest, SplitDocumentResponse>("PostSlidesSplit", "Password");
+            PostSlidesSplitRequest request = testExecutor.PrepareRequest();
+            SplitDocumentResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesSplit(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void PostSlidesSplitInvalidStorage()
         {
             InvalidPropertyTestExecutor<PostSlidesSplitRequest, SplitDocumentResponse> testExecutor =
@@ -1204,6 +1227,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<PutNewPresentationRequest, DocumentResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PutNewPresentationRequest, DocumentResponse>("PutNewPresentation", "TemplatePath");
+            PutNewPresentationRequest request = testExecutor.PrepareRequest();
+            DocumentResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutNewPresentation(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutNewPresentationInvalidTemplatePassword()
+        {
+            InvalidPropertyTestExecutor<PutNewPresentationRequest, DocumentResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutNewPresentationRequest, DocumentResponse>("PutNewPresentation", "TemplatePassword");
             PutNewPresentationRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;

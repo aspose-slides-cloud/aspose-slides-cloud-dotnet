@@ -93,6 +93,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             return Name;
         }
 
+        protected virtual string GetPassword()
+        {
+            return "password";
+        }
+
         protected virtual string GetFolder()
         {
             return Folder;
@@ -195,8 +200,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 {
                     return GetShapePath();
                 }
-                if (propertyInfo.Name.Equals("outPath", StringComparison.InvariantCultureIgnoreCase)
-                    || propertyInfo.Name.Equals("password", StringComparison.InvariantCultureIgnoreCase))
+                if (propertyInfo.Name.EndsWith("password", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return GetPassword();
+                }
+                if (propertyInfo.Name.Equals("outPath", StringComparison.InvariantCultureIgnoreCase))
                 {
                     return null;
                 }

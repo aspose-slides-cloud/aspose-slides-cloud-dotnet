@@ -47,13 +47,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="name">The presentation name.</param>
         /// <param name="slideIndex">The slide index.</param>
         /// <param name="dto"></param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">The presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
-        public PutUpdateNotesSlideRequest(string name, int slideIndex, NotesSlide dto = null, string folder = null, string storage = null)
+        public PutUpdateNotesSlideRequest(string name, int slideIndex, NotesSlide dto = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Dto = dto;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -72,6 +74,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Gets or sets Dto
         /// </summary>  
         public NotesSlide Dto { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// The presentation folder.

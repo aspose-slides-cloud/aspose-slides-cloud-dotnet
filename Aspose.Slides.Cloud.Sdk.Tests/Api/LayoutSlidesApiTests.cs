@@ -141,6 +141,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void GetLayoutSlideInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<GetLayoutSlideRequest, LayoutSlideResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetLayoutSlideRequest, LayoutSlideResponse>("GetLayoutSlide", "Password");
+            GetLayoutSlideRequest request = testExecutor.PrepareRequest();
+            LayoutSlideResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetLayoutSlide(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void GetLayoutSlideInvalidFolder()
         {
             InvalidPropertyTestExecutor<GetLayoutSlideRequest, LayoutSlideResponse> testExecutor =
@@ -218,6 +241,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<GetLayoutSlidesListRequest, LayoutSlideListResponse> testExecutor =
                 new InvalidPropertyTestExecutor<GetLayoutSlidesListRequest, LayoutSlideListResponse>("GetLayoutSlidesList", "Name");
+            GetLayoutSlidesListRequest request = testExecutor.PrepareRequest();
+            LayoutSlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetLayoutSlidesList(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetLayoutSlidesListInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<GetLayoutSlidesListRequest, LayoutSlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetLayoutSlidesListRequest, LayoutSlideListResponse>("GetLayoutSlidesList", "Password");
             GetLayoutSlidesListRequest request = testExecutor.PrepareRequest();
             LayoutSlideListResponse response = null;
             bool needAssertResponse = false;
@@ -379,10 +425,56 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void PostCopyLayoutSlideFromSourcePresentationInvalidCloneFromPassword()
+        {
+            InvalidPropertyTestExecutor<PostCopyLayoutSlideFromSourcePresentationRequest, LayoutSlideResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostCopyLayoutSlideFromSourcePresentationRequest, LayoutSlideResponse>("PostCopyLayoutSlideFromSourcePresentation", "CloneFromPassword");
+            PostCopyLayoutSlideFromSourcePresentationRequest request = testExecutor.PrepareRequest();
+            LayoutSlideResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostCopyLayoutSlideFromSourcePresentation(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void PostCopyLayoutSlideFromSourcePresentationInvalidCloneFromStorage()
         {
             InvalidPropertyTestExecutor<PostCopyLayoutSlideFromSourcePresentationRequest, LayoutSlideResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PostCopyLayoutSlideFromSourcePresentationRequest, LayoutSlideResponse>("PostCopyLayoutSlideFromSourcePresentation", "CloneFromStorage");
+            PostCopyLayoutSlideFromSourcePresentationRequest request = testExecutor.PrepareRequest();
+            LayoutSlideResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostCopyLayoutSlideFromSourcePresentation(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostCopyLayoutSlideFromSourcePresentationInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PostCopyLayoutSlideFromSourcePresentationRequest, LayoutSlideResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostCopyLayoutSlideFromSourcePresentationRequest, LayoutSlideResponse>("PostCopyLayoutSlideFromSourcePresentation", "Password");
             PostCopyLayoutSlideFromSourcePresentationRequest request = testExecutor.PrepareRequest();
             LayoutSlideResponse response = null;
             bool needAssertResponse = false;
@@ -525,6 +617,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<PutLayoutSlideRequest, LayoutSlideResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PutLayoutSlideRequest, LayoutSlideResponse>("PutLayoutSlide", "SlideDto");
+            PutLayoutSlideRequest request = testExecutor.PrepareRequest();
+            LayoutSlideResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutLayoutSlide(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutLayoutSlideInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PutLayoutSlideRequest, LayoutSlideResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutLayoutSlideRequest, LayoutSlideResponse>("PutLayoutSlide", "Password");
             PutLayoutSlideRequest request = testExecutor.PrepareRequest();
             LayoutSlideResponse response = null;
             bool needAssertResponse = false;

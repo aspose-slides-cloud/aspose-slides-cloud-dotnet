@@ -51,9 +51,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="paragraphIndex">Paragraph index.</param>
         /// <param name="portionIndex">Portion index.</param>
         /// <param name="dto">Shape dto.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">Presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
-        public PutSetParagraphPortionPropertiesRequest(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, int portionIndex, Portion dto = null, string folder = null, string storage = null)
+        public PutSetParagraphPortionPropertiesRequest(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, int portionIndex, Portion dto = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
@@ -62,6 +63,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.ParagraphIndex = paragraphIndex;
             this.PortionIndex = portionIndex;
             this.Dto = dto;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -100,6 +102,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Shape dto.
         /// </summary>  
         public Portion Dto { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Presentation folder.

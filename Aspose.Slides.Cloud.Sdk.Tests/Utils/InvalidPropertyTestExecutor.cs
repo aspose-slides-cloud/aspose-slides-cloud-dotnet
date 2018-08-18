@@ -34,7 +34,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
         public InvalidPropertyTestExecutor(string methodName, string invalidPropertyName) : base(methodName, invalidPropertyName)
         {
             //TODO: check this condition more carefully. It may be not exact
-            m_isSave = methodName.StartsWith("Post") || methodName.StartsWith("Put");
+            m_isCreate = methodName.StartsWith("Put");
+            m_isSave = m_isCreate || methodName.StartsWith("Post");
             m_invalidPropertyName = invalidPropertyName;
         }
 
@@ -47,25 +48,17 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         public override void AssertResult(TResponse response)
         {
-            if (Initializer.OKToNotFail)
+            if (Initializer.OKToNotFail
+                //if the property is just being created it is not invalid yet
+                || m_invalidPropertyName.Equals("propertyName", StringComparison.InvariantCultureIgnoreCase) && m_isCreate)
             {
                 return;
             }
-            if (m_invalidPropertyName.Equals("propertyName", StringComparison.InvariantCultureIgnoreCase) && response != null)
-            {
-                if (m_isSave)
-                {
-                    return;
-                }
-                //TODO: this is a workaround for SLIDESCLOUD-356 bug. Remove this after the bug is fixed
-                Assert.IsNull((response as DocumentPropertyResponse).DocumentProperty);
-            }
-            else if (Is404())
+            if (Is404())
             {
                 Assert.IsNull(response);
             }
             else if (!m_invalidPropertyName.Equals("bounds", StringComparison.InvariantCultureIgnoreCase)
-                //&& !m_invalidPropertyName.Equals("password", StringComparison.InvariantCultureIgnoreCase)
                 && !m_invalidPropertyName.Equals("fontsFolder", StringComparison.InvariantCultureIgnoreCase)
                 && !m_invalidPropertyName.Equals("outPath", StringComparison.InvariantCultureIgnoreCase)
                 && !m_invalidPropertyName.Equals("height", StringComparison.InvariantCultureIgnoreCase)
@@ -254,21 +247,26 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 }
                 catch (ApiException ex)
                 {
-                    //TODO: only the first message is actually expected
                     Assert.IsTrue(ex.Message.StartsWith("Color must be in format #FF000000"));
                     return;
                 }
             }
-            else if (m_invalidPropertyName.Equals("password", StringComparison.InvariantCultureIgnoreCase))
+            else if (m_invalidPropertyName.EndsWith("password", StringComparison.InvariantCultureIgnoreCase))
             {
                 try
                 {
                     throw exception;
                 }
-                catch (ApiException)
+                catch (ApiException ex)
                 {
-                    //TODO: check message
-                    //Assert.IsTrue(ex.Message.StartsWith("An attempt was made to move the position before the beginning of the stream"));
+                    if (Initializer is UnprotectedFileTestInitializer)
+                    {
+                        Assert.IsTrue(ex.Message.StartsWith("An attempt was made to move the position before the beginning of the stream."));
+                        return;
+                    }
+                    //TODO: only the first message is actually expected
+                    Assert.IsTrue(ex.Message.StartsWith("Invalid password")
+                        || ex.Message.StartsWith("Object reference not set to an instance of an object."));
                     return;
                 }
             }
@@ -312,6 +310,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
         }
 
         private readonly bool m_isSave;
+        private readonly bool m_isCreate;
         private readonly string m_invalidPropertyName;
     }
 }

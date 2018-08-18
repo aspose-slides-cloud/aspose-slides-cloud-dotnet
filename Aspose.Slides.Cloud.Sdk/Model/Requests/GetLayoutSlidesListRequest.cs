@@ -45,11 +45,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Initializes a new instance of the <see cref="GetLayoutSlidesListRequest"/> class.
         /// </summary>
         /// <param name="name">The presentation name.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">The presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
-        public GetLayoutSlidesListRequest(string name, string folder = null, string storage = null)
+        public GetLayoutSlidesListRequest(string name, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -58,6 +60,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// The presentation name.
         /// </summary>  
         public string Name { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// The presentation folder.

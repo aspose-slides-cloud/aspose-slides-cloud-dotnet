@@ -46,12 +46,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Original presentation name.</param>
         /// <param name="request">with a list of presentations to merge.</param>
+        /// <param name="password">Original presentation password.</param>
         /// <param name="storage">The storage.</param>
         /// <param name="folder">The folder.</param>
-        public PostPresentationMergeRequest(string name, PresentationsMergeRequest request = null, string storage = null, string folder = null)
+        public PostPresentationMergeRequest(string name, PresentationsMergeRequest request = null, string password = null, string storage = null, string folder = null)
         {
             this.Name = name;
             this.Request = request;
+            this.Password = password;
             this.Storage = storage;
             this.Folder = folder;
         }
@@ -65,6 +67,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// with a list of presentations to merge.
         /// </summary>  
         public PresentationsMergeRequest Request { get; set; }
+
+        /// <summary>
+        /// Original presentation password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// The storage.

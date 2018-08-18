@@ -164,6 +164,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void GetSlidesPlaceholderInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "Password");
+            GetSlidesPlaceholderRequest request = testExecutor.PrepareRequest();
+            PlaceholderResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesPlaceholder(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void GetSlidesPlaceholderInvalidFolder()
         {
             InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
@@ -264,6 +287,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
                 new InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "SlideIndex");
+            GetSlidesPlaceholdersRequest request = testExecutor.PrepareRequest();
+            PlaceholdersResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesPlaceholders(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesPlaceholdersInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "Password");
             GetSlidesPlaceholdersRequest request = testExecutor.PrepareRequest();
             PlaceholdersResponse response = null;
             bool needAssertResponse = false;

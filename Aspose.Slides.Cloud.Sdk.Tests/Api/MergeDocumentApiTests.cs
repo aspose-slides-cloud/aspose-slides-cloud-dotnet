@@ -141,6 +141,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void PostPresentationMergeInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", "Password");
+            PostPresentationMergeRequest request = testExecutor.PrepareRequest();
+            DocumentResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostPresentationMerge(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void PostPresentationMergeInvalidStorage()
         {
             InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
@@ -241,6 +264,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Request");
+            PutPresentationMergeRequest request = testExecutor.PrepareRequest();
+            DocumentResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutPresentationMerge(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutPresentationMergeInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Password");
             PutPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;

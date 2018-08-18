@@ -47,17 +47,21 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="name">The presentation name.</param>
         /// <param name="cloneFrom">Source presentation to clone masterSlide from.</param>
         /// <param name="cloneFromPosition">Position of cloning master slide.</param>
+        /// <param name="cloneFromPassword">Source presentation password.</param>
         /// <param name="cloneFromStorage">Storage source presentation to clone masterSlide from.</param>
         /// <param name="applyToAll">Apply cloned master slide to every existed slide. Optional parameter, false by default</param>
+        /// <param name="password">The presentation password.</param>
         /// <param name="folder">The presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
-        public PostCopyMasterSlideFromSourcePresentationRequest(string name, string cloneFrom, int cloneFromPosition, string cloneFromStorage = null, bool? applyToAll = null, string folder = null, string storage = null)
+        public PostCopyMasterSlideFromSourcePresentationRequest(string name, string cloneFrom, int cloneFromPosition, string cloneFromPassword = null, string cloneFromStorage = null, bool? applyToAll = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.CloneFrom = cloneFrom;
             this.CloneFromPosition = cloneFromPosition;
+            this.CloneFromPassword = cloneFromPassword;
             this.CloneFromStorage = cloneFromStorage;
             this.ApplyToAll = applyToAll;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -78,6 +82,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int CloneFromPosition { get; set; }
 
         /// <summary>
+        /// Source presentation password.
+        /// </summary>  
+        public string CloneFromPassword { get; set; }
+
+        /// <summary>
         /// Storage source presentation to clone masterSlide from.
         /// </summary>  
         public string CloneFromStorage { get; set; }
@@ -86,6 +95,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Apply cloned master slide to every existed slide. Optional parameter, false by default
         /// </summary>  
         public bool? ApplyToAll { get; set; }
+
+        /// <summary>
+        /// The presentation password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// The presentation folder.

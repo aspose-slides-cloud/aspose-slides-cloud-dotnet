@@ -72,6 +72,7 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/merge");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             string contentType;
@@ -97,6 +98,7 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/merge");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             string contentType;

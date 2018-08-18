@@ -47,12 +47,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets FontBold
         /// </summary>
-        public bool? FontBold { get; set; }
+        public NullableBool FontBold { get; set; }
 
         /// <summary>
         /// Gets or sets FontItalic
         /// </summary>
-        public bool? FontItalic { get; set; }
+        public NullableBool FontItalic { get; set; }
 
         /// <summary>
         /// Gets or sets FontUnderline
@@ -97,12 +97,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets NormaliseHeight
         /// </summary>
-        public bool? NormaliseHeight { get; set; }
+        public NullableBool NormaliseHeight { get; set; }
 
         /// <summary>
         /// Gets or sets ProofDisabled
         /// </summary>
-        public bool? ProofDisabled { get; set; }
+        public NullableBool ProofDisabled { get; set; }
 
         /// <summary>
         /// Gets or sets SmartTagClean
@@ -117,7 +117,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets Kumimoji
         /// </summary>
-        public bool? Kumimoji { get; set; }
+        public NullableBool Kumimoji { get; set; }
 
         /// <summary>
         /// Gets or sets LanguageId
@@ -132,12 +132,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets IsHardUnderlineFill
         /// </summary>
-        public bool? IsHardUnderlineFill { get; set; }
+        public NullableBool IsHardUnderlineFill { get; set; }
 
         /// <summary>
         /// Gets or sets IsHardUnderlineLine
         /// </summary>
-        public bool? IsHardUnderlineLine { get; set; }
+        public NullableBool IsHardUnderlineLine { get; set; }
 
         /// <summary>
         /// Gets or sets FillFormat

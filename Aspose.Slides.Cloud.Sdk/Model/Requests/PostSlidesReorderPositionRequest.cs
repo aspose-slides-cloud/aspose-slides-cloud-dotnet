@@ -51,10 +51,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="position">The presentation slide position.</param>
         /// <param name="slideToClone">The presentation slide to clone.</param>
         /// <param name="source">The source presentation.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">The presentation folder.</param>
         /// <param name="storage">The presentation storage.</param>
         /// <param name="layoutAlias">Alias of layout slide for new slide. Alias could be the type of layout, name of layout slide or index</param>
-        public PostSlidesReorderPositionRequest(string name, int? oldPosition = null, int? newPosition = null, int? slideToCopy = null, int? position = null, int? slideToClone = null, string source = null, string folder = null, string storage = null, string layoutAlias = null)
+        public PostSlidesReorderPositionRequest(string name, int? oldPosition = null, int? newPosition = null, int? slideToCopy = null, int? position = null, int? slideToClone = null, string source = null, string password = null, string folder = null, string storage = null, string layoutAlias = null)
         {
             this.Name = name;
             this.OldPosition = oldPosition;
@@ -63,6 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.Position = position;
             this.SlideToClone = slideToClone;
             this.Source = source;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
             this.LayoutAlias = layoutAlias;
@@ -102,6 +104,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// The source presentation.
         /// </summary>  
         public string Source { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// The presentation folder.

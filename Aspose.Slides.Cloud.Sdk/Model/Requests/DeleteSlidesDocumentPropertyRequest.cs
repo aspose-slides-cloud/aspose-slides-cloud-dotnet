@@ -46,12 +46,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="propertyName">The property name.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public DeleteSlidesDocumentPropertyRequest(string name, string propertyName, string folder = null, string storage = null)
+        public DeleteSlidesDocumentPropertyRequest(string name, string propertyName, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.PropertyName = propertyName;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -65,6 +67,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// The property name.
         /// </summary>  
         public string PropertyName { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Document folder.

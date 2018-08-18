@@ -46,12 +46,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="withEmpty">True to incude empty items.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public GetSlidesPresentationTextItemsRequest(string name, bool? withEmpty = null, string folder = null, string storage = null)
+        public GetSlidesPresentationTextItemsRequest(string name, bool? withEmpty = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.WithEmpty = withEmpty;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -65,6 +67,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// True to incude empty items.
         /// </summary>  
         public bool? WithEmpty { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Document folder.

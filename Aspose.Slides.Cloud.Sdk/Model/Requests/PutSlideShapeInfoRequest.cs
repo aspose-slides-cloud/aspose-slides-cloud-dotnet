@@ -49,15 +49,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="path">Object path.</param>
         /// <param name="shapeIndex">Shape index.</param>
         /// <param name="dto">Shape dto.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">Presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
-        public PutSlideShapeInfoRequest(string name, int slideIndex, string path, int shapeIndex, ShapeBase dto = null, string folder = null, string storage = null)
+        public PutSlideShapeInfoRequest(string name, int slideIndex, string path, int shapeIndex, ShapeBase dto = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Path = path;
             this.ShapeIndex = shapeIndex;
             this.Dto = dto;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -86,6 +88,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Shape dto.
         /// </summary>  
         public ShapeBase Dto { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Presentation folder.

@@ -141,6 +141,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void GetMasterSlideInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<GetMasterSlideRequest, MasterSlideResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetMasterSlideRequest, MasterSlideResponse>("GetMasterSlide", "Password");
+            GetMasterSlideRequest request = testExecutor.PrepareRequest();
+            MasterSlideResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetMasterSlide(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void GetMasterSlideInvalidFolder()
         {
             InvalidPropertyTestExecutor<GetMasterSlideRequest, MasterSlideResponse> testExecutor =
@@ -218,6 +241,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<GetMasterSlidesListRequest, MasterSlideListResponse> testExecutor =
                 new InvalidPropertyTestExecutor<GetMasterSlidesListRequest, MasterSlideListResponse>("GetMasterSlidesList", "Name");
+            GetMasterSlidesListRequest request = testExecutor.PrepareRequest();
+            MasterSlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetMasterSlidesList(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetMasterSlidesListInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<GetMasterSlidesListRequest, MasterSlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<GetMasterSlidesListRequest, MasterSlideListResponse>("GetMasterSlidesList", "Password");
             GetMasterSlidesListRequest request = testExecutor.PrepareRequest();
             MasterSlideListResponse response = null;
             bool needAssertResponse = false;
@@ -379,6 +425,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void PostCopyMasterSlideFromSourcePresentationInvalidCloneFromPassword()
+        {
+            InvalidPropertyTestExecutor<PostCopyMasterSlideFromSourcePresentationRequest, MasterSlideResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostCopyMasterSlideFromSourcePresentationRequest, MasterSlideResponse>("PostCopyMasterSlideFromSourcePresentation", "CloneFromPassword");
+            PostCopyMasterSlideFromSourcePresentationRequest request = testExecutor.PrepareRequest();
+            MasterSlideResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostCopyMasterSlideFromSourcePresentation(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void PostCopyMasterSlideFromSourcePresentationInvalidCloneFromStorage()
         {
             InvalidPropertyTestExecutor<PostCopyMasterSlideFromSourcePresentationRequest, MasterSlideResponse> testExecutor =
@@ -406,6 +475,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<PostCopyMasterSlideFromSourcePresentationRequest, MasterSlideResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PostCopyMasterSlideFromSourcePresentationRequest, MasterSlideResponse>("PostCopyMasterSlideFromSourcePresentation", "ApplyToAll");
+            PostCopyMasterSlideFromSourcePresentationRequest request = testExecutor.PrepareRequest();
+            MasterSlideResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostCopyMasterSlideFromSourcePresentation(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostCopyMasterSlideFromSourcePresentationInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PostCopyMasterSlideFromSourcePresentationRequest, MasterSlideResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostCopyMasterSlideFromSourcePresentationRequest, MasterSlideResponse>("PostCopyMasterSlideFromSourcePresentation", "Password");
             PostCopyMasterSlideFromSourcePresentationRequest request = testExecutor.PrepareRequest();
             MasterSlideResponse response = null;
             bool needAssertResponse = false;

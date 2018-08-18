@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Text box alignment within a text area.
     /// </summary>
-    /// <value></value>
+    /// <value>Text box alignment within a text area.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum TextAnchorType
     {

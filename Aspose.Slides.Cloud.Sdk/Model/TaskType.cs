@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Pipeline task type.
     /// </summary>
-    /// <value></value>
+    /// <value>Pipeline task type.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum TaskType
     {

@@ -35,7 +35,7 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// A scatter series
   /// </summary>  
   public class ScatterSeries : Series 
   {                       

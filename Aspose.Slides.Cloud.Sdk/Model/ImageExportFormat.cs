@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="OKWithInvalidPasswordInitializer.cs">
+// <copyright company="Aspose" file="ImageExportFormat.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,15 +23,49 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.Xml.Serialization;
+
+namespace Aspose.Slides.Cloud.Sdk.Model
 {
-    [Method("GetSlidesDocument")]
-    [Method("PutSlidesSlideSize")]
-    //TODO: a temporary solution to work around the bug with GetSlidesDocument password. Remove after fix
-    internal class OKWithInvalidPasswordInitializer : OKWithInvalidParameterInitializer
+    /// <summary>
+    /// Represents a format for image export.
+    /// </summary>
+    /// <value>Represents a format for image export.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum ImageExportFormat
     {
-        public OKWithInvalidPasswordInitializer(string invalidPropertyName) : base(invalidPropertyName, "password")
-        {
-        }
+        
+        /// <summary>
+        /// Enum Jpeg for 0
+        /// </summary>
+        Jpeg,
+        
+        /// <summary>
+        /// Enum Png for 1
+        /// </summary>
+        Png,
+        
+        /// <summary>
+        /// Enum Gif for 2
+        /// </summary>
+        Gif,
+        
+        /// <summary>
+        /// Enum Bmp for 3
+        /// </summary>
+        Bmp,
+        
+        /// <summary>
+        /// Enum Tiff for 4
+        /// </summary>
+        Tiff
     }
+
 }

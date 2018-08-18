@@ -44,22 +44,24 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSlidesPlaceholderRequest"/> class.
         /// </summary>
-        /// <param name="name">Presentation name.</param>
+        /// <param name="name">Document name.</param>
         /// <param name="slideIndex">Slide index.</param>
-        /// <param name="placeholderIndex">Pleceholder index.</param>
-        /// <param name="folder">Presentation folder.</param>
-        /// <param name="storage">Document&#39;s storage.</param>
-        public GetSlidesPlaceholderRequest(string name, int slideIndex, int placeholderIndex, string folder = null, string storage = null)
+        /// <param name="placeholderIndex">Placeholder index.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
+        public GetSlidesPlaceholderRequest(string name, int slideIndex, int placeholderIndex, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.PlaceholderIndex = placeholderIndex;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
 
         /// <summary>
-        /// Presentation name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
@@ -69,17 +71,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Pleceholder index.
+        /// Placeholder index.
         /// </summary>  
         public int PlaceholderIndex { get; set; }
 
         /// <summary>
-        /// Presentation folder.
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
+
+        /// <summary>
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Document's storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
   }

@@ -48,14 +48,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="slideIndex">Slide index.</param>
         /// <param name="path">Shape path.</param>
         /// <param name="shapeIndex">Shape index.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">Presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
-        public DeleteSlideShapeRequest(string name, int slideIndex, string path, int shapeIndex, string folder = null, string storage = null)
+        public DeleteSlideShapeRequest(string name, int slideIndex, string path, int shapeIndex, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Path = path;
             this.ShapeIndex = shapeIndex;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -79,6 +81,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Shape index.
         /// </summary>  
         public int ShapeIndex { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Presentation folder.

@@ -48,14 +48,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="slideIndex"></param>
         /// <param name="background"></param>
         /// <param name="folder"></param>
+        /// <param name="password">Document password.</param>
         /// <param name="storage"></param>
         /// <param name="color"></param>
-        public PutSlidesSlideBackgroundRequest(string name, int slideIndex, SlideBackground background = null, string folder = null, string storage = null, string color = null)
+        public PutSlidesSlideBackgroundRequest(string name, int slideIndex, SlideBackground background = null, string folder = null, string password = null, string storage = null, string color = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Background = background;
             this.Folder = folder;
+            this.Password = password;
             this.Storage = storage;
             this.Color = color;
         }
@@ -79,6 +81,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Gets or sets Folder
         /// </summary>  
         public string Folder { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Gets or sets Storage

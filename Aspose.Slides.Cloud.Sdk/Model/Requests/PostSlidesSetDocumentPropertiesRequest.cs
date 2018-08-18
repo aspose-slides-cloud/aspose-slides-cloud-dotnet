@@ -46,12 +46,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="properties">New properties.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PostSlidesSetDocumentPropertiesRequest(string name, DocumentProperties properties = null, string folder = null, string storage = null)
+        public PostSlidesSetDocumentPropertiesRequest(string name, DocumentProperties properties = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.Properties = properties;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -65,6 +67,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// New properties.
         /// </summary>  
         public DocumentProperties Properties { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Document folder.

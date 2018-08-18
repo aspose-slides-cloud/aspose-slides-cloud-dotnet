@@ -117,22 +117,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets HangingPunctuation
         /// </summary>
-        public bool? HangingPunctuation { get; set; }
+        public NullableBool HangingPunctuation { get; set; }
 
         /// <summary>
         /// Gets or sets EastAsianLineBreak
         /// </summary>
-        public bool? EastAsianLineBreak { get; set; }
+        public NullableBool EastAsianLineBreak { get; set; }
 
         /// <summary>
         /// Gets or sets LatinLineBreak
         /// </summary>
-        public bool? LatinLineBreak { get; set; }
+        public NullableBool LatinLineBreak { get; set; }
 
         /// <summary>
         /// Gets or sets RightToLeft
         /// </summary>
-        public bool? RightToLeft { get; set; }
+        public NullableBool RightToLeft { get; set; }
 
         /// <summary>
         /// Gets or sets PortionList

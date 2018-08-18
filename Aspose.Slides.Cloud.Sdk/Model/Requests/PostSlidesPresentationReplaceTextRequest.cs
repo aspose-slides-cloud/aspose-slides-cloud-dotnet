@@ -48,14 +48,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="oldValue">Text value to be replaced.</param>
         /// <param name="newValue">Text value to replace with.</param>
         /// <param name="ignoreCase">True if character case must be ignored.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PostSlidesPresentationReplaceTextRequest(string name, string oldValue, string newValue, bool? ignoreCase = null, string folder = null, string storage = null)
+        public PostSlidesPresentationReplaceTextRequest(string name, string oldValue, string newValue, bool? ignoreCase = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.OldValue = oldValue;
             this.NewValue = newValue;
             this.IgnoreCase = ignoreCase;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -79,6 +81,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// True if character case must be ignored.
         /// </summary>  
         public bool? IgnoreCase { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Document folder.

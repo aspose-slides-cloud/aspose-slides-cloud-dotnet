@@ -46,12 +46,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">The presentation name.</param>
         /// <param name="slides">The indices of the slides to be deleted; delete all by default.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">The presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
-        public DeleteSlidesCleanSlidesListRequest(string name, List<int> slides = null, string folder = null, string storage = null)
+        public DeleteSlidesCleanSlidesListRequest(string name, List<int> slides = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.Slides = slides;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -65,6 +67,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// The indices of the slides to be deleted; delete all by default.
         /// </summary>  
         public List<int> Slides { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// The presentation folder.

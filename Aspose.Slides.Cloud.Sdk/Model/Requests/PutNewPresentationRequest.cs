@@ -47,15 +47,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="name">The document name.</param>
         /// <param name="stream"></param>
         /// <param name="templatePath">Template file path.</param>
+        /// <param name="templatePassword"></param>
         /// <param name="templateStorage">Template storage name.</param>
         /// <param name="password">The document password.</param>
         /// <param name="storage">Document&#39;s storage.</param>
         /// <param name="folder">Document&#39;s folder.</param>
-        public PutNewPresentationRequest(string name, Stream stream = null, string templatePath = null, string templateStorage = null, string password = null, string storage = null, string folder = null)
+        public PutNewPresentationRequest(string name, Stream stream = null, string templatePath = null, string templatePassword = null, string templateStorage = null, string password = null, string storage = null, string folder = null)
         {
             this.Name = name;
             this.Stream = stream;
             this.TemplatePath = templatePath;
+            this.TemplatePassword = templatePassword;
             this.TemplateStorage = templateStorage;
             this.Password = password;
             this.Storage = storage;
@@ -76,6 +78,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Template file path.
         /// </summary>  
         public string TemplatePath { get; set; }
+
+        /// <summary>
+        /// Gets or sets TemplatePassword
+        /// </summary>  
+        public string TemplatePassword { get; set; }
 
         /// <summary>
         /// Template storage name.

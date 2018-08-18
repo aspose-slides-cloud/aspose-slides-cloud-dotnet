@@ -50,9 +50,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="shapeIndex">Shape index.</param>
         /// <param name="paragraphIndex">Paragraph index.</param>
         /// <param name="portions">The indices of the shapes to be deleted; delete all by default.</param>
+        /// <param name="password">Document password.</param>
         /// <param name="folder">Presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
-        public DeletePortionsRequest(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, List<int> portions = null, string folder = null, string storage = null)
+        public DeletePortionsRequest(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, List<int> portions = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
@@ -60,6 +61,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.ShapeIndex = shapeIndex;
             this.ParagraphIndex = paragraphIndex;
             this.Portions = portions;
+            this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
         }
@@ -93,6 +95,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// The indices of the shapes to be deleted; delete all by default.
         /// </summary>  
         public List<int> Portions { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
 
         /// <summary>
         /// Presentation folder.
