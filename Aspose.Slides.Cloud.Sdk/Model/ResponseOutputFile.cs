@@ -40,6 +40,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class ResponseOutputFile : OutputFile 
   {                       
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public ResponseOutputFile() : base()
+        {
+          Type = Model.OutputFileType.Response;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

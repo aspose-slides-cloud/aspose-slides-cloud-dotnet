@@ -45,6 +45,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string ShapePath { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public RemoveShape() : base()
+        {
+          Type = Model.TaskType.RemoveShape;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

@@ -35,22 +35,22 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// Represents Table resource.
+  /// Represents Table shape resource.
   /// </summary>  
   public class Table : ShapeBase 
   {                       
         /// <summary>
-        /// Gets or sets Style
+        /// Builtin table style.
         /// </summary>
         public TableStylePreset Style { get; set; }
 
         /// <summary>
-        /// Gets or sets Rows
+        /// Rows.
         /// </summary>
         public List<TableRow> Rows { get; set; }
 
         /// <summary>
-        /// Gets or sets Columns
+        /// Columns.
         /// </summary>
         public List<TableColumn> Columns { get; set; }
 
@@ -88,6 +88,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Determines whether the even columns has to be drawn with a different formatting.
         /// </summary>
         public bool? VerticalBanding { get; set; }
+
+        /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public Table() : base()
+        {
+          Type = Model.ShapeType.Table;
+          ShapeType = Model.CombinedShapeType.Table;
+        }
 
         /// <summary>
         /// Get the string presentation of the object

@@ -50,6 +50,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public SaaSposeResponse() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

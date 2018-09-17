@@ -45,6 +45,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string Color { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public SolidFill() : base()
+        {
+          Type = Model.FillType.Solid;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

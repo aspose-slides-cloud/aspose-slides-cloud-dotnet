@@ -60,6 +60,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public ResourceUriElement FormatScheme { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public Theme() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

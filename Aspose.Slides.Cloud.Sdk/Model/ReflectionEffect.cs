@@ -110,6 +110,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public bool? RotateShadowWithShape { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public ReflectionEffect() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

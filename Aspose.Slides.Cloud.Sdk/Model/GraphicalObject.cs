@@ -40,6 +40,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class GraphicalObject : ShapeBase 
   {                       
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public GraphicalObject() : base()
+        {
+          Type = Model.ShapeType.GraphicalObject;
+          ShapeType = Model.CombinedShapeType.GraphicalObject;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

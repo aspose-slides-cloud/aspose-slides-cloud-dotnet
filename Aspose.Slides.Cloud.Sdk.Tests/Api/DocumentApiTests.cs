@@ -69,6 +69,33 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test GetSlidesApiInfo
+        /// </summary>
+        [Test]
+        public void GetSlidesApiInfo()
+        {
+            GeneralTestExecutor<GetSlidesApiInfoRequest, ApiInfoResponse> testExecutor =
+                new GeneralTestExecutor<GetSlidesApiInfoRequest, ApiInfoResponse>("GetSlidesApiInfo");
+            GetSlidesApiInfoRequest request = testExecutor.PrepareRequest();
+            ApiInfoResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesApiInfo(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test GetSlidesDocument
         /// </summary>
         [Test]
@@ -660,19 +687,19 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
-        /// Test PostSlidesSaveAsTiff
+        /// Test PostSlidesSaveAs
         /// </summary>
         [Test]
-        public void PostSlidesSaveAsTiff()
+        public void PostSlidesSaveAs()
         {
-            GeneralTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream> testExecutor =
-                new GeneralTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream>("PostSlidesSaveAsTiff");
-            PostSlidesSaveAsTiffRequest request = testExecutor.PrepareRequest();
+            GeneralTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream> testExecutor =
+                new GeneralTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream>("PostSlidesSaveAs");
+            PostSlidesSaveAsRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.PostSlidesSaveAsTiff(request);
+                response = m_instance.PostSlidesSaveAs(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -686,16 +713,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostSlidesSaveAsTiffInvalidName()
+        public void PostSlidesSaveAsInvalidName()
         {
-            InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream> testExecutor =
-                new InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream>("PostSlidesSaveAsTiff", "Name");
-            PostSlidesSaveAsTiffRequest request = testExecutor.PrepareRequest();
+            InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream>("PostSlidesSaveAs", "Name");
+            PostSlidesSaveAsRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.PostSlidesSaveAsTiff(request);
+                response = m_instance.PostSlidesSaveAs(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -709,16 +736,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostSlidesSaveAsTiffInvalidFormat()
+        public void PostSlidesSaveAsInvalidFormat()
         {
-            InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream> testExecutor =
-                new InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream>("PostSlidesSaveAsTiff", "Format");
-            PostSlidesSaveAsTiffRequest request = testExecutor.PrepareRequest();
+            InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream>("PostSlidesSaveAs", "Format");
+            PostSlidesSaveAsRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.PostSlidesSaveAsTiff(request);
+                response = m_instance.PostSlidesSaveAs(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -732,16 +759,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostSlidesSaveAsTiffInvalidOptions()
+        public void PostSlidesSaveAsInvalidOptions()
         {
-            InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream> testExecutor =
-                new InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream>("PostSlidesSaveAsTiff", "Options");
-            PostSlidesSaveAsTiffRequest request = testExecutor.PrepareRequest();
+            InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream>("PostSlidesSaveAs", "Options");
+            PostSlidesSaveAsRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.PostSlidesSaveAsTiff(request);
+                response = m_instance.PostSlidesSaveAs(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -755,16 +782,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostSlidesSaveAsTiffInvalidPassword()
+        public void PostSlidesSaveAsInvalidPassword()
         {
-            InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream> testExecutor =
-                new InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream>("PostSlidesSaveAsTiff", "Password");
-            PostSlidesSaveAsTiffRequest request = testExecutor.PrepareRequest();
+            InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream>("PostSlidesSaveAs", "Password");
+            PostSlidesSaveAsRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.PostSlidesSaveAsTiff(request);
+                response = m_instance.PostSlidesSaveAs(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -778,16 +805,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostSlidesSaveAsTiffInvalidStorage()
+        public void PostSlidesSaveAsInvalidStorage()
         {
-            InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream> testExecutor =
-                new InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream>("PostSlidesSaveAsTiff", "Storage");
-            PostSlidesSaveAsTiffRequest request = testExecutor.PrepareRequest();
+            InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream>("PostSlidesSaveAs", "Storage");
+            PostSlidesSaveAsRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.PostSlidesSaveAsTiff(request);
+                response = m_instance.PostSlidesSaveAs(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -801,16 +828,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostSlidesSaveAsTiffInvalidFolder()
+        public void PostSlidesSaveAsInvalidFolder()
         {
-            InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream> testExecutor =
-                new InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream>("PostSlidesSaveAsTiff", "Folder");
-            PostSlidesSaveAsTiffRequest request = testExecutor.PrepareRequest();
+            InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream>("PostSlidesSaveAs", "Folder");
+            PostSlidesSaveAsRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.PostSlidesSaveAsTiff(request);
+                response = m_instance.PostSlidesSaveAs(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -824,16 +851,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostSlidesSaveAsTiffInvalidOutPath()
+        public void PostSlidesSaveAsInvalidOutPath()
         {
-            InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream> testExecutor =
-                new InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream>("PostSlidesSaveAsTiff", "OutPath");
-            PostSlidesSaveAsTiffRequest request = testExecutor.PrepareRequest();
+            InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream>("PostSlidesSaveAs", "OutPath");
+            PostSlidesSaveAsRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.PostSlidesSaveAsTiff(request);
+                response = m_instance.PostSlidesSaveAs(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -847,16 +874,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostSlidesSaveAsTiffInvalidFontsFolder()
+        public void PostSlidesSaveAsInvalidFontsFolder()
         {
-            InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream> testExecutor =
-                new InvalidPropertyTestExecutor<PostSlidesSaveAsTiffRequest, System.IO.Stream>("PostSlidesSaveAsTiff", "FontsFolder");
-            PostSlidesSaveAsTiffRequest request = testExecutor.PrepareRequest();
+            InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesSaveAsRequest, System.IO.Stream>("PostSlidesSaveAs", "FontsFolder");
+            PostSlidesSaveAsRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.PostSlidesSaveAsTiff(request);
+                response = m_instance.PostSlidesSaveAs(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)

@@ -55,6 +55,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public PatternStyle Style { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public PatternFill() : base()
+        {
+          Type = Model.FillType.Pattern;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

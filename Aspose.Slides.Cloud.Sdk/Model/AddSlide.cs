@@ -35,29 +35,37 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Add slide task.
   /// </summary>  
   public class AddSlide : Task 
   {                       
         /// <summary>
-        /// Gets or sets CloneFromFile
+        /// File to clone a slide from.
         /// </summary>
         public InputFile CloneFromFile { get; set; }
 
         /// <summary>
-        /// Gets or sets CloneFromPosition
+        /// Position of the slide to clone.
         /// </summary>
         public int? CloneFromPosition { get; set; }
 
         /// <summary>
-        /// Gets or sets Position
+        /// Position at which to insert the slide.
         /// </summary>
         public int? Position { get; set; }
 
         /// <summary>
-        /// Gets or sets LayoutAlias
+        /// Alias of layout (href, index or type). If value is null a blank slide is added.
         /// </summary>
         public string LayoutAlias { get; set; }
+
+        /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public AddSlide() : base()
+        {
+          Type = Model.TaskType.AddSlide;
+        }
 
         /// <summary>
         /// Get the string presentation of the object

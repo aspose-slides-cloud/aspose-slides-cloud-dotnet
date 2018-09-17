@@ -45,6 +45,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public PictureFill PictureFillFormat { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public PictureFrame() : base()
+        {
+          Type = Model.ShapeType.PictureFrame;
+          ShapeType = Model.CombinedShapeType.PictureFrame;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

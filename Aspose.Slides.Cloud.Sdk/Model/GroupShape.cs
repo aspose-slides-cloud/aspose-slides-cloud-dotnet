@@ -40,6 +40,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class GroupShape : ShapeBase 
   {                       
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public GroupShape() : base()
+        {
+          Type = Model.ShapeType.GroupShape;
+          ShapeType = Model.CombinedShapeType.GroupShape;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

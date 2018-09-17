@@ -45,6 +45,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public FillType Type { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public FillFormat() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

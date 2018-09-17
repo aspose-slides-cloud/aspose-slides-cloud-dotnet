@@ -65,6 +65,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public ResourceUriElement MasterSlides { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public Document() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

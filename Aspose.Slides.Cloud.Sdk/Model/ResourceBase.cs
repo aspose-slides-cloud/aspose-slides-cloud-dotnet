@@ -55,6 +55,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public List<ResourceUri> Links { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public ResourceBase() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

@@ -45,6 +45,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public double? BubbleSize { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public BubbleChartDataPoint() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

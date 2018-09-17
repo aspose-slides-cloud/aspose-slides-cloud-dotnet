@@ -50,6 +50,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public SlideBackground Background { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public UpdateBackground() : base()
+        {
+          Type = Model.TaskType.UpdateBackground;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

@@ -95,6 +95,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string CommentsAreaColor { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public TiffExportOptions() : base()
+        {
+          Format = "tiff";
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

@@ -45,6 +45,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public TextItems TextItems { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public TextItemsResponse() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

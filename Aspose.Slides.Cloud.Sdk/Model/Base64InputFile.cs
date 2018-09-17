@@ -45,6 +45,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string Data { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public Base64InputFile() : base()
+        {
+          Type = Model.InputFileType.Base64;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

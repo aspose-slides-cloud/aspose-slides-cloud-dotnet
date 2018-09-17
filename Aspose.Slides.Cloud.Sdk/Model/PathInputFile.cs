@@ -50,6 +50,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string Storage { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public PathInputFile() : base()
+        {
+          Type = Model.InputFileType.Path;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

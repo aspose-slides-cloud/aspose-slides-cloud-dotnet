@@ -60,6 +60,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public int? SlidePosition { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public ReplaceText() : base()
+        {
+          Type = Model.TaskType.ReplaceText;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

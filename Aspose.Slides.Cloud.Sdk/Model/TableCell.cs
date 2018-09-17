@@ -120,6 +120,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public LineFormat BorderDiagonalDown { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public TableCell() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

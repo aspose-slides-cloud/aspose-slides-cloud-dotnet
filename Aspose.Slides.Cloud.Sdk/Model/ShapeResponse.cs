@@ -45,6 +45,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public ShapeBase Shape { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public ShapeResponse() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

@@ -45,6 +45,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public List<DocumentProperty> List { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public DocumentProperties() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

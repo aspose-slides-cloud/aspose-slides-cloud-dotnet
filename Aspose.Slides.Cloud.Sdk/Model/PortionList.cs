@@ -45,6 +45,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public List<ResourceUriElement> PortionLinks { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public PortionList() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

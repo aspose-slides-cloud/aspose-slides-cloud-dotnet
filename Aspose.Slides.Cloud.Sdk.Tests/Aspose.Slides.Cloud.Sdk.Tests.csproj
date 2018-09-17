@@ -67,40 +67,7 @@ OpenAPI spec version: 1.1
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\DocumentApiTests.cs" />
-    <Compile Include="Api\ImagesApiTests.cs" />
-    <Compile Include="Api\LayoutSlidesApiTests.cs" />
-    <Compile Include="Api\MasterSlidesApiTests.cs" />
-    <Compile Include="Api\MergeDocumentApiTests.cs" />
-    <Compile Include="Api\NotesSlideApiTests.cs" />
-    <Compile Include="Api\NotesSlideShapesApiTests.cs" />
-    <Compile Include="Api\PlaceholdersApiTests.cs" />
-    <Compile Include="Api\PropertiesApiTests.cs" />
-    <Compile Include="Api\ShapesApiTests.cs" />
-    <Compile Include="Api\SlidesApiTests.cs" />
-    <Compile Include="Api\TextApiTests.cs" />
-    <Compile Include="Api\ThemeApiTests.cs" />
-    <Compile Include="Manual\OAuthTests.cs" />
-    <Compile Include="Manual\PipelineTests.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\EmptyShapePathTestInitializer.cs" />
-    <Compile Include="Utils\GeneralTestExecutor.cs" />
-    <Compile Include="Utils\GetSlidesPlaceholderTestInitializer.cs" />
-    <Compile Include="Utils\ImageFormatTestInitializer.cs" />
-    <Compile Include="Utils\InvalidPropertyTestExecutor.cs" />
-    <Compile Include="Utils\MethodAttribute.cs" />
-    <Compile Include="Utils\NewPresentationFromTemplateTestInitializer.cs" />
-    <Compile Include="Utils\OKWithInvalidBackgroundTestInitializer.cs" />
-    <Compile Include="Utils\OKWithInvalidParameterTestInitializer.cs" />
-    <Compile Include="Utils\OKWithInvalidSlideIndexTestInitializer.cs" />
-    <Compile Include="Utils\PutNewPresentationTestInitializer.cs" />
-    <Compile Include="Utils\PutSlidesConvertTestInitializer.cs" />
-    <Compile Include="Utils\PutSlidesDocumentFromHtmlTestInitializer.cs" />
-    <Compile Include="Utils\TestExecutor.cs" />
-    <Compile Include="Utils\TestInilializer.cs" />
-    <Compile Include="Utils\TestType.cs" />
-    <Compile Include="Utils\TestUtils.cs" />
-    <Compile Include="Utils\UnprotectedFileTestInitializer.cs" />
+    <Compile Include="**\*.cs" Exclude="obj\**" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

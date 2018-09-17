@@ -90,6 +90,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string Base64Data { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public AudioFrame() : base()
+        {
+          Type = Model.ShapeType.AudioFrame;
+          ShapeType = Model.CombinedShapeType.AudioFrame;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

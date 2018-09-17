@@ -90,6 +90,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public PlotArea PlotArea { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public Chart() : base()
+        {
+          Type = Model.ShapeType.Chart;
+          ShapeType = Model.CombinedShapeType.Chart;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

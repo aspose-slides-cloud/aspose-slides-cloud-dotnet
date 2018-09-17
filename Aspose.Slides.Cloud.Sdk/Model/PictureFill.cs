@@ -85,6 +85,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public PictureFillMode PictureFillMode { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public PictureFill() : base()
+        {
+          Type = Model.FillType.Picture;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

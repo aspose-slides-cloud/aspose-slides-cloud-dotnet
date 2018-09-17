@@ -60,6 +60,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string ShadowColor { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public PresetShadowEffect() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

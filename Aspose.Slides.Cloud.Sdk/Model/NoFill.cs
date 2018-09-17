@@ -40,6 +40,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class NoFill : FillFormat 
   {                       
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public NoFill() : base()
+        {
+          Type = Model.FillType.NoFill;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

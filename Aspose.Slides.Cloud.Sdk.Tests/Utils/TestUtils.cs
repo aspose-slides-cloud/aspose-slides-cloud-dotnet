@@ -75,7 +75,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             };
         }
 
-        internal const string TestDataPath = "../../../../../../TestData";
+        internal const string TestDataPath = "../../../../TestData";
 
         private static Configuration s_configuration;
         private static TimeSpan m_timeout = new TimeSpan(0, 1, 0);

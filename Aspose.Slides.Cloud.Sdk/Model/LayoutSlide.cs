@@ -60,6 +60,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public List<ResourceUriElement> DependingSlides { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public LayoutSlide() : base()
+        {
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

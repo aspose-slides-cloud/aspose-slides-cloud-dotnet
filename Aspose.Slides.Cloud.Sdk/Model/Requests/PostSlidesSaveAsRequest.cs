@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="PostSlidesSaveAsTiffRequest.cs">
+// <copyright company="Aspose" file="PostSlidesSaveAsRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -30,19 +30,19 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.DocumentApi.PostSlidesSaveAsTiff" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.DocumentApi.PostSlidesSaveAs" /> operation.
   /// </summary>  
-  public class PostSlidesSaveAsTiffRequest  
+  public class PostSlidesSaveAsRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PostSlidesSaveAsTiffRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostSlidesSaveAsRequest"/> class.
         /// </summary>        
-        public PostSlidesSaveAsTiffRequest()
+        public PostSlidesSaveAsRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PostSlidesSaveAsTiffRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostSlidesSaveAsRequest"/> class.
         /// </summary>
         /// <param name="name">The presentation name</param>
         /// <param name="format">Export format</param>
@@ -52,7 +52,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="folder">The presentation folder.</param>
         /// <param name="outPath">The optional output path.</param>
         /// <param name="fontsFolder">The optional custom fonts folder.</param>
-        public PostSlidesSaveAsTiffRequest(string name, ExportFormat format, ExportOptions options = null, string password = null, string storage = null, string folder = null, string outPath = null, string fontsFolder = null)
+        public PostSlidesSaveAsRequest(string name, ExportFormat format, ExportOptions options = null, string password = null, string storage = null, string folder = null, string outPath = null, string fontsFolder = null)
         {
             this.Name = name;
             this.Format = format;

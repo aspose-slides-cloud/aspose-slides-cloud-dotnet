@@ -40,6 +40,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class OleObjectFrame : ShapeBase 
   {                       
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public OleObjectFrame() : base()
+        {
+          Type = Model.ShapeType.OleObjectFrame;
+          ShapeType = Model.CombinedShapeType.OleObjectFrame;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

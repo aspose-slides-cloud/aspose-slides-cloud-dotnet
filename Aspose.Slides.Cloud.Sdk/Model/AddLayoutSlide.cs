@@ -50,6 +50,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public int? CloneFromPosition { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public AddLayoutSlide() : base()
+        {
+          Type = Model.TaskType.AddLayoutSlide;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

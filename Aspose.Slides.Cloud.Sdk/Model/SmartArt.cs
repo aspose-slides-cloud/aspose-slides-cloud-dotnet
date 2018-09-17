@@ -35,7 +35,7 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// Represents SmartArt resource.
+  /// Represents SmartArt shape resource.
   /// </summary>  
   public class SmartArt : ShapeBase 
   {                       
@@ -63,6 +63,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// The state of the SmartArt diagram with regard to (left-to-right) LTR or (right-to-left) RTL, if the diagram supports reversal.
         /// </summary>
         public bool? IsReversed { get; set; }
+
+        /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public SmartArt() : base()
+        {
+          Type = Model.ShapeType.SmartArt;
+          ShapeType = Model.CombinedShapeType.Diagram;
+        }
 
         /// <summary>
         /// Get the string presentation of the object

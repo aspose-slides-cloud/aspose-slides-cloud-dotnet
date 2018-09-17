@@ -55,6 +55,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public bool? ApplyToAll { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public AddMasterSlide() : base()
+        {
+          Type = Model.TaskType.AddMasterSlide;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

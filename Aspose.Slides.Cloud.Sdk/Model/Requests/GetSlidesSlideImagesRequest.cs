@@ -44,11 +44,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSlidesSlideImagesRequest"/> class.
         /// </summary>
-        /// <param name="name">Presentation name.</param>
-        /// <param name="slideIndex">The slide index.</param>
+        /// <param name="name">Document name.</param>
+        /// <param name="slideIndex">Slide index.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="folder">Presentation folder.</param>
-        /// <param name="storage">Document&#39;s storage.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         public GetSlidesSlideImagesRequest(string name, int slideIndex, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
@@ -59,12 +59,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Presentation name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// The slide index.
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
@@ -74,12 +74,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// Presentation folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Document's storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
   }

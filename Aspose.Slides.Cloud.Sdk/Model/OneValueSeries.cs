@@ -35,7 +35,7 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// One value series.
   /// </summary>  
   public class OneValueSeries : Series 
   {                       
@@ -43,6 +43,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Gets or sets the values.
         /// </summary>
         public List<OneValueChartDataPoint> DataPoints { get; set; }
+
+        /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public OneValueSeries() : base()
+        {
+        }
 
         /// <summary>
         /// Get the string presentation of the object

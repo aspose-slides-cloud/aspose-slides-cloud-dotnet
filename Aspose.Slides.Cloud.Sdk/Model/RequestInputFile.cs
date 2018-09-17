@@ -45,6 +45,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public int? Index { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public RequestInputFile() : base()
+        {
+          Type = Model.InputFileType.Request;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

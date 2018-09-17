@@ -35,39 +35,47 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Save slide task.
   /// </summary>  
   public class SaveSlide : Task 
   {                       
         /// <summary>
-        /// Gets or sets Output
+        /// Output to save the slide to.
         /// </summary>
         public OutputFile Output { get; set; }
 
         /// <summary>
-        /// Gets or sets Format
+        /// Save format.
         /// </summary>
         public SlideExportFormat Format { get; set; }
 
         /// <summary>
-        /// Gets or sets Options
+        /// Save options.
         /// </summary>
         public ExportOptions Options { get; set; }
 
         /// <summary>
-        /// Gets or sets Width
+        /// Result width for saving to an image format.
         /// </summary>
         public int? Width { get; set; }
 
         /// <summary>
-        /// Gets or sets Height
+        /// Result height for saving to an image format.
         /// </summary>
         public int? Height { get; set; }
 
         /// <summary>
-        /// Gets or sets Position
+        /// Slide index.
         /// </summary>
         public int? Position { get; set; }
+
+        /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public SaveSlide() : base()
+        {
+          Type = Model.TaskType.SaveSlide;
+        }
 
         /// <summary>
         /// Get the string presentation of the object

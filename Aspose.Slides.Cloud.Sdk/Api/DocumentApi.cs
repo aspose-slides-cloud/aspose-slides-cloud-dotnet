@@ -57,6 +57,21 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Get API info. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetSlidesApiInfoRequest" /></param> 
+        /// <returns><see cref="ApiInfoResponse"/></returns>            
+        public ApiInfoResponse GetSlidesApiInfo(GetSlidesApiInfoRequest request)
+        {
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/info");
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<ApiInfoResponse>(resourcePath, "GET", null, null, files, contentType);
+        }
+
+        /// <summary>
         /// Read presentation info. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetSlidesDocumentRequest" /></param> 
@@ -170,14 +185,14 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <summary>
         /// Saves presentation with options 
         /// </summary>
-        /// <param name="request">Request. <see cref="PostSlidesSaveAsTiffRequest" /></param> 
+        /// <param name="request">Request. <see cref="PostSlidesSaveAsRequest" /></param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream PostSlidesSaveAsTiff(PostSlidesSaveAsTiffRequest request)
+        public System.IO.Stream PostSlidesSaveAs(PostSlidesSaveAsRequest request)
         {
             // verify the required parameter 'name' is set
             if (request.Name == null)
             {
-                throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesSaveAsTiff");
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesSaveAs");
             }
 
             // create path and map variables

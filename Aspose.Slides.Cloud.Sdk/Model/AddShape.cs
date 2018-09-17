@@ -50,6 +50,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string ShapePath { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public AddShape() : base()
+        {
+          Type = Model.TaskType.AddShape;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>

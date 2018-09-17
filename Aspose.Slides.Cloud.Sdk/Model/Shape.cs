@@ -50,6 +50,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public ResourceUriElement Paragraphs { get; set; }
 
         /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public Shape() : base()
+        {
+          Type = Model.ShapeType.Shape;
+        }
+
+        /// <summary>
         /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
