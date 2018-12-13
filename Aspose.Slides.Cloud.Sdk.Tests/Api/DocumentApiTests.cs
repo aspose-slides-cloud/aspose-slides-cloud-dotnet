@@ -544,10 +544,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostSlidesDocumentInvalidIsImageDataEmbeeded()
+        public void PostSlidesDocumentInvalidIsImageDataEmbedded()
         {
             InvalidPropertyTestExecutor<PostSlidesDocumentRequest, DocumentResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostSlidesDocumentRequest, DocumentResponse>("PostSlidesDocument", "IsImageDataEmbeeded");
+                new InvalidPropertyTestExecutor<PostSlidesDocumentRequest, DocumentResponse>("PostSlidesDocument", "IsImageDataEmbedded");
             PostSlidesDocumentRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;

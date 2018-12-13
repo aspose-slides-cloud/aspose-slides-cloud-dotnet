@@ -1,9 +1,9 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="AssemblyInfo.cs">
-//   Copyright (c) 2017 Aspose.Slides for Cloud
+// <copyright company="Aspose" file=".cs">
+//   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
-//   Permission is hereby granted, free of charge, to any person obtaining a copy
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
 //  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
@@ -36,7 +36,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Aspose.Slides.Cloud.Sdk.Properties")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright ï¿½  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -54,7 +54,7 @@ using System.Runtime.InteropServices;
 //      Minor Version 
 //      Build Number
 //      Revision
-[assembly: AssemblyVersion("18.8.0.0")]
-[assembly: AssemblyFileVersion("18.8.0.0")]
+[assembly: AssemblyVersion("18.11.0")]
+[assembly: AssemblyFileVersion("18.11.0")]
 
 #endif

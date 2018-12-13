@@ -43,17 +43,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum AddLinksToFontFiles for 0
+        /// Enum AddLinksToFontFiles for "AddLinksToFontFiles"
         /// </summary>
         AddLinksToFontFiles,
         
         /// <summary>
-        /// Enum Embed for 1
+        /// Enum Embed for "Embed"
         /// </summary>
         Embed,
         
         /// <summary>
-        /// Enum Vectorize for 2
+        /// Enum Vectorize for "Vectorize"
         /// </summary>
         Vectorize
     }

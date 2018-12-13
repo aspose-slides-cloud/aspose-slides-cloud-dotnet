@@ -35,27 +35,27 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Save shape task.
   /// </summary>  
   public class SaveShape : Task 
   {                       
         /// <summary>
-        /// Gets or sets Format
+        /// Format.
         /// </summary>
         public ShapeExportFormat Format { get; set; }
 
         /// <summary>
-        /// Gets or sets ShapePath
+        /// Shape path.
         /// </summary>
         public string ShapePath { get; set; }
 
         /// <summary>
-        /// Gets or sets Output
+        /// Output file.
         /// </summary>
         public OutputFile Output { get; set; }
 
         /// <summary>
-        /// Gets or sets Options
+        /// Save options.
         /// </summary>
         public IShapeExportOptions Options { get; set; }
 

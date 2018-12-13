@@ -63,6 +63,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         public virtual void Initialize()
         {
+            if (m_invalidPropertyName != null && m_invalidPropertyName.Equals("name", StringComparison.InvariantCultureIgnoreCase))
+            {
+                TestUtils.DeleteFile(GetPath(Folder, "invalidValue" + GetName()));
+            }
             TestUtils.Upload(GetName(), GetPath(Folder, GetName()));
         }
 
@@ -101,6 +105,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
         protected virtual string GetFolder()
         {
             return Folder;
+        }
+
+        protected virtual string GetTemplatePath()
+        {
+            return Folder + "/" + Name;
         }
 
         protected virtual string GetFormat()
@@ -169,7 +178,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 if (propertyInfo.Name.Equals("templatePath", StringComparison.InvariantCultureIgnoreCase)
                     || propertyInfo.Name.Equals("cloneFrom", StringComparison.InvariantCultureIgnoreCase))
                 {
-                    return Folder + "/" + Name;
+                    return GetTemplatePath();
                 }
                 if (propertyInfo.Name.EndsWith("storage", StringComparison.InvariantCultureIgnoreCase))
                 {
@@ -305,6 +314,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             }
             if (type == typeof(string))
             {
+                if (fieldName.Equals("name", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return "invalidValue" + value;
+                }
                 return (string)value + "invalidValue";
             }
             if (type == typeof(int))

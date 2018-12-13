@@ -43,12 +43,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum None for 0
+        /// Enum None for "None"
         /// </summary>
         None,
         
         /// <summary>
-        /// Enum Flate for 1
+        /// Enum Flate for "Flate"
         /// </summary>
         Flate
     }

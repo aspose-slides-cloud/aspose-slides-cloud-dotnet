@@ -43,32 +43,32 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum Dpi330 for 0
+        /// Enum Dpi330 for "Dpi330"
         /// </summary>
         Dpi330,
         
         /// <summary>
-        /// Enum Dpi220 for 1
+        /// Enum Dpi220 for "Dpi220"
         /// </summary>
         Dpi220,
         
         /// <summary>
-        /// Enum Dpi150 for 2
+        /// Enum Dpi150 for "Dpi150"
         /// </summary>
         Dpi150,
         
         /// <summary>
-        /// Enum Dpi96 for 3
+        /// Enum Dpi96 for "Dpi96"
         /// </summary>
         Dpi96,
         
         /// <summary>
-        /// Enum Dpi72 for 4
+        /// Enum Dpi72 for "Dpi72"
         /// </summary>
         Dpi72,
         
         /// <summary>
-        /// Enum DocumentResolution for 5
+        /// Enum DocumentResolution for "DocumentResolution"
         /// </summary>
         DocumentResolution
     }

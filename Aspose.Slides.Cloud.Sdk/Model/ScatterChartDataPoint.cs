@@ -35,17 +35,17 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Scatter chart (two-dimensional) data point
   /// </summary>  
   public class ScatterChartDataPoint 
   {                       
         /// <summary>
-        /// Gets or sets XValue
+        /// X-value
         /// </summary>
         public double? XValue { get; set; }
 
         /// <summary>
-        /// Gets or sets YValue
+        /// Y-value
         /// </summary>
         public double? YValue { get; set; }
 

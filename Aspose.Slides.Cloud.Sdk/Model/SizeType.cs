@@ -43,82 +43,82 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum OnScreen for 0
+        /// Enum OnScreen for "OnScreen"
         /// </summary>
         OnScreen,
         
         /// <summary>
-        /// Enum LetterPaper for 1
+        /// Enum LetterPaper for "LetterPaper"
         /// </summary>
         LetterPaper,
         
         /// <summary>
-        /// Enum A4Paper for 2
+        /// Enum A4Paper for "A4Paper"
         /// </summary>
         A4Paper,
         
         /// <summary>
-        /// Enum Slide35mm for 3
+        /// Enum Slide35mm for "Slide35mm"
         /// </summary>
         Slide35mm,
         
         /// <summary>
-        /// Enum Overhead for 4
+        /// Enum Overhead for "Overhead"
         /// </summary>
         Overhead,
         
         /// <summary>
-        /// Enum Banner for 5
+        /// Enum Banner for "Banner"
         /// </summary>
         Banner,
         
         /// <summary>
-        /// Enum Custom for 6
+        /// Enum Custom for "Custom"
         /// </summary>
         Custom,
         
         /// <summary>
-        /// Enum Ledger for 7
+        /// Enum Ledger for "Ledger"
         /// </summary>
         Ledger,
         
         /// <summary>
-        /// Enum A3Paper for 8
+        /// Enum A3Paper for "A3Paper"
         /// </summary>
         A3Paper,
         
         /// <summary>
-        /// Enum B4IsoPaper for 9
+        /// Enum B4IsoPaper for "B4IsoPaper"
         /// </summary>
         B4IsoPaper,
         
         /// <summary>
-        /// Enum B5IsoPaper for 10
+        /// Enum B5IsoPaper for "B5IsoPaper"
         /// </summary>
         B5IsoPaper,
         
         /// <summary>
-        /// Enum B4JisPaper for 11
+        /// Enum B4JisPaper for "B4JisPaper"
         /// </summary>
         B4JisPaper,
         
         /// <summary>
-        /// Enum B5JisPaper for 12
+        /// Enum B5JisPaper for "B5JisPaper"
         /// </summary>
         B5JisPaper,
         
         /// <summary>
-        /// Enum HagakiCard for 13
+        /// Enum HagakiCard for "HagakiCard"
         /// </summary>
         HagakiCard,
         
         /// <summary>
-        /// Enum OnScreen16x9 for 14
+        /// Enum OnScreen16x9 for "OnScreen16x9"
         /// </summary>
         OnScreen16x9,
         
         /// <summary>
-        /// Enum OnScreen16x10 for 15
+        /// Enum OnScreen16x10 for "OnScreen16x10"
         /// </summary>
         OnScreen16x10
     }

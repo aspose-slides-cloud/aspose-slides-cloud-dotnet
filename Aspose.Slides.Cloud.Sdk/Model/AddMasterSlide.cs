@@ -35,22 +35,22 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Add master slide task.
   /// </summary>  
   public class AddMasterSlide : Task 
   {                       
         /// <summary>
-        /// Gets or sets CloneFromFile
+        /// Source presentation clone from.
         /// </summary>
         public InputFile CloneFromFile { get; set; }
 
         /// <summary>
-        /// Gets or sets CloneFromPosition
+        /// Index of slide to clone.
         /// </summary>
         public int? CloneFromPosition { get; set; }
 
         /// <summary>
-        /// Gets or sets ApplyToAll
+        /// True if cloned master slide is applied to all slides.
         /// </summary>
         public bool? ApplyToAll { get; set; }
 

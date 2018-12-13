@@ -115,6 +115,21 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string CommentsAreaColor { get; set; }
 
         /// <summary>
+        /// True if comments that have no author are displayed. (Applies only if comments are displayed).
+        /// </summary>
+        public bool? ShowCommentsByNoAuthor { get; set; }
+
+        /// <summary>
+        /// Image transparent color.
+        /// </summary>
+        public string ImageTransparentColor { get; set; }
+
+        /// <summary>
+        /// True to apply specified   to an image.
+        /// </summary>
+        public bool? ApplyImageTransparent { get; set; }
+
+        /// <summary>
         /// Create an instance of the object
         /// </summary>
         public PdfExportOptions() : base()
@@ -146,6 +161,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
           sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
           sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
+          sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
+          sb.Append("  ImageTransparentColor: ").Append(this.ImageTransparentColor).Append("\n");
+          sb.Append("  ApplyImageTransparent: ").Append(this.ApplyImageTransparent).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

@@ -43,17 +43,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum False for 0
+        /// Enum False for "False"
         /// </summary>
         False,
         
         /// <summary>
-        /// Enum True for 1
+        /// Enum True for "True"
         /// </summary>
         True,
         
         /// <summary>
-        /// Enum NotDefined for -1
+        /// Enum NotDefined for "NotDefined"
         /// </summary>
         NotDefined
     }

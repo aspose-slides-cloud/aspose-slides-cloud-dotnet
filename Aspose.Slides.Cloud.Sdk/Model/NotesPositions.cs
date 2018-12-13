@@ -43,17 +43,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum None for 0
+        /// Enum None for "None"
         /// </summary>
         None,
         
         /// <summary>
-        /// Enum BottomFull for 1
+        /// Enum BottomFull for "BottomFull"
         /// </summary>
         BottomFull,
         
         /// <summary>
-        /// Enum BottomTruncated for 2
+        /// Enum BottomTruncated for "BottomTruncated"
         /// </summary>
         BottomTruncated
     }

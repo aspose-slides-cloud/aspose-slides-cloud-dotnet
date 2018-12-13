@@ -43,97 +43,97 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum Jpeg for 0
+        /// Enum Jpeg for "Jpeg"
         /// </summary>
         Jpeg,
         
         /// <summary>
-        /// Enum Png for 1
+        /// Enum Png for "Png"
         /// </summary>
         Png,
         
         /// <summary>
-        /// Enum Gif for 2
+        /// Enum Gif for "Gif"
         /// </summary>
         Gif,
         
         /// <summary>
-        /// Enum Bmp for 3
+        /// Enum Bmp for "Bmp"
         /// </summary>
         Bmp,
         
         /// <summary>
-        /// Enum Tiff for 4
+        /// Enum Tiff for "Tiff"
         /// </summary>
         Tiff,
         
         /// <summary>
-        /// Enum Html for 5
+        /// Enum Html for "Html"
         /// </summary>
         Html,
         
         /// <summary>
-        /// Enum Pdf for 6
+        /// Enum Pdf for "Pdf"
         /// </summary>
         Pdf,
         
         /// <summary>
-        /// Enum Xps for 7
+        /// Enum Xps for "Xps"
         /// </summary>
         Xps,
         
         /// <summary>
-        /// Enum Pptx for 8
+        /// Enum Pptx for "Pptx"
         /// </summary>
         Pptx,
         
         /// <summary>
-        /// Enum Odp for 9
+        /// Enum Odp for "Odp"
         /// </summary>
         Odp,
         
         /// <summary>
-        /// Enum Otp for 10
+        /// Enum Otp for "Otp"
         /// </summary>
         Otp,
         
         /// <summary>
-        /// Enum Ppt for 11
+        /// Enum Ppt for "Ppt"
         /// </summary>
         Ppt,
         
         /// <summary>
-        /// Enum Pps for 12
+        /// Enum Pps for "Pps"
         /// </summary>
         Pps,
         
         /// <summary>
-        /// Enum Ppsx for 13
+        /// Enum Ppsx for "Ppsx"
         /// </summary>
         Ppsx,
         
         /// <summary>
-        /// Enum Pptm for 14
+        /// Enum Pptm for "Pptm"
         /// </summary>
         Pptm,
         
         /// <summary>
-        /// Enum Ppsm for 15
+        /// Enum Ppsm for "Ppsm"
         /// </summary>
         Ppsm,
         
         /// <summary>
-        /// Enum Potx for 16
+        /// Enum Potx for "Potx"
         /// </summary>
         Potx,
         
         /// <summary>
-        /// Enum Potm for 17
+        /// Enum Potm for "Potm"
         /// </summary>
         Potm,
         
         /// <summary>
-        /// Enum Svg for 18
+        /// Enum Svg for "Svg"
         /// </summary>
         Svg
     }

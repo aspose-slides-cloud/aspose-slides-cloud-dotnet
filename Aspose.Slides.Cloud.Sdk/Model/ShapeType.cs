@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Shape type
     /// </summary>
-    /// <value></value>
+    /// <value>Shape type</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ShapeType
     {

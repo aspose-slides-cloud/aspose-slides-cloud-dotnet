@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostPresentationMergeRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -44,11 +45,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostPresentationMergeRequest"/> class.
         /// </summary>
-        /// <param name="name">Original presentation name.</param>
+        /// <param name="name">Document name.</param>
         /// <param name="request">with a list of presentations to merge.</param>
-        /// <param name="password">Original presentation password.</param>
-        /// <param name="storage">The storage.</param>
-        /// <param name="folder">The folder.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="storage">Document storage.</param>
+        /// <param name="folder">Document folder.</param>
         public PostPresentationMergeRequest(string name, PresentationsMergeRequest request = null, string password = null, string storage = null, string folder = null)
         {
             this.Name = name;
@@ -59,7 +60,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Original presentation name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
@@ -69,17 +70,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public PresentationsMergeRequest Request { get; set; }
 
         /// <summary>
-        /// Original presentation password.
+        /// Document password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// The storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// The folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
   }

@@ -43,17 +43,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum DoNotScale for 0
+        /// Enum DoNotScale for "DoNotScale"
         /// </summary>
         DoNotScale,
         
         /// <summary>
-        /// Enum EnsureFit for 1
+        /// Enum EnsureFit for "EnsureFit"
         /// </summary>
         EnsureFit,
         
         /// <summary>
-        /// Enum Maximize for 2
+        /// Enum Maximize for "Maximize"
         /// </summary>
         Maximize
     }

@@ -413,6 +413,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         DarkStyle2Accent5Accent6,
         
         /// <summary>
+        /// Enum LightStyle1Accent5 for "LightStyle1Accent5"
+        /// </summary>
+        LightStyle1Accent5,
+        
+        /// <summary>
         /// Enum Custom for "Custom"
         /// </summary>
         Custom

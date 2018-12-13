@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Dash style of a line.
     /// </summary>
-    /// <value></value>
+    /// <value>Dash style of a line.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum LineDashStyle
     {

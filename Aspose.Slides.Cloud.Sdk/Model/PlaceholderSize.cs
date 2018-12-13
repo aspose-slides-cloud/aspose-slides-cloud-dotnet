@@ -43,17 +43,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum Full for 0
+        /// Enum Full for "Full"
         /// </summary>
         Full,
         
         /// <summary>
-        /// Enum Half for 1
+        /// Enum Half for "Half"
         /// </summary>
         Half,
         
         /// <summary>
-        /// Enum Quarter for 2
+        /// Enum Quarter for "Quarter"
         /// </summary>
         Quarter
     }

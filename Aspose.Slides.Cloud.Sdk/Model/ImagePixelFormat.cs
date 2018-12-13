@@ -43,27 +43,27 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum Format1bppIndexed for 1
+        /// Enum Format1bppIndexed for "Format1bppIndexed"
         /// </summary>
         Format1bppIndexed,
         
         /// <summary>
-        /// Enum Format4bppIndexed for 4
+        /// Enum Format4bppIndexed for "Format4bppIndexed"
         /// </summary>
         Format4bppIndexed,
         
         /// <summary>
-        /// Enum Format8bppIndexed for 8
+        /// Enum Format8bppIndexed for "Format8bppIndexed"
         /// </summary>
         Format8bppIndexed,
         
         /// <summary>
-        /// Enum Format24bppRgb for 24
+        /// Enum Format24bppRgb for "Format24bppRgb"
         /// </summary>
         Format24bppRgb,
         
         /// <summary>
-        /// Enum Format32bppArgb for 32
+        /// Enum Format32bppArgb for "Format32bppArgb"
         /// </summary>
         Format32bppArgb
     }

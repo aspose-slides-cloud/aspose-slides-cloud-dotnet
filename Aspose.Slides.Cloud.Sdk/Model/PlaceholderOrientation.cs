@@ -43,12 +43,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum Horizontal for 0
+        /// Enum Horizontal for "Horizontal"
         /// </summary>
         Horizontal,
         
         /// <summary>
-        /// Enum Vertical for 1
+        /// Enum Vertical for "Vertical"
         /// </summary>
         Vertical
     }

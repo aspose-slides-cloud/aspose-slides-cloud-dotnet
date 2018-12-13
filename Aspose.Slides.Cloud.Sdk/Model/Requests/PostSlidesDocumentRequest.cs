@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostSlidesDocumentRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -48,17 +49,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="data"></param>
         /// <param name="templatePath">Template file path.</param>
         /// <param name="templateStorage">Template storage name.</param>
-        /// <param name="isImageDataEmbeeded">Is Image Data Embeeded</param>
+        /// <param name="isImageDataEmbedded">Is Image Data Embedded</param>
         /// <param name="password">The document password.</param>
         /// <param name="storage">Document&#39;s storage.</param>
         /// <param name="folder">Document&#39;s folder.</param>
-        public PostSlidesDocumentRequest(string name, string data, string templatePath, string templateStorage = null, bool? isImageDataEmbeeded = null, string password = null, string storage = null, string folder = null)
+        public PostSlidesDocumentRequest(string name, string data, string templatePath, string templateStorage = null, bool? isImageDataEmbedded = null, string password = null, string storage = null, string folder = null)
         {
             this.Name = name;
             this.Data = data;
             this.TemplatePath = templatePath;
             this.TemplateStorage = templateStorage;
-            this.IsImageDataEmbeeded = isImageDataEmbeeded;
+            this.IsImageDataEmbedded = isImageDataEmbedded;
             this.Password = password;
             this.Storage = storage;
             this.Folder = folder;
@@ -85,9 +86,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string TemplateStorage { get; set; }
 
         /// <summary>
-        /// Is Image Data Embeeded
+        /// Is Image Data Embedded
         /// </summary>  
-        public bool? IsImageDataEmbeeded { get; set; }
+        public bool? IsImageDataEmbedded { get; set; }
 
         /// <summary>
         /// The document password.

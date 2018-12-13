@@ -143,7 +143,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Read presentation layoutSlide info. 
+        /// Update a layoutSlide. 
         /// </summary>
         /// <param name="request">Request. <see cref="PutLayoutSlideRequest" /></param> 
         /// <returns><see cref="LayoutSlideResponse"/></returns>            

@@ -35,27 +35,27 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Replace text task.
   /// </summary>  
   public class ReplaceText : Task 
   {                       
         /// <summary>
-        /// Gets or sets OldText
+        /// Text to be replaced.
         /// </summary>
         public string OldText { get; set; }
 
         /// <summary>
-        /// Gets or sets NewText
+        /// Text to replace with.
         /// </summary>
         public string NewText { get; set; }
 
         /// <summary>
-        /// Gets or sets IgnoreCase
+        /// True to ignore case in replace pattern search.
         /// </summary>
         public bool? IgnoreCase { get; set; }
 
         /// <summary>
-        /// Gets or sets SlidePosition
+        /// One-based position of the slide to perform the replace in. 0 to make the replace throughout the presentation.
         /// </summary>
         public int? SlidePosition { get; set; }
 

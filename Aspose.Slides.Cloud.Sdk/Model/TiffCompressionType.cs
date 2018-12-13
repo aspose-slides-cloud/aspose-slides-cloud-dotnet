@@ -43,32 +43,32 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum Default for 0
+        /// Enum Default for "Default"
         /// </summary>
         Default,
         
         /// <summary>
-        /// Enum None for 1
+        /// Enum None for "None"
         /// </summary>
         None,
         
         /// <summary>
-        /// Enum CCITT3 for 2
+        /// Enum CCITT3 for "CCITT3"
         /// </summary>
         CCITT3,
         
         /// <summary>
-        /// Enum CCITT4 for 3
+        /// Enum CCITT4 for "CCITT4"
         /// </summary>
         CCITT4,
         
         /// <summary>
-        /// Enum LZW for 4
+        /// Enum LZW for "LZW"
         /// </summary>
         LZW,
         
         /// <summary>
-        /// Enum RLE for 5
+        /// Enum RLE for "RLE"
         /// </summary>
         RLE
     }

@@ -23,6 +23,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.IO;
+
 namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 {
     [Method("PostSlidesDocument")]
@@ -36,15 +38,17 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         public override void Initialize()
         {
+            TestUtils.DeleteFile("invalidValue" + GetName());
             TestUtils.DeleteFile(GetName());
             TestUtils.DeleteFile(GetPath(Folder, GetName()));
             TestUtils.DeleteFile(GetPath(Folder + "invalidValue", GetName()));
-            TestUtils.Upload(base.GetName(), GetPath(base.GetFolder(), base.GetName()));
+            TestUtils.DeleteFile(GetPath("invalidValue", GetName()));
+            TestUtils.Upload("TemplateCV.pptx", GetPath(base.GetFolder(), "TemplateCV.pptx"));
         }
 
         protected override string GetName()
         {
-            return "changed3" + Name;
+            return "changedh" + Name;
         }
 
         protected override string GetFolder()
@@ -52,8 +56,15 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             return null;
         }
 
+        protected override string GetTemplatePath()
+        {
+            return Folder + "/TemplateCV.pptx";
+        }
+
+        public override bool OKToNotFail { get { return m_propertyName == "Folder" || m_propertyName == "Password" || m_propertyName == "Name"; } }
+
         //TODO: a workaround for SLIDESCLOUD-365 bug. Remove this overriding after fix
-        public override bool OKToFail { get { return m_propertyName == null || m_propertyName == "IsImageDataEmbeeded" || m_propertyName == "Password"; } }
+        //public override bool OKToFail { get { return m_propertyName == null || m_propertyName == "IsImageDataEmbeeded" || m_propertyName == "Password"; } }
 
         private string m_propertyName;
     }

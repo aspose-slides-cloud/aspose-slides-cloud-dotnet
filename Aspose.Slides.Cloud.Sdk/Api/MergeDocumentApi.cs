@@ -57,7 +57,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Merge presentations. 
+        /// Merge the presentation with other presentations specified in the request parameter. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostPresentationMergeRequest" /></param> 
         /// <returns><see cref="DocumentResponse"/></returns>            
@@ -83,7 +83,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Merge presentations. 
+        /// Merge the presentation with other presentations or some of their slides specified in the request parameter. 
         /// </summary>
         /// <param name="request">Request. <see cref="PutPresentationMergeRequest" /></param> 
         /// <returns><see cref="DocumentResponse"/></returns>            

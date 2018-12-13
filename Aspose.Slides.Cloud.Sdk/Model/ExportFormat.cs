@@ -43,79 +43,104 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum Pdf for 0
+        /// Enum Pdf for "Pdf"
         /// </summary>
         Pdf,
         
         /// <summary>
-        /// Enum Xps for 1
+        /// Enum Xps for "Xps"
         /// </summary>
         Xps,
         
         /// <summary>
-        /// Enum Tiff for 2
+        /// Enum Tiff for "Tiff"
         /// </summary>
         Tiff,
         
         /// <summary>
-        /// Enum Pptx for 3
+        /// Enum Pptx for "Pptx"
         /// </summary>
         Pptx,
         
         /// <summary>
-        /// Enum Odp for 4
+        /// Enum Odp for "Odp"
         /// </summary>
         Odp,
         
         /// <summary>
-        /// Enum Otp for 5
+        /// Enum Otp for "Otp"
         /// </summary>
         Otp,
         
         /// <summary>
-        /// Enum Ppt for 6
+        /// Enum Ppt for "Ppt"
         /// </summary>
         Ppt,
         
         /// <summary>
-        /// Enum Pps for 7
+        /// Enum Pps for "Pps"
         /// </summary>
         Pps,
         
         /// <summary>
-        /// Enum Ppsx for 8
+        /// Enum Ppsx for "Ppsx"
         /// </summary>
         Ppsx,
         
         /// <summary>
-        /// Enum Pptm for 9
+        /// Enum Pptm for "Pptm"
         /// </summary>
         Pptm,
         
         /// <summary>
-        /// Enum Ppsm for 10
+        /// Enum Ppsm for "Ppsm"
         /// </summary>
         Ppsm,
         
         /// <summary>
-        /// Enum Potx for 11
+        /// Enum Potx for "Potx"
         /// </summary>
         Potx,
         
         /// <summary>
-        /// Enum Potm for 12
+        /// Enum Potm for "Potm"
         /// </summary>
         Potm,
         
         /// <summary>
-        /// Enum Html for 13
+        /// Enum Html for "Html"
         /// </summary>
         Html,
         
         /// <summary>
-        /// Enum Swf for 14
+        /// Enum Swf for "Swf"
         /// </summary>
-        Swf
+        Swf,
+        
+        /// <summary>
+        /// Enum Svg for "Svg"
+        /// </summary>
+        Svg,
+        
+        /// <summary>
+        /// Enum Jpeg for "Jpeg"
+        /// </summary>
+        Jpeg,
+        
+        /// <summary>
+        /// Enum Png for "Png"
+        /// </summary>
+        Png,
+        
+        /// <summary>
+        /// Enum Gif for "Gif"
+        /// </summary>
+        Gif,
+        
+        /// <summary>
+        /// Enum Bmp for "Bmp"
+        /// </summary>
+        Bmp
     }
 
 }

@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Smart art node.
   /// </summary>  
   public class SmartArtNode 
   {                       
         /// <summary>
-        /// Gets or sets Nodes
+        /// Node list.
         /// </summary>
         public List<SmartArtNode> Nodes { get; set; }
 
@@ -50,17 +50,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public ResourceUriElement Shapes { get; set; }
 
         /// <summary>
-        /// Gets or sets IsAssistant
+        /// True for and assistant node.
         /// </summary>
         public bool? IsAssistant { get; set; }
 
         /// <summary>
-        /// Gets or sets Text
+        /// Node text.
         /// </summary>
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or sets OrgChartLayout
+        /// Organization chart layout type associated with current node.
         /// </summary>
         public OrganizationChartLayoutType OrgChartLayout { get; set; }
 

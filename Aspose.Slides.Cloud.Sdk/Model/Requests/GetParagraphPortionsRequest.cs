@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="GetParagraphPortionsRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud

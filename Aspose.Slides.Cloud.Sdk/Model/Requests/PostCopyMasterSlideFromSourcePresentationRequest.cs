@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostCopyMasterSlideFromSourcePresentationRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -44,15 +45,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostCopyMasterSlideFromSourcePresentationRequest"/> class.
         /// </summary>
-        /// <param name="name">The presentation name.</param>
-        /// <param name="cloneFrom">Source presentation to clone masterSlide from.</param>
-        /// <param name="cloneFromPosition">Position of cloning master slide.</param>
-        /// <param name="cloneFromPassword">Source presentation password.</param>
-        /// <param name="cloneFromStorage">Storage source presentation to clone masterSlide from.</param>
-        /// <param name="applyToAll">Apply cloned master slide to every existed slide. Optional parameter, false by default</param>
-        /// <param name="password">The presentation password.</param>
-        /// <param name="folder">The presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
+        /// <param name="name">Document name.</param>
+        /// <param name="cloneFrom">Name of the document to clone masterSlide from.</param>
+        /// <param name="cloneFromPosition">Position of cloned master slide.</param>
+        /// <param name="cloneFromPassword">Password for the document to clone masterSlide from.</param>
+        /// <param name="cloneFromStorage">Storage of the document to clone masterSlide from.</param>
+        /// <param name="applyToAll">True to apply cloned master slide to every existing slide.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         public PostCopyMasterSlideFromSourcePresentationRequest(string name, string cloneFrom, int cloneFromPosition, string cloneFromPassword = null, string cloneFromStorage = null, bool? applyToAll = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
@@ -67,47 +68,47 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// The presentation name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Source presentation to clone masterSlide from.
+        /// Name of the document to clone masterSlide from.
         /// </summary>  
         public string CloneFrom { get; set; }
 
         /// <summary>
-        /// Position of cloning master slide.
+        /// Position of cloned master slide.
         /// </summary>  
         public int CloneFromPosition { get; set; }
 
         /// <summary>
-        /// Source presentation password.
+        /// Password for the document to clone masterSlide from.
         /// </summary>  
         public string CloneFromPassword { get; set; }
 
         /// <summary>
-        /// Storage source presentation to clone masterSlide from.
+        /// Storage of the document to clone masterSlide from.
         /// </summary>  
         public string CloneFromStorage { get; set; }
 
         /// <summary>
-        /// Apply cloned master slide to every existed slide. Optional parameter, false by default
+        /// True to apply cloned master slide to every existing slide.
         /// </summary>  
         public bool? ApplyToAll { get; set; }
 
         /// <summary>
-        /// The presentation password.
+        /// Document password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// The presentation folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
   }

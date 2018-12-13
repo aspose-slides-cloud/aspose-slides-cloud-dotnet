@@ -43,27 +43,27 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum Jpeg for 0
+        /// Enum Jpeg for "Jpeg"
         /// </summary>
         Jpeg,
         
         /// <summary>
-        /// Enum Png for 1
+        /// Enum Png for "Png"
         /// </summary>
         Png,
         
         /// <summary>
-        /// Enum Gif for 2
+        /// Enum Gif for "Gif"
         /// </summary>
         Gif,
         
         /// <summary>
-        /// Enum Bmp for 3
+        /// Enum Bmp for "Bmp"
         /// </summary>
         Bmp,
         
         /// <summary>
-        /// Enum Tiff for 4
+        /// Enum Tiff for "Tiff"
         /// </summary>
         Tiff
     }

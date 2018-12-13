@@ -43,12 +43,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum Pdf15 for 0
+        /// Enum Pdf15 for "Pdf15"
         /// </summary>
         Pdf15,
         
         /// <summary>
-        /// Enum PdfA1b for 1
+        /// Enum PdfA1b for "PdfA1b"
         /// </summary>
         PdfA1b
     }

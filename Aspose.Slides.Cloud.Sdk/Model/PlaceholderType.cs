@@ -43,82 +43,82 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     {
         
         /// <summary>
-        /// Enum Title for 0
+        /// Enum Title for "Title"
         /// </summary>
         Title,
         
         /// <summary>
-        /// Enum Body for 1
+        /// Enum Body for "Body"
         /// </summary>
         Body,
         
         /// <summary>
-        /// Enum CenteredTitle for 2
+        /// Enum CenteredTitle for "CenteredTitle"
         /// </summary>
         CenteredTitle,
         
         /// <summary>
-        /// Enum Subtitle for 3
+        /// Enum Subtitle for "Subtitle"
         /// </summary>
         Subtitle,
         
         /// <summary>
-        /// Enum DateAndTime for 4
+        /// Enum DateAndTime for "DateAndTime"
         /// </summary>
         DateAndTime,
         
         /// <summary>
-        /// Enum SlideNumber for 5
+        /// Enum SlideNumber for "SlideNumber"
         /// </summary>
         SlideNumber,
         
         /// <summary>
-        /// Enum Footer for 6
+        /// Enum Footer for "Footer"
         /// </summary>
         Footer,
         
         /// <summary>
-        /// Enum Header for 7
+        /// Enum Header for "Header"
         /// </summary>
         Header,
         
         /// <summary>
-        /// Enum Object for 8
+        /// Enum Object for "Object"
         /// </summary>
         Object,
         
         /// <summary>
-        /// Enum Chart for 9
+        /// Enum Chart for "Chart"
         /// </summary>
         Chart,
         
         /// <summary>
-        /// Enum Table for 10
+        /// Enum Table for "Table"
         /// </summary>
         Table,
         
         /// <summary>
-        /// Enum ClipArt for 11
+        /// Enum ClipArt for "ClipArt"
         /// </summary>
         ClipArt,
         
         /// <summary>
-        /// Enum Diagram for 12
+        /// Enum Diagram for "Diagram"
         /// </summary>
         Diagram,
         
         /// <summary>
-        /// Enum Media for 13
+        /// Enum Media for "Media"
         /// </summary>
         Media,
         
         /// <summary>
-        /// Enum SlideImage for 14
+        /// Enum SlideImage for "SlideImage"
         /// </summary>
         SlideImage,
         
         /// <summary>
-        /// Enum Picture for 15
+        /// Enum Picture for "Picture"
         /// </summary>
         Picture
     }

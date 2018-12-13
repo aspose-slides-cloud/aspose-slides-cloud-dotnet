@@ -453,6 +453,12 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapeWithFormat");
             }
 
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling GetNotesSlideShapeWithFormat");
+            }
+
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/saveAs/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -626,6 +632,12 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostNotesSlideShapeSaveAs");
+            }
+
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PostNotesSlideShapeSaveAs");
             }
 
             // create path and map variables

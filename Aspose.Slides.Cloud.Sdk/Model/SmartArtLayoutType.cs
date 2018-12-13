@@ -715,7 +715,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Enum Custom for "Custom"
         /// </summary>
-        Custom
+        Custom,
+        
+        /// <summary>
+        /// Enum PictureOrganizationChart for "PictureOrganizationChart"
+        /// </summary>
+        PictureOrganizationChart
     }
 
 }

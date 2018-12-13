@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Merge presentations task.
   /// </summary>  
   public class Merge : Task 
   {                       
         /// <summary>
-        /// Gets or sets Presentations
+        /// Information about documents and slides being merging sources.
         /// </summary>
         public List<MergingSource> Presentations { get; set; }
 

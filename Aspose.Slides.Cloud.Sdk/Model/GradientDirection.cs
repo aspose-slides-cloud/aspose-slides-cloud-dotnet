@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Gradient style.
     /// </summary>
-    /// <value></value>
+    /// <value>Gradient style.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum GradientDirection
     {

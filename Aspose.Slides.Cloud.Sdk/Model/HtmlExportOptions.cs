@@ -90,6 +90,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string CommentsAreaColor { get; set; }
 
         /// <summary>
+        /// True if comments that have no author are displayed. (Applies only if comments are displayed).
+        /// </summary>
+        public bool? ShowCommentsByNoAuthor { get; set; }
+
+        /// <summary>
         /// Create an instance of the object
         /// </summary>
         public HtmlExportOptions() : base()
@@ -116,6 +121,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
           sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
           sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
+          sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }
