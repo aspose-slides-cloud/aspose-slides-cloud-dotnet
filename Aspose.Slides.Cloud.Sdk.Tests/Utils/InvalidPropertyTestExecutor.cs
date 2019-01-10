@@ -79,6 +79,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 && !m_invalidPropertyName.Equals("position", StringComparison.InvariantCultureIgnoreCase)
                 && !m_invalidPropertyName.Equals("oldPosition", StringComparison.InvariantCultureIgnoreCase)
                 && !m_invalidPropertyName.Equals("newPosition", StringComparison.InvariantCultureIgnoreCase)
+                && !m_invalidPropertyName.Equals("oldPositions", StringComparison.InvariantCultureIgnoreCase)
+                && !m_invalidPropertyName.Equals("newPositions", StringComparison.InvariantCultureIgnoreCase)
                 && !m_invalidPropertyName.Equals("source", StringComparison.InvariantCultureIgnoreCase)
                 && !m_invalidPropertyName.Equals("destFolder", StringComparison.InvariantCultureIgnoreCase)
                 && !m_invalidPropertyName.Equals("layoutAlias", StringComparison.InvariantCultureIgnoreCase)
@@ -129,7 +131,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 //TODO: check the message
                 return;
             }
-            else if (m_invalidPropertyName.Equals("index", StringComparison.InvariantCultureIgnoreCase))
+            else if (m_invalidPropertyName.Equals("index", StringComparison.InvariantCultureIgnoreCase)
+                || m_invalidPropertyName.Equals("newPosition", StringComparison.InvariantCultureIgnoreCase)
+                || m_invalidPropertyName.Equals("oldPositions", StringComparison.InvariantCultureIgnoreCase)
+                || m_invalidPropertyName.Equals("newPositions", StringComparison.InvariantCultureIgnoreCase))
             {
                 try
                 {
@@ -143,6 +148,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             }
             else if (m_invalidPropertyName.Equals("slideIndex", StringComparison.InvariantCultureIgnoreCase)
                 || m_invalidPropertyName.Equals("slides", StringComparison.InvariantCultureIgnoreCase)
+                || m_invalidPropertyName.Equals("slideToCopy", StringComparison.InvariantCultureIgnoreCase)
                 || m_invalidPropertyName.Equals("cloneFromPosition", StringComparison.InvariantCultureIgnoreCase))
             {
                 try
@@ -153,6 +159,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 {
                     Assert.IsTrue(ex.Message.StartsWith("Wrong slide index.")
                         || ex.Message.StartsWith("Invalid index:")
+                        || ex.Message.StartsWith("Index was out of range.")
                         || ex.Message.StartsWith("Placeholder with specified index doesn't exist"));
                     return;
                 }

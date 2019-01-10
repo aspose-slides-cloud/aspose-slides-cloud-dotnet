@@ -1,6 +1,6 @@
 
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="GetSlidesSlideCommentsRequest.cs">
+// <copyright company="Aspose" file="PostSlidesCopyRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,29 +31,35 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.GetSlidesSlideComments" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostSlidesCopy" /> operation.
   /// </summary>  
-  public class GetSlidesSlideCommentsRequest  
+  public class PostSlidesCopyRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetSlidesSlideCommentsRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostSlidesCopyRequest"/> class.
         /// </summary>        
-        public GetSlidesSlideCommentsRequest()
+        public PostSlidesCopyRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetSlidesSlideCommentsRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostSlidesCopyRequest"/> class.
         /// </summary>
         /// <param name="name">Document name.</param>
-        /// <param name="slideIndex">The position of the slide to be reordered.</param>
+        /// <param name="slideToCopy">The index of the slide to be copied from the source presentation.</param>
+        /// <param name="position">The target position at which to copy the slide. Copy to the end by default.</param>
+        /// <param name="source">Name of the document to copy a slide from.</param>
+        /// <param name="sourcePassword">Password for the document to copy a slide from.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public GetSlidesSlideCommentsRequest(string name, int slideIndex, string password = null, string folder = null, string storage = null)
+        public PostSlidesCopyRequest(string name, int slideToCopy, int? position = null, string source = null, string sourcePassword = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
-            this.SlideIndex = slideIndex;
+            this.SlideToCopy = slideToCopy;
+            this.Position = position;
+            this.Source = source;
+            this.SourcePassword = sourcePassword;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
@@ -65,9 +71,24 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Name { get; set; }
 
         /// <summary>
-        /// The position of the slide to be reordered.
+        /// The index of the slide to be copied from the source presentation.
         /// </summary>  
-        public int SlideIndex { get; set; }
+        public int SlideToCopy { get; set; }
+
+        /// <summary>
+        /// The target position at which to copy the slide. Copy to the end by default.
+        /// </summary>  
+        public int? Position { get; set; }
+
+        /// <summary>
+        /// Name of the document to copy a slide from.
+        /// </summary>  
+        public string Source { get; set; }
+
+        /// <summary>
+        /// Password for the document to copy a slide from.
+        /// </summary>  
+        public string SourcePassword { get; set; }
 
         /// <summary>
         /// Document password.

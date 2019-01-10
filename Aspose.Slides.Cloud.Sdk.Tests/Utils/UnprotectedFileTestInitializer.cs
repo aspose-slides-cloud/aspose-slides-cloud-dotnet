@@ -29,6 +29,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
     [Method("PutSlidesSlide")]
     [Method("DeleteSlidesCleanSlidesList")]
     [Method("PostSlidesReorderPosition")]
+    [Method("PostSlidesAdd")]
     internal class UnprotectedFileTestInitializer : TestInitializer
     {
         public UnprotectedFileTestInitializer(string invalidPropertyName) : base(invalidPropertyName)

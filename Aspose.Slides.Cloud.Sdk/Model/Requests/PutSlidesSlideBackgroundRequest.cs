@@ -45,13 +45,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PutSlidesSlideBackgroundRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="slideIndex"></param>
-        /// <param name="background"></param>
-        /// <param name="folder"></param>
+        /// <param name="name">Document name.</param>
+        /// <param name="slideIndex">Slide index.</param>
+        /// <param name="background">Slide background update data. Required unless color parameter is specified.</param>
+        /// <param name="folder">Document folder.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="storage"></param>
-        /// <param name="color"></param>
+        /// <param name="storage">Document storage.</param>
+        /// <param name="color">Slide background target color in RRGGBB format. Ignored if background parameter is specified. Required unless background parameter is specified.</param>
         public PutSlidesSlideBackgroundRequest(string name, int slideIndex, SlideBackground background = null, string folder = null, string password = null, string storage = null, string color = null)
         {
             this.Name = name;
@@ -64,22 +64,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets SlideIndex
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets Background
+        /// Slide background update data. Required unless color parameter is specified.
         /// </summary>  
         public SlideBackground Background { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
@@ -89,12 +89,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Gets or sets Color
+        /// Slide background target color in RRGGBB format. Ignored if background parameter is specified. Required unless background parameter is specified.
         /// </summary>  
         public string Color { get; set; }
   }

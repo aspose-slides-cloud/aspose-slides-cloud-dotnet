@@ -1,6 +1,6 @@
 
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="GetSlidesSlideCommentsRequest.cs">
+// <copyright company="Aspose" file="PostSlidesReorderManyRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,29 +31,31 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.GetSlidesSlideComments" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostSlidesReorderMany" /> operation.
   /// </summary>  
-  public class GetSlidesSlideCommentsRequest  
+  public class PostSlidesReorderManyRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetSlidesSlideCommentsRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostSlidesReorderManyRequest"/> class.
         /// </summary>        
-        public GetSlidesSlideCommentsRequest()
+        public PostSlidesReorderManyRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetSlidesSlideCommentsRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostSlidesReorderManyRequest"/> class.
         /// </summary>
         /// <param name="name">Document name.</param>
-        /// <param name="slideIndex">The position of the slide to be reordered.</param>
+        /// <param name="oldPositions">A comma separated array of positions of slides to be reordered.</param>
+        /// <param name="newPositions">A comma separated array of new slide positions.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public GetSlidesSlideCommentsRequest(string name, int slideIndex, string password = null, string folder = null, string storage = null)
+        public PostSlidesReorderManyRequest(string name, List<int> oldPositions = null, List<int> newPositions = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
-            this.SlideIndex = slideIndex;
+            this.OldPositions = oldPositions;
+            this.NewPositions = newPositions;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
@@ -65,9 +67,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Name { get; set; }
 
         /// <summary>
-        /// The position of the slide to be reordered.
+        /// A comma separated array of positions of slides to be reordered.
         /// </summary>  
-        public int SlideIndex { get; set; }
+        public List<int> OldPositions { get; set; }
+
+        /// <summary>
+        /// A comma separated array of new slide positions.
+        /// </summary>  
+        public List<int> NewPositions { get; set; }
 
         /// <summary>
         /// Document password.

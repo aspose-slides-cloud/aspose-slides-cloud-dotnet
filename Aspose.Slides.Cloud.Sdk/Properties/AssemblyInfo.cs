@@ -54,7 +54,7 @@ using System.Runtime.InteropServices;
 //      Minor Version 
 //      Build Number
 //      Revision
-[assembly: AssemblyVersion("18.11.0")]
-[assembly: AssemblyFileVersion("18.11.0")]
+[assembly: AssemblyVersion("18.12.0")]
+[assembly: AssemblyFileVersion("18.12.0")]
 
 #endif

@@ -45,12 +45,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PutSlidesSlideRequest"/> class.
         /// </summary>
-        /// <param name="name">Name of the presentation.</param>
-        /// <param name="slideIndex">Index of the slide update to.</param>
-        /// <param name="slideDto">DTO of the slide.</param>
-        /// <param name="password"></param>
-        /// <param name="folder">The presentation folder.</param>
-        /// <param name="storage">The presentation storage.</param>
+        /// <param name="name">Document name.</param>
+        /// <param name="slideIndex">Slide index.</param>
+        /// <param name="slideDto">Slide update data.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         public PutSlidesSlideRequest(string name, int slideIndex, Slide slideDto = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
@@ -62,32 +62,32 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Name of the presentation.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Index of the slide update to.
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// DTO of the slide.
+        /// Slide update data.
         /// </summary>  
         public Slide SlideDto { get; set; }
 
         /// <summary>
-        /// Gets or sets Password
+        /// Document password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// The presentation folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// The presentation storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
   }

@@ -176,6 +176,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                     return GetFolder();
                 }
                 if (propertyInfo.Name.Equals("templatePath", StringComparison.InvariantCultureIgnoreCase)
+                    || propertyInfo.Name.Equals("source", StringComparison.InvariantCultureIgnoreCase)
                     || propertyInfo.Name.Equals("cloneFrom", StringComparison.InvariantCultureIgnoreCase))
                 {
                     return GetTemplatePath();
@@ -268,7 +269,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             }
             if (propertyInfo.PropertyType == typeof(DocumentProperties))
             {
-                return new DocumentProperties { List = new System.Collections.Generic.List<DocumentProperty> { } };
+                return new DocumentProperties { List = new List<DocumentProperty> { } };
             }
             if (propertyInfo.PropertyType == typeof(DocumentProperty))
             {
@@ -284,7 +285,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                     Text = "testShape"
                 };
             }
-            if (propertyInfo.PropertyType == typeof(System.IO.Stream))
+            if (propertyInfo.PropertyType == typeof(Stream))
             {
                 return GetStream();
             }
@@ -294,10 +295,19 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             }
             if (propertyInfo.Name.EndsWith("index", StringComparison.InvariantCultureIgnoreCase)
                 || propertyInfo.Name.EndsWith("position", StringComparison.InvariantCultureIgnoreCase)
+                || propertyInfo.Name.Equals("slideToCopy", StringComparison.InvariantCultureIgnoreCase)
                 || propertyInfo.Name.Equals("width", StringComparison.InvariantCultureIgnoreCase)
                 || propertyInfo.Name.Equals("height", StringComparison.InvariantCultureIgnoreCase))
             {
                 return 1;
+            }
+            if (propertyInfo.Name.Equals("oldPositions", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return new List<int> { 1, 2 };
+            }
+            if (propertyInfo.Name.Equals("newPositions", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return new List<int> { 2, 1 };
             }
             if (propertyInfo.PropertyType.IsValueType)
             {

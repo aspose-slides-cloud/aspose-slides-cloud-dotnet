@@ -57,7 +57,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Delete presentation slide by its index. 
+        /// Delete a presentation slide by its index. 
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteSlideByIndexRequest" /></param> 
         /// <returns><see cref="SlideListResponse"/></returns>            
@@ -98,10 +98,10 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", request.Slides);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", request.Slides);
             string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
@@ -109,7 +109,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Remove presentation slide background color. 
+        /// Remove background from a slide. 
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteSlidesSlideBackgroundRequest" /></param> 
         /// <returns><see cref="SlideBackgroundResponse"/></returns>            
@@ -135,7 +135,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Convert slide to some format. 
+        /// Convert a slide to some format. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetSlideWithFormatRequest" /></param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
@@ -172,7 +172,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Read slide info. 
+        /// Read a slide info. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetSlidesSlideRequest" /></param> 
         /// <returns><see cref="SlideResponse"/></returns>            
@@ -198,7 +198,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Read presentation slide background color type. 
+        /// Read background info for a slide. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetSlidesSlideBackgroundRequest" /></param> 
         /// <returns><see cref="SlideBackgroundResponse"/></returns>            
@@ -275,7 +275,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Convert slide to some format. 
+        /// Convert a slide to some format. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlideSaveAsRequest" /></param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
@@ -315,6 +315,116 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <summary>
         /// Reorder presentation slide position 
         /// </summary>
+        /// <param name="request">Request. <see cref="PostSlidesAddRequest" /></param> 
+        /// <returns><see cref="SlideListResponse"/></returns>            
+        public SlideListResponse PostSlidesAdd(PostSlidesAddRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesAdd");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/add");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "layoutAlias", request.LayoutAlias);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<SlideListResponse>(resourcePath, "POST", null, null, files, contentType);
+        }
+
+        /// <summary>
+        /// Reorder presentation slide position 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostSlidesCopyRequest" /></param> 
+        /// <returns><see cref="SlideListResponse"/></returns>            
+        public SlideListResponse PostSlidesCopy(PostSlidesCopyRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesCopy");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/copy");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slideToCopy", request.SlideToCopy);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "source", request.Source);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sourcePassword", request.SourcePassword);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<SlideListResponse>(resourcePath, "POST", null, null, files, contentType);
+        }
+
+        /// <summary>
+        /// Reorder presentation slide position 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostSlidesReorderRequest" /></param> 
+        /// <returns><see cref="SlideListResponse"/></returns>            
+        public SlideListResponse PostSlidesReorder(PostSlidesReorderRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesReorder");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/move");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newPosition", request.NewPosition);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<SlideListResponse>(resourcePath, "POST", null, null, files, contentType);
+        }
+
+        /// <summary>
+        /// Reorder presentation slide position 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostSlidesReorderManyRequest" /></param> 
+        /// <returns><see cref="SlideListResponse"/></returns>            
+        public SlideListResponse PostSlidesReorderMany(PostSlidesReorderManyRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesReorderMany");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/reorder");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "oldPositions", request.OldPositions);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newPositions", request.NewPositions);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<SlideListResponse>(resourcePath, "POST", null, null, files, contentType);
+        }
+
+        /// <summary>
+        /// Create, copy or reorder presentation slides. 
+        /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesReorderPositionRequest" /></param> 
         /// <returns><see cref="SlideListResponse"/></returns>            
         public SlideListResponse PostSlidesReorderPosition(PostSlidesReorderPositionRequest request)
@@ -330,6 +440,8 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "oldPosition", request.OldPosition);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newPosition", request.NewPosition);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "oldPositions", request.OldPositions);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newPositions", request.NewPositions);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slideToCopy", request.SlideToCopy);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slideToClone", request.SlideToClone);
@@ -345,7 +457,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Update slide properties. 
+        /// Update a slide. 
         /// </summary>
         /// <param name="request">Request. <see cref="PutSlidesSlideRequest" /></param> 
         /// <returns><see cref="SlideResponse"/></returns>            
@@ -372,7 +484,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Set presentation slide background color. 
+        /// Set background for a slide. 
         /// </summary>
         /// <param name="request">Request. <see cref="PutSlidesSlideBackgroundRequest" /></param> 
         /// <returns><see cref="SlideBackgroundResponse"/></returns>            

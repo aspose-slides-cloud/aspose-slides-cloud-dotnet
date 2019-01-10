@@ -1577,6 +1577,712 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test PostSlidesAdd
+        /// </summary>
+        [Test]
+        public void PostSlidesAdd()
+        {
+            GeneralTestExecutor<PostSlidesAddRequest, SlideListResponse> testExecutor =
+                new GeneralTestExecutor<PostSlidesAddRequest, SlideListResponse>("PostSlidesAdd");
+            PostSlidesAddRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesAdd(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesAddInvalidName()
+        {
+            InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse>("PostSlidesAdd", "Name");
+            PostSlidesAddRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesAdd(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesAddInvalidPosition()
+        {
+            InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse>("PostSlidesAdd", "Position");
+            PostSlidesAddRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesAdd(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesAddInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse>("PostSlidesAdd", "Password");
+            PostSlidesAddRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesAdd(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesAddInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse>("PostSlidesAdd", "Folder");
+            PostSlidesAddRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesAdd(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesAddInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse>("PostSlidesAdd", "Storage");
+            PostSlidesAddRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesAdd(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesAddInvalidLayoutAlias()
+        {
+            InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesAddRequest, SlideListResponse>("PostSlidesAdd", "LayoutAlias");
+            PostSlidesAddRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesAdd(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PostSlidesCopy
+        /// </summary>
+        [Test]
+        public void PostSlidesCopy()
+        {
+            GeneralTestExecutor<PostSlidesCopyRequest, SlideListResponse> testExecutor =
+                new GeneralTestExecutor<PostSlidesCopyRequest, SlideListResponse>("PostSlidesCopy");
+            PostSlidesCopyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesCopy(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesCopyInvalidName()
+        {
+            InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse>("PostSlidesCopy", "Name");
+            PostSlidesCopyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesCopy(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesCopyInvalidSlideToCopy()
+        {
+            InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse>("PostSlidesCopy", "SlideToCopy");
+            PostSlidesCopyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesCopy(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesCopyInvalidPosition()
+        {
+            InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse>("PostSlidesCopy", "Position");
+            PostSlidesCopyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesCopy(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesCopyInvalidSource()
+        {
+            InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse>("PostSlidesCopy", "Source");
+            PostSlidesCopyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesCopy(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesCopyInvalidSourcePassword()
+        {
+            InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse>("PostSlidesCopy", "SourcePassword");
+            PostSlidesCopyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesCopy(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesCopyInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse>("PostSlidesCopy", "Password");
+            PostSlidesCopyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesCopy(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesCopyInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse>("PostSlidesCopy", "Folder");
+            PostSlidesCopyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesCopy(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesCopyInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesCopyRequest, SlideListResponse>("PostSlidesCopy", "Storage");
+            PostSlidesCopyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesCopy(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PostSlidesReorder
+        /// </summary>
+        [Test]
+        public void PostSlidesReorder()
+        {
+            GeneralTestExecutor<PostSlidesReorderRequest, SlideListResponse> testExecutor =
+                new GeneralTestExecutor<PostSlidesReorderRequest, SlideListResponse>("PostSlidesReorder");
+            PostSlidesReorderRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorder(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderInvalidName()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse>("PostSlidesReorder", "Name");
+            PostSlidesReorderRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorder(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderInvalidSlideIndex()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse>("PostSlidesReorder", "SlideIndex");
+            PostSlidesReorderRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorder(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderInvalidNewPosition()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse>("PostSlidesReorder", "NewPosition");
+            PostSlidesReorderRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorder(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse>("PostSlidesReorder", "Password");
+            PostSlidesReorderRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorder(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse>("PostSlidesReorder", "Folder");
+            PostSlidesReorderRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorder(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderRequest, SlideListResponse>("PostSlidesReorder", "Storage");
+            PostSlidesReorderRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorder(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PostSlidesReorderMany
+        /// </summary>
+        [Test]
+        public void PostSlidesReorderMany()
+        {
+            GeneralTestExecutor<PostSlidesReorderManyRequest, SlideListResponse> testExecutor =
+                new GeneralTestExecutor<PostSlidesReorderManyRequest, SlideListResponse>("PostSlidesReorderMany");
+            PostSlidesReorderManyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorderMany(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderManyInvalidName()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse>("PostSlidesReorderMany", "Name");
+            PostSlidesReorderManyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorderMany(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderManyInvalidOldPositions()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse>("PostSlidesReorderMany", "OldPositions");
+            PostSlidesReorderManyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorderMany(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderManyInvalidNewPositions()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse>("PostSlidesReorderMany", "NewPositions");
+            PostSlidesReorderManyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorderMany(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderManyInvalidPassword()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse>("PostSlidesReorderMany", "Password");
+            PostSlidesReorderManyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorderMany(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderManyInvalidFolder()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse>("PostSlidesReorderMany", "Folder");
+            PostSlidesReorderManyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorderMany(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderManyInvalidStorage()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderManyRequest, SlideListResponse>("PostSlidesReorderMany", "Storage");
+            PostSlidesReorderManyRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorderMany(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test PostSlidesReorderPosition
         /// </summary>
         [Test]
@@ -1653,6 +2359,52 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             InvalidPropertyTestExecutor<PostSlidesReorderPositionRequest, SlideListResponse> testExecutor =
                 new InvalidPropertyTestExecutor<PostSlidesReorderPositionRequest, SlideListResponse>("PostSlidesReorderPosition", "NewPosition");
+            PostSlidesReorderPositionRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorderPosition(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderPositionInvalidOldPositions()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderPositionRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderPositionRequest, SlideListResponse>("PostSlidesReorderPosition", "OldPositions");
+            PostSlidesReorderPositionRequest request = testExecutor.PrepareRequest();
+            SlideListResponse response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesReorderPosition(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesReorderPositionInvalidNewPositions()
+        {
+            InvalidPropertyTestExecutor<PostSlidesReorderPositionRequest, SlideListResponse> testExecutor =
+                new InvalidPropertyTestExecutor<PostSlidesReorderPositionRequest, SlideListResponse>("PostSlidesReorderPosition", "NewPositions");
             PostSlidesReorderPositionRequest request = testExecutor.PrepareRequest();
             SlideListResponse response = null;
             bool needAssertResponse = false;

@@ -57,7 +57,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Gets image in specified format. 
+        /// Get image in specified format. 
         /// </summary>
         /// <param name="request">Request. <see cref="GetSlidesImageWithFormatRequest" /></param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            

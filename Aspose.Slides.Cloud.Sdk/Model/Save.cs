@@ -35,22 +35,22 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Save slide task.
   /// </summary>  
   public class Save : Task 
   {                       
         /// <summary>
-        /// Gets or sets Format
+        /// Format.
         /// </summary>
         public ExportFormat Format { get; set; }
 
         /// <summary>
-        /// Gets or sets Output
+        /// Output file.
         /// </summary>
         public OutputFile Output { get; set; }
 
         /// <summary>
-        /// Gets or sets Options
+        /// Save options.
         /// </summary>
         public ExportOptions Options { get; set; }
 

@@ -1,6 +1,6 @@
 
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="GetSlidesSlideCommentsRequest.cs">
+// <copyright company="Aspose" file="PostSlidesAddRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,32 +31,34 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.GetSlidesSlideComments" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostSlidesAdd" /> operation.
   /// </summary>  
-  public class GetSlidesSlideCommentsRequest  
+  public class PostSlidesAddRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetSlidesSlideCommentsRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostSlidesAddRequest"/> class.
         /// </summary>        
-        public GetSlidesSlideCommentsRequest()
+        public PostSlidesAddRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetSlidesSlideCommentsRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostSlidesAddRequest"/> class.
         /// </summary>
         /// <param name="name">Document name.</param>
-        /// <param name="slideIndex">The position of the slide to be reordered.</param>
+        /// <param name="position">The target position at which to create the slide. Add to the end by default.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public GetSlidesSlideCommentsRequest(string name, int slideIndex, string password = null, string folder = null, string storage = null)
+        /// <param name="layoutAlias">Alias of layout slide for new slide. Alias may be the type of layout, name of layout slide or index</param>
+        public PostSlidesAddRequest(string name, int? position = null, string password = null, string folder = null, string storage = null, string layoutAlias = null)
         {
             this.Name = name;
-            this.SlideIndex = slideIndex;
+            this.Position = position;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
+            this.LayoutAlias = layoutAlias;
         }
 
         /// <summary>
@@ -65,9 +67,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Name { get; set; }
 
         /// <summary>
-        /// The position of the slide to be reordered.
+        /// The target position at which to create the slide. Add to the end by default.
         /// </summary>  
-        public int SlideIndex { get; set; }
+        public int? Position { get; set; }
 
         /// <summary>
         /// Document password.
@@ -83,5 +85,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
+
+        /// <summary>
+        /// Alias of layout slide for new slide. Alias may be the type of layout, name of layout slide or index
+        /// </summary>  
+        public string LayoutAlias { get; set; }
   }
 }

@@ -45,17 +45,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostSlideSaveAsRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="slideIndex"></param>
-        /// <param name="format"></param>
-        /// <param name="options">export options</param>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
-        /// <param name="password"></param>
-        /// <param name="folder"></param>
-        /// <param name="storage"></param>
-        /// <param name="outPath"></param>
-        /// <param name="fontsFolder"></param>
+        /// <param name="name">Document name.</param>
+        /// <param name="slideIndex">Slide index.</param>
+        /// <param name="format">Output file format.</param>
+        /// <param name="options">Export options.</param>
+        /// <param name="width">Output file width; 0 to not adjust the size. Default is 0.</param>
+        /// <param name="height">Output file height; 0 to not adjust the size. Default is 0.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
+        /// <param name="outPath">Path to upload the output file to.</param>
+        /// <param name="fontsFolder">Storage folder containing custom fonts to be used with the document.</param>
         public PostSlideSaveAsRequest(string name, int slideIndex, SlideExportFormat format, ExportOptions options = null, int? width = null, int? height = null, string password = null, string folder = null, string storage = null, string outPath = null, string fontsFolder = null)
         {
             this.Name = name;
@@ -72,57 +72,57 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets SlideIndex
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets Format
+        /// Output file format.
         /// </summary>  
         public SlideExportFormat Format { get; set; }
 
         /// <summary>
-        /// export options
+        /// Export options.
         /// </summary>  
         public ExportOptions Options { get; set; }
 
         /// <summary>
-        /// Gets or sets Width
+        /// Output file width; 0 to not adjust the size. Default is 0.
         /// </summary>  
         public int? Width { get; set; }
 
         /// <summary>
-        /// Gets or sets Height
+        /// Output file height; 0 to not adjust the size. Default is 0.
         /// </summary>  
         public int? Height { get; set; }
 
         /// <summary>
-        /// Gets or sets Password
+        /// Document password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Gets or sets OutPath
+        /// Path to upload the output file to.
         /// </summary>  
         public string OutPath { get; set; }
 
         /// <summary>
-        /// Gets or sets FontsFolder
+        /// Storage folder containing custom fonts to be used with the document.
         /// </summary>  
         public string FontsFolder { get; set; }
   }

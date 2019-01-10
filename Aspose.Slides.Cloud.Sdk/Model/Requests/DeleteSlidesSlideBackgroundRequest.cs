@@ -45,11 +45,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteSlidesSlideBackgroundRequest"/> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="slideIndex"></param>
+        /// <param name="name">Document name.</param>
+        /// <param name="slideIndex">Slide index.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="folder"></param>
-        /// <param name="storage"></param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         public DeleteSlidesSlideBackgroundRequest(string name, int slideIndex, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
@@ -60,12 +60,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Gets or sets Name
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets SlideIndex
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
@@ -75,12 +75,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// Gets or sets Folder
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or sets Storage
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
   }
