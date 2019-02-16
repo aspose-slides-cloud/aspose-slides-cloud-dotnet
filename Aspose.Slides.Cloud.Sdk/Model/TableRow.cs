@@ -35,22 +35,22 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Table Row.
   /// </summary>  
   public class TableRow 
   {                       
         /// <summary>
-        /// Gets or sets Cells
+        /// Cells for the row.
         /// </summary>
         public List<TableCell> Cells { get; set; }
 
         /// <summary>
-        /// Gets or sets MinimalHeight
+        /// Minimal height of the row.
         /// </summary>
         public double? MinimalHeight { get; set; }
 
         /// <summary>
-        /// Gets or sets Height
+        /// Height of the row.
         /// </summary>
         public double? Height { get; set; }
 

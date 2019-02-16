@@ -74,8 +74,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PostPresentationMerge()
         {
-            GeneralTestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
-                new GeneralTestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge");
+            TestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", null);
             PostPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -97,8 +97,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PostPresentationMergeInvalidName()
         {
-            InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", "Name");
+            TestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", "Name");
             PostPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -120,8 +120,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PostPresentationMergeInvalidRequest()
         {
-            InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", "Request");
+            TestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", "Request");
             PostPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -143,8 +143,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PostPresentationMergeInvalidPassword()
         {
-            InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", "Password");
+            TestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", "Password");
             PostPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -166,8 +166,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PostPresentationMergeInvalidStorage()
         {
-            InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", "Storage");
+            TestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", "Storage");
             PostPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -189,8 +189,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PostPresentationMergeInvalidFolder()
         {
-            InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", "Folder");
+            TestExecutor<PostPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PostPresentationMergeRequest, DocumentResponse>("PostPresentationMerge", "Folder");
             PostPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -216,8 +216,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutPresentationMerge()
         {
-            GeneralTestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
-                new GeneralTestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge");
+            TestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", null);
             PutPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -239,8 +239,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutPresentationMergeInvalidName()
         {
-            InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Name");
+            TestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Name");
             PutPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -262,8 +262,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutPresentationMergeInvalidRequest()
         {
-            InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Request");
+            TestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Request");
             PutPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -285,8 +285,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutPresentationMergeInvalidPassword()
         {
-            InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Password");
+            TestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Password");
             PutPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -308,8 +308,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutPresentationMergeInvalidStorage()
         {
-            InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Storage");
+            TestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Storage");
             PutPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -331,8 +331,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutPresentationMergeInvalidFolder()
         {
-            InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
-                new InvalidPropertyTestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Folder");
+            TestExecutor<PutPresentationMergeRequest, DocumentResponse> testExecutor =
+                new TestExecutor<PutPresentationMergeRequest, DocumentResponse>("PutPresentationMerge", "Folder");
             PutPresentationMergeRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;

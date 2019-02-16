@@ -313,7 +313,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Reorder presentation slide position 
+        /// Create a slide. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesAddRequest" /></param> 
         /// <returns><see cref="SlideListResponse"/></returns>            
@@ -340,7 +340,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Reorder presentation slide position 
+        /// Copy a slide from the current or another presentation. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesCopyRequest" /></param> 
         /// <returns><see cref="SlideListResponse"/></returns>            
@@ -369,7 +369,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Reorder presentation slide position 
+        /// Reorder presentation slide position. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesReorderRequest" /></param> 
         /// <returns><see cref="SlideListResponse"/></returns>            
@@ -396,7 +396,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Reorder presentation slide position 
+        /// Reorder presentation slides positions. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostSlidesReorderManyRequest" /></param> 
         /// <returns><see cref="SlideListResponse"/></returns>            

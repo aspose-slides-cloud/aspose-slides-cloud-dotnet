@@ -74,8 +74,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholder()
         {
-            GeneralTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder");
+            TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", null);
             GetSlidesPlaceholderRequest request = testExecutor.PrepareRequest();
             PlaceholderResponse response = null;
             bool needAssertResponse = false;
@@ -97,8 +97,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholderInvalidName()
         {
-            InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "Name");
+            TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "Name");
             GetSlidesPlaceholderRequest request = testExecutor.PrepareRequest();
             PlaceholderResponse response = null;
             bool needAssertResponse = false;
@@ -120,8 +120,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholderInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "SlideIndex");
+            TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "SlideIndex");
             GetSlidesPlaceholderRequest request = testExecutor.PrepareRequest();
             PlaceholderResponse response = null;
             bool needAssertResponse = false;
@@ -143,8 +143,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholderInvalidPlaceholderIndex()
         {
-            InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "PlaceholderIndex");
+            TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "PlaceholderIndex");
             GetSlidesPlaceholderRequest request = testExecutor.PrepareRequest();
             PlaceholderResponse response = null;
             bool needAssertResponse = false;
@@ -166,8 +166,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholderInvalidPassword()
         {
-            InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "Password");
+            TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "Password");
             GetSlidesPlaceholderRequest request = testExecutor.PrepareRequest();
             PlaceholderResponse response = null;
             bool needAssertResponse = false;
@@ -189,8 +189,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholderInvalidFolder()
         {
-            InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "Folder");
+            TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "Folder");
             GetSlidesPlaceholderRequest request = testExecutor.PrepareRequest();
             PlaceholderResponse response = null;
             bool needAssertResponse = false;
@@ -212,8 +212,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholderInvalidStorage()
         {
-            InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "Storage");
+            TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholderRequest, PlaceholderResponse>("GetSlidesPlaceholder", "Storage");
             GetSlidesPlaceholderRequest request = testExecutor.PrepareRequest();
             PlaceholderResponse response = null;
             bool needAssertResponse = false;
@@ -239,8 +239,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholders()
         {
-            GeneralTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders");
+            TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", null);
             GetSlidesPlaceholdersRequest request = testExecutor.PrepareRequest();
             PlaceholdersResponse response = null;
             bool needAssertResponse = false;
@@ -262,8 +262,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholdersInvalidName()
         {
-            InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "Name");
+            TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "Name");
             GetSlidesPlaceholdersRequest request = testExecutor.PrepareRequest();
             PlaceholdersResponse response = null;
             bool needAssertResponse = false;
@@ -285,8 +285,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholdersInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "SlideIndex");
+            TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "SlideIndex");
             GetSlidesPlaceholdersRequest request = testExecutor.PrepareRequest();
             PlaceholdersResponse response = null;
             bool needAssertResponse = false;
@@ -308,8 +308,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholdersInvalidPassword()
         {
-            InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "Password");
+            TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "Password");
             GetSlidesPlaceholdersRequest request = testExecutor.PrepareRequest();
             PlaceholdersResponse response = null;
             bool needAssertResponse = false;
@@ -331,8 +331,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholdersInvalidFolder()
         {
-            InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "Folder");
+            TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "Folder");
             GetSlidesPlaceholdersRequest request = testExecutor.PrepareRequest();
             PlaceholdersResponse response = null;
             bool needAssertResponse = false;
@@ -354,8 +354,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesPlaceholdersInvalidStorage()
         {
-            InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "Storage");
+            TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse> testExecutor =
+                new TestExecutor<GetSlidesPlaceholdersRequest, PlaceholdersResponse>("GetSlidesPlaceholders", "Storage");
             GetSlidesPlaceholdersRequest request = testExecutor.PrepareRequest();
             PlaceholdersResponse response = null;
             bool needAssertResponse = false;

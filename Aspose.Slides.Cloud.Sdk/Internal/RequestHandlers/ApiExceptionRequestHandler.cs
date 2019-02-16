@@ -48,7 +48,8 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
                 {
                     resultStream.Position = 0;
                     ExceptionInfo exception = SerializationHelper.Deserialize<ExceptionInfo>(resultStream, response.ContentType);
-                    throw new ApiException((int)response.StatusCode, exception.Message);
+                    string message = exception.Message == null && exception.Error != null ? exception.Error.Message : exception.Message;
+                    throw new ApiException((int)response.StatusCode, message);
                 }
                 catch (ApiException)
                 {

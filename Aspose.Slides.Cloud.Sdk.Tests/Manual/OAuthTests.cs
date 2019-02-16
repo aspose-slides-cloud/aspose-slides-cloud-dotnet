@@ -47,10 +47,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         /// Test GetSlidesDocument
         /// </summary>
         [Test]
-        public void GetSlidesDocument()
+        public void Good()
         {
-            GeneralTestExecutor<GetSlidesDocumentRequest, DocumentResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesDocumentRequest, DocumentResponse>("GetSlidesDocument");
+            TestExecutor<GetSlidesDocumentRequest, DocumentResponse> testExecutor =
+                new TestExecutor<GetSlidesDocumentRequest, DocumentResponse>("GetSlidesDocument", null);
             GetSlidesDocumentRequest request = testExecutor.PrepareRequest();
             DocumentResponse response = null;
             bool needAssertResponse = false;
@@ -75,8 +75,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void InvalidUrl()
         {
-            GeneralTestExecutor<GetSlidesDocumentRequest, DocumentResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesDocumentRequest, DocumentResponse>("GetSlidesDocument");
+            TestExecutor<GetSlidesDocumentRequest, DocumentResponse> testExecutor =
+                new TestExecutor<GetSlidesDocumentRequest, DocumentResponse>("GetSlidesDocument", null);
             GetSlidesDocumentRequest request = testExecutor.PrepareRequest();
             try
             {
@@ -99,8 +99,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void InvalidVersion()
         {
-            GeneralTestExecutor<GetSlidesDocumentRequest, DocumentResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesDocumentRequest, DocumentResponse>("GetSlidesDocument");
+            TestExecutor<GetSlidesDocumentRequest, DocumentResponse> testExecutor =
+                new TestExecutor<GetSlidesDocumentRequest, DocumentResponse>("GetSlidesDocument", null);
             GetSlidesDocumentRequest request = testExecutor.PrepareRequest();
 
             Configuration configuration = CreateConfiguration();
@@ -114,8 +114,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void InvalidAppSid()
         {
-            GeneralTestExecutor<GetSlidesDocumentRequest, DocumentResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesDocumentRequest, DocumentResponse>("GetSlidesDocument");
+            TestExecutor<GetSlidesDocumentRequest, DocumentResponse> testExecutor =
+                new TestExecutor<GetSlidesDocumentRequest, DocumentResponse>("GetSlidesDocument", null);
             GetSlidesDocumentRequest request = testExecutor.PrepareRequest();
             try
             {
@@ -138,8 +138,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void InvalidAppKey()
         {
-            GeneralTestExecutor<GetSlidesDocumentRequest, DocumentResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesDocumentRequest, DocumentResponse>("GetSlidesDocument");
+            TestExecutor<GetSlidesDocumentRequest, DocumentResponse> testExecutor =
+                new TestExecutor<GetSlidesDocumentRequest, DocumentResponse>("GetSlidesDocument", null);
             GetSlidesDocumentRequest request = testExecutor.PrepareRequest();
             try
             {

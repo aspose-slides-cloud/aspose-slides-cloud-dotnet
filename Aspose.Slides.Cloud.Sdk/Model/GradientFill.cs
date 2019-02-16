@@ -40,32 +40,32 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class GradientFill : FillFormat 
   {                       
         /// <summary>
-        /// Gets or sets Direction
+        /// Gradient style.
         /// </summary>
         public GradientDirection Direction { get; set; }
 
         /// <summary>
-        /// Gets or sets Shape
+        /// Gradient shape.
         /// </summary>
         public GradientShapeType Shape { get; set; }
 
         /// <summary>
-        /// Gets or sets Stops
+        /// Gradient stops.
         /// </summary>
         public List<GradientFillStop> Stops { get; set; }
 
         /// <summary>
-        /// Gets or sets LinearAngle
+        /// Gradient angle.
         /// </summary>
         public double? LinearAngle { get; set; }
 
         /// <summary>
-        /// Gets or sets IsScaled
+        /// True if the gradient is scaled.
         /// </summary>
         public bool? IsScaled { get; set; }
 
         /// <summary>
-        /// Gets or sets TileFlip
+        /// Gradient flipping mode.
         /// </summary>
         public GradientTileFlip TileFlip { get; set; }
 

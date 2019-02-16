@@ -45,11 +45,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="GetNotesSlideRequest"/> class.
         /// </summary>
-        /// <param name="name">The presentation name.</param>
-        /// <param name="slideIndex">The slide index.</param>
+        /// <param name="name">Document name.</param>
+        /// <param name="slideIndex">Slide index.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="folder">The presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         public GetNotesSlideRequest(string name, int slideIndex, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
@@ -60,12 +60,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// The presentation name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// The slide index.
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
@@ -75,12 +75,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// The presentation folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
   }

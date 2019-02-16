@@ -31,5 +31,6 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
     public class ExceptionInfo
     {
         public string Message { get; set; }
+        public ExceptionInfo Error { get; set; }
     }
 }

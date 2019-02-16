@@ -74,8 +74,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesTheme()
         {
-            GeneralTestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme");
+            TestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme", null);
             GetSlidesThemeRequest request = testExecutor.PrepareRequest();
             ThemeResponse response = null;
             bool needAssertResponse = false;
@@ -97,8 +97,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeInvalidName()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme", "Name");
+            TestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme", "Name");
             GetSlidesThemeRequest request = testExecutor.PrepareRequest();
             ThemeResponse response = null;
             bool needAssertResponse = false;
@@ -120,8 +120,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme", "SlideIndex");
+            TestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme", "SlideIndex");
             GetSlidesThemeRequest request = testExecutor.PrepareRequest();
             ThemeResponse response = null;
             bool needAssertResponse = false;
@@ -143,8 +143,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeInvalidPassword()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme", "Password");
+            TestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme", "Password");
             GetSlidesThemeRequest request = testExecutor.PrepareRequest();
             ThemeResponse response = null;
             bool needAssertResponse = false;
@@ -166,8 +166,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeInvalidFolder()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme", "Folder");
+            TestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme", "Folder");
             GetSlidesThemeRequest request = testExecutor.PrepareRequest();
             ThemeResponse response = null;
             bool needAssertResponse = false;
@@ -189,8 +189,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeInvalidStorage()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme", "Storage");
+            TestExecutor<GetSlidesThemeRequest, ThemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeRequest, ThemeResponse>("GetSlidesTheme", "Storage");
             GetSlidesThemeRequest request = testExecutor.PrepareRequest();
             ThemeResponse response = null;
             bool needAssertResponse = false;
@@ -216,8 +216,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeColorScheme()
         {
-            GeneralTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme");
+            TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme", null);
             GetSlidesThemeColorSchemeRequest request = testExecutor.PrepareRequest();
             ColorSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -239,8 +239,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeColorSchemeInvalidName()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme", "Name");
+            TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme", "Name");
             GetSlidesThemeColorSchemeRequest request = testExecutor.PrepareRequest();
             ColorSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -262,8 +262,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeColorSchemeInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme", "SlideIndex");
+            TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme", "SlideIndex");
             GetSlidesThemeColorSchemeRequest request = testExecutor.PrepareRequest();
             ColorSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -285,8 +285,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeColorSchemeInvalidPassword()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme", "Password");
+            TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme", "Password");
             GetSlidesThemeColorSchemeRequest request = testExecutor.PrepareRequest();
             ColorSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -308,8 +308,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeColorSchemeInvalidFolder()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme", "Folder");
+            TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme", "Folder");
             GetSlidesThemeColorSchemeRequest request = testExecutor.PrepareRequest();
             ColorSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -331,8 +331,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeColorSchemeInvalidStorage()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme", "Storage");
+            TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeColorSchemeRequest, ColorSchemeResponse>("GetSlidesThemeColorScheme", "Storage");
             GetSlidesThemeColorSchemeRequest request = testExecutor.PrepareRequest();
             ColorSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -358,8 +358,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFontScheme()
         {
-            GeneralTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme");
+            TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme", null);
             GetSlidesThemeFontSchemeRequest request = testExecutor.PrepareRequest();
             FontSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -381,8 +381,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFontSchemeInvalidName()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme", "Name");
+            TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme", "Name");
             GetSlidesThemeFontSchemeRequest request = testExecutor.PrepareRequest();
             FontSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -404,8 +404,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFontSchemeInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme", "SlideIndex");
+            TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme", "SlideIndex");
             GetSlidesThemeFontSchemeRequest request = testExecutor.PrepareRequest();
             FontSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -427,8 +427,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFontSchemeInvalidPassword()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme", "Password");
+            TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme", "Password");
             GetSlidesThemeFontSchemeRequest request = testExecutor.PrepareRequest();
             FontSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -450,8 +450,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFontSchemeInvalidFolder()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme", "Folder");
+            TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme", "Folder");
             GetSlidesThemeFontSchemeRequest request = testExecutor.PrepareRequest();
             FontSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -473,8 +473,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFontSchemeInvalidStorage()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme", "Storage");
+            TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFontSchemeRequest, FontSchemeResponse>("GetSlidesThemeFontScheme", "Storage");
             GetSlidesThemeFontSchemeRequest request = testExecutor.PrepareRequest();
             FontSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -500,8 +500,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFormatScheme()
         {
-            GeneralTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
-                new GeneralTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme");
+            TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme", null);
             GetSlidesThemeFormatSchemeRequest request = testExecutor.PrepareRequest();
             FormatSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -523,8 +523,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFormatSchemeInvalidName()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme", "Name");
+            TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme", "Name");
             GetSlidesThemeFormatSchemeRequest request = testExecutor.PrepareRequest();
             FormatSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -546,8 +546,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFormatSchemeInvalidSlideIndex()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme", "SlideIndex");
+            TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme", "SlideIndex");
             GetSlidesThemeFormatSchemeRequest request = testExecutor.PrepareRequest();
             FormatSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -569,8 +569,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFormatSchemeInvalidPassword()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme", "Password");
+            TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme", "Password");
             GetSlidesThemeFormatSchemeRequest request = testExecutor.PrepareRequest();
             FormatSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -592,8 +592,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFormatSchemeInvalidFolder()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme", "Folder");
+            TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme", "Folder");
             GetSlidesThemeFormatSchemeRequest request = testExecutor.PrepareRequest();
             FormatSchemeResponse response = null;
             bool needAssertResponse = false;
@@ -615,8 +615,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GetSlidesThemeFormatSchemeInvalidStorage()
         {
-            InvalidPropertyTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
-                new InvalidPropertyTestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme", "Storage");
+            TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse> testExecutor =
+                new TestExecutor<GetSlidesThemeFormatSchemeRequest, FormatSchemeResponse>("GetSlidesThemeFormatScheme", "Storage");
             GetSlidesThemeFormatSchemeRequest request = testExecutor.PrepareRequest();
             FormatSchemeResponse response = null;
             bool needAssertResponse = false;

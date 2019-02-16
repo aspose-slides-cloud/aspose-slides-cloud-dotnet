@@ -45,14 +45,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="GetNotesSlideWithFormatRequest"/> class.
         /// </summary>
-        /// <param name="name">The presentation name.</param>
-        /// <param name="slideIndex">The slide index.</param>
-        /// <param name="format">Export format.</param>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
+        /// <param name="name">Document name.</param>
+        /// <param name="slideIndex">Slide index.</param>
+        /// <param name="format">Output file format.</param>
+        /// <param name="width">Output file width.</param>
+        /// <param name="height">Output file height.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="folder">The presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         public GetNotesSlideWithFormatRequest(string name, int slideIndex, NotesSlideExportFormat format, int? width = null, int? height = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
@@ -66,27 +66,27 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// The presentation name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// The slide index.
+        /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Export format.
+        /// Output file format.
         /// </summary>  
         public NotesSlideExportFormat Format { get; set; }
 
         /// <summary>
-        /// Gets or sets Width
+        /// Output file width.
         /// </summary>  
         public int? Width { get; set; }
 
         /// <summary>
-        /// Gets or sets Height
+        /// Output file height.
         /// </summary>  
         public int? Height { get; set; }
 
@@ -96,12 +96,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// The presentation folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
   }

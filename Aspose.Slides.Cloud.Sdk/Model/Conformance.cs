@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="OKWithInvalidParameterInitializer.cs">
+// <copyright company="Aspose" file="Conformance.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,18 +23,39 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.Xml.Serialization;
+
+namespace Aspose.Slides.Cloud.Sdk.Model
 {
-    internal abstract class OKWithInvalidParameterInitializer : TestInitializer
+    /// <summary>
+    /// The conformance class to which the PresentationML document conforms.
+    /// </summary>
+    /// <value>The conformance class to which the PresentationML document conforms.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum Conformance
     {
-        public override bool OKToNotFail { get { return m_okToNotFail; } }
-
-        public OKWithInvalidParameterInitializer(string invalidPropertyName, string parameterName) : base(invalidPropertyName)
-        {
-            m_okToNotFail = invalidPropertyName != null
-                && invalidPropertyName.Equals(parameterName, System.StringComparison.InvariantCultureIgnoreCase);
-        }
-
-        private readonly bool m_okToNotFail;
+        
+        /// <summary>
+        /// Enum Ecma3762006 for "Ecma376_2006"
+        /// </summary>
+        Ecma3762006,
+        
+        /// <summary>
+        /// Enum Iso295002008Transitional for "Iso29500_2008_Transitional"
+        /// </summary>
+        Iso295002008Transitional,
+        
+        /// <summary>
+        /// Enum Iso295002008Strict for "Iso29500_2008_Strict"
+        /// </summary>
+        Iso295002008Strict
     }
+
 }

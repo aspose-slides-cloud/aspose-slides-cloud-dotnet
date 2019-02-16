@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="OKWithInvalidSlideIndexInitializer.cs">
+// <copyright company="Aspose" file="PptxExportOptions.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,14 +23,48 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.Xml.Serialization;
+
+namespace Aspose.Slides.Cloud.Sdk.Model
 {
-    [Method("PutSlidesSlideBackground")]
-    //TODO: a temporary solution to work around the bug with PostAddNotesSlide password. Remove after fix
-    internal class OKWithInvalidBackgroundInitializer : OKWithInvalidParameterInitializer
-    {
-        public OKWithInvalidBackgroundInitializer(string invalidPropertyName) : base(invalidPropertyName, "background")
+  /// <summary>
+  /// 
+  /// </summary>  
+  public class PptxExportOptions : ExportOptions 
+  {                       
+        /// <summary>
+        /// The conformance class to which the PresentationML document conforms. Read/write .
+        /// </summary>
+        public Conformance Conformance { get; set; }
+
+        /// <summary>
+        /// Create an instance of the object
+        /// </summary>
+        public PptxExportOptions() : base()
         {
+          Format = "pptx";
+        }
+
+        /// <summary>
+        /// Get the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()  
+        {
+          var sb = new StringBuilder();
+          sb.Append("class PptxExportOptions {\n");
+          sb.Append("  Format: ").Append(this.Format).Append("\n");
+          sb.Append("  Conformance: ").Append(this.Conformance).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
+
 }
