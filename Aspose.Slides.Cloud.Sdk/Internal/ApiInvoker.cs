@@ -90,10 +90,7 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             finally
             {
-                if (response != null)
-                {
-                    response.Dispose();
-                }
+                m_responseProcessor.PostProcessResponse(response);
             }
         }
 

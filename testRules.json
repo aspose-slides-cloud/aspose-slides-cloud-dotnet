@@ -23,7 +23,7 @@
 		{ "Value": "changedtest.ppt", "Parameter": "Name", "Method": "PutNewPresentation" },
 		{ "Value": "TempSlidesSDK", "Parameter": "Folder" },
 		{ "Value": "TempSlidesSDK/test.ppt", "Parameter": "TemplatePath" },
-		{ "Value": "TempSlidesSDK/TemplateCV.pptx", "Parameter": "TemplatePath", "Method": "PostSlidesDocument" },
+		{ "Value": "TempSlidesSDK/templateCV.pptx", "Parameter": "TemplatePath", "Method": "PostSlidesDocument" },
 		{ "Value": "TempSlidesSDK/test.ppt", "Parameter": "CloneFrom" },
 		{ "Value": "TempSlidesSDK/test.ppt", "Parameter": "Source" },
 		{ "Value": "password", "Parameter": "Password" },

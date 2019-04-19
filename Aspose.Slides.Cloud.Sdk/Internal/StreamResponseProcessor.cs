@@ -33,5 +33,9 @@ namespace Aspose.Slides.Cloud.Sdk
         {
             return response;
         }
+
+        public override void PostProcessResponse(Stream response)
+        {
+        }
     }
 }

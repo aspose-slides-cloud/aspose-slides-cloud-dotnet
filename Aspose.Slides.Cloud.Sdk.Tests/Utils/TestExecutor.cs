@@ -53,6 +53,13 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             if (m_invalidPropertyName == null)
             {
                 Assert.IsNotNull(response);
+                Stream stream = response as Stream;
+                if (stream != null)
+                {
+                    Assert.IsTrue(stream.CanRead);
+                    Assert.IsTrue(stream.CanSeek);
+                    Assert.AreEqual(0, stream.Position);
+                }
             }
             else
             {

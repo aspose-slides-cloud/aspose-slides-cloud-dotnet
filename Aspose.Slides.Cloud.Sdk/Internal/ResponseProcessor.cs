@@ -30,5 +30,13 @@ namespace Aspose.Slides.Cloud.Sdk
     internal abstract class ResponseProcessor<T>
     {
         public abstract T ProcessResponse(Stream response, string contentType);
+
+        public virtual void PostProcessResponse(Stream response)
+        {
+            if (response != null)
+            {
+                response.Dispose();
+            }
+        }
     }
 }
