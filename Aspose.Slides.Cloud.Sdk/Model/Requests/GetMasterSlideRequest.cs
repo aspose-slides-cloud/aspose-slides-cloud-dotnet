@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.MasterSlidesApi.GetMasterSlide" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.GetMasterSlide" /> operation.
   /// </summary>  
   public class GetMasterSlideRequest  
   {

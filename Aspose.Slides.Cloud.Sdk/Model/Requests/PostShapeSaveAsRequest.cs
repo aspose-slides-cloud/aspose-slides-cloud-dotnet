@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ShapesApi.PostShapeSaveAs" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostShapeSaveAs" /> operation.
   /// </summary>  
   public class PostShapeSaveAsRequest  
   {
@@ -47,6 +47,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Presentation name.</param>
         /// <param name="slideIndex">Slide index.</param>
+        /// <param name="path"></param>
         /// <param name="shapeIndex">Index of shape starting from 1</param>
         /// <param name="format">Export picture format.</param>
         /// <param name="options">export options</param>
@@ -56,12 +57,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="scaleX">X scale ratio.</param>
         /// <param name="scaleY">Y scale ratio.</param>
         /// <param name="bounds">Shape thumbnail bounds type.</param>
-        /// <param name="outPath">Output path.</param>
         /// <param name="fontsFolder">Fonts folder.</param>
-        public PostShapeSaveAsRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, IShapeExportOptions options = null, string password = null, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, string bounds = null, string outPath = null, string fontsFolder = null)
+        public PostShapeSaveAsRequest(string name, int slideIndex, string path, int shapeIndex, ShapeExportFormat2 format, IShapeExportOptions options = null, string password = null, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds2? bounds = null, string fontsFolder = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
+            this.Path = path;
             this.ShapeIndex = shapeIndex;
             this.Format = format;
             this.Options = options;
@@ -71,7 +72,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.ScaleX = scaleX;
             this.ScaleY = scaleY;
             this.Bounds = bounds;
-            this.OutPath = outPath;
             this.FontsFolder = fontsFolder;
         }
 
@@ -86,6 +86,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
+        /// Gets or sets Path
+        /// </summary>  
+        public string Path { get; set; }
+
+        /// <summary>
         /// Index of shape starting from 1
         /// </summary>  
         public int ShapeIndex { get; set; }
@@ -93,7 +98,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Export picture format.
         /// </summary>  
-        public ShapeExportFormat Format { get; set; }
+        public ShapeExportFormat2 Format { get; set; }
 
         /// <summary>
         /// export options
@@ -128,12 +133,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Shape thumbnail bounds type.
         /// </summary>  
-        public string Bounds { get; set; }
-
-        /// <summary>
-        /// Output path.
-        /// </summary>  
-        public string OutPath { get; set; }
+        public ShapeThumbnailBounds2? Bounds { get; set; }
 
         /// <summary>
         /// Fonts folder.

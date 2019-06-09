@@ -40,6 +40,351 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Axis 
   {                       
         /// <summary>
+        /// Axis position
+        /// </summary>
+        /// <value>Axis position</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PositionEnum
+        {
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>
+            Bottom,
+            
+            /// <summary>
+            /// Enum Left for "Left"
+            /// </summary>
+            Left,
+            
+            /// <summary>
+            /// Enum Right for "Right"
+            /// </summary>
+            Right,
+            
+            /// <summary>
+            /// Enum Top for "Top"
+            /// </summary>
+            Top
+        }
+
+        /// <summary>
+        /// The scaling value of the display units for the value axis
+        /// </summary>
+        /// <value>The scaling value of the display units for the value axis</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DisplayUnitEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Hundreds for "Hundreds"
+            /// </summary>
+            Hundreds,
+            
+            /// <summary>
+            /// Enum Thousands for "Thousands"
+            /// </summary>
+            Thousands,
+            
+            /// <summary>
+            /// Enum TenThousands for "TenThousands"
+            /// </summary>
+            TenThousands,
+            
+            /// <summary>
+            /// Enum HundredThousands for "HundredThousands"
+            /// </summary>
+            HundredThousands,
+            
+            /// <summary>
+            /// Enum Millions for "Millions"
+            /// </summary>
+            Millions,
+            
+            /// <summary>
+            /// Enum TenMillions for "TenMillions"
+            /// </summary>
+            TenMillions,
+            
+            /// <summary>
+            /// Enum HundredMillions for "HundredMillions"
+            /// </summary>
+            HundredMillions,
+            
+            /// <summary>
+            /// Enum Billions for "Billions"
+            /// </summary>
+            Billions,
+            
+            /// <summary>
+            /// Enum Trillions for "Trillions"
+            /// </summary>
+            Trillions,
+            
+            /// <summary>
+            /// Enum CustomValue for "CustomValue"
+            /// </summary>
+            CustomValue
+        }
+
+        /// <summary>
+        /// The smallest time unit that is represented on the date axis
+        /// </summary>
+        /// <value>The smallest time unit that is represented on the date axis</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum BaseUnitScaleEnum
+        {
+            
+            /// <summary>
+            /// Enum Days for "Days"
+            /// </summary>
+            Days,
+            
+            /// <summary>
+            /// Enum Months for "Months"
+            /// </summary>
+            Months,
+            
+            /// <summary>
+            /// Enum Years for "Years"
+            /// </summary>
+            Years
+        }
+
+        /// <summary>
+        /// The major unit scale for the date axis
+        /// </summary>
+        /// <value>The major unit scale for the date axis</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MajorUnitScaleEnum
+        {
+            
+            /// <summary>
+            /// Enum Days for "Days"
+            /// </summary>
+            Days,
+            
+            /// <summary>
+            /// Enum Months for "Months"
+            /// </summary>
+            Months,
+            
+            /// <summary>
+            /// Enum Years for "Years"
+            /// </summary>
+            Years
+        }
+
+        /// <summary>
+        /// The type of major tick mark for the specified axis
+        /// </summary>
+        /// <value>The type of major tick mark for the specified axis</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MajorTickMarkEnum
+        {
+            
+            /// <summary>
+            /// Enum Cross for "Cross"
+            /// </summary>
+            Cross,
+            
+            /// <summary>
+            /// Enum Inside for "Inside"
+            /// </summary>
+            Inside,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Outside for "Outside"
+            /// </summary>
+            Outside
+        }
+
+        /// <summary>
+        /// The minor unit scale for the date axis
+        /// </summary>
+        /// <value>The minor unit scale for the date axis</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MinorUnitScaleEnum
+        {
+            
+            /// <summary>
+            /// Enum Days for "Days"
+            /// </summary>
+            Days,
+            
+            /// <summary>
+            /// Enum Months for "Months"
+            /// </summary>
+            Months,
+            
+            /// <summary>
+            /// Enum Years for "Years"
+            /// </summary>
+            Years
+        }
+
+        /// <summary>
+        /// The type of minor tick mark for the specified axis
+        /// </summary>
+        /// <value>The type of minor tick mark for the specified axis</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MinorTickMarkEnum
+        {
+            
+            /// <summary>
+            /// Enum Cross for "Cross"
+            /// </summary>
+            Cross,
+            
+            /// <summary>
+            /// Enum Inside for "Inside"
+            /// </summary>
+            Inside,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Outside for "Outside"
+            /// </summary>
+            Outside
+        }
+
+        /// <summary>
+        /// The type of the category axis
+        /// </summary>
+        /// <value>The type of the category axis</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CategoryAxisTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Text for "Text"
+            /// </summary>
+            Text,
+            
+            /// <summary>
+            /// Enum Date for "Date"
+            /// </summary>
+            Date
+        }
+
+        /// <summary>
+        /// The CrossType on the specified axis where the other axis crosses
+        /// </summary>
+        /// <value>The CrossType on the specified axis where the other axis crosses</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CrossTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum AxisCrossesAtZero for "AxisCrossesAtZero"
+            /// </summary>
+            AxisCrossesAtZero,
+            
+            /// <summary>
+            /// Enum Maximum for "Maximum"
+            /// </summary>
+            Maximum,
+            
+            /// <summary>
+            /// Enum Custom for "Custom"
+            /// </summary>
+            Custom
+        }
+
+        /// <summary>
+        /// The position of tick-mark labels on the specified axis.
+        /// </summary>
+        /// <value>The position of tick-mark labels on the specified axis.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TickLabelPositionEnum
+        {
+            
+            /// <summary>
+            /// Enum High for "High"
+            /// </summary>
+            High,
+            
+            /// <summary>
+            /// Enum Low for "Low"
+            /// </summary>
+            Low,
+            
+            /// <summary>
+            /// Enum NextTo for "NextTo"
+            /// </summary>
+            NextTo,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None
+        }
+
+        /// <summary>
+        /// Axis position
+        /// </summary>
+        public PositionEnum? Position { get; set; }
+
+        /// <summary>
+        /// The scaling value of the display units for the value axis
+        /// </summary>
+        public DisplayUnitEnum? DisplayUnit { get; set; }
+
+        /// <summary>
+        /// The smallest time unit that is represented on the date axis
+        /// </summary>
+        public BaseUnitScaleEnum? BaseUnitScale { get; set; }
+
+        /// <summary>
+        /// The major unit scale for the date axis
+        /// </summary>
+        public MajorUnitScaleEnum? MajorUnitScale { get; set; }
+
+        /// <summary>
+        /// The type of major tick mark for the specified axis
+        /// </summary>
+        public MajorTickMarkEnum? MajorTickMark { get; set; }
+
+        /// <summary>
+        /// The minor unit scale for the date axis
+        /// </summary>
+        public MinorUnitScaleEnum? MinorUnitScale { get; set; }
+
+        /// <summary>
+        /// The type of minor tick mark for the specified axis
+        /// </summary>
+        public MinorTickMarkEnum? MinorTickMark { get; set; }
+
+        /// <summary>
+        /// The type of the category axis
+        /// </summary>
+        public CategoryAxisTypeEnum? CategoryAxisType { get; set; }
+
+        /// <summary>
+        /// The CrossType on the specified axis where the other axis crosses
+        /// </summary>
+        public CrossTypeEnum? CrossType { get; set; }
+
+        /// <summary>
+        /// The position of tick-mark labels on the specified axis.
+        /// </summary>
+        public TickLabelPositionEnum? TickLabelPosition { get; set; }
+
+        /// <summary>
         /// True if the axis is visible
         /// </summary>
         public bool? IsVisible { get; set; }
@@ -48,21 +393,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// True if the axis has a visible title
         /// </summary>
         public bool? HasTitle { get; set; }
-
-        /// <summary>
-        /// Axis position
-        /// </summary>
-        public AxisPositionType Position { get; set; }
-
-        /// <summary>
-        /// The scaling value of the display units for the value axis
-        /// </summary>
-        public DisplayUnitType DisplayUnit { get; set; }
-
-        /// <summary>
-        /// The smallest time unit that is represented on the date axis
-        /// </summary>
-        public TimeUnitType BaseUnitScale { get; set; }
 
         /// <summary>
         /// True the major unit of the axis is automatically assigned
@@ -75,16 +405,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public double? MajorUnit { get; set; }
 
         /// <summary>
-        /// The major unit scale for the date axis
-        /// </summary>
-        public TimeUnitType MajorUnitScale { get; set; }
-
-        /// <summary>
-        /// The type of major tick mark for the specified axis
-        /// </summary>
-        public TickMarkType MajorTickMark { get; set; }
-
-        /// <summary>
         /// True the minor unit of the axis is automatically assigned
         /// </summary>
         public bool? IsAutomaticMinorUnit { get; set; }
@@ -93,16 +413,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// The minor units for the date or value axis
         /// </summary>
         public double? MinorUnit { get; set; }
-
-        /// <summary>
-        /// The minor unit scale for the date axis
-        /// </summary>
-        public TimeUnitType MinorUnitScale { get; set; }
-
-        /// <summary>
-        /// The type of minor tick mark for the specified axis
-        /// </summary>
-        public TickMarkType MinorTickMark { get; set; }
 
         /// <summary>
         /// True if the max value is automatically assigned
@@ -135,11 +445,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public double? LogBase { get; set; }
 
         /// <summary>
-        /// The type of the category axis
-        /// </summary>
-        public CategoryAxisType CategoryAxisType { get; set; }
-
-        /// <summary>
         /// True if the value axis crosses the category axis between categories. This property applies only to category axes, and it doesn't apply to 3-D charts
         /// </summary>
         public bool? AxisBetweenCategories { get; set; }
@@ -165,11 +470,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string NumberFormat { get; set; }
 
         /// <summary>
-        /// The CrossType on the specified axis where the other axis crosses
-        /// </summary>
-        public CrossesType CrossType { get; set; }
-
-        /// <summary>
         /// The point on the axis where the perpendicular axis crosses it
         /// </summary>
         public double? CrossAt { get; set; }
@@ -193,11 +493,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Specifies how many tick labels to skip between label that is drawn.
         /// </summary>
         public int? TickLabelSpacing { get; set; }
-
-        /// <summary>
-        /// The position of tick-mark labels on the specified axis.
-        /// </summary>
-        public TickLabelPositionType TickLabelPosition { get; set; }
 
         /// <summary>
         /// Represents the rotation angle of tick labels.

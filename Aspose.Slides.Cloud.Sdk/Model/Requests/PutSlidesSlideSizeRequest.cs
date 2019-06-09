@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.DocumentApi.PutSlidesSlideSize" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PutSlidesSlideSize" /> operation.
   /// </summary>  
   public class PutSlidesSlideSizeRequest  
   {
@@ -45,10 +45,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PutSlidesSlideSizeRequest"/> class.
         /// </summary>
-        /// <param name="name">The document name.</param>
-        /// <param name="password">The document password.</param>
-        /// <param name="storage">The document storage.</param>
-        /// <param name="folder">The document folder.</param>
+        /// <param name="name">Document name.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="storage">Document storage.</param>
+        /// <param name="folder">Document folder.</param>
         /// <param name="width">Slide width.</param>
         /// <param name="height">Slide height.</param>
         /// <param name="sizeType">Standard slide size type.</param>
@@ -66,22 +66,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// The document name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// The document password.
+        /// Document password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// The document storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// The document folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 

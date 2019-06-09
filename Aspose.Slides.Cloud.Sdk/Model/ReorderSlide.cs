@@ -54,7 +54,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public ReorderSlide() : base()
         {
-          Type = Model.TaskType.ReoderSlide;
+          Type = TypeEnum.ReoderSlide;
         }
 
         /// <summary>

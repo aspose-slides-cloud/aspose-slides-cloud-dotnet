@@ -40,9 +40,92 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Task 
   {                       
         /// <summary>
-        /// Gets type of task.
+        /// Gets or Sets Type
         /// </summary>
-        public TaskType Type { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Save for "Save"
+            /// </summary>
+            Save,
+            
+            /// <summary>
+            /// Enum SaveSlide for "SaveSlide"
+            /// </summary>
+            SaveSlide,
+            
+            /// <summary>
+            /// Enum SaveShape for "SaveShape"
+            /// </summary>
+            SaveShape,
+            
+            /// <summary>
+            /// Enum AddSlide for "AddSlide"
+            /// </summary>
+            AddSlide,
+            
+            /// <summary>
+            /// Enum AddMasterSlide for "AddMasterSlide"
+            /// </summary>
+            AddMasterSlide,
+            
+            /// <summary>
+            /// Enum AddLayoutSlide for "AddLayoutSlide"
+            /// </summary>
+            AddLayoutSlide,
+            
+            /// <summary>
+            /// Enum RemoveSlide for "RemoveSlide"
+            /// </summary>
+            RemoveSlide,
+            
+            /// <summary>
+            /// Enum ReoderSlide for "ReoderSlide"
+            /// </summary>
+            ReoderSlide,
+            
+            /// <summary>
+            /// Enum Merge for "Merge"
+            /// </summary>
+            Merge,
+            
+            /// <summary>
+            /// Enum UpdateBackground for "UpdateBackground"
+            /// </summary>
+            UpdateBackground,
+            
+            /// <summary>
+            /// Enum ResetSlide for "ResetSlide"
+            /// </summary>
+            ResetSlide,
+            
+            /// <summary>
+            /// Enum AddShape for "AddShape"
+            /// </summary>
+            AddShape,
+            
+            /// <summary>
+            /// Enum RemoveShape for "RemoveShape"
+            /// </summary>
+            RemoveShape,
+            
+            /// <summary>
+            /// Enum UpdateShape for "UpdateShape"
+            /// </summary>
+            UpdateShape,
+            
+            /// <summary>
+            /// Enum ReplaceText for "ReplaceText"
+            /// </summary>
+            ReplaceText
+        }
+
+        /// <summary>
+        /// Gets or sets Type
+        /// </summary>
+        public TypeEnum? Type { get; set; }
 
         /// <summary>
         /// Create an instance of the object

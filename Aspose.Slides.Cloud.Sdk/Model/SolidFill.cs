@@ -49,7 +49,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public SolidFill() : base()
         {
-          Type = Model.FillType.Solid;
+          Type = TypeEnum.Solid;
         }
 
         /// <summary>

@@ -42,7 +42,108 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Specifies compression type to be used for all textual content in the document.
         /// </summary>
-        public PdfTextCompression TextCompression { get; set; }
+        /// <value>Specifies compression type to be used for all textual content in the document.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TextCompressionEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Flate for "Flate"
+            /// </summary>
+            Flate
+        }
+
+        /// <summary>
+        /// Desired conformance level for generated PDF document.
+        /// </summary>
+        /// <value>Desired conformance level for generated PDF document.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ComplianceEnum
+        {
+            
+            /// <summary>
+            /// Enum Pdf15 for "Pdf15"
+            /// </summary>
+            Pdf15,
+            
+            /// <summary>
+            /// Enum PdfA1b for "PdfA1b"
+            /// </summary>
+            PdfA1b
+        }
+
+        /// <summary>
+        /// Gets or sets the position of the notes on the page.
+        /// </summary>
+        /// <value>Gets or sets the position of the notes on the page.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum NotesPositionEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum BottomFull for "BottomFull"
+            /// </summary>
+            BottomFull,
+            
+            /// <summary>
+            /// Enum BottomTruncated for "BottomTruncated"
+            /// </summary>
+            BottomTruncated
+        }
+
+        /// <summary>
+        /// Gets or sets the position of the comments on the page.
+        /// </summary>
+        /// <value>Gets or sets the position of the comments on the page.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CommentsPositionEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>
+            Bottom,
+            
+            /// <summary>
+            /// Enum Right for "Right"
+            /// </summary>
+            Right
+        }
+
+        /// <summary>
+        /// Specifies compression type to be used for all textual content in the document.
+        /// </summary>
+        public TextCompressionEnum? TextCompression { get; set; }
+
+        /// <summary>
+        /// Desired conformance level for generated PDF document.
+        /// </summary>
+        public ComplianceEnum? Compliance { get; set; }
+
+        /// <summary>
+        /// Gets or sets the position of the notes on the page.
+        /// </summary>
+        public NotesPositionEnum? NotesPosition { get; set; }
+
+        /// <summary>
+        /// Gets or sets the position of the comments on the page.
+        /// </summary>
+        public CommentsPositionEnum? CommentsPosition { get; set; }
 
         /// <summary>
         /// Determines if all characters of font should be embedded or only used subset.
@@ -50,12 +151,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public bool? EmbedFullFonts { get; set; }
 
         /// <summary>
-        /// Desired conformance level for generated PDF document.
-        /// </summary>
-        public PdfCompliance Compliance { get; set; }
-
-        /// <summary>
-        /// Returns or sets a value determining resolution of images inside PDF document. Property affects on file size, time of export and image quality.The default value is 96.
+        /// Returns or sets a value determining resolution of images inside PDF document.  Property affects on file size, time of export and image quality. The default value is 96.
         /// </summary>
         public double? SufficientResolution { get; set; }
 
@@ -95,16 +191,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public List<string> AdditionalCommonFontFamilies { get; set; }
 
         /// <summary>
-        /// Gets or sets the position of the notes on the page.
-        /// </summary>
-        public NotesPositions NotesPosition { get; set; }
-
-        /// <summary>
-        /// Gets or sets the position of the comments on the page.
-        /// </summary>
-        public CommentsPositions CommentsPosition { get; set; }
-
-        /// <summary>
         /// Gets or sets the width of the comment output area in pixels (Applies only if comments are displayed on the right).
         /// </summary>
         public int? CommentsAreaWidth { get; set; }
@@ -125,7 +211,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string ImageTransparentColor { get; set; }
 
         /// <summary>
-        /// True to apply specified   to an image.
+        /// True to apply specified ImageTransparentColor  to an image.
         /// </summary>
         public bool? ApplyImageTransparent { get; set; }
 

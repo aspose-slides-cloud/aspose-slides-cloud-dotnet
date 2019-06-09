@@ -69,7 +69,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 {
                     headerParams = new Dictionary<string, string>();
                 }
-                m_requestHandlers.ForEach(p => url = p.ProcessUrl(url));
                 try
                 {
                     response = Call(url, method, headerParams, files, body, contentType);
@@ -82,7 +81,7 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             catch (ApiException ex)
             {
-                if (ex.ErrorCode == 404)
+                if (ex.ErrorCode == 404 && m_responseProcessor.NullFor404)
                 {
                     return null;
                 }

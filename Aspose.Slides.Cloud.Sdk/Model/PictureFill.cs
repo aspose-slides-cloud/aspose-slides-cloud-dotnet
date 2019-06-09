@@ -40,6 +40,29 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class PictureFill : FillFormat 
   {                       
         /// <summary>
+        /// Gets or Sets PictureFillMode
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PictureFillModeEnum
+        {
+            
+            /// <summary>
+            /// Enum Tile for "Tile"
+            /// </summary>
+            Tile,
+            
+            /// <summary>
+            /// Enum Stretch for "Stretch"
+            /// </summary>
+            Stretch
+        }
+
+        /// <summary>
+        /// Gets or sets PictureFillMode
+        /// </summary>
+        public PictureFillModeEnum? PictureFillMode { get; set; }
+
+        /// <summary>
         /// Gets or sets CropBottom
         /// </summary>
         public double? CropBottom { get; set; }
@@ -80,16 +103,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string SvgData { get; set; }
 
         /// <summary>
-        /// Gets or sets PictureFillMode
-        /// </summary>
-        public PictureFillMode PictureFillMode { get; set; }
-
-        /// <summary>
         /// Create an instance of the object
         /// </summary>
         public PictureFill() : base()
         {
-          Type = Model.FillType.Picture;
+          Type = TypeEnum.Picture;
         }
 
         /// <summary>

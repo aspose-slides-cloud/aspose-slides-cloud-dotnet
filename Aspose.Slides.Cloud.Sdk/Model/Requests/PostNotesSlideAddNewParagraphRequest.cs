@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.NotesSlideShapesApi.PostNotesSlideAddNewParagraph" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostNotesSlideAddNewParagraph" /> operation.
   /// </summary>  
   public class PostNotesSlideAddNewParagraphRequest  
   {
@@ -45,14 +45,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostNotesSlideAddNewParagraphRequest"/> class.
         /// </summary>
-        /// <param name="name">Presentation name.</param>
+        /// <param name="name">Document name.</param>
         /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path">Shape path.</param>
+        /// <param name="path">Shape path (for smart art and group shapes).</param>
         /// <param name="shapeIndex">Shape index.</param>
-        /// <param name="dto">Shape dto.</param>
+        /// <param name="dto">Paragraph DTO.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="folder">Presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         /// <param name="position">Position of the new paragraph in the list. Default is at the end of the list.</param>
         public PostNotesSlideAddNewParagraphRequest(string name, int slideIndex, string path, int shapeIndex, Paragraph dto = null, string password = null, string folder = null, string storage = null, int? position = null)
         {
@@ -68,7 +68,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// Presentation name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
@@ -78,7 +78,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Shape path.
+        /// Shape path (for smart art and group shapes).
         /// </summary>  
         public string Path { get; set; }
 
@@ -88,7 +88,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int ShapeIndex { get; set; }
 
         /// <summary>
-        /// Shape dto.
+        /// Paragraph DTO.
         /// </summary>  
         public Paragraph Dto { get; set; }
 
@@ -98,12 +98,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// Presentation folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// Presentation storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
 

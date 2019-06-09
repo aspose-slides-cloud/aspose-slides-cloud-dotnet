@@ -49,7 +49,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public ResetSlide() : base()
         {
-          Type = Model.TaskType.ResetSlide;
+          Type = TypeEnum.ResetSlide;
         }
 
         /// <summary>

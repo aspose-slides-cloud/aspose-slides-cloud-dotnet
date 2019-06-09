@@ -42,12 +42,60 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets the position of the notes on the page.
         /// </summary>
-        public NotesPositions NotesPosition { get; set; }
+        /// <value>Gets or sets the position of the notes on the page.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum NotesPositionEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum BottomFull for "BottomFull"
+            /// </summary>
+            BottomFull,
+            
+            /// <summary>
+            /// Enum BottomTruncated for "BottomTruncated"
+            /// </summary>
+            BottomTruncated
+        }
 
         /// <summary>
         /// Gets or sets the position of the comments on the page.
         /// </summary>
-        public CommentsPositions CommentsPosition { get; set; }
+        /// <value>Gets or sets the position of the comments on the page.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CommentsPositionEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>
+            Bottom,
+            
+            /// <summary>
+            /// Enum Right for "Right"
+            /// </summary>
+            Right
+        }
+
+        /// <summary>
+        /// Gets or sets the position of the notes on the page.
+        /// </summary>
+        public NotesPositionEnum? NotesPosition { get; set; }
+
+        /// <summary>
+        /// Gets or sets the position of the comments on the page.
+        /// </summary>
+        public CommentsPositionEnum? CommentsPosition { get; set; }
 
         /// <summary>
         /// Gets or sets the width of the comment output area in pixels (Applies only if comments are displayed on the right).

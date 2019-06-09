@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.NotesSlideApi.GetNotesSlideWithFormat" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.GetNotesSlideWithFormat" /> operation.
   /// </summary>  
   public class GetNotesSlideWithFormatRequest  
   {
@@ -53,7 +53,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public GetNotesSlideWithFormatRequest(string name, int slideIndex, NotesSlideExportFormat format, int? width = null, int? height = null, string password = null, string folder = null, string storage = null)
+        /// <param name="fontsFolder">Storage folder containing custom fonts to be used with the document.</param>
+        public GetNotesSlideWithFormatRequest(string name, int slideIndex, NotesSlideExportFormat format, int? width = null, int? height = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
@@ -63,6 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
+            this.FontsFolder = fontsFolder;
         }
 
         /// <summary>
@@ -104,5 +106,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
+
+        /// <summary>
+        /// Storage folder containing custom fonts to be used with the document.
+        /// </summary>  
+        public string FontsFolder { get; set; }
   }
 }

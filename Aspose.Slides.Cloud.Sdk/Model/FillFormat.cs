@@ -40,9 +40,47 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class FillFormat 
   {                       
         /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum NoFill for "NoFill"
+            /// </summary>
+            NoFill,
+            
+            /// <summary>
+            /// Enum Solid for "Solid"
+            /// </summary>
+            Solid,
+            
+            /// <summary>
+            /// Enum Gradient for "Gradient"
+            /// </summary>
+            Gradient,
+            
+            /// <summary>
+            /// Enum Pattern for "Pattern"
+            /// </summary>
+            Pattern,
+            
+            /// <summary>
+            /// Enum Picture for "Picture"
+            /// </summary>
+            Picture,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
         /// Gets or sets Type
         /// </summary>
-        public FillType Type { get; set; }
+        public TypeEnum? Type { get; set; }
 
         /// <summary>
         /// Create an instance of the object

@@ -40,6 +40,45 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class SmartArtNode 
   {                       
         /// <summary>
+        /// Organization chart layout type associated with current node.
+        /// </summary>
+        /// <value>Organization chart layout type associated with current node.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum OrgChartLayoutEnum
+        {
+            
+            /// <summary>
+            /// Enum Initial for "Initial"
+            /// </summary>
+            Initial,
+            
+            /// <summary>
+            /// Enum Standart for "Standart"
+            /// </summary>
+            Standart,
+            
+            /// <summary>
+            /// Enum BothHanging for "BothHanging"
+            /// </summary>
+            BothHanging,
+            
+            /// <summary>
+            /// Enum LeftHanging for "LeftHanging"
+            /// </summary>
+            LeftHanging,
+            
+            /// <summary>
+            /// Enum RightHanging for "RightHanging"
+            /// </summary>
+            RightHanging
+        }
+
+        /// <summary>
+        /// Organization chart layout type associated with current node.
+        /// </summary>
+        public OrgChartLayoutEnum? OrgChartLayout { get; set; }
+
+        /// <summary>
         /// Node list.
         /// </summary>
         public List<SmartArtNode> Nodes { get; set; }
@@ -58,11 +97,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Node text.
         /// </summary>
         public string Text { get; set; }
-
-        /// <summary>
-        /// Organization chart layout type associated with current node.
-        /// </summary>
-        public OrganizationChartLayoutType OrgChartLayout { get; set; }
 
         /// <summary>
         /// Create an instance of the object

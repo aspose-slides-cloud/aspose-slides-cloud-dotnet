@@ -59,17 +59,22 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                     },
                     Input = new Input
                     {
-                        TemplateData = new RequestInputFile { Type = InputFileType.Request, Index = 0 },
-                        Template = new RequestInputFile { Type = InputFileType.Request, Index = 1 }
+                        TemplateData = new RequestInputFile { Index = 0 },
+                        Template = new RequestInputFile { Index = 1 }
                     },
                     Tasks = new System.Collections.Generic.List<Task>
                     {
-                        new Save { Format = ExportFormat.Pptx, Output = new ResponseOutputFile { Type = OutputFileType.Response } }
+                        new Save
+                        {
+                            Type = Save.TypeEnum.Save,
+                            Format = Save.FormatEnum.Pptx,
+                            Output = new ResponseOutputFile()
+                        }
                     }
                 }
             };
-            DocumentApi api = new DocumentApi(TestUtils.Configuration);
-            Stream response = api.PostSlidesPipeline(request);
+            SlidesApi api = new SlidesApi(TestUtils.Configuration);
+            object response = api.PostSlidesPipeline(request);
             Assert.IsNotNull(response);
         }
     }

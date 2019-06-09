@@ -44,7 +44,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public NoFill() : base()
         {
-          Type = Model.FillType.NoFill;
+          Type = TypeEnum.NoFill;
         }
 
         /// <summary>

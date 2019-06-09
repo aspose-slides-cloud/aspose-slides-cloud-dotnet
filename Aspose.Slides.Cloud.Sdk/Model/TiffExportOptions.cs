@@ -40,9 +40,144 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class TiffExportOptions : ExportOptions 
   {                       
         /// <summary>
+        /// Gets or Sets Compression
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CompressionEnum
+        {
+            
+            /// <summary>
+            /// Enum Default for "Default"
+            /// </summary>
+            Default,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum CCITT3 for "CCITT3"
+            /// </summary>
+            CCITT3,
+            
+            /// <summary>
+            /// Enum CCITT4 for "CCITT4"
+            /// </summary>
+            CCITT4,
+            
+            /// <summary>
+            /// Enum LZW for "LZW"
+            /// </summary>
+            LZW,
+            
+            /// <summary>
+            /// Enum RLE for "RLE"
+            /// </summary>
+            RLE
+        }
+
+        /// <summary>
+        /// Specifies the pixel format for the generated images. Read/write ImagePixelFormat.
+        /// </summary>
+        /// <value>Specifies the pixel format for the generated images. Read/write ImagePixelFormat.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PixelFormatEnum
+        {
+            
+            /// <summary>
+            /// Enum Format1bppIndexed for "Format1bppIndexed"
+            /// </summary>
+            Format1bppIndexed,
+            
+            /// <summary>
+            /// Enum Format4bppIndexed for "Format4bppIndexed"
+            /// </summary>
+            Format4bppIndexed,
+            
+            /// <summary>
+            /// Enum Format8bppIndexed for "Format8bppIndexed"
+            /// </summary>
+            Format8bppIndexed,
+            
+            /// <summary>
+            /// Enum Format24bppRgb for "Format24bppRgb"
+            /// </summary>
+            Format24bppRgb,
+            
+            /// <summary>
+            /// Enum Format32bppArgb for "Format32bppArgb"
+            /// </summary>
+            Format32bppArgb
+        }
+
+        /// <summary>
+        /// Gets or sets the position of the notes on the page.
+        /// </summary>
+        /// <value>Gets or sets the position of the notes on the page.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum NotesPositionEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum BottomFull for "BottomFull"
+            /// </summary>
+            BottomFull,
+            
+            /// <summary>
+            /// Enum BottomTruncated for "BottomTruncated"
+            /// </summary>
+            BottomTruncated
+        }
+
+        /// <summary>
+        /// Gets or sets the position of the comments on the page.
+        /// </summary>
+        /// <value>Gets or sets the position of the comments on the page.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CommentsPositionEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>
+            Bottom,
+            
+            /// <summary>
+            /// Enum Right for "Right"
+            /// </summary>
+            Right
+        }
+
+        /// <summary>
         /// Gets or sets Compression
         /// </summary>
-        public TiffCompressionType Compression { get; set; }
+        public CompressionEnum? Compression { get; set; }
+
+        /// <summary>
+        /// Specifies the pixel format for the generated images. Read/write ImagePixelFormat.
+        /// </summary>
+        public PixelFormatEnum? PixelFormat { get; set; }
+
+        /// <summary>
+        /// Gets or sets the position of the notes on the page.
+        /// </summary>
+        public NotesPositionEnum? NotesPosition { get; set; }
+
+        /// <summary>
+        /// Gets or sets the position of the comments on the page.
+        /// </summary>
+        public CommentsPositionEnum? CommentsPosition { get; set; }
 
         /// <summary>
         /// Gets or sets Width
@@ -68,21 +203,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Specifies whether the generated document should include hidden slides or not. Default is false. 
         /// </summary>
         public bool? ShowHiddenSlides { get; set; }
-
-        /// <summary>
-        /// Specifies the pixel format for the generated images. Read/write .
-        /// </summary>
-        public ImagePixelFormat PixelFormat { get; set; }
-
-        /// <summary>
-        /// Gets or sets the position of the notes on the page.
-        /// </summary>
-        public NotesPositions NotesPosition { get; set; }
-
-        /// <summary>
-        /// Gets or sets the position of the comments on the page.
-        /// </summary>
-        public CommentsPositions CommentsPosition { get; set; }
 
         /// <summary>
         /// Gets or sets the width of the comment output area in pixels (Applies only if comments are displayed on the right).

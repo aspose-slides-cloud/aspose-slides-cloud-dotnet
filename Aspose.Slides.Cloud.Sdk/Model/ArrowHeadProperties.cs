@@ -40,19 +40,118 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class ArrowHeadProperties 
   {                       
         /// <summary>
+        /// Gets or Sets Length
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum LengthEnum
+        {
+            
+            /// <summary>
+            /// Enum Short for "Short"
+            /// </summary>
+            Short,
+            
+            /// <summary>
+            /// Enum Medium for "Medium"
+            /// </summary>
+            Medium,
+            
+            /// <summary>
+            /// Enum Long for "Long"
+            /// </summary>
+            Long,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets Style
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StyleEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Triangle for "Triangle"
+            /// </summary>
+            Triangle,
+            
+            /// <summary>
+            /// Enum Stealth for "Stealth"
+            /// </summary>
+            Stealth,
+            
+            /// <summary>
+            /// Enum Diamond for "Diamond"
+            /// </summary>
+            Diamond,
+            
+            /// <summary>
+            /// Enum Oval for "Oval"
+            /// </summary>
+            Oval,
+            
+            /// <summary>
+            /// Enum Open for "Open"
+            /// </summary>
+            Open,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets Width
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum WidthEnum
+        {
+            
+            /// <summary>
+            /// Enum Narrow for "Narrow"
+            /// </summary>
+            Narrow,
+            
+            /// <summary>
+            /// Enum Medium for "Medium"
+            /// </summary>
+            Medium,
+            
+            /// <summary>
+            /// Enum Wide for "Wide"
+            /// </summary>
+            Wide,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
         /// Gets or sets Length
         /// </summary>
-        public LineArrowheadLength Length { get; set; }
+        public LengthEnum? Length { get; set; }
 
         /// <summary>
         /// Gets or sets Style
         /// </summary>
-        public LineArrowheadStyle Style { get; set; }
+        public StyleEnum? Style { get; set; }
 
         /// <summary>
         /// Gets or sets Width
         /// </summary>
-        public LineArrowheadWidth Width { get; set; }
+        public WidthEnum? Width { get; set; }
 
         /// <summary>
         /// Create an instance of the object

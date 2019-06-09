@@ -40,6 +40,70 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class ReflectionEffect 
   {                       
         /// <summary>
+        /// rectangle alignment
+        /// </summary>
+        /// <value>rectangle alignment</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum RectangleAlignEnum
+        {
+            
+            /// <summary>
+            /// Enum TopLeft for "TopLeft"
+            /// </summary>
+            TopLeft,
+            
+            /// <summary>
+            /// Enum Top for "Top"
+            /// </summary>
+            Top,
+            
+            /// <summary>
+            /// Enum TopRight for "TopRight"
+            /// </summary>
+            TopRight,
+            
+            /// <summary>
+            /// Enum Left for "Left"
+            /// </summary>
+            Left,
+            
+            /// <summary>
+            /// Enum Center for "Center"
+            /// </summary>
+            Center,
+            
+            /// <summary>
+            /// Enum Right for "Right"
+            /// </summary>
+            Right,
+            
+            /// <summary>
+            /// Enum BottomLeft for "BottomLeft"
+            /// </summary>
+            BottomLeft,
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>
+            Bottom,
+            
+            /// <summary>
+            /// Enum BottomRight for "BottomRight"
+            /// </summary>
+            BottomRight,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// rectangle alignment
+        /// </summary>
+        public RectangleAlignEnum? RectangleAlign { get; set; }
+
+        /// <summary>
         /// direction
         /// </summary>
         public double? Direction { get; set; }
@@ -98,11 +162,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// end reflection opacity
         /// </summary>
         public double? EndReflectionOpacity { get; set; }
-
-        /// <summary>
-        /// rectangle alignment
-        /// </summary>
-        public RectangleAlignment RectangleAlign { get; set; }
 
         /// <summary>
         /// true if the reflection should rotate with the shape when the shape is rotated

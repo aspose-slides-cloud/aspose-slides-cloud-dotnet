@@ -71,7 +71,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class Image {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  ContentType: ").Append(this.ContentType).Append("\n");

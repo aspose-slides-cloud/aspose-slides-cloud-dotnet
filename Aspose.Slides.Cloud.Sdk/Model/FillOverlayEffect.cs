@@ -42,7 +42,41 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// blend mode
         /// </summary>
-        public FillBlendMode Blend { get; set; }
+        /// <value>blend mode</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum BlendEnum
+        {
+            
+            /// <summary>
+            /// Enum Darken for "Darken"
+            /// </summary>
+            Darken,
+            
+            /// <summary>
+            /// Enum Lighten for "Lighten"
+            /// </summary>
+            Lighten,
+            
+            /// <summary>
+            /// Enum Multiply for "Multiply"
+            /// </summary>
+            Multiply,
+            
+            /// <summary>
+            /// Enum Overlay for "Overlay"
+            /// </summary>
+            Overlay,
+            
+            /// <summary>
+            /// Enum Screen for "Screen"
+            /// </summary>
+            Screen
+        }
+
+        /// <summary>
+        /// blend mode
+        /// </summary>
+        public BlendEnum? Blend { get; set; }
 
         /// <summary>
         /// Create an instance of the object

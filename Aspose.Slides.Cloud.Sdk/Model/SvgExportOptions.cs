@@ -40,6 +40,79 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class SvgExportOptions : ExportOptions 
   {                       
         /// <summary>
+        /// Represents the pictures compression level
+        /// </summary>
+        /// <value>Represents the pictures compression level</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PicturesCompressionEnum
+        {
+            
+            /// <summary>
+            /// Enum Dpi330 for "Dpi330"
+            /// </summary>
+            Dpi330,
+            
+            /// <summary>
+            /// Enum Dpi220 for "Dpi220"
+            /// </summary>
+            Dpi220,
+            
+            /// <summary>
+            /// Enum Dpi150 for "Dpi150"
+            /// </summary>
+            Dpi150,
+            
+            /// <summary>
+            /// Enum Dpi96 for "Dpi96"
+            /// </summary>
+            Dpi96,
+            
+            /// <summary>
+            /// Enum Dpi72 for "Dpi72"
+            /// </summary>
+            Dpi72,
+            
+            /// <summary>
+            /// Enum DocumentResolution for "DocumentResolution"
+            /// </summary>
+            DocumentResolution
+        }
+
+        /// <summary>
+        /// Determines a way of handling externally loaded fonts.
+        /// </summary>
+        /// <value>Determines a way of handling externally loaded fonts.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ExternalFontsHandlingEnum
+        {
+            
+            /// <summary>
+            /// Enum AddLinksToFontFiles for "AddLinksToFontFiles"
+            /// </summary>
+            AddLinksToFontFiles,
+            
+            /// <summary>
+            /// Enum Embed for "Embed"
+            /// </summary>
+            Embed,
+            
+            /// <summary>
+            /// Enum Vectorize for "Vectorize"
+            /// </summary>
+            Vectorize
+        }
+
+        /// <summary>
+        /// Represents the pictures compression level
+        /// </summary>
+        public PicturesCompressionEnum? PicturesCompression { get; set; }
+
+        /// <summary>
+        /// Determines a way of handling externally loaded fonts.
+        /// </summary>
+        public ExternalFontsHandlingEnum? ExternalFontsHandling { get; set; }
+
+        /// <summary>
         /// Determines whether the text on a slide will be saved as graphics.
         /// </summary>
         public bool? VectorizeText { get; set; }
@@ -70,19 +143,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public int? JpegQuality { get; set; }
 
         /// <summary>
-        /// Represents the pictures compression level
-        /// </summary>
-        public PicturesCompression PicturesCompression { get; set; }
-
-        /// <summary>
         /// A boolean flag indicates if the cropped parts remain as part of the document. If true the cropped  parts will removed, if false they will be serialized in the document (which can possible lead to a  larger file)
         /// </summary>
         public bool? DeletePicturesCroppedAreas { get; set; }
-
-        /// <summary>
-        /// Determines a way of handling externally loaded fonts.
-        /// </summary>
-        public ExternalFontsHandling ExternalFontsHandling { get; set; }
 
         /// <summary>
         /// Create an instance of the object

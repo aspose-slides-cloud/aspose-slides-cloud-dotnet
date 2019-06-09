@@ -40,9 +40,27 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class OutputFile 
   {                       
         /// <summary>
-        /// Gets type of output destination.
+        /// Gets or Sets Type
         /// </summary>
-        public OutputFileType Type { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Path for "Path"
+            /// </summary>
+            Path,
+            
+            /// <summary>
+            /// Enum Response for "Response"
+            /// </summary>
+            Response
+        }
+
+        /// <summary>
+        /// Gets or sets Type
+        /// </summary>
+        public TypeEnum? Type { get; set; }
 
         /// <summary>
         /// Create an instance of the object

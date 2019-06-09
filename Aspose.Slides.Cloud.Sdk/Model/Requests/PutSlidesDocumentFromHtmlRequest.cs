@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.DocumentApi.PutSlidesDocumentFromHtml" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PutSlidesDocumentFromHtml" /> operation.
   /// </summary>  
   public class PutSlidesDocumentFromHtmlRequest  
   {
@@ -45,12 +45,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PutSlidesDocumentFromHtmlRequest"/> class.
         /// </summary>
-        /// <param name="name">The document name.</param>
-        /// <param name="html"></param>
-        /// <param name="password">The document password.</param>
-        /// <param name="storage">Document&#39;s storage.</param>
-        /// <param name="folder">Document&#39;s folder.</param>
-        public PutSlidesDocumentFromHtmlRequest(string name, string html, string password = null, string storage = null, string folder = null)
+        /// <param name="name">Document name.</param>
+        /// <param name="html">HTML data.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="storage">Document storage.</param>
+        /// <param name="folder">Document folder.</param>
+        public PutSlidesDocumentFromHtmlRequest(string name, string html = null, string password = null, string storage = null, string folder = null)
         {
             this.Name = name;
             this.Html = html;
@@ -60,27 +60,27 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// The document name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets Html
+        /// HTML data.
         /// </summary>  
         public string Html { get; set; }
 
         /// <summary>
-        /// The document password.
+        /// Document password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// Document's storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Document's folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
   }

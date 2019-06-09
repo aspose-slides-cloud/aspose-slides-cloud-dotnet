@@ -40,6 +40,79 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class AudioFrame : GeometryShape 
   {                       
         /// <summary>
+        /// Returns or sets the audio play mode.
+        /// </summary>
+        /// <value>Returns or sets the audio play mode.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PlayModeEnum
+        {
+            
+            /// <summary>
+            /// Enum Auto for "Auto"
+            /// </summary>
+            Auto,
+            
+            /// <summary>
+            /// Enum OnClick for "OnClick"
+            /// </summary>
+            OnClick,
+            
+            /// <summary>
+            /// Enum AllSlides for "AllSlides"
+            /// </summary>
+            AllSlides,
+            
+            /// <summary>
+            /// Enum Mixed for "Mixed"
+            /// </summary>
+            Mixed
+        }
+
+        /// <summary>
+        /// Returns or sets the audio volume.
+        /// </summary>
+        /// <value>Returns or sets the audio volume.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum VolumeEnum
+        {
+            
+            /// <summary>
+            /// Enum Mute for "Mute"
+            /// </summary>
+            Mute,
+            
+            /// <summary>
+            /// Enum Low for "Low"
+            /// </summary>
+            Low,
+            
+            /// <summary>
+            /// Enum Medium for "Medium"
+            /// </summary>
+            Medium,
+            
+            /// <summary>
+            /// Enum Loud for "Loud"
+            /// </summary>
+            Loud,
+            
+            /// <summary>
+            /// Enum Mixed for "Mixed"
+            /// </summary>
+            Mixed
+        }
+
+        /// <summary>
+        /// Returns or sets the audio play mode.
+        /// </summary>
+        public PlayModeEnum? PlayMode { get; set; }
+
+        /// <summary>
+        /// Returns or sets the audio volume.
+        /// </summary>
+        public VolumeEnum? Volume { get; set; }
+
+        /// <summary>
         /// Returns or sets a last track index.
         /// </summary>
         public int? AudioCdEndTrack { get; set; }
@@ -75,16 +148,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public bool? PlayLoopMode { get; set; }
 
         /// <summary>
-        /// Returns or sets the audio play mode.
-        /// </summary>
-        public AudioPlayModePreset PlayMode { get; set; }
-
-        /// <summary>
-        /// Returns or sets the audio volume.
-        /// </summary>
-        public AudioVolumeMode Volume { get; set; }
-
-        /// <summary>
         /// Audio data encoded in base64.
         /// </summary>
         public string Base64Data { get; set; }
@@ -94,8 +157,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public AudioFrame() : base()
         {
-          Type = Model.ShapeType.AudioFrame;
-          ShapeType = Model.CombinedShapeType.AudioFrame;
+          Type = TypeEnum.AudioFrame;
+          ShapeType = ShapeTypeEnum.AudioFrame;
         }
 
         /// <summary>
@@ -108,9 +171,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class AudioFrame {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
           sb.Append("  Name: ").Append(this.Name).Append("\n");
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
@@ -123,6 +183,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
           sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
           sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+          sb.Append("  Type: ").Append(this.Type).Append("\n");
+          sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
           sb.Append("  GeometryShapeType: ").Append(this.GeometryShapeType).Append("\n");
           sb.Append("  AudioCdEndTrack: ").Append(this.AudioCdEndTrack).Append("\n");
           sb.Append("  AudioCdEndTrackTime: ").Append(this.AudioCdEndTrackTime).Append("\n");

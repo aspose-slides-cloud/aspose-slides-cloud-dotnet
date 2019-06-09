@@ -40,6 +40,104 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class TableCell 
   {                       
         /// <summary>
+        /// Text anchor type.
+        /// </summary>
+        /// <value>Text anchor type.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TextAnchorTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Top for "Top"
+            /// </summary>
+            Top,
+            
+            /// <summary>
+            /// Enum Center for "Center"
+            /// </summary>
+            Center,
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>
+            Bottom,
+            
+            /// <summary>
+            /// Enum Justified for "Justified"
+            /// </summary>
+            Justified,
+            
+            /// <summary>
+            /// Enum Distributed for "Distributed"
+            /// </summary>
+            Distributed,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// The type of vertical text.
+        /// </summary>
+        /// <value>The type of vertical text.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TextVerticalTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Horizontal for "Horizontal"
+            /// </summary>
+            Horizontal,
+            
+            /// <summary>
+            /// Enum Vertical for "Vertical"
+            /// </summary>
+            Vertical,
+            
+            /// <summary>
+            /// Enum Vertical270 for "Vertical270"
+            /// </summary>
+            Vertical270,
+            
+            /// <summary>
+            /// Enum WordArtVertical for "WordArtVertical"
+            /// </summary>
+            WordArtVertical,
+            
+            /// <summary>
+            /// Enum EastAsianVertical for "EastAsianVertical"
+            /// </summary>
+            EastAsianVertical,
+            
+            /// <summary>
+            /// Enum MongolianVertical for "MongolianVertical"
+            /// </summary>
+            MongolianVertical,
+            
+            /// <summary>
+            /// Enum WordArtVerticalRightToLeft for "WordArtVerticalRightToLeft"
+            /// </summary>
+            WordArtVerticalRightToLeft,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Text anchor type.
+        /// </summary>
+        public TextAnchorTypeEnum? TextAnchorType { get; set; }
+
+        /// <summary>
+        /// The type of vertical text.
+        /// </summary>
+        public TextVerticalTypeEnum? TextVerticalType { get; set; }
+
+        /// <summary>
         /// Cell text.
         /// </summary>
         public string Text { get; set; }
@@ -73,16 +171,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// The bottom margin of the cell.
         /// </summary>
         public double? MarginBottom { get; set; }
-
-        /// <summary>
-        /// Text anchor type.
-        /// </summary>
-        public TextAnchorType TextAnchorType { get; set; }
-
-        /// <summary>
-        /// The type of vertical text.
-        /// </summary>
-        public TextVerticalType TextVerticalType { get; set; }
 
         /// <summary>
         /// Fill properties set of the cell.

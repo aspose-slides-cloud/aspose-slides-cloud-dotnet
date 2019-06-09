@@ -40,6 +40,470 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Paragraph : ResourceBase 
   {                       
         /// <summary>
+        /// Gets or Sets Alignment
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AlignmentEnum
+        {
+            
+            /// <summary>
+            /// Enum Left for "Left"
+            /// </summary>
+            Left,
+            
+            /// <summary>
+            /// Enum Center for "Center"
+            /// </summary>
+            Center,
+            
+            /// <summary>
+            /// Enum Right for "Right"
+            /// </summary>
+            Right,
+            
+            /// <summary>
+            /// Enum Justify for "Justify"
+            /// </summary>
+            Justify,
+            
+            /// <summary>
+            /// Enum JustifyLow for "JustifyLow"
+            /// </summary>
+            JustifyLow,
+            
+            /// <summary>
+            /// Enum Distributed for "Distributed"
+            /// </summary>
+            Distributed,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets FontAlignment
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FontAlignmentEnum
+        {
+            
+            /// <summary>
+            /// Enum Automatic for "Automatic"
+            /// </summary>
+            Automatic,
+            
+            /// <summary>
+            /// Enum Top for "Top"
+            /// </summary>
+            Top,
+            
+            /// <summary>
+            /// Enum Center for "Center"
+            /// </summary>
+            Center,
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>
+            Bottom,
+            
+            /// <summary>
+            /// Enum Baseline for "Baseline"
+            /// </summary>
+            Baseline,
+            
+            /// <summary>
+            /// Enum Default for "Default"
+            /// </summary>
+            Default
+        }
+
+        /// <summary>
+        /// Gets or Sets BulletType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum BulletTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Symbol for "Symbol"
+            /// </summary>
+            Symbol,
+            
+            /// <summary>
+            /// Enum Numbered for "Numbered"
+            /// </summary>
+            Numbered,
+            
+            /// <summary>
+            /// Enum Picture for "Picture"
+            /// </summary>
+            Picture,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets NumberedBulletStyle
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum NumberedBulletStyleEnum
+        {
+            
+            /// <summary>
+            /// Enum BulletAlphaLCPeriod for "BulletAlphaLCPeriod"
+            /// </summary>
+            BulletAlphaLCPeriod,
+            
+            /// <summary>
+            /// Enum BulletAlphaUCPeriod for "BulletAlphaUCPeriod"
+            /// </summary>
+            BulletAlphaUCPeriod,
+            
+            /// <summary>
+            /// Enum BulletArabicParenRight for "BulletArabicParenRight"
+            /// </summary>
+            BulletArabicParenRight,
+            
+            /// <summary>
+            /// Enum BulletArabicPeriod for "BulletArabicPeriod"
+            /// </summary>
+            BulletArabicPeriod,
+            
+            /// <summary>
+            /// Enum BulletRomanLCParenBoth for "BulletRomanLCParenBoth"
+            /// </summary>
+            BulletRomanLCParenBoth,
+            
+            /// <summary>
+            /// Enum BulletRomanLCParenRight for "BulletRomanLCParenRight"
+            /// </summary>
+            BulletRomanLCParenRight,
+            
+            /// <summary>
+            /// Enum BulletRomanLCPeriod for "BulletRomanLCPeriod"
+            /// </summary>
+            BulletRomanLCPeriod,
+            
+            /// <summary>
+            /// Enum BulletRomanUCPeriod for "BulletRomanUCPeriod"
+            /// </summary>
+            BulletRomanUCPeriod,
+            
+            /// <summary>
+            /// Enum BulletAlphaLCParenBoth for "BulletAlphaLCParenBoth"
+            /// </summary>
+            BulletAlphaLCParenBoth,
+            
+            /// <summary>
+            /// Enum BulletAlphaLCParenRight for "BulletAlphaLCParenRight"
+            /// </summary>
+            BulletAlphaLCParenRight,
+            
+            /// <summary>
+            /// Enum BulletAlphaUCParenBoth for "BulletAlphaUCParenBoth"
+            /// </summary>
+            BulletAlphaUCParenBoth,
+            
+            /// <summary>
+            /// Enum BulletAlphaUCParenRight for "BulletAlphaUCParenRight"
+            /// </summary>
+            BulletAlphaUCParenRight,
+            
+            /// <summary>
+            /// Enum BulletArabicParenBoth for "BulletArabicParenBoth"
+            /// </summary>
+            BulletArabicParenBoth,
+            
+            /// <summary>
+            /// Enum BulletArabicPlain for "BulletArabicPlain"
+            /// </summary>
+            BulletArabicPlain,
+            
+            /// <summary>
+            /// Enum BulletRomanUCParenBoth for "BulletRomanUCParenBoth"
+            /// </summary>
+            BulletRomanUCParenBoth,
+            
+            /// <summary>
+            /// Enum BulletRomanUCParenRight for "BulletRomanUCParenRight"
+            /// </summary>
+            BulletRomanUCParenRight,
+            
+            /// <summary>
+            /// Enum BulletSimpChinPlain for "BulletSimpChinPlain"
+            /// </summary>
+            BulletSimpChinPlain,
+            
+            /// <summary>
+            /// Enum BulletSimpChinPeriod for "BulletSimpChinPeriod"
+            /// </summary>
+            BulletSimpChinPeriod,
+            
+            /// <summary>
+            /// Enum BulletCircleNumDBPlain for "BulletCircleNumDBPlain"
+            /// </summary>
+            BulletCircleNumDBPlain,
+            
+            /// <summary>
+            /// Enum BulletCircleNumWDWhitePlain for "BulletCircleNumWDWhitePlain"
+            /// </summary>
+            BulletCircleNumWDWhitePlain,
+            
+            /// <summary>
+            /// Enum BulletCircleNumWDBlackPlain for "BulletCircleNumWDBlackPlain"
+            /// </summary>
+            BulletCircleNumWDBlackPlain,
+            
+            /// <summary>
+            /// Enum BulletTradChinPlain for "BulletTradChinPlain"
+            /// </summary>
+            BulletTradChinPlain,
+            
+            /// <summary>
+            /// Enum BulletTradChinPeriod for "BulletTradChinPeriod"
+            /// </summary>
+            BulletTradChinPeriod,
+            
+            /// <summary>
+            /// Enum BulletArabicAlphaDash for "BulletArabicAlphaDash"
+            /// </summary>
+            BulletArabicAlphaDash,
+            
+            /// <summary>
+            /// Enum BulletArabicAbjadDash for "BulletArabicAbjadDash"
+            /// </summary>
+            BulletArabicAbjadDash,
+            
+            /// <summary>
+            /// Enum BulletHebrewAlphaDash for "BulletHebrewAlphaDash"
+            /// </summary>
+            BulletHebrewAlphaDash,
+            
+            /// <summary>
+            /// Enum BulletKanjiKoreanPlain for "BulletKanjiKoreanPlain"
+            /// </summary>
+            BulletKanjiKoreanPlain,
+            
+            /// <summary>
+            /// Enum BulletKanjiKoreanPeriod for "BulletKanjiKoreanPeriod"
+            /// </summary>
+            BulletKanjiKoreanPeriod,
+            
+            /// <summary>
+            /// Enum BulletArabicDBPlain for "BulletArabicDBPlain"
+            /// </summary>
+            BulletArabicDBPlain,
+            
+            /// <summary>
+            /// Enum BulletArabicDBPeriod for "BulletArabicDBPeriod"
+            /// </summary>
+            BulletArabicDBPeriod,
+            
+            /// <summary>
+            /// Enum BulletThaiAlphaPeriod for "BulletThaiAlphaPeriod"
+            /// </summary>
+            BulletThaiAlphaPeriod,
+            
+            /// <summary>
+            /// Enum BulletThaiAlphaParenRight for "BulletThaiAlphaParenRight"
+            /// </summary>
+            BulletThaiAlphaParenRight,
+            
+            /// <summary>
+            /// Enum BulletThaiAlphaParenBoth for "BulletThaiAlphaParenBoth"
+            /// </summary>
+            BulletThaiAlphaParenBoth,
+            
+            /// <summary>
+            /// Enum BulletThaiNumPeriod for "BulletThaiNumPeriod"
+            /// </summary>
+            BulletThaiNumPeriod,
+            
+            /// <summary>
+            /// Enum BulletThaiNumParenRight for "BulletThaiNumParenRight"
+            /// </summary>
+            BulletThaiNumParenRight,
+            
+            /// <summary>
+            /// Enum BulletThaiNumParenBoth for "BulletThaiNumParenBoth"
+            /// </summary>
+            BulletThaiNumParenBoth,
+            
+            /// <summary>
+            /// Enum BulletHindiAlphaPeriod for "BulletHindiAlphaPeriod"
+            /// </summary>
+            BulletHindiAlphaPeriod,
+            
+            /// <summary>
+            /// Enum BulletHindiNumPeriod for "BulletHindiNumPeriod"
+            /// </summary>
+            BulletHindiNumPeriod,
+            
+            /// <summary>
+            /// Enum BulletKanjiSimpChinDBPeriod for "BulletKanjiSimpChinDBPeriod"
+            /// </summary>
+            BulletKanjiSimpChinDBPeriod,
+            
+            /// <summary>
+            /// Enum BulletHindiNumParenRight for "BulletHindiNumParenRight"
+            /// </summary>
+            BulletHindiNumParenRight,
+            
+            /// <summary>
+            /// Enum BulletHindiAlpha1Period for "BulletHindiAlpha1Period"
+            /// </summary>
+            BulletHindiAlpha1Period,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets HangingPunctuation
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum HangingPunctuationEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets EastAsianLineBreak
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EastAsianLineBreakEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets LatinLineBreak
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum LatinLineBreakEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets RightToLeft
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum RightToLeftEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or sets Alignment
+        /// </summary>
+        public AlignmentEnum? Alignment { get; set; }
+
+        /// <summary>
+        /// Gets or sets FontAlignment
+        /// </summary>
+        public FontAlignmentEnum? FontAlignment { get; set; }
+
+        /// <summary>
+        /// Gets or sets BulletType
+        /// </summary>
+        public BulletTypeEnum? BulletType { get; set; }
+
+        /// <summary>
+        /// Gets or sets NumberedBulletStyle
+        /// </summary>
+        public NumberedBulletStyleEnum? NumberedBulletStyle { get; set; }
+
+        /// <summary>
+        /// Gets or sets HangingPunctuation
+        /// </summary>
+        public HangingPunctuationEnum? HangingPunctuation { get; set; }
+
+        /// <summary>
+        /// Gets or sets EastAsianLineBreak
+        /// </summary>
+        public EastAsianLineBreakEnum? EastAsianLineBreak { get; set; }
+
+        /// <summary>
+        /// Gets or sets LatinLineBreak
+        /// </summary>
+        public LatinLineBreakEnum? LatinLineBreak { get; set; }
+
+        /// <summary>
+        /// Gets or sets RightToLeft
+        /// </summary>
+        public RightToLeftEnum? RightToLeft { get; set; }
+
+        /// <summary>
         /// Gets or sets MarginLeft
         /// </summary>
         public double? MarginLeft { get; set; }
@@ -70,16 +534,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public double? Indent { get; set; }
 
         /// <summary>
-        /// Gets or sets Alignment
-        /// </summary>
-        public TextAlignment Alignment { get; set; }
-
-        /// <summary>
-        /// Gets or sets FontAlignment
-        /// </summary>
-        public FontAlignment FontAlignment { get; set; }
-
-        /// <summary>
         /// Gets or sets DefaultTabSize
         /// </summary>
         public double? DefaultTabSize { get; set; }
@@ -100,39 +554,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public double? BulletHeight { get; set; }
 
         /// <summary>
-        /// Gets or sets BulletType
-        /// </summary>
-        public BulletType BulletType { get; set; }
-
-        /// <summary>
         /// Gets or sets NumberedBulletStartWith
         /// </summary>
         public int? NumberedBulletStartWith { get; set; }
-
-        /// <summary>
-        /// Gets or sets NumberedBulletStyle
-        /// </summary>
-        public NumberedBulletStyle NumberedBulletStyle { get; set; }
-
-        /// <summary>
-        /// Gets or sets HangingPunctuation
-        /// </summary>
-        public NullableBool HangingPunctuation { get; set; }
-
-        /// <summary>
-        /// Gets or sets EastAsianLineBreak
-        /// </summary>
-        public NullableBool EastAsianLineBreak { get; set; }
-
-        /// <summary>
-        /// Gets or sets LatinLineBreak
-        /// </summary>
-        public NullableBool LatinLineBreak { get; set; }
-
-        /// <summary>
-        /// Gets or sets RightToLeft
-        /// </summary>
-        public NullableBool RightToLeft { get; set; }
 
         /// <summary>
         /// Gets or sets PortionList
@@ -156,7 +580,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class Paragraph {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
           sb.Append("  MarginLeft: ").Append(this.MarginLeft).Append("\n");
           sb.Append("  MarginRight: ").Append(this.MarginRight).Append("\n");
           sb.Append("  SpaceBefore: ").Append(this.SpaceBefore).Append("\n");

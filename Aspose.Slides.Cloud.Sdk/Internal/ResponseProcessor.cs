@@ -29,6 +29,7 @@ namespace Aspose.Slides.Cloud.Sdk
 {
     internal abstract class ResponseProcessor<T>
     {
+        public virtual bool NullFor404 { get { return true; } }
         public abstract T ProcessResponse(Stream response, string contentType);
 
         public virtual void PostProcessResponse(Stream response)

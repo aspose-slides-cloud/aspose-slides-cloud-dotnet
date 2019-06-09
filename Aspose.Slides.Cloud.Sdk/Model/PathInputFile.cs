@@ -54,7 +54,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public PathInputFile() : base()
         {
-          Type = Model.InputFileType.Path;
+          Type = TypeEnum.Path;
         }
 
         /// <summary>
@@ -65,8 +65,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class PathInputFile {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
           sb.Append("  Password: ").Append(this.Password).Append("\n");
+          sb.Append("  Type: ").Append(this.Type).Append("\n");
           sb.Append("  Path: ").Append(this.Path).Append("\n");
           sb.Append("  Storage: ").Append(this.Storage).Append("\n");
           sb.Append("}\n");

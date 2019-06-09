@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.DocumentApi.GetSlidesDocument" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.GetSlidesDocument" /> operation.
   /// </summary>  
   public class GetSlidesDocumentRequest  
   {
@@ -45,10 +45,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSlidesDocumentRequest"/> class.
         /// </summary>
-        /// <param name="name">The document name.</param>
-        /// <param name="password">The document password.</param>
-        /// <param name="storage">Document&#39;s storage.</param>
-        /// <param name="folder">Document&#39;s folder.</param>
+        /// <param name="name">Document name.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="storage">Documentstorage.</param>
+        /// <param name="folder">Document folder.</param>
         public GetSlidesDocumentRequest(string name, string password = null, string storage = null, string folder = null)
         {
             this.Name = name;
@@ -58,22 +58,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         }
 
         /// <summary>
-        /// The document name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// The document password.
+        /// Document password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// Document's storage.
+        /// Documentstorage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Document's folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
   }

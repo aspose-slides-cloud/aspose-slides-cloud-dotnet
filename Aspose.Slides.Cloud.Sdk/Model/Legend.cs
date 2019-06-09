@@ -42,7 +42,41 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// position
         /// </summary>
-        public LegendPositionType Position { get; set; }
+        /// <value>position</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PositionEnum
+        {
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>
+            Bottom,
+            
+            /// <summary>
+            /// Enum Left for "Left"
+            /// </summary>
+            Left,
+            
+            /// <summary>
+            /// Enum Right for "Right"
+            /// </summary>
+            Right,
+            
+            /// <summary>
+            /// Enum Top for "Top"
+            /// </summary>
+            Top,
+            
+            /// <summary>
+            /// Enum TopRight for "TopRight"
+            /// </summary>
+            TopRight
+        }
+
+        /// <summary>
+        /// position
+        /// </summary>
+        public PositionEnum? Position { get; set; }
 
         /// <summary>
         /// the X location

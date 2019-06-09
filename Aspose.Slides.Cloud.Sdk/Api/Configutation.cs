@@ -32,8 +32,8 @@ namespace Aspose.Slides.Cloud.Sdk
     {
         public Configuration()
         {
-            ApiBaseUrl = "https://api.aspose.cloud";
-            Version = "v1.1";
+            AuthBaseUrl = ApiBaseUrl = "https://api.aspose.cloud";
+            Version = "v3.0";
             DebugMode = false;
         }
 
@@ -41,6 +41,11 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Aspose Cloud API base URL.
         /// </summary>
         public string ApiBaseUrl { get; set; }
+
+        /// <summary>
+        /// Aspose Cloud API base URL.
+        /// </summary>
+        public string AuthBaseUrl { get; set; }
 
         /// <summary>
         /// Aspose Cloud API version.
@@ -61,12 +66,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Gets or sets a value indicating whether debug mode.
         /// </summary>
         public bool DebugMode { get; set; }
-
-        /// <summary>
-        /// Authentification type.
-        /// Default is OAuth 2.0
-        /// </summary>
-        public AuthType AuthType { get; set; }
 
         public string GetApiRootUrl()
         {

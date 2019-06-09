@@ -54,7 +54,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public UpdateShape() : base()
         {
-          Type = Model.TaskType.UpdateShape;
+          Type = TypeEnum.UpdateShape;
         }
 
         /// <summary>

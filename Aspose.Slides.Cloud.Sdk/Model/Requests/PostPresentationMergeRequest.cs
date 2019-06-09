@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.MergeDocumentApi.PostPresentationMerge" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostPresentationMerge" /> operation.
   /// </summary>  
   public class PostPresentationMergeRequest  
   {
@@ -46,7 +46,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Initializes a new instance of the <see cref="PostPresentationMergeRequest"/> class.
         /// </summary>
         /// <param name="name">Document name.</param>
-        /// <param name="request">with a list of presentations to merge.</param>
+        /// <param name="request">PresentationsMergeRequest with a list of presentations to merge.</param>
         /// <param name="password">Document password.</param>
         /// <param name="storage">Document storage.</param>
         /// <param name="folder">Document folder.</param>
@@ -65,7 +65,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Name { get; set; }
 
         /// <summary>
-        /// with a list of presentations to merge.
+        /// PresentationsMergeRequest with a list of presentations to merge.
         /// </summary>  
         public PresentationsMergeRequest Request { get; set; }
 

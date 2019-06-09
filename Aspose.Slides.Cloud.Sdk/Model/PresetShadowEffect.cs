@@ -40,6 +40,120 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class PresetShadowEffect 
   {                       
         /// <summary>
+        /// preset
+        /// </summary>
+        /// <value>preset</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PresetEnum
+        {
+            
+            /// <summary>
+            /// Enum TopLeftDropShadow for "TopLeftDropShadow"
+            /// </summary>
+            TopLeftDropShadow,
+            
+            /// <summary>
+            /// Enum TopLeftLargeDropShadow for "TopLeftLargeDropShadow"
+            /// </summary>
+            TopLeftLargeDropShadow,
+            
+            /// <summary>
+            /// Enum BackLeftLongPerspectiveShadow for "BackLeftLongPerspectiveShadow"
+            /// </summary>
+            BackLeftLongPerspectiveShadow,
+            
+            /// <summary>
+            /// Enum BackRightLongPerspectiveShadow for "BackRightLongPerspectiveShadow"
+            /// </summary>
+            BackRightLongPerspectiveShadow,
+            
+            /// <summary>
+            /// Enum TopLeftDoubleDropShadow for "TopLeftDoubleDropShadow"
+            /// </summary>
+            TopLeftDoubleDropShadow,
+            
+            /// <summary>
+            /// Enum BottomRightSmallDropShadow for "BottomRightSmallDropShadow"
+            /// </summary>
+            BottomRightSmallDropShadow,
+            
+            /// <summary>
+            /// Enum FrontLeftLongPerspectiveShadow for "FrontLeftLongPerspectiveShadow"
+            /// </summary>
+            FrontLeftLongPerspectiveShadow,
+            
+            /// <summary>
+            /// Enum FrontRightLongPerspectiveShadow for "FrontRightLongPerspectiveShadow"
+            /// </summary>
+            FrontRightLongPerspectiveShadow,
+            
+            /// <summary>
+            /// Enum OuterBoxShadow3D for "OuterBoxShadow3D"
+            /// </summary>
+            OuterBoxShadow3D,
+            
+            /// <summary>
+            /// Enum InnerBoxShadow3D for "InnerBoxShadow3D"
+            /// </summary>
+            InnerBoxShadow3D,
+            
+            /// <summary>
+            /// Enum BackCenterPerspectiveShadow for "BackCenterPerspectiveShadow"
+            /// </summary>
+            BackCenterPerspectiveShadow,
+            
+            /// <summary>
+            /// Enum TopRightDropShadow for "TopRightDropShadow"
+            /// </summary>
+            TopRightDropShadow,
+            
+            /// <summary>
+            /// Enum FrontBottomShadow for "FrontBottomShadow"
+            /// </summary>
+            FrontBottomShadow,
+            
+            /// <summary>
+            /// Enum BackLeftPerspectiveShadow for "BackLeftPerspectiveShadow"
+            /// </summary>
+            BackLeftPerspectiveShadow,
+            
+            /// <summary>
+            /// Enum BackRightPerspectiveShadow for "BackRightPerspectiveShadow"
+            /// </summary>
+            BackRightPerspectiveShadow,
+            
+            /// <summary>
+            /// Enum BottomLeftDropShadow for "BottomLeftDropShadow"
+            /// </summary>
+            BottomLeftDropShadow,
+            
+            /// <summary>
+            /// Enum BottomRightDropShadow for "BottomRightDropShadow"
+            /// </summary>
+            BottomRightDropShadow,
+            
+            /// <summary>
+            /// Enum FrontLeftPerspectiveShadow for "FrontLeftPerspectiveShadow"
+            /// </summary>
+            FrontLeftPerspectiveShadow,
+            
+            /// <summary>
+            /// Enum FrontRightPerspectiveShadow for "FrontRightPerspectiveShadow"
+            /// </summary>
+            FrontRightPerspectiveShadow,
+            
+            /// <summary>
+            /// Enum TopLeftSmallDropShadow for "TopLeftSmallDropShadow"
+            /// </summary>
+            TopLeftSmallDropShadow
+        }
+
+        /// <summary>
+        /// preset
+        /// </summary>
+        public PresetEnum? Preset { get; set; }
+
+        /// <summary>
         /// direction
         /// </summary>
         public double? Direction { get; set; }
@@ -48,11 +162,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// distance
         /// </summary>
         public double? Distance { get; set; }
-
-        /// <summary>
-        /// preset
-        /// </summary>
-        public PresetShadowType Preset { get; set; }
 
         /// <summary>
         /// shadow color

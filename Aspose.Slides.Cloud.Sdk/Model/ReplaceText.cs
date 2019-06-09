@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public ReplaceText() : base()
         {
-          Type = Model.TaskType.ReplaceText;
+          Type = TypeEnum.ReplaceText;
         }
 
         /// <summary>

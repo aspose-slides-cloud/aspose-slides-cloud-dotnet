@@ -54,7 +54,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public AddLayoutSlide() : base()
         {
-          Type = Model.TaskType.AddLayoutSlide;
+          Type = TypeEnum.AddLayoutSlide;
         }
 
         /// <summary>

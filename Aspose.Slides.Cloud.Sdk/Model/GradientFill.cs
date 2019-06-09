@@ -42,12 +42,124 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gradient style.
         /// </summary>
-        public GradientDirection Direction { get; set; }
+        /// <value>Gradient style.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DirectionEnum
+        {
+            
+            /// <summary>
+            /// Enum FromCorner1 for "FromCorner1"
+            /// </summary>
+            FromCorner1,
+            
+            /// <summary>
+            /// Enum FromCorner2 for "FromCorner2"
+            /// </summary>
+            FromCorner2,
+            
+            /// <summary>
+            /// Enum FromCorner3 for "FromCorner3"
+            /// </summary>
+            FromCorner3,
+            
+            /// <summary>
+            /// Enum FromCorner4 for "FromCorner4"
+            /// </summary>
+            FromCorner4,
+            
+            /// <summary>
+            /// Enum FromCenter for "FromCenter"
+            /// </summary>
+            FromCenter,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
 
         /// <summary>
         /// Gradient shape.
         /// </summary>
-        public GradientShapeType Shape { get; set; }
+        /// <value>Gradient shape.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ShapeEnum
+        {
+            
+            /// <summary>
+            /// Enum Linear for "Linear"
+            /// </summary>
+            Linear,
+            
+            /// <summary>
+            /// Enum Rectangle for "Rectangle"
+            /// </summary>
+            Rectangle,
+            
+            /// <summary>
+            /// Enum Radial for "Radial"
+            /// </summary>
+            Radial,
+            
+            /// <summary>
+            /// Enum Path for "Path"
+            /// </summary>
+            Path,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gradient flipping mode.
+        /// </summary>
+        /// <value>Gradient flipping mode.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TileFlipEnum
+        {
+            
+            /// <summary>
+            /// Enum NoFlip for "NoFlip"
+            /// </summary>
+            NoFlip,
+            
+            /// <summary>
+            /// Enum FlipX for "FlipX"
+            /// </summary>
+            FlipX,
+            
+            /// <summary>
+            /// Enum FlipY for "FlipY"
+            /// </summary>
+            FlipY,
+            
+            /// <summary>
+            /// Enum FlipBoth for "FlipBoth"
+            /// </summary>
+            FlipBoth,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gradient style.
+        /// </summary>
+        public DirectionEnum? Direction { get; set; }
+
+        /// <summary>
+        /// Gradient shape.
+        /// </summary>
+        public ShapeEnum? Shape { get; set; }
+
+        /// <summary>
+        /// Gradient flipping mode.
+        /// </summary>
+        public TileFlipEnum? TileFlip { get; set; }
 
         /// <summary>
         /// Gradient stops.
@@ -65,16 +177,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public bool? IsScaled { get; set; }
 
         /// <summary>
-        /// Gradient flipping mode.
-        /// </summary>
-        public GradientTileFlip TileFlip { get; set; }
-
-        /// <summary>
         /// Create an instance of the object
         /// </summary>
         public GradientFill() : base()
         {
-          Type = Model.FillType.Gradient;
+          Type = TypeEnum.Gradient;
         }
 
         /// <summary>

@@ -40,6 +40,35 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class ShapeImageExportOptions 
   {                       
         /// <summary>
+        /// Get or sets thumbnail bounds
+        /// </summary>
+        /// <value>Get or sets thumbnail bounds</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ThumbnailBoundsEnum
+        {
+            
+            /// <summary>
+            /// Enum Slide for "Slide"
+            /// </summary>
+            Slide,
+            
+            /// <summary>
+            /// Enum Shape for "Shape"
+            /// </summary>
+            Shape,
+            
+            /// <summary>
+            /// Enum Appearance for "Appearance"
+            /// </summary>
+            Appearance
+        }
+
+        /// <summary>
+        /// Get or sets thumbnail bounds
+        /// </summary>
+        public ThumbnailBoundsEnum? ThumbnailBounds { get; set; }
+
+        /// <summary>
         /// Get or sets scaling ratio by X axis.
         /// </summary>
         public double? ScaleX { get; set; }
@@ -48,11 +77,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Get or sets scaling ratio by Y axis.
         /// </summary>
         public double? ScaleY { get; set; }
-
-        /// <summary>
-        /// Get or sets thumbnail bounds
-        /// </summary>
-        public ShapeThumbnailBounds ThumbnailBounds { get; set; }
 
         /// <summary>
         /// Gets export format.

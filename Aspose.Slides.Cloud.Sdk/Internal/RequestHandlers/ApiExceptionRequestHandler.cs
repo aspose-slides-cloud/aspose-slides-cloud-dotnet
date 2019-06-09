@@ -31,11 +31,6 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
 
     internal class ApiExceptionRequestHandler : IRequestHandler
     {
-        public string ProcessUrl(string url)
-        {
-            return url;
-        }
-
         public void BeforeSend(WebRequest request, Stream streamToSend)
         {            
         }

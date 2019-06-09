@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.DocumentApi.PostSlidesSplit" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostSlidesSplit" /> operation.
   /// </summary>  
   public class PostSlidesSplitRequest  
   {
@@ -45,18 +45,19 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostSlidesSplitRequest"/> class.
         /// </summary>
-        /// <param name="name">The document name.</param>
-        /// <param name="options">export options</param>
-        /// <param name="format">The format. Default value is jpeg.</param>
+        /// <param name="name">Document name.</param>
+        /// <param name="options">Export options.</param>
+        /// <param name="format">Export format. Default value is jpeg.</param>
         /// <param name="width">The width of created images.</param>
         /// <param name="height">The height of created images.</param>
         /// <param name="to">The last slide number for splitting, if is not specified splitting ends at the last slide of the document.</param>
         /// <param name="from">The start slide number for splitting, if is not specified splitting starts from the first slide of the presentation.</param>
         /// <param name="destFolder">Folder on storage where images are going to be uploaded. If not specified then images are uploaded to same folder as presentation.</param>
-        /// <param name="password">The document password.</param>
-        /// <param name="storage">The document storage.</param>
-        /// <param name="folder">The document folder.</param>
-        public PostSlidesSplitRequest(string name, ExportOptions options = null, SlideExportFormat? format = null, int? width = null, int? height = null, int? to = null, int? from = null, string destFolder = null, string password = null, string storage = null, string folder = null)
+        /// <param name="password">Document password.</param>
+        /// <param name="storage">Document storage.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="fontsFolder">Custom fonts folder.</param>
+        public PostSlidesSplitRequest(string name, ExportOptions options = null, SlideExportFormat? format = null, int? width = null, int? height = null, int? to = null, int? from = null, string destFolder = null, string password = null, string storage = null, string folder = null, string fontsFolder = null)
         {
             this.Name = name;
             this.Options = options;
@@ -69,20 +70,21 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.Password = password;
             this.Storage = storage;
             this.Folder = folder;
+            this.FontsFolder = fontsFolder;
         }
 
         /// <summary>
-        /// The document name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// export options
+        /// Export options.
         /// </summary>  
         public ExportOptions Options { get; set; }
 
         /// <summary>
-        /// The format. Default value is jpeg.
+        /// Export format. Default value is jpeg.
         /// </summary>  
         public SlideExportFormat? Format { get; set; }
 
@@ -112,18 +114,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string DestFolder { get; set; }
 
         /// <summary>
-        /// The document password.
+        /// Document password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// The document storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// The document folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
+
+        /// <summary>
+        /// Custom fonts folder.
+        /// </summary>  
+        public string FontsFolder { get; set; }
   }
 }

@@ -49,7 +49,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public Merge() : base()
         {
-          Type = Model.TaskType.Merge;
+          Type = TypeEnum.Merge;
         }
 
         /// <summary>

@@ -40,14 +40,83 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class SeriesMarker 
   {                       
         /// <summary>
-        /// size
+        /// symbol
         /// </summary>
-        public int? Size { get; set; }
+        /// <value>symbol</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SymbolEnum
+        {
+            
+            /// <summary>
+            /// Enum Circle for "Circle"
+            /// </summary>
+            Circle,
+            
+            /// <summary>
+            /// Enum Dash for "Dash"
+            /// </summary>
+            Dash,
+            
+            /// <summary>
+            /// Enum Diamond for "Diamond"
+            /// </summary>
+            Diamond,
+            
+            /// <summary>
+            /// Enum Dot for "Dot"
+            /// </summary>
+            Dot,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Picture for "Picture"
+            /// </summary>
+            Picture,
+            
+            /// <summary>
+            /// Enum Plus for "Plus"
+            /// </summary>
+            Plus,
+            
+            /// <summary>
+            /// Enum Square for "Square"
+            /// </summary>
+            Square,
+            
+            /// <summary>
+            /// Enum Star for "Star"
+            /// </summary>
+            Star,
+            
+            /// <summary>
+            /// Enum Triangle for "Triangle"
+            /// </summary>
+            Triangle,
+            
+            /// <summary>
+            /// Enum X for "X"
+            /// </summary>
+            X,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
 
         /// <summary>
         /// symbol
         /// </summary>
-        public MarkerStyleType Symbol { get; set; }
+        public SymbolEnum? Symbol { get; set; }
+
+        /// <summary>
+        /// size
+        /// </summary>
+        public int? Size { get; set; }
 
         /// <summary>
         /// Get or sets the fill format.

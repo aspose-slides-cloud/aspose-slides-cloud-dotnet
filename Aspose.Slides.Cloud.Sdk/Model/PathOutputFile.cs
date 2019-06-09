@@ -54,7 +54,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public PathOutputFile() : base()
         {
-          Type = Model.OutputFileType.Path;
+          Type = TypeEnum.Path;
         }
 
         /// <summary>

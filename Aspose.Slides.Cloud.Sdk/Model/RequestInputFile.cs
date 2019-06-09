@@ -49,7 +49,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public RequestInputFile() : base()
         {
-          Type = Model.InputFileType.Request;
+          Type = TypeEnum.Request;
         }
 
         /// <summary>
@@ -60,8 +60,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class RequestInputFile {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
           sb.Append("  Password: ").Append(this.Password).Append("\n");
+          sb.Append("  Type: ").Append(this.Type).Append("\n");
           sb.Append("  Index: ").Append(this.Index).Append("\n");
           sb.Append("}\n");
           return sb.ToString();

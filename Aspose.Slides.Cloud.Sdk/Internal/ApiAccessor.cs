@@ -34,10 +34,9 @@ namespace Aspose.Slides.Cloud.Sdk
         public ApiAccessor(Configuration configuration)
         {
             List<IRequestHandler> requestHandlers = new List<IRequestHandler>();
-            requestHandlers.Add(new OAuthRequestHandler(configuration));
+            requestHandlers.Add(new JwtRequestHandler(configuration));
             requestHandlers.Add(new DebugLogRequestHandler(configuration));
             requestHandlers.Add(new ApiExceptionRequestHandler());
-            requestHandlers.Add(new AuthWithSignatureRequestHandler(configuration));
             m_requestHandlers = requestHandlers;
         }
 
@@ -85,6 +84,28 @@ namespace Aspose.Slides.Cloud.Sdk
             where T : class
         {
             return new StreamToObjectApiInvoker<T>(m_requestHandlers).InvokeApi(url, method, body, headerParams, files, contentType);
+        }
+
+        public void InvokeVoidApi(
+            string url,
+            string method,
+            string body,
+            Dictionary<string, string> headerParams,
+            List<FileInfo> files,
+            string contentType)
+        {
+            new StringToNullApiInvoker(m_requestHandlers).InvokeApi(url, method, body, headerParams, files, contentType);
+        }
+
+        public void InvokeVoidStreamApi(
+            string url,
+            string method,
+            Stream body,
+            Dictionary<string, string> headerParams,
+            List<FileInfo> files,
+            string contentType)
+        {
+            new StreamToNullApiInvoker(m_requestHandlers).InvokeApi(url, method, body, headerParams, files, contentType);
         }
 
         public static FileInfo ToFileInfo(Stream stream, string paramName)

@@ -71,7 +71,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class DocumentProperty {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
           sb.Append("  Name: ").Append(this.Name).Append("\n");
           sb.Append("  Value: ").Append(this.Value).Append("\n");
           sb.Append("  BuiltIn: ").Append(this.BuiltIn).Append("\n");

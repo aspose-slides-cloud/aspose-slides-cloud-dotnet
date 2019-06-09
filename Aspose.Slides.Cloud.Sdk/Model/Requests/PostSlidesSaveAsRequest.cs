@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.DocumentApi.PostSlidesSaveAs" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostSlidesSaveAs" /> operation.
   /// </summary>  
   public class PostSlidesSaveAsRequest  
   {
@@ -45,15 +45,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostSlidesSaveAsRequest"/> class.
         /// </summary>
-        /// <param name="name">The presentation name</param>
-        /// <param name="format">Export format</param>
-        /// <param name="options">Tiff export options</param>
-        /// <param name="password">The password to open presentation.</param>
-        /// <param name="storage">Document&#39;s storage.</param>
-        /// <param name="folder">The presentation folder.</param>
-        /// <param name="outPath">The optional output path.</param>
-        /// <param name="fontsFolder">The optional custom fonts folder.</param>
-        public PostSlidesSaveAsRequest(string name, ExportFormat format, ExportOptions options = null, string password = null, string storage = null, string folder = null, string outPath = null, string fontsFolder = null)
+        /// <param name="name">Document name.</param>
+        /// <param name="format">Export format.</param>
+        /// <param name="options">Export options.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="storage">Document storage.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="fontsFolder">Custom fonts folder.</param>
+        public PostSlidesSaveAsRequest(string name, ExportFormat format, ExportOptions options = null, string password = null, string storage = null, string folder = null, string fontsFolder = null)
         {
             this.Name = name;
             this.Format = format;
@@ -61,47 +60,41 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.Password = password;
             this.Storage = storage;
             this.Folder = folder;
-            this.OutPath = outPath;
             this.FontsFolder = fontsFolder;
         }
 
         /// <summary>
-        /// The presentation name
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Export format
+        /// Export format.
         /// </summary>  
         public ExportFormat Format { get; set; }
 
         /// <summary>
-        /// Tiff export options
+        /// Export options.
         /// </summary>  
         public ExportOptions Options { get; set; }
 
         /// <summary>
-        /// The password to open presentation.
+        /// Document password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// Document's storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// The presentation folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
 
         /// <summary>
-        /// The optional output path.
-        /// </summary>  
-        public string OutPath { get; set; }
-
-        /// <summary>
-        /// The optional custom fonts folder.
+        /// Custom fonts folder.
         /// </summary>  
         public string FontsFolder { get; set; }
   }

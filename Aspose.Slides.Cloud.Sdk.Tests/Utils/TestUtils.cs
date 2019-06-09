@@ -23,7 +23,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using Com.Aspose.Storage.Api;
+using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using System;
 using System.Configuration;
 using System.IO;
@@ -41,8 +41,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                     ?? (s_configuration = new Configuration
                     {
                         DebugMode = GetBoolConfigValue("DebugMode", true),
-                        ApiBaseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"] ?? "http://api-dev.aspose.cloud",
-                        AuthType = GetEnumConfigValue("AuthType", AuthType.RequestSignature),
+                        ApiBaseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"] ?? "https://api-qa.aspose.cloud",
+                        AuthBaseUrl = ConfigurationManager.AppSettings["AuthBaseUrl"]
+                            ?? ConfigurationManager.AppSettings["ApiBaseUrl"]
+                            ?? "https://api-qa.aspose.cloud",
                         AppSid = ConfigurationManager.AppSettings["AppSid"],
                         AppKey = ConfigurationManager.AppSettings["AppKey"]
                     });
@@ -52,19 +54,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
         public static void Upload(string localPath, string storagePath)
         {
             Stream file = File.OpenRead(Path.Combine(TestDataPath, localPath));
-            byte[] fileBytes = new byte[file.Length];
-            file.Read(fileBytes, 0, (int)file.Length);
-            s_storageApi.PutCreate(storagePath, null, null, fileBytes);
-        }
-
-        public static void DeleteFolder(string path)
-        {
-            s_storageApi.DeleteFolder(path, null, true);
+            new SlidesApi(Configuration).UploadFile(new UploadFileRequest { File = file, Path = storagePath });
         }
 
         public static void DeleteFile(string storagePath)
         {
-            s_storageApi.DeleteFile(storagePath, null, null);
+            new SlidesApi(Configuration).DeleteFile(new DeleteFileRequest { Path = storagePath });
         }
 
         public static FileInfo GetLocalFile(string path, string mimeType)
@@ -79,19 +74,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         private static Configuration s_configuration;
         private static TimeSpan m_timeout = new TimeSpan(0, 1, 0);
-        private static StorageApi s_storageApi = new StorageApi(
-            Configuration.AppKey, Configuration.AppSid, Configuration.ApiBaseUrl + "/v1.1");
 
         private static bool GetBoolConfigValue(string key, bool defaultValue)
         {
             bool result;
             return bool.TryParse(ConfigurationManager.AppSettings[key], out result) ? result : defaultValue;
-        }
-
-        private static T GetEnumConfigValue<T>(string key, T defaultValue) where T : struct, IConvertible
-        {
-            T result;
-            return Enum.TryParse(ConfigurationManager.AppSettings[key], out result) ? result : defaultValue;
         }
     }
 }

@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.DocumentApi.PutSlidesConvert" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PutSlidesConvert" /> operation.
   /// </summary>  
   public class PutSlidesConvertRequest  
   {
@@ -45,42 +45,42 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PutSlidesConvertRequest"/> class.
         /// </summary>
-        /// <param name="format">The format.</param>
-        /// <param name="document"></param>
-        /// <param name="password">The document password.</param>
-        /// <param name="outPath">Path to save result</param>
-        /// <param name="fontsFolder">The optional custom fonts folder.</param>
-        public PutSlidesConvertRequest(ExportFormat format, Stream document = null, string password = null, string outPath = null, string fontsFolder = null)
+        /// <param name="format">Export format.</param>
+        /// <param name="outPath">Path to save result.</param>
+        /// <param name="document">Document data.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="fontsFolder">Custom fonts folder.</param>
+        public PutSlidesConvertRequest(ExportFormat format, string outPath, System.IO.Stream document = null, string password = null, string fontsFolder = null)
         {
             this.Format = format;
+            this.OutPath = outPath;
             this.Document = document;
             this.Password = password;
-            this.OutPath = outPath;
             this.FontsFolder = fontsFolder;
         }
 
         /// <summary>
-        /// The format.
+        /// Export format.
         /// </summary>  
         public ExportFormat Format { get; set; }
 
         /// <summary>
-        /// Gets or sets Document
-        /// </summary>  
-        public Stream Document { get; set; }
-
-        /// <summary>
-        /// The document password.
-        /// </summary>  
-        public string Password { get; set; }
-
-        /// <summary>
-        /// Path to save result
+        /// Path to save result.
         /// </summary>  
         public string OutPath { get; set; }
 
         /// <summary>
-        /// The optional custom fonts folder.
+        /// Document data.
+        /// </summary>  
+        public System.IO.Stream Document { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
+
+        /// <summary>
+        /// Custom fonts folder.
         /// </summary>  
         public string FontsFolder { get; set; }
   }

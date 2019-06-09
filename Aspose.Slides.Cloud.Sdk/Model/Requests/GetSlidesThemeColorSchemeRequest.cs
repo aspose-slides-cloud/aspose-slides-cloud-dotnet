@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ThemeApi.GetSlidesThemeColorScheme" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.GetSlidesThemeColorScheme" /> operation.
   /// </summary>  
   public class GetSlidesThemeColorSchemeRequest  
   {

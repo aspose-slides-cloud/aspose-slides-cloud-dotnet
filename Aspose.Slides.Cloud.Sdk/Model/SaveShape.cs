@@ -42,7 +42,46 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Format.
         /// </summary>
-        public ShapeExportFormat Format { get; set; }
+        /// <value>Format.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FormatEnum
+        {
+            
+            /// <summary>
+            /// Enum Jpeg for "Jpeg"
+            /// </summary>
+            Jpeg,
+            
+            /// <summary>
+            /// Enum Png for "Png"
+            /// </summary>
+            Png,
+            
+            /// <summary>
+            /// Enum Gif for "Gif"
+            /// </summary>
+            Gif,
+            
+            /// <summary>
+            /// Enum Bmp for "Bmp"
+            /// </summary>
+            Bmp,
+            
+            /// <summary>
+            /// Enum Tiff for "Tiff"
+            /// </summary>
+            Tiff,
+            
+            /// <summary>
+            /// Enum Svg for "Svg"
+            /// </summary>
+            Svg
+        }
+
+        /// <summary>
+        /// Format.
+        /// </summary>
+        public FormatEnum? Format { get; set; }
 
         /// <summary>
         /// Shape path.
@@ -64,7 +103,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public SaveShape() : base()
         {
-          Type = Model.TaskType.SaveShape;
+          Type = TypeEnum.SaveShape;
         }
 
         /// <summary>

@@ -73,7 +73,25 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 try
                 {
-                    return (T)new XmlSerializer(typeof(T)).Deserialize(content);
+                    try
+                    {
+                        return (T)new XmlSerializer(typeof(T)).Deserialize(content);
+                    }
+                    catch (Exception ex)
+                    {
+                        try
+                        {
+                            content.Position = 0;
+                            using (StreamReader responseReader = new StreamReader(content))
+                            {
+                                return Deserialize<T>(responseReader.ReadToEnd());
+                            }
+                        }
+                        catch
+                        {
+                            throw ex;
+                        }
+                    }
                 }
                 catch (InvalidOperationException ex)
                 {

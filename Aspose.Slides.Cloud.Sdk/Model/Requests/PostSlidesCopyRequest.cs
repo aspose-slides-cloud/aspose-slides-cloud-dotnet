@@ -50,16 +50,18 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="position">The target position at which to copy the slide. Copy to the end by default.</param>
         /// <param name="source">Name of the document to copy a slide from.</param>
         /// <param name="sourcePassword">Password for the document to copy a slide from.</param>
+        /// <param name="sourceStorage">Template storage name.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PostSlidesCopyRequest(string name, int slideToCopy, int? position = null, string source = null, string sourcePassword = null, string password = null, string folder = null, string storage = null)
+        public PostSlidesCopyRequest(string name, int slideToCopy, int? position = null, string source = null, string sourcePassword = null, string sourceStorage = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideToCopy = slideToCopy;
             this.Position = position;
             this.Source = source;
             this.SourcePassword = sourcePassword;
+            this.SourceStorage = sourceStorage;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
@@ -89,6 +91,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Password for the document to copy a slide from.
         /// </summary>  
         public string SourcePassword { get; set; }
+
+        /// <summary>
+        /// Template storage name.
+        /// </summary>  
+        public string SourceStorage { get; set; }
 
         /// <summary>
         /// Document password.

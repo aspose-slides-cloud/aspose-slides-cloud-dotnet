@@ -47,12 +47,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="slideIndex">Slide index.</param>
-        /// <param name="background">Slide background update data. Required unless color parameter is specified.</param>
+        /// <param name="background">Slide background update data.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="password">Document password.</param>
         /// <param name="storage">Document storage.</param>
-        /// <param name="color">Slide background target color in RRGGBB format. Ignored if background parameter is specified. Required unless background parameter is specified.</param>
-        public PutSlidesSlideBackgroundRequest(string name, int slideIndex, SlideBackground background = null, string folder = null, string password = null, string storage = null, string color = null)
+        public PutSlidesSlideBackgroundRequest(string name, int slideIndex, SlideBackground background = null, string folder = null, string password = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
@@ -60,7 +59,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.Folder = folder;
             this.Password = password;
             this.Storage = storage;
-            this.Color = color;
         }
 
         /// <summary>
@@ -74,7 +72,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Slide background update data. Required unless color parameter is specified.
+        /// Slide background update data.
         /// </summary>  
         public SlideBackground Background { get; set; }
 
@@ -92,10 +90,5 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
-
-        /// <summary>
-        /// Slide background target color in RRGGBB format. Ignored if background parameter is specified. Required unless background parameter is specified.
-        /// </summary>  
-        public string Color { get; set; }
   }
 }

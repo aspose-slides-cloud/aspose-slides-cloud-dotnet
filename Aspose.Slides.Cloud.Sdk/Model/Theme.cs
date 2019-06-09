@@ -76,7 +76,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class Theme {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
           sb.Append("  Name: ").Append(this.Name).Append("\n");
           sb.Append("  ColorScheme: ").Append(this.ColorScheme).Append("\n");
           sb.Append("  FontScheme: ").Append(this.FontScheme).Append("\n");

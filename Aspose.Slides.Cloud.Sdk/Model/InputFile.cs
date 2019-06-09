@@ -40,9 +40,32 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class InputFile 
   {                       
         /// <summary>
-        /// Gets type of input source.
+        /// Gets or Sets Type
         /// </summary>
-        public InputFileType Type { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Path for "Path"
+            /// </summary>
+            Path,
+            
+            /// <summary>
+            /// Enum Request for "Request"
+            /// </summary>
+            Request,
+            
+            /// <summary>
+            /// Enum Base64 for "Base64"
+            /// </summary>
+            Base64
+        }
+
+        /// <summary>
+        /// Gets or sets Type
+        /// </summary>
+        public TypeEnum? Type { get; set; }
 
         /// <summary>
         /// Get or sets password to open document.
@@ -64,8 +87,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class InputFile {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
           sb.Append("  Password: ").Append(this.Password).Append("\n");
+          sb.Append("  Type: ").Append(this.Type).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

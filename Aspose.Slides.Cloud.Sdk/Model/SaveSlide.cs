@@ -40,14 +40,118 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class SaveSlide : Task 
   {                       
         /// <summary>
-        /// Output to save the slide to.
+        /// Save format.
         /// </summary>
-        public OutputFile Output { get; set; }
+        /// <value>Save format.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FormatEnum
+        {
+            
+            /// <summary>
+            /// Enum Jpeg for "Jpeg"
+            /// </summary>
+            Jpeg,
+            
+            /// <summary>
+            /// Enum Png for "Png"
+            /// </summary>
+            Png,
+            
+            /// <summary>
+            /// Enum Gif for "Gif"
+            /// </summary>
+            Gif,
+            
+            /// <summary>
+            /// Enum Bmp for "Bmp"
+            /// </summary>
+            Bmp,
+            
+            /// <summary>
+            /// Enum Tiff for "Tiff"
+            /// </summary>
+            Tiff,
+            
+            /// <summary>
+            /// Enum Html for "Html"
+            /// </summary>
+            Html,
+            
+            /// <summary>
+            /// Enum Pdf for "Pdf"
+            /// </summary>
+            Pdf,
+            
+            /// <summary>
+            /// Enum Xps for "Xps"
+            /// </summary>
+            Xps,
+            
+            /// <summary>
+            /// Enum Pptx for "Pptx"
+            /// </summary>
+            Pptx,
+            
+            /// <summary>
+            /// Enum Odp for "Odp"
+            /// </summary>
+            Odp,
+            
+            /// <summary>
+            /// Enum Otp for "Otp"
+            /// </summary>
+            Otp,
+            
+            /// <summary>
+            /// Enum Ppt for "Ppt"
+            /// </summary>
+            Ppt,
+            
+            /// <summary>
+            /// Enum Pps for "Pps"
+            /// </summary>
+            Pps,
+            
+            /// <summary>
+            /// Enum Ppsx for "Ppsx"
+            /// </summary>
+            Ppsx,
+            
+            /// <summary>
+            /// Enum Pptm for "Pptm"
+            /// </summary>
+            Pptm,
+            
+            /// <summary>
+            /// Enum Ppsm for "Ppsm"
+            /// </summary>
+            Ppsm,
+            
+            /// <summary>
+            /// Enum Potx for "Potx"
+            /// </summary>
+            Potx,
+            
+            /// <summary>
+            /// Enum Potm for "Potm"
+            /// </summary>
+            Potm,
+            
+            /// <summary>
+            /// Enum Svg for "Svg"
+            /// </summary>
+            Svg
+        }
 
         /// <summary>
         /// Save format.
         /// </summary>
-        public SlideExportFormat Format { get; set; }
+        public FormatEnum? Format { get; set; }
+
+        /// <summary>
+        /// Output to save the slide to.
+        /// </summary>
+        public OutputFile Output { get; set; }
 
         /// <summary>
         /// Save options.
@@ -74,7 +178,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public SaveSlide() : base()
         {
-          Type = Model.TaskType.SaveSlide;
+          Type = TypeEnum.SaveSlide;
         }
 
         /// <summary>

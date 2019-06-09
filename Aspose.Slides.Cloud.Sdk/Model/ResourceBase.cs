@@ -50,11 +50,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public List<ResourceUri> AlternateLinks { get; set; }
 
         /// <summary>
-        /// A list of links that originate from this document.
-        /// </summary>
-        public List<ResourceUri> Links { get; set; }
-
-        /// <summary>
         /// Create an instance of the object
         /// </summary>
         public ResourceBase() : base()
@@ -71,7 +66,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class ResourceBase {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

@@ -29,6 +29,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
     {
         public FileRule[] Files { get; set; }
         public ValueRule[] Values { get; set; }
+        public OKToReturnNullRule[] OKToReturnNull { get; set; }
         public OKToNotFailRule[] OKToNotFail { get; set; }
         public ResultRule[] Results { get; set; }
     }
@@ -79,6 +80,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
         }
 
         public string Type { get; set; }
+    }
+
+    internal class OKToReturnNullRule : TestRule
+    {
     }
 
     internal class OKToNotFailRule : TestRule

@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.NotesSlideApi.PutUpdateNotesSlide" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PutUpdateNotesSlide" /> operation.
   /// </summary>  
   public class PutUpdateNotesSlideRequest  
   {
@@ -47,7 +47,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="slideIndex">Slide index.</param>
-        /// <param name="dto">A  object with notes slide data.</param>
+        /// <param name="dto">A NotesSlide object with notes slide data.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
@@ -72,7 +72,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// A  object with notes slide data.
+        /// A NotesSlide object with notes slide data.
         /// </summary>  
         public NotesSlide Dto { get; set; }
 

@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.DocumentApi.PostSlidesPipeline" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostSlidesPipeline" /> operation.
   /// </summary>  
   public class PostSlidesPipelineRequest  
   {
@@ -45,14 +45,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostSlidesPipelineRequest"/> class.
         /// </summary>
-        /// <param name="pipeline"></param>
+        /// <param name="pipeline">A Pipeline object.</param>
         public PostSlidesPipelineRequest(Pipeline pipeline = null)
         {
             this.Pipeline = pipeline;
         }
 
         /// <summary>
-        /// Gets or sets Pipeline
+        /// A Pipeline object.
         /// </summary>  
         public Pipeline Pipeline { get; set; }
   }

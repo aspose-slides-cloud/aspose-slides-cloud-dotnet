@@ -40,34 +40,379 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Portion : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets Text
+        /// Gets or Sets FontBold
         /// </summary>
-        public string Text { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FontBoldEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets FontItalic
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FontItalicEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets FontUnderline
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FontUnderlineEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Words for "Words"
+            /// </summary>
+            Words,
+            
+            /// <summary>
+            /// Enum Single for "Single"
+            /// </summary>
+            Single,
+            
+            /// <summary>
+            /// Enum Double for "Double"
+            /// </summary>
+            Double,
+            
+            /// <summary>
+            /// Enum Heavy for "Heavy"
+            /// </summary>
+            Heavy,
+            
+            /// <summary>
+            /// Enum Dotted for "Dotted"
+            /// </summary>
+            Dotted,
+            
+            /// <summary>
+            /// Enum HeavyDotted for "HeavyDotted"
+            /// </summary>
+            HeavyDotted,
+            
+            /// <summary>
+            /// Enum Dashed for "Dashed"
+            /// </summary>
+            Dashed,
+            
+            /// <summary>
+            /// Enum HeavyDashed for "HeavyDashed"
+            /// </summary>
+            HeavyDashed,
+            
+            /// <summary>
+            /// Enum LongDashed for "LongDashed"
+            /// </summary>
+            LongDashed,
+            
+            /// <summary>
+            /// Enum HeavyLongDashed for "HeavyLongDashed"
+            /// </summary>
+            HeavyLongDashed,
+            
+            /// <summary>
+            /// Enum DotDash for "DotDash"
+            /// </summary>
+            DotDash,
+            
+            /// <summary>
+            /// Enum HeavyDotDash for "HeavyDotDash"
+            /// </summary>
+            HeavyDotDash,
+            
+            /// <summary>
+            /// Enum DotDotDash for "DotDotDash"
+            /// </summary>
+            DotDotDash,
+            
+            /// <summary>
+            /// Enum HeavyDotDotDash for "HeavyDotDotDash"
+            /// </summary>
+            HeavyDotDotDash,
+            
+            /// <summary>
+            /// Enum Wavy for "Wavy"
+            /// </summary>
+            Wavy,
+            
+            /// <summary>
+            /// Enum HeavyWavy for "HeavyWavy"
+            /// </summary>
+            HeavyWavy,
+            
+            /// <summary>
+            /// Enum DoubleWavy for "DoubleWavy"
+            /// </summary>
+            DoubleWavy,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets StrikethroughType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StrikethroughTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Single for "Single"
+            /// </summary>
+            Single,
+            
+            /// <summary>
+            /// Enum Double for "Double"
+            /// </summary>
+            Double,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets TextCapType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TextCapTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Small for "Small"
+            /// </summary>
+            Small,
+            
+            /// <summary>
+            /// Enum All for "All"
+            /// </summary>
+            All,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets NormaliseHeight
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum NormaliseHeightEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets ProofDisabled
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ProofDisabledEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets Kumimoji
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum KumimojiEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets IsHardUnderlineFill
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum IsHardUnderlineFillEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Gets or Sets IsHardUnderlineLine
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum IsHardUnderlineLineEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
 
         /// <summary>
         /// Gets or sets FontBold
         /// </summary>
-        public NullableBool FontBold { get; set; }
+        public FontBoldEnum? FontBold { get; set; }
 
         /// <summary>
         /// Gets or sets FontItalic
         /// </summary>
-        public NullableBool FontItalic { get; set; }
+        public FontItalicEnum? FontItalic { get; set; }
 
         /// <summary>
         /// Gets or sets FontUnderline
         /// </summary>
-        public TextUnderlineType FontUnderline { get; set; }
+        public FontUnderlineEnum? FontUnderline { get; set; }
 
         /// <summary>
         /// Gets or sets StrikethroughType
         /// </summary>
-        public TextStrikethroughType StrikethroughType { get; set; }
+        public StrikethroughTypeEnum? StrikethroughType { get; set; }
 
         /// <summary>
         /// Gets or sets TextCapType
         /// </summary>
-        public TextCapType TextCapType { get; set; }
+        public TextCapTypeEnum? TextCapType { get; set; }
+
+        /// <summary>
+        /// Gets or sets NormaliseHeight
+        /// </summary>
+        public NormaliseHeightEnum? NormaliseHeight { get; set; }
+
+        /// <summary>
+        /// Gets or sets ProofDisabled
+        /// </summary>
+        public ProofDisabledEnum? ProofDisabled { get; set; }
+
+        /// <summary>
+        /// Gets or sets Kumimoji
+        /// </summary>
+        public KumimojiEnum? Kumimoji { get; set; }
+
+        /// <summary>
+        /// Gets or sets IsHardUnderlineFill
+        /// </summary>
+        public IsHardUnderlineFillEnum? IsHardUnderlineFill { get; set; }
+
+        /// <summary>
+        /// Gets or sets IsHardUnderlineLine
+        /// </summary>
+        public IsHardUnderlineLineEnum? IsHardUnderlineLine { get; set; }
+
+        /// <summary>
+        /// Gets or sets Text
+        /// </summary>
+        public string Text { get; set; }
 
         /// <summary>
         /// Gets or sets Escapement
@@ -95,16 +440,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public double? FontHeight { get; set; }
 
         /// <summary>
-        /// Gets or sets NormaliseHeight
-        /// </summary>
-        public NullableBool NormaliseHeight { get; set; }
-
-        /// <summary>
-        /// Gets or sets ProofDisabled
-        /// </summary>
-        public NullableBool ProofDisabled { get; set; }
-
-        /// <summary>
         /// Gets or sets SmartTagClean
         /// </summary>
         public bool? SmartTagClean { get; set; }
@@ -115,11 +450,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public double? KerningMinimalSize { get; set; }
 
         /// <summary>
-        /// Gets or sets Kumimoji
-        /// </summary>
-        public NullableBool Kumimoji { get; set; }
-
-        /// <summary>
         /// Gets or sets LanguageId
         /// </summary>
         public string LanguageId { get; set; }
@@ -128,16 +458,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Gets or sets AlternativeLanguageId
         /// </summary>
         public string AlternativeLanguageId { get; set; }
-
-        /// <summary>
-        /// Gets or sets IsHardUnderlineFill
-        /// </summary>
-        public NullableBool IsHardUnderlineFill { get; set; }
-
-        /// <summary>
-        /// Gets or sets IsHardUnderlineLine
-        /// </summary>
-        public NullableBool IsHardUnderlineLine { get; set; }
 
         /// <summary>
         /// Gets or sets FillFormat
@@ -181,7 +501,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class Portion {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
           sb.Append("  Text: ").Append(this.Text).Append("\n");
           sb.Append("  FontBold: ").Append(this.FontBold).Append("\n");
           sb.Append("  FontItalic: ").Append(this.FontItalic).Append("\n");

@@ -54,7 +54,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public UpdateBackground() : base()
         {
-          Type = Model.TaskType.UpdateBackground;
+          Type = TypeEnum.UpdateBackground;
         }
 
         /// <summary>

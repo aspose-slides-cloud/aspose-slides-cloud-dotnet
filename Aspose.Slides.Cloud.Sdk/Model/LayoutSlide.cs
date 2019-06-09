@@ -40,14 +40,202 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class LayoutSlide : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets Name
+        /// Gets or Sets Type
         /// </summary>
-        public string Name { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Title for "Title"
+            /// </summary>
+            Title,
+            
+            /// <summary>
+            /// Enum Text for "Text"
+            /// </summary>
+            Text,
+            
+            /// <summary>
+            /// Enum TwoColumnText for "TwoColumnText"
+            /// </summary>
+            TwoColumnText,
+            
+            /// <summary>
+            /// Enum Table for "Table"
+            /// </summary>
+            Table,
+            
+            /// <summary>
+            /// Enum TextAndChart for "TextAndChart"
+            /// </summary>
+            TextAndChart,
+            
+            /// <summary>
+            /// Enum ChartAndText for "ChartAndText"
+            /// </summary>
+            ChartAndText,
+            
+            /// <summary>
+            /// Enum Diagram for "Diagram"
+            /// </summary>
+            Diagram,
+            
+            /// <summary>
+            /// Enum Chart for "Chart"
+            /// </summary>
+            Chart,
+            
+            /// <summary>
+            /// Enum TextAndClipArt for "TextAndClipArt"
+            /// </summary>
+            TextAndClipArt,
+            
+            /// <summary>
+            /// Enum ClipArtAndText for "ClipArtAndText"
+            /// </summary>
+            ClipArtAndText,
+            
+            /// <summary>
+            /// Enum TitleOnly for "TitleOnly"
+            /// </summary>
+            TitleOnly,
+            
+            /// <summary>
+            /// Enum Blank for "Blank"
+            /// </summary>
+            Blank,
+            
+            /// <summary>
+            /// Enum TextAndObject for "TextAndObject"
+            /// </summary>
+            TextAndObject,
+            
+            /// <summary>
+            /// Enum ObjectAndText for "ObjectAndText"
+            /// </summary>
+            ObjectAndText,
+            
+            /// <summary>
+            /// Enum Object for "Object"
+            /// </summary>
+            Object,
+            
+            /// <summary>
+            /// Enum TitleAndObject for "TitleAndObject"
+            /// </summary>
+            TitleAndObject,
+            
+            /// <summary>
+            /// Enum TextAndMedia for "TextAndMedia"
+            /// </summary>
+            TextAndMedia,
+            
+            /// <summary>
+            /// Enum MediaAndText for "MediaAndText"
+            /// </summary>
+            MediaAndText,
+            
+            /// <summary>
+            /// Enum ObjectOverText for "ObjectOverText"
+            /// </summary>
+            ObjectOverText,
+            
+            /// <summary>
+            /// Enum TextOverObject for "TextOverObject"
+            /// </summary>
+            TextOverObject,
+            
+            /// <summary>
+            /// Enum TextAndTwoObjects for "TextAndTwoObjects"
+            /// </summary>
+            TextAndTwoObjects,
+            
+            /// <summary>
+            /// Enum TwoObjectsAndText for "TwoObjectsAndText"
+            /// </summary>
+            TwoObjectsAndText,
+            
+            /// <summary>
+            /// Enum TwoObjectsOverText for "TwoObjectsOverText"
+            /// </summary>
+            TwoObjectsOverText,
+            
+            /// <summary>
+            /// Enum FourObjects for "FourObjects"
+            /// </summary>
+            FourObjects,
+            
+            /// <summary>
+            /// Enum VerticalText for "VerticalText"
+            /// </summary>
+            VerticalText,
+            
+            /// <summary>
+            /// Enum ClipArtAndVerticalText for "ClipArtAndVerticalText"
+            /// </summary>
+            ClipArtAndVerticalText,
+            
+            /// <summary>
+            /// Enum VerticalTitleAndText for "VerticalTitleAndText"
+            /// </summary>
+            VerticalTitleAndText,
+            
+            /// <summary>
+            /// Enum VerticalTitleAndTextOverChart for "VerticalTitleAndTextOverChart"
+            /// </summary>
+            VerticalTitleAndTextOverChart,
+            
+            /// <summary>
+            /// Enum TwoObjects for "TwoObjects"
+            /// </summary>
+            TwoObjects,
+            
+            /// <summary>
+            /// Enum ObjectAndTwoObject for "ObjectAndTwoObject"
+            /// </summary>
+            ObjectAndTwoObject,
+            
+            /// <summary>
+            /// Enum TwoObjectsAndObject for "TwoObjectsAndObject"
+            /// </summary>
+            TwoObjectsAndObject,
+            
+            /// <summary>
+            /// Enum SectionHeader for "SectionHeader"
+            /// </summary>
+            SectionHeader,
+            
+            /// <summary>
+            /// Enum TwoTextAndTwoObjects for "TwoTextAndTwoObjects"
+            /// </summary>
+            TwoTextAndTwoObjects,
+            
+            /// <summary>
+            /// Enum TitleObjectAndCaption for "TitleObjectAndCaption"
+            /// </summary>
+            TitleObjectAndCaption,
+            
+            /// <summary>
+            /// Enum PictureAndCaption for "PictureAndCaption"
+            /// </summary>
+            PictureAndCaption,
+            
+            /// <summary>
+            /// Enum Custom for "Custom"
+            /// </summary>
+            Custom
+        }
 
         /// <summary>
         /// Gets or sets Type
         /// </summary>
-        public LayoutSlideType Type { get; set; }
+        public TypeEnum? Type { get; set; }
+
+        /// <summary>
+        /// Gets or sets Name
+        /// </summary>
+        public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets MasterSlide
@@ -76,7 +264,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class LayoutSlide {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
           sb.Append("  Name: ").Append(this.Name).Append("\n");
           sb.Append("  Type: ").Append(this.Type).Append("\n");
           sb.Append("  MasterSlide: ").Append(this.MasterSlide).Append("\n");

@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.ImagesApi.GetSlidesImageWithFormat" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.GetSlidesImageWithFormat" /> operation.
   /// </summary>  
   public class GetSlidesImageWithFormatRequest  
   {
@@ -47,11 +47,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="index">Image index.</param>
-        /// <param name="format">Export format (png, jpg, gif). Pass null to export image &#39;as is&#39;.</param>
+        /// <param name="format">Export format (png, jpg, gif).</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public GetSlidesImageWithFormatRequest(string name, int index, ImageExportFormat? format = null, string password = null, string folder = null, string storage = null)
+        public GetSlidesImageWithFormatRequest(string name, int index, ImageExportFormat format, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.Index = index;
@@ -72,9 +72,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int Index { get; set; }
 
         /// <summary>
-        /// Export format (png, jpg, gif). Pass null to export image 'as is'.
+        /// Export format (png, jpg, gif).
         /// </summary>  
-        public ImageExportFormat? Format { get; set; }
+        public ImageExportFormat Format { get; set; }
 
         /// <summary>
         /// Document password.

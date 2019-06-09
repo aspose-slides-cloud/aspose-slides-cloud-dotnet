@@ -44,11 +44,6 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
 #endif
         }
 
-        public string ProcessUrl(string url)
-        {
-            return url;
-        }
-
         public void BeforeSend(WebRequest request, Stream streamToSend)
         {
             if (m_configuration.DebugMode)

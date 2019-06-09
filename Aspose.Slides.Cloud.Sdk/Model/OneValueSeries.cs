@@ -40,6 +40,35 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class OneValueSeries : Series 
   {                       
         /// <summary>
+        /// Data point type.
+        /// </summary>
+        /// <value>Data point type.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DataPointTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum OneValue for "OneValue"
+            /// </summary>
+            OneValue,
+            
+            /// <summary>
+            /// Enum Scatter for "Scatter"
+            /// </summary>
+            Scatter,
+            
+            /// <summary>
+            /// Enum Bubble for "Bubble"
+            /// </summary>
+            Bubble
+        }
+
+        /// <summary>
+        /// Data point type.
+        /// </summary>
+        public DataPointTypeEnum? DataPointType { get; set; }
+
+        /// <summary>
         /// Gets or sets the values.
         /// </summary>
         public List<OneValueChartDataPoint> DataPoints { get; set; }
@@ -59,7 +88,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class OneValueSeries {\n");
-          sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
           sb.Append("  Type: ").Append(this.Type).Append("\n");
           sb.Append("  Name: ").Append(this.Name).Append("\n");
           sb.Append("  IsColorVaried: ").Append(this.IsColorVaried).Append("\n");
@@ -77,6 +105,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
           sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
           sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+          sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
           sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
           sb.Append("}\n");
           return sb.ToString();

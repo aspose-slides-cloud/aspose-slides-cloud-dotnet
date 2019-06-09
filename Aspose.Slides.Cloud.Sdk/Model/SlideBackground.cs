@@ -40,9 +40,47 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class SlideBackground : ResourceBase 
   {                       
         /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum NoFill for "NoFill"
+            /// </summary>
+            NoFill,
+            
+            /// <summary>
+            /// Enum Solid for "Solid"
+            /// </summary>
+            Solid,
+            
+            /// <summary>
+            /// Enum Gradient for "Gradient"
+            /// </summary>
+            Gradient,
+            
+            /// <summary>
+            /// Enum Pattern for "Pattern"
+            /// </summary>
+            Pattern,
+            
+            /// <summary>
+            /// Enum Picture for "Picture"
+            /// </summary>
+            Picture,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
         /// Gets or sets Type
         /// </summary>
-        public FillType Type { get; set; }
+        public TypeEnum? Type { get; set; }
 
         /// <summary>
         /// Gets or sets FillFormat
@@ -71,7 +109,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class SlideBackground {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
           sb.Append("  Type: ").Append(this.Type).Append("\n");
           sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
           sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");

@@ -35,7 +35,7 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// Represents text item, referenced by 
+  /// Represents text item, referenced by TextItems
   /// </summary>  
   public class TextItem 
   {                       

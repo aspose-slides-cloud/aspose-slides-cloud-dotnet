@@ -61,7 +61,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class SplitDocumentResult {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
           sb.Append("  Slides: ").Append(this.Slides).Append("\n");
           sb.Append("}\n");
           return sb.ToString();

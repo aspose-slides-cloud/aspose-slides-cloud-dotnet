@@ -40,9 +40,33 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class PptxExportOptions : ExportOptions 
   {                       
         /// <summary>
-        /// The conformance class to which the PresentationML document conforms. Read/write .
+        /// The conformance class to which the PresentationML document conforms. Read/write Conformance.
         /// </summary>
-        public Conformance Conformance { get; set; }
+        /// <value>The conformance class to which the PresentationML document conforms. Read/write Conformance.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ConformanceEnum
+        {
+            
+            /// <summary>
+            /// Enum Ecma3762006 for "Ecma376_2006"
+            /// </summary>
+            Ecma3762006,
+            
+            /// <summary>
+            /// Enum Iso295002008Transitional for "Iso29500_2008_Transitional"
+            /// </summary>
+            Iso295002008Transitional,
+            
+            /// <summary>
+            /// Enum Iso295002008Strict for "Iso29500_2008_Strict"
+            /// </summary>
+            Iso295002008Strict
+        }
+
+        /// <summary>
+        /// The conformance class to which the PresentationML document conforms. Read/write Conformance.
+        /// </summary>
+        public ConformanceEnum? Conformance { get; set; }
 
         /// <summary>
         /// Create an instance of the object

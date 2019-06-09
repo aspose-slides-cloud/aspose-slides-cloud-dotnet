@@ -49,7 +49,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public RemoveSlide() : base()
         {
-          Type = Model.TaskType.RemoveSlide;
+          Type = TypeEnum.RemoveSlide;
         }
 
         /// <summary>

@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.DocumentApi.PostSlidesDocument" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostSlidesDocument" /> operation.
   /// </summary>  
   public class PostSlidesDocumentRequest  
   {
@@ -45,50 +45,36 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostSlidesDocumentRequest"/> class.
         /// </summary>
-        /// <param name="name">The document name.</param>
-        /// <param name="data"></param>
-        /// <param name="templatePath">Template file path.</param>
-        /// <param name="templateStorage">Template storage name.</param>
-        /// <param name="isImageDataEmbedded">Is Image Data Embedded</param>
+        /// <param name="name">Document name.</param>
+        /// <param name="data">Document input data.</param>
+        /// <param name="inputPassword">The password for input document.</param>
         /// <param name="password">The document password.</param>
-        /// <param name="storage">Document&#39;s storage.</param>
-        /// <param name="folder">Document&#39;s folder.</param>
-        public PostSlidesDocumentRequest(string name, string data, string templatePath, string templateStorage = null, bool? isImageDataEmbedded = null, string password = null, string storage = null, string folder = null)
+        /// <param name="storage">Document storage.</param>
+        /// <param name="folder">Document folder.</param>
+        public PostSlidesDocumentRequest(string name, System.IO.Stream data = null, string inputPassword = null, string password = null, string storage = null, string folder = null)
         {
             this.Name = name;
             this.Data = data;
-            this.TemplatePath = templatePath;
-            this.TemplateStorage = templateStorage;
-            this.IsImageDataEmbedded = isImageDataEmbedded;
+            this.InputPassword = inputPassword;
             this.Password = password;
             this.Storage = storage;
             this.Folder = folder;
         }
 
         /// <summary>
-        /// The document name.
+        /// Document name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets Data
+        /// Document input data.
         /// </summary>  
-        public string Data { get; set; }
+        public System.IO.Stream Data { get; set; }
 
         /// <summary>
-        /// Template file path.
+        /// The password for input document.
         /// </summary>  
-        public string TemplatePath { get; set; }
-
-        /// <summary>
-        /// Template storage name.
-        /// </summary>  
-        public string TemplateStorage { get; set; }
-
-        /// <summary>
-        /// Is Image Data Embedded
-        /// </summary>  
-        public bool? IsImageDataEmbedded { get; set; }
+        public string InputPassword { get; set; }
 
         /// <summary>
         /// The document password.
@@ -96,12 +82,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// Document's storage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
 
         /// <summary>
-        /// Document's folder.
+        /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
   }

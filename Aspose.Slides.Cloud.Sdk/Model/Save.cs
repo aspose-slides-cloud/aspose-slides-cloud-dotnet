@@ -42,7 +42,116 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Format.
         /// </summary>
-        public ExportFormat Format { get; set; }
+        /// <value>Format.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FormatEnum
+        {
+            
+            /// <summary>
+            /// Enum Pdf for "Pdf"
+            /// </summary>
+            Pdf,
+            
+            /// <summary>
+            /// Enum Xps for "Xps"
+            /// </summary>
+            Xps,
+            
+            /// <summary>
+            /// Enum Tiff for "Tiff"
+            /// </summary>
+            Tiff,
+            
+            /// <summary>
+            /// Enum Pptx for "Pptx"
+            /// </summary>
+            Pptx,
+            
+            /// <summary>
+            /// Enum Odp for "Odp"
+            /// </summary>
+            Odp,
+            
+            /// <summary>
+            /// Enum Otp for "Otp"
+            /// </summary>
+            Otp,
+            
+            /// <summary>
+            /// Enum Ppt for "Ppt"
+            /// </summary>
+            Ppt,
+            
+            /// <summary>
+            /// Enum Pps for "Pps"
+            /// </summary>
+            Pps,
+            
+            /// <summary>
+            /// Enum Ppsx for "Ppsx"
+            /// </summary>
+            Ppsx,
+            
+            /// <summary>
+            /// Enum Pptm for "Pptm"
+            /// </summary>
+            Pptm,
+            
+            /// <summary>
+            /// Enum Ppsm for "Ppsm"
+            /// </summary>
+            Ppsm,
+            
+            /// <summary>
+            /// Enum Potx for "Potx"
+            /// </summary>
+            Potx,
+            
+            /// <summary>
+            /// Enum Potm for "Potm"
+            /// </summary>
+            Potm,
+            
+            /// <summary>
+            /// Enum Html for "Html"
+            /// </summary>
+            Html,
+            
+            /// <summary>
+            /// Enum Swf for "Swf"
+            /// </summary>
+            Swf,
+            
+            /// <summary>
+            /// Enum Svg for "Svg"
+            /// </summary>
+            Svg,
+            
+            /// <summary>
+            /// Enum Jpeg for "Jpeg"
+            /// </summary>
+            Jpeg,
+            
+            /// <summary>
+            /// Enum Png for "Png"
+            /// </summary>
+            Png,
+            
+            /// <summary>
+            /// Enum Gif for "Gif"
+            /// </summary>
+            Gif,
+            
+            /// <summary>
+            /// Enum Bmp for "Bmp"
+            /// </summary>
+            Bmp
+        }
+
+        /// <summary>
+        /// Format.
+        /// </summary>
+        public FormatEnum? Format { get; set; }
 
         /// <summary>
         /// Output file.
@@ -59,7 +168,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public Save() : base()
         {
-          Type = Model.TaskType.Save;
+          Type = TypeEnum.Save;
         }
 
         /// <summary>

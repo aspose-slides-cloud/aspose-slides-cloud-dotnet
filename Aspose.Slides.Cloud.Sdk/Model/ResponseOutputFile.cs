@@ -44,7 +44,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public ResponseOutputFile() : base()
         {
-          Type = Model.OutputFileType.Response;
+          Type = TypeEnum.Response;
         }
 
         /// <summary>

@@ -40,6 +40,40 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class ChartWall 
   {                       
         /// <summary>
+        /// Get or sets mode of bar picture filling.
+        /// </summary>
+        /// <value>Get or sets mode of bar picture filling.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PictureTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Stack for "Stack"
+            /// </summary>
+            Stack,
+            
+            /// <summary>
+            /// Enum StackScale for "StackScale"
+            /// </summary>
+            StackScale,
+            
+            /// <summary>
+            /// Enum Stretch for "Stretch"
+            /// </summary>
+            Stretch,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Get or sets mode of bar picture filling.
+        /// </summary>
+        public PictureTypeEnum? PictureType { get; set; }
+
+        /// <summary>
         /// Get or sets the fill format.
         /// </summary>
         public FillFormat FillFormat { get; set; }
@@ -58,11 +92,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Get or sets wall thickness as a percentage of the largest dimension of the plot volume.
         /// </summary>
         public int? Thickness { get; set; }
-
-        /// <summary>
-        /// Get or sets mode of bar picture filling.
-        /// </summary>
-        public PictureType PictureType { get; set; }
 
         /// <summary>
         /// Create an instance of the object

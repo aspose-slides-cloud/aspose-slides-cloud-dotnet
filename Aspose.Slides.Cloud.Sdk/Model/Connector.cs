@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public Connector() : base()
         {
-          Type = Model.ShapeType.Connector;
+          Type = TypeEnum.Connector;
         }
 
         /// <summary>
@@ -77,9 +77,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class Connector {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
           sb.Append("  Name: ").Append(this.Name).Append("\n");
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
@@ -92,6 +89,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
           sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
           sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+          sb.Append("  Type: ").Append(this.Type).Append("\n");
+          sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
           sb.Append("  GeometryShapeType: ").Append(this.GeometryShapeType).Append("\n");
           sb.Append("  StartShapeConnectedTo: ").Append(this.StartShapeConnectedTo).Append("\n");
           sb.Append("  StartShapeConnectedToIndex: ").Append(this.StartShapeConnectedToIndex).Append("\n");

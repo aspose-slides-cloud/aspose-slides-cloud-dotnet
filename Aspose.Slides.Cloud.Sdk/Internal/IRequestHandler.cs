@@ -30,8 +30,6 @@ namespace Aspose.Slides.Cloud.Sdk
 
     internal interface IRequestHandler
     {
-        string ProcessUrl(string url);
-
         void BeforeSend(WebRequest request, Stream streamToSend);
 
         void ProcessResponse(HttpWebResponse response, Stream resultStream);

@@ -76,7 +76,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class FormatScheme {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
           sb.Append("  BackgroundStyles: ").Append(this.BackgroundStyles).Append("\n");
           sb.Append("  EffectStyles: ").Append(this.EffectStyles).Append("\n");
           sb.Append("  FillStyles: ").Append(this.FillStyles).Append("\n");

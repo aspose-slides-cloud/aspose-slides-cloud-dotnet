@@ -40,24 +40,153 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Placeholder : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets Index
+        /// Gets or Sets Orientation
         /// </summary>
-        public int? Index { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum OrientationEnum
+        {
+            
+            /// <summary>
+            /// Enum Horizontal for "Horizontal"
+            /// </summary>
+            Horizontal,
+            
+            /// <summary>
+            /// Enum Vertical for "Vertical"
+            /// </summary>
+            Vertical
+        }
+
+        /// <summary>
+        /// Gets or Sets Size
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SizeEnum
+        {
+            
+            /// <summary>
+            /// Enum Full for "Full"
+            /// </summary>
+            Full,
+            
+            /// <summary>
+            /// Enum Half for "Half"
+            /// </summary>
+            Half,
+            
+            /// <summary>
+            /// Enum Quarter for "Quarter"
+            /// </summary>
+            Quarter
+        }
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Title for "Title"
+            /// </summary>
+            Title,
+            
+            /// <summary>
+            /// Enum Body for "Body"
+            /// </summary>
+            Body,
+            
+            /// <summary>
+            /// Enum CenteredTitle for "CenteredTitle"
+            /// </summary>
+            CenteredTitle,
+            
+            /// <summary>
+            /// Enum Subtitle for "Subtitle"
+            /// </summary>
+            Subtitle,
+            
+            /// <summary>
+            /// Enum DateAndTime for "DateAndTime"
+            /// </summary>
+            DateAndTime,
+            
+            /// <summary>
+            /// Enum SlideNumber for "SlideNumber"
+            /// </summary>
+            SlideNumber,
+            
+            /// <summary>
+            /// Enum Footer for "Footer"
+            /// </summary>
+            Footer,
+            
+            /// <summary>
+            /// Enum Header for "Header"
+            /// </summary>
+            Header,
+            
+            /// <summary>
+            /// Enum Object for "Object"
+            /// </summary>
+            Object,
+            
+            /// <summary>
+            /// Enum Chart for "Chart"
+            /// </summary>
+            Chart,
+            
+            /// <summary>
+            /// Enum Table for "Table"
+            /// </summary>
+            Table,
+            
+            /// <summary>
+            /// Enum ClipArt for "ClipArt"
+            /// </summary>
+            ClipArt,
+            
+            /// <summary>
+            /// Enum Diagram for "Diagram"
+            /// </summary>
+            Diagram,
+            
+            /// <summary>
+            /// Enum Media for "Media"
+            /// </summary>
+            Media,
+            
+            /// <summary>
+            /// Enum SlideImage for "SlideImage"
+            /// </summary>
+            SlideImage,
+            
+            /// <summary>
+            /// Enum Picture for "Picture"
+            /// </summary>
+            Picture
+        }
 
         /// <summary>
         /// Gets or sets Orientation
         /// </summary>
-        public PlaceholderOrientation Orientation { get; set; }
+        public OrientationEnum? Orientation { get; set; }
 
         /// <summary>
         /// Gets or sets Size
         /// </summary>
-        public PlaceholderSize Size { get; set; }
+        public SizeEnum? Size { get; set; }
 
         /// <summary>
         /// Gets or sets Type
         /// </summary>
-        public PlaceholderType Type { get; set; }
+        public TypeEnum? Type { get; set; }
+
+        /// <summary>
+        /// Gets or sets Index
+        /// </summary>
+        public int? Index { get; set; }
 
         /// <summary>
         /// Gets or sets Shape
@@ -81,7 +210,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("class Placeholder {\n");
           sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
           sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Links: ").Append(this.Links).Append("\n");
           sb.Append("  Index: ").Append(this.Index).Append("\n");
           sb.Append("  Orientation: ").Append(this.Orientation).Append("\n");
           sb.Append("  Size: ").Append(this.Size).Append("\n");

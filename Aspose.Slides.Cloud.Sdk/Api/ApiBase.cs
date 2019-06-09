@@ -116,6 +116,28 @@ namespace Aspose.Slides.Cloud.Sdk
             return m_api.InvokeStreamApi<T>(url, method, body, headerParams, files, contentType);
         }
 
+        protected void InvokeVoidApi(
+            string url,
+            string method,
+            string body,
+            Dictionary<string, string> headerParams,
+            List<FileInfo> files,
+            string contentType)
+        {
+            m_api.InvokeVoidApi(url, method, body, headerParams, files, contentType);
+        }
+
+        protected void InvokeVoidStreamApi(
+            string url,
+            string method,
+            Stream body,
+            Dictionary<string, string> headerParams,
+            List<FileInfo> files,
+            string contentType)
+        {
+            m_api.InvokeVoidStreamApi(url, method, body, headerParams, files, contentType);
+        }
+
         protected void PickFiles(List<FileInfo> files, object entity)
         {
             if (entity != null)
@@ -147,6 +169,11 @@ namespace Aspose.Slides.Cloud.Sdk
                     }
                 }
             }
+        }
+
+        protected void AddFileParameter(List<FileInfo> files, Stream file, string paramName)
+        {
+            files.Add(new FileInfo { Name = "paramName", Content = file });
         }
 
         private readonly ApiAccessor m_api;
