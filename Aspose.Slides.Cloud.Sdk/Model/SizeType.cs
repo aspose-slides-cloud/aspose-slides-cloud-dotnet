@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Slide size preset.
     /// </summary>
-    /// <value></value>
+    /// <value>Slide size preset.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum SizeType
     {

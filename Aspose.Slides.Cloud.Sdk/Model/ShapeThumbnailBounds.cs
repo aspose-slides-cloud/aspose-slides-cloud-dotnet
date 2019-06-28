@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ShapeThumbnailBounds2.cs">
+// <copyright company="Aspose" file="ShapeThumbnailBounds.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -39,7 +39,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     /// </summary>
     /// <value>Represents thumnail bounds settings.</value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum ShapeThumbnailBounds2
+    public enum ShapeThumbnailBounds
     {
         
         /// <summary>

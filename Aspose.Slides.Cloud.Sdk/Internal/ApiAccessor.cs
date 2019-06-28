@@ -38,6 +38,7 @@ namespace Aspose.Slides.Cloud.Sdk
             requestHandlers.Add(new DebugLogRequestHandler(configuration));
             requestHandlers.Add(new ApiExceptionRequestHandler());
             m_requestHandlers = requestHandlers;
+            m_timeout = configuration.Timeout;
         }
 
         public Stream InvokeBinaryApi(
@@ -48,7 +49,7 @@ namespace Aspose.Slides.Cloud.Sdk
             List<FileInfo> files,
             string contentType)
         {
-            return new StringToStreamApiInvoker(m_requestHandlers).InvokeApi(url, method, body, headerParams, files, contentType);
+            return (Stream)new StringApiInvoker(m_requestHandlers, m_timeout).InvokeApi(url, method, body, headerParams, files, contentType, typeof(Stream));
         }
 
         public Stream InvokeBinaryStreamApi(
@@ -59,7 +60,7 @@ namespace Aspose.Slides.Cloud.Sdk
             List<FileInfo> files,
             string contentType)
         {
-            return new StreamToStreamApiInvoker(m_requestHandlers).InvokeApi(url, method, body, headerParams, files, contentType);
+            return (Stream)new StreamApiInvoker(m_requestHandlers, m_timeout).InvokeApi(url, method, body, headerParams, files, contentType, typeof(Stream));
         }
 
         public T InvokeApi<T>(
@@ -71,7 +72,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string contentType)
             where T : class
         {
-            return new StringToObjectApiInvoker<T>(m_requestHandlers).InvokeApi(url, method, body, headerParams, files, contentType);
+            return (T)new StringApiInvoker(m_requestHandlers, m_timeout).InvokeApi(url, method, body, headerParams, files, contentType, typeof(T));
         }
 
         public T InvokeStreamApi<T>(
@@ -83,7 +84,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string contentType)
             where T : class
         {
-            return new StreamToObjectApiInvoker<T>(m_requestHandlers).InvokeApi(url, method, body, headerParams, files, contentType);
+            return (T)new StreamApiInvoker(m_requestHandlers, m_timeout).InvokeApi(url, method, body, headerParams, files, contentType, typeof(T));
         }
 
         public void InvokeVoidApi(
@@ -94,7 +95,7 @@ namespace Aspose.Slides.Cloud.Sdk
             List<FileInfo> files,
             string contentType)
         {
-            new StringToNullApiInvoker(m_requestHandlers).InvokeApi(url, method, body, headerParams, files, contentType);
+            new StringApiInvoker(m_requestHandlers, m_timeout).InvokeApi(url, method, body, headerParams, files, contentType, null);
         }
 
         public void InvokeVoidStreamApi(
@@ -105,7 +106,7 @@ namespace Aspose.Slides.Cloud.Sdk
             List<FileInfo> files,
             string contentType)
         {
-            new StreamToNullApiInvoker(m_requestHandlers).InvokeApi(url, method, body, headerParams, files, contentType);
+            new StreamApiInvoker(m_requestHandlers, m_timeout).InvokeApi(url, method, body, headerParams, files, contentType, null);
         }
 
         public static FileInfo ToFileInfo(Stream stream, string paramName)
@@ -115,5 +116,6 @@ namespace Aspose.Slides.Cloud.Sdk
         }                 
 
         private readonly List<IRequestHandler> m_requestHandlers;
+        private readonly int m_timeout;
     }
 }

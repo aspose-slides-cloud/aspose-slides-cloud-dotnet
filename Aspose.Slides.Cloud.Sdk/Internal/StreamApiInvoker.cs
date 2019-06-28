@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ObjectResponseProcessor.cs">
+// <copyright company="Aspose" file="StringToObjectApiInvoker.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,16 +23,16 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-
 namespace Aspose.Slides.Cloud.Sdk
 {
-    internal class NullResponseProcessor : ResponseProcessor<object>
+    using System.Collections.Generic;
+    using System.IO;
+
+    internal class StreamApiInvoker : ApiInvoker<object, Stream>
     {
-        public override bool NullFor404 { get { return false; } }
-        public override object ProcessResponse(Stream response, string contentType)
+        public StreamApiInvoker(List<IRequestHandler> requestHandlers, int timeout)
+            : base(requestHandlers, new StreamToStreamCopier(), timeout)
         {
-            return null;
         }
     }
 }

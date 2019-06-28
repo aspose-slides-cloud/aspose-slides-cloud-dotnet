@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class DocumentProperties : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets List
+        /// Document property list.
         /// </summary>
         public List<DocumentProperty> List { get; set; }
 

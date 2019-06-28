@@ -29,7 +29,6 @@ namespace Aspose.Slides.Cloud.Sdk
     using System.IO;
 
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System.Xml;
     using System.Xml.Serialization;
     using RequestHandlers;
@@ -66,7 +65,7 @@ namespace Aspose.Slides.Cloud.Sdk
             }
         }
 
-        public static T Deserialize<T>(Stream content, string contentType)
+        public static object Deserialize(Stream content, string contentType, Type type)
         {
             //TODO: take content type from response
             if (contentType.Contains("xml"))
@@ -75,7 +74,7 @@ namespace Aspose.Slides.Cloud.Sdk
                 {
                     try
                     {
-                        return (T)new XmlSerializer(typeof(T)).Deserialize(content);
+                        return new XmlSerializer(type).Deserialize(content);
                     }
                     catch (Exception ex)
                     {
@@ -84,7 +83,7 @@ namespace Aspose.Slides.Cloud.Sdk
                             content.Position = 0;
                             using (StreamReader responseReader = new StreamReader(content))
                             {
-                                return Deserialize<T>(responseReader.ReadToEnd());
+                                return Deserialize(responseReader.ReadToEnd(), type);
                             }
                         }
                         catch
@@ -120,16 +119,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 using (StreamReader responseReader = new StreamReader(content))
                 {
-                    return Deserialize<T>(responseReader.ReadToEnd());
+                    return Deserialize(responseReader.ReadToEnd(), type);
                 }
             }
         }
 
-        public static T Deserialize<T>(string json)
+        public static object Deserialize(string json, Type type)
         {
             try
             {
-                 return (T)JsonConvert.DeserializeObject(json, typeof(T));
+                 return JsonConvert.DeserializeObject(json, type);
             }
             catch (Exception e)
             {
@@ -152,41 +151,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 return false;
             }
-        }
-
-        internal abstract class JsonCreationConverter<T> : JsonConverter
-        {            
-            public override bool CanConvert(Type objectType)
-            {
-                return typeof(T).IsAssignableFrom(objectType);
-            }
-
-            public override object ReadJson(
-                JsonReader reader,
-                Type objectType,
-                object existingValue,
-                JsonSerializer serializer)
-            {
-                var jsonObject = JObject.Load(reader);
-                T target = this.Create(objectType, jsonObject);
-                serializer.Populate(jsonObject.CreateReader(), target);
-                return target;
-            }
-
-            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-            {
-                serializer.Serialize(writer, value);
-            }
-
-            /// <summary>
-            /// Create an instance of objectType, based properties in the JSON object.
-            /// </summary>
-            /// <param name="objectType">type of object expected.</param>
-            /// <param name="jsonObject">
-            /// Contents of JSON object that will be deserialized.
-            /// </param>
-            /// <returns>An instance of objectType.</returns>
-            protected abstract T Create(Type objectType, JObject jsonObject);
         }
     }
 }

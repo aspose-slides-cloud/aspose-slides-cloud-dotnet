@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ObjectResponseProcessor.cs">
+// <copyright company="Aspose" file="PipelineTests.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,19 +23,51 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using Aspose.Slides.Cloud.Sdk.Model;
+using Aspose.Slides.Cloud.Sdk.Model.Requests;
+using Aspose.Slides.Cloud.Sdk.Tests.Utils;
+using NUnit.Framework;
 using System.IO;
 
-namespace Aspose.Slides.Cloud.Sdk
+namespace Aspose.Slides.Cloud.Sdk.Tests
 {
-    internal class ObjectResponseProcessor<T> : ResponseProcessor<T> where T : class
+    /// <summary>
+    ///  Class for testing Timeout config parameter
+    /// </summary>
+    [TestFixture]
+    public class TimeoutTests
     {
-        public override T ProcessResponse(Stream response, string contentType)
+        /// <summary>
+        /// Clean up after each unit test
+        /// </summary>
+        [TearDown]
+        public void Cleanup()
         {
-            if (response != null)
+        }
+
+        [Test]
+        [Ignore("The test is unstable")]
+        public void Timeout()
+        {
+            Configuration configuration = TestUtils.Configuration;
+            configuration.Timeout = 1;
+            PostSlideSaveAsRequest request = new PostSlideSaveAsRequest
             {
-                return SerializationHelper.Deserialize<T>(response, contentType);
+                Format = SlideExportFormat.Svg,
+                Name = "test.ppt",
+                Folder = "TempSlidesSDK",
+                Password = "password",
+                SlideIndex = 1
+            };
+            try
+            {
+                new SlidesApi(configuration).PostSlideSaveAs(request);
+                Assert.Fail("Timeout exception must have been thrown.");
             }
-            return null;
+            catch (ApiException)// ex)
+            {
+                //Assert.AreEqual("The operation was canceled.", ex.Message);
+            }
         }
     }
 }

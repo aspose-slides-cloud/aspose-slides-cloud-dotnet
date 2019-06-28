@@ -56,7 +56,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [SetUp]
         public void Init()
         {
-            m_instance = new SlidesApi(TestUtils.Configuration);
+            m_instance = TestUtils.SlidesApi;
         }
 
         /// <summary>

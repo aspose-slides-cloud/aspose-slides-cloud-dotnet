@@ -35,13 +35,14 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Arrow head properties.
   /// </summary>  
   public class ArrowHeadProperties 
   {                       
         /// <summary>
-        /// Gets or Sets Length
+        /// Length.
         /// </summary>
+        /// <value>Length.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum LengthEnum
         {
@@ -68,8 +69,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets Style
+        /// Style.
         /// </summary>
+        /// <value>Style.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StyleEnum
         {
@@ -111,8 +113,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets Width
+        /// Width.
         /// </summary>
+        /// <value>Width.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum WidthEnum
         {
@@ -139,17 +142,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets Length
+        /// Length.
         /// </summary>
         public LengthEnum? Length { get; set; }
 
         /// <summary>
-        /// Gets or sets Style
+        /// Style.
         /// </summary>
         public StyleEnum? Style { get; set; }
 
         /// <summary>
-        /// Gets or sets Width
+        /// Width.
         /// </summary>
         public WidthEnum? Width { get; set; }
 

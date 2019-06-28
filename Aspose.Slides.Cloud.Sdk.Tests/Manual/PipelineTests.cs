@@ -73,8 +73,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                     }
                 }
             };
-            SlidesApi api = new SlidesApi(TestUtils.Configuration);
-            object response = api.PostSlidesPipeline(request);
+            object response = TestUtils.SlidesApi.PostSlidesPipeline(request);
             Assert.IsNotNull(response);
         }
     }

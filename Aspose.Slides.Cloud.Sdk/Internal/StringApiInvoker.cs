@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="StreamResponseProcessor.cs">
+// <copyright company="Aspose" file="StringToObjectApiInvoker.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,18 +23,14 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-
 namespace Aspose.Slides.Cloud.Sdk
 {
-    internal class StreamResponseProcessor : ResponseProcessor<Stream>
-    {
-        public override Stream ProcessResponse(Stream response, string contentType)
-        {
-            return response;
-        }
+    using System.Collections.Generic;
 
-        public override void PostProcessResponse(Stream response)
+    internal class StringApiInvoker : ApiInvoker<object, string>
+    {
+        public StringApiInvoker(List<IRequestHandler> requestHandlers, int timeout)
+            : base(requestHandlers, new StringToStreamCopier(), timeout)
         {
         }
     }

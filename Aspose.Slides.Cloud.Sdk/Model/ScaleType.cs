@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Scale type of slide content.
     /// </summary>
-    /// <value></value>
+    /// <value>Scale type of slide content.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ScaleType
     {

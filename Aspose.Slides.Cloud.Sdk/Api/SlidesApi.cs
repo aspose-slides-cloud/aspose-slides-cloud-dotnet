@@ -139,7 +139,7 @@ namespace Aspose.Slides.Cloud.Sdk
             string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "POST", null, null, files, contentType);
+            InvokeVoidApi(resourcePath, "PUT", null, null, files, contentType);
         }
 
         /// <summary>
@@ -3984,7 +3984,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 AddFileParameter(files, request.File, "file");
             }
-            return InvokeApi<FilesUploadResult>(resourcePath, "POST", null, null, files, contentType);
+            return InvokeApi<FilesUploadResult>(resourcePath, "PUT", null, null, files, contentType);
         }
     }
 }

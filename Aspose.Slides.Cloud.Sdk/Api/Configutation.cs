@@ -63,6 +63,12 @@ namespace Aspose.Slides.Cloud.Sdk
         public string AppSid { get; set; }
 
         /// <summary>
+        /// Gets or sets slides operaion timeout in second. 0 stands for no timeout.
+        /// The timeout applies to the Slides operation, not to the HTTP request.
+        /// </summary>
+        public int Timeout { get; set; }
+
+        /// <summary>
         /// Gets or sets a value indicating whether debug mode.
         /// </summary>
         public bool DebugMode { get; set; }

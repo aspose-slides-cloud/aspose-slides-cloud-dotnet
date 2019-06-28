@@ -36,7 +36,7 @@ namespace Aspose.Slides.Cloud.Sdk
 
     internal abstract class ApiInvoker<T, B> where T : class
     {
-        public ApiInvoker(List<IRequestHandler> requestHandlers, StreamCopier<B> streamCopier, ResponseProcessor<T> responseProcessor)
+        public ApiInvoker(List<IRequestHandler> requestHandlers, StreamCopier<B> streamCopier, int timeout)
         {
 #if NETFRAMEWORK
             var sdkVersion = GetType().Assembly.GetName().Version;
@@ -45,18 +45,22 @@ namespace Aspose.Slides.Cloud.Sdk
 #endif
             AddDefaultHeader(c_asposeClientHeaderName, ".net sdk");
             AddDefaultHeader(c_asposeClientVersionHeaderName, string.Format("{0}.{1}", sdkVersion.Major, sdkVersion.Minor));
+            if (timeout > 0)
+            {
+                AddDefaultHeader(c_asposeTimeoutHeaderName, timeout.ToString());
+            }
             m_requestHandlers = requestHandlers;
             m_streamCopier = streamCopier;
-            m_responseProcessor = responseProcessor;
         }
 
-        public T InvokeApi(
+        public object InvokeApi(
             string url,
             string method,
             B body,
             Dictionary<string, string> headerParams,
             List<FileInfo> files,
-            string contentType)
+            string contentType,
+            Type returnType)
         {
             Stream response = null;
             try
@@ -77,11 +81,19 @@ namespace Aspose.Slides.Cloud.Sdk
                 {
                     response = Call(url, method, headerParams, files, body, contentType);
                 }
-                return m_responseProcessor.ProcessResponse(response, contentType);
+                if (returnType == null)
+                {
+                    return null;
+                }
+                if (typeof(Stream).IsAssignableFrom(returnType))
+                {
+                    return response;
+                }
+                return SerializationHelper.Deserialize(response, contentType, returnType);
             }
             catch (ApiException ex)
             {
-                if (ex.ErrorCode == 404 && m_responseProcessor.NullFor404)
+                if (ex.ErrorCode == 404 && returnType != null)
                 {
                     return null;
                 }
@@ -89,7 +101,10 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             finally
             {
-                m_responseProcessor.PostProcessResponse(response);
+                if (!typeof(Stream).IsAssignableFrom(returnType) && response != null)
+                {
+                    response.Dispose();
+                }
             }
         }
 
@@ -260,11 +275,11 @@ namespace Aspose.Slides.Cloud.Sdk
 
         private const string c_asposeClientHeaderName = "x-aspose-client";
         private const string c_asposeClientVersionHeaderName = "x-aspose-client-version";
+        private const string c_asposeTimeoutHeaderName = "x-aspose-timeout";
         //TODO: move to ApiAccessor
         private readonly Dictionary<string, string> m_defaultHeaderMap = new Dictionary<string, string>();
         private readonly List<IRequestHandler> m_requestHandlers;
         private readonly StreamCopier<B> m_streamCopier;
-        private readonly ResponseProcessor<T> m_responseProcessor;
 
         private List<IRequestHandler> requestHandlers;
     }

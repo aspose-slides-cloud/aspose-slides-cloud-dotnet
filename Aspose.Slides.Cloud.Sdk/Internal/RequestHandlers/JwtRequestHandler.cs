@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
             var requestHandlers = new List<IRequestHandler>();
             requestHandlers.Add(new DebugLogRequestHandler(m_configuration));
             requestHandlers.Add(new ApiExceptionRequestHandler());
-            m_apiInvoker = new StringToObjectApiInvoker<GetAccessTokenResult>(requestHandlers);
+            m_apiInvoker = new StringApiInvoker(requestHandlers, 0);
         }
 
         public void BeforeSend(WebRequest request, Stream streamToSend)
@@ -68,8 +68,8 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
                 + "&client_secret="
                 + m_configuration.AppKey;
             string requestUrl = m_configuration.AuthBaseUrl + "/connect/token";
-            GetAccessTokenResult result = m_apiInvoker.InvokeApi(
-                requestUrl, "POST", postData, null, null, "application/x-www-form-urlencoded");
+            GetAccessTokenResult result = (GetAccessTokenResult)m_apiInvoker.InvokeApi(
+                requestUrl, "POST", postData, null, null, "application/x-www-form-urlencoded", typeof(GetAccessTokenResult));
             m_accessToken = result.AccessToken;
         }
 
@@ -80,7 +80,7 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
         }
 
         private readonly Configuration m_configuration;
-        private readonly StringToObjectApiInvoker<GetAccessTokenResult> m_apiInvoker;
+        private readonly StringApiInvoker m_apiInvoker;
 
         private string m_accessToken;
     }

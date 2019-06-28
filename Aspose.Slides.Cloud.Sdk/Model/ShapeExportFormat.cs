@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ShapeExportFormat2.cs">
+// <copyright company="Aspose" file="ShapeExportFormat.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -39,7 +39,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     /// </summary>
     /// <value>Represents a format for export individual shape.</value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum ShapeExportFormat2
+    public enum ShapeExportFormat
     {
         
         /// <summary>

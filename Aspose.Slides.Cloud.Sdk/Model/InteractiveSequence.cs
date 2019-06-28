@@ -40,12 +40,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class InteractiveSequence 
   {                       
         /// <summary>
-        /// Gets or sets Effects
+        /// Effect list.
         /// </summary>
         public List<Effect> Effects { get; set; }
 
         /// <summary>
-        /// Gets or sets TriggerShapeIndex
+        /// Index of the shape that triggers the sequence.
         /// </summary>
         public int? TriggerShapeIndex { get; set; }
 

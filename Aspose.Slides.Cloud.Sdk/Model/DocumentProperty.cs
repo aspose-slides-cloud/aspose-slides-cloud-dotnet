@@ -35,22 +35,22 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Document property.
   /// </summary>  
   public class DocumentProperty : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets Name
+        /// Name.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets Value
+        /// Value.
         /// </summary>
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or sets BuiltIn
+        /// True for builtin property.
         /// </summary>
         public bool? BuiltIn { get; set; }
 

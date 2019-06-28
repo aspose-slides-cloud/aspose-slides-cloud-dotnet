@@ -32,6 +32,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 {
     internal static class TestUtils
     {
+        public static SlidesApi SlidesApi { get { return s_slidesApi ?? (s_slidesApi = new SlidesApi(Configuration)); } }
+
         public static Configuration Configuration
         {
             get
@@ -54,12 +56,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
         public static void Upload(string localPath, string storagePath)
         {
             Stream file = File.OpenRead(Path.Combine(TestDataPath, localPath));
-            new SlidesApi(Configuration).UploadFile(new UploadFileRequest { File = file, Path = storagePath });
+            SlidesApi.UploadFile(new UploadFileRequest { File = file, Path = storagePath });
         }
 
         public static void DeleteFile(string storagePath)
         {
-            new SlidesApi(Configuration).DeleteFile(new DeleteFileRequest { Path = storagePath });
+            SlidesApi.DeleteFile(new DeleteFileRequest { Path = storagePath });
         }
 
         public static FileInfo GetLocalFile(string path, string mimeType)
@@ -72,7 +74,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         internal const string TestDataPath = "../../../../TestData";
 
+        private static SlidesApi s_slidesApi;
         private static Configuration s_configuration;
+
         private static TimeSpan m_timeout = new TimeSpan(0, 1, 0);
 
         private static bool GetBoolConfigValue(string key, bool defaultValue)

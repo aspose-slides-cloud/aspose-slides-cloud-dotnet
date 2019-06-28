@@ -40,12 +40,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class SlideAnimation : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets MainSequence
+        /// Main sequence.
         /// </summary>
         public List<Effect> MainSequence { get; set; }
 
         /// <summary>
-        /// Gets or sets InteractiveSequences
+        /// Interactive sequence list.
         /// </summary>
         public List<InteractiveSequence> InteractiveSequences { get; set; }
 
