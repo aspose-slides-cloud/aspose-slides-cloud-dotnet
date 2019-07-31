@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Placeholder list.
   /// </summary>  
   public class Placeholders : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets PlaceholderLinks
+        /// List for placeholder links.
         /// </summary>
         public List<ResourceUri> PlaceholderLinks { get; set; }
 

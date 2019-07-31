@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents a format for export individual shape.
+    /// Represents a format for individual shape export.
     /// </summary>
-    /// <value>Represents a format for export individual shape.</value>
+    /// <value>Represents a format for individual shape export.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ShapeExportFormat
     {

@@ -35,13 +35,14 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Layout slide.
   /// </summary>  
   public class LayoutSlide : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or Sets Type
+        /// Layout slide type.
         /// </summary>
+        /// <value>Layout slide type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
@@ -228,22 +229,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets Type
+        /// Layout slide type.
         /// </summary>
         public TypeEnum? Type { get; set; }
 
         /// <summary>
-        /// Gets or sets Name
+        /// Name.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets MasterSlide
+        /// Master slide link.
         /// </summary>
         public ResourceUriElement MasterSlide { get; set; }
 
         /// <summary>
-        /// Gets or sets DependingSlides
+        /// List of depending slides.
         /// </summary>
         public List<ResourceUriElement> DependingSlides { get; set; }
 

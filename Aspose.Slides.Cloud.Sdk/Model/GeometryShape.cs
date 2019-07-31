@@ -40,8 +40,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class GeometryShape : ShapeBase 
   {                       
         /// <summary>
-        /// Gets or Sets GeometryShapeType
+        /// Geometry shape type.
         /// </summary>
+        /// <value>Geometry shape type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum GeometryShapeTypeEnum
         {
@@ -993,7 +994,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets GeometryShapeType
+        /// Geometry shape type.
         /// </summary>
         public GeometryShapeTypeEnum? GeometryShapeType { get; set; }
 
@@ -1018,6 +1019,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
+          sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
           sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
           sb.Append("  X: ").Append(this.X).Append("\n");
           sb.Append("  Y: ").Append(this.Y).Append("\n");

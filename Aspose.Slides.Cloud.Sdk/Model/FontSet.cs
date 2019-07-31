@@ -35,22 +35,22 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Font set.
   /// </summary>  
   public class FontSet 
   {                       
         /// <summary>
-        /// Gets or sets ComplexScript
+        /// Complex script font.
         /// </summary>
         public string ComplexScript { get; set; }
 
         /// <summary>
-        /// Gets or sets EastAsian
+        /// East Asian font.
         /// </summary>
         public string EastAsian { get; set; }
 
         /// <summary>
-        /// Gets or sets Latin
+        /// Latin font.
         /// </summary>
         public string Latin { get; set; }
 

@@ -320,7 +320,7 @@
 		{ "Message": " DTO expected.", "Parameter": "Animation" },
 		{ "Message": " DTO expected.", "Parameter": "Sequence" },
 		{ "Message": " DTO expected.", "Parameter": "Effect" },
-		{ "Message": "Object reference not set to an instance of an object.", "Parameter": "Request" },
+		{ "Message": " DTO expected.", "Parameter": "Request" },
 		{ "Message": "Object reference not set to an instance of an object.", "Parameter": "Bounds" },
 		{ "Code": 409, "Message": " is not empty.", "Parameter": "Recursive" },
 		{ "Message": "An error has occurred.", "Code": 500, "Parameter": "Options" },

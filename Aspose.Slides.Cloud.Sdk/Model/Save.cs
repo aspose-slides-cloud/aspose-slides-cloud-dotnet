@@ -103,6 +103,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             Ppsm,
             
             /// <summary>
+            /// Enum Pot for "Pot"
+            /// </summary>
+            Pot,
+            
+            /// <summary>
             /// Enum Potx for "Potx"
             /// </summary>
             Potx,

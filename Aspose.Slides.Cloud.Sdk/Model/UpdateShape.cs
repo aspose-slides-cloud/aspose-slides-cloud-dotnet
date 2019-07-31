@@ -35,17 +35,17 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Update shape task.
   /// </summary>  
   public class UpdateShape : Task 
   {                       
         /// <summary>
-        /// Gets or sets Shape
+        /// Shape DTO.
         /// </summary>
         public ShapeBase Shape { get; set; }
 
         /// <summary>
-        /// Gets or sets ShapePath
+        /// Shape path for a grouped or SmartArt shape.
         /// </summary>
         public string ShapePath { get; set; }
 

@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Resource URI element.
   /// </summary>  
   public class ResourceUriElement 
   {                       
         /// <summary>
-        /// Gets or sets Uri
+        /// Resource URI.
         /// </summary>
         public ResourceUri Uri { get; set; }
 

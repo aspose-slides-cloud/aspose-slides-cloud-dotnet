@@ -26,12 +26,19 @@
 namespace Aspose.Slides.Cloud.Sdk
 {
     using System.Collections.Generic;
+    using System.IO;
 
     internal class StringApiInvoker : ApiInvoker<object, string>
     {
-        public StringApiInvoker(List<IRequestHandler> requestHandlers, int timeout)
-            : base(requestHandlers, new StringToStreamCopier(), timeout)
+        public StringApiInvoker(List<IRequestHandler> requestHandlers, int timeout) : base(requestHandlers, timeout)
         {
+        }
+
+        protected override void CopyToStream(string data, Stream stream)
+        {
+            StreamWriter requestWriter = new StreamWriter(stream);
+            requestWriter.Write(data);
+            requestWriter.Flush();
         }
     }
 }

@@ -40,62 +40,62 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class ColorScheme : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets Accent1
+        /// First accent color.
         /// </summary>
         public string Accent1 { get; set; }
 
         /// <summary>
-        /// Gets or sets Accent2
+        /// Second accent color.
         /// </summary>
         public string Accent2 { get; set; }
 
         /// <summary>
-        /// Gets or sets Accent3
+        /// Third accent color.
         /// </summary>
         public string Accent3 { get; set; }
 
         /// <summary>
-        /// Gets or sets Accent4
+        /// Fourth accent color.
         /// </summary>
         public string Accent4 { get; set; }
 
         /// <summary>
-        /// Gets or sets Accent5
+        /// Fifth accent color.
         /// </summary>
         public string Accent5 { get; set; }
 
         /// <summary>
-        /// Gets or sets Accent6
+        /// Sixth accent color.
         /// </summary>
         public string Accent6 { get; set; }
 
         /// <summary>
-        /// Gets or sets Dark1
+        /// First dark color.
         /// </summary>
         public string Dark1 { get; set; }
 
         /// <summary>
-        /// Gets or sets Dark2
+        /// Second dark color.
         /// </summary>
         public string Dark2 { get; set; }
 
         /// <summary>
-        /// Gets or sets FollowedHyperlink
+        /// Visited hyperlink color.
         /// </summary>
         public string FollowedHyperlink { get; set; }
 
         /// <summary>
-        /// Gets or sets Hyperlink
+        /// Hyperlink color/
         /// </summary>
         public string Hyperlink { get; set; }
 
         /// <summary>
-        /// Gets or sets Light1
+        /// First light color.
         /// </summary>
         public string Light1 { get; set; }
 
         /// <summary>
-        /// Gets or sets Light2
+        /// Second light color.
         /// </summary>
         public string Light2 { get; set; }
 

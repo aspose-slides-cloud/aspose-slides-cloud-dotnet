@@ -36,7 +36,7 @@ namespace Aspose.Slides.Cloud.Sdk
 
     internal abstract class ApiInvoker<T, B> where T : class
     {
-        public ApiInvoker(List<IRequestHandler> requestHandlers, StreamCopier<B> streamCopier, int timeout)
+        public ApiInvoker(List<IRequestHandler> requestHandlers, int timeout)
         {
 #if NETFRAMEWORK
             var sdkVersion = GetType().Assembly.GetName().Version;
@@ -50,7 +50,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 AddDefaultHeader(c_asposeTimeoutHeaderName, timeout.ToString());
             }
             m_requestHandlers = requestHandlers;
-            m_streamCopier = streamCopier;
         }
 
         public object InvokeApi(
@@ -107,6 +106,8 @@ namespace Aspose.Slides.Cloud.Sdk
                 }
             }
         }
+
+        protected abstract void CopyToStream(B data, Stream stream);
 
         private Stream Call(
             string path,
@@ -180,7 +181,7 @@ namespace Aspose.Slides.Cloud.Sdk
             if (body != null)
             {
                 WriteMultipartFormDataHeader(stream, null, contentType, formDataBoundary, ref partIndex, partCount);
-                m_streamCopier.CopyToStream(body, stream);
+                CopyToStream(body, stream);
             }
             foreach (FileInfo file in files)
             {
@@ -279,7 +280,6 @@ namespace Aspose.Slides.Cloud.Sdk
         //TODO: move to ApiAccessor
         private readonly Dictionary<string, string> m_defaultHeaderMap = new Dictionary<string, string>();
         private readonly List<IRequestHandler> m_requestHandlers;
-        private readonly StreamCopier<B> m_streamCopier;
 
         private List<IRequestHandler> requestHandlers;
     }

@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Split document result.
   /// </summary>  
   public class SplitDocumentResult : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets Slides
+        /// List of slide links.
         /// </summary>
         public List<ResourceUri> Slides { get; set; }
 

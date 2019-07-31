@@ -157,6 +157,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public bool? ShowHiddenSlides { get; set; }
 
         /// <summary>
+        /// True to make layout responsive by excluding width and height attributes from svg container.
+        /// </summary>
+        public bool? SvgResponsiveLayout { get; set; }
+
+        /// <summary>
         /// Returns or sets a value determining the quality of the JPEG images inside PDF document.
         /// </summary>
         public int? JpegQuality { get; set; }
@@ -201,6 +206,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  SaveAsZip: ").Append(this.SaveAsZip).Append("\n");
           sb.Append("  SubDirectoryName: ").Append(this.SubDirectoryName).Append("\n");
           sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
+          sb.Append("  SvgResponsiveLayout: ").Append(this.SvgResponsiveLayout).Append("\n");
           sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
           sb.Append("  PicturesCompression: ").Append(this.PicturesCompression).Append("\n");
           sb.Append("  DeletePicturesCroppedAreas: ").Append(this.DeletePicturesCroppedAreas).Append("\n");

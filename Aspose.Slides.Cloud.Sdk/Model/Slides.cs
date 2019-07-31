@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Slide list.
   /// </summary>  
   public class Slides : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets SlideList
+        /// List of slide links.
         /// </summary>
         public List<ResourceUriElement> SlideList { get; set; }
 

@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// One value chart data point.
   /// </summary>  
   public class OneValueChartDataPoint 
   {                       
         /// <summary>
-        /// Gets or sets Value
+        /// Value.
         /// </summary>
         public double? Value { get; set; }
 

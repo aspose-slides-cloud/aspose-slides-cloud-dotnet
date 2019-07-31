@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Paragraphs : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets ParagraphLinks
+        /// List of paragraph links.
         /// </summary>
         public List<ResourceUriElement> ParagraphLinks { get; set; }
 

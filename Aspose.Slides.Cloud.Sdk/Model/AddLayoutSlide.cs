@@ -35,17 +35,17 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Add layout slide task.
   /// </summary>  
   public class AddLayoutSlide : Task 
   {                       
         /// <summary>
-        /// Gets or sets CloneFromFile
+        /// Source file.
         /// </summary>
         public InputFile CloneFromFile { get; set; }
 
         /// <summary>
-        /// Gets or sets CloneFromPosition
+        /// Source layout slide position.
         /// </summary>
         public int? CloneFromPosition { get; set; }
 

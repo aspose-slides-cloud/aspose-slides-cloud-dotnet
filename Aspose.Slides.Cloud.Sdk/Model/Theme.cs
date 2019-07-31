@@ -40,22 +40,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Theme : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets Name
+        /// Name.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets ColorScheme
+        /// Color scheme.
         /// </summary>
         public ResourceUriElement ColorScheme { get; set; }
 
         /// <summary>
-        /// Gets or sets FontScheme
+        /// Font scheme.
         /// </summary>
         public ResourceUriElement FontScheme { get; set; }
 
         /// <summary>
-        /// Gets or sets FormatScheme
+        /// Format scheme.
         /// </summary>
         public ResourceUriElement FormatScheme { get; set; }
 

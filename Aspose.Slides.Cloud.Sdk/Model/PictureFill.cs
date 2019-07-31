@@ -35,13 +35,14 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Picture fill.
   /// </summary>  
   public class PictureFill : FillFormat 
   {                       
         /// <summary>
-        /// Gets or Sets PictureFillMode
+        /// Fill mode.
         /// </summary>
+        /// <value>Fill mode.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PictureFillModeEnum
         {
@@ -58,47 +59,47 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets PictureFillMode
+        /// Fill mode.
         /// </summary>
         public PictureFillModeEnum? PictureFillMode { get; set; }
 
         /// <summary>
-        /// Gets or sets CropBottom
+        /// Percentage of image height that is cropped from the bottom.
         /// </summary>
         public double? CropBottom { get; set; }
 
         /// <summary>
-        /// Gets or sets CropLeft
+        /// Percentage of image height that is cropped from the left.
         /// </summary>
         public double? CropLeft { get; set; }
 
         /// <summary>
-        /// Gets or sets CropRight
+        /// Percentage of image height that is cropped from the right.
         /// </summary>
         public double? CropRight { get; set; }
 
         /// <summary>
-        /// Gets or sets CropTop
+        /// Percentage of image height that is cropped from the top.
         /// </summary>
         public double? CropTop { get; set; }
 
         /// <summary>
-        /// Gets or sets Dpi
+        /// Picture resolution.
         /// </summary>
         public int? Dpi { get; set; }
 
         /// <summary>
-        /// Gets or sets Image
+        /// Internal image link.
         /// </summary>
         public ResourceUriElement Image { get; set; }
 
         /// <summary>
-        /// Gets or sets Base64Data
+        /// Base 64 image data.
         /// </summary>
         public string Base64Data { get; set; }
 
         /// <summary>
-        /// Gets or sets SvgData
+        /// SVG image data.
         /// </summary>
         public string SvgData { get; set; }
 

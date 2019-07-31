@@ -35,17 +35,17 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Update background task.
   /// </summary>  
   public class UpdateBackground : Task 
   {                       
         /// <summary>
-        /// Gets or sets Slides
+        /// List of slide indices.
         /// </summary>
         public List<int?> Slides { get; set; }
 
         /// <summary>
-        /// Gets or sets Background
+        /// Background DTO.
         /// </summary>
         public SlideBackground Background { get; set; }
 

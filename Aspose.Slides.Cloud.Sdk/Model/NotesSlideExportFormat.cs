@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Represents a format for notes slide export.
     /// </summary>
-    /// <value></value>
+    /// <value>Represents a format for notes slide export.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum NotesSlideExportFormat
     {

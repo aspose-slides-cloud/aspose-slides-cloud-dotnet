@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Shapes : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets ShapesLinks
+        /// List of shape links.
         /// </summary>
         public List<ResourceUriElement> ShapesLinks { get; set; }
 

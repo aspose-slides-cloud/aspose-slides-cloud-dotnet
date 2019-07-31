@@ -35,17 +35,17 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Gradient stop.
   /// </summary>  
   public class GradientFillStop 
   {                       
         /// <summary>
-        /// Gets or sets Color
+        /// Color.
         /// </summary>
         public string Color { get; set; }
 
         /// <summary>
-        /// Gets or sets Position
+        /// Stop position (0..1).
         /// </summary>
         public double? Position { get; set; }
 

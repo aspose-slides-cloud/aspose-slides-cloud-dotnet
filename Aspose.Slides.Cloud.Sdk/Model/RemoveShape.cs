@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Remove shape task.
   /// </summary>  
   public class RemoveShape : Task 
   {                       
         /// <summary>
-        /// Gets or sets ShapePath
+        /// Shape path for a grouped or smart art shape.
         /// </summary>
         public string ShapePath { get; set; }
 

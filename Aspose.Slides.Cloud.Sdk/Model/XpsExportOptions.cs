@@ -35,7 +35,7 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Provides options that control how a presentation is saved in XPS format.
   /// </summary>  
   public class XpsExportOptions : ExportOptions 
   {                       

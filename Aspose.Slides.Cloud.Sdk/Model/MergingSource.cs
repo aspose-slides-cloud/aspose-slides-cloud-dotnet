@@ -35,17 +35,17 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Merging source.
   /// </summary>  
   public class MergingSource 
   {                       
         /// <summary>
-        /// Gets or sets Input
+        /// Source file.
         /// </summary>
         public InputFile Input { get; set; }
 
         /// <summary>
-        /// Gets or sets Slides
+        /// Indices of slides to be merged.
         /// </summary>
         public List<int?> Slides { get; set; }
 

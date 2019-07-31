@@ -35,17 +35,17 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Reorder slide task.
   /// </summary>  
   public class ReorderSlide : Task 
   {                       
         /// <summary>
-        /// Gets or sets OldPosition
+        /// Old position.
         /// </summary>
         public int? OldPosition { get; set; }
 
         /// <summary>
-        /// Gets or sets NewPosition
+        /// New position.
         /// </summary>
         public int? NewPosition { get; set; }
 

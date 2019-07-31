@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Custom dash pattern.
   /// </summary>  
   public class CustomDashPattern 
   {                       
         /// <summary>
-        /// Gets or sets Items
+        /// Pattern items.
         /// </summary>
         public List<double?> Items { get; set; }
 

@@ -35,13 +35,14 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Line format.
   /// </summary>  
   public class LineFormat 
   {                       
         /// <summary>
-        /// Gets or Sets Alignment
+        /// Alignment.
         /// </summary>
+        /// <value>Alignment.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AlignmentEnum
         {
@@ -63,8 +64,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets CapStyle
+        /// Cap style.
         /// </summary>
+        /// <value>Cap style.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CapStyleEnum
         {
@@ -91,8 +93,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets DashStyle
+        /// Dash style.
         /// </summary>
+        /// <value>Dash style.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DashStyleEnum
         {
@@ -164,8 +167,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets JoinStyle
+        /// Join style.
         /// </summary>
+        /// <value>Join style.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum JoinStyleEnum
         {
@@ -192,8 +196,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets Style
+        /// Style.
         /// </summary>
+        /// <value>Style.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StyleEnum
         {
@@ -230,57 +235,57 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets Alignment
+        /// Alignment.
         /// </summary>
         public AlignmentEnum? Alignment { get; set; }
 
         /// <summary>
-        /// Gets or sets CapStyle
+        /// Cap style.
         /// </summary>
         public CapStyleEnum? CapStyle { get; set; }
 
         /// <summary>
-        /// Gets or sets DashStyle
+        /// Dash style.
         /// </summary>
         public DashStyleEnum? DashStyle { get; set; }
 
         /// <summary>
-        /// Gets or sets JoinStyle
+        /// Join style.
         /// </summary>
         public JoinStyleEnum? JoinStyle { get; set; }
 
         /// <summary>
-        /// Gets or sets Style
+        /// Style.
         /// </summary>
         public StyleEnum? Style { get; set; }
 
         /// <summary>
-        /// Gets or sets BeginArrowHead
+        /// Begin arrowhead.
         /// </summary>
         public ArrowHeadProperties BeginArrowHead { get; set; }
 
         /// <summary>
-        /// Gets or sets EndArrowHead
+        /// End arrowhead.
         /// </summary>
         public ArrowHeadProperties EndArrowHead { get; set; }
 
         /// <summary>
-        /// Gets or sets CustomDashPattern
+        /// Custom dash pattern.
         /// </summary>
         public CustomDashPattern CustomDashPattern { get; set; }
 
         /// <summary>
-        /// Gets or sets FillFormat
+        /// Fill format.
         /// </summary>
         public FillFormat FillFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets MiterLimit
+        /// Miter limit.
         /// </summary>
         public double? MiterLimit { get; set; }
 
         /// <summary>
-        /// Gets or sets Width
+        /// Width.
         /// </summary>
         public double? Width { get; set; }
 

@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class SolidFill : FillFormat 
   {                       
         /// <summary>
-        /// Gets or sets Color
+        /// Color.
         /// </summary>
         public string Color { get; set; }
 

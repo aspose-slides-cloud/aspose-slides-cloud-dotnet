@@ -40,8 +40,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Portion : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or Sets FontBold
+        /// True for bold font.
         /// </summary>
+        /// <value>True for bold font.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FontBoldEnum
         {
@@ -63,8 +64,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets FontItalic
+        /// True for italic font.
         /// </summary>
+        /// <value>True for italic font.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FontItalicEnum
         {
@@ -86,8 +88,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets FontUnderline
+        /// Text underline type.
         /// </summary>
+        /// <value>Text underline type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FontUnderlineEnum
         {
@@ -189,8 +192,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets StrikethroughType
+        /// Text strikethrough type.
         /// </summary>
+        /// <value>Text strikethrough type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StrikethroughTypeEnum
         {
@@ -217,8 +221,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets TextCapType
+        /// Text capitalization type.
         /// </summary>
+        /// <value>Text capitalization type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TextCapTypeEnum
         {
@@ -245,8 +250,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets NormaliseHeight
+        /// True to normalize the text.
         /// </summary>
+        /// <value>True to normalize the text.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum NormaliseHeightEnum
         {
@@ -268,8 +274,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets ProofDisabled
+        /// True if the text proof should be disabled.
         /// </summary>
+        /// <value>True if the text proof should be disabled.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ProofDisabledEnum
         {
@@ -291,8 +298,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets Kumimoji
+        /// True if numbers should ignore East-Asian specific vertical text layout.
         /// </summary>
+        /// <value>True if numbers should ignore East-Asian specific vertical text layout.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum KumimojiEnum
         {
@@ -314,8 +322,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets IsHardUnderlineFill
+        /// True if underline style has own FillFormat properties.
         /// </summary>
+        /// <value>True if underline style has own FillFormat properties.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum IsHardUnderlineFillEnum
         {
@@ -337,8 +346,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets IsHardUnderlineLine
+        /// True if underline style has own LineFormat properties.
         /// </summary>
+        /// <value>True if underline style has own LineFormat properties.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum IsHardUnderlineLineEnum
         {
@@ -360,127 +370,127 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets FontBold
+        /// True for bold font.
         /// </summary>
         public FontBoldEnum? FontBold { get; set; }
 
         /// <summary>
-        /// Gets or sets FontItalic
+        /// True for italic font.
         /// </summary>
         public FontItalicEnum? FontItalic { get; set; }
 
         /// <summary>
-        /// Gets or sets FontUnderline
+        /// Text underline type.
         /// </summary>
         public FontUnderlineEnum? FontUnderline { get; set; }
 
         /// <summary>
-        /// Gets or sets StrikethroughType
+        /// Text strikethrough type.
         /// </summary>
         public StrikethroughTypeEnum? StrikethroughType { get; set; }
 
         /// <summary>
-        /// Gets or sets TextCapType
+        /// Text capitalization type.
         /// </summary>
         public TextCapTypeEnum? TextCapType { get; set; }
 
         /// <summary>
-        /// Gets or sets NormaliseHeight
+        /// True to normalize the text.
         /// </summary>
         public NormaliseHeightEnum? NormaliseHeight { get; set; }
 
         /// <summary>
-        /// Gets or sets ProofDisabled
+        /// True if the text proof should be disabled.
         /// </summary>
         public ProofDisabledEnum? ProofDisabled { get; set; }
 
         /// <summary>
-        /// Gets or sets Kumimoji
+        /// True if numbers should ignore East-Asian specific vertical text layout.
         /// </summary>
         public KumimojiEnum? Kumimoji { get; set; }
 
         /// <summary>
-        /// Gets or sets IsHardUnderlineFill
+        /// True if underline style has own FillFormat properties.
         /// </summary>
         public IsHardUnderlineFillEnum? IsHardUnderlineFill { get; set; }
 
         /// <summary>
-        /// Gets or sets IsHardUnderlineLine
+        /// True if underline style has own LineFormat properties.
         /// </summary>
         public IsHardUnderlineLineEnum? IsHardUnderlineLine { get; set; }
 
         /// <summary>
-        /// Gets or sets Text
+        /// Text.
         /// </summary>
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or sets Escapement
+        /// Superscript or subscript of the text.
         /// </summary>
         public double? Escapement { get; set; }
 
         /// <summary>
-        /// Gets or sets Spacing
+        /// Intercharacter spacing increment.
         /// </summary>
         public double? Spacing { get; set; }
 
         /// <summary>
-        /// Gets or sets FontColor
+        /// Font color.
         /// </summary>
         public string FontColor { get; set; }
 
         /// <summary>
-        /// Gets or sets HighlightColor
+        /// Highlight color.
         /// </summary>
         public string HighlightColor { get; set; }
 
         /// <summary>
-        /// Gets or sets FontHeight
+        /// Font height.
         /// </summary>
         public double? FontHeight { get; set; }
 
         /// <summary>
-        /// Gets or sets SmartTagClean
+        /// True if smart tag should be cleaned.
         /// </summary>
         public bool? SmartTagClean { get; set; }
 
         /// <summary>
-        /// Gets or sets KerningMinimalSize
+        /// Minimal font size for kerning.
         /// </summary>
         public double? KerningMinimalSize { get; set; }
 
         /// <summary>
-        /// Gets or sets LanguageId
+        /// Proving language ID.
         /// </summary>
         public string LanguageId { get; set; }
 
         /// <summary>
-        /// Gets or sets AlternativeLanguageId
+        /// Alternative proving language ID.
         /// </summary>
         public string AlternativeLanguageId { get; set; }
 
         /// <summary>
-        /// Gets or sets FillFormat
+        /// Fill format.
         /// </summary>
         public FillFormat FillFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets EffectFormat
+        /// Effect format.
         /// </summary>
         public EffectFormat EffectFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets LineFormat
+        /// Line format.
         /// </summary>
         public LineFormat LineFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets UnderlineFillFormat
+        /// Underline fill format.
         /// </summary>
         public FillFormat UnderlineFillFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets UnderlineLineFormat
+        /// Underline line format.
         /// </summary>
         public LineFormat UnderlineLineFormat { get; set; }
 

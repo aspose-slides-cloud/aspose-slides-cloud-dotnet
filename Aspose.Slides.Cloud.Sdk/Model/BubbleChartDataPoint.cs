@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Bubble chart data point.
   /// </summary>  
   public class BubbleChartDataPoint : ScatterChartDataPoint 
   {                       
         /// <summary>
-        /// Gets or sets BubbleSize
+        /// Bubble size.
         /// </summary>
         public double? BubbleSize { get; set; }
 

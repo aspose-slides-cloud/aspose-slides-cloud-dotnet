@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class SlideComments : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets List
+        /// Slide comment list.
         /// </summary>
         public List<SlideComment> List { get; set; }
 

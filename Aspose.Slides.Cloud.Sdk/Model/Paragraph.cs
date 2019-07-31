@@ -40,8 +40,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Paragraph : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or Sets Alignment
+        /// Text alignment.
         /// </summary>
+        /// <value>Text alignment.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AlignmentEnum
         {
@@ -83,8 +84,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets FontAlignment
+        /// Font alignment.
         /// </summary>
+        /// <value>Font alignment.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FontAlignmentEnum
         {
@@ -121,8 +123,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets BulletType
+        /// Bullet type.
         /// </summary>
+        /// <value>Bullet type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum BulletTypeEnum
         {
@@ -154,8 +157,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets NumberedBulletStyle
+        /// Numbered bullet style.
         /// </summary>
+        /// <value>Numbered bullet style.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum NumberedBulletStyleEnum
         {
@@ -372,8 +376,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets HangingPunctuation
+        /// True if hanging punctuation is used with the paragraph.
         /// </summary>
+        /// <value>True if hanging punctuation is used with the paragraph.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum HangingPunctuationEnum
         {
@@ -395,8 +400,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets EastAsianLineBreak
+        /// True if East Asian line break is used with the paragraph.
         /// </summary>
+        /// <value>True if East Asian line break is used with the paragraph.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum EastAsianLineBreakEnum
         {
@@ -418,8 +424,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets LatinLineBreak
+        /// True if Latin line break is used with the paragraph.
         /// </summary>
+        /// <value>True if Latin line break is used with the paragraph.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum LatinLineBreakEnum
         {
@@ -441,8 +448,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets RightToLeft
+        /// True if right to left direction is used with the paragraph.
         /// </summary>
+        /// <value>True if right to left direction is used with the paragraph.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RightToLeftEnum
         {
@@ -464,102 +472,102 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets Alignment
+        /// Text alignment.
         /// </summary>
         public AlignmentEnum? Alignment { get; set; }
 
         /// <summary>
-        /// Gets or sets FontAlignment
+        /// Font alignment.
         /// </summary>
         public FontAlignmentEnum? FontAlignment { get; set; }
 
         /// <summary>
-        /// Gets or sets BulletType
+        /// Bullet type.
         /// </summary>
         public BulletTypeEnum? BulletType { get; set; }
 
         /// <summary>
-        /// Gets or sets NumberedBulletStyle
+        /// Numbered bullet style.
         /// </summary>
         public NumberedBulletStyleEnum? NumberedBulletStyle { get; set; }
 
         /// <summary>
-        /// Gets or sets HangingPunctuation
+        /// True if hanging punctuation is used with the paragraph.
         /// </summary>
         public HangingPunctuationEnum? HangingPunctuation { get; set; }
 
         /// <summary>
-        /// Gets or sets EastAsianLineBreak
+        /// True if East Asian line break is used with the paragraph.
         /// </summary>
         public EastAsianLineBreakEnum? EastAsianLineBreak { get; set; }
 
         /// <summary>
-        /// Gets or sets LatinLineBreak
+        /// True if Latin line break is used with the paragraph.
         /// </summary>
         public LatinLineBreakEnum? LatinLineBreak { get; set; }
 
         /// <summary>
-        /// Gets or sets RightToLeft
+        /// True if right to left direction is used with the paragraph.
         /// </summary>
         public RightToLeftEnum? RightToLeft { get; set; }
 
         /// <summary>
-        /// Gets or sets MarginLeft
+        /// Left margin.
         /// </summary>
         public double? MarginLeft { get; set; }
 
         /// <summary>
-        /// Gets or sets MarginRight
+        /// Right margin.
         /// </summary>
         public double? MarginRight { get; set; }
 
         /// <summary>
-        /// Gets or sets SpaceBefore
+        /// Left spacing.
         /// </summary>
         public double? SpaceBefore { get; set; }
 
         /// <summary>
-        /// Gets or sets SpaceAfter
+        /// Right spacing.
         /// </summary>
         public double? SpaceAfter { get; set; }
 
         /// <summary>
-        /// Gets or sets SpaceWithin
+        /// Spacing between lines.
         /// </summary>
         public double? SpaceWithin { get; set; }
 
         /// <summary>
-        /// Gets or sets Indent
+        /// First line indent.
         /// </summary>
         public double? Indent { get; set; }
 
         /// <summary>
-        /// Gets or sets DefaultTabSize
+        /// Default tabulation size.
         /// </summary>
         public double? DefaultTabSize { get; set; }
 
         /// <summary>
-        /// Gets or sets Depth
+        /// Depth.
         /// </summary>
         public int? Depth { get; set; }
 
         /// <summary>
-        /// Gets or sets BulletChar
+        /// Bullet char.
         /// </summary>
         public string BulletChar { get; set; }
 
         /// <summary>
-        /// Gets or sets BulletHeight
+        /// Bullet height.
         /// </summary>
         public double? BulletHeight { get; set; }
 
         /// <summary>
-        /// Gets or sets NumberedBulletStartWith
+        /// Starting number for a numbered bullet.
         /// </summary>
         public int? NumberedBulletStartWith { get; set; }
 
         /// <summary>
-        /// Gets or sets PortionList
+        /// List of portion links.
         /// </summary>
         public List<ResourceUriElement> PortionList { get; set; }
 

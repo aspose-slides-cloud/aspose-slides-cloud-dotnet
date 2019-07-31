@@ -40,6 +40,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class OleObjectFrame : ShapeBase 
   {                       
         /// <summary>
+        /// True if an object is visible as icon.
+        /// </summary>
+        public bool? IsObjectIcon { get; set; }
+
+        /// <summary>
+        /// The title for OleObject icon.             
+        /// </summary>
+        public string SubstitutePictureTitle { get; set; }
+
+        /// <summary>
         /// Create an instance of the object
         /// </summary>
         public OleObjectFrame() : base()
@@ -62,6 +72,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
+          sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
           sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
           sb.Append("  X: ").Append(this.X).Append("\n");
           sb.Append("  Y: ").Append(this.Y).Append("\n");
@@ -72,6 +83,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
           sb.Append("  Type: ").Append(this.Type).Append("\n");
           sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
+          sb.Append("  IsObjectIcon: ").Append(this.IsObjectIcon).Append("\n");
+          sb.Append("  SubstitutePictureTitle: ").Append(this.SubstitutePictureTitle).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

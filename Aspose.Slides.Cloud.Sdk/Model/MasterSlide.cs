@@ -35,22 +35,22 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Master slide.
   /// </summary>  
   public class MasterSlide : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets Name
+        /// Name.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets LayoutSlides
+        /// List of layout slide links.
         /// </summary>
         public List<ResourceUriElement> LayoutSlides { get; set; }
 
         /// <summary>
-        /// Gets or sets DependingSlides
+        /// List of depending slide links.
         /// </summary>
         public List<ResourceUriElement> DependingSlides { get; set; }
 

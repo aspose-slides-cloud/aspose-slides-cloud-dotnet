@@ -30,9 +30,24 @@ namespace Aspose.Slides.Cloud.Sdk
 
     internal class StreamApiInvoker : ApiInvoker<object, Stream>
     {
-        public StreamApiInvoker(List<IRequestHandler> requestHandlers, int timeout)
-            : base(requestHandlers, new StreamToStreamCopier(), timeout)
+        public StreamApiInvoker(List<IRequestHandler> requestHandlers, int timeout) : base(requestHandlers, timeout)
         {
+        }
+
+        protected override void CopyToStream(Stream data, Stream stream)
+        {
+            if (data.CanSeek)
+            {
+                data.Flush();
+                data.Position = 0;
+            }
+
+            byte[] array = new byte[81920];
+            int count;
+            while ((count = data.Read(array, 0, array.Length)) != 0)
+            {
+                stream.Write(array, 0, count);
+            }
         }
     }
 }

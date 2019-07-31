@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Table column.
   /// </summary>  
   public class TableColumn 
   {                       
         /// <summary>
-        /// Gets or sets Width
+        /// Width.
         /// </summary>
         public double? Width { get; set; }
 

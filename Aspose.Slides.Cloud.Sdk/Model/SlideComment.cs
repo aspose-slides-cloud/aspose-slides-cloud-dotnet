@@ -40,19 +40,24 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class SlideComment 
   {                       
         /// <summary>
-        /// Gets or sets Author
+        /// Author.
         /// </summary>
         public string Author { get; set; }
 
         /// <summary>
-        /// Gets or sets Text
+        /// Text.
         /// </summary>
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or sets CreatedTime
+        /// Creation time.
         /// </summary>
         public string CreatedTime { get; set; }
+
+        /// <summary>
+        /// Child comments.
+        /// </summary>
+        public List<SlideComment> ChildComments { get; set; }
 
         /// <summary>
         /// Create an instance of the object
@@ -72,6 +77,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  Author: ").Append(this.Author).Append("\n");
           sb.Append("  Text: ").Append(this.Text).Append("\n");
           sb.Append("  CreatedTime: ").Append(this.CreatedTime).Append("\n");
+          sb.Append("  ChildComments: ").Append(this.ChildComments).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

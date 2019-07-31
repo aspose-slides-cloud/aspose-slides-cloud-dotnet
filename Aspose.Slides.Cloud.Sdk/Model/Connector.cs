@@ -40,22 +40,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Connector : GeometryShape 
   {                       
         /// <summary>
-        /// Gets or sets StartShapeConnectedTo
+        /// Start shape link.
         /// </summary>
         public ResourceUri StartShapeConnectedTo { get; set; }
 
         /// <summary>
-        /// Gets or sets StartShapeConnectedToIndex
+        /// Start shape index.
         /// </summary>
         public int? StartShapeConnectedToIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets EndShapeConnectedTo
+        /// End shape link.
         /// </summary>
         public ResourceUri EndShapeConnectedTo { get; set; }
 
         /// <summary>
-        /// Gets or sets EndShapeConnectedToIndex
+        /// End shape index.
         /// </summary>
         public int? EndShapeConnectedToIndex { get; set; }
 
@@ -81,6 +81,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
+          sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
           sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
           sb.Append("  X: ").Append(this.X).Append("\n");
           sb.Append("  Y: ").Append(this.Y).Append("\n");

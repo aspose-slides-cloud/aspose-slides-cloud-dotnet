@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class PictureFrame : GeometryShape 
   {                       
         /// <summary>
-        /// Gets or sets PictureFillFormat
+        /// Fill format.
         /// </summary>
         public PictureFill PictureFillFormat { get; set; }
 
@@ -67,6 +67,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
+          sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
           sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
           sb.Append("  X: ").Append(this.X).Append("\n");
           sb.Append("  Y: ").Append(this.Y).Append("\n");

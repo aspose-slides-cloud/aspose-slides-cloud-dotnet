@@ -35,7 +35,7 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Slide shape.
   /// </summary>  
   public class ShapeBase : ResourceBase 
   {                       
@@ -1136,6 +1136,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string AlternativeText { get; set; }
 
         /// <summary>
+        /// The title of alternative text associated with the shape.
+        /// </summary>
+        public string AlternativeTextTitle { get; set; }
+
+        /// <summary>
         /// Gets or sets a value indicating whether this ShapeBase is hidden.
         /// </summary>
         public bool? Hidden { get; set; }
@@ -1196,6 +1201,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
           sb.Append("  Width: ").Append(this.Width).Append("\n");
           sb.Append("  Height: ").Append(this.Height).Append("\n");
           sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
+          sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
           sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
           sb.Append("  X: ").Append(this.X).Append("\n");
           sb.Append("  Y: ").Append(this.Y).Append("\n");

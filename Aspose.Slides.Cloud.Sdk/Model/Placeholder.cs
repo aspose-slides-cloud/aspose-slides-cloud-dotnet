@@ -40,8 +40,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Placeholder : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or Sets Orientation
+        /// Orientation.
         /// </summary>
+        /// <value>Orientation.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OrientationEnum
         {
@@ -58,8 +59,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets Size
+        /// Size.
         /// </summary>
+        /// <value>Size.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SizeEnum
         {
@@ -81,8 +83,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Placeholder type.
         /// </summary>
+        /// <value>Placeholder type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
@@ -169,27 +172,27 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets Orientation
+        /// Orientation.
         /// </summary>
         public OrientationEnum? Orientation { get; set; }
 
         /// <summary>
-        /// Gets or sets Size
+        /// Size.
         /// </summary>
         public SizeEnum? Size { get; set; }
 
         /// <summary>
-        /// Gets or sets Type
+        /// Placeholder type.
         /// </summary>
         public TypeEnum? Type { get; set; }
 
         /// <summary>
-        /// Gets or sets Index
+        /// Index.
         /// </summary>
         public int? Index { get; set; }
 
         /// <summary>
-        /// Gets or sets Shape
+        /// Shape link.
         /// </summary>
         public ResourceUriElement Shape { get; set; }
 

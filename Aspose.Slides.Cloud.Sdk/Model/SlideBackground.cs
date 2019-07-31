@@ -40,8 +40,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class SlideBackground : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or Sets Type
+        /// Fill type.
         /// </summary>
+        /// <value>Fill type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
@@ -78,17 +79,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets Type
+        /// Fill type.
         /// </summary>
         public TypeEnum? Type { get; set; }
 
         /// <summary>
-        /// Gets or sets FillFormat
+        /// Fill format.
         /// </summary>
         public FillFormat FillFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets EffectFormat
+        /// Effect format.
         /// </summary>
         public EffectFormat EffectFormat { get; set; }
 

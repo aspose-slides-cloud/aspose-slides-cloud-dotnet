@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Reset slide task.
   /// </summary>  
   public class ResetSlide : Task 
   {                       
         /// <summary>
-        /// Gets or sets Position
+        /// Slide position.
         /// </summary>
         public int? Position { get; set; }
 

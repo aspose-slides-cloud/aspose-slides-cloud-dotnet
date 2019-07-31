@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class IShapeExportOptions 
   {                       
         /// <summary>
-        /// Gets or sets Format
+        /// Export format.
         /// </summary>
         public string Format { get; set; }
 

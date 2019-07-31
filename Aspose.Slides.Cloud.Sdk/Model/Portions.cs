@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Portions : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets PortionLinks
+        /// List of portion links.
         /// </summary>
         public List<ResourceUriElement> PortionLinks { get; set; }
 

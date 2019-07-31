@@ -45,7 +45,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public ResourceUri SelfUri { get; set; }
 
         /// <summary>
-        /// Gets or sets AlternateLinks
+        /// List of alternate links.
         /// </summary>
         public List<ResourceUri> AlternateLinks { get; set; }
 

@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
   public class Images : ResourceBase 
   {                       
         /// <summary>
-        /// Gets or sets List
+        /// Image list.
         /// </summary>
         public List<Image> List { get; set; }
 

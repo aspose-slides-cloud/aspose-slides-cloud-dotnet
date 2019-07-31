@@ -35,12 +35,12 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Remove slide task.
   /// </summary>  
   public class RemoveSlide : Task 
   {                       
         /// <summary>
-        /// Gets or sets Position
+        /// Position of slide to be removed.
         /// </summary>
         public int? Position { get; set; }
 

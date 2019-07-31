@@ -35,7 +35,7 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Presentation slide.
   /// </summary>  
   public class Slide : ResourceBase 
   {                       

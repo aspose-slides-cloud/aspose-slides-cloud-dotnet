@@ -35,13 +35,14 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
   /// <summary>
-  /// 
+  /// Provides options that control how a presentation is saved in TIFF format.
   /// </summary>  
   public class TiffExportOptions : ExportOptions 
   {                       
         /// <summary>
-        /// Gets or Sets Compression
+        /// Compression type.
         /// </summary>
+        /// <value>Compression type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CompressionEnum
         {
@@ -160,7 +161,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets Compression
+        /// Compression type.
         /// </summary>
         public CompressionEnum? Compression { get; set; }
 
@@ -180,22 +181,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public CommentsPositionEnum? CommentsPosition { get; set; }
 
         /// <summary>
-        /// Gets or sets Width
+        /// Width.
         /// </summary>
         public int? Width { get; set; }
 
         /// <summary>
-        /// Gets or sets Height
+        /// Height.
         /// </summary>
         public int? Height { get; set; }
 
         /// <summary>
-        /// Gets or sets DpiX
+        /// Horizontal resolution, in dots per inch.
         /// </summary>
         public int? DpiX { get; set; }
 
         /// <summary>
-        /// Gets or sets DpiY
+        /// Vertical resolution, in dots per inch.
         /// </summary>
         public int? DpiY { get; set; }
 
