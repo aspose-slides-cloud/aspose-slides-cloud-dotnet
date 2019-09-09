@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents reflection effect 
-  /// </summary>  
-  public class ReflectionEffect 
-  {                       
+    /// <summary>
+    /// Represents reflection effect 
+    /// </summary>  
+    public class ReflectionEffect 
+    {                       
         /// <summary>
         /// rectangle alignment
         /// </summary>
@@ -168,6 +168,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? RotateShadowWithShape { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -181,24 +198,24 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class ReflectionEffect {\n");
-          sb.Append("  Direction: ").Append(this.Direction).Append("\n");
-          sb.Append("  FadeDirection: ").Append(this.FadeDirection).Append("\n");
-          sb.Append("  Distance: ").Append(this.Distance).Append("\n");
-          sb.Append("  BlurRadius: ").Append(this.BlurRadius).Append("\n");
-          sb.Append("  ScaleHorizontal: ").Append(this.ScaleHorizontal).Append("\n");
-          sb.Append("  ScaleVertical: ").Append(this.ScaleVertical).Append("\n");
-          sb.Append("  SkewHorizontal: ").Append(this.SkewHorizontal).Append("\n");
-          sb.Append("  SkewVertical: ").Append(this.SkewVertical).Append("\n");
-          sb.Append("  StartPosAlpha: ").Append(this.StartPosAlpha).Append("\n");
-          sb.Append("  EndPosAlpha: ").Append(this.EndPosAlpha).Append("\n");
-          sb.Append("  StartReflectionOpacity: ").Append(this.StartReflectionOpacity).Append("\n");
-          sb.Append("  EndReflectionOpacity: ").Append(this.EndReflectionOpacity).Append("\n");
-          sb.Append("  RectangleAlign: ").Append(this.RectangleAlign).Append("\n");
-          sb.Append("  RotateShadowWithShape: ").Append(this.RotateShadowWithShape).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class ReflectionEffect {\n");
+            sb.Append("  Direction: ").Append(this.Direction).Append("\n");
+            sb.Append("  FadeDirection: ").Append(this.FadeDirection).Append("\n");
+            sb.Append("  Distance: ").Append(this.Distance).Append("\n");
+            sb.Append("  BlurRadius: ").Append(this.BlurRadius).Append("\n");
+            sb.Append("  ScaleHorizontal: ").Append(this.ScaleHorizontal).Append("\n");
+            sb.Append("  ScaleVertical: ").Append(this.ScaleVertical).Append("\n");
+            sb.Append("  SkewHorizontal: ").Append(this.SkewHorizontal).Append("\n");
+            sb.Append("  SkewVertical: ").Append(this.SkewVertical).Append("\n");
+            sb.Append("  StartPosAlpha: ").Append(this.StartPosAlpha).Append("\n");
+            sb.Append("  EndPosAlpha: ").Append(this.EndPosAlpha).Append("\n");
+            sb.Append("  StartReflectionOpacity: ").Append(this.StartReflectionOpacity).Append("\n");
+            sb.Append("  EndReflectionOpacity: ").Append(this.EndReflectionOpacity).Append("\n");
+            sb.Append("  RectangleAlign: ").Append(this.RectangleAlign).Append("\n");
+            sb.Append("  RotateShadowWithShape: ").Append(this.RotateShadowWithShape).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

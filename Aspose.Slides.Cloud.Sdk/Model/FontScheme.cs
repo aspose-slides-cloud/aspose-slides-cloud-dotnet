@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents font scheme
-  /// </summary>  
-  public class FontScheme : ResourceBase 
-  {                       
+    /// <summary>
+    /// Represents font scheme
+    /// </summary>  
+    public class FontScheme : ResourceBase 
+    {                       
         /// <summary>
         /// Gets or sets fonts collection for a \"heading\" part of the slide.
         /// </summary>
@@ -54,6 +54,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string Name { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -67,15 +84,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class FontScheme {\n");
-          sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-          sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Major: ").Append(this.Major).Append("\n");
-          sb.Append("  Minor: ").Append(this.Minor).Append("\n");
-          sb.Append("  Name: ").Append(this.Name).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class FontScheme {\n");
+            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
+            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
+            sb.Append("  Major: ").Append(this.Major).Append("\n");
+            sb.Append("  Minor: ").Append(this.Minor).Append("\n");
+            sb.Append("  Name: ").Append(this.Name).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

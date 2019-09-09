@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Provides options that control how a presentation is saved in XPS format.
-  /// </summary>  
-  public class XpsExportOptions : ExportOptions 
-  {                       
+    /// <summary>
+    /// Provides options that control how a presentation is saved in XPS format.
+    /// </summary>  
+    public class XpsExportOptions : ExportOptions 
+    {                       
         /// <summary>
         /// Specifies whether the generated document should include hidden slides or not. Default is false. 
         /// </summary>
@@ -54,12 +54,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? DrawSlidesFrame { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Format", "xps");
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public XpsExportOptions() : base()
         {
-          Format = "xps";
+            Format = "xps";
         }
 
         /// <summary>
@@ -68,14 +86,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class XpsExportOptions {\n");
-          sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
-          sb.Append("  SaveMetafilesAsPng: ").Append(this.SaveMetafilesAsPng).Append("\n");
-          sb.Append("  DrawSlidesFrame: ").Append(this.DrawSlidesFrame).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class XpsExportOptions {\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
+            sb.Append("  SaveMetafilesAsPng: ").Append(this.SaveMetafilesAsPng).Append("\n");
+            sb.Append("  DrawSlidesFrame: ").Append(this.DrawSlidesFrame).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

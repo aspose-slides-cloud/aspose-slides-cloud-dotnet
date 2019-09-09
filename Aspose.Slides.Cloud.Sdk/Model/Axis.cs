@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents a chart axis
-  /// </summary>  
-  public class Axis 
-  {                       
+    /// <summary>
+    /// Represents a chart axis
+    /// </summary>  
+    public class Axis 
+    {                       
         /// <summary>
         /// Axis position
         /// </summary>
@@ -514,6 +514,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public LineFormat LineFormat { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -527,46 +544,46 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Axis {\n");
-          sb.Append("  IsVisible: ").Append(this.IsVisible).Append("\n");
-          sb.Append("  HasTitle: ").Append(this.HasTitle).Append("\n");
-          sb.Append("  Position: ").Append(this.Position).Append("\n");
-          sb.Append("  DisplayUnit: ").Append(this.DisplayUnit).Append("\n");
-          sb.Append("  BaseUnitScale: ").Append(this.BaseUnitScale).Append("\n");
-          sb.Append("  IsAutomaticMajorUnit: ").Append(this.IsAutomaticMajorUnit).Append("\n");
-          sb.Append("  MajorUnit: ").Append(this.MajorUnit).Append("\n");
-          sb.Append("  MajorUnitScale: ").Append(this.MajorUnitScale).Append("\n");
-          sb.Append("  MajorTickMark: ").Append(this.MajorTickMark).Append("\n");
-          sb.Append("  IsAutomaticMinorUnit: ").Append(this.IsAutomaticMinorUnit).Append("\n");
-          sb.Append("  MinorUnit: ").Append(this.MinorUnit).Append("\n");
-          sb.Append("  MinorUnitScale: ").Append(this.MinorUnitScale).Append("\n");
-          sb.Append("  MinorTickMark: ").Append(this.MinorTickMark).Append("\n");
-          sb.Append("  IsAutomaticMaxValue: ").Append(this.IsAutomaticMaxValue).Append("\n");
-          sb.Append("  MaxValue: ").Append(this.MaxValue).Append("\n");
-          sb.Append("  IsAutomaticMinValue: ").Append(this.IsAutomaticMinValue).Append("\n");
-          sb.Append("  MinValue: ").Append(this.MinValue).Append("\n");
-          sb.Append("  IsLogarithmic: ").Append(this.IsLogarithmic).Append("\n");
-          sb.Append("  LogBase: ").Append(this.LogBase).Append("\n");
-          sb.Append("  CategoryAxisType: ").Append(this.CategoryAxisType).Append("\n");
-          sb.Append("  AxisBetweenCategories: ").Append(this.AxisBetweenCategories).Append("\n");
-          sb.Append("  LabelOffset: ").Append(this.LabelOffset).Append("\n");
-          sb.Append("  IsPlotOrderReversed: ").Append(this.IsPlotOrderReversed).Append("\n");
-          sb.Append("  IsNumberFormatLinkedToSource: ").Append(this.IsNumberFormatLinkedToSource).Append("\n");
-          sb.Append("  NumberFormat: ").Append(this.NumberFormat).Append("\n");
-          sb.Append("  CrossType: ").Append(this.CrossType).Append("\n");
-          sb.Append("  CrossAt: ").Append(this.CrossAt).Append("\n");
-          sb.Append("  IsAutomaticTickMarksSpacing: ").Append(this.IsAutomaticTickMarksSpacing).Append("\n");
-          sb.Append("  TickMarksSpacing: ").Append(this.TickMarksSpacing).Append("\n");
-          sb.Append("  IsAutomaticTickLabelSpacing: ").Append(this.IsAutomaticTickLabelSpacing).Append("\n");
-          sb.Append("  TickLabelSpacing: ").Append(this.TickLabelSpacing).Append("\n");
-          sb.Append("  TickLabelPosition: ").Append(this.TickLabelPosition).Append("\n");
-          sb.Append("  TickLabelRotationAngle: ").Append(this.TickLabelRotationAngle).Append("\n");
-          sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-          sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-          sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Axis {\n");
+            sb.Append("  IsVisible: ").Append(this.IsVisible).Append("\n");
+            sb.Append("  HasTitle: ").Append(this.HasTitle).Append("\n");
+            sb.Append("  Position: ").Append(this.Position).Append("\n");
+            sb.Append("  DisplayUnit: ").Append(this.DisplayUnit).Append("\n");
+            sb.Append("  BaseUnitScale: ").Append(this.BaseUnitScale).Append("\n");
+            sb.Append("  IsAutomaticMajorUnit: ").Append(this.IsAutomaticMajorUnit).Append("\n");
+            sb.Append("  MajorUnit: ").Append(this.MajorUnit).Append("\n");
+            sb.Append("  MajorUnitScale: ").Append(this.MajorUnitScale).Append("\n");
+            sb.Append("  MajorTickMark: ").Append(this.MajorTickMark).Append("\n");
+            sb.Append("  IsAutomaticMinorUnit: ").Append(this.IsAutomaticMinorUnit).Append("\n");
+            sb.Append("  MinorUnit: ").Append(this.MinorUnit).Append("\n");
+            sb.Append("  MinorUnitScale: ").Append(this.MinorUnitScale).Append("\n");
+            sb.Append("  MinorTickMark: ").Append(this.MinorTickMark).Append("\n");
+            sb.Append("  IsAutomaticMaxValue: ").Append(this.IsAutomaticMaxValue).Append("\n");
+            sb.Append("  MaxValue: ").Append(this.MaxValue).Append("\n");
+            sb.Append("  IsAutomaticMinValue: ").Append(this.IsAutomaticMinValue).Append("\n");
+            sb.Append("  MinValue: ").Append(this.MinValue).Append("\n");
+            sb.Append("  IsLogarithmic: ").Append(this.IsLogarithmic).Append("\n");
+            sb.Append("  LogBase: ").Append(this.LogBase).Append("\n");
+            sb.Append("  CategoryAxisType: ").Append(this.CategoryAxisType).Append("\n");
+            sb.Append("  AxisBetweenCategories: ").Append(this.AxisBetweenCategories).Append("\n");
+            sb.Append("  LabelOffset: ").Append(this.LabelOffset).Append("\n");
+            sb.Append("  IsPlotOrderReversed: ").Append(this.IsPlotOrderReversed).Append("\n");
+            sb.Append("  IsNumberFormatLinkedToSource: ").Append(this.IsNumberFormatLinkedToSource).Append("\n");
+            sb.Append("  NumberFormat: ").Append(this.NumberFormat).Append("\n");
+            sb.Append("  CrossType: ").Append(this.CrossType).Append("\n");
+            sb.Append("  CrossAt: ").Append(this.CrossAt).Append("\n");
+            sb.Append("  IsAutomaticTickMarksSpacing: ").Append(this.IsAutomaticTickMarksSpacing).Append("\n");
+            sb.Append("  TickMarksSpacing: ").Append(this.TickMarksSpacing).Append("\n");
+            sb.Append("  IsAutomaticTickLabelSpacing: ").Append(this.IsAutomaticTickLabelSpacing).Append("\n");
+            sb.Append("  TickLabelSpacing: ").Append(this.TickLabelSpacing).Append("\n");
+            sb.Append("  TickLabelPosition: ").Append(this.TickLabelPosition).Append("\n");
+            sb.Append("  TickLabelRotationAngle: ").Append(this.TickLabelRotationAngle).Append("\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

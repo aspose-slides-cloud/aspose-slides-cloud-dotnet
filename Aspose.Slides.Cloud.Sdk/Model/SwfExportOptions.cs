@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Provides options that control how a presentation is saved in SWF format.
-  /// </summary>  
-  public class SwfExportOptions : ExportOptions 
-  {                       
+    /// <summary>
+    /// Provides options that control how a presentation is saved in SWF format.
+    /// </summary>  
+    public class SwfExportOptions : ExportOptions 
+    {                       
         /// <summary>
         /// Gets or sets the position of the notes on the page.
         /// </summary>
@@ -187,12 +187,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? ShowCommentsByNoAuthor { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Format", "swf");
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public SwfExportOptions() : base()
         {
-          Format = "swf";
+            Format = "swf";
         }
 
         /// <summary>
@@ -201,31 +219,31 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class SwfExportOptions {\n");
-          sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
-          sb.Append("  Compressed: ").Append(this.Compressed).Append("\n");
-          sb.Append("  ViewerIncluded: ").Append(this.ViewerIncluded).Append("\n");
-          sb.Append("  ShowPageBorder: ").Append(this.ShowPageBorder).Append("\n");
-          sb.Append("  ShowFullScreen: ").Append(this.ShowFullScreen).Append("\n");
-          sb.Append("  ShowPageStepper: ").Append(this.ShowPageStepper).Append("\n");
-          sb.Append("  ShowSearch: ").Append(this.ShowSearch).Append("\n");
-          sb.Append("  ShowTopPane: ").Append(this.ShowTopPane).Append("\n");
-          sb.Append("  ShowBottomPane: ").Append(this.ShowBottomPane).Append("\n");
-          sb.Append("  ShowLeftPane: ").Append(this.ShowLeftPane).Append("\n");
-          sb.Append("  StartOpenLeftPane: ").Append(this.StartOpenLeftPane).Append("\n");
-          sb.Append("  EnableContextMenu: ").Append(this.EnableContextMenu).Append("\n");
-          sb.Append("  LogoImage: ").Append(this.LogoImage).Append("\n");
-          sb.Append("  LogoLink: ").Append(this.LogoLink).Append("\n");
-          sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
-          sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
-          sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
-          sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
-          sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
-          sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class SwfExportOptions {\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
+            sb.Append("  Compressed: ").Append(this.Compressed).Append("\n");
+            sb.Append("  ViewerIncluded: ").Append(this.ViewerIncluded).Append("\n");
+            sb.Append("  ShowPageBorder: ").Append(this.ShowPageBorder).Append("\n");
+            sb.Append("  ShowFullScreen: ").Append(this.ShowFullScreen).Append("\n");
+            sb.Append("  ShowPageStepper: ").Append(this.ShowPageStepper).Append("\n");
+            sb.Append("  ShowSearch: ").Append(this.ShowSearch).Append("\n");
+            sb.Append("  ShowTopPane: ").Append(this.ShowTopPane).Append("\n");
+            sb.Append("  ShowBottomPane: ").Append(this.ShowBottomPane).Append("\n");
+            sb.Append("  ShowLeftPane: ").Append(this.ShowLeftPane).Append("\n");
+            sb.Append("  StartOpenLeftPane: ").Append(this.StartOpenLeftPane).Append("\n");
+            sb.Append("  EnableContextMenu: ").Append(this.EnableContextMenu).Append("\n");
+            sb.Append("  LogoImage: ").Append(this.LogoImage).Append("\n");
+            sb.Append("  LogoLink: ").Append(this.LogoLink).Append("\n");
+            sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
+            sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
+            sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
+            sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
+            sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
+            sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

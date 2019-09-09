@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents gradient fill format
-  /// </summary>  
-  public class GradientFill : FillFormat 
-  {                       
+    /// <summary>
+    /// Represents gradient fill format
+    /// </summary>  
+    public class GradientFill : FillFormat 
+    {                       
         /// <summary>
         /// Gradient style.
         /// </summary>
@@ -176,12 +176,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? IsScaled { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Gradient);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public GradientFill() : base()
         {
-          Type = TypeEnum.Gradient;
+            Type = TypeEnum.Gradient;
         }
 
         /// <summary>
@@ -190,17 +208,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class GradientFill {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Direction: ").Append(this.Direction).Append("\n");
-          sb.Append("  Shape: ").Append(this.Shape).Append("\n");
-          sb.Append("  Stops: ").Append(this.Stops).Append("\n");
-          sb.Append("  LinearAngle: ").Append(this.LinearAngle).Append("\n");
-          sb.Append("  IsScaled: ").Append(this.IsScaled).Append("\n");
-          sb.Append("  TileFlip: ").Append(this.TileFlip).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class GradientFill {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Direction: ").Append(this.Direction).Append("\n");
+            sb.Append("  Shape: ").Append(this.Shape).Append("\n");
+            sb.Append("  Stops: ").Append(this.Stops).Append("\n");
+            sb.Append("  LinearAngle: ").Append(this.LinearAngle).Append("\n");
+            sb.Append("  IsScaled: ").Append(this.IsScaled).Append("\n");
+            sb.Append("  TileFlip: ").Append(this.TileFlip).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

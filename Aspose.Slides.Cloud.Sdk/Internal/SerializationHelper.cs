@@ -32,6 +32,9 @@ namespace Aspose.Slides.Cloud.Sdk
     using System.Xml;
     using System.Xml.Serialization;
     using RequestHandlers;
+    using Newtonsoft.Json.Linq;
+    using System.Reflection;
+    using System.Collections.Generic;
 
     internal class SerializationHelper
     {
@@ -128,7 +131,7 @@ namespace Aspose.Slides.Cloud.Sdk
         {
             try
             {
-                 return JsonConvert.DeserializeObject(json, type);
+                 return JsonConvert.DeserializeObject(json, type, ModelConverter.Instance);
             }
             catch (Exception e)
             {
@@ -152,5 +155,82 @@ namespace Aspose.Slides.Cloud.Sdk
                 return false;
             }
         }
+    }
+
+    public class ModelConverter : JsonConverter
+    {
+        public static ModelConverter Instance { get { return s_instance ?? (s_instance = new ModelConverter()); } }
+
+        public override bool CanConvert(Type objectType)
+        {
+            return objectType.Namespace == "Aspose.Slides.Cloud.Sdk.Model";
+        }
+
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            JTokenReader jTokenReader = reader as JTokenReader;
+            if (jTokenReader != null && jTokenReader.CurrentToken.Type == JTokenType.Null)
+            {
+                return null;
+            }
+            JsonTextReader jTextReader = reader as JsonTextReader;
+            if (jTextReader != null && jTextReader.TokenType == JsonToken.Null)
+            {
+                return null;
+            }
+            JObject jObject = JObject.Load(reader);
+            Dictionary<string, object> jProperties = new Dictionary<string, object>(
+                jObject.ToObject<IDictionary<string, object>>(), StringComparer.CurrentCultureIgnoreCase);
+            object target = Activator.CreateInstance(GetObjectType(objectType, jProperties));
+            if (target != null)
+            {
+                serializer.Populate(jObject.CreateReader(), target);
+            }
+            return target;
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new NotImplementedException();
+        }
+
+        private Type GetObjectType(Type objectType, Dictionary<string, object> jProperties)
+        {
+            foreach (Type type in objectType.Assembly.GetTypes())
+            {
+                if (objectType.IsAssignableFrom(type) && IsJObjectOfType(jProperties, type))
+                {
+                    return type;
+                }
+            }
+            return objectType;
+        }
+
+        private bool IsJObjectOfType(Dictionary<string, object> jProperties, Type type)
+        {
+            PropertyInfo typeDeterminersInfo = type.GetProperty("TypeDeterminers");
+            if (typeDeterminersInfo != null)
+            {
+                Dictionary<string, object> typeDeterminers = (Dictionary<string, object>)typeDeterminersInfo.GetValue(null, null);
+                if (typeDeterminers != null && typeDeterminers.Count > 0)
+                {
+                    foreach (string key in typeDeterminers.Keys)
+                    {
+                        if (!jProperties.ContainsKey(key) || jProperties[key] == null)
+                        {
+                            return false;
+                        }
+                        if (jProperties[key].ToString().ToLower() != typeDeterminers[key].ToString().ToLower())
+                        {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private static ModelConverter s_instance;
     }
 }

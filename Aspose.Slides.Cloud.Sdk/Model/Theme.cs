@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents Slide&#39;s theme 
-  /// </summary>  
-  public class Theme : ResourceBase 
-  {                       
+    /// <summary>
+    /// Represents Slide&#39;s theme 
+    /// </summary>  
+    public class Theme : ResourceBase 
+    {                       
         /// <summary>
         /// Name.
         /// </summary>
@@ -59,6 +59,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public ResourceUriElement FormatScheme { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -72,16 +89,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Theme {\n");
-          sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-          sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Name: ").Append(this.Name).Append("\n");
-          sb.Append("  ColorScheme: ").Append(this.ColorScheme).Append("\n");
-          sb.Append("  FontScheme: ").Append(this.FontScheme).Append("\n");
-          sb.Append("  FormatScheme: ").Append(this.FormatScheme).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Theme {\n");
+            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
+            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
+            sb.Append("  Name: ").Append(this.Name).Append("\n");
+            sb.Append("  ColorScheme: ").Append(this.ColorScheme).Append("\n");
+            sb.Append("  FontScheme: ").Append(this.FontScheme).Append("\n");
+            sb.Append("  FormatScheme: ").Append(this.FormatScheme).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

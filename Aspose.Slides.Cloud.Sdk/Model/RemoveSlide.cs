@@ -34,22 +34,40 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Remove slide task.
-  /// </summary>  
-  public class RemoveSlide : Task 
-  {                       
+    /// <summary>
+    /// Remove slide task.
+    /// </summary>  
+    public class RemoveSlide : Task 
+    {                       
         /// <summary>
         /// Position of slide to be removed.
         /// </summary>
         public int? Position { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.RemoveSlide);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public RemoveSlide() : base()
         {
-          Type = TypeEnum.RemoveSlide;
+            Type = TypeEnum.RemoveSlide;
         }
 
         /// <summary>
@@ -58,12 +76,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class RemoveSlide {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Position: ").Append(this.Position).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class RemoveSlide {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Position: ").Append(this.Position).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

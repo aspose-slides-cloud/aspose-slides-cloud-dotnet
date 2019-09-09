@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Update background task.
-  /// </summary>  
-  public class UpdateBackground : Task 
-  {                       
+    /// <summary>
+    /// Update background task.
+    /// </summary>  
+    public class UpdateBackground : Task 
+    {                       
         /// <summary>
         /// List of slide indices.
         /// </summary>
@@ -49,12 +49,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public SlideBackground Background { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.UpdateBackground);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public UpdateBackground() : base()
         {
-          Type = TypeEnum.UpdateBackground;
+            Type = TypeEnum.UpdateBackground;
         }
 
         /// <summary>
@@ -63,13 +81,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class UpdateBackground {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Slides: ").Append(this.Slides).Append("\n");
-          sb.Append("  Background: ").Append(this.Background).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class UpdateBackground {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Slides: ").Append(this.Slides).Append("\n");
+            sb.Append("  Background: ").Append(this.Background).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

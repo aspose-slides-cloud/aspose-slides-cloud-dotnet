@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Effect format
-  /// </summary>  
-  public class EffectFormat 
-  {                       
+    /// <summary>
+    /// Effect format
+    /// </summary>  
+    public class EffectFormat 
+    {                       
         /// <summary>
         /// blur effect
         /// </summary>
@@ -79,6 +79,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public FillOverlayEffect FillOverlay { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -92,18 +109,18 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class EffectFormat {\n");
-          sb.Append("  Blur: ").Append(this.Blur).Append("\n");
-          sb.Append("  Glow: ").Append(this.Glow).Append("\n");
-          sb.Append("  InnerShadow: ").Append(this.InnerShadow).Append("\n");
-          sb.Append("  OuterShadow: ").Append(this.OuterShadow).Append("\n");
-          sb.Append("  PresetShadow: ").Append(this.PresetShadow).Append("\n");
-          sb.Append("  SoftEdge: ").Append(this.SoftEdge).Append("\n");
-          sb.Append("  Reflection: ").Append(this.Reflection).Append("\n");
-          sb.Append("  FillOverlay: ").Append(this.FillOverlay).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class EffectFormat {\n");
+            sb.Append("  Blur: ").Append(this.Blur).Append("\n");
+            sb.Append("  Glow: ").Append(this.Glow).Append("\n");
+            sb.Append("  InnerShadow: ").Append(this.InnerShadow).Append("\n");
+            sb.Append("  OuterShadow: ").Append(this.OuterShadow).Append("\n");
+            sb.Append("  PresetShadow: ").Append(this.PresetShadow).Append("\n");
+            sb.Append("  SoftEdge: ").Append(this.SoftEdge).Append("\n");
+            sb.Append("  Reflection: ").Append(this.Reflection).Append("\n");
+            sb.Append("  FillOverlay: ").Append(this.FillOverlay).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

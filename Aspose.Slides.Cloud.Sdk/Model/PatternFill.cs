@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents Pattern Fill
-  /// </summary>  
-  public class PatternFill : FillFormat 
-  {                       
+    /// <summary>
+    /// Represents Pattern Fill
+    /// </summary>  
+    public class PatternFill : FillFormat 
+    {                       
         /// <summary>
         /// Gets or sets the style of pattern fill.
         /// </summary>
@@ -343,12 +343,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string ForeColor { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Pattern);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public PatternFill() : base()
         {
-          Type = TypeEnum.Pattern;
+            Type = TypeEnum.Pattern;
         }
 
         /// <summary>
@@ -357,14 +375,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class PatternFill {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  BackColor: ").Append(this.BackColor).Append("\n");
-          sb.Append("  ForeColor: ").Append(this.ForeColor).Append("\n");
-          sb.Append("  Style: ").Append(this.Style).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class PatternFill {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  BackColor: ").Append(this.BackColor).Append("\n");
+            sb.Append("  ForeColor: ").Append(this.ForeColor).Append("\n");
+            sb.Append("  Style: ").Append(this.Style).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

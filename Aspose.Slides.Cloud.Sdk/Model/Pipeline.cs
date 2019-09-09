@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents pipeline for one input document.
-  /// </summary>  
-  public class Pipeline 
-  {                       
+    /// <summary>
+    /// Represents pipeline for one input document.
+    /// </summary>  
+    public class Pipeline 
+    {                       
         /// <summary>
         /// Get or sets input document.
         /// </summary>
@@ -56,6 +56,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         [JsonIgnore]
         public FileInfo[] Files { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -69,13 +86,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Pipeline {\n");
-          sb.Append("  Input: ").Append(this.Input).Append("\n");
-          sb.Append("  Tasks: ").Append(this.Tasks).Append("\n");
-          sb.Append("  Files: ").Append(this.Files).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Pipeline {\n");
+            sb.Append("  Input: ").Append(this.Input).Append("\n");
+            sb.Append("  Tasks: ").Append(this.Tasks).Append("\n");
+            sb.Append("  Files: ").Append(this.Files).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

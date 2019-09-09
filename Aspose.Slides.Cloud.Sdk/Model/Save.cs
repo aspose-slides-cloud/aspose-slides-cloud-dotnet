@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Save slide task.
-  /// </summary>  
-  public class Save : Task 
-  {                       
+    /// <summary>
+    /// Save slide task.
+    /// </summary>  
+    public class Save : Task 
+    {                       
         /// <summary>
         /// Format.
         /// </summary>
@@ -168,12 +168,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public ExportOptions Options { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Save);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public Save() : base()
         {
-          Type = TypeEnum.Save;
+            Type = TypeEnum.Save;
         }
 
         /// <summary>
@@ -182,14 +200,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Save {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("  Output: ").Append(this.Output).Append("\n");
-          sb.Append("  Options: ").Append(this.Options).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Save {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  Output: ").Append(this.Output).Append("\n");
+            sb.Append("  Options: ").Append(this.Options).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

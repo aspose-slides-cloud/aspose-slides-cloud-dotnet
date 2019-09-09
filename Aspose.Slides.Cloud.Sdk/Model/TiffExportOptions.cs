@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Provides options that control how a presentation is saved in TIFF format.
-  /// </summary>  
-  public class TiffExportOptions : ExportOptions 
-  {                       
+    /// <summary>
+    /// Provides options that control how a presentation is saved in TIFF format.
+    /// </summary>  
+    public class TiffExportOptions : ExportOptions 
+    {                       
         /// <summary>
         /// Compression type.
         /// </summary>
@@ -220,12 +220,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? ShowCommentsByNoAuthor { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Format", "tiff");
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public TiffExportOptions() : base()
         {
-          Format = "tiff";
+            Format = "tiff";
         }
 
         /// <summary>
@@ -234,23 +252,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class TiffExportOptions {\n");
-          sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("  Compression: ").Append(this.Compression).Append("\n");
-          sb.Append("  Width: ").Append(this.Width).Append("\n");
-          sb.Append("  Height: ").Append(this.Height).Append("\n");
-          sb.Append("  DpiX: ").Append(this.DpiX).Append("\n");
-          sb.Append("  DpiY: ").Append(this.DpiY).Append("\n");
-          sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
-          sb.Append("  PixelFormat: ").Append(this.PixelFormat).Append("\n");
-          sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
-          sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
-          sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
-          sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
-          sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class TiffExportOptions {\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  Compression: ").Append(this.Compression).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
+            sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("  DpiX: ").Append(this.DpiX).Append("\n");
+            sb.Append("  DpiY: ").Append(this.DpiY).Append("\n");
+            sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
+            sb.Append("  PixelFormat: ").Append(this.PixelFormat).Append("\n");
+            sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
+            sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
+            sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
+            sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
+            sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

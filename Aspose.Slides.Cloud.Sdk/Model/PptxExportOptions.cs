@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Provides options that control how a presentation is saved in PPTX format.
-  /// </summary>  
-  public class PptxExportOptions : ExportOptions 
-  {                       
+    /// <summary>
+    /// Provides options that control how a presentation is saved in PPTX format.
+    /// </summary>  
+    public class PptxExportOptions : ExportOptions 
+    {                       
         /// <summary>
         /// The conformance class to which the PresentationML document conforms. Read/write Conformance.
         /// </summary>
@@ -68,12 +68,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public ConformanceEnum? Conformance { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Format", "pptx");
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public PptxExportOptions() : base()
         {
-          Format = "pptx";
+            Format = "pptx";
         }
 
         /// <summary>
@@ -82,12 +100,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class PptxExportOptions {\n");
-          sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("  Conformance: ").Append(this.Conformance).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class PptxExportOptions {\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  Conformance: ").Append(this.Conformance).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

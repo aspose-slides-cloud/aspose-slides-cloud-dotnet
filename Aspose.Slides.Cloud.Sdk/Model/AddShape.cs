@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Add shape task.
-  /// </summary>  
-  public class AddShape : Task 
-  {                       
+    /// <summary>
+    /// Add shape task.
+    /// </summary>  
+    public class AddShape : Task 
+    {                       
         /// <summary>
         /// Shape DTO.
         /// </summary>
@@ -49,12 +49,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string ShapePath { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.AddShape);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public AddShape() : base()
         {
-          Type = TypeEnum.AddShape;
+            Type = TypeEnum.AddShape;
         }
 
         /// <summary>
@@ -63,13 +81,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class AddShape {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Shape: ").Append(this.Shape).Append("\n");
-          sb.Append("  ShapePath: ").Append(this.ShapePath).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class AddShape {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Shape: ").Append(this.Shape).Append("\n");
+            sb.Append("  ShapePath: ").Append(this.ShapePath).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

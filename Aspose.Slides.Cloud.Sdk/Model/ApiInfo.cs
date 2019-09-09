@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents response for ApiInfo  DTO
-  /// </summary>  
-  public class ApiInfo 
-  {                       
+    /// <summary>
+    /// Represents response for ApiInfo  DTO
+    /// </summary>  
+    public class ApiInfo 
+    {                       
         /// <summary>
         /// Product name.
         /// </summary>
@@ -49,6 +49,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string Version { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -62,12 +79,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class ApiInfo {\n");
-          sb.Append("  Name: ").Append(this.Name).Append("\n");
-          sb.Append("  Version: ").Append(this.Version).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class ApiInfo {\n");
+            sb.Append("  Name: ").Append(this.Name).Append("\n");
+            sb.Append("  Version: ").Append(this.Version).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents outer shadow effect 
-  /// </summary>  
-  public class OuterShadowEffect 
-  {                       
+    /// <summary>
+    /// Represents outer shadow effect 
+    /// </summary>  
+    public class OuterShadowEffect 
+    {                       
         /// <summary>
         /// direction
         /// </summary>
@@ -59,6 +59,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string ShadowColor { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -72,14 +89,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class OuterShadowEffect {\n");
-          sb.Append("  Direction: ").Append(this.Direction).Append("\n");
-          sb.Append("  Distance: ").Append(this.Distance).Append("\n");
-          sb.Append("  BlurRadius: ").Append(this.BlurRadius).Append("\n");
-          sb.Append("  ShadowColor: ").Append(this.ShadowColor).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class OuterShadowEffect {\n");
+            sb.Append("  Direction: ").Append(this.Direction).Append("\n");
+            sb.Append("  Distance: ").Append(this.Distance).Append("\n");
+            sb.Append("  BlurRadius: ").Append(this.BlurRadius).Append("\n");
+            sb.Append("  ShadowColor: ").Append(this.ShadowColor).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

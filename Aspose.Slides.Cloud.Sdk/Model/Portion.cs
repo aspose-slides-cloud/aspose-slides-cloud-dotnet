@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents portion resource
-  /// </summary>  
-  public class Portion : ResourceBase 
-  {                       
+    /// <summary>
+    /// Represents portion resource
+    /// </summary>  
+    public class Portion : ResourceBase 
+    {                       
         /// <summary>
         /// True for bold font.
         /// </summary>
@@ -494,6 +494,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public LineFormat UnderlineLineFormat { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -507,37 +524,37 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Portion {\n");
-          sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-          sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Text: ").Append(this.Text).Append("\n");
-          sb.Append("  FontBold: ").Append(this.FontBold).Append("\n");
-          sb.Append("  FontItalic: ").Append(this.FontItalic).Append("\n");
-          sb.Append("  FontUnderline: ").Append(this.FontUnderline).Append("\n");
-          sb.Append("  StrikethroughType: ").Append(this.StrikethroughType).Append("\n");
-          sb.Append("  TextCapType: ").Append(this.TextCapType).Append("\n");
-          sb.Append("  Escapement: ").Append(this.Escapement).Append("\n");
-          sb.Append("  Spacing: ").Append(this.Spacing).Append("\n");
-          sb.Append("  FontColor: ").Append(this.FontColor).Append("\n");
-          sb.Append("  HighlightColor: ").Append(this.HighlightColor).Append("\n");
-          sb.Append("  FontHeight: ").Append(this.FontHeight).Append("\n");
-          sb.Append("  NormaliseHeight: ").Append(this.NormaliseHeight).Append("\n");
-          sb.Append("  ProofDisabled: ").Append(this.ProofDisabled).Append("\n");
-          sb.Append("  SmartTagClean: ").Append(this.SmartTagClean).Append("\n");
-          sb.Append("  KerningMinimalSize: ").Append(this.KerningMinimalSize).Append("\n");
-          sb.Append("  Kumimoji: ").Append(this.Kumimoji).Append("\n");
-          sb.Append("  LanguageId: ").Append(this.LanguageId).Append("\n");
-          sb.Append("  AlternativeLanguageId: ").Append(this.AlternativeLanguageId).Append("\n");
-          sb.Append("  IsHardUnderlineFill: ").Append(this.IsHardUnderlineFill).Append("\n");
-          sb.Append("  IsHardUnderlineLine: ").Append(this.IsHardUnderlineLine).Append("\n");
-          sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-          sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-          sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-          sb.Append("  UnderlineFillFormat: ").Append(this.UnderlineFillFormat).Append("\n");
-          sb.Append("  UnderlineLineFormat: ").Append(this.UnderlineLineFormat).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Portion {\n");
+            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
+            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
+            sb.Append("  Text: ").Append(this.Text).Append("\n");
+            sb.Append("  FontBold: ").Append(this.FontBold).Append("\n");
+            sb.Append("  FontItalic: ").Append(this.FontItalic).Append("\n");
+            sb.Append("  FontUnderline: ").Append(this.FontUnderline).Append("\n");
+            sb.Append("  StrikethroughType: ").Append(this.StrikethroughType).Append("\n");
+            sb.Append("  TextCapType: ").Append(this.TextCapType).Append("\n");
+            sb.Append("  Escapement: ").Append(this.Escapement).Append("\n");
+            sb.Append("  Spacing: ").Append(this.Spacing).Append("\n");
+            sb.Append("  FontColor: ").Append(this.FontColor).Append("\n");
+            sb.Append("  HighlightColor: ").Append(this.HighlightColor).Append("\n");
+            sb.Append("  FontHeight: ").Append(this.FontHeight).Append("\n");
+            sb.Append("  NormaliseHeight: ").Append(this.NormaliseHeight).Append("\n");
+            sb.Append("  ProofDisabled: ").Append(this.ProofDisabled).Append("\n");
+            sb.Append("  SmartTagClean: ").Append(this.SmartTagClean).Append("\n");
+            sb.Append("  KerningMinimalSize: ").Append(this.KerningMinimalSize).Append("\n");
+            sb.Append("  Kumimoji: ").Append(this.Kumimoji).Append("\n");
+            sb.Append("  LanguageId: ").Append(this.LanguageId).Append("\n");
+            sb.Append("  AlternativeLanguageId: ").Append(this.AlternativeLanguageId).Append("\n");
+            sb.Append("  IsHardUnderlineFill: ").Append(this.IsHardUnderlineFill).Append("\n");
+            sb.Append("  IsHardUnderlineLine: ").Append(this.IsHardUnderlineLine).Append("\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  UnderlineFillFormat: ").Append(this.UnderlineFillFormat).Append("\n");
+            sb.Append("  UnderlineLineFormat: ").Append(this.UnderlineLineFormat).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

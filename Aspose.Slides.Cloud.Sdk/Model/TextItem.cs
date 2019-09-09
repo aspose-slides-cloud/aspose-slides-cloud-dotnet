@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents text item, referenced by TextItems
-  /// </summary>  
-  public class TextItem 
-  {                       
+    /// <summary>
+    /// Represents text item, referenced by TextItems
+    /// </summary>  
+    public class TextItem 
+    {                       
         /// <summary>
         /// Gets or sets the URI to resource that contains text
         /// </summary>
@@ -49,6 +49,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string Text { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -62,12 +79,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class TextItem {\n");
-          sb.Append("  Uri: ").Append(this.Uri).Append("\n");
-          sb.Append("  Text: ").Append(this.Text).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class TextItem {\n");
+            sb.Append("  Uri: ").Append(this.Uri).Append("\n");
+            sb.Append("  Text: ").Append(this.Text).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

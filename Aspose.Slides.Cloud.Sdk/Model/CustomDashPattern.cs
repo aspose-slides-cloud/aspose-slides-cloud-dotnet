@@ -34,16 +34,33 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Custom dash pattern.
-  /// </summary>  
-  public class CustomDashPattern 
-  {                       
+    /// <summary>
+    /// Custom dash pattern.
+    /// </summary>  
+    public class CustomDashPattern 
+    {                       
         /// <summary>
         /// Pattern items.
         /// </summary>
         public List<double?> Items { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -57,11 +74,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class CustomDashPattern {\n");
-          sb.Append("  Items: ").Append(this.Items).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class CustomDashPattern {\n");
+            sb.Append("  Items: ").Append(this.Items).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

@@ -34,17 +34,35 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents empty fill
-  /// </summary>  
-  public class NoFill : FillFormat 
-  {                       
+    /// <summary>
+    /// Represents empty fill
+    /// </summary>  
+    public class NoFill : FillFormat 
+    {                       
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.NoFill);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public NoFill() : base()
         {
-          Type = TypeEnum.NoFill;
+            Type = TypeEnum.NoFill;
         }
 
         /// <summary>
@@ -53,11 +71,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class NoFill {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class NoFill {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

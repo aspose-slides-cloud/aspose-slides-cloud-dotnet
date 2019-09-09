@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Provides options that control how a presentation is saved in an image format.
-  /// </summary>  
-  public class ImageExportOptions : ExportOptions 
-  {                       
+    /// <summary>
+    /// Provides options that control how a presentation is saved in an image format.
+    /// </summary>  
+    public class ImageExportOptions : ExportOptions 
+    {                       
         /// <summary>
         /// Gets or sets the position of the notes on the page.
         /// </summary>
@@ -107,12 +107,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string CommentsAreaColor { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Format", "image");
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public ImageExportOptions() : base()
         {
-          Format = "image";
+            Format = "image";
         }
 
         /// <summary>
@@ -121,15 +139,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class ImageExportOptions {\n");
-          sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
-          sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
-          sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
-          sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class ImageExportOptions {\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
+            sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
+            sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
+            sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

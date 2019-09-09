@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Line format.
-  /// </summary>  
-  public class LineFormat 
-  {                       
+    /// <summary>
+    /// Line format.
+    /// </summary>  
+    public class LineFormat 
+    {                       
         /// <summary>
         /// Alignment.
         /// </summary>
@@ -289,6 +289,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public double? Width { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -302,21 +319,21 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class LineFormat {\n");
-          sb.Append("  Alignment: ").Append(this.Alignment).Append("\n");
-          sb.Append("  CapStyle: ").Append(this.CapStyle).Append("\n");
-          sb.Append("  DashStyle: ").Append(this.DashStyle).Append("\n");
-          sb.Append("  JoinStyle: ").Append(this.JoinStyle).Append("\n");
-          sb.Append("  Style: ").Append(this.Style).Append("\n");
-          sb.Append("  BeginArrowHead: ").Append(this.BeginArrowHead).Append("\n");
-          sb.Append("  EndArrowHead: ").Append(this.EndArrowHead).Append("\n");
-          sb.Append("  CustomDashPattern: ").Append(this.CustomDashPattern).Append("\n");
-          sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-          sb.Append("  MiterLimit: ").Append(this.MiterLimit).Append("\n");
-          sb.Append("  Width: ").Append(this.Width).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class LineFormat {\n");
+            sb.Append("  Alignment: ").Append(this.Alignment).Append("\n");
+            sb.Append("  CapStyle: ").Append(this.CapStyle).Append("\n");
+            sb.Append("  DashStyle: ").Append(this.DashStyle).Append("\n");
+            sb.Append("  JoinStyle: ").Append(this.JoinStyle).Append("\n");
+            sb.Append("  Style: ").Append(this.Style).Append("\n");
+            sb.Append("  BeginArrowHead: ").Append(this.BeginArrowHead).Append("\n");
+            sb.Append("  EndArrowHead: ").Append(this.EndArrowHead).Append("\n");
+            sb.Append("  CustomDashPattern: ").Append(this.CustomDashPattern).Append("\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  MiterLimit: ").Append(this.MiterLimit).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

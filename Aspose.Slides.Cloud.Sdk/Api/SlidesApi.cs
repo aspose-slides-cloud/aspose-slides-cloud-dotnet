@@ -1365,6 +1365,12 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideWithFormat");
             }
 
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling GetNotesSlideWithFormat");
+            }
+
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1750,6 +1756,12 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesImageWithFormat");
+            }
+
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling GetSlidesImageWithFormat");
             }
 
             // create path and map variables
@@ -2552,6 +2564,12 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'path' when calling PostNotesSlideShapeSaveAs");
             }
 
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PostNotesSlideShapeSaveAs");
+            }
+
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2616,6 +2634,12 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Path == null)
             {
                 throw new ApiException(400, "Missing required parameter 'path' when calling PostShapeSaveAs");
+            }
+
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PostShapeSaveAs");
             }
 
             // create path and map variables
@@ -2734,6 +2758,12 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlideSaveAs");
             }
 
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PostSlideSaveAs");
+            }
+
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2786,6 +2816,12 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <returns><see cref="System.IO.Stream"/></returns>            
         public System.IO.Stream PostSlidesConvert(PostSlidesConvertRequest request)
         {
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PostSlidesConvert");
+            }
+
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/convert/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
@@ -3068,6 +3104,12 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesSaveAs");
             }
 
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PostSlidesSaveAs");
+            }
+
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3229,6 +3271,12 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'path' when calling PutNotesSlideShapeSaveAs");
             }
 
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PutNotesSlideShapeSaveAs");
+            }
+
             // verify the required parameter 'outPath' is set
             if (request.OutPath == null)
             {
@@ -3375,6 +3423,12 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'path' when calling PutShapeSaveAs");
             }
 
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PutShapeSaveAs");
+            }
+
             // verify the required parameter 'outPath' is set
             if (request.OutPath == null)
             {
@@ -3500,6 +3554,12 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlideSaveAs");
             }
 
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PutSlideSaveAs");
+            }
+
             // verify the required parameter 'outPath' is set
             if (request.OutPath == null)
             {
@@ -3567,6 +3627,12 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <returns><see cref=""/></returns>            
         public void PutSlidesConvert(PutSlidesConvertRequest request)
         {
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PutSlidesConvert");
+            }
+
             // verify the required parameter 'outPath' is set
             if (request.OutPath == null)
             {
@@ -3629,6 +3695,12 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.OutPath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'outPath' when calling PutSlidesSaveAs");
+            }
+
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PutSlidesSaveAs");
             }
 
             // create path and map variables

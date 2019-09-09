@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Provides options that control how a presentation is saved in Html format.
-  /// </summary>  
-  public class HtmlExportOptions : ExportOptions 
-  {                       
+    /// <summary>
+    /// Provides options that control how a presentation is saved in Html format.
+    /// </summary>  
+    public class HtmlExportOptions : ExportOptions 
+    {                       
         /// <summary>
         /// Represents the pictures compression level
         /// </summary>
@@ -186,12 +186,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? ShowCommentsByNoAuthor { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Format", "html");
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public HtmlExportOptions() : base()
         {
-          Format = "html";
+            Format = "html";
         }
 
         /// <summary>
@@ -200,23 +218,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class HtmlExportOptions {\n");
-          sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("  SaveAsZip: ").Append(this.SaveAsZip).Append("\n");
-          sb.Append("  SubDirectoryName: ").Append(this.SubDirectoryName).Append("\n");
-          sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
-          sb.Append("  SvgResponsiveLayout: ").Append(this.SvgResponsiveLayout).Append("\n");
-          sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
-          sb.Append("  PicturesCompression: ").Append(this.PicturesCompression).Append("\n");
-          sb.Append("  DeletePicturesCroppedAreas: ").Append(this.DeletePicturesCroppedAreas).Append("\n");
-          sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
-          sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
-          sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
-          sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
-          sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class HtmlExportOptions {\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  SaveAsZip: ").Append(this.SaveAsZip).Append("\n");
+            sb.Append("  SubDirectoryName: ").Append(this.SubDirectoryName).Append("\n");
+            sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
+            sb.Append("  SvgResponsiveLayout: ").Append(this.SvgResponsiveLayout).Append("\n");
+            sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
+            sb.Append("  PicturesCompression: ").Append(this.PicturesCompression).Append("\n");
+            sb.Append("  DeletePicturesCroppedAreas: ").Append(this.DeletePicturesCroppedAreas).Append("\n");
+            sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
+            sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
+            sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
+            sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
+            sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

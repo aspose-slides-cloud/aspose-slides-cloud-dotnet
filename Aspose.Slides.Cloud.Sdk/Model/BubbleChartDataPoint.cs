@@ -34,16 +34,33 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Bubble chart data point.
-  /// </summary>  
-  public class BubbleChartDataPoint : ScatterChartDataPoint 
-  {                       
+    /// <summary>
+    /// Bubble chart data point.
+    /// </summary>  
+    public class BubbleChartDataPoint : ScatterChartDataPoint 
+    {                       
         /// <summary>
         /// Bubble size.
         /// </summary>
         public double? BubbleSize { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -57,13 +74,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class BubbleChartDataPoint {\n");
-          sb.Append("  XValue: ").Append(this.XValue).Append("\n");
-          sb.Append("  YValue: ").Append(this.YValue).Append("\n");
-          sb.Append("  BubbleSize: ").Append(this.BubbleSize).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class BubbleChartDataPoint {\n");
+            sb.Append("  XValue: ").Append(this.XValue).Append("\n");
+            sb.Append("  YValue: ").Append(this.YValue).Append("\n");
+            sb.Append("  BubbleSize: ").Append(this.BubbleSize).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

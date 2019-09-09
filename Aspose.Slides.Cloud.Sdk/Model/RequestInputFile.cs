@@ -34,22 +34,40 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents input file from multipart request.
-  /// </summary>  
-  public class RequestInputFile : InputFile 
-  {                       
+    /// <summary>
+    /// Represents input file from multipart request.
+    /// </summary>  
+    public class RequestInputFile : InputFile 
+    {                       
         /// <summary>
         /// Get or sets index of file from request.
         /// </summary>
         public int? Index { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Request);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public RequestInputFile() : base()
         {
-          Type = TypeEnum.Request;
+            Type = TypeEnum.Request;
         }
 
         /// <summary>
@@ -58,13 +76,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class RequestInputFile {\n");
-          sb.Append("  Password: ").Append(this.Password).Append("\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Index: ").Append(this.Index).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class RequestInputFile {\n");
+            sb.Append("  Password: ").Append(this.Password).Append("\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Index: ").Append(this.Index).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

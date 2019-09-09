@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Provides options that control how a presentation is saved in SVG format.
-  /// </summary>  
-  public class SvgExportOptions : ExportOptions 
-  {                       
+    /// <summary>
+    /// Provides options that control how a presentation is saved in SVG format.
+    /// </summary>  
+    public class SvgExportOptions : ExportOptions 
+    {                       
         /// <summary>
         /// Represents the pictures compression level
         /// </summary>
@@ -147,12 +147,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? DeletePicturesCroppedAreas { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Format", "svg");
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public SvgExportOptions() : base()
         {
-          Format = "svg";
+            Format = "svg";
         }
 
         /// <summary>
@@ -161,20 +179,20 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class SvgExportOptions {\n");
-          sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("  VectorizeText: ").Append(this.VectorizeText).Append("\n");
-          sb.Append("  MetafileRasterizationDpi: ").Append(this.MetafileRasterizationDpi).Append("\n");
-          sb.Append("  Disable3DText: ").Append(this.Disable3DText).Append("\n");
-          sb.Append("  DisableGradientSplit: ").Append(this.DisableGradientSplit).Append("\n");
-          sb.Append("  DisableLineEndCropping: ").Append(this.DisableLineEndCropping).Append("\n");
-          sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
-          sb.Append("  PicturesCompression: ").Append(this.PicturesCompression).Append("\n");
-          sb.Append("  DeletePicturesCroppedAreas: ").Append(this.DeletePicturesCroppedAreas).Append("\n");
-          sb.Append("  ExternalFontsHandling: ").Append(this.ExternalFontsHandling).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class SvgExportOptions {\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  VectorizeText: ").Append(this.VectorizeText).Append("\n");
+            sb.Append("  MetafileRasterizationDpi: ").Append(this.MetafileRasterizationDpi).Append("\n");
+            sb.Append("  Disable3DText: ").Append(this.Disable3DText).Append("\n");
+            sb.Append("  DisableGradientSplit: ").Append(this.DisableGradientSplit).Append("\n");
+            sb.Append("  DisableLineEndCropping: ").Append(this.DisableLineEndCropping).Append("\n");
+            sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
+            sb.Append("  PicturesCompression: ").Append(this.PicturesCompression).Append("\n");
+            sb.Append("  DeletePicturesCroppedAreas: ").Append(this.DeletePicturesCroppedAreas).Append("\n");
+            sb.Append("  ExternalFontsHandling: ").Append(this.ExternalFontsHandling).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

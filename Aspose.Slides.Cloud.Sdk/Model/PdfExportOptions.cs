@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Provides options that control how a presentation is saved in Pdf format.
-  /// </summary>  
-  public class PdfExportOptions : ExportOptions 
-  {                       
+    /// <summary>
+    /// Provides options that control how a presentation is saved in Pdf format.
+    /// </summary>  
+    public class PdfExportOptions : ExportOptions 
+    {                       
         /// <summary>
         /// Specifies compression type to be used for all textual content in the document.
         /// </summary>
@@ -215,12 +215,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? ApplyImageTransparent { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Format", "pdf");
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public PdfExportOptions() : base()
         {
-          Format = "pdf";
+            Format = "pdf";
         }
 
         /// <summary>
@@ -229,29 +247,29 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class PdfExportOptions {\n");
-          sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("  TextCompression: ").Append(this.TextCompression).Append("\n");
-          sb.Append("  EmbedFullFonts: ").Append(this.EmbedFullFonts).Append("\n");
-          sb.Append("  Compliance: ").Append(this.Compliance).Append("\n");
-          sb.Append("  SufficientResolution: ").Append(this.SufficientResolution).Append("\n");
-          sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
-          sb.Append("  DrawSlidesFrame: ").Append(this.DrawSlidesFrame).Append("\n");
-          sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
-          sb.Append("  SaveMetafilesAsPng: ").Append(this.SaveMetafilesAsPng).Append("\n");
-          sb.Append("  Password: ").Append(this.Password).Append("\n");
-          sb.Append("  EmbedTrueTypeFontsForASCII: ").Append(this.EmbedTrueTypeFontsForASCII).Append("\n");
-          sb.Append("  AdditionalCommonFontFamilies: ").Append(this.AdditionalCommonFontFamilies).Append("\n");
-          sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
-          sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
-          sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
-          sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
-          sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
-          sb.Append("  ImageTransparentColor: ").Append(this.ImageTransparentColor).Append("\n");
-          sb.Append("  ApplyImageTransparent: ").Append(this.ApplyImageTransparent).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class PdfExportOptions {\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  TextCompression: ").Append(this.TextCompression).Append("\n");
+            sb.Append("  EmbedFullFonts: ").Append(this.EmbedFullFonts).Append("\n");
+            sb.Append("  Compliance: ").Append(this.Compliance).Append("\n");
+            sb.Append("  SufficientResolution: ").Append(this.SufficientResolution).Append("\n");
+            sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
+            sb.Append("  DrawSlidesFrame: ").Append(this.DrawSlidesFrame).Append("\n");
+            sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
+            sb.Append("  SaveMetafilesAsPng: ").Append(this.SaveMetafilesAsPng).Append("\n");
+            sb.Append("  Password: ").Append(this.Password).Append("\n");
+            sb.Append("  EmbedTrueTypeFontsForASCII: ").Append(this.EmbedTrueTypeFontsForASCII).Append("\n");
+            sb.Append("  AdditionalCommonFontFamilies: ").Append(this.AdditionalCommonFontFamilies).Append("\n");
+            sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
+            sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
+            sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
+            sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
+            sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
+            sb.Append("  ImageTransparentColor: ").Append(this.ImageTransparentColor).Append("\n");
+            sb.Append("  ApplyImageTransparent: ").Append(this.ApplyImageTransparent).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

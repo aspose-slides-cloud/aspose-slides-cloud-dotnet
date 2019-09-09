@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Base class for all Slide&#39;s DTO objects 
-  /// </summary>  
-  public class ResourceBase 
-  {                       
+    /// <summary>
+    /// Base class for all Slide&#39;s DTO objects 
+    /// </summary>  
+    public class ResourceBase 
+    {                       
         /// <summary>
         /// Gets or sets the link to this resource.
         /// </summary>
@@ -49,6 +49,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public List<ResourceUri> AlternateLinks { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -62,12 +79,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class ResourceBase {\n");
-          sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-          sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class ResourceBase {\n");
+            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
+            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

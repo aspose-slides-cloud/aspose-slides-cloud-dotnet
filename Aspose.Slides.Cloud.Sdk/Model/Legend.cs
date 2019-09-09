@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents a chart legend
-  /// </summary>  
-  public class Legend 
-  {                       
+    /// <summary>
+    /// Represents a chart legend
+    /// </summary>  
+    public class Legend 
+    {                       
         /// <summary>
         /// position
         /// </summary>
@@ -118,6 +118,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public LineFormat LineFormat { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -131,19 +148,19 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Legend {\n");
-          sb.Append("  Position: ").Append(this.Position).Append("\n");
-          sb.Append("  X: ").Append(this.X).Append("\n");
-          sb.Append("  Y: ").Append(this.Y).Append("\n");
-          sb.Append("  Width: ").Append(this.Width).Append("\n");
-          sb.Append("  Height: ").Append(this.Height).Append("\n");
-          sb.Append("  Overlay: ").Append(this.Overlay).Append("\n");
-          sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-          sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-          sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Legend {\n");
+            sb.Append("  Position: ").Append(this.Position).Append("\n");
+            sb.Append("  X: ").Append(this.X).Append("\n");
+            sb.Append("  Y: ").Append(this.Y).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
+            sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("  Overlay: ").Append(this.Overlay).Append("\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

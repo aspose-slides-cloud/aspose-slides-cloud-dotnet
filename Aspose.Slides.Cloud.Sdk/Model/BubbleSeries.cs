@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// A bubble series.
-  /// </summary>  
-  public class BubbleSeries : Series 
-  {                       
+    /// <summary>
+    /// A bubble series.
+    /// </summary>  
+    public class BubbleSeries : Series 
+    {                       
         /// <summary>
         /// Data point type.
         /// </summary>
@@ -73,6 +73,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public List<BubbleChartDataPoint> DataPoints { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -86,29 +103,29 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class BubbleSeries {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Name: ").Append(this.Name).Append("\n");
-          sb.Append("  IsColorVaried: ").Append(this.IsColorVaried).Append("\n");
-          sb.Append("  InvertedSolidFillColor: ").Append(this.InvertedSolidFillColor).Append("\n");
-          sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
-          sb.Append("  PlotOnSecondAxis: ").Append(this.PlotOnSecondAxis).Append("\n");
-          sb.Append("  Order: ").Append(this.Order).Append("\n");
-          sb.Append("  NumberFormatOfYValues: ").Append(this.NumberFormatOfYValues).Append("\n");
-          sb.Append("  NumberFormatOfXValues: ").Append(this.NumberFormatOfXValues).Append("\n");
-          sb.Append("  NumberFormatOfValues: ").Append(this.NumberFormatOfValues).Append("\n");
-          sb.Append("  NumberFormatOfBubbleSizes: ").Append(this.NumberFormatOfBubbleSizes).Append("\n");
-          sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");
-          sb.Append("  Explosion: ").Append(this.Explosion).Append("\n");
-          sb.Append("  Marker: ").Append(this.Marker).Append("\n");
-          sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-          sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-          sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-          sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
-          sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class BubbleSeries {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Name: ").Append(this.Name).Append("\n");
+            sb.Append("  IsColorVaried: ").Append(this.IsColorVaried).Append("\n");
+            sb.Append("  InvertedSolidFillColor: ").Append(this.InvertedSolidFillColor).Append("\n");
+            sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
+            sb.Append("  PlotOnSecondAxis: ").Append(this.PlotOnSecondAxis).Append("\n");
+            sb.Append("  Order: ").Append(this.Order).Append("\n");
+            sb.Append("  NumberFormatOfYValues: ").Append(this.NumberFormatOfYValues).Append("\n");
+            sb.Append("  NumberFormatOfXValues: ").Append(this.NumberFormatOfXValues).Append("\n");
+            sb.Append("  NumberFormatOfValues: ").Append(this.NumberFormatOfValues).Append("\n");
+            sb.Append("  NumberFormatOfBubbleSizes: ").Append(this.NumberFormatOfBubbleSizes).Append("\n");
+            sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");
+            sb.Append("  Explosion: ").Append(this.Explosion).Append("\n");
+            sb.Append("  Marker: ").Append(this.Marker).Append("\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
+            sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

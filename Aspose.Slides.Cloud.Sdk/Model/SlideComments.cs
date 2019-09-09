@@ -34,16 +34,33 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents comments collection of slide
-  /// </summary>  
-  public class SlideComments : ResourceBase 
-  {                       
+    /// <summary>
+    /// Represents comments collection of slide
+    /// </summary>  
+    public class SlideComments : ResourceBase 
+    {                       
         /// <summary>
         /// Slide comment list.
         /// </summary>
         public List<SlideComment> List { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -57,13 +74,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class SlideComments {\n");
-          sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-          sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  List: ").Append(this.List).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class SlideComments {\n");
+            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
+            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
+            sb.Append("  List: ").Append(this.List).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

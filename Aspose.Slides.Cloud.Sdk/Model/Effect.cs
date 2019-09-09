@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents comment of slide
-  /// </summary>  
-  public class Effect 
-  {                       
+    /// <summary>
+    /// Represents comment of slide
+    /// </summary>  
+    public class Effect 
+    {                       
         /// <summary>
         /// Effect type.
         /// </summary>
@@ -1244,6 +1244,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public double? TriggerDelayTime { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -1257,24 +1274,24 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Effect {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Subtype: ").Append(this.Subtype).Append("\n");
-          sb.Append("  PresetClassType: ").Append(this.PresetClassType).Append("\n");
-          sb.Append("  ShapeIndex: ").Append(this.ShapeIndex).Append("\n");
-          sb.Append("  TriggerType: ").Append(this.TriggerType).Append("\n");
-          sb.Append("  Accelerate: ").Append(this.Accelerate).Append("\n");
-          sb.Append("  AutoReverse: ").Append(this.AutoReverse).Append("\n");
-          sb.Append("  Decelerate: ").Append(this.Decelerate).Append("\n");
-          sb.Append("  Duration: ").Append(this.Duration).Append("\n");
-          sb.Append("  RepeatCount: ").Append(this.RepeatCount).Append("\n");
-          sb.Append("  RepeatDuration: ").Append(this.RepeatDuration).Append("\n");
-          sb.Append("  Restart: ").Append(this.Restart).Append("\n");
-          sb.Append("  Speed: ").Append(this.Speed).Append("\n");
-          sb.Append("  TriggerDelayTime: ").Append(this.TriggerDelayTime).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Effect {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Subtype: ").Append(this.Subtype).Append("\n");
+            sb.Append("  PresetClassType: ").Append(this.PresetClassType).Append("\n");
+            sb.Append("  ShapeIndex: ").Append(this.ShapeIndex).Append("\n");
+            sb.Append("  TriggerType: ").Append(this.TriggerType).Append("\n");
+            sb.Append("  Accelerate: ").Append(this.Accelerate).Append("\n");
+            sb.Append("  AutoReverse: ").Append(this.AutoReverse).Append("\n");
+            sb.Append("  Decelerate: ").Append(this.Decelerate).Append("\n");
+            sb.Append("  Duration: ").Append(this.Duration).Append("\n");
+            sb.Append("  RepeatCount: ").Append(this.RepeatCount).Append("\n");
+            sb.Append("  RepeatDuration: ").Append(this.RepeatDuration).Append("\n");
+            sb.Append("  Restart: ").Append(this.Restart).Append("\n");
+            sb.Append("  Speed: ").Append(this.Speed).Append("\n");
+            sb.Append("  TriggerDelayTime: ").Append(this.TriggerDelayTime).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

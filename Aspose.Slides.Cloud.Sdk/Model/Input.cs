@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents input document for pipeline.
-  /// </summary>  
-  public class Input 
-  {                       
+    /// <summary>
+    /// Represents input document for pipeline.
+    /// </summary>  
+    public class Input 
+    {                       
         /// <summary>
         /// Get or sets template document. If property is null new empty presentation will be created.
         /// </summary>
@@ -54,6 +54,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public InputFile TemplateData { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -67,13 +84,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Input {\n");
-          sb.Append("  Template: ").Append(this.Template).Append("\n");
-          sb.Append("  HtmlData: ").Append(this.HtmlData).Append("\n");
-          sb.Append("  TemplateData: ").Append(this.TemplateData).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Input {\n");
+            sb.Append("  Template: ").Append(this.Template).Append("\n");
+            sb.Append("  HtmlData: ").Append(this.HtmlData).Append("\n");
+            sb.Append("  TemplateData: ").Append(this.TemplateData).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

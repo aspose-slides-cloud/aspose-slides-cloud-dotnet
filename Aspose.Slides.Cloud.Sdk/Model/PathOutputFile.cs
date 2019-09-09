@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents fileSystem file with path.
-  /// </summary>  
-  public class PathOutputFile : OutputFile 
-  {                       
+    /// <summary>
+    /// Represents fileSystem file with path.
+    /// </summary>  
+    public class PathOutputFile : OutputFile 
+    {                       
         /// <summary>
         /// Get or sets path to file.
         /// </summary>
@@ -49,12 +49,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string Storage { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Path);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public PathOutputFile() : base()
         {
-          Type = TypeEnum.Path;
+            Type = TypeEnum.Path;
         }
 
         /// <summary>
@@ -63,13 +81,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class PathOutputFile {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Path: ").Append(this.Path).Append("\n");
-          sb.Append("  Storage: ").Append(this.Storage).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class PathOutputFile {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Path: ").Append(this.Path).Append("\n");
+            sb.Append("  Storage: ").Append(this.Storage).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

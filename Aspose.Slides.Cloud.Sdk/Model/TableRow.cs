@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Table Row.
-  /// </summary>  
-  public class TableRow 
-  {                       
+    /// <summary>
+    /// Table Row.
+    /// </summary>  
+    public class TableRow 
+    {                       
         /// <summary>
         /// Cells for the row.
         /// </summary>
@@ -54,6 +54,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public double? Height { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -67,13 +84,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class TableRow {\n");
-          sb.Append("  Cells: ").Append(this.Cells).Append("\n");
-          sb.Append("  MinimalHeight: ").Append(this.MinimalHeight).Append("\n");
-          sb.Append("  Height: ").Append(this.Height).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class TableRow {\n");
+            sb.Append("  Cells: ").Append(this.Cells).Append("\n");
+            sb.Append("  MinimalHeight: ").Append(this.MinimalHeight).Append("\n");
+            sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Picture fill.
-  /// </summary>  
-  public class PictureFill : FillFormat 
-  {                       
+    /// <summary>
+    /// Picture fill.
+    /// </summary>  
+    public class PictureFill : FillFormat 
+    {                       
         /// <summary>
         /// Fill mode.
         /// </summary>
@@ -103,12 +103,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string SvgData { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Picture);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public PictureFill() : base()
         {
-          Type = TypeEnum.Picture;
+            Type = TypeEnum.Picture;
         }
 
         /// <summary>
@@ -117,20 +135,20 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class PictureFill {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  CropBottom: ").Append(this.CropBottom).Append("\n");
-          sb.Append("  CropLeft: ").Append(this.CropLeft).Append("\n");
-          sb.Append("  CropRight: ").Append(this.CropRight).Append("\n");
-          sb.Append("  CropTop: ").Append(this.CropTop).Append("\n");
-          sb.Append("  Dpi: ").Append(this.Dpi).Append("\n");
-          sb.Append("  Image: ").Append(this.Image).Append("\n");
-          sb.Append("  Base64Data: ").Append(this.Base64Data).Append("\n");
-          sb.Append("  SvgData: ").Append(this.SvgData).Append("\n");
-          sb.Append("  PictureFillMode: ").Append(this.PictureFillMode).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class PictureFill {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  CropBottom: ").Append(this.CropBottom).Append("\n");
+            sb.Append("  CropLeft: ").Append(this.CropLeft).Append("\n");
+            sb.Append("  CropRight: ").Append(this.CropRight).Append("\n");
+            sb.Append("  CropTop: ").Append(this.CropTop).Append("\n");
+            sb.Append("  Dpi: ").Append(this.Dpi).Append("\n");
+            sb.Append("  Image: ").Append(this.Image).Append("\n");
+            sb.Append("  Base64Data: ").Append(this.Base64Data).Append("\n");
+            sb.Append("  SvgData: ").Append(this.SvgData).Append("\n");
+            sb.Append("  PictureFillMode: ").Append(this.PictureFillMode).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

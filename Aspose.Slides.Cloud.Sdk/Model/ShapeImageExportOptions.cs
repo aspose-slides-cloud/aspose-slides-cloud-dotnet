@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Provides options that control how a shape is saved in thumbnail.
-  /// </summary>  
-  public class ShapeImageExportOptions 
-  {                       
+    /// <summary>
+    /// Provides options that control how a shape is saved in thumbnail.
+    /// </summary>  
+    public class ShapeImageExportOptions 
+    {                       
         /// <summary>
         /// Get or sets thumbnail bounds
         /// </summary>
@@ -83,6 +83,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string Format { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -96,14 +113,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class ShapeImageExportOptions {\n");
-          sb.Append("  ScaleX: ").Append(this.ScaleX).Append("\n");
-          sb.Append("  ScaleY: ").Append(this.ScaleY).Append("\n");
-          sb.Append("  ThumbnailBounds: ").Append(this.ThumbnailBounds).Append("\n");
-          sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class ShapeImageExportOptions {\n");
+            sb.Append("  ScaleX: ").Append(this.ScaleX).Append("\n");
+            sb.Append("  ScaleY: ").Append(this.ScaleY).Append("\n");
+            sb.Append("  ThumbnailBounds: ").Append(this.ThumbnailBounds).Append("\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

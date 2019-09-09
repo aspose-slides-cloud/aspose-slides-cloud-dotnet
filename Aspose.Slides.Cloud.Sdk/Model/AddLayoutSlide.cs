@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Add layout slide task.
-  /// </summary>  
-  public class AddLayoutSlide : Task 
-  {                       
+    /// <summary>
+    /// Add layout slide task.
+    /// </summary>  
+    public class AddLayoutSlide : Task 
+    {                       
         /// <summary>
         /// Source file.
         /// </summary>
@@ -49,12 +49,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public int? CloneFromPosition { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.AddLayoutSlide);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public AddLayoutSlide() : base()
         {
-          Type = TypeEnum.AddLayoutSlide;
+            Type = TypeEnum.AddLayoutSlide;
         }
 
         /// <summary>
@@ -63,13 +81,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class AddLayoutSlide {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  CloneFromFile: ").Append(this.CloneFromFile).Append("\n");
-          sb.Append("  CloneFromPosition: ").Append(this.CloneFromPosition).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class AddLayoutSlide {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  CloneFromFile: ").Append(this.CloneFromFile).Append("\n");
+            sb.Append("  CloneFromPosition: ").Append(this.CloneFromPosition).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

@@ -34,22 +34,40 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Merge presentations task.
-  /// </summary>  
-  public class Merge : Task 
-  {                       
+    /// <summary>
+    /// Merge presentations task.
+    /// </summary>  
+    public class Merge : Task 
+    {                       
         /// <summary>
         /// Information about documents and slides being merging sources.
         /// </summary>
         public List<MergingSource> Presentations { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Merge);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public Merge() : base()
         {
-          Type = TypeEnum.Merge;
+            Type = TypeEnum.Merge;
         }
 
         /// <summary>
@@ -58,12 +76,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Merge {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Presentations: ").Append(this.Presentations).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Merge {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Presentations: ").Append(this.Presentations).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

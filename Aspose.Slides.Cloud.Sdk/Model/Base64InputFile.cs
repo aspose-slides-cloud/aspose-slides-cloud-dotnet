@@ -34,22 +34,40 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents base64 inline encoded file.
-  /// </summary>  
-  public class Base64InputFile : InputFile 
-  {                       
+    /// <summary>
+    /// Represents base64 inline encoded file.
+    /// </summary>  
+    public class Base64InputFile : InputFile 
+    {                       
         /// <summary>
         /// Get or sets base64 data.
         /// </summary>
         public string Data { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Base64);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public Base64InputFile() : base()
         {
-          Type = TypeEnum.Base64;
+            Type = TypeEnum.Base64;
         }
 
         /// <summary>
@@ -58,13 +76,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Base64InputFile {\n");
-          sb.Append("  Password: ").Append(this.Password).Append("\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Data: ").Append(this.Data).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Base64InputFile {\n");
+            sb.Append("  Password: ").Append(this.Password).Append("\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Data: ").Append(this.Data).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

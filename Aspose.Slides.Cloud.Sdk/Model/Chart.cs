@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents chart resource
-  /// </summary>  
-  public class Chart : ShapeBase 
-  {                       
+    /// <summary>
+    /// Represents chart resource
+    /// </summary>  
+    public class Chart : ShapeBase 
+    {                       
         /// <summary>
         /// Gets or sets the type of the chart.
         /// </summary>
@@ -468,13 +468,32 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public PlotArea PlotArea { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Chart);
+                    s_typeDeterminers.Add("ShapeType", ShapeTypeEnum.Chart);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public Chart() : base()
         {
-          Type = TypeEnum.Chart;
-          ShapeType = ShapeTypeEnum.Chart;
+            Type = TypeEnum.Chart;
+            ShapeType = ShapeTypeEnum.Chart;
         }
 
         /// <summary>
@@ -483,37 +502,37 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Chart {\n");
-          sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-          sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  Name: ").Append(this.Name).Append("\n");
-          sb.Append("  Width: ").Append(this.Width).Append("\n");
-          sb.Append("  Height: ").Append(this.Height).Append("\n");
-          sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
-          sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
-          sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
-          sb.Append("  X: ").Append(this.X).Append("\n");
-          sb.Append("  Y: ").Append(this.Y).Append("\n");
-          sb.Append("  ZOrderPosition: ").Append(this.ZOrderPosition).Append("\n");
-          sb.Append("  Shapes: ").Append(this.Shapes).Append("\n");
-          sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-          sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-          sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
-          sb.Append("  ChartType: ").Append(this.ChartType).Append("\n");
-          sb.Append("  Series: ").Append(this.Series).Append("\n");
-          sb.Append("  Categories: ").Append(this.Categories).Append("\n");
-          sb.Append("  Title: ").Append(this.Title).Append("\n");
-          sb.Append("  BackWall: ").Append(this.BackWall).Append("\n");
-          sb.Append("  SideWall: ").Append(this.SideWall).Append("\n");
-          sb.Append("  Floor: ").Append(this.Floor).Append("\n");
-          sb.Append("  Legend: ").Append(this.Legend).Append("\n");
-          sb.Append("  Axes: ").Append(this.Axes).Append("\n");
-          sb.Append("  PlotArea: ").Append(this.PlotArea).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Chart {\n");
+            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
+            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
+            sb.Append("  Name: ").Append(this.Name).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
+            sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
+            sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
+            sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
+            sb.Append("  X: ").Append(this.X).Append("\n");
+            sb.Append("  Y: ").Append(this.Y).Append("\n");
+            sb.Append("  ZOrderPosition: ").Append(this.ZOrderPosition).Append("\n");
+            sb.Append("  Shapes: ").Append(this.Shapes).Append("\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
+            sb.Append("  ChartType: ").Append(this.ChartType).Append("\n");
+            sb.Append("  Series: ").Append(this.Series).Append("\n");
+            sb.Append("  Categories: ").Append(this.Categories).Append("\n");
+            sb.Append("  Title: ").Append(this.Title).Append("\n");
+            sb.Append("  BackWall: ").Append(this.BackWall).Append("\n");
+            sb.Append("  SideWall: ").Append(this.SideWall).Append("\n");
+            sb.Append("  Floor: ").Append(this.Floor).Append("\n");
+            sb.Append("  Legend: ").Append(this.Legend).Append("\n");
+            sb.Append("  Axes: ").Append(this.Axes).Append("\n");
+            sb.Append("  PlotArea: ").Append(this.PlotArea).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

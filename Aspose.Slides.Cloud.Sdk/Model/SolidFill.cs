@@ -34,22 +34,40 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents solid fill format 
-  /// </summary>  
-  public class SolidFill : FillFormat 
-  {                       
+    /// <summary>
+    /// Represents solid fill format 
+    /// </summary>  
+    public class SolidFill : FillFormat 
+    {                       
         /// <summary>
         /// Color.
         /// </summary>
         public string Color { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Solid);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public SolidFill() : base()
         {
-          Type = TypeEnum.Solid;
+            Type = TypeEnum.Solid;
         }
 
         /// <summary>
@@ -58,12 +76,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class SolidFill {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Color: ").Append(this.Color).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class SolidFill {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Color: ").Append(this.Color).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

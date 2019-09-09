@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Save slide task.
-  /// </summary>  
-  public class SaveSlide : Task 
-  {                       
+    /// <summary>
+    /// Save slide task.
+    /// </summary>  
+    public class SaveSlide : Task 
+    {                       
         /// <summary>
         /// Save format.
         /// </summary>
@@ -178,12 +178,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public int? Position { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.SaveSlide);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public SaveSlide() : base()
         {
-          Type = TypeEnum.SaveSlide;
+            Type = TypeEnum.SaveSlide;
         }
 
         /// <summary>
@@ -192,17 +210,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class SaveSlide {\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Output: ").Append(this.Output).Append("\n");
-          sb.Append("  Format: ").Append(this.Format).Append("\n");
-          sb.Append("  Options: ").Append(this.Options).Append("\n");
-          sb.Append("  Width: ").Append(this.Width).Append("\n");
-          sb.Append("  Height: ").Append(this.Height).Append("\n");
-          sb.Append("  Position: ").Append(this.Position).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class SaveSlide {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Output: ").Append(this.Output).Append("\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  Options: ").Append(this.Options).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
+            sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("  Position: ").Append(this.Position).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

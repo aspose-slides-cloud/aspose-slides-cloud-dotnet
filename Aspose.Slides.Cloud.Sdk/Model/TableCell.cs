@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents one cell of table.
-  /// </summary>  
-  public class TableCell 
-  {                       
+    /// <summary>
+    /// Represents one cell of table.
+    /// </summary>  
+    public class TableCell 
+    {                       
         /// <summary>
         /// Text anchor type.
         /// </summary>
@@ -207,6 +207,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public LineFormat BorderDiagonalDown { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -220,26 +237,26 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class TableCell {\n");
-          sb.Append("  Text: ").Append(this.Text).Append("\n");
-          sb.Append("  RowSpan: ").Append(this.RowSpan).Append("\n");
-          sb.Append("  ColSpan: ").Append(this.ColSpan).Append("\n");
-          sb.Append("  MarginTop: ").Append(this.MarginTop).Append("\n");
-          sb.Append("  MarginRight: ").Append(this.MarginRight).Append("\n");
-          sb.Append("  MarginLeft: ").Append(this.MarginLeft).Append("\n");
-          sb.Append("  MarginBottom: ").Append(this.MarginBottom).Append("\n");
-          sb.Append("  TextAnchorType: ").Append(this.TextAnchorType).Append("\n");
-          sb.Append("  TextVerticalType: ").Append(this.TextVerticalType).Append("\n");
-          sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-          sb.Append("  BorderTop: ").Append(this.BorderTop).Append("\n");
-          sb.Append("  BorderRight: ").Append(this.BorderRight).Append("\n");
-          sb.Append("  BorderLeft: ").Append(this.BorderLeft).Append("\n");
-          sb.Append("  BorderBottom: ").Append(this.BorderBottom).Append("\n");
-          sb.Append("  BorderDiagonalUp: ").Append(this.BorderDiagonalUp).Append("\n");
-          sb.Append("  BorderDiagonalDown: ").Append(this.BorderDiagonalDown).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class TableCell {\n");
+            sb.Append("  Text: ").Append(this.Text).Append("\n");
+            sb.Append("  RowSpan: ").Append(this.RowSpan).Append("\n");
+            sb.Append("  ColSpan: ").Append(this.ColSpan).Append("\n");
+            sb.Append("  MarginTop: ").Append(this.MarginTop).Append("\n");
+            sb.Append("  MarginRight: ").Append(this.MarginRight).Append("\n");
+            sb.Append("  MarginLeft: ").Append(this.MarginLeft).Append("\n");
+            sb.Append("  MarginBottom: ").Append(this.MarginBottom).Append("\n");
+            sb.Append("  TextAnchorType: ").Append(this.TextAnchorType).Append("\n");
+            sb.Append("  TextVerticalType: ").Append(this.TextVerticalType).Append("\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  BorderTop: ").Append(this.BorderTop).Append("\n");
+            sb.Append("  BorderRight: ").Append(this.BorderRight).Append("\n");
+            sb.Append("  BorderLeft: ").Append(this.BorderLeft).Append("\n");
+            sb.Append("  BorderBottom: ").Append(this.BorderBottom).Append("\n");
+            sb.Append("  BorderDiagonalUp: ").Append(this.BorderDiagonalUp).Append("\n");
+            sb.Append("  BorderDiagonalDown: ").Append(this.BorderDiagonalDown).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

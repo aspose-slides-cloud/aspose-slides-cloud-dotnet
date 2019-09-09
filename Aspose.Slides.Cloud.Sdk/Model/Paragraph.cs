@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents paragraph resource
-  /// </summary>  
-  public class Paragraph : ResourceBase 
-  {                       
+    /// <summary>
+    /// Represents paragraph resource
+    /// </summary>  
+    public class Paragraph : ResourceBase 
+    {                       
         /// <summary>
         /// Text alignment.
         /// </summary>
@@ -571,6 +571,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public List<ResourceUriElement> PortionList { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -584,32 +601,32 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class Paragraph {\n");
-          sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-          sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-          sb.Append("  MarginLeft: ").Append(this.MarginLeft).Append("\n");
-          sb.Append("  MarginRight: ").Append(this.MarginRight).Append("\n");
-          sb.Append("  SpaceBefore: ").Append(this.SpaceBefore).Append("\n");
-          sb.Append("  SpaceAfter: ").Append(this.SpaceAfter).Append("\n");
-          sb.Append("  SpaceWithin: ").Append(this.SpaceWithin).Append("\n");
-          sb.Append("  Indent: ").Append(this.Indent).Append("\n");
-          sb.Append("  Alignment: ").Append(this.Alignment).Append("\n");
-          sb.Append("  FontAlignment: ").Append(this.FontAlignment).Append("\n");
-          sb.Append("  DefaultTabSize: ").Append(this.DefaultTabSize).Append("\n");
-          sb.Append("  Depth: ").Append(this.Depth).Append("\n");
-          sb.Append("  BulletChar: ").Append(this.BulletChar).Append("\n");
-          sb.Append("  BulletHeight: ").Append(this.BulletHeight).Append("\n");
-          sb.Append("  BulletType: ").Append(this.BulletType).Append("\n");
-          sb.Append("  NumberedBulletStartWith: ").Append(this.NumberedBulletStartWith).Append("\n");
-          sb.Append("  NumberedBulletStyle: ").Append(this.NumberedBulletStyle).Append("\n");
-          sb.Append("  HangingPunctuation: ").Append(this.HangingPunctuation).Append("\n");
-          sb.Append("  EastAsianLineBreak: ").Append(this.EastAsianLineBreak).Append("\n");
-          sb.Append("  LatinLineBreak: ").Append(this.LatinLineBreak).Append("\n");
-          sb.Append("  RightToLeft: ").Append(this.RightToLeft).Append("\n");
-          sb.Append("  PortionList: ").Append(this.PortionList).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class Paragraph {\n");
+            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
+            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
+            sb.Append("  MarginLeft: ").Append(this.MarginLeft).Append("\n");
+            sb.Append("  MarginRight: ").Append(this.MarginRight).Append("\n");
+            sb.Append("  SpaceBefore: ").Append(this.SpaceBefore).Append("\n");
+            sb.Append("  SpaceAfter: ").Append(this.SpaceAfter).Append("\n");
+            sb.Append("  SpaceWithin: ").Append(this.SpaceWithin).Append("\n");
+            sb.Append("  Indent: ").Append(this.Indent).Append("\n");
+            sb.Append("  Alignment: ").Append(this.Alignment).Append("\n");
+            sb.Append("  FontAlignment: ").Append(this.FontAlignment).Append("\n");
+            sb.Append("  DefaultTabSize: ").Append(this.DefaultTabSize).Append("\n");
+            sb.Append("  Depth: ").Append(this.Depth).Append("\n");
+            sb.Append("  BulletChar: ").Append(this.BulletChar).Append("\n");
+            sb.Append("  BulletHeight: ").Append(this.BulletHeight).Append("\n");
+            sb.Append("  BulletType: ").Append(this.BulletType).Append("\n");
+            sb.Append("  NumberedBulletStartWith: ").Append(this.NumberedBulletStartWith).Append("\n");
+            sb.Append("  NumberedBulletStyle: ").Append(this.NumberedBulletStyle).Append("\n");
+            sb.Append("  HangingPunctuation: ").Append(this.HangingPunctuation).Append("\n");
+            sb.Append("  EastAsianLineBreak: ").Append(this.EastAsianLineBreak).Append("\n");
+            sb.Append("  LatinLineBreak: ").Append(this.LatinLineBreak).Append("\n");
+            sb.Append("  RightToLeft: ").Append(this.RightToLeft).Append("\n");
+            sb.Append("  PortionList: ").Append(this.PortionList).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

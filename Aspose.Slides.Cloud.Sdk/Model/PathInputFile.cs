@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Represents input file from filesystem.
-  /// </summary>  
-  public class PathInputFile : InputFile 
-  {                       
+    /// <summary>
+    /// Represents input file from filesystem.
+    /// </summary>  
+    public class PathInputFile : InputFile 
+    {                       
         /// <summary>
         /// Get or sets path to file.
         /// </summary>
@@ -49,12 +49,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string Storage { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Path);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
         public PathInputFile() : base()
         {
-          Type = TypeEnum.Path;
+            Type = TypeEnum.Path;
         }
 
         /// <summary>
@@ -63,14 +81,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class PathInputFile {\n");
-          sb.Append("  Password: ").Append(this.Password).Append("\n");
-          sb.Append("  Type: ").Append(this.Type).Append("\n");
-          sb.Append("  Path: ").Append(this.Path).Append("\n");
-          sb.Append("  Storage: ").Append(this.Storage).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class PathInputFile {\n");
+            sb.Append("  Password: ").Append(this.Password).Append("\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Path: ").Append(this.Path).Append("\n");
+            sb.Append("  Storage: ").Append(this.Storage).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 

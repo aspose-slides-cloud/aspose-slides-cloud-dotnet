@@ -34,11 +34,11 @@ using System.Xml.Serialization;
 
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
-  /// <summary>
-  /// Arrow head properties.
-  /// </summary>  
-  public class ArrowHeadProperties 
-  {                       
+    /// <summary>
+    /// Arrow head properties.
+    /// </summary>  
+    public class ArrowHeadProperties 
+    {                       
         /// <summary>
         /// Length.
         /// </summary>
@@ -156,6 +156,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public WidthEnum? Width { get; set; }
 
+
+        /// <summary>
+        /// Property values to determine the type when deserializing from Json
+        /// </summary>
+        public static Dictionary<string, object> TypeDeterminers
+        {
+            get
+            {
+                if (s_typeDeterminers == null)
+                {
+                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                }
+                return s_typeDeterminers;
+            }
+        }
+
+        private static Dictionary<string, object> s_typeDeterminers;
         /// <summary>
         /// Create an instance of the object
         /// </summary>
@@ -169,13 +186,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()  
         {
-          var sb = new StringBuilder();
-          sb.Append("class ArrowHeadProperties {\n");
-          sb.Append("  Length: ").Append(this.Length).Append("\n");
-          sb.Append("  Style: ").Append(this.Style).Append("\n");
-          sb.Append("  Width: ").Append(this.Width).Append("\n");
-          sb.Append("}\n");
-          return sb.ToString();
+            var sb = new StringBuilder();
+            sb.Append("class ArrowHeadProperties {\n");
+            sb.Append("  Length: ").Append(this.Length).Append("\n");
+            sb.Append("  Style: ").Append(this.Style).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
         }
     }
 
