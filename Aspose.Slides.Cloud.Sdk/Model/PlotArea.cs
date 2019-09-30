@@ -40,6 +40,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class PlotArea 
     {                       
         /// <summary>
+        /// If layout of the plot area is defined manually specifies whether to layout the plot area by its inside (not including axis and axis labels) or outside.
+        /// </summary>
+        /// <value>If layout of the plot area is defined manually specifies whether to layout the plot area by its inside (not including axis and axis labels) or outside.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum LayoutTargetTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Inner for "Inner"
+            /// </summary>
+            Inner,
+            
+            /// <summary>
+            /// Enum Outer for "Outer"
+            /// </summary>
+            Outer
+        }
+
+        /// <summary>
+        /// If layout of the plot area is defined manually specifies whether to layout the plot area by its inside (not including axis and axis labels) or outside.
+        /// </summary>
+        public LayoutTargetTypeEnum? LayoutTargetType { get; set; }
+
+        /// <summary>
         /// the X location
         /// </summary>
         public double? X { get; set; }
@@ -110,6 +134,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Y: ").Append(this.Y).Append("\n");
             sb.Append("  Width: ").Append(this.Width).Append("\n");
             sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("  LayoutTargetType: ").Append(this.LayoutTargetType).Append("\n");
             sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");

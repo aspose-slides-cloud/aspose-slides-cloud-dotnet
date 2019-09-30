@@ -120,7 +120,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Enum OnScreen16x10 for "OnScreen16x10"
         /// </summary>
-        OnScreen16x10
+        OnScreen16x10,
+        
+        /// <summary>
+        /// Enum Widescreen for "Widescreen"
+        /// </summary>
+        Widescreen
     }
 
 }
