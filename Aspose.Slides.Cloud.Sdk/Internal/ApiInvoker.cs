@@ -23,32 +23,18 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Text;
+
 namespace Aspose.Slides.Cloud.Sdk
 {
-    using System;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Net;
-#if !NETFRAMEWORK
-    using System.Reflection;
-#endif
-    using System.Text;
-
     internal abstract class ApiInvoker<T, B> where T : class
     {
-        public ApiInvoker(List<IRequestHandler> requestHandlers, int timeout)
+        public ApiInvoker(List<IRequestHandler> requestHandlers)
         {
-#if NETFRAMEWORK
-            var sdkVersion = GetType().Assembly.GetName().Version;
-#else
-            var sdkVersion = GetType().GetTypeInfo().Assembly.GetName().Version;
-#endif
-            AddDefaultHeader(c_asposeClientHeaderName, ".net sdk");
-            AddDefaultHeader(c_asposeClientVersionHeaderName, string.Format("{0}.{1}", sdkVersion.Major, sdkVersion.Minor));
-            if (timeout > 0)
-            {
-                AddDefaultHeader(c_asposeTimeoutHeaderName, timeout.ToString());
-            }
             m_requestHandlers = requestHandlers;
         }
 
@@ -274,9 +260,6 @@ namespace Aspose.Slides.Cloud.Sdk
             }
         }
 
-        private const string c_asposeClientHeaderName = "x-aspose-client";
-        private const string c_asposeClientVersionHeaderName = "x-aspose-client-version";
-        private const string c_asposeTimeoutHeaderName = "x-aspose-timeout";
         //TODO: move to ApiAccessor
         private readonly Dictionary<string, string> m_defaultHeaderMap = new Dictionary<string, string>();
         private readonly List<IRequestHandler> m_requestHandlers;

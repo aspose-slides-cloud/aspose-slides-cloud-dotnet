@@ -27,6 +27,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
+using static Aspose.Slides.Cloud.Sdk.Model.Chart;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
@@ -62,6 +63,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             ShapeBase shape = TestUtils.SlidesApi.GetSlideShape(request);
             Assert.IsInstanceOf<Shape>(shape);
             Assert.IsNotNullOrEmpty(((Shape)shape).Text);
+        }
+
+        [Test]
+        public void ChartType()
+        {
+            Chart chart = new Chart();
+            Assert.AreEqual(ShapeBase.TypeEnum.Chart, chart.Type);
+            Assert.AreEqual(ShapeBase.ShapeTypeEnum.Chart, chart.ShapeType);
         }
     }
 }

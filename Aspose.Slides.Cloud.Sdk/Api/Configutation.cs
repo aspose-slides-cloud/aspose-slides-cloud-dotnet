@@ -23,6 +23,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
+
 namespace Aspose.Slides.Cloud.Sdk
 {
     /// <summary>
@@ -35,6 +37,7 @@ namespace Aspose.Slides.Cloud.Sdk
             AuthBaseUrl = ApiBaseUrl = "https://api.aspose.cloud";
             Version = "v3.0";
             DebugMode = false;
+            CustomHeaders = new Dictionary<string, string>();
         }
 
         /// <summary>
@@ -72,6 +75,11 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Gets or sets a value indicating whether debug mode.
         /// </summary>
         public bool DebugMode { get; set; }
+
+        /// <summary>
+        /// Custom HTTP request header keys and values
+        /// </summary>
+        public Dictionary<string, string> CustomHeaders { get; set; }
 
         public string GetApiRootUrl()
         {

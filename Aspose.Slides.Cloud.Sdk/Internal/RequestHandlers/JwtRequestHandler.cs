@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
             var requestHandlers = new List<IRequestHandler>();
             requestHandlers.Add(new DebugLogRequestHandler(m_configuration));
             requestHandlers.Add(new ApiExceptionRequestHandler());
-            m_apiInvoker = new StringApiInvoker(requestHandlers, 0);
+            m_apiInvoker = new StringApiInvoker(requestHandlers);
         }
 
         public void BeforeSend(WebRequest request, Stream streamToSend)

@@ -27,6 +27,7 @@ using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using System;
 using System.Configuration;
 using System.IO;
+using System.Text;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 {
@@ -53,10 +54,27 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             }
         }
 
+        public static void Init()
+        {
+            if (!s_initialized)
+            {
+                if (!IsTestDataUpToDate())
+                {
+                    foreach (string file in Directory.EnumerateFiles(TestDataPath))
+                    {
+                        string filePath = $"{c_tempTestFolder}/{Path.GetFileName(file)}";
+                        SlidesApi.UploadFile(new UploadFileRequest { Path = filePath, File = File.OpenRead(file) });
+                    }
+                    Stream versionFile = new MemoryStream(Encoding.UTF8.GetBytes(c_expectedVersion.ToString()));
+                    SlidesApi.UploadFile(new UploadFileRequest { Path = $"{c_tempTestFolder}/{c_versionFile}", File = versionFile });
+                }
+                s_initialized = true;
+            }
+        }
+
         public static void Upload(string localPath, string storagePath)
         {
-            Stream file = File.OpenRead(Path.Combine(TestDataPath, localPath));
-            SlidesApi.UploadFile(new UploadFileRequest { File = file, Path = storagePath });
+            SlidesApi.CopyFile(new CopyFileRequest { SrcPath = $"{c_tempTestFolder}/{localPath}", DestPath = storagePath });
         }
 
         public static void DeleteFile(string storagePath)
@@ -74,6 +92,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         internal const string TestDataPath = "../../../../TestData";
 
+        private const int c_expectedVersion = 1;
+        private const string c_tempTestFolder = "TempTests";
+        private const string c_versionFile = "version.txt";
+        private static bool s_initialized;
         private static SlidesApi s_slidesApi;
         private static Configuration s_configuration;
 
@@ -83,6 +105,17 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
         {
             bool result;
             return bool.TryParse(ConfigurationManager.AppSettings[key], out result) ? result : defaultValue;
+        }
+
+        private static bool IsTestDataUpToDate()
+        {
+            Stream version = SlidesApi.DownloadFile(new DownloadFileRequest { Path = $"{c_tempTestFolder}/{c_versionFile}" });
+            if (version != null)
+            {
+                int actualVersion = 0;
+                return int.TryParse(new StreamReader(version).ReadToEnd(), out actualVersion) && actualVersion == c_expectedVersion;
+            }
+            return false;
         }
     }
 }

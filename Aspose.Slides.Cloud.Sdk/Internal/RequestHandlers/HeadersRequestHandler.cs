@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="StringToObjectApiInvoker.cs">
+// <copyright company="Aspose" file="OAuthRequestHandler.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,31 +23,44 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Slides.Cloud.Sdk
+using System.IO;
+using System.Net;
+#if !NETFRAMEWORK
+using System.Reflection;
+#endif
+
+namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
 {
-    using System.Collections.Generic;
-    using System.IO;
+    internal class HeadersRequestHandler : IRequestHandler
+    {        
+        public HeadersRequestHandler(Configuration configuration)
+        {
+            m_configuration = configuration;
+        }
 
-    internal class StreamApiInvoker : ApiInvoker<object, Stream>
-    {
-        public StreamApiInvoker(List<IRequestHandler> requestHandlers) : base(requestHandlers)
+        public void BeforeSend(WebRequest request, Stream streamToSend)
+        {
+            request.Headers["x-aspose-client"] = ".net sdk";
+#if NETFRAMEWORK
+            var sdkVersion = GetType().Assembly.GetName().Version;
+#else
+            var sdkVersion = GetType().GetTypeInfo().Assembly.GetName().Version;
+#endif
+            request.Headers["x-aspose-client-version"] = string.Format("{0}.{1}", sdkVersion.Major, sdkVersion.Minor);
+            if (m_configuration.Timeout > 0)
+            {
+                request.Headers["x-aspose-timeout"] = m_configuration.Timeout.ToString();
+            }
+            foreach (string key in m_configuration.CustomHeaders.Keys)
+            {
+                request.Headers[key] = m_configuration.CustomHeaders[key];
+            }
+        }
+
+        public void ProcessResponse(HttpWebResponse response, Stream resultStream)
         {
         }
 
-        protected override void CopyToStream(Stream data, Stream stream)
-        {
-            if (data.CanSeek)
-            {
-                data.Flush();
-                data.Position = 0;
-            }
-
-            byte[] array = new byte[81920];
-            int count;
-            while ((count = data.Read(array, 0, array.Length)) != 0)
-            {
-                stream.Write(array, 0, count);
-            }
-        }
+        private readonly Configuration m_configuration;
     }
 }

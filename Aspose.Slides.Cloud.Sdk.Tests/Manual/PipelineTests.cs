@@ -66,7 +66,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                     {
                         new Save
                         {
-                            Type = Save.TypeEnum.Save,
                             Format = Save.FormatEnum.Pptx,
                             Output = new ResponseOutputFile()
                         }

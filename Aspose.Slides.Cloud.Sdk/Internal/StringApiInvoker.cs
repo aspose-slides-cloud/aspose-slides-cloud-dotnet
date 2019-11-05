@@ -30,7 +30,7 @@ namespace Aspose.Slides.Cloud.Sdk
 
     internal class StringApiInvoker : ApiInvoker<object, string>
     {
-        public StringApiInvoker(List<IRequestHandler> requestHandlers, int timeout) : base(requestHandlers, timeout)
+        public StringApiInvoker(List<IRequestHandler> requestHandlers) : base(requestHandlers)
         {
         }
 

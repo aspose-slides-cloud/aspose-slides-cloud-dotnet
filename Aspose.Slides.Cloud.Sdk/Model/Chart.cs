@@ -424,6 +424,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public ChartTypeEnum? ChartType { get; set; }
 
         /// <summary>
+        /// True if data labels over the maximum of the chart shall be shown.
+        /// </summary>
+        public bool? ShowDataLabelsOverMaximum { get; set; }
+
+        /// <summary>
         /// Gets or sets the series of chart data values.
         /// </summary>
         public List<Series> Series { get; set; }
@@ -522,6 +527,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
             sb.Append("  ChartType: ").Append(this.ChartType).Append("\n");
+            sb.Append("  ShowDataLabelsOverMaximum: ").Append(this.ShowDataLabelsOverMaximum).Append("\n");
             sb.Append("  Series: ").Append(this.Series).Append("\n");
             sb.Append("  Categories: ").Append(this.Categories).Append("\n");
             sb.Append("  Title: ").Append(this.Title).Append("\n");
