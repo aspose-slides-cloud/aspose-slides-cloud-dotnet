@@ -41,7 +41,7 @@ PostSlidesConvertRequest convertRequest = new PostSlidesConvertRequest(ExportFor
 Stream pdf = slidesApi.PostSlidesConvert(convertRequest);
 pdf.CopyTo(File.OpenWrite("MyPresentation.pdf"));
 ```
-You can check more [Examples](Aspose.Slides.Cloud.Sdk.Examples) of using the SDK.
+You can check more [Examples](Examples) of using the SDK.
 
 ## Contact Us
 
