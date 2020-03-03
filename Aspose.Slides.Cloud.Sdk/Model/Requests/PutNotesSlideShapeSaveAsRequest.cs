@@ -47,10 +47,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Presentation name.</param>
         /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path">Shape path (for smart art and group shapes).</param>
         /// <param name="shapeIndex">Index of shape starting from 1</param>
         /// <param name="format">Export picture format.</param>
         /// <param name="outPath">Output path.</param>
+        /// <param name="path">Shape path (for smart art and group shapes).</param>
         /// <param name="options">export options</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Presentation folder.</param>
@@ -59,14 +59,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="scaleY">Y scale ratio.</param>
         /// <param name="bounds">Shape thumbnail bounds type.</param>
         /// <param name="fontsFolder">Fonts folder.</param>
-        public PutNotesSlideShapeSaveAsRequest(string name, int slideIndex, string path, int shapeIndex, ShapeExportFormat format, string outPath, IShapeExportOptions options = null, string password = null, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string fontsFolder = null)
+        public PutNotesSlideShapeSaveAsRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string outPath, string path = null, IShapeExportOptions options = null, string password = null, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string fontsFolder = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
-            this.Path = path;
             this.ShapeIndex = shapeIndex;
             this.Format = format;
             this.OutPath = outPath;
+            this.Path = path;
             this.Options = options;
             this.Password = password;
             this.Folder = folder;
@@ -88,11 +88,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Shape path (for smart art and group shapes).
-        /// </summary>  
-        public string Path { get; set; }
-
-        /// <summary>
         /// Index of shape starting from 1
         /// </summary>  
         public int ShapeIndex { get; set; }
@@ -106,6 +101,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Output path.
         /// </summary>  
         public string OutPath { get; set; }
+
+        /// <summary>
+        /// Shape path (for smart art and group shapes).
+        /// </summary>  
+        public string Path { get; set; }
 
         /// <summary>
         /// export options

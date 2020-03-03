@@ -126,12 +126,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <returns><see cref=""/></returns>            
         public void CreateFolder(CreateFolderRequest request)
         {
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling CreateFolder");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/folder/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
@@ -149,12 +143,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <returns><see cref=""/></returns>            
         public void DeleteFile(DeleteFileRequest request)
         {
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteFile");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/file/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
@@ -173,12 +161,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <returns><see cref=""/></returns>            
         public void DeleteFolder(DeleteFolderRequest request)
         {
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteFolder");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/folder/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
@@ -229,12 +211,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideParagraph");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteNotesSlideParagraph");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -264,12 +240,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideParagraphs");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteNotesSlideParagraphs");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -297,12 +267,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlidePortion");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteNotesSlidePortion");
             }
 
             // create path and map variables
@@ -335,12 +299,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlidePortions");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteNotesSlidePortions");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -371,12 +329,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideShape");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteNotesSlideShape");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -405,12 +357,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideShapes");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteNotesSlideShapes");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -437,12 +383,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteParagraph");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteParagraph");
             }
 
             // create path and map variables
@@ -474,12 +414,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteParagraphs");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteParagraphs");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -507,12 +441,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeletePortion");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeletePortion");
             }
 
             // create path and map variables
@@ -543,12 +471,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeletePortions");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeletePortions");
             }
 
             // create path and map variables
@@ -767,12 +689,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideShape");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSlideShape");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -799,12 +715,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideShapes");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSlideShapes");
             }
 
             // create path and map variables
@@ -938,12 +848,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <returns><see cref="System.IO.Stream"/></returns>            
         public System.IO.Stream DownloadFile(DownloadFileRequest request)
         {
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling DownloadFile");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/file/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
@@ -978,12 +882,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <returns><see cref="FileVersions"/></returns>            
         public FileVersions GetFileVersions(GetFileVersionsRequest request)
         {
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetFileVersions");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/version/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
@@ -1001,12 +899,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <returns><see cref="FilesList"/></returns>            
         public FilesList GetFilesList(GetFilesListRequest request)
         {
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetFilesList");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/folder/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
@@ -1158,12 +1050,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShape");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShape");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1190,12 +1076,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapeParagraph");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShapeParagraph");
             }
 
             // create path and map variables
@@ -1227,12 +1107,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapeParagraphs");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShapeParagraphs");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1259,12 +1133,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapePortion");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShapePortion");
             }
 
             // create path and map variables
@@ -1297,12 +1165,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapePortions");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShapePortions");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1330,12 +1192,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapes");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetNotesSlideShapes");
             }
 
             // create path and map variables
@@ -1401,12 +1257,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetParagraphPortion");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetParagraphPortion");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1435,12 +1285,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetParagraphPortions");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetParagraphPortions");
             }
 
             // create path and map variables
@@ -1499,12 +1343,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideShape");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetSlideShape");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1531,12 +1369,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideShapeParagraph");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetSlideShapeParagraph");
             }
 
             // create path and map variables
@@ -1568,12 +1400,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideShapeParagraphs");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetSlideShapeParagraphs");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1600,12 +1426,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideShapes");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling GetSlideShapes");
             }
 
             // create path and map variables
@@ -2212,12 +2032,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <returns><see cref="ObjectExist"/></returns>            
         public ObjectExist ObjectExists(ObjectExistsRequest request)
         {
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling ObjectExists");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/exist/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
@@ -2240,12 +2054,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewParagraph");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PostAddNewParagraph");
             }
 
             // create path and map variables
@@ -2278,12 +2086,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewPortion");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PostAddNewPortion");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2313,12 +2115,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewShape");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PostAddNewShape");
             }
 
             // create path and map variables
@@ -2449,12 +2245,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostNotesSlideAddNewParagraph");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PostNotesSlideAddNewParagraph");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2483,12 +2273,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostNotesSlideAddNewPortion");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PostNotesSlideAddNewPortion");
             }
 
             // create path and map variables
@@ -2522,12 +2306,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostNotesSlideAddNewShape");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PostNotesSlideAddNewShape");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2556,12 +2334,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostNotesSlideShapeSaveAs");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PostNotesSlideShapeSaveAs");
             }
 
             // verify the required parameter 'format' is set
@@ -2628,12 +2400,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostShapeSaveAs");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PostShapeSaveAs");
             }
 
             // verify the required parameter 'format' is set
@@ -3265,12 +3031,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutNotesSlideShapeSaveAs");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PutNotesSlideShapeSaveAs");
-            }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
@@ -3344,12 +3104,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSetParagraphPortionProperties");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PutSetParagraphPortionProperties");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3381,12 +3135,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSetParagraphProperties");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PutSetParagraphProperties");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3415,12 +3163,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutShapeSaveAs");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PutShapeSaveAs");
             }
 
             // verify the required parameter 'format' is set
@@ -3596,12 +3338,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlideShapeInfo");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PutSlideShapeInfo");
             }
 
             // create path and map variables
@@ -3908,12 +3644,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlideShape");
             }
 
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PutUpdateNotesSlideShape");
-            }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{path}/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3941,12 +3671,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlideShapeParagraph");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PutUpdateNotesSlideShapeParagraph");
             }
 
             // create path and map variables
@@ -3977,12 +3701,6 @@ namespace Aspose.Slides.Cloud.Sdk
             if (request.Name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlideShapePortion");
-            }
-
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling PutUpdateNotesSlideShapePortion");
             }
 
             // create path and map variables
@@ -4032,12 +3750,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <returns><see cref="FilesUploadResult"/></returns>            
         public FilesUploadResult UploadFile(UploadFileRequest request)
         {
-            // verify the required parameter 'path' is set
-            if (request.Path == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'path' when calling UploadFile");
-            }
-
             // verify the required parameter 'file' is set
             if (request.File == null)
             {

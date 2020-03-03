@@ -47,7 +47,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
         /// <param name="storageName">Storage name</param>
-        public CreateFolderRequest(string path, string storageName = null)
+        public CreateFolderRequest(string path = null, string storageName = null)
         {
             this.Path = path;
             this.StorageName = storageName;

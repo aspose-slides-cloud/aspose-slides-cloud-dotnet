@@ -57,8 +57,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Folder = folderName,
                 Password = "password",
                 SlideIndex = 1,
-                ShapeIndex = 1,
-                Path = ""
+                ShapeIndex = 1
             };
             ShapeBase shape = TestUtils.SlidesApi.GetSlideShape(request);
             Assert.IsInstanceOf<Shape>(shape);

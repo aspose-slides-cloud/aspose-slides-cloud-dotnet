@@ -47,17 +47,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path">Shape path (for smart art and group shapes).</param>
         /// <param name="shapeIndex">Shape index.</param>
+        /// <param name="path">Shape path (for smart art and group shapes).</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public DeleteSlideShapeRequest(string name, int slideIndex, string path, int shapeIndex, string password = null, string folder = null, string storage = null)
+        public DeleteSlideShapeRequest(string name, int slideIndex, int shapeIndex, string path = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
-            this.Path = path;
             this.ShapeIndex = shapeIndex;
+            this.Path = path;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
@@ -74,14 +74,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Shape path (for smart art and group shapes).
-        /// </summary>  
-        public string Path { get; set; }
-
-        /// <summary>
         /// Shape index.
         /// </summary>  
         public int ShapeIndex { get; set; }
+
+        /// <summary>
+        /// Shape path (for smart art and group shapes).
+        /// </summary>  
+        public string Path { get; set; }
 
         /// <summary>
         /// Document password.

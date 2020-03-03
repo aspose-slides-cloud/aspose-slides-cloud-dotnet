@@ -48,7 +48,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
         /// <param name="storageName">Storage name</param>
         /// <param name="recursive">Enable to delete folders, subfolders and files</param>
-        public DeleteFolderRequest(string path, string storageName = null, bool? recursive = null)
+        public DeleteFolderRequest(string path = null, string storageName = null, bool? recursive = null)
         {
             this.Path = path;
             this.StorageName = storageName;
