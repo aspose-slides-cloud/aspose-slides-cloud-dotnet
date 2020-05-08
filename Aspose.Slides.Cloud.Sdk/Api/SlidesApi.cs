@@ -1963,6 +1963,31 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Read presentation document properties. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetSlidesViewPropertiesRequest" /></param> 
+        /// <returns><see cref="ViewProperties"/></returns>            
+        public ViewProperties GetSlidesViewProperties(GetSlidesViewPropertiesRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesViewProperties");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/viewProperties");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<ViewProperties>(resourcePath, "GET", null, null, files, contentType);
+        }
+
+        /// <summary>
         /// Move file 
         /// </summary>
         /// <param name="request">Request. <see cref="MoveFileRequest" /></param> 
@@ -3602,6 +3627,32 @@ namespace Aspose.Slides.Cloud.Sdk
             var files = new List<FileInfo>();
             PickFiles(files, request);
             return InvokeApi<Document>(resourcePath, "PUT", null, null, files, contentType);
+        }
+
+        /// <summary>
+        /// Update presentation document properties. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PutSlidesViewPropertiesRequest" /></param> 
+        /// <returns><see cref="DocumentProperty"/></returns>            
+        public DocumentProperty PutSlidesViewProperties(PutSlidesViewPropertiesRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesViewProperties");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/viewProperties");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType;
+            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<DocumentProperty>(resourcePath, "PUT", postBody, null, files, contentType);
         }
 
         /// <summary>

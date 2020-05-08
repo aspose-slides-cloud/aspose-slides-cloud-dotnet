@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Document.cs">
+// <copyright company="Aspose" file="NormalViewRestoredProperties.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,39 +35,19 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents document DTO.
+    /// The sizing of the slide region.
     /// </summary>  
-    public class Document : ResourceBase 
+    public class NormalViewRestoredProperties 
     {                       
         /// <summary>
-        /// Link to Document properties.
+        /// True if the size of the side content region should compensate for the new size when resizing the window containing the view within the application.
         /// </summary>
-        public ResourceUriElement DocumentProperties { get; set; }
+        public bool? AutoAdjust { get; set; }
 
         /// <summary>
-        /// Link to Document properties.
+        /// The size of the slide region.
         /// </summary>
-        public ResourceUriElement ViewProperties { get; set; }
-
-        /// <summary>
-        /// Link to slides collection.
-        /// </summary>
-        public ResourceUriElement Slides { get; set; }
-
-        /// <summary>
-        /// Link to images collection.
-        /// </summary>
-        public ResourceUriElement Images { get; set; }
-
-        /// <summary>
-        /// Link to layout slides collection.
-        /// </summary>
-        public ResourceUriElement LayoutSlides { get; set; }
-
-        /// <summary>
-        /// Link to master slides collection.
-        /// </summary>
-        public ResourceUriElement MasterSlides { get; set; }
+        public double? DimensionSize { get; set; }
 
 
         /// <summary>
@@ -89,7 +69,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public Document() : base()
+        public NormalViewRestoredProperties() : base()
         {
         }
 
@@ -100,15 +80,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class Document {\n");
-            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-            sb.Append("  DocumentProperties: ").Append(this.DocumentProperties).Append("\n");
-            sb.Append("  ViewProperties: ").Append(this.ViewProperties).Append("\n");
-            sb.Append("  Slides: ").Append(this.Slides).Append("\n");
-            sb.Append("  Images: ").Append(this.Images).Append("\n");
-            sb.Append("  LayoutSlides: ").Append(this.LayoutSlides).Append("\n");
-            sb.Append("  MasterSlides: ").Append(this.MasterSlides).Append("\n");
+            sb.Append("class NormalViewRestoredProperties {\n");
+            sb.Append("  AutoAdjust: ").Append(this.AutoAdjust).Append("\n");
+            sb.Append("  DimensionSize: ").Append(this.DimensionSize).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

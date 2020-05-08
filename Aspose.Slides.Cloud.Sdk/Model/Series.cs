@@ -415,7 +415,42 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// <summary>
             /// Enum SeriesOfMixedTypes for "SeriesOfMixedTypes"
             /// </summary>
-            SeriesOfMixedTypes
+            SeriesOfMixedTypes,
+            
+            /// <summary>
+            /// Enum Treemap for "Treemap"
+            /// </summary>
+            Treemap,
+            
+            /// <summary>
+            /// Enum Sunburst for "Sunburst"
+            /// </summary>
+            Sunburst,
+            
+            /// <summary>
+            /// Enum Histogram for "Histogram"
+            /// </summary>
+            Histogram,
+            
+            /// <summary>
+            /// Enum ParetoLine for "ParetoLine"
+            /// </summary>
+            ParetoLine,
+            
+            /// <summary>
+            /// Enum BoxAndWhisker for "BoxAndWhisker"
+            /// </summary>
+            BoxAndWhisker,
+            
+            /// <summary>
+            /// Enum Waterfall for "Waterfall"
+            /// </summary>
+            Waterfall,
+            
+            /// <summary>
+            /// Enum Funnel for "Funnel"
+            /// </summary>
+            Funnel
         }
 
         /// <summary>

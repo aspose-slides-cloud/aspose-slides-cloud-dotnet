@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Document.cs">
+// <copyright company="Aspose" file="CommonSlideViewProperties.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,39 +35,19 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents document DTO.
+    /// Slide view properties.
     /// </summary>  
-    public class Document : ResourceBase 
+    public class CommonSlideViewProperties 
     {                       
         /// <summary>
-        /// Link to Document properties.
+        /// The view scaling ratio (percentage).
         /// </summary>
-        public ResourceUriElement DocumentProperties { get; set; }
+        public int? Scale { get; set; }
 
         /// <summary>
-        /// Link to Document properties.
+        /// True if the view content should automatically scale to best fit the current window size.
         /// </summary>
-        public ResourceUriElement ViewProperties { get; set; }
-
-        /// <summary>
-        /// Link to slides collection.
-        /// </summary>
-        public ResourceUriElement Slides { get; set; }
-
-        /// <summary>
-        /// Link to images collection.
-        /// </summary>
-        public ResourceUriElement Images { get; set; }
-
-        /// <summary>
-        /// Link to layout slides collection.
-        /// </summary>
-        public ResourceUriElement LayoutSlides { get; set; }
-
-        /// <summary>
-        /// Link to master slides collection.
-        /// </summary>
-        public ResourceUriElement MasterSlides { get; set; }
+        public bool? VariableScale { get; set; }
 
 
         /// <summary>
@@ -89,7 +69,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public Document() : base()
+        public CommonSlideViewProperties() : base()
         {
         }
 
@@ -100,15 +80,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class Document {\n");
-            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-            sb.Append("  DocumentProperties: ").Append(this.DocumentProperties).Append("\n");
-            sb.Append("  ViewProperties: ").Append(this.ViewProperties).Append("\n");
-            sb.Append("  Slides: ").Append(this.Slides).Append("\n");
-            sb.Append("  Images: ").Append(this.Images).Append("\n");
-            sb.Append("  LayoutSlides: ").Append(this.LayoutSlides).Append("\n");
-            sb.Append("  MasterSlides: ").Append(this.MasterSlides).Append("\n");
+            sb.Append("class CommonSlideViewProperties {\n");
+            sb.Append("  Scale: ").Append(this.Scale).Append("\n");
+            sb.Append("  VariableScale: ").Append(this.VariableScale).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

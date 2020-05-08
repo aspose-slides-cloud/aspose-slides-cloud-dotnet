@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Document.cs">
+// <copyright company="Aspose" file="ChartCategory.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,39 +35,34 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents document DTO.
+    /// Represents chart category resource
     /// </summary>  
-    public class Document : ResourceBase 
+    public class ChartCategory 
     {                       
         /// <summary>
-        /// Link to Document properties.
+        /// Gets or sets the categories for chart data
         /// </summary>
-        public ResourceUriElement DocumentProperties { get; set; }
+        public List<ChartCategory> Categories { get; set; }
 
         /// <summary>
-        /// Link to Document properties.
+        /// Category value
         /// </summary>
-        public ResourceUriElement ViewProperties { get; set; }
+        public string Value { get; set; }
 
         /// <summary>
-        /// Link to slides collection.
+        /// Get or sets the fill format.
         /// </summary>
-        public ResourceUriElement Slides { get; set; }
+        public FillFormat FillFormat { get; set; }
 
         /// <summary>
-        /// Link to images collection.
+        /// Get or sets the effect format.
         /// </summary>
-        public ResourceUriElement Images { get; set; }
+        public EffectFormat EffectFormat { get; set; }
 
         /// <summary>
-        /// Link to layout slides collection.
+        /// Get or sets the line format.
         /// </summary>
-        public ResourceUriElement LayoutSlides { get; set; }
-
-        /// <summary>
-        /// Link to master slides collection.
-        /// </summary>
-        public ResourceUriElement MasterSlides { get; set; }
+        public LineFormat LineFormat { get; set; }
 
 
         /// <summary>
@@ -89,7 +84,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public Document() : base()
+        public ChartCategory() : base()
         {
         }
 
@@ -100,15 +95,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class Document {\n");
-            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-            sb.Append("  DocumentProperties: ").Append(this.DocumentProperties).Append("\n");
-            sb.Append("  ViewProperties: ").Append(this.ViewProperties).Append("\n");
-            sb.Append("  Slides: ").Append(this.Slides).Append("\n");
-            sb.Append("  Images: ").Append(this.Images).Append("\n");
-            sb.Append("  LayoutSlides: ").Append(this.LayoutSlides).Append("\n");
-            sb.Append("  MasterSlides: ").Append(this.MasterSlides).Append("\n");
+            sb.Append("class ChartCategory {\n");
+            sb.Append("  Categories: ").Append(this.Categories).Append("\n");
+            sb.Append("  Value: ").Append(this.Value).Append("\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

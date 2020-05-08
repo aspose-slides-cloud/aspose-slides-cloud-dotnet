@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Document.cs">
+// <copyright company="Aspose" file="WaterfallSeries.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,39 +35,14 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents document DTO.
+    /// One value series.
     /// </summary>  
-    public class Document : ResourceBase 
+    public class WaterfallSeries : OneValueSeries 
     {                       
         /// <summary>
-        /// Link to Document properties.
+        /// True if inner points are shown.
         /// </summary>
-        public ResourceUriElement DocumentProperties { get; set; }
-
-        /// <summary>
-        /// Link to Document properties.
-        /// </summary>
-        public ResourceUriElement ViewProperties { get; set; }
-
-        /// <summary>
-        /// Link to slides collection.
-        /// </summary>
-        public ResourceUriElement Slides { get; set; }
-
-        /// <summary>
-        /// Link to images collection.
-        /// </summary>
-        public ResourceUriElement Images { get; set; }
-
-        /// <summary>
-        /// Link to layout slides collection.
-        /// </summary>
-        public ResourceUriElement LayoutSlides { get; set; }
-
-        /// <summary>
-        /// Link to master slides collection.
-        /// </summary>
-        public ResourceUriElement MasterSlides { get; set; }
+        public bool? ShowConnectorLines { get; set; }
 
 
         /// <summary>
@@ -89,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public Document() : base()
+        public WaterfallSeries() : base()
         {
         }
 
@@ -100,15 +75,27 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class Document {\n");
-            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-            sb.Append("  DocumentProperties: ").Append(this.DocumentProperties).Append("\n");
-            sb.Append("  ViewProperties: ").Append(this.ViewProperties).Append("\n");
-            sb.Append("  Slides: ").Append(this.Slides).Append("\n");
-            sb.Append("  Images: ").Append(this.Images).Append("\n");
-            sb.Append("  LayoutSlides: ").Append(this.LayoutSlides).Append("\n");
-            sb.Append("  MasterSlides: ").Append(this.MasterSlides).Append("\n");
+            sb.Append("class WaterfallSeries {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Name: ").Append(this.Name).Append("\n");
+            sb.Append("  IsColorVaried: ").Append(this.IsColorVaried).Append("\n");
+            sb.Append("  InvertedSolidFillColor: ").Append(this.InvertedSolidFillColor).Append("\n");
+            sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
+            sb.Append("  PlotOnSecondAxis: ").Append(this.PlotOnSecondAxis).Append("\n");
+            sb.Append("  Order: ").Append(this.Order).Append("\n");
+            sb.Append("  NumberFormatOfYValues: ").Append(this.NumberFormatOfYValues).Append("\n");
+            sb.Append("  NumberFormatOfXValues: ").Append(this.NumberFormatOfXValues).Append("\n");
+            sb.Append("  NumberFormatOfValues: ").Append(this.NumberFormatOfValues).Append("\n");
+            sb.Append("  NumberFormatOfBubbleSizes: ").Append(this.NumberFormatOfBubbleSizes).Append("\n");
+            sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");
+            sb.Append("  Explosion: ").Append(this.Explosion).Append("\n");
+            sb.Append("  Marker: ").Append(this.Marker).Append("\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
+            sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
+            sb.Append("  ShowConnectorLines: ").Append(this.ShowConnectorLines).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

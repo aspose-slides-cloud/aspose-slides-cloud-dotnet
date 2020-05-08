@@ -11352,6 +11352,125 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test GetSlidesViewProperties
+        /// </summary>
+        [Test]
+        public void GetSlidesViewProperties()
+        {
+            TestExecutor<GetSlidesViewPropertiesRequest, ViewProperties> testExecutor =
+                new TestExecutor<GetSlidesViewPropertiesRequest, ViewProperties>("GetSlidesViewProperties", null);
+            GetSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
+            ViewProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesViewProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesViewPropertiesInvalidName()
+        {
+            TestExecutor<GetSlidesViewPropertiesRequest, ViewProperties> testExecutor =
+                new TestExecutor<GetSlidesViewPropertiesRequest, ViewProperties>("GetSlidesViewProperties", "Name");
+            GetSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
+            ViewProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesViewProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesViewPropertiesInvalidPassword()
+        {
+            TestExecutor<GetSlidesViewPropertiesRequest, ViewProperties> testExecutor =
+                new TestExecutor<GetSlidesViewPropertiesRequest, ViewProperties>("GetSlidesViewProperties", "Password");
+            GetSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
+            ViewProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesViewProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesViewPropertiesInvalidFolder()
+        {
+            TestExecutor<GetSlidesViewPropertiesRequest, ViewProperties> testExecutor =
+                new TestExecutor<GetSlidesViewPropertiesRequest, ViewProperties>("GetSlidesViewProperties", "Folder");
+            GetSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
+            ViewProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesViewProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesViewPropertiesInvalidStorage()
+        {
+            TestExecutor<GetSlidesViewPropertiesRequest, ViewProperties> testExecutor =
+                new TestExecutor<GetSlidesViewPropertiesRequest, ViewProperties>("GetSlidesViewProperties", "Storage");
+            GetSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
+            ViewProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesViewProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test MoveFile
         /// </summary>
         [Test]
@@ -21900,6 +22019,148 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.PutSlidesSlideSize(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PutSlidesViewProperties
+        /// </summary>
+        [Test]
+        public void PutSlidesViewProperties()
+        {
+            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", null);
+            PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
+            DocumentProperty response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesViewProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesViewPropertiesInvalidName()
+        {
+            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", "Name");
+            PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
+            DocumentProperty response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesViewProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesViewPropertiesInvalidDto()
+        {
+            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", "Dto");
+            PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
+            DocumentProperty response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesViewProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesViewPropertiesInvalidPassword()
+        {
+            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", "Password");
+            PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
+            DocumentProperty response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesViewProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesViewPropertiesInvalidFolder()
+        {
+            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", "Folder");
+            PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
+            DocumentProperty response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesViewProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesViewPropertiesInvalidStorage()
+        {
+            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", "Storage");
+            PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
+            DocumentProperty response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesViewProperties(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
