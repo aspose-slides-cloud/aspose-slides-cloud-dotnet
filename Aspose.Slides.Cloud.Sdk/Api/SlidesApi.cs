@@ -2258,6 +2258,52 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Read notes slide info. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostGetNotesSlideRequest" /></param> 
+        /// <returns><see cref="NotesSlide"/></returns>            
+        public NotesSlide PostGetNotesSlide(PostGetNotesSlideRequest request)
+        {
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/slides/{slideIndex}/notesSlide");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            string contentType = "application/json";
+            var postBody = request.Document;
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeStreamApi<NotesSlide>(resourcePath, "POST", postBody, null, files, contentType);
+        }
+
+        /// <summary>
+        /// Convert notes slide to the specified image format. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostGetNotesSlideWithFormatRequest" /></param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream PostGetNotesSlideWithFormat(PostGetNotesSlideWithFormatRequest request)
+        {
+            // verify the required parameter 'format' is set
+            if (request.Format == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'format' when calling PostGetNotesSlideWithFormat");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/slides/{slideIndex}/notesSlide/{format}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", request.Width);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            string contentType = "application/json";
+            var postBody = request.Document;
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeBinaryStreamApi(resourcePath, "POST", postBody, null, files, contentType);
+        }
+
+        /// <summary>
         /// Creates new paragraph. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostNotesSlideAddNewParagraphRequest" /></param> 
@@ -3633,8 +3679,8 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Update presentation document properties. 
         /// </summary>
         /// <param name="request">Request. <see cref="PutSlidesViewPropertiesRequest" /></param> 
-        /// <returns><see cref="DocumentProperty"/></returns>            
-        public DocumentProperty PutSlidesViewProperties(PutSlidesViewPropertiesRequest request)
+        /// <returns><see cref="ViewProperties"/></returns>            
+        public ViewProperties PutSlidesViewProperties(PutSlidesViewPropertiesRequest request)
         {
             // verify the required parameter 'name' is set
             if (request.Name == null)
@@ -3652,7 +3698,7 @@ namespace Aspose.Slides.Cloud.Sdk
             var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperty>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<ViewProperties>(resourcePath, "PUT", postBody, null, files, contentType);
         }
 
         /// <summary>

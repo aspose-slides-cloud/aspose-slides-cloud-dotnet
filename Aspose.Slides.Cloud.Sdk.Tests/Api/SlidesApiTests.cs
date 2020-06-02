@@ -13163,6 +13163,290 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test PostGetNotesSlide
+        /// </summary>
+        [Test]
+        public void PostGetNotesSlide()
+        {
+            TestExecutor<PostGetNotesSlideRequest, NotesSlide> testExecutor =
+                new TestExecutor<PostGetNotesSlideRequest, NotesSlide>("PostGetNotesSlide", null);
+            PostGetNotesSlideRequest request = testExecutor.PrepareRequest();
+            NotesSlide response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlide(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostGetNotesSlideInvalidSlideIndex()
+        {
+            TestExecutor<PostGetNotesSlideRequest, NotesSlide> testExecutor =
+                new TestExecutor<PostGetNotesSlideRequest, NotesSlide>("PostGetNotesSlide", "SlideIndex");
+            PostGetNotesSlideRequest request = testExecutor.PrepareRequest();
+            NotesSlide response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlide(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostGetNotesSlideInvalidDocument()
+        {
+            TestExecutor<PostGetNotesSlideRequest, NotesSlide> testExecutor =
+                new TestExecutor<PostGetNotesSlideRequest, NotesSlide>("PostGetNotesSlide", "Document");
+            PostGetNotesSlideRequest request = testExecutor.PrepareRequest();
+            NotesSlide response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlide(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostGetNotesSlideInvalidPassword()
+        {
+            TestExecutor<PostGetNotesSlideRequest, NotesSlide> testExecutor =
+                new TestExecutor<PostGetNotesSlideRequest, NotesSlide>("PostGetNotesSlide", "Password");
+            PostGetNotesSlideRequest request = testExecutor.PrepareRequest();
+            NotesSlide response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlide(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PostGetNotesSlideWithFormat
+        /// </summary>
+        [Test]
+        public void PostGetNotesSlideWithFormat()
+        {
+            TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream>("PostGetNotesSlideWithFormat", null);
+            PostGetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostGetNotesSlideWithFormatInvalidSlideIndex()
+        {
+            TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream>("PostGetNotesSlideWithFormat", "SlideIndex");
+            PostGetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostGetNotesSlideWithFormatInvalidFormat()
+        {
+            TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream>("PostGetNotesSlideWithFormat", "Format");
+            PostGetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostGetNotesSlideWithFormatInvalidDocument()
+        {
+            TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream>("PostGetNotesSlideWithFormat", "Document");
+            PostGetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostGetNotesSlideWithFormatInvalidWidth()
+        {
+            TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream>("PostGetNotesSlideWithFormat", "Width");
+            PostGetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostGetNotesSlideWithFormatInvalidHeight()
+        {
+            TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream>("PostGetNotesSlideWithFormat", "Height");
+            PostGetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostGetNotesSlideWithFormatInvalidPassword()
+        {
+            TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream>("PostGetNotesSlideWithFormat", "Password");
+            PostGetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostGetNotesSlideWithFormatInvalidFontsFolder()
+        {
+            TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream>("PostGetNotesSlideWithFormat", "FontsFolder");
+            PostGetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test PostNotesSlideAddNewParagraph
         /// </summary>
         [Test]
@@ -22038,10 +22322,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlidesViewProperties()
         {
-            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
-                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", null);
+            TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties>("PutSlidesViewProperties", null);
             PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
-            DocumentProperty response = null;
+            ViewProperties response = null;
             bool needAssertResponse = false;
             try
             {
@@ -22061,10 +22345,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlidesViewPropertiesInvalidName()
         {
-            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
-                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", "Name");
+            TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties>("PutSlidesViewProperties", "Name");
             PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
-            DocumentProperty response = null;
+            ViewProperties response = null;
             bool needAssertResponse = false;
             try
             {
@@ -22084,10 +22368,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlidesViewPropertiesInvalidDto()
         {
-            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
-                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", "Dto");
+            TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties>("PutSlidesViewProperties", "Dto");
             PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
-            DocumentProperty response = null;
+            ViewProperties response = null;
             bool needAssertResponse = false;
             try
             {
@@ -22107,10 +22391,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlidesViewPropertiesInvalidPassword()
         {
-            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
-                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", "Password");
+            TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties>("PutSlidesViewProperties", "Password");
             PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
-            DocumentProperty response = null;
+            ViewProperties response = null;
             bool needAssertResponse = false;
             try
             {
@@ -22130,10 +22414,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlidesViewPropertiesInvalidFolder()
         {
-            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
-                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", "Folder");
+            TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties>("PutSlidesViewProperties", "Folder");
             PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
-            DocumentProperty response = null;
+            ViewProperties response = null;
             bool needAssertResponse = false;
             try
             {
@@ -22153,10 +22437,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void PutSlidesViewPropertiesInvalidStorage()
         {
-            TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty> testExecutor =
-                new TestExecutor<PutSlidesViewPropertiesRequest, DocumentProperty>("PutSlidesViewProperties", "Storage");
+            TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties> testExecutor =
+                new TestExecutor<PutSlidesViewPropertiesRequest, ViewProperties>("PutSlidesViewProperties", "Storage");
             PutSlidesViewPropertiesRequest request = testExecutor.PrepareRequest();
-            DocumentProperty response = null;
+            ViewProperties response = null;
             bool needAssertResponse = false;
             try
             {
