@@ -49,7 +49,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="slideIndex">Slide index.</param>
         /// <param name="shapeIndex">Index of shape starting from 1</param>
         /// <param name="format">Export picture format.</param>
-        /// <param name="path">Shape path (for smart art and group shapes).</param>
         /// <param name="options">export options</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Presentation folder.</param>
@@ -58,13 +57,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="scaleY">Y scale ratio.</param>
         /// <param name="bounds">Shape thumbnail bounds type.</param>
         /// <param name="fontsFolder">Fonts folder.</param>
-        public PostNotesSlideShapeSaveAsRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string path = null, IShapeExportOptions options = null, string password = null, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string fontsFolder = null)
+        public PostNotesSlideShapeSaveAsRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, IShapeExportOptions options = null, string password = null, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string fontsFolder = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.ShapeIndex = shapeIndex;
             this.Format = format;
-            this.Path = path;
             this.Options = options;
             this.Password = password;
             this.Folder = folder;
@@ -94,11 +92,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Export picture format.
         /// </summary>  
         public ShapeExportFormat Format { get; set; }
-
-        /// <summary>
-        /// Shape path (for smart art and group shapes).
-        /// </summary>  
-        public string Path { get; set; }
 
         /// <summary>
         /// export options

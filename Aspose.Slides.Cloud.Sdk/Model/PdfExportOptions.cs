@@ -74,7 +74,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// <summary>
             /// Enum PdfA1b for "PdfA1b"
             /// </summary>
-            PdfA1b
+            PdfA1b,
+            
+            /// <summary>
+            /// Enum PdfA1a for "PdfA1a"
+            /// </summary>
+            PdfA1a,
+            
+            /// <summary>
+            /// Enum PdfUa for "PdfUa"
+            /// </summary>
+            PdfUa
         }
 
         /// <summary>
@@ -126,6 +136,60 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// Access permissions that should be granted when the document is opened with user access.  Default is AccessPermissions.None.             
+        /// </summary>
+        /// <value>Access permissions that should be granted when the document is opened with user access.  Default is AccessPermissions.None.             </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AccessPermissionsEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum PrintDocument for "PrintDocument"
+            /// </summary>
+            PrintDocument,
+            
+            /// <summary>
+            /// Enum ModifyContent for "ModifyContent"
+            /// </summary>
+            ModifyContent,
+            
+            /// <summary>
+            /// Enum CopyTextAndGraphics for "CopyTextAndGraphics"
+            /// </summary>
+            CopyTextAndGraphics,
+            
+            /// <summary>
+            /// Enum AddOrModifyFields for "AddOrModifyFields"
+            /// </summary>
+            AddOrModifyFields,
+            
+            /// <summary>
+            /// Enum FillExistingFields for "FillExistingFields"
+            /// </summary>
+            FillExistingFields,
+            
+            /// <summary>
+            /// Enum ExtractTextAndGraphics for "ExtractTextAndGraphics"
+            /// </summary>
+            ExtractTextAndGraphics,
+            
+            /// <summary>
+            /// Enum AssembleDocument for "AssembleDocument"
+            /// </summary>
+            AssembleDocument,
+            
+            /// <summary>
+            /// Enum HighQualityPrint for "HighQualityPrint"
+            /// </summary>
+            HighQualityPrint
+        }
+
+        /// <summary>
         /// Specifies compression type to be used for all textual content in the document.
         /// </summary>
         public TextCompressionEnum? TextCompression { get; set; }
@@ -144,6 +208,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Gets or sets the position of the comments on the page.
         /// </summary>
         public CommentsPositionEnum? CommentsPosition { get; set; }
+
+        /// <summary>
+        /// Access permissions that should be granted when the document is opened with user access.  Default is AccessPermissions.None.             
+        /// </summary>
+        public AccessPermissionsEnum? AccessPermissions { get; set; }
 
         /// <summary>
         /// Determines if all characters of font should be embedded or only used subset.
@@ -268,6 +337,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
             sb.Append("  ImageTransparentColor: ").Append(this.ImageTransparentColor).Append("\n");
             sb.Append("  ApplyImageTransparent: ").Append(this.ApplyImageTransparent).Append("\n");
+            sb.Append("  AccessPermissions: ").Append(this.AccessPermissions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

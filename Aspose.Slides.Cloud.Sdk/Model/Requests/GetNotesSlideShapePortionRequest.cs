@@ -50,18 +50,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="shapeIndex">Shape index.</param>
         /// <param name="paragraphIndex">Paragraph index.</param>
         /// <param name="portionIndex">Portion index.</param>
-        /// <param name="path">Shape path (for smart art and group shapes).</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public GetNotesSlideShapePortionRequest(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string path = null, string password = null, string folder = null, string storage = null)
+        public GetNotesSlideShapePortionRequest(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.ShapeIndex = shapeIndex;
             this.ParagraphIndex = paragraphIndex;
             this.PortionIndex = portionIndex;
-            this.Path = path;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
@@ -91,11 +89,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Portion index.
         /// </summary>  
         public int PortionIndex { get; set; }
-
-        /// <summary>
-        /// Shape path (for smart art and group shapes).
-        /// </summary>  
-        public string Path { get; set; }
 
         /// <summary>
         /// Document password.

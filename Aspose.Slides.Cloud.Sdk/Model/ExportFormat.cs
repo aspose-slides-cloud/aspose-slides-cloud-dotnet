@@ -145,7 +145,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Enum Bmp for "Bmp"
         /// </summary>
-        Bmp
+        Bmp,
+        
+        /// <summary>
+        /// Enum Fodp for "Fodp"
+        /// </summary>
+        Fodp
     }
 
 }

@@ -48,17 +48,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="name">Document name.</param>
         /// <param name="slideIndex">Slide index.</param>
         /// <param name="shapeIndex">Shape index.</param>
-        /// <param name="path">Shape path (for smart art and group shapes).</param>
         /// <param name="dto">Shape DTO.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PutUpdateNotesSlideShapeRequest(string name, int slideIndex, int shapeIndex, string path = null, ShapeBase dto = null, string password = null, string folder = null, string storage = null)
+        public PutUpdateNotesSlideShapeRequest(string name, int slideIndex, int shapeIndex, ShapeBase dto = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.ShapeIndex = shapeIndex;
-            this.Path = path;
             this.Dto = dto;
             this.Password = password;
             this.Folder = folder;
@@ -79,11 +77,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Shape index.
         /// </summary>  
         public int ShapeIndex { get; set; }
-
-        /// <summary>
-        /// Shape path (for smart art and group shapes).
-        /// </summary>  
-        public string Path { get; set; }
 
         /// <summary>
         /// Shape DTO.

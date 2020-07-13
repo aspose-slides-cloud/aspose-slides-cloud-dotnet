@@ -47,18 +47,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path">Shape path (for smart art and group shapes).</param>
         /// <param name="dto">Shape DTO.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
         /// <param name="shapeToClone">Optional index for clone shape instead of adding a new one.</param>
         /// <param name="position">Position of the new shape in the list. Default is at the end of the list.</param>
-        public PostAddNewShapeRequest(string name, int slideIndex, string path = null, ShapeBase dto = null, string password = null, string folder = null, string storage = null, int? shapeToClone = null, int? position = null)
+        public PostAddNewShapeRequest(string name, int slideIndex, ShapeBase dto = null, string password = null, string folder = null, string storage = null, int? shapeToClone = null, int? position = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
-            this.Path = path;
             this.Dto = dto;
             this.Password = password;
             this.Folder = folder;
@@ -76,11 +74,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Slide index.
         /// </summary>  
         public int SlideIndex { get; set; }
-
-        /// <summary>
-        /// Shape path (for smart art and group shapes).
-        /// </summary>  
-        public string Path { get; set; }
 
         /// <summary>
         /// Shape DTO.

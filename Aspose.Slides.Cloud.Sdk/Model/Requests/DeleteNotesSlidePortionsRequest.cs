@@ -49,18 +49,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="slideIndex">Slide index.</param>
         /// <param name="shapeIndex">Shape index.</param>
         /// <param name="paragraphIndex">Paragraph index.</param>
-        /// <param name="path">Shape path (for smart art and group shapes).</param>
         /// <param name="portions">The indices of the shapes to be deleted; delete all by default.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public DeleteNotesSlidePortionsRequest(string name, int slideIndex, int shapeIndex, int paragraphIndex, string path = null, List<int> portions = null, string password = null, string folder = null, string storage = null)
+        public DeleteNotesSlidePortionsRequest(string name, int slideIndex, int shapeIndex, int paragraphIndex, List<int> portions = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.ShapeIndex = shapeIndex;
             this.ParagraphIndex = paragraphIndex;
-            this.Path = path;
             this.Portions = portions;
             this.Password = password;
             this.Folder = folder;
@@ -86,11 +84,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Paragraph index.
         /// </summary>  
         public int ParagraphIndex { get; set; }
-
-        /// <summary>
-        /// Shape path (for smart art and group shapes).
-        /// </summary>  
-        public string Path { get; set; }
 
         /// <summary>
         /// The indices of the shapes to be deleted; delete all by default.
