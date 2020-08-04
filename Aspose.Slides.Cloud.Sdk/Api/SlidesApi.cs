@@ -137,6 +137,34 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Delete a series from a chart. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="DeleteChartSeriesRequest" /></param> 
+        /// <returns><see cref="Chart"/></returns>            
+        public Chart DeleteChartSeries(DeleteChartSeriesRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteChartSeries");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesIndex", request.SeriesIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType = "application/json";
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<Chart>(resourcePath, "DELETE", null, null, files, contentType);
+        }
+
+        /// <summary>
         /// Delete file 
         /// </summary>
         /// <param name="request">Request. <see cref="DeleteFileRequest" /></param> 
@@ -2622,6 +2650,34 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Add a new series to a chart. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostChartSeriesRequest" /></param> 
+        /// <returns><see cref="Chart"/></returns>            
+        public Chart PostChartSeries(PostChartSeriesRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostChartSeries");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType;
+            var postBody = SerializationHelper.Serialize(request.Series, out contentType); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<Chart>(resourcePath, "POST", postBody, null, files, contentType);
+        }
+
+        /// <summary>
         /// Copy layoutSlide from source presentation. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostCopyLayoutSlideFromSourcePresentationRequest" /></param> 
@@ -3548,6 +3604,35 @@ namespace Aspose.Slides.Cloud.Sdk
             var files = new List<FileInfo>();
             PickFiles(files, request);
             return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, contentType);
+        }
+
+        /// <summary>
+        /// Update a series in a chart. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PutChartSeriesRequest" /></param> 
+        /// <returns><see cref="Chart"/></returns>            
+        public Chart PutChartSeries(PutChartSeriesRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PutChartSeries");
+            }
+
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesIndex", request.SeriesIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            string contentType;
+            var postBody = SerializationHelper.Serialize(request.Series, out contentType); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<Chart>(resourcePath, "PUT", postBody, null, files, contentType);
         }
 
         /// <summary>

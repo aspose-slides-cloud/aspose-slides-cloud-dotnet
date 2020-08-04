@@ -454,9 +454,37 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// Gets or Sets DataPointType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DataPointTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum OneValue for "OneValue"
+            /// </summary>
+            OneValue,
+            
+            /// <summary>
+            /// Enum Scatter for "Scatter"
+            /// </summary>
+            Scatter,
+            
+            /// <summary>
+            /// Enum Bubble for "Bubble"
+            /// </summary>
+            Bubble
+        }
+
+        /// <summary>
         /// Series type.
         /// </summary>
         public TypeEnum? Type { get; set; }
+
+        /// <summary>
+        /// Gets or sets DataPointType
+        /// </summary>
+        public DataPointTypeEnum? DataPointType { get; set; }
 
         /// <summary>
         /// Series name.
@@ -587,6 +615,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

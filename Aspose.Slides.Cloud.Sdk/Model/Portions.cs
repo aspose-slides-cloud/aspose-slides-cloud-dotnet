@@ -42,7 +42,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// List of portion links.
         /// </summary>
-        public List<ResourceUriElement> PortionLinks { get; set; }
+        public List<Portion> Items { get; set; }
 
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("class Portions {\n");
             sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
             sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-            sb.Append("  PortionLinks: ").Append(this.PortionLinks).Append("\n");
+            sb.Append("  Items: ").Append(this.Items).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

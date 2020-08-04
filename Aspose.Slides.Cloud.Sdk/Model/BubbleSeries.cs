@@ -40,35 +40,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class BubbleSeries : Series 
     {                       
         /// <summary>
-        /// Data point type.
-        /// </summary>
-        /// <value>Data point type.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum DataPointTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum OneValue for "OneValue"
-            /// </summary>
-            OneValue,
-            
-            /// <summary>
-            /// Enum Scatter for "Scatter"
-            /// </summary>
-            Scatter,
-            
-            /// <summary>
-            /// Enum Bubble for "Bubble"
-            /// </summary>
-            Bubble
-        }
-
-        /// <summary>
-        /// Data point type.
-        /// </summary>
-        public DataPointTypeEnum? DataPointType { get; set; }
-
-        /// <summary>
         /// Gets or sets the values.
         /// </summary>
         public List<BubbleChartDataPoint> DataPoints { get; set; }
@@ -84,6 +55,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("DataPointType", DataPointTypeEnum.Bubble);
                 }
                 return s_typeDeterminers;
             }
@@ -95,6 +67,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public BubbleSeries() : base()
         {
+            DataPointType = DataPointTypeEnum.Bubble;
         }
 
         /// <summary>

@@ -569,7 +569,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// List of portion links.
         /// </summary>
-        public List<ResourceUriElement> PortionList { get; set; }
+        public List<Portion> PortionList { get; set; }
 
 
         /// <summary>

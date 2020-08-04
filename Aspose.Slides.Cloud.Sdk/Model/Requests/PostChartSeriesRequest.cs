@@ -1,6 +1,6 @@
 
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="GetSlideAnimationRequest.cs">
+// <copyright company="Aspose" file="PostChartSeriesRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,31 +31,33 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.GetSlideAnimation" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostChartSeries" /> operation.
   /// </summary>  
-  public class GetSlideAnimationRequest  
+  public class PostChartSeriesRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetSlideAnimationRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostChartSeriesRequest"/> class.
         /// </summary>        
-        public GetSlideAnimationRequest()
+        public PostChartSeriesRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetSlideAnimationRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostChartSeriesRequest"/> class.
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="slideIndex">Slide index.</param>
-        /// <param name="shapeIndex">Shape index. If specified, only effects related to that shape are returned.</param>
+        /// <param name="shapeIndex">Shape index (must be a chart).</param>
+        /// <param name="series">Series DTO.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public GetSlideAnimationRequest(string name, int slideIndex, int? shapeIndex = null, string password = null, string folder = null, string storage = null)
+        public PostChartSeriesRequest(string name, int slideIndex, int shapeIndex, Series series = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.ShapeIndex = shapeIndex;
+            this.Series = series;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
@@ -72,9 +74,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// Shape index. If specified, only effects related to that shape are returned.
+        /// Shape index (must be a chart).
         /// </summary>  
-        public int? ShapeIndex { get; set; }
+        public int ShapeIndex { get; set; }
+
+        /// <summary>
+        /// Series DTO.
+        /// </summary>  
+        public Series Series { get; set; }
 
         /// <summary>
         /// Document password.

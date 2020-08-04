@@ -55,6 +55,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("DataPointType", DataPointTypeEnum.OneValue);
                 }
                 return s_typeDeterminers;
             }
@@ -66,6 +67,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public WaterfallSeries() : base()
         {
+            DataPointType = DataPointTypeEnum.OneValue;
         }
 
         /// <summary>

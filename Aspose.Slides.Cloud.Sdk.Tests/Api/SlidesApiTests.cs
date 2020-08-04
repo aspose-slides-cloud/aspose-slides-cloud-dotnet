@@ -404,6 +404,194 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test DeleteChartSeries
+        /// </summary>
+        [Test]
+        public void DeleteChartSeries()
+        {
+            TestExecutor<DeleteChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<DeleteChartSeriesRequest, Chart>("DeleteChartSeries", null);
+            DeleteChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteChartSeriesInvalidName()
+        {
+            TestExecutor<DeleteChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<DeleteChartSeriesRequest, Chart>("DeleteChartSeries", "Name");
+            DeleteChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteChartSeriesInvalidSlideIndex()
+        {
+            TestExecutor<DeleteChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<DeleteChartSeriesRequest, Chart>("DeleteChartSeries", "SlideIndex");
+            DeleteChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteChartSeriesInvalidShapeIndex()
+        {
+            TestExecutor<DeleteChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<DeleteChartSeriesRequest, Chart>("DeleteChartSeries", "ShapeIndex");
+            DeleteChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteChartSeriesInvalidSeriesIndex()
+        {
+            TestExecutor<DeleteChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<DeleteChartSeriesRequest, Chart>("DeleteChartSeries", "SeriesIndex");
+            DeleteChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteChartSeriesInvalidPassword()
+        {
+            TestExecutor<DeleteChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<DeleteChartSeriesRequest, Chart>("DeleteChartSeries", "Password");
+            DeleteChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteChartSeriesInvalidFolder()
+        {
+            TestExecutor<DeleteChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<DeleteChartSeriesRequest, Chart>("DeleteChartSeries", "Folder");
+            DeleteChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteChartSeriesInvalidStorage()
+        {
+            TestExecutor<DeleteChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<DeleteChartSeriesRequest, Chart>("DeleteChartSeries", "Storage");
+            DeleteChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test DeleteFile
         /// </summary>
         [Test]
@@ -15427,6 +15615,194 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test PostChartSeries
+        /// </summary>
+        [Test]
+        public void PostChartSeries()
+        {
+            TestExecutor<PostChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PostChartSeriesRequest, Chart>("PostChartSeries", null);
+            PostChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostChartSeriesInvalidName()
+        {
+            TestExecutor<PostChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PostChartSeriesRequest, Chart>("PostChartSeries", "Name");
+            PostChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostChartSeriesInvalidSlideIndex()
+        {
+            TestExecutor<PostChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PostChartSeriesRequest, Chart>("PostChartSeries", "SlideIndex");
+            PostChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostChartSeriesInvalidShapeIndex()
+        {
+            TestExecutor<PostChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PostChartSeriesRequest, Chart>("PostChartSeries", "ShapeIndex");
+            PostChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostChartSeriesInvalidSeries()
+        {
+            TestExecutor<PostChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PostChartSeriesRequest, Chart>("PostChartSeries", "Series");
+            PostChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostChartSeriesInvalidPassword()
+        {
+            TestExecutor<PostChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PostChartSeriesRequest, Chart>("PostChartSeries", "Password");
+            PostChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostChartSeriesInvalidFolder()
+        {
+            TestExecutor<PostChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PostChartSeriesRequest, Chart>("PostChartSeries", "Folder");
+            PostChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostChartSeriesInvalidStorage()
+        {
+            TestExecutor<PostChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PostChartSeriesRequest, Chart>("PostChartSeries", "Storage");
+            PostChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test PostCopyLayoutSlideFromSourcePresentation
         /// </summary>
         [Test]
@@ -21402,6 +21778,217 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.PostSubshapeSaveAs(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PutChartSeries
+        /// </summary>
+        [Test]
+        public void PutChartSeries()
+        {
+            TestExecutor<PutChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PutChartSeriesRequest, Chart>("PutChartSeries", null);
+            PutChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutChartSeriesInvalidName()
+        {
+            TestExecutor<PutChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PutChartSeriesRequest, Chart>("PutChartSeries", "Name");
+            PutChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutChartSeriesInvalidSlideIndex()
+        {
+            TestExecutor<PutChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PutChartSeriesRequest, Chart>("PutChartSeries", "SlideIndex");
+            PutChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutChartSeriesInvalidShapeIndex()
+        {
+            TestExecutor<PutChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PutChartSeriesRequest, Chart>("PutChartSeries", "ShapeIndex");
+            PutChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutChartSeriesInvalidSeriesIndex()
+        {
+            TestExecutor<PutChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PutChartSeriesRequest, Chart>("PutChartSeries", "SeriesIndex");
+            PutChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutChartSeriesInvalidSeries()
+        {
+            TestExecutor<PutChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PutChartSeriesRequest, Chart>("PutChartSeries", "Series");
+            PutChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutChartSeriesInvalidPassword()
+        {
+            TestExecutor<PutChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PutChartSeriesRequest, Chart>("PutChartSeries", "Password");
+            PutChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutChartSeriesInvalidFolder()
+        {
+            TestExecutor<PutChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PutChartSeriesRequest, Chart>("PutChartSeries", "Folder");
+            PutChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutChartSeries(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutChartSeriesInvalidStorage()
+        {
+            TestExecutor<PutChartSeriesRequest, Chart> testExecutor =
+                new TestExecutor<PutChartSeriesRequest, Chart>("PutChartSeries", "Storage");
+            PutChartSeriesRequest request = testExecutor.PrepareRequest();
+            Chart response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutChartSeries(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
