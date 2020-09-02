@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="XpsExportOptions.cs">
+// <copyright company="Aspose" file="WaterfallChartDataPoint.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,24 +35,14 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Provides options that control how a presentation is saved in XPS format.
+    /// One value chart data point.
     /// </summary>  
-    public class XpsExportOptions : ExportOptions 
+    public class WaterfallChartDataPoint : OneValueChartDataPoint 
     {                       
         /// <summary>
-        /// Specifies whether the generated document should include hidden slides or not. Default is false. 
+        /// Value.
         /// </summary>
-        public bool? ShowHiddenSlides { get; set; }
-
-        /// <summary>
-        /// True to convert all metafiles used in a presentation to the PNG images.
-        /// </summary>
-        public bool? SaveMetafilesAsPng { get; set; }
-
-        /// <summary>
-        /// True to draw black frame around each slide.
-        /// </summary>
-        public bool? DrawSlidesFrame { get; set; }
+        public bool? SetAsTotal { get; set; }
 
 
         /// <summary>
@@ -65,7 +55,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("Format", "xps");
                 }
                 return s_typeDeterminers;
             }
@@ -75,9 +64,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public XpsExportOptions() : base()
+        public WaterfallChartDataPoint() : base()
         {
-            Format = "xps";
         }
 
         /// <summary>
@@ -87,12 +75,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class XpsExportOptions {\n");
-            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
-            sb.Append("  Format: ").Append(this.Format).Append("\n");
-            sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
-            sb.Append("  SaveMetafilesAsPng: ").Append(this.SaveMetafilesAsPng).Append("\n");
-            sb.Append("  DrawSlidesFrame: ").Append(this.DrawSlidesFrame).Append("\n");
+            sb.Append("class WaterfallChartDataPoint {\n");
+            sb.Append("  Value: ").Append(this.Value).Append("\n");
+            sb.Append("  SetAsTotal: ").Append(this.SetAsTotal).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

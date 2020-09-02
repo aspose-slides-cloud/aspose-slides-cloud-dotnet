@@ -40,6 +40,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class ExportOptions 
     {                       
         /// <summary>
+        /// Setting user password to protect the PDF document. 
+        /// </summary>
+        public string DefaultRegularFont { get; set; }
+
+        /// <summary>
         /// Gets or sets Format
         /// </summary>
         public string Format { get; set; }
@@ -76,6 +81,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ExportOptions {\n");
+            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

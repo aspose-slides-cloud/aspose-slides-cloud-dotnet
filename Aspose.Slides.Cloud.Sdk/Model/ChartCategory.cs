@@ -64,6 +64,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public LineFormat LineFormat { get; set; }
 
+        /// <summary>
+        /// Gets or sets the data points for chart data
+        /// </summary>
+        public List<OneValueChartDataPoint> DataPoints { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -101,6 +106,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -254,6 +254,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TiffExportOptions {\n");
+            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  Compression: ").Append(this.Compression).Append("\n");
             sb.Append("  Width: ").Append(this.Width).Append("\n");

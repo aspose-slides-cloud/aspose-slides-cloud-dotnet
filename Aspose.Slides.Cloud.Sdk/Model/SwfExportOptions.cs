@@ -221,6 +221,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SwfExportOptions {\n");
+            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
             sb.Append("  Compressed: ").Append(this.Compressed).Append("\n");

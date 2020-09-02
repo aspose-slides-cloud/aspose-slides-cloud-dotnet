@@ -68,13 +68,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'srcPath' when calling CopyFile");
             }
-
             // verify the required parameter 'destPath' is set
             if (request.DestPath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'destPath' when calling CopyFile");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/file/copy/{srcPath}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "srcPath", request.SrcPath);
@@ -82,10 +80,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "srcStorageName", request.SrcStorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destStorageName", request.DestStorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "versionId", request.VersionId);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", null, null, files, contentType);
+            InvokeVoidApi(resourcePath, "PUT", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -100,23 +97,20 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'srcPath' when calling CopyFolder");
             }
-
             // verify the required parameter 'destPath' is set
             if (request.DestPath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'destPath' when calling CopyFolder");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/folder/copy/{srcPath}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "srcPath", request.SrcPath);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destPath", request.DestPath);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "srcStorageName", request.SrcStorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destStorageName", request.DestStorageName);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", null, null, files, contentType);
+            InvokeVoidApi(resourcePath, "PUT", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -130,10 +124,62 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/storage/folder/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", null, null, files, contentType);
+            InvokeVoidApi(resourcePath, "PUT", null, null, files, "application/json");
+        }
+
+        /// <summary>
+        /// Delete a category from a chart. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="DeleteChartCategoryRequest" /></param> 
+        /// <returns><see cref="Chart"/></returns>            
+        public Chart DeleteChartCategory(DeleteChartCategoryRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteChartCategory");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/categories/{categoryIndex}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "categoryIndex", request.CategoryIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<Chart>(resourcePath, "DELETE", null, null, files, "application/json");
+        }
+
+        /// <summary>
+        /// Delete a data point from a chart series. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="DeleteChartDataPointRequest" /></param> 
+        /// <returns><see cref="Chart"/></returns>            
+        public Chart DeleteChartDataPoint(DeleteChartDataPointRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteChartDataPoint");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}/dataPoints/{pointIndex}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesIndex", request.SeriesIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "pointIndex", request.PointIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<Chart>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -148,7 +194,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteChartSeries");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -158,10 +203,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Chart>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -176,10 +220,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "versionId", request.VersionId);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "DELETE", null, null, files, contentType);
+            InvokeVoidApi(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -194,10 +237,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "recursive", request.Recursive);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "DELETE", null, null, files, contentType);
+            InvokeVoidApi(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -212,7 +254,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlide");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -220,10 +261,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Slide>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Slide>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -238,7 +278,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideParagraph");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -248,10 +287,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -266,7 +304,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideParagraphs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -276,10 +313,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -294,7 +330,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlidePortion");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -305,10 +340,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -323,7 +357,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlidePortions");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -334,10 +367,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -352,7 +384,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideShape");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -361,10 +392,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -379,7 +409,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideShapes");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -388,10 +417,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -406,7 +434,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteParagraph");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -416,10 +443,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -434,7 +460,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteParagraphs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -444,10 +469,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -462,7 +486,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeletePortion");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -473,10 +496,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -491,7 +513,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeletePortions");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -502,10 +523,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -520,7 +540,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideAnimation");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -528,10 +547,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -546,7 +564,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideAnimationEffect");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/mainSequence/{effectIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -555,10 +572,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -573,7 +589,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideAnimationInteractiveSequence");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences/{sequenceIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -582,10 +597,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -600,7 +614,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideAnimationInteractiveSequenceEffect");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences/{sequenceIndex}/{effectIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -610,10 +623,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -628,7 +640,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideAnimationInteractiveSequences");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -636,10 +647,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -654,7 +664,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideAnimationMainSequence");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/mainSequence");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -662,10 +671,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -680,7 +688,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideByIndex");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -688,10 +695,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -706,7 +712,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideShape");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -715,10 +720,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -733,7 +737,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideShapes");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -742,10 +745,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -760,7 +762,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideSubshape");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -770,10 +771,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -788,7 +788,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideSubshapes");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -798,10 +797,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -816,7 +814,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlidesCleanSlidesList");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -824,10 +821,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -842,17 +838,15 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlidesDocumentProperties");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperties>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<DocumentProperties>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -867,13 +861,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlidesDocumentProperty");
             }
-
             // verify the required parameter 'propertyName' is set
             if (request.PropertyName == null)
             {
                 throw new ApiException(400, "Missing required parameter 'propertyName' when calling DeleteSlidesDocumentProperty");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties/{propertyName}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -881,10 +873,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperties>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<DocumentProperties>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -899,7 +890,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlidesSlideBackground");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/background");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -907,10 +897,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideBackground>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<SlideBackground>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -925,7 +914,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSubshapeParagraph");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -936,10 +924,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -954,7 +941,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSubshapeParagraphs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -965,10 +951,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -983,7 +968,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSubshapePortion");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -995,10 +979,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1013,7 +996,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSubshapePortions");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1025,10 +1007,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, contentType);
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1043,10 +1024,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "versionId", request.VersionId);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "GET", null, null, files, contentType);
+            return InvokeBinaryApi(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1059,10 +1039,9 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/disc");
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DiscUsage>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<DiscUsage>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1076,10 +1055,9 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/storage/version/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<FileVersions>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<FileVersions>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1093,10 +1071,9 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/storage/folder/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<FilesList>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<FilesList>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1111,7 +1088,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetLayoutSlide");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/layoutSlides/{slideIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1119,10 +1095,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<LayoutSlide>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<LayoutSlide>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1137,17 +1112,15 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetLayoutSlidesList");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/layoutSlides");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<LayoutSlides>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<LayoutSlides>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1162,7 +1135,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetMasterSlide");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/masterSlides/{slideIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1170,10 +1142,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<MasterSlide>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<MasterSlide>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1188,17 +1159,15 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetMasterSlidesList");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/masterSlides");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<MasterSlides>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<MasterSlides>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1213,7 +1182,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlide");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1221,10 +1189,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<NotesSlide>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<NotesSlide>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1239,7 +1206,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideExists");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/exist");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1247,10 +1213,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<EntityExists>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<EntityExists>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1265,7 +1230,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShape");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1274,10 +1238,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<ShapeBase>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1292,7 +1255,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapeParagraph");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1302,10 +1264,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Paragraph>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1320,7 +1281,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapeParagraphs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1329,10 +1289,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Paragraphs>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1347,7 +1306,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapePortion");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1358,10 +1316,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Portion>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1376,7 +1333,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapePortions");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1386,10 +1342,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Portions>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1404,7 +1359,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapes");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1412,10 +1366,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Shapes>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1430,13 +1383,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideWithFormat");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling GetNotesSlideWithFormat");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1448,10 +1399,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "GET", null, null, files, contentType);
+            return InvokeBinaryApi(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1466,7 +1416,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetParagraphPortion");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1477,10 +1426,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Portion>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1495,7 +1443,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetParagraphPortions");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1505,10 +1452,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Portions>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1523,7 +1469,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideAnimation");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1532,10 +1477,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1550,7 +1494,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideShape");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1559,10 +1502,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<ShapeBase>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1577,7 +1519,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideShapeParagraph");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1587,10 +1528,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Paragraph>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1605,7 +1545,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideShapeParagraphs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1614,10 +1553,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Paragraphs>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1632,7 +1570,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideShapes");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1640,10 +1577,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Shapes>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1658,7 +1594,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideSubshape");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1668,10 +1603,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<ShapeBase>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1686,7 +1620,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideSubshapeParagraph");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1697,10 +1630,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Paragraph>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1715,7 +1647,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideSubshapeParagraphs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1725,10 +1656,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Paragraphs>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1743,7 +1673,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideSubshapes");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1752,10 +1681,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Shapes>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1763,14 +1691,12 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="request">Request. <see cref="GetSlidesApiInfoRequest" /></param> 
         /// <returns><see cref="ApiInfo"/></returns>            
-        public ApiInfo GetSlidesApiInfo(GetSlidesApiInfoRequest request)
+        public ApiInfo GetSlidesApiInfo()
         {
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/info");
-            string contentType = "application/json";
             var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeApi<ApiInfo>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<ApiInfo>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1785,17 +1711,15 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesDocument");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Document>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1810,17 +1734,15 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesDocumentProperties");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperties>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<DocumentProperties>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1835,13 +1757,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesDocumentProperty");
             }
-
             // verify the required parameter 'propertyName' is set
             if (request.PropertyName == null)
             {
                 throw new ApiException(400, "Missing required parameter 'propertyName' when calling GetSlidesDocumentProperty");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties/{propertyName}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1849,10 +1769,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperty>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<DocumentProperty>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1867,7 +1786,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesImageWithDefaultFormat");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/images/{index}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1875,10 +1793,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "GET", null, null, files, contentType);
+            return InvokeBinaryApi(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1893,13 +1810,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesImageWithFormat");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling GetSlidesImageWithFormat");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/images/{index}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1908,10 +1823,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "GET", null, null, files, contentType);
+            return InvokeBinaryApi(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1926,17 +1840,15 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesImages");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/images");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Images>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Images>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1951,7 +1863,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesPlaceholder");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/placeholders/{placeholderIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1960,10 +1871,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Placeholder>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Placeholder>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -1978,7 +1888,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesPlaceholders");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/placeholders");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -1986,10 +1895,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Placeholders>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Placeholders>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2004,7 +1912,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesPresentationTextItems");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/textItems");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2012,10 +1919,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<TextItems>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<TextItems>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2030,7 +1936,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlide");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2038,10 +1943,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Slide>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Slide>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2056,7 +1960,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlideBackground");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/background");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2064,10 +1967,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideBackground>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<SlideBackground>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2082,7 +1984,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlideComments");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/comments");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2090,10 +1991,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideComments>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<SlideComments>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2108,7 +2008,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlideImages");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/images");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2116,10 +2015,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Images>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Images>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2134,7 +2032,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlideTextItems");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/textItems");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2143,10 +2040,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<TextItems>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<TextItems>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2161,17 +2057,15 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlidesList");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Model.Slides>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2186,7 +2080,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesTheme");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/theme");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2194,10 +2087,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Theme>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Theme>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2212,7 +2104,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesThemeColorScheme");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/theme/colorScheme");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2220,10 +2111,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ColorScheme>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<ColorScheme>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2238,7 +2128,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesThemeFontScheme");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/theme/fontScheme");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2246,10 +2135,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<FontScheme>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<FontScheme>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2264,7 +2152,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesThemeFormatScheme");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/theme/formatScheme");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2272,10 +2159,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<FormatScheme>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<FormatScheme>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2290,17 +2176,15 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesViewProperties");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/viewProperties");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ViewProperties>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<ViewProperties>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2315,7 +2199,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSubshapeParagraphPortion");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2327,10 +2210,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Portion>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2345,7 +2227,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSubshapeParagraphPortions");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2356,10 +2237,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<Portions>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2374,13 +2254,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'srcPath' when calling MoveFile");
             }
-
             // verify the required parameter 'destPath' is set
             if (request.DestPath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'destPath' when calling MoveFile");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/file/move/{srcPath}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "srcPath", request.SrcPath);
@@ -2388,10 +2266,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "srcStorageName", request.SrcStorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destStorageName", request.DestStorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "versionId", request.VersionId);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", null, null, files, contentType);
+            InvokeVoidApi(resourcePath, "PUT", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2406,23 +2283,20 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'srcPath' when calling MoveFolder");
             }
-
             // verify the required parameter 'destPath' is set
             if (request.DestPath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'destPath' when calling MoveFolder");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/folder/move/{srcPath}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "srcPath", request.SrcPath);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destPath", request.DestPath);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "srcStorageName", request.SrcStorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destStorageName", request.DestStorageName);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", null, null, files, contentType);
+            InvokeVoidApi(resourcePath, "PUT", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2437,10 +2311,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "versionId", request.VersionId);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ObjectExist>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<ObjectExist>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2455,7 +2328,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewParagraph");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2465,11 +2337,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2484,7 +2355,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewPortion");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2495,11 +2365,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<Portion>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2514,7 +2383,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewShape");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2524,11 +2392,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", request.ShapeToClone);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2543,7 +2410,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewSubshape");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2554,11 +2420,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", request.ShapeToClone);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2573,7 +2438,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewSubshapeParagraph");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2584,11 +2448,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2603,7 +2466,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewSubshapePortion");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2615,11 +2477,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<Portion>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2634,7 +2495,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNotesSlide");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2642,11 +2502,63 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<NotesSlide>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<NotesSlide>(resourcePath, "POST", postBody, null, files, "application/json");
+        }
+
+        /// <summary>
+        /// Add a new category to a chart. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostChartCategoryRequest" /></param> 
+        /// <returns><see cref="Chart"/></returns>            
+        public Chart PostChartCategory(PostChartCategoryRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostChartCategory");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/categories");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            var postBody = SerializationHelper.Serialize(request.Category); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<Chart>(resourcePath, "POST", postBody, null, files, "application/json");
+        }
+
+        /// <summary>
+        /// Add a new data point to a chart series. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostChartDataPointRequest" /></param> 
+        /// <returns><see cref="Chart"/></returns>            
+        public Chart PostChartDataPoint(PostChartDataPointRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostChartDataPoint");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}/dataPoints");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesIndex", request.SeriesIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            var postBody = SerializationHelper.Serialize(request.DataPoint); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<Chart>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2661,7 +2573,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostChartSeries");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2670,11 +2581,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Series, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Series); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<Chart>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2689,13 +2599,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostCopyLayoutSlideFromSourcePresentation");
             }
-
             // verify the required parameter 'cloneFrom' is set
             if (request.CloneFrom == null)
             {
                 throw new ApiException(400, "Missing required parameter 'cloneFrom' when calling PostCopyLayoutSlideFromSourcePresentation");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/layoutSlides");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2706,10 +2614,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<LayoutSlide>(resourcePath, "POST", null, null, files, contentType);
+            return InvokeApi<LayoutSlide>(resourcePath, "POST", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2724,13 +2631,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostCopyMasterSlideFromSourcePresentation");
             }
-
             // verify the required parameter 'cloneFrom' is set
             if (request.CloneFrom == null)
             {
                 throw new ApiException(400, "Missing required parameter 'cloneFrom' when calling PostCopyMasterSlideFromSourcePresentation");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/masterSlides");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2742,10 +2647,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<MasterSlide>(resourcePath, "POST", null, null, files, contentType);
+            return InvokeApi<MasterSlide>(resourcePath, "POST", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -2759,11 +2663,10 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/slides/{slideIndex}/notesSlide");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
-            string contentType = "application/json";
             var postBody = request.Document;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeStreamApi<NotesSlide>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeStreamApi<NotesSlide>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2777,11 +2680,10 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/slides/{slideIndex}/notesSlide/exist");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
-            string contentType = "application/json";
             var postBody = request.Document;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeStreamApi<EntityExists>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeStreamApi<EntityExists>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2796,7 +2698,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PostGetNotesSlideWithFormat");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/slides/{slideIndex}/notesSlide/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
@@ -2805,11 +2706,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType = "application/json";
             var postBody = request.Document;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryStreamApi(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeBinaryStreamApi(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2824,7 +2724,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostNotesSlideAddNewParagraph");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2834,11 +2733,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2853,7 +2751,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostNotesSlideAddNewPortion");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2864,11 +2761,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<Portion>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2883,7 +2779,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostNotesSlideAddNewShape");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2893,11 +2788,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", request.ShapeToClone);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2912,13 +2806,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostNotesSlideShapeSaveAs");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PostNotesSlideShapeSaveAs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2932,11 +2824,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2951,18 +2842,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostPresentationMerge");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/merge");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Request, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<Document>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -2977,13 +2866,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostShapeSaveAs");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PostShapeSaveAs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -2997,11 +2884,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3016,7 +2902,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlideAnimationEffect");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/mainSequence");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3024,11 +2909,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Effect, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3043,7 +2927,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlideAnimationInteractiveSequence");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3051,11 +2934,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Sequence, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Sequence); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3070,7 +2952,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlideAnimationInteractiveSequenceEffect");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences/{sequenceIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3079,11 +2960,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Effect, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3098,13 +2978,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlideSaveAs");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PostSlideSaveAs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3116,11 +2994,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3135,7 +3012,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesAdd");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3144,10 +3020,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "layoutAlias", request.LayoutAlias);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, contentType);
+            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -3162,17 +3037,15 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PostSlidesConvert");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/convert/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType = "application/json";
             var postBody = request.Document;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryStreamApi(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeBinaryStreamApi(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3187,7 +3060,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesCopy");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/copy");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3199,10 +3071,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, contentType);
+            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -3217,7 +3088,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesDocument");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3225,11 +3095,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            string contentType = "application/json";
             var postBody = request.Data;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeStreamApi<Document>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeStreamApi<Document>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3244,18 +3113,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesDocumentFromHtml");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/fromHtml");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Html, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Html); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<Document>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3270,7 +3137,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesDocumentFromSource");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/fromSource");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3280,10 +3146,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "POST", null, null, files, contentType);
+            return InvokeApi<Document>(resourcePath, "POST", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -3298,13 +3163,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesDocumentFromTemplate");
             }
-
             // verify the required parameter 'templatePath' is set
             if (request.TemplatePath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'templatePath' when calling PostSlidesDocumentFromTemplate");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/fromTemplate");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3315,11 +3178,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Data, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Data); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<Document>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3331,11 +3193,10 @@ namespace Aspose.Slides.Cloud.Sdk
         {
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/pipeline");
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Pipeline, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Pipeline); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3350,19 +3211,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesPresentationReplaceText");
             }
-
             // verify the required parameter 'oldValue' is set
             if (request.OldValue == null)
             {
                 throw new ApiException(400, "Missing required parameter 'oldValue' when calling PostSlidesPresentationReplaceText");
             }
-
             // verify the required parameter 'newValue' is set
             if (request.NewValue == null)
             {
                 throw new ApiException(400, "Missing required parameter 'newValue' when calling PostSlidesPresentationReplaceText");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/replaceText");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3372,10 +3230,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentReplaceResult>(resourcePath, "POST", null, null, files, contentType);
+            return InvokeApi<DocumentReplaceResult>(resourcePath, "POST", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -3390,7 +3247,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesReorder");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/move");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3399,10 +3255,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, contentType);
+            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -3417,7 +3272,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesReorderMany");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/reorder");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3426,10 +3280,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, contentType);
+            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -3444,13 +3297,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesSaveAs");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PostSlidesSaveAs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3459,11 +3310,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3478,18 +3328,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesSetDocumentProperties");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Properties, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Properties); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperties>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<DocumentProperties>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3504,19 +3352,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesSlideReplaceText");
             }
-
             // verify the required parameter 'oldValue' is set
             if (request.OldValue == null)
             {
                 throw new ApiException(400, "Missing required parameter 'oldValue' when calling PostSlidesSlideReplaceText");
             }
-
             // verify the required parameter 'newValue' is set
             if (request.NewValue == null)
             {
                 throw new ApiException(400, "Missing required parameter 'newValue' when calling PostSlidesSlideReplaceText");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/replaceText");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3527,10 +3372,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideReplaceResult>(resourcePath, "POST", null, null, files, contentType);
+            return InvokeApi<SlideReplaceResult>(resourcePath, "POST", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -3545,7 +3389,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesSplit");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/split");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3559,11 +3402,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SplitDocumentResult>(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeApi<SplitDocumentResult>(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3578,13 +3420,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSubshapeSaveAs");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PostSubshapeSaveAs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3599,11 +3439,65 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, contentType);
+            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
+        }
+
+        /// <summary>
+        /// Update a chart category. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PutChartCategoryRequest" /></param> 
+        /// <returns><see cref="Chart"/></returns>            
+        public Chart PutChartCategory(PutChartCategoryRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PutChartCategory");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/categories/{categoryIndex}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "categoryIndex", request.CategoryIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            var postBody = SerializationHelper.Serialize(request.Category); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<Chart>(resourcePath, "PUT", postBody, null, files, "application/json");
+        }
+
+        /// <summary>
+        /// Update a data point in a chart series. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PutChartDataPointRequest" /></param> 
+        /// <returns><see cref="Chart"/></returns>            
+        public Chart PutChartDataPoint(PutChartDataPointRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PutChartDataPoint");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}/dataPoints/{pointIndex}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesIndex", request.SeriesIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "pointIndex", request.PointIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            var postBody = SerializationHelper.Serialize(request.DataPoint); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<Chart>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3618,7 +3512,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutChartSeries");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3628,11 +3521,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Series, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Series); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<Chart>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3647,7 +3539,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutLayoutSlide");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/layoutSlides/{slideIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3655,11 +3546,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.SlideDto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.SlideDto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<LayoutSlide>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<LayoutSlide>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3674,19 +3564,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutNotesSlideShapeSaveAs");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PutNotesSlideShapeSaveAs");
             }
-
             // verify the required parameter 'outPath' is set
             if (request.OutPath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'outPath' when calling PutNotesSlideShapeSaveAs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3701,11 +3588,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, contentType);
+            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3720,18 +3606,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutPresentationMerge");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/merge");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Request, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<Document>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3746,7 +3630,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSetParagraphPortionProperties");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3757,11 +3640,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<Portion>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3776,7 +3658,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSetParagraphProperties");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3786,11 +3667,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3805,7 +3685,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSetSubshapeParagraphPortionProperties");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3817,11 +3696,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<Portion>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3836,7 +3714,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSetSubshapeParagraphProperties");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3847,11 +3724,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3866,19 +3742,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutShapeSaveAs");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PutShapeSaveAs");
             }
-
             // verify the required parameter 'outPath' is set
             if (request.OutPath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'outPath' when calling PutShapeSaveAs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3893,11 +3766,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, contentType);
+            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3912,7 +3784,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlideAnimation");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3920,11 +3791,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Animation, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Animation); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3939,7 +3809,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlideAnimationEffect");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/mainSequence/{effectIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3948,11 +3817,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Effect, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3967,7 +3835,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlideAnimationInteractiveSequenceEffect");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences/{sequenceIndex}/{effectIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -3977,11 +3844,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Effect, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -3996,19 +3862,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlideSaveAs");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PutSlideSaveAs");
             }
-
             // verify the required parameter 'outPath' is set
             if (request.OutPath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'outPath' when calling PutSlideSaveAs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4021,11 +3884,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, contentType);
+            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4040,7 +3902,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlideShapeInfo");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4049,11 +3910,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4068,7 +3928,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlideSubshapeInfo");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4078,11 +3937,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4097,24 +3955,21 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PutSlidesConvert");
             }
-
             // verify the required parameter 'outPath' is set
             if (request.OutPath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'outPath' when calling PutSlidesConvert");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/convert/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType = "application/json";
             var postBody = request.Document;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidStreamApi(resourcePath, "PUT", postBody, null, files, contentType);
+            InvokeVoidStreamApi(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4129,18 +3984,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesDocumentFromHtml");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/fromHtml");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Html, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Html); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<Document>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4155,19 +4008,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSaveAs");
             }
-
             // verify the required parameter 'outPath' is set
             if (request.OutPath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'outPath' when calling PutSlidesSaveAs");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PutSlidesSaveAs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4177,11 +4027,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, contentType);
+            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4196,13 +4045,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSetDocumentProperty");
             }
-
             // verify the required parameter 'propertyName' is set
             if (request.PropertyName == null)
             {
                 throw new ApiException(400, "Missing required parameter 'propertyName' when calling PutSlidesSetDocumentProperty");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties/{propertyName}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4210,11 +4057,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Property, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Property); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperty>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<DocumentProperty>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4229,7 +4075,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSlide");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4237,11 +4082,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.SlideDto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.SlideDto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Slide>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<Slide>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4256,7 +4100,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSlideBackground");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/background");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4264,11 +4107,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Background, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Background); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideBackground>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<SlideBackground>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4283,13 +4125,11 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSlideBackgroundColor");
             }
-
             // verify the required parameter 'color' is set
             if (request.Color == null)
             {
                 throw new ApiException(400, "Missing required parameter 'color' when calling PutSlidesSlideBackgroundColor");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/backgroundColor");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4298,10 +4138,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideBackground>(resourcePath, "PUT", null, null, files, contentType);
+            return InvokeApi<SlideBackground>(resourcePath, "PUT", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -4316,7 +4155,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSlideSize");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slideSize");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4327,10 +4165,9 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sizeType", request.SizeType);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleType", request.ScaleType);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "PUT", null, null, files, contentType);
+            return InvokeApi<Document>(resourcePath, "PUT", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -4345,18 +4182,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesViewProperties");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/viewProperties");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ViewProperties>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<ViewProperties>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4371,19 +4206,16 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSubshapeSaveAs");
             }
-
             // verify the required parameter 'format' is set
             if (request.Format == null)
             {
                 throw new ApiException(400, "Missing required parameter 'format' when calling PutSubshapeSaveAs");
             }
-
             // verify the required parameter 'outPath' is set
             if (request.OutPath == null)
             {
                 throw new ApiException(400, "Missing required parameter 'outPath' when calling PutSubshapeSaveAs");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/{format}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4399,11 +4231,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Options, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, contentType);
+            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4418,7 +4249,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlide");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4426,11 +4256,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<NotesSlide>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<NotesSlide>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4445,7 +4274,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlideShape");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4454,11 +4282,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4473,7 +4300,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlideShapeParagraph");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4483,11 +4309,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4502,7 +4327,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutUpdateNotesSlideShapePortion");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
@@ -4513,11 +4337,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
-            string contentType;
-            var postBody = SerializationHelper.Serialize(request.Dto, out contentType); // http body (model) parameter
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "PUT", postBody, null, files, contentType);
+            return InvokeApi<Portion>(resourcePath, "PUT", postBody, null, files, "application/json");
         }
 
         /// <summary>
@@ -4532,14 +4355,12 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'storageName' when calling StorageExists");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/{storageName}/exist");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "storageName", request.StorageName);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<StorageExist>(resourcePath, "GET", null, null, files, contentType);
+            return InvokeApi<StorageExist>(resourcePath, "GET", null, null, files, "application/json");
         }
 
         /// <summary>
@@ -4554,20 +4375,18 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 throw new ApiException(400, "Missing required parameter 'file' when calling UploadFile");
             }
-
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/file/{path}");
             var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
-            string contentType = "application/json";
             var files = new List<FileInfo>();
             PickFiles(files, request);
             if (request.File != null) 
             {
                 AddFileParameter(files, request.File, "file");
             }
-            return InvokeApi<FilesUploadResult>(resourcePath, "PUT", null, null, files, contentType);
+            return InvokeApi<FilesUploadResult>(resourcePath, "PUT", null, null, files, "application/json");
         }
     }
 }

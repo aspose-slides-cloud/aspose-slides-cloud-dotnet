@@ -318,6 +318,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PdfExportOptions {\n");
+            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  TextCompression: ").Append(this.TextCompression).Append("\n");
             sb.Append("  EmbedFullFonts: ").Append(this.EmbedFullFonts).Append("\n");

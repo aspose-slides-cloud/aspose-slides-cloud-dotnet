@@ -131,11 +131,23 @@ namespace Aspose.Slides.Cloud.Sdk
         {
             try
             {
-                 return JsonConvert.DeserializeObject(json, type, ModelConverter.Instance);
+                return JsonConvert.DeserializeObject(json, type, ModelConverter.Instance);
             }
-            catch (Exception e)
+            catch
             {
-                throw new ApiException(500, e.Message);
+                if (type == typeof(ExceptionInfo))
+                {
+                    try
+                    {
+                        ErrorInfo error = (ErrorInfo)JsonConvert.DeserializeObject(json, typeof(ErrorInfo), ModelConverter.Instance);
+                        return new ExceptionInfo { Message = error.Error };
+                    }
+                    catch
+                    {
+                        throw new ApiException(400, json);
+                    }
+                }
+                throw new ApiException(400, json);
             }
         }
 

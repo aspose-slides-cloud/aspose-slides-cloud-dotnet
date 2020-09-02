@@ -37,7 +37,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     /// <summary>
     /// One value chart data point.
     /// </summary>  
-    public class OneValueChartDataPoint 
+    public class OneValueChartDataPoint : DataPoint 
     {                       
         /// <summary>
         /// Value.

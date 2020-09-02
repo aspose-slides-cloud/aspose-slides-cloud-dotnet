@@ -37,7 +37,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     /// <summary>
     /// Scatter chart (two-dimensional) data point
     /// </summary>  
-    public class ScatterChartDataPoint 
+    public class ScatterChartDataPoint : DataPoint 
     {                       
         /// <summary>
         /// X-value

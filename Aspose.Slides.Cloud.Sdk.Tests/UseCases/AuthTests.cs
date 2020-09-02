@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="OAuthRequestHandler.cs">
+// <copyright company="Aspose" file="PipelineTests.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,43 +23,62 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-using System.Net;
-#if !NETFRAMEWORK
-using System.Reflection;
-#endif
+using Aspose.Slides.Cloud.Sdk.Tests.Utils;
+using NUnit.Framework;
 
-namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
+namespace Aspose.Slides.Cloud.Sdk.Tests
 {
-    internal class HeadersRequestHandler : IRequestHandler
-    {        
-        public HeadersRequestHandler(Configuration configuration)
+    /// <summary>
+    ///  Class for testing Timeout config parameter
+    /// </summary>
+    [TestFixture]
+    public class AuthTests
+    {
+        /// <summary>
+        /// Clean up after each unit test
+        /// </summary>
+        [TearDown]
+        public void Cleanup()
         {
-            m_configuration = configuration;
         }
 
-        public void BeforeSend(WebRequest request, Stream streamToSend)
+        [Test]
+        public void GoodCredentials()
         {
-#if NETFRAMEWORK
-            var sdkVersion = GetType().Assembly.GetName().Version;
-#else
-            var sdkVersion = GetType().GetTypeInfo().Assembly.GetName().Version;
-#endif
-            request.Headers["x-aspose-client"] = string.Format(".net sdk v{0}.{1}", sdkVersion.Major, sdkVersion.Minor);
-            if (m_configuration.Timeout > 0)
+            new SlidesApi(TestUtils.Configuration).GetSlidesApiInfo();
+        }
+
+        [Test]
+        public void BadCredentials()
+        {
+            Configuration config = TestUtils.GetConfiguration();
+            config.AppSid = "invalid";
+            try
             {
-                request.Headers["x-aspose-timeout"] = m_configuration.Timeout.ToString();
+                new SlidesApi(config).GetSlidesApiInfo();
+                Assert.Fail("Must have failed");
             }
-            foreach (string key in m_configuration.CustomHeaders.Keys)
+            catch (ApiException ex)
             {
-                request.Headers[key] = m_configuration.CustomHeaders[key];
+                Assert.AreEqual(401, ex.ErrorCode);
             }
         }
 
-        public void ProcessResponse(HttpWebResponse response, Stream resultStream)
+        [Test]
+        public void GoodAuthToken()
         {
+            Configuration config = TestUtils.GetConfiguration();
+            new SlidesApi(config).GetSlidesApiInfo();
+            config.AppSid = "invalid";
+            new SlidesApi(config).GetSlidesApiInfo();
         }
 
-        private readonly Configuration m_configuration;
+        [Test]
+        public void BadAuthToken()
+        {
+            Configuration config = TestUtils.GetConfiguration();
+            config.AuthToken = "invalid";
+            new SlidesApi(config).GetSlidesApiInfo();
+        }
     }
 }

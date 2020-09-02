@@ -10,6 +10,10 @@ This repository contains Aspose.Slides Cloud SDK for .NET source code. This SDK 
 * Full read & write access to Document Object Model, including slides, shapes, paragraphs, portions and many others
 * Support of Aspose.Storage API
 
+### New Features & Recent API Changes (20.8)
+* New PostChartCategory, PutChartCategory, DeleteChartCategory, PostChartDataPoint, PutChartDataPoint, DeleteChartDataPoint methods to add, update and delete categories & data points. Also, DataPoints property was added to ChartCategory class
+* New DefaultRegularFont property in ExportOptions class
+
 ## Licensing
 All Aspose.Slides Cloud SDKs are licensed under MIT License.
 

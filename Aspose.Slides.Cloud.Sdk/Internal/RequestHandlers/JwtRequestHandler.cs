@@ -36,7 +36,7 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
         public JwtRequestHandler(Configuration configuration)
         {
             m_configuration = configuration;
-
+            m_configuration.AuthToken = configuration.AuthToken;
             var requestHandlers = new List<IRequestHandler>();
             requestHandlers.Add(new DebugLogRequestHandler(m_configuration));
             requestHandlers.Add(new ApiExceptionRequestHandler());
@@ -45,20 +45,43 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
 
         public void BeforeSend(WebRequest request, Stream streamToSend)
         {
-            if (string.IsNullOrEmpty(m_accessToken))
+            if (string.IsNullOrEmpty(m_configuration.AuthToken))
             {
                 RequestToken();
             }
-            request.Headers["Authorization"] = "Bearer " + m_accessToken;
+            request.Headers["Authorization"] = "Bearer " + m_configuration.AuthToken;
         }       
 
         public void ProcessResponse(HttpWebResponse response, Stream resultStream)
         {
-            if (response.StatusCode == HttpStatusCode.Unauthorized)
+            if (IsAuthIssue(response, resultStream))
             {
                 RequestToken();
                 throw new NeedRepeatRequestException();
             }
+        }
+
+        private bool IsAuthIssue(HttpWebResponse response, Stream resultStream)
+        {
+            if (response.StatusCode == HttpStatusCode.Unauthorized)
+            {
+                return true;
+            }
+            if (response.StatusCode == HttpStatusCode.BadRequest)
+            {
+                resultStream.Position = 0;
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    StreamHelper.CopyTo(resultStream, memoryStream);
+                    memoryStream.Position = 0;
+                    using (StreamReader responseReader = new StreamReader(memoryStream))
+                    {
+                        string responseString = responseReader.ReadToEnd();
+                        return responseString.Contains(" Authority");
+                    }
+                };
+            }
+            return false;
         }
 
         private void RequestToken()
@@ -68,9 +91,20 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
                 + "&client_secret="
                 + m_configuration.AppKey;
             string requestUrl = m_configuration.AuthBaseUrl + "/connect/token";
-            GetAccessTokenResult result = (GetAccessTokenResult)m_apiInvoker.InvokeApi(
-                requestUrl, "POST", postData, null, null, "application/x-www-form-urlencoded", typeof(GetAccessTokenResult));
-            m_accessToken = result.AccessToken;
+            try
+            {
+                GetAccessTokenResult result = (GetAccessTokenResult)m_apiInvoker.InvokeApi(
+                    requestUrl, "POST", postData, null, null, "application/x-www-form-urlencoded", typeof(GetAccessTokenResult));
+                m_configuration.AuthToken = result.AccessToken;
+            }
+            catch (ApiException ex)
+            {
+                if (ex.ErrorCode == 400)
+                {
+                    throw new ApiException(401, ex.Message);
+                }
+                throw;
+            }
         }
 
         private class GetAccessTokenResult
@@ -81,7 +115,5 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
 
         private readonly Configuration m_configuration;
         private readonly StringApiInvoker m_apiInvoker;
-
-        private string m_accessToken;
     }
 }

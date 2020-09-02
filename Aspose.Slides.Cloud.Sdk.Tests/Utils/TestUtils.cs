@@ -35,23 +35,20 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
     {
         public static SlidesApi SlidesApi { get { return s_slidesApi ?? (s_slidesApi = new SlidesApi(Configuration)); } }
 
-        public static Configuration Configuration
-        {
-            get
-            {
+        public static Configuration Configuration { get { return s_configuration ?? (s_configuration = GetConfiguration()); } }
 
-                return s_configuration
-                    ?? (s_configuration = new Configuration
-                    {
-                        DebugMode = GetBoolConfigValue("DebugMode", true),
-                        ApiBaseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"] ?? "https://api-qa.aspose.cloud",
-                        AuthBaseUrl = ConfigurationManager.AppSettings["AuthBaseUrl"]
-                            ?? ConfigurationManager.AppSettings["ApiBaseUrl"]
-                            ?? "https://api-qa.aspose.cloud",
-                        AppSid = ConfigurationManager.AppSettings["AppSid"],
-                        AppKey = ConfigurationManager.AppSettings["AppKey"]
-                    });
-            }
+        public static Configuration GetConfiguration()
+        {
+            return new Configuration
+            {
+                DebugMode = GetBoolConfigValue("DebugMode", true),
+                ApiBaseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"] ?? "https://api-qa.aspose.cloud",
+                AuthBaseUrl = ConfigurationManager.AppSettings["AuthBaseUrl"]
+                    ?? ConfigurationManager.AppSettings["ApiBaseUrl"]
+                    ?? "https://api-qa.aspose.cloud",
+                AppSid = ConfigurationManager.AppSettings["AppSid"],
+                AppKey = ConfigurationManager.AppSettings["AppKey"]
+            };
         }
 
         public static void Init()

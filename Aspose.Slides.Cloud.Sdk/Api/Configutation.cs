@@ -66,6 +66,11 @@ namespace Aspose.Slides.Cloud.Sdk
         public string AppSid { get; set; }
 
         /// <summary>
+        /// Gets or sets the auth token.
+        /// </summary>
+        public string AuthToken { get; set; }
+
+        /// <summary>
         /// Gets or sets slides operaion timeout in second. 0 stands for no timeout.
         /// The timeout applies to the Slides operation, not to the HTTP request.
         /// </summary>
