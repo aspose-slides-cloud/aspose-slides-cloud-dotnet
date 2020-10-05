@@ -51,7 +51,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="folder">Document folder.</param>
         /// <param name="password">Document password.</param>
         /// <param name="storage">Document storage.</param>
-        public PutSlidesSlideBackgroundRequest(string name, int slideIndex, SlideBackground background = null, string folder = null, string password = null, string storage = null)
+        public PutSlidesSlideBackgroundRequest(string name, int slideIndex, SlideBackground background, string folder = null, string password = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;

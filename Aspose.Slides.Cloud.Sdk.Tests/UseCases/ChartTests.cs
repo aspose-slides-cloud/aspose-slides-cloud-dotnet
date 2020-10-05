@@ -389,6 +389,51 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsNull(((OneValueSeries)chart.Series[c_seriesIndex - 1]).DataPoints[c_categoryIndex - 1]);
         }
 
+        [Test]
+        public void SunburstChart()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            PostAddNewShapeRequest request = new PostAddNewShapeRequest
+            {
+                Name = c_fileName,
+                Folder = c_folderName,
+                Password = c_password,
+                SlideIndex = c_slideIndex,
+                Dto = new Chart
+                {
+                    ChartType = Chart.ChartTypeEnum.Sunburst,
+                    Width = 400,
+                    Height = 300,
+                    Categories = new List<ChartCategory>
+                    {
+                        new ChartCategory { Value = "Leaf1", Level = 3, ParentCategories = new List<string> { "Branch1", "Stem1" } },
+                        new ChartCategory { Value = "Leaf2", Level = 3, ParentCategories = new List<string> { "Branch1", "Stem1" } },
+                        new ChartCategory { Value = "Branch2", Level = 2, ParentCategories = new List<string> { "Stem1" } },
+                        new ChartCategory { Value = "Stem2", Level = 1 }
+                    },
+                    Series = new List<Series>
+                    {
+                        new OneValueSeries
+                        {
+                            Name = "Series1",
+                            DataPoints = new List<OneValueChartDataPoint>
+                            {
+                                new OneValueChartDataPoint { Value = 40 },
+                                new OneValueChartDataPoint { Value = 50 },
+                                new OneValueChartDataPoint { Value = 70 },
+                                new OneValueChartDataPoint { Value = 80 }
+                            }
+                        }
+                    }
+                }
+            };
+            Chart chart = TestUtils.SlidesApi.PostAddNewShape(request) as Chart;
+            Assert.IsNotNull(chart);
+            Assert.AreEqual(1, chart.Series.Count);
+            Assert.AreEqual(4, chart.Categories.Count);
+            Assert.AreEqual(3, chart.Categories[0].Level.Value);
+        }
+
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "ChartTest.pptx";
         const string c_password = "password";

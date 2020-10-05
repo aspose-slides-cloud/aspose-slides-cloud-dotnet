@@ -39,11 +39,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     /// </summary>  
     public class IShapeExportOptions 
     {                       
-        /// <summary>
-        /// Export format.
-        /// </summary>
-        public string Format { get; set; }
-
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -76,7 +71,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IShapeExportOptions {\n");
-            sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

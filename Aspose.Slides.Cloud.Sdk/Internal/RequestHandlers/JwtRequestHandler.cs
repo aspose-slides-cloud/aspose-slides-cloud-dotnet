@@ -54,34 +54,12 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
 
         public void ProcessResponse(HttpWebResponse response, Stream resultStream)
         {
-            if (IsAuthIssue(response, resultStream))
+            if (response.StatusCode == HttpStatusCode.Unauthorized
+                || (response.StatusCode == HttpStatusCode.InternalServerError && response.ContentLength == 0))
             {
                 RequestToken();
                 throw new NeedRepeatRequestException();
             }
-        }
-
-        private bool IsAuthIssue(HttpWebResponse response, Stream resultStream)
-        {
-            if (response.StatusCode == HttpStatusCode.Unauthorized)
-            {
-                return true;
-            }
-            if (response.StatusCode == HttpStatusCode.BadRequest)
-            {
-                resultStream.Position = 0;
-                using (MemoryStream memoryStream = new MemoryStream())
-                {
-                    StreamHelper.CopyTo(resultStream, memoryStream);
-                    memoryStream.Position = 0;
-                    using (StreamReader responseReader = new StreamReader(memoryStream))
-                    {
-                        string responseString = responseReader.ReadToEnd();
-                        return responseString.Contains(" Authority");
-                    }
-                };
-            }
-            return false;
         }
 
         private void RequestToken()

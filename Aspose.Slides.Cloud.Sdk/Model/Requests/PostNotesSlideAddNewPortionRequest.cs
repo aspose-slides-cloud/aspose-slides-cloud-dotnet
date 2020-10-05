@@ -54,7 +54,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
         /// <param name="position">Position of the new portion in the list. Default is at the end of the list.</param>
-        public PostNotesSlideAddNewPortionRequest(string name, int slideIndex, int shapeIndex, int paragraphIndex, Portion dto = null, string password = null, string folder = null, string storage = null, int? position = null)
+        public PostNotesSlideAddNewPortionRequest(string name, int slideIndex, int shapeIndex, int paragraphIndex, Portion dto, string password = null, string folder = null, string storage = null, int? position = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;

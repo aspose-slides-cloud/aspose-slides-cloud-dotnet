@@ -45,23 +45,28 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostGetNotesSlideWithFormatRequest"/> class.
         /// </summary>
+        /// <param name="document">Document data.</param>
         /// <param name="slideIndex">Slide index.</param>
         /// <param name="format">Output file format.</param>
-        /// <param name="document">Document data.</param>
         /// <param name="width">Output file width.</param>
         /// <param name="height">Output file height.</param>
         /// <param name="password">Document password.</param>
         /// <param name="fontsFolder">Storage folder containing custom fonts to be used with the document.</param>
-        public PostGetNotesSlideWithFormatRequest(int slideIndex, NotesSlideExportFormat format, System.IO.Stream document = null, int? width = null, int? height = null, string password = null, string fontsFolder = null)
+        public PostGetNotesSlideWithFormatRequest(System.IO.Stream document, int slideIndex, NotesSlideExportFormat format, int? width = null, int? height = null, string password = null, string fontsFolder = null)
         {
+            this.Document = document;
             this.SlideIndex = slideIndex;
             this.Format = format;
-            this.Document = document;
             this.Width = width;
             this.Height = height;
             this.Password = password;
             this.FontsFolder = fontsFolder;
         }
+
+        /// <summary>
+        /// Document data.
+        /// </summary>  
+        public System.IO.Stream Document { get; set; }
 
         /// <summary>
         /// Slide index.
@@ -72,11 +77,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Output file format.
         /// </summary>  
         public NotesSlideExportFormat Format { get; set; }
-
-        /// <summary>
-        /// Document data.
-        /// </summary>  
-        public System.IO.Stream Document { get; set; }
 
         /// <summary>
         /// Output file width.

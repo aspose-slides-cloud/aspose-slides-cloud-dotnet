@@ -52,7 +52,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PostSlideAnimationInteractiveSequenceEffectRequest(string name, int slideIndex, int sequenceIndex, Effect effect = null, string password = null, string folder = null, string storage = null)
+        public PostSlideAnimationInteractiveSequenceEffectRequest(string name, int slideIndex, int sequenceIndex, Effect effect, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;

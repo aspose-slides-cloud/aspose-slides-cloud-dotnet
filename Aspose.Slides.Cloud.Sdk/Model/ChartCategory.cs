@@ -40,9 +40,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class ChartCategory 
     {                       
         /// <summary>
-        /// Gets or sets the categories for chart data
+        /// Gets or sets the parent categories. Used with Sunburst &amp; treemap categories; ignored for other chart types.
         /// </summary>
-        public List<ChartCategory> Categories { get; set; }
+        public List<string> ParentCategories { get; set; }
+
+        /// <summary>
+        /// Gets or sets the grouping level for the category. Used with Sunburst &amp; treemap categories; ignored for other chart types.
+        /// </summary>
+        public int? Level { get; set; }
 
         /// <summary>
         /// Category value
@@ -101,7 +106,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ChartCategory {\n");
-            sb.Append("  Categories: ").Append(this.Categories).Append("\n");
+            sb.Append("  ParentCategories: ").Append(this.ParentCategories).Append("\n");
+            sb.Append("  Level: ").Append(this.Level).Append("\n");
             sb.Append("  Value: ").Append(this.Value).Append("\n");
             sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");

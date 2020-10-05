@@ -45,27 +45,27 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostSlidesConvertRequest"/> class.
         /// </summary>
-        /// <param name="format">Export format.</param>
         /// <param name="document">Document data.</param>
+        /// <param name="format">Export format.</param>
         /// <param name="password">Document password.</param>
         /// <param name="fontsFolder">Custom fonts folder.</param>
-        public PostSlidesConvertRequest(ExportFormat format, System.IO.Stream document = null, string password = null, string fontsFolder = null)
+        public PostSlidesConvertRequest(System.IO.Stream document, ExportFormat format, string password = null, string fontsFolder = null)
         {
-            this.Format = format;
             this.Document = document;
+            this.Format = format;
             this.Password = password;
             this.FontsFolder = fontsFolder;
         }
 
         /// <summary>
-        /// Export format.
-        /// </summary>  
-        public ExportFormat Format { get; set; }
-
-        /// <summary>
         /// Document data.
         /// </summary>  
         public System.IO.Stream Document { get; set; }
+
+        /// <summary>
+        /// Export format.
+        /// </summary>  
+        public ExportFormat Format { get; set; }
 
         /// <summary>
         /// Document password.

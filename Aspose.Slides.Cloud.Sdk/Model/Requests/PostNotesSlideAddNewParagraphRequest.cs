@@ -53,7 +53,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
         /// <param name="position">Position of the new paragraph in the list. Default is at the end of the list.</param>
-        public PostNotesSlideAddNewParagraphRequest(string name, int slideIndex, int shapeIndex, Paragraph dto = null, string password = null, string folder = null, string storage = null, int? position = null)
+        public PostNotesSlideAddNewParagraphRequest(string name, int slideIndex, int shapeIndex, Paragraph dto, string password = null, string folder = null, string storage = null, int? position = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;

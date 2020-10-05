@@ -52,7 +52,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PutUpdateNotesSlideShapeRequest(string name, int slideIndex, int shapeIndex, ShapeBase dto = null, string password = null, string folder = null, string storage = null)
+        public PutUpdateNotesSlideShapeRequest(string name, int slideIndex, int shapeIndex, ShapeBase dto, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;

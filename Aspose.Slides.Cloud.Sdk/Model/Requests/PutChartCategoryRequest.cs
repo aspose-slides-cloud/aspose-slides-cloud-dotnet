@@ -53,7 +53,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PutChartCategoryRequest(string name, int slideIndex, int shapeIndex, int categoryIndex, ChartCategory category = null, string password = null, string folder = null, string storage = null)
+        public PutChartCategoryRequest(string name, int slideIndex, int shapeIndex, int categoryIndex, ChartCategory category, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;

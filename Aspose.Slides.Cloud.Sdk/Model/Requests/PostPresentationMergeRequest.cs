@@ -50,7 +50,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="password">Document password.</param>
         /// <param name="storage">Document storage.</param>
         /// <param name="folder">Document folder.</param>
-        public PostPresentationMergeRequest(string name, PresentationsMergeRequest request = null, string password = null, string storage = null, string folder = null)
+        public PostPresentationMergeRequest(string name, PresentationsMergeRequest request, string password = null, string storage = null, string folder = null)
         {
             this.Name = name;
             this.Request = request;

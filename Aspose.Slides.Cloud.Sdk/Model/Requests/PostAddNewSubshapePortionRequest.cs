@@ -49,20 +49,20 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="slideIndex">Slide index.</param>
         /// <param name="shapeIndex">Shape index.</param>
         /// <param name="paragraphIndex">Paragraph index.</param>
-        /// <param name="path">Shape path.</param>
         /// <param name="dto">Portion DTO.</param>
+        /// <param name="path">Shape path.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
         /// <param name="position">Position of the new portion in the list. Default is at the end of the list.</param>
-        public PostAddNewSubshapePortionRequest(string name, int slideIndex, int shapeIndex, int paragraphIndex, string path = null, Portion dto = null, string password = null, string folder = null, string storage = null, int? position = null)
+        public PostAddNewSubshapePortionRequest(string name, int slideIndex, int shapeIndex, int paragraphIndex, Portion dto, string path = null, string password = null, string folder = null, string storage = null, int? position = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.ShapeIndex = shapeIndex;
             this.ParagraphIndex = paragraphIndex;
-            this.Path = path;
             this.Dto = dto;
+            this.Path = path;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
@@ -90,14 +90,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int ParagraphIndex { get; set; }
 
         /// <summary>
-        /// Shape path.
-        /// </summary>  
-        public string Path { get; set; }
-
-        /// <summary>
         /// Portion DTO.
         /// </summary>  
         public Portion Dto { get; set; }
+
+        /// <summary>
+        /// Shape path.
+        /// </summary>  
+        public string Path { get; set; }
 
         /// <summary>
         /// Document password.

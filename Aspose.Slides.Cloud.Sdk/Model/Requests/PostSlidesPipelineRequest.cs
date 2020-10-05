@@ -46,7 +46,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Initializes a new instance of the <see cref="PostSlidesPipelineRequest"/> class.
         /// </summary>
         /// <param name="pipeline">A Pipeline object.</param>
-        public PostSlidesPipelineRequest(Pipeline pipeline = null)
+        public PostSlidesPipelineRequest(Pipeline pipeline)
         {
             this.Pipeline = pipeline;
         }

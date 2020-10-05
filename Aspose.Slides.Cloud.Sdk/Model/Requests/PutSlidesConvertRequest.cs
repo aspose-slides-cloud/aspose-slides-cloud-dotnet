@@ -45,19 +45,24 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PutSlidesConvertRequest"/> class.
         /// </summary>
+        /// <param name="document">Document data.</param>
         /// <param name="format">Export format.</param>
         /// <param name="outPath">Path to save result.</param>
-        /// <param name="document">Document data.</param>
         /// <param name="password">Document password.</param>
         /// <param name="fontsFolder">Custom fonts folder.</param>
-        public PutSlidesConvertRequest(ExportFormat format, string outPath, System.IO.Stream document = null, string password = null, string fontsFolder = null)
+        public PutSlidesConvertRequest(System.IO.Stream document, ExportFormat format, string outPath, string password = null, string fontsFolder = null)
         {
+            this.Document = document;
             this.Format = format;
             this.OutPath = outPath;
-            this.Document = document;
             this.Password = password;
             this.FontsFolder = fontsFolder;
         }
+
+        /// <summary>
+        /// Document data.
+        /// </summary>  
+        public System.IO.Stream Document { get; set; }
 
         /// <summary>
         /// Export format.
@@ -68,11 +73,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Path to save result.
         /// </summary>  
         public string OutPath { get; set; }
-
-        /// <summary>
-        /// Document data.
-        /// </summary>  
-        public System.IO.Stream Document { get; set; }
 
         /// <summary>
         /// Document password.

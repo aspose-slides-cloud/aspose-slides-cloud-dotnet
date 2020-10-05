@@ -3251,6 +3251,336 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test DeleteSection
+        /// </summary>
+        [Test]
+        public void DeleteSection()
+        {
+            TestExecutor<DeleteSectionRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionRequest, Sections>("DeleteSection", null);
+            DeleteSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionInvalidName()
+        {
+            TestExecutor<DeleteSectionRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionRequest, Sections>("DeleteSection", "Name");
+            DeleteSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionInvalidSectionIndex()
+        {
+            TestExecutor<DeleteSectionRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionRequest, Sections>("DeleteSection", "SectionIndex");
+            DeleteSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionInvalidWithSlides()
+        {
+            TestExecutor<DeleteSectionRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionRequest, Sections>("DeleteSection", "WithSlides");
+            DeleteSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionInvalidPassword()
+        {
+            TestExecutor<DeleteSectionRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionRequest, Sections>("DeleteSection", "Password");
+            DeleteSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionInvalidFolder()
+        {
+            TestExecutor<DeleteSectionRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionRequest, Sections>("DeleteSection", "Folder");
+            DeleteSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionInvalidStorage()
+        {
+            TestExecutor<DeleteSectionRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionRequest, Sections>("DeleteSection", "Storage");
+            DeleteSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSections
+        /// </summary>
+        [Test]
+        public void DeleteSections()
+        {
+            TestExecutor<DeleteSectionsRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionsRequest, Sections>("DeleteSections", null);
+            DeleteSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionsInvalidName()
+        {
+            TestExecutor<DeleteSectionsRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionsRequest, Sections>("DeleteSections", "Name");
+            DeleteSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionsInvalidSections()
+        {
+            TestExecutor<DeleteSectionsRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionsRequest, Sections>("DeleteSections", "Sections");
+            DeleteSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionsInvalidWithSlides()
+        {
+            TestExecutor<DeleteSectionsRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionsRequest, Sections>("DeleteSections", "WithSlides");
+            DeleteSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionsInvalidPassword()
+        {
+            TestExecutor<DeleteSectionsRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionsRequest, Sections>("DeleteSections", "Password");
+            DeleteSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionsInvalidFolder()
+        {
+            TestExecutor<DeleteSectionsRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionsRequest, Sections>("DeleteSections", "Folder");
+            DeleteSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSectionsInvalidStorage()
+        {
+            TestExecutor<DeleteSectionsRequest, Sections> testExecutor =
+                new TestExecutor<DeleteSectionsRequest, Sections>("DeleteSections", "Storage");
+            DeleteSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test DeleteSlideAnimation
         /// </summary>
         [Test]
@@ -7576,6 +7906,148 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test GetNotesSlideHeaderFooter
+        /// </summary>
+        [Test]
+        public void GetNotesSlideHeaderFooter()
+        {
+            TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("GetNotesSlideHeaderFooter", null);
+            GetNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideHeaderFooterInvalidName()
+        {
+            TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("GetNotesSlideHeaderFooter", "Name");
+            GetNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideHeaderFooterInvalidSlideIndex()
+        {
+            TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("GetNotesSlideHeaderFooter", "SlideIndex");
+            GetNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideHeaderFooterInvalidPassword()
+        {
+            TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("GetNotesSlideHeaderFooter", "Password");
+            GetNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideHeaderFooterInvalidStorage()
+        {
+            TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("GetNotesSlideHeaderFooter", "Storage");
+            GetNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetNotesSlideHeaderFooterInvalidFolder()
+        {
+            TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<GetNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("GetNotesSlideHeaderFooter", "Folder");
+            GetNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test GetNotesSlideShape
         /// </summary>
         [Test]
@@ -9268,6 +9740,125 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test GetSections
+        /// </summary>
+        [Test]
+        public void GetSections()
+        {
+            TestExecutor<GetSectionsRequest, Sections> testExecutor =
+                new TestExecutor<GetSectionsRequest, Sections>("GetSections", null);
+            GetSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSectionsInvalidName()
+        {
+            TestExecutor<GetSectionsRequest, Sections> testExecutor =
+                new TestExecutor<GetSectionsRequest, Sections>("GetSections", "Name");
+            GetSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSectionsInvalidPassword()
+        {
+            TestExecutor<GetSectionsRequest, Sections> testExecutor =
+                new TestExecutor<GetSectionsRequest, Sections>("GetSections", "Password");
+            GetSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSectionsInvalidFolder()
+        {
+            TestExecutor<GetSectionsRequest, Sections> testExecutor =
+                new TestExecutor<GetSectionsRequest, Sections>("GetSections", "Folder");
+            GetSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSectionsInvalidStorage()
+        {
+            TestExecutor<GetSectionsRequest, Sections> testExecutor =
+                new TestExecutor<GetSectionsRequest, Sections>("GetSections", "Storage");
+            GetSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test GetSlideAnimation
         /// </summary>
         [Test]
@@ -9419,6 +10010,148 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.GetSlideAnimation(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSlideHeaderFooter
+        /// </summary>
+        [Test]
+        public void GetSlideHeaderFooter()
+        {
+            TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter>("GetSlideHeaderFooter", null);
+            GetSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideHeaderFooterInvalidName()
+        {
+            TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter>("GetSlideHeaderFooter", "Name");
+            GetSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideHeaderFooterInvalidSlideIndex()
+        {
+            TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter>("GetSlideHeaderFooter", "SlideIndex");
+            GetSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideHeaderFooterInvalidPassword()
+        {
+            TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter>("GetSlideHeaderFooter", "Password");
+            GetSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideHeaderFooterInvalidFolder()
+        {
+            TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter>("GetSlideHeaderFooter", "Folder");
+            GetSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlideHeaderFooterInvalidStorage()
+        {
+            TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<GetSlideHeaderFooterRequest, HeaderFooter>("GetSlideHeaderFooter", "Storage");
+            GetSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlideHeaderFooter(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15452,10 +16185,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostAddNewSubshapeParagraphInvalidPath()
+        public void PostAddNewSubshapeParagraphInvalidDto()
         {
             TestExecutor<PostAddNewSubshapeParagraphRequest, Paragraph> testExecutor =
-                new TestExecutor<PostAddNewSubshapeParagraphRequest, Paragraph>("PostAddNewSubshapeParagraph", "Path");
+                new TestExecutor<PostAddNewSubshapeParagraphRequest, Paragraph>("PostAddNewSubshapeParagraph", "Dto");
             PostAddNewSubshapeParagraphRequest request = testExecutor.PrepareRequest();
             Paragraph response = null;
             bool needAssertResponse = false;
@@ -15475,10 +16208,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostAddNewSubshapeParagraphInvalidDto()
+        public void PostAddNewSubshapeParagraphInvalidPath()
         {
             TestExecutor<PostAddNewSubshapeParagraphRequest, Paragraph> testExecutor =
-                new TestExecutor<PostAddNewSubshapeParagraphRequest, Paragraph>("PostAddNewSubshapeParagraph", "Dto");
+                new TestExecutor<PostAddNewSubshapeParagraphRequest, Paragraph>("PostAddNewSubshapeParagraph", "Path");
             PostAddNewSubshapeParagraphRequest request = testExecutor.PrepareRequest();
             Paragraph response = null;
             bool needAssertResponse = false;
@@ -15709,10 +16442,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostAddNewSubshapePortionInvalidPath()
+        public void PostAddNewSubshapePortionInvalidDto()
         {
             TestExecutor<PostAddNewSubshapePortionRequest, Portion> testExecutor =
-                new TestExecutor<PostAddNewSubshapePortionRequest, Portion>("PostAddNewSubshapePortion", "Path");
+                new TestExecutor<PostAddNewSubshapePortionRequest, Portion>("PostAddNewSubshapePortion", "Dto");
             PostAddNewSubshapePortionRequest request = testExecutor.PrepareRequest();
             Portion response = null;
             bool needAssertResponse = false;
@@ -15732,10 +16465,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostAddNewSubshapePortionInvalidDto()
+        public void PostAddNewSubshapePortionInvalidPath()
         {
             TestExecutor<PostAddNewSubshapePortionRequest, Portion> testExecutor =
-                new TestExecutor<PostAddNewSubshapePortionRequest, Portion>("PostAddNewSubshapePortion", "Dto");
+                new TestExecutor<PostAddNewSubshapePortionRequest, Portion>("PostAddNewSubshapePortion", "Path");
             PostAddNewSubshapePortionRequest request = testExecutor.PrepareRequest();
             Portion response = null;
             bool needAssertResponse = false;
@@ -17071,10 +17804,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostGetNotesSlideInvalidSlideIndex()
+        public void PostGetNotesSlideInvalidDocument()
         {
             TestExecutor<PostGetNotesSlideRequest, NotesSlide> testExecutor =
-                new TestExecutor<PostGetNotesSlideRequest, NotesSlide>("PostGetNotesSlide", "SlideIndex");
+                new TestExecutor<PostGetNotesSlideRequest, NotesSlide>("PostGetNotesSlide", "Document");
             PostGetNotesSlideRequest request = testExecutor.PrepareRequest();
             NotesSlide response = null;
             bool needAssertResponse = false;
@@ -17094,10 +17827,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostGetNotesSlideInvalidDocument()
+        public void PostGetNotesSlideInvalidSlideIndex()
         {
             TestExecutor<PostGetNotesSlideRequest, NotesSlide> testExecutor =
-                new TestExecutor<PostGetNotesSlideRequest, NotesSlide>("PostGetNotesSlide", "Document");
+                new TestExecutor<PostGetNotesSlideRequest, NotesSlide>("PostGetNotesSlide", "SlideIndex");
             PostGetNotesSlideRequest request = testExecutor.PrepareRequest();
             NotesSlide response = null;
             bool needAssertResponse = false;
@@ -17167,10 +17900,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostGetNotesSlideExistsInvalidSlideIndex()
+        public void PostGetNotesSlideExistsInvalidDocument()
         {
             TestExecutor<PostGetNotesSlideExistsRequest, EntityExists> testExecutor =
-                new TestExecutor<PostGetNotesSlideExistsRequest, EntityExists>("PostGetNotesSlideExists", "SlideIndex");
+                new TestExecutor<PostGetNotesSlideExistsRequest, EntityExists>("PostGetNotesSlideExists", "Document");
             PostGetNotesSlideExistsRequest request = testExecutor.PrepareRequest();
             EntityExists response = null;
             bool needAssertResponse = false;
@@ -17190,10 +17923,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostGetNotesSlideExistsInvalidDocument()
+        public void PostGetNotesSlideExistsInvalidSlideIndex()
         {
             TestExecutor<PostGetNotesSlideExistsRequest, EntityExists> testExecutor =
-                new TestExecutor<PostGetNotesSlideExistsRequest, EntityExists>("PostGetNotesSlideExists", "Document");
+                new TestExecutor<PostGetNotesSlideExistsRequest, EntityExists>("PostGetNotesSlideExists", "SlideIndex");
             PostGetNotesSlideExistsRequest request = testExecutor.PrepareRequest();
             EntityExists response = null;
             bool needAssertResponse = false;
@@ -17263,6 +17996,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void PostGetNotesSlideWithFormatInvalidDocument()
+        {
+            TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
+                new TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream>("PostGetNotesSlideWithFormat", "Document");
+            PostGetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostGetNotesSlideWithFormat(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
         public void PostGetNotesSlideWithFormatInvalidSlideIndex()
         {
             TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
@@ -17290,29 +18046,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
                 new TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream>("PostGetNotesSlideWithFormat", "Format");
-            PostGetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.PostGetNotesSlideWithFormat(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void PostGetNotesSlideWithFormatInvalidDocument()
-        {
-            TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream> testExecutor =
-                new TestExecutor<PostGetNotesSlideWithFormatRequest, System.IO.Stream>("PostGetNotesSlideWithFormat", "Document");
             PostGetNotesSlideWithFormatRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
@@ -18512,6 +19245,336 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.PostPresentationMerge(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PostSection
+        /// </summary>
+        [Test]
+        public void PostSection()
+        {
+            TestExecutor<PostSectionRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionRequest, Sections>("PostSection", null);
+            PostSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionInvalidName()
+        {
+            TestExecutor<PostSectionRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionRequest, Sections>("PostSection", "Name");
+            PostSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionInvalidSectionName()
+        {
+            TestExecutor<PostSectionRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionRequest, Sections>("PostSection", "SectionName");
+            PostSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionInvalidSlideIndex()
+        {
+            TestExecutor<PostSectionRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionRequest, Sections>("PostSection", "SlideIndex");
+            PostSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionInvalidPassword()
+        {
+            TestExecutor<PostSectionRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionRequest, Sections>("PostSection", "Password");
+            PostSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionInvalidFolder()
+        {
+            TestExecutor<PostSectionRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionRequest, Sections>("PostSection", "Folder");
+            PostSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionInvalidStorage()
+        {
+            TestExecutor<PostSectionRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionRequest, Sections>("PostSection", "Storage");
+            PostSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PostSectionMove
+        /// </summary>
+        [Test]
+        public void PostSectionMove()
+        {
+            TestExecutor<PostSectionMoveRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionMoveRequest, Sections>("PostSectionMove", null);
+            PostSectionMoveRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSectionMove(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionMoveInvalidName()
+        {
+            TestExecutor<PostSectionMoveRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionMoveRequest, Sections>("PostSectionMove", "Name");
+            PostSectionMoveRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSectionMove(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionMoveInvalidSectionIndex()
+        {
+            TestExecutor<PostSectionMoveRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionMoveRequest, Sections>("PostSectionMove", "SectionIndex");
+            PostSectionMoveRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSectionMove(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionMoveInvalidNewPosition()
+        {
+            TestExecutor<PostSectionMoveRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionMoveRequest, Sections>("PostSectionMove", "NewPosition");
+            PostSectionMoveRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSectionMove(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionMoveInvalidPassword()
+        {
+            TestExecutor<PostSectionMoveRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionMoveRequest, Sections>("PostSectionMove", "Password");
+            PostSectionMoveRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSectionMove(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionMoveInvalidFolder()
+        {
+            TestExecutor<PostSectionMoveRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionMoveRequest, Sections>("PostSectionMove", "Folder");
+            PostSectionMoveRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSectionMove(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSectionMoveInvalidStorage()
+        {
+            TestExecutor<PostSectionMoveRequest, Sections> testExecutor =
+                new TestExecutor<PostSectionMoveRequest, Sections>("PostSectionMove", "Storage");
+            PostSectionMoveRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSectionMove(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -19795,10 +20858,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostSlidesConvertInvalidFormat()
+        public void PostSlidesConvertInvalidDocument()
         {
             TestExecutor<PostSlidesConvertRequest, System.IO.Stream> testExecutor =
-                new TestExecutor<PostSlidesConvertRequest, System.IO.Stream>("PostSlidesConvert", "Format");
+                new TestExecutor<PostSlidesConvertRequest, System.IO.Stream>("PostSlidesConvert", "Document");
             PostSlidesConvertRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
@@ -19818,10 +20881,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PostSlidesConvertInvalidDocument()
+        public void PostSlidesConvertInvalidFormat()
         {
             TestExecutor<PostSlidesConvertRequest, System.IO.Stream> testExecutor =
-                new TestExecutor<PostSlidesConvertRequest, System.IO.Stream>("PostSlidesConvert", "Document");
+                new TestExecutor<PostSlidesConvertRequest, System.IO.Stream>("PostSlidesConvert", "Format");
             PostSlidesConvertRequest request = testExecutor.PrepareRequest();
             System.IO.Stream response = null;
             bool needAssertResponse = false;
@@ -23410,6 +24473,171 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test PutNotesSlideHeaderFooter
+        /// </summary>
+        [Test]
+        public void PutNotesSlideHeaderFooter()
+        {
+            TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("PutNotesSlideHeaderFooter", null);
+            PutNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutNotesSlideHeaderFooterInvalidName()
+        {
+            TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("PutNotesSlideHeaderFooter", "Name");
+            PutNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutNotesSlideHeaderFooterInvalidSlideIndex()
+        {
+            TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("PutNotesSlideHeaderFooter", "SlideIndex");
+            PutNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutNotesSlideHeaderFooterInvalidDto()
+        {
+            TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("PutNotesSlideHeaderFooter", "Dto");
+            PutNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutNotesSlideHeaderFooterInvalidPassword()
+        {
+            TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("PutNotesSlideHeaderFooter", "Password");
+            PutNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutNotesSlideHeaderFooterInvalidStorage()
+        {
+            TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("PutNotesSlideHeaderFooter", "Storage");
+            PutNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutNotesSlideHeaderFooterInvalidFolder()
+        {
+            TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter> testExecutor =
+                new TestExecutor<PutNotesSlideHeaderFooterRequest, NotesSlideHeaderFooter>("PutNotesSlideHeaderFooter", "Folder");
+            PutNotesSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            NotesSlideHeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutNotesSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test PutNotesSlideShapeSaveAs
         /// </summary>
         [Test]
@@ -23864,6 +25092,313 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.PutPresentationMerge(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PutSection
+        /// </summary>
+        [Test]
+        public void PutSection()
+        {
+            TestExecutor<PutSectionRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionRequest, Sections>("PutSection", null);
+            PutSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSectionInvalidName()
+        {
+            TestExecutor<PutSectionRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionRequest, Sections>("PutSection", "Name");
+            PutSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSectionInvalidSectionIndex()
+        {
+            TestExecutor<PutSectionRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionRequest, Sections>("PutSection", "SectionIndex");
+            PutSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSectionInvalidSectionName()
+        {
+            TestExecutor<PutSectionRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionRequest, Sections>("PutSection", "SectionName");
+            PutSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSectionInvalidPassword()
+        {
+            TestExecutor<PutSectionRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionRequest, Sections>("PutSection", "Password");
+            PutSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSectionInvalidFolder()
+        {
+            TestExecutor<PutSectionRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionRequest, Sections>("PutSection", "Folder");
+            PutSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSectionInvalidStorage()
+        {
+            TestExecutor<PutSectionRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionRequest, Sections>("PutSection", "Storage");
+            PutSectionRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSection(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PutSections
+        /// </summary>
+        [Test]
+        public void PutSections()
+        {
+            TestExecutor<PutSectionsRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionsRequest, Sections>("PutSections", null);
+            PutSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSectionsInvalidName()
+        {
+            TestExecutor<PutSectionsRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionsRequest, Sections>("PutSections", "Name");
+            PutSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSectionsInvalidSections()
+        {
+            TestExecutor<PutSectionsRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionsRequest, Sections>("PutSections", "Sections");
+            PutSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSectionsInvalidPassword()
+        {
+            TestExecutor<PutSectionsRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionsRequest, Sections>("PutSections", "Password");
+            PutSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSectionsInvalidFolder()
+        {
+            TestExecutor<PutSectionsRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionsRequest, Sections>("PutSections", "Folder");
+            PutSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSections(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSectionsInvalidStorage()
+        {
+            TestExecutor<PutSectionsRequest, Sections> testExecutor =
+                new TestExecutor<PutSectionsRequest, Sections>("PutSections", "Storage");
+            PutSectionsRequest request = testExecutor.PrepareRequest();
+            Sections response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSections(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -24464,10 +25999,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PutSetSubshapeParagraphPortionPropertiesInvalidPath()
+        public void PutSetSubshapeParagraphPortionPropertiesInvalidDto()
         {
             TestExecutor<PutSetSubshapeParagraphPortionPropertiesRequest, Portion> testExecutor =
-                new TestExecutor<PutSetSubshapeParagraphPortionPropertiesRequest, Portion>("PutSetSubshapeParagraphPortionProperties", "Path");
+                new TestExecutor<PutSetSubshapeParagraphPortionPropertiesRequest, Portion>("PutSetSubshapeParagraphPortionProperties", "Dto");
             PutSetSubshapeParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
             Portion response = null;
             bool needAssertResponse = false;
@@ -24487,10 +26022,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PutSetSubshapeParagraphPortionPropertiesInvalidDto()
+        public void PutSetSubshapeParagraphPortionPropertiesInvalidPath()
         {
             TestExecutor<PutSetSubshapeParagraphPortionPropertiesRequest, Portion> testExecutor =
-                new TestExecutor<PutSetSubshapeParagraphPortionPropertiesRequest, Portion>("PutSetSubshapeParagraphPortionProperties", "Dto");
+                new TestExecutor<PutSetSubshapeParagraphPortionPropertiesRequest, Portion>("PutSetSubshapeParagraphPortionProperties", "Path");
             PutSetSubshapeParagraphPortionPropertiesRequest request = testExecutor.PrepareRequest();
             Portion response = null;
             bool needAssertResponse = false;
@@ -24698,10 +26233,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PutSetSubshapeParagraphPropertiesInvalidPath()
+        public void PutSetSubshapeParagraphPropertiesInvalidDto()
         {
             TestExecutor<PutSetSubshapeParagraphPropertiesRequest, Paragraph> testExecutor =
-                new TestExecutor<PutSetSubshapeParagraphPropertiesRequest, Paragraph>("PutSetSubshapeParagraphProperties", "Path");
+                new TestExecutor<PutSetSubshapeParagraphPropertiesRequest, Paragraph>("PutSetSubshapeParagraphProperties", "Dto");
             PutSetSubshapeParagraphPropertiesRequest request = testExecutor.PrepareRequest();
             Paragraph response = null;
             bool needAssertResponse = false;
@@ -24721,10 +26256,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PutSetSubshapeParagraphPropertiesInvalidDto()
+        public void PutSetSubshapeParagraphPropertiesInvalidPath()
         {
             TestExecutor<PutSetSubshapeParagraphPropertiesRequest, Paragraph> testExecutor =
-                new TestExecutor<PutSetSubshapeParagraphPropertiesRequest, Paragraph>("PutSetSubshapeParagraphProperties", "Dto");
+                new TestExecutor<PutSetSubshapeParagraphPropertiesRequest, Paragraph>("PutSetSubshapeParagraphProperties", "Path");
             PutSetSubshapeParagraphPropertiesRequest request = testExecutor.PrepareRequest();
             Paragraph response = null;
             bool needAssertResponse = false;
@@ -25704,6 +27239,171 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test PutSlideHeaderFooter
+        /// </summary>
+        [Test]
+        public void PutSlideHeaderFooter()
+        {
+            TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter>("PutSlideHeaderFooter", null);
+            PutSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlideHeaderFooterInvalidName()
+        {
+            TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter>("PutSlideHeaderFooter", "Name");
+            PutSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlideHeaderFooterInvalidSlideIndex()
+        {
+            TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter>("PutSlideHeaderFooter", "SlideIndex");
+            PutSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlideHeaderFooterInvalidDto()
+        {
+            TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter>("PutSlideHeaderFooter", "Dto");
+            PutSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlideHeaderFooterInvalidPassword()
+        {
+            TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter>("PutSlideHeaderFooter", "Password");
+            PutSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlideHeaderFooterInvalidFolder()
+        {
+            TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter>("PutSlideHeaderFooter", "Folder");
+            PutSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlideHeaderFooterInvalidStorage()
+        {
+            TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter> testExecutor =
+                new TestExecutor<PutSlideHeaderFooterRequest, HeaderFooter>("PutSlideHeaderFooter", "Storage");
+            PutSlideHeaderFooterRequest request = testExecutor.PrepareRequest();
+            HeaderFooter response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlideHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test PutSlideSaveAs
         /// </summary>
         [Test]
@@ -26267,10 +27967,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PutSlideSubshapeInfoInvalidPath()
+        public void PutSlideSubshapeInfoInvalidDto()
         {
             TestExecutor<PutSlideSubshapeInfoRequest, ShapeBase> testExecutor =
-                new TestExecutor<PutSlideSubshapeInfoRequest, ShapeBase>("PutSlideSubshapeInfo", "Path");
+                new TestExecutor<PutSlideSubshapeInfoRequest, ShapeBase>("PutSlideSubshapeInfo", "Dto");
             PutSlideSubshapeInfoRequest request = testExecutor.PrepareRequest();
             ShapeBase response = null;
             bool needAssertResponse = false;
@@ -26290,10 +27990,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void PutSlideSubshapeInfoInvalidDto()
+        public void PutSlideSubshapeInfoInvalidPath()
         {
             TestExecutor<PutSlideSubshapeInfoRequest, ShapeBase> testExecutor =
-                new TestExecutor<PutSlideSubshapeInfoRequest, ShapeBase>("PutSlideSubshapeInfo", "Dto");
+                new TestExecutor<PutSlideSubshapeInfoRequest, ShapeBase>("PutSlideSubshapeInfo", "Path");
             PutSlideSubshapeInfoRequest request = testExecutor.PrepareRequest();
             ShapeBase response = null;
             bool needAssertResponse = false;
@@ -26409,6 +28109,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void PutSlidesConvertInvalidDocument()
+        {
+            VoidTestExecutor<PutSlidesConvertRequest> testExecutor =
+                new VoidTestExecutor<PutSlidesConvertRequest>("PutSlidesConvert", "Document");
+            PutSlidesConvertRequest request = testExecutor.PrepareRequest();
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.PutSlidesConvert(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
         public void PutSlidesConvertInvalidFormat()
         {
             VoidTestExecutor<PutSlidesConvertRequest> testExecutor =
@@ -26436,29 +28159,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             VoidTestExecutor<PutSlidesConvertRequest> testExecutor =
                 new VoidTestExecutor<PutSlidesConvertRequest>("PutSlidesConvert", "OutPath");
-            PutSlidesConvertRequest request = testExecutor.PrepareRequest();
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.PutSlidesConvert(request);
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void PutSlidesConvertInvalidDocument()
-        {
-            VoidTestExecutor<PutSlidesConvertRequest> testExecutor =
-                new VoidTestExecutor<PutSlidesConvertRequest>("PutSlidesConvert", "Document");
             PutSlidesConvertRequest request = testExecutor.PrepareRequest();
             
             bool needAssertResponse = false;
@@ -26653,6 +28353,148 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.PutSlidesDocumentFromHtml(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PutSlidesHeaderFooter
+        /// </summary>
+        [Test]
+        public void PutSlidesHeaderFooter()
+        {
+            TestExecutor<PutSlidesHeaderFooterRequest, Document> testExecutor =
+                new TestExecutor<PutSlidesHeaderFooterRequest, Document>("PutSlidesHeaderFooter", null);
+            PutSlidesHeaderFooterRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesHeaderFooterInvalidName()
+        {
+            TestExecutor<PutSlidesHeaderFooterRequest, Document> testExecutor =
+                new TestExecutor<PutSlidesHeaderFooterRequest, Document>("PutSlidesHeaderFooter", "Name");
+            PutSlidesHeaderFooterRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesHeaderFooterInvalidDto()
+        {
+            TestExecutor<PutSlidesHeaderFooterRequest, Document> testExecutor =
+                new TestExecutor<PutSlidesHeaderFooterRequest, Document>("PutSlidesHeaderFooter", "Dto");
+            PutSlidesHeaderFooterRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesHeaderFooterInvalidPassword()
+        {
+            TestExecutor<PutSlidesHeaderFooterRequest, Document> testExecutor =
+                new TestExecutor<PutSlidesHeaderFooterRequest, Document>("PutSlidesHeaderFooter", "Password");
+            PutSlidesHeaderFooterRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesHeaderFooterInvalidStorage()
+        {
+            TestExecutor<PutSlidesHeaderFooterRequest, Document> testExecutor =
+                new TestExecutor<PutSlidesHeaderFooterRequest, Document>("PutSlidesHeaderFooter", "Storage");
+            PutSlidesHeaderFooterRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesHeaderFooter(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesHeaderFooterInvalidFolder()
+        {
+            TestExecutor<PutSlidesHeaderFooterRequest, Document> testExecutor =
+                new TestExecutor<PutSlidesHeaderFooterRequest, Document>("PutSlidesHeaderFooter", "Folder");
+            PutSlidesHeaderFooterRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesHeaderFooter(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)

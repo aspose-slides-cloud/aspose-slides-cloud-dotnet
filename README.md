@@ -10,7 +10,13 @@ This repository contains Aspose.Slides Cloud SDK for .NET source code. This SDK 
 * Full read & write access to Document Object Model, including slides, shapes, paragraphs, portions and many others
 * Support of Aspose.Storage API
 
-### New Features & Recent API Changes (20.8)
+### New Features & Recent API Changes
+#### 20.9
+* New GetSections, PutSections, PutSection, PostSection, PostSectionMove, DeleteSection, DeleteSections methods to add, update and delete presentation sections.
+* New PostSlidesHeaderFooter, PostSlideHeaderFooter, GetSlideHeaderFooter, PostNotesSlideHeaderFooter, GetNotesSlideHeaderFooter methods to manage header/footer settings for slides.
+* Replaces Categories for ParentCategories & Level properties in ChartCategory class to properly support Sunburst & Treeview charts.
+
+#### 20.8
 * New PostChartCategory, PutChartCategory, DeleteChartCategory, PostChartDataPoint, PutChartDataPoint, DeleteChartDataPoint methods to add, update and delete categories & data points. Also, DataPoints property was added to ChartCategory class
 * New DefaultRegularFont property in ExportOptions class
 

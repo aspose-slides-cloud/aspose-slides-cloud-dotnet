@@ -45,25 +45,25 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <summary>
         /// Initializes a new instance of the <see cref="PostGetNotesSlideRequest"/> class.
         /// </summary>
-        /// <param name="slideIndex">Slide index.</param>
         /// <param name="document">Document data.</param>
+        /// <param name="slideIndex">Slide index.</param>
         /// <param name="password">Document password.</param>
-        public PostGetNotesSlideRequest(int slideIndex, System.IO.Stream document = null, string password = null)
+        public PostGetNotesSlideRequest(System.IO.Stream document, int slideIndex, string password = null)
         {
-            this.SlideIndex = slideIndex;
             this.Document = document;
+            this.SlideIndex = slideIndex;
             this.Password = password;
         }
-
-        /// <summary>
-        /// Slide index.
-        /// </summary>  
-        public int SlideIndex { get; set; }
 
         /// <summary>
         /// Document data.
         /// </summary>  
         public System.IO.Stream Document { get; set; }
+
+        /// <summary>
+        /// Slide index.
+        /// </summary>  
+        public int SlideIndex { get; set; }
 
         /// <summary>
         /// Document password.
