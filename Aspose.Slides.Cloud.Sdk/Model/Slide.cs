@@ -57,42 +57,42 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets the  link to the layout slide.
         /// </summary>
-        public ResourceUriElement LayoutSlide { get; set; }
+        public ResourceUri LayoutSlide { get; set; }
 
         /// <summary>
         /// Gets or sets the  link to list of top-level shapes.
         /// </summary>
-        public ResourceUriElement Shapes { get; set; }
+        public ResourceUri Shapes { get; set; }
 
         /// <summary>
         /// Gets or sets the link to theme.
         /// </summary>
-        public ResourceUriElement Theme { get; set; }
+        public ResourceUri Theme { get; set; }
 
         /// <summary>
         /// Gets or sets the  link to placeholders.
         /// </summary>
-        public ResourceUriElement Placeholders { get; set; }
+        public ResourceUri Placeholders { get; set; }
 
         /// <summary>
         /// Gets or sets the link to images.
         /// </summary>
-        public ResourceUriElement Images { get; set; }
+        public ResourceUri Images { get; set; }
 
         /// <summary>
         /// Gets or sets the link to comments.
         /// </summary>
-        public ResourceUriElement Comments { get; set; }
+        public ResourceUri Comments { get; set; }
 
         /// <summary>
         /// Get or sets the link to slide's background
         /// </summary>
-        public ResourceUriElement Background { get; set; }
+        public ResourceUri Background { get; set; }
 
         /// <summary>
         /// Get or sets the link to notes slide.
         /// </summary>
-        public ResourceUriElement NotesSlide { get; set; }
+        public ResourceUri NotesSlide { get; set; }
 
 
         /// <summary>

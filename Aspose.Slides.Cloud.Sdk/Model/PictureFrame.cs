@@ -56,7 +56,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
                     s_typeDeterminers.Add("Type", TypeEnum.PictureFrame);
-                    s_typeDeterminers.Add("ShapeType", ShapeTypeEnum.PictureFrame);
                 }
                 return s_typeDeterminers;
             }
@@ -69,7 +68,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public PictureFrame() : base()
         {
             Type = TypeEnum.PictureFrame;
-            ShapeType = ShapeTypeEnum.PictureFrame;
         }
 
         /// <summary>
@@ -97,7 +95,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
-            sb.Append("  GeometryShapeType: ").Append(this.GeometryShapeType).Append("\n");
             sb.Append("  PictureFillFormat: ").Append(this.PictureFillFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

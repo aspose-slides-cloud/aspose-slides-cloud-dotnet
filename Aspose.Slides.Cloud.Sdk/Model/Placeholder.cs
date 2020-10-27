@@ -194,7 +194,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Shape link.
         /// </summary>
-        public ResourceUriElement Shape { get; set; }
+        public ResourceUri Shape { get; set; }
 
 
         /// <summary>

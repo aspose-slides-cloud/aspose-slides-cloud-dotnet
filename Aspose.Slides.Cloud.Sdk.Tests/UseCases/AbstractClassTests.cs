@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="PipelineTests.cs">
+// <copyright company="Aspose" file="AbstractClassTests.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -27,7 +27,6 @@ using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
-using static Aspose.Slides.Cloud.Sdk.Model.Chart;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
@@ -69,7 +68,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             Chart chart = new Chart();
             Assert.AreEqual(ShapeBase.TypeEnum.Chart, chart.Type);
-            Assert.AreEqual(ShapeBase.ShapeTypeEnum.Chart, chart.ShapeType);
         }
     }
 }

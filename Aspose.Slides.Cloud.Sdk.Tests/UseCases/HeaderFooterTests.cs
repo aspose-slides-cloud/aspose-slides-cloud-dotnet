@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="PipelineTests.cs">
+// <copyright company="Aspose" file="HeaderFooterTests.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>

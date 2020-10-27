@@ -42,32 +42,32 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Link to Document properties.
         /// </summary>
-        public ResourceUriElement DocumentProperties { get; set; }
+        public ResourceUri DocumentProperties { get; set; }
 
         /// <summary>
         /// Link to Document properties.
         /// </summary>
-        public ResourceUriElement ViewProperties { get; set; }
+        public ResourceUri ViewProperties { get; set; }
 
         /// <summary>
         /// Link to slides collection.
         /// </summary>
-        public ResourceUriElement Slides { get; set; }
+        public ResourceUri Slides { get; set; }
 
         /// <summary>
         /// Link to images collection.
         /// </summary>
-        public ResourceUriElement Images { get; set; }
+        public ResourceUri Images { get; set; }
 
         /// <summary>
         /// Link to layout slides collection.
         /// </summary>
-        public ResourceUriElement LayoutSlides { get; set; }
+        public ResourceUri LayoutSlides { get; set; }
 
         /// <summary>
         /// Link to master slides collection.
         /// </summary>
-        public ResourceUriElement MasterSlides { get; set; }
+        public ResourceUri MasterSlides { get; set; }
 
 
         /// <summary>

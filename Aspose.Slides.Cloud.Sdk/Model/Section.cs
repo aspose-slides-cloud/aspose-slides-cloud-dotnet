@@ -52,7 +52,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Links to the shapes contained in the section.
         /// </summary>
-        public List<ResourceUriElement> SlideList { get; set; }
+        public List<ResourceUri> SlideList { get; set; }
 
 
         /// <summary>

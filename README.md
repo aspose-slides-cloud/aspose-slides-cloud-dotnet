@@ -11,14 +11,18 @@ This repository contains Aspose.Slides Cloud SDK for .NET source code. This SDK 
 * Support of Aspose.Storage API
 
 ### New Features & Recent API Changes
+#### 20.10
+* Removed ShapeType property from BaseShape class; replaced GeometryShapeType with ShapeType property for GeometryShape.
+* Removed redundant ResourceUriElement class. All properties of ResourceUriElement type are changed to ResourceUri type.
+
 #### 20.9
 * New GetSections, PutSections, PutSection, PostSection, PostSectionMove, DeleteSection, DeleteSections methods to add, update and delete presentation sections.
 * New PostSlidesHeaderFooter, PostSlideHeaderFooter, GetSlideHeaderFooter, PostNotesSlideHeaderFooter, GetNotesSlideHeaderFooter methods to manage header/footer settings for slides.
-* Replaces Categories for ParentCategories & Level properties in ChartCategory class to properly support Sunburst & Treeview charts.
+* Replaced Categories for ParentCategories & Level properties in ChartCategory class to properly support Sunburst & Treeview charts.
 
 #### 20.8
-* New PostChartCategory, PutChartCategory, DeleteChartCategory, PostChartDataPoint, PutChartDataPoint, DeleteChartDataPoint methods to add, update and delete categories & data points. Also, DataPoints property was added to ChartCategory class
-* New DefaultRegularFont property in ExportOptions class
+* New PostChartCategory, PutChartCategory, DeleteChartCategory, PostChartDataPoint, PutChartDataPoint, DeleteChartDataPoint methods to add, update and delete categories & data points. Also, DataPoints property was added to ChartCategory class.
+* New DefaultRegularFont property in ExportOptions class.
 
 ## Licensing
 All Aspose.Slides Cloud SDKs are licensed under MIT License.

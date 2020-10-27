@@ -490,7 +490,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
                     s_typeDeterminers.Add("Type", TypeEnum.Table);
-                    s_typeDeterminers.Add("ShapeType", ShapeTypeEnum.Table);
                 }
                 return s_typeDeterminers;
             }
@@ -503,7 +502,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public Table() : base()
         {
             Type = TypeEnum.Table;
-            ShapeType = ShapeTypeEnum.Table;
         }
 
         /// <summary>
@@ -530,7 +528,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
-            sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
             sb.Append("  Style: ").Append(this.Style).Append("\n");
             sb.Append("  Rows: ").Append(this.Rows).Append("\n");
             sb.Append("  Columns: ").Append(this.Columns).Append("\n");

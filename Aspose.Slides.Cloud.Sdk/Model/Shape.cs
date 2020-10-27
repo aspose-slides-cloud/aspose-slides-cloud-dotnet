@@ -47,7 +47,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Get or sets list to paragraphs list
         /// </summary>
-        public ResourceUriElement Paragraphs { get; set; }
+        public ResourceUri Paragraphs { get; set; }
 
 
         /// <summary>
@@ -100,7 +100,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
-            sb.Append("  GeometryShapeType: ").Append(this.GeometryShapeType).Append("\n");
             sb.Append("  Text: ").Append(this.Text).Append("\n");
             sb.Append("  Paragraphs: ").Append(this.Paragraphs).Append("\n");
             sb.Append("}\n");

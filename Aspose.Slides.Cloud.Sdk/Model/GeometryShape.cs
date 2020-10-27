@@ -40,11 +40,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class GeometryShape : ShapeBase 
     {                       
         /// <summary>
-        /// Geometry shape type.
+        /// Combined shape type.
         /// </summary>
-        /// <value>Geometry shape type.</value>
+        /// <value>Combined shape type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum GeometryShapeTypeEnum
+        public enum ShapeTypeEnum
         {
             
             /// <summary>
@@ -994,9 +994,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Geometry shape type.
+        /// Combined shape type.
         /// </summary>
-        public GeometryShapeTypeEnum? GeometryShapeType { get; set; }
+        public ShapeTypeEnum? ShapeType { get; set; }
 
 
         /// <summary>
@@ -1047,7 +1047,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
-            sb.Append("  GeometryShapeType: ").Append(this.GeometryShapeType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

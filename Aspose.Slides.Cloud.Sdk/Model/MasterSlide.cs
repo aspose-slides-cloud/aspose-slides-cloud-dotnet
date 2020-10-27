@@ -47,12 +47,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// List of layout slide links.
         /// </summary>
-        public List<ResourceUriElement> LayoutSlides { get; set; }
+        public List<ResourceUri> LayoutSlides { get; set; }
 
         /// <summary>
         /// List of depending slide links.
         /// </summary>
-        public List<ResourceUriElement> DependingSlides { get; set; }
+        public List<ResourceUri> DependingSlides { get; set; }
 
 
         /// <summary>

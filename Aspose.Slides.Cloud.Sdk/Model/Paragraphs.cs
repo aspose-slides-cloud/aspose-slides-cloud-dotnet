@@ -42,7 +42,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// List of paragraph links.
         /// </summary>
-        public List<ResourceUriElement> ParagraphLinks { get; set; }
+        public List<ResourceUri> ParagraphLinks { get; set; }
 
 
         /// <summary>

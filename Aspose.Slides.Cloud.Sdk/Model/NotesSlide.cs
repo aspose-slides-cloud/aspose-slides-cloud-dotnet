@@ -47,7 +47,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Get or sets the  link to list notes slide shapes.
         /// </summary>
-        public ResourceUriElement Shapes { get; set; }
+        public ResourceUri Shapes { get; set; }
 
 
         /// <summary>

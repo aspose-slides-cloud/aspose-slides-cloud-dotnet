@@ -164,7 +164,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
                     s_typeDeterminers.Add("Type", TypeEnum.AudioFrame);
-                    s_typeDeterminers.Add("ShapeType", ShapeTypeEnum.AudioFrame);
                 }
                 return s_typeDeterminers;
             }
@@ -177,7 +176,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public AudioFrame() : base()
         {
             Type = TypeEnum.AudioFrame;
-            ShapeType = ShapeTypeEnum.AudioFrame;
         }
 
         /// <summary>
@@ -205,7 +203,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
-            sb.Append("  GeometryShapeType: ").Append(this.GeometryShapeType).Append("\n");
             sb.Append("  AudioCdEndTrack: ").Append(this.AudioCdEndTrack).Append("\n");
             sb.Append("  AudioCdEndTrackTime: ").Append(this.AudioCdEndTrackTime).Append("\n");
             sb.Append("  AudioCdStartTrack: ").Append(this.AudioCdStartTrack).Append("\n");

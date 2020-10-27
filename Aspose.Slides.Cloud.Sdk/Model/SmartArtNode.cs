@@ -86,7 +86,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets the link to shapes.
         /// </summary>
-        public ResourceUriElement Shapes { get; set; }
+        public ResourceUri Shapes { get; set; }
 
         /// <summary>
         /// True for and assistant node.

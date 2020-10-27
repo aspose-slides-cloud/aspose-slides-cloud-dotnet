@@ -47,17 +47,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Color scheme.
         /// </summary>
-        public ResourceUriElement ColorScheme { get; set; }
+        public ResourceUri ColorScheme { get; set; }
 
         /// <summary>
         /// Font scheme.
         /// </summary>
-        public ResourceUriElement FontScheme { get; set; }
+        public ResourceUri FontScheme { get; set; }
 
         /// <summary>
         /// Format scheme.
         /// </summary>
-        public ResourceUriElement FormatScheme { get; set; }
+        public ResourceUri FormatScheme { get; set; }
 
 
         /// <summary>

@@ -149,7 +149,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
                     s_typeDeterminers.Add("Type", TypeEnum.VideoFrame);
-                    s_typeDeterminers.Add("ShapeType", ShapeTypeEnum.VideoFrame);
                 }
                 return s_typeDeterminers;
             }
@@ -162,7 +161,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public VideoFrame() : base()
         {
             Type = TypeEnum.VideoFrame;
-            ShapeType = ShapeTypeEnum.VideoFrame;
         }
 
         /// <summary>
@@ -190,7 +188,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
-            sb.Append("  GeometryShapeType: ").Append(this.GeometryShapeType).Append("\n");
             sb.Append("  FullScreenMode: ").Append(this.FullScreenMode).Append("\n");
             sb.Append("  HideAtShowing: ").Append(this.HideAtShowing).Append("\n");
             sb.Append("  PlayLoopMode: ").Append(this.PlayLoopMode).Append("\n");

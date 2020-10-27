@@ -91,7 +91,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Internal image link.
         /// </summary>
-        public ResourceUriElement Image { get; set; }
+        public ResourceUri Image { get; set; }
 
         /// <summary>
         /// Base 64 image data.

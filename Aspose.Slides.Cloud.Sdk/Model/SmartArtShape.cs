@@ -37,7 +37,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     /// <summary>
     /// Represents SmartArt resource.
     /// </summary>  
-    public class SmartArtShape : ShapeBase 
+    public class SmartArtShape : GeometryShape 
     {                       
 
         /// <summary>
@@ -51,7 +51,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
                     s_typeDeterminers.Add("Type", TypeEnum.SmartArtShape);
-                    s_typeDeterminers.Add("ShapeType", ShapeTypeEnum.Custom);
                 }
                 return s_typeDeterminers;
             }
@@ -64,7 +63,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public SmartArtShape() : base()
         {
             Type = TypeEnum.SmartArtShape;
-            ShapeType = ShapeTypeEnum.Custom;
         }
 
         /// <summary>

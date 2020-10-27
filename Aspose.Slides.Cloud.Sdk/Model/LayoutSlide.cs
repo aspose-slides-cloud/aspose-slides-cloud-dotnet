@@ -241,12 +241,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Master slide link.
         /// </summary>
-        public ResourceUriElement MasterSlide { get; set; }
+        public ResourceUri MasterSlide { get; set; }
 
         /// <summary>
         /// List of depending slides.
         /// </summary>
-        public List<ResourceUriElement> DependingSlides { get; set; }
+        public List<ResourceUri> DependingSlides { get; set; }
 
 
         /// <summary>
