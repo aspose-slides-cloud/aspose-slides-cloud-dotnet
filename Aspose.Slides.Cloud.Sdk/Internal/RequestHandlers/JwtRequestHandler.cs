@@ -45,11 +45,14 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
 
         public void BeforeSend(WebRequest request, Stream streamToSend)
         {
-            if (string.IsNullOrEmpty(m_configuration.AuthToken))
+            if (!string.IsNullOrEmpty(m_configuration.AppSid) || !string.IsNullOrEmpty(m_configuration.AuthToken))
             {
-                RequestToken();
+                if (string.IsNullOrEmpty(m_configuration.AuthToken))
+                {
+                    RequestToken();
+                }
+                request.Headers["Authorization"] = "Bearer " + m_configuration.AuthToken;
             }
-            request.Headers["Authorization"] = "Bearer " + m_configuration.AuthToken;
         }       
 
         public void ProcessResponse(HttpWebResponse response, Stream resultStream)

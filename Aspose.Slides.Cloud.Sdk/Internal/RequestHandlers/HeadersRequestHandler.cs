@@ -45,6 +45,10 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
 #else
             var sdkVersion = GetType().GetTypeInfo().Assembly.GetName().Version;
 #endif
+            if (m_configuration.HttpRequestTimeout > 0)
+            {
+                request.Timeout = m_configuration.HttpRequestTimeout * 1000;
+            }
             request.Headers["x-aspose-client"] = string.Format(".net sdk v{0}.{1}", sdkVersion.Major, sdkVersion.Minor);
             if (m_configuration.Timeout > 0)
             {

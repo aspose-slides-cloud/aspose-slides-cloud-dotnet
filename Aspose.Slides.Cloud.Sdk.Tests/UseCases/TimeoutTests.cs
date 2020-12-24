@@ -54,7 +54,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             PostSlideSaveAsRequest request = new PostSlideSaveAsRequest
             {
                 Format = SlideExportFormat.Svg,
-                Name = "test.ppt",
+                Name = "test.pptx",
                 Folder = "TempSlidesSDK",
                 Password = "password",
                 SlideIndex = 1

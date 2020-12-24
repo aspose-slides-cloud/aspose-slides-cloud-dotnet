@@ -140,14 +140,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Folder = c_folderName,
                 Password = c_password,
                 Format = c_format,
-                Options = new PdfExportOptions { TextCompression = PdfExportOptions.TextCompressionEnum.Flate }
+                Options = new PdfExportOptions { DrawSlidesFrame = true }
             };
             Stream convertedWithOptions = TestUtils.SlidesApi.PostSlidesSaveAs(request);
             Assert.AreNotEqual(converted.Length, convertedWithOptions.Length);
         }
 
         const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.ppt";
+        const string c_fileName = "test.pptx";
         const string c_password = "password";
         const string c_outPath = c_folderName + "/converted.pdf";
         const ExportFormat c_format = ExportFormat.Pdf;

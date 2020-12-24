@@ -40,12 +40,13 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Initializes a new instance of the <see cref="ApiBase"/> class.
         /// </summary>
         /// <param name="appSid">
-        /// The app Sid.
+        /// The client Id.
         /// </param>
         /// <param name="appKey">
-        /// The app Key.
+        /// The client secret.
         /// </param>
-        protected ApiBase(string appSid, string appKey) : this(new Configuration { AppSid = appSid, AppKey = appKey })
+        protected ApiBase(string appSid, string appKey)
+            : this(new Configuration { AppSid = appSid, AppKey = appKey })
         {
         }
 

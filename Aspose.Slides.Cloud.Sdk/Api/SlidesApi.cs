@@ -39,15 +39,15 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Initializes a new instance of the <see cref="SlidesApi"/> class.
         /// </summary>
         /// <param name="appSid">
-        /// The app Sid.
+        /// The Client Id.
         /// </param>
-        /// <param name="apiKey">
-        /// The api Key.
+        /// <param name="appKey">
+        /// The Client Secret.
         /// </param>
         public SlidesApi(string appSid, string appKey) : base(appSid, appKey)
         {
         }
-        
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SlidesApi"/> class.
         /// </summary>    

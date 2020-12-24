@@ -11,6 +11,9 @@ This repository contains Aspose.Slides Cloud SDK for .NET source code. This SDK 
 * Support of Aspose.Storage API
 
 ### New Features & Recent API Changes
+#### 20.12
+* Added HttpRequestTimeout Configuration property.
+
 #### 20.10
 * Removed ShapeType property from BaseShape class; replaced GeometryShapeType with ShapeType property for GeometryShape.
 * Removed redundant ResourceUriElement class. All properties of ResourceUriElement type are changed to ResourceUri type.
@@ -49,7 +52,7 @@ From Package Manager:
 
 The example code below converts a PowerPoint document to PDF format using Aspose.Slides-Cloud library:
 ```csharp
-SlidesApi slidesApi = new SlidesApi("MyAppSid", "MyAppKey");
+SlidesApi slidesApi = new SlidesApi("MyClientId", "MyClientSecret");
 Stream presentation = File.OpenRead("MyPresentation.pptx");
 PostSlidesConvertRequest convertRequest = new PostSlidesConvertRequest(ExportFormat.Pdf, presentation);
 Stream pdf = slidesApi.PostSlidesConvert(convertRequest);

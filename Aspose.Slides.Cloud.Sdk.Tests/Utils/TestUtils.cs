@@ -24,8 +24,12 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using Aspose.Slides.Cloud.Sdk.Model.Requests;
-using System;
+#if NETFRAMEWORK
 using System.Configuration;
+#else
+using Microsoft.Extensions.Configuration;
+#endif
+using System;
 using System.IO;
 using System.Text;
 
@@ -39,6 +43,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         public static Configuration GetConfiguration()
         {
+#if NETFRAMEWORK
             return new Configuration
             {
                 DebugMode = GetBoolConfigValue("DebugMode", true),
@@ -46,9 +51,20 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 AuthBaseUrl = ConfigurationManager.AppSettings["AuthBaseUrl"]
                     ?? ConfigurationManager.AppSettings["ApiBaseUrl"]
                     ?? "https://api-qa.aspose.cloud",
-                AppSid = ConfigurationManager.AppSettings["AppSid"],
-                AppKey = ConfigurationManager.AppSettings["AppKey"]
+                AppSid = ConfigurationManager.AppSettings["ClientId"],
+                AppKey = ConfigurationManager.AppSettings["ClientSecret"]
             };
+#else
+            IConfiguration config = new ConfigurationBuilder().AddJsonFile("testConfig.json").Build();
+            return new Configuration
+            {
+                DebugMode = GetBoolConfigValue(config, "DebugMode", true),
+                ApiBaseUrl = config["ApiBaseUrl"] ?? "https://api-qa.aspose.cloud",
+                AuthBaseUrl = config["AuthBaseUrl"] ?? config["ApiBaseUrl"] ?? "https://api-qa.aspose.cloud",
+                AppSid = config["ClientId"],
+                AppKey = config["ClientSecret"]
+            };
+#endif
         }
 
         public static void Init()
@@ -98,11 +114,19 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         private static TimeSpan m_timeout = new TimeSpan(0, 1, 0);
 
+#if NETFRAMEWORK
         private static bool GetBoolConfigValue(string key, bool defaultValue)
         {
             bool result;
             return bool.TryParse(ConfigurationManager.AppSettings[key], out result) ? result : defaultValue;
         }
+#else
+        private static bool GetBoolConfigValue(IConfiguration config, string key, bool defaultValue)
+        {
+            bool result;
+            return bool.TryParse(config[key], out result) ? result : defaultValue;
+        }
+#endif
 
         private static bool IsTestDataUpToDate()
         {

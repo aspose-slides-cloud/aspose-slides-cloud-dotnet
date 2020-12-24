@@ -109,14 +109,6 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 client.Headers[headerParamsItem.Key] = headerParamsItem.Value;
             }
-            foreach (var defaultHeaderMapItem in m_defaultHeaderMap)
-            {
-                if (!headerParams.ContainsKey(defaultHeaderMapItem.Key))
-                {
-                    client.Headers[defaultHeaderMapItem.Key] = defaultHeaderMapItem.Value;
-                }
-            }
-
             client.Method = method;
             switch (method)
             {
@@ -252,18 +244,6 @@ namespace Aspose.Slides.Cloud.Sdk
             }
         }
 
-        private void AddDefaultHeader(string key, string value)
-        {
-            if (!m_defaultHeaderMap.ContainsKey(key))
-            {
-                m_defaultHeaderMap.Add(key, value);
-            }
-        }
-
-        //TODO: move to ApiAccessor
-        private readonly Dictionary<string, string> m_defaultHeaderMap = new Dictionary<string, string>();
         private readonly List<IRequestHandler> m_requestHandlers;
-
-        private List<IRequestHandler> requestHandlers;
     }
 }

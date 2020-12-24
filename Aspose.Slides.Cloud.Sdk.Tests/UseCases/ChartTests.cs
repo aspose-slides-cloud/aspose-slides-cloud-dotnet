@@ -327,7 +327,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        [ExpectedException(typeof(ApiException))]
         public void ChartDataPointCreate()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
@@ -342,7 +341,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 DataPoint = new OneValueChartDataPoint { Value = 40 }
             };
             //Must throw ApiException because adding data points only works with Scatter & Bubble charts.
-            TestUtils.SlidesApi.PostChartDataPoint(request);
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.PostChartDataPoint(request));
         }
 
         [Test]
@@ -435,10 +434,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "ChartTest.pptx";
+        const string c_fileName = "test.pptx";
         const string c_password = "password";
-        const int c_slideIndex = 1;
-        const int c_shapeIndex = 2;
+        const int c_slideIndex = 3;
+        const int c_shapeIndex = 1;
         const int c_seriesIndex = 2;
         const int c_categoryIndex = 2;
         const int c_seriesCount = 3;

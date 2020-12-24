@@ -159,7 +159,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                     {
                         if (propertyInfo.PropertyType == typeof(Stream))
                         {
-                            value = File.OpenRead(TestUtils.TestDataPath + "\\test.ppt");
+                            value = File.OpenRead(TestUtils.TestDataPath + "\\test.pptx");
                         }
                         else if (value.GetType() != type)
                         {

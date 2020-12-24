@@ -48,7 +48,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ShapeType()
         {
             const string folderName = "TempSlidesSDK";
-            const string fileName = "test.ppt";
+            const string fileName = "test.pptx";
             TestUtils.Upload(fileName, folderName + "/" + fileName);
             GetSlideShapeRequest request = new GetSlideShapeRequest
             {
@@ -60,7 +60,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             };
             ShapeBase shape = TestUtils.SlidesApi.GetSlideShape(request);
             Assert.IsInstanceOf<Shape>(shape);
-            Assert.IsNotNullOrEmpty(((Shape)shape).Text);
+            Assert.IsFalse(string.IsNullOrEmpty(((Shape)shape).Text));
         }
 
         [Test]

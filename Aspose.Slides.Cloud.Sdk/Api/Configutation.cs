@@ -38,6 +38,7 @@ namespace Aspose.Slides.Cloud.Sdk
             Version = "v3.0";
             DebugMode = false;
             CustomHeaders = new Dictionary<string, string>();
+            HttpRequestTimeout = 300;
         }
 
         /// <summary>
@@ -56,14 +57,14 @@ namespace Aspose.Slides.Cloud.Sdk
         public string Version { get; set; }
 
         /// <summary>
-        /// Gets or sets the app key.
-        /// </summary>
-        public string AppKey { get; set; }
-
-        /// <summary>
-        /// Gets or sets the app sid.
+        /// Gets or sets the Client Id.
         /// </summary>
         public string AppSid { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Client Secret.
+        /// </summary>
+        public string AppKey { get; set; }
 
         /// <summary>
         /// Gets or sets the auth token.
@@ -71,10 +72,15 @@ namespace Aspose.Slides.Cloud.Sdk
         public string AuthToken { get; set; }
 
         /// <summary>
-        /// Gets or sets slides operaion timeout in second. 0 stands for no timeout.
+        /// Gets or sets slides operaion timeout in seconds. 0 stands for no timeout.
         /// The timeout applies to the Slides operation, not to the HTTP request.
         /// </summary>
         public int Timeout { get; set; }
+
+        /// <summary>
+        /// Gets or sets HTTP Request timeout in seconds. 0 stands for default .NET timeout.
+        /// </summary>
+        public int HttpRequestTimeout { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether debug mode.

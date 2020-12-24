@@ -145,7 +145,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.ppt";
+        const string c_fileName = "test.pptx";
         const string c_password = "password";
         const int c_slideIndex = 1;
         const NotesSlideExportFormat c_format = NotesSlideExportFormat.Png;
