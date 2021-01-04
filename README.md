@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/api-v3.0-lightgrey) ![Nuget](https://img.shields.io/nuget/v/Aspose.slides-Cloud) ![Nuget](https://img.shields.io/nuget/dt/Aspose.slides-Cloud) [![GitHub license](https://img.shields.io/github/license/aspose-slides-cloud/aspose-slides-cloud-dotnet)](https://github.com/aspose-slides-cloud/aspose-slides-cloud-dotnet/blob/master/LICENSE)
-# Aspose.slides Cloud SDK for .NET [![NuGet](https://img.shields.io/nuget/v/Aspose.slides-Cloud.svg)](https://www.nuget.org/packages/Aspose.slides-Cloud/)
+# Aspose.slides Cloud SDK for .NET
 This repository contains Aspose.slides Cloud SDK for .NET source code. This SDK allows you to work with Aspose.slides Cloud REST APIs in your .NET applications.
 
 ## Key Features
@@ -12,6 +12,9 @@ This repository contains Aspose.slides Cloud SDK for .NET source code. This SDK 
 * Support of Aspose.Storage API
 
 ### New Features & Recent API Changes
+#### 20.12
+* New property "HttpRequestTimeout" is added to SDK configuration. It allows to specify a custom timeout (in seconds) for HTTP requests made by the SDK.
+
 #### 20.10
 * Removed ShapeType property from BaseShape class; replaced GeometryShapeType with ShapeType property for GeometryShape.
 * Removed redundant ResourceUriElement class. All properties of ResourceUriElement type are changed to ResourceUri type.
