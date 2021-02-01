@@ -63,9 +63,6 @@ OpenAPI spec version: 1.1
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" Exclude="obj\**" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
@@ -80,5 +77,24 @@ OpenAPI spec version: 1.1
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\SlidesApiTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UseCases\AbstractClassTests.cs" />
+    <Compile Include="UseCases\AuthTests.cs" />
+    <Compile Include="UseCases\ShapeTests.cs" />
+    <Compile Include="UseCases\ChartTests.cs" />
+    <Compile Include="UseCases\ConvertTests.cs" />
+    <Compile Include="UseCases\HeaderFooterTests.cs" />
+    <Compile Include="UseCases\NotesSlideTests.cs" />
+    <Compile Include="UseCases\NullableFieldTests.cs" />
+    <Compile Include="UseCases\PipelineTests.cs" />
+    <Compile Include="UseCases\SectionTests.cs" />
+    <Compile Include="UseCases\TimeoutTests.cs" />
+    <Compile Include="Utils\TestExecutor.cs" />
+    <Compile Include="Utils\TestRules.cs" />
+    <Compile Include="Utils\TestUtils.cs" />
+    <Compile Include="Utils\VoidTestExecutor.cs" />
   </ItemGroup>
 </Project>

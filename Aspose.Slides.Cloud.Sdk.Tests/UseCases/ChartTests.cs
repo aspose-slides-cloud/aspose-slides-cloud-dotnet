@@ -442,6 +442,5 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const int c_categoryIndex = 2;
         const int c_seriesCount = 3;
         const int c_categoryCount = 4;
-        const ShapeExportFormat c_format = ShapeExportFormat.Png;
     }
 }

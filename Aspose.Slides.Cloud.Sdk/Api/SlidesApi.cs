@@ -143,16 +143,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/categories/{categoryIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "categoryIndex", request.CategoryIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Chart>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -169,17 +170,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}/dataPoints/{pointIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesIndex", request.SeriesIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "pointIndex", request.PointIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Chart>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -196,16 +198,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesIndex", request.SeriesIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Chart>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -256,14 +259,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Slide>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Slide>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -280,16 +284,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -306,16 +311,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "paragraphs", request.Paragraphs);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -332,17 +338,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -359,17 +366,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "portions", request.Portions);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -386,15 +394,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -411,15 +420,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapes", request.Shapes);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -436,16 +446,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -462,16 +473,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "paragraphs", request.Paragraphs);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -488,17 +500,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -515,17 +528,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "portions", request.Portions);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -542,15 +556,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/sections/{sectionIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "sectionIndex", request.SectionIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "withSlides", request.WithSlides);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Sections>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Sections>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -567,15 +582,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/sections");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sections", request.Sections);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "withSlides", request.WithSlides);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Sections>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Sections>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -592,14 +608,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -616,15 +633,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/mainSequence/{effectIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "effectIndex", request.EffectIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -641,15 +659,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences/{sequenceIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "sequenceIndex", request.SequenceIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -666,16 +685,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences/{sequenceIndex}/{effectIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "sequenceIndex", request.SequenceIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "effectIndex", request.EffectIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -692,14 +712,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -716,14 +737,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/mainSequence");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -740,14 +762,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -764,15 +787,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -789,15 +813,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapes", request.Shapes);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -814,16 +839,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -840,16 +866,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapes", request.Shapes);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -866,14 +893,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", request.Slides);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -890,13 +918,14 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperties>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<DocumentProperties>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -918,14 +947,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties/{propertyName}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "propertyName", request.PropertyName);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperties>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<DocumentProperties>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -942,14 +972,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/background");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideBackground>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<SlideBackground>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -966,17 +997,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -993,17 +1025,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "paragraphs", request.Paragraphs);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1020,18 +1053,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1048,18 +1082,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "portions", request.Portions);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, null, files, "application/json");
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1140,14 +1175,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/layoutSlides/{slideIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<LayoutSlide>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<LayoutSlide>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1164,13 +1200,14 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/layoutSlides");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<LayoutSlides>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<LayoutSlides>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1187,14 +1224,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/masterSlides/{slideIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<MasterSlide>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<MasterSlide>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1211,13 +1249,14 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/masterSlides");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<MasterSlides>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<MasterSlides>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1234,14 +1273,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<NotesSlide>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<NotesSlide>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1258,14 +1298,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/exist");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<EntityExists>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<EntityExists>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1282,14 +1323,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/headerFooter");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<NotesSlideHeaderFooter>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<NotesSlideHeaderFooter>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1306,15 +1348,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<ShapeBase>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1331,16 +1374,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1357,15 +1401,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Paragraphs>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1382,17 +1427,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1409,16 +1455,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Portions>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1435,14 +1482,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Shapes>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1459,18 +1507,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", request.Width);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeBinaryApi(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1487,17 +1536,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1514,16 +1564,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Portions>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1540,13 +1591,14 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/sections");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Sections>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Sections>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1563,15 +1615,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1588,14 +1641,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/headerFooter");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<HeaderFooter>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<HeaderFooter>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1612,15 +1666,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<ShapeBase>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1637,16 +1692,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1663,15 +1719,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Paragraphs>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1688,14 +1745,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Shapes>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1712,16 +1770,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<ShapeBase>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1738,17 +1797,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1765,16 +1825,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraphs>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Paragraphs>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1791,15 +1852,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Shapes>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Shapes>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1829,13 +1891,14 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Document>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1852,13 +1915,14 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperties>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<DocumentProperties>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1880,14 +1944,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties/{propertyName}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "propertyName", request.PropertyName);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperty>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<DocumentProperty>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1904,14 +1969,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/images/{index}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "index", request.Index);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeBinaryApi(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1928,15 +1994,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/images/{index}/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "index", request.Index);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeBinaryApi(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1953,13 +2020,14 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/images");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Images>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Images>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -1976,15 +2044,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/placeholders/{placeholderIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "placeholderIndex", request.PlaceholderIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Placeholder>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Placeholder>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2001,14 +2070,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/placeholders");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Placeholders>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Placeholders>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2025,14 +2095,39 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/textItems");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "withEmpty", request.WithEmpty);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<TextItems>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<TextItems>(resourcePath, "GET", null, headerParams, files, "application/json");
+        }
+
+        /// <summary>
+        /// Read presentation protection properties. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetSlidesProtectionPropertiesRequest" /></param> 
+        /// <returns><see cref="ProtectionProperties"/></returns>            
+        public ProtectionProperties GetSlidesProtectionProperties(GetSlidesProtectionPropertiesRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesProtectionProperties");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/protectionProperties");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<ProtectionProperties>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2049,14 +2144,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Slide>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Slide>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2073,14 +2169,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/background");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideBackground>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<SlideBackground>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2097,14 +2194,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/comments");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideComments>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<SlideComments>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2121,14 +2219,39 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/images");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Images>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Images>(resourcePath, "GET", null, headerParams, files, "application/json");
+        }
+
+        /// <summary>
+        /// Read presentation slide properties. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetSlidesSlidePropertiesRequest" /></param> 
+        /// <returns><see cref="SlideProperties"/></returns>            
+        public SlideProperties GetSlidesSlideProperties(GetSlidesSlidePropertiesRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesSlideProperties");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slideProperties");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<SlideProperties>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2145,15 +2268,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/textItems");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "withEmpty", request.WithEmpty);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<TextItems>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<TextItems>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2170,13 +2294,14 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Model.Slides>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2193,14 +2318,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/theme");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Theme>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Theme>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2217,14 +2343,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/theme/colorScheme");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ColorScheme>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<ColorScheme>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2241,14 +2368,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/theme/fontScheme");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<FontScheme>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<FontScheme>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2265,14 +2393,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/theme/formatScheme");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<FormatScheme>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<FormatScheme>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2289,13 +2418,14 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/viewProperties");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ViewProperties>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<ViewProperties>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2312,18 +2442,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2340,17 +2471,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portions>(resourcePath, "GET", null, null, files, "application/json");
+            return InvokeApi<Portions>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2446,17 +2578,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2478,18 +2611,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Portion>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2506,17 +2640,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", request.ShapeToClone);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2533,18 +2668,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", request.ShapeToClone);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2566,18 +2702,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2599,19 +2736,20 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Portion>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2633,15 +2771,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<NotesSlide>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<NotesSlide>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2663,16 +2802,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/categories");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Category); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Chart>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2694,17 +2834,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}/dataPoints");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesIndex", request.SeriesIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.DataPoint); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Chart>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2726,16 +2867,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Series); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Chart>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2757,17 +2899,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/layoutSlides");
+            var headerParams = new Dictionary<string, string>();
+            
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFrom", request.CloneFrom);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFromPosition", request.CloneFromPosition);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFromPassword", request.CloneFromPassword);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFromStorage", request.CloneFromStorage);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "cloneFromPassword", request.CloneFromPassword);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<LayoutSlide>(resourcePath, "POST", null, null, files, "application/json");
+            return InvokeApi<LayoutSlide>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2789,18 +2933,20 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/masterSlides");
+            var headerParams = new Dictionary<string, string>();
+            
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFrom", request.CloneFrom);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFromPosition", request.CloneFromPosition);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFromPassword", request.CloneFromPassword);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "cloneFromStorage", request.CloneFromStorage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "applyToAll", request.ApplyToAll);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "cloneFromPassword", request.CloneFromPassword);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<MasterSlide>(resourcePath, "POST", null, null, files, "application/json");
+            return InvokeApi<MasterSlide>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2817,12 +2963,13 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/slides/{slideIndex}/notesSlide");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = request.Document;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeStreamApi<NotesSlide>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeStreamApi<NotesSlide>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2839,12 +2986,13 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/slides/{slideIndex}/notesSlide/exist");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = request.Document;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeStreamApi<EntityExists>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeStreamApi<EntityExists>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2861,16 +3009,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/slides/{slideIndex}/notesSlide/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", request.Width);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = request.Document;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryStreamApi(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeBinaryStreamApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2892,17 +3041,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2924,18 +3074,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Portion>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2957,17 +3108,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", request.ShapeToClone);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2984,21 +3136,22 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", request.ScaleX);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3020,14 +3173,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/merge");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Document>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3049,15 +3203,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/sections");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sectionName", request.SectionName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Sections>(resourcePath, "POST", null, null, files, "application/json");
+            return InvokeApi<Sections>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3074,15 +3229,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/sections/{sectionIndex}/move");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "sectionIndex", request.SectionIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newPosition", request.NewPosition);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Sections>(resourcePath, "POST", null, null, files, "application/json");
+            return InvokeApi<Sections>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3099,21 +3255,22 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", request.ScaleX);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3135,15 +3292,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/mainSequence");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3165,15 +3323,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Sequence); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3195,16 +3354,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences/{sequenceIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "sequenceIndex", request.SequenceIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3221,19 +3381,20 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", request.Width);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3250,15 +3411,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "layoutAlias", request.LayoutAlias);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, "application/json");
+            return InvokeApi<Model.Slides>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3275,13 +3437,14 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/convert/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = request.Document;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryStreamApi(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeBinaryStreamApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3298,18 +3461,20 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/copy");
+            var headerParams = new Dictionary<string, string>();
+            
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slideToCopy", request.SlideToCopy);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", request.Position);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "source", request.Source);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sourcePassword", request.SourcePassword);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sourceStorage", request.SourceStorage);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "sourcePassword", request.SourcePassword);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, "application/json");
+            return InvokeApi<Model.Slides>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3326,15 +3491,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}");
+            var headerParams = new Dictionary<string, string>();
+            
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "inputPassword", request.InputPassword);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "inputPassword", request.InputPassword);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = request.Data;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeStreamApi<Document>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeStreamApi<Document>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3351,14 +3518,40 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/fromHtml");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Html); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Document>(resourcePath, "POST", postBody, headerParams, files, "application/json");
+        }
+
+        /// <summary>
+        /// Create presentation document from pdf or append pdf to an existing presentation. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostSlidesDocumentFromPdfRequest" /></param> 
+        /// <returns><see cref="Document"/></returns>            
+        public Document PostSlidesDocumentFromPdf(PostSlidesDocumentFromPdfRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostSlidesDocumentFromPdf");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/fromPdf");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
+            var postBody = request.Pdf;
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeStreamApi<Document>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3375,16 +3568,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/fromSource");
+            var headerParams = new Dictionary<string, string>();
+            
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sourcePath", request.SourcePath);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sourcePassword", request.SourcePassword);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sourceStorage", request.SourceStorage);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "sourcePassword", request.SourcePassword);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "POST", null, null, files, "application/json");
+            return InvokeApi<Document>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3406,18 +3601,20 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/fromTemplate");
+            var headerParams = new Dictionary<string, string>();
+            
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "templatePath", request.TemplatePath);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "templatePassword", request.TemplatePassword);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "templateStorage", request.TemplateStorage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "isImageDataEmbedded", request.IsImageDataEmbedded);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "templatePassword", request.TemplatePassword);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Data); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<Document>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3464,16 +3661,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/replaceText");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "oldValue", request.OldValue);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newValue", request.NewValue);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignoreCase", request.IgnoreCase);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentReplaceResult>(resourcePath, "POST", null, null, files, "application/json");
+            return InvokeApi<DocumentReplaceResult>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3490,15 +3688,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/move");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newPosition", request.NewPosition);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, "application/json");
+            return InvokeApi<Model.Slides>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3515,15 +3714,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/reorder");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "oldPositions", request.OldPositions);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newPositions", request.NewPositions);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Model.Slides>(resourcePath, "POST", null, null, files, "application/json");
+            return InvokeApi<Model.Slides>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3540,16 +3740,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3571,14 +3772,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Properties); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperties>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<DocumentProperties>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3605,17 +3807,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/replaceText");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "oldValue", request.OldValue);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newValue", request.NewValue);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignoreCase", request.IgnoreCase);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideReplaceResult>(resourcePath, "POST", null, null, files, "application/json");
+            return InvokeApi<SlideReplaceResult>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3632,6 +3835,7 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/split");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", request.Width);
@@ -3639,14 +3843,14 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "to", request.To);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "from", request.From);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destFolder", request.DestFolder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SplitDocumentResult>(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeApi<SplitDocumentResult>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3663,22 +3867,23 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", request.ScaleX);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3700,17 +3905,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/categories/{categoryIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "categoryIndex", request.CategoryIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Category); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Chart>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3732,18 +3938,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}/dataPoints/{pointIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesIndex", request.SeriesIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "pointIndex", request.PointIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.DataPoint); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Chart>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3765,17 +3972,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/series/{seriesIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesIndex", request.SeriesIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Series); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Chart>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Chart>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3797,15 +4005,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/layoutSlides/{slideIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.SlideDto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<LayoutSlide>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<LayoutSlide>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3827,15 +4036,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/headerFooter");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<NotesSlideHeaderFooter>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<NotesSlideHeaderFooter>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3857,22 +4067,23 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", request.ScaleX);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, "application/json");
+            InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3894,14 +4105,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/merge");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Document>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3923,15 +4135,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/sections/{sectionIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "sectionIndex", request.SectionIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sectionName", request.SectionName);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Sections>(resourcePath, "PUT", null, null, files, "application/json");
+            return InvokeApi<Sections>(resourcePath, "PUT", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3953,14 +4166,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/sections");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Sections); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Sections>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Sections>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3982,18 +4196,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Portion>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4015,17 +4230,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4047,19 +4263,20 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Portion>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4081,18 +4298,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4114,22 +4332,23 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", request.ScaleX);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, "application/json");
+            InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4151,15 +4370,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Animation); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4181,16 +4401,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/mainSequence/{effectIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "effectIndex", request.EffectIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4212,17 +4433,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/animation/interactiveSequences/{sequenceIndex}/{effectIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "sequenceIndex", request.SequenceIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "effectIndex", request.EffectIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4244,15 +4466,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/headerFooter");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<HeaderFooter>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<HeaderFooter>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4274,20 +4497,21 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", request.Width);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, "application/json");
+            InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4309,16 +4533,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4340,17 +4565,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4372,14 +4598,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/convert/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = request.Document;
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidStreamApi(resourcePath, "PUT", postBody, null, files, "application/json");
+            InvokeVoidStreamApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4387,6 +4614,7 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="request">Request. <see cref="PutSlidesDocumentFromHtmlRequest" /></param> 
         /// <returns><see cref="Document"/></returns>            
+        [System.Obsolete]
         public Document PutSlidesDocumentFromHtml(PutSlidesDocumentFromHtmlRequest request)
         {
             // verify the required parameter 'name' is set
@@ -4396,14 +4624,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/fromHtml");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Html); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Document>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4425,14 +4654,45 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/headerFooter");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Document>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
+        }
+
+        /// <summary>
+        /// Update presentation protection properties. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PutSlidesProtectionPropertiesRequest" /></param> 
+        /// <returns><see cref="ProtectionProperties"/></returns>            
+        public ProtectionProperties PutSlidesProtectionProperties(PutSlidesProtectionPropertiesRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesProtectionProperties");
+            }
+            // verify the required parameter 'dto' is set
+            if (request.Dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling PutSlidesProtectionProperties");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/protectionProperties");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<ProtectionProperties>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4454,17 +4714,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, "application/json");
+            InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4491,15 +4752,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/documentproperties/{propertyName}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "propertyName", request.PropertyName);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Property); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<DocumentProperty>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<DocumentProperty>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4521,15 +4783,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.SlideDto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Slide>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Slide>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4551,15 +4814,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/background");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Background); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideBackground>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<SlideBackground>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4581,15 +4845,46 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/backgroundColor");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "color", request.Color);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<SlideBackground>(resourcePath, "PUT", null, null, files, "application/json");
+            return InvokeApi<SlideBackground>(resourcePath, "PUT", null, headerParams, files, "application/json");
+        }
+
+        /// <summary>
+        /// Update presentation slide properties. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PutSlidesSlidePropertiesRequest" /></param> 
+        /// <returns><see cref="SlideProperties"/></returns>            
+        public SlideProperties PutSlidesSlideProperties(PutSlidesSlidePropertiesRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSlideProperties");
+            }
+            // verify the required parameter 'dto' is set
+            if (request.Dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling PutSlidesSlideProperties");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slideProperties");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
+            var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
+            var files = new List<FileInfo>();
+            PickFiles(files, request);
+            return InvokeApi<SlideProperties>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4597,6 +4892,7 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="request">Request. <see cref="PutSlidesSlideSizeRequest" /></param> 
         /// <returns><see cref="Document"/></returns>            
+        [System.Obsolete]
         public Document PutSlidesSlideSize(PutSlidesSlideSizeRequest request)
         {
             // verify the required parameter 'name' is set
@@ -4606,17 +4902,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slideSize");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", request.Width);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sizeType", request.SizeType);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleType", request.ScaleType);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Document>(resourcePath, "PUT", null, null, files, "application/json");
+            return InvokeApi<Document>(resourcePath, "PUT", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4638,14 +4935,15 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/viewProperties");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ViewProperties>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<ViewProperties>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4667,23 +4965,24 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", request.ScaleX);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", request.ScaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", request.Bounds);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            InvokeVoidApi(resourcePath, "PUT", postBody, null, files, "application/json");
+            InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4705,15 +5004,16 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<NotesSlide>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<NotesSlide>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4735,16 +5035,17 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4766,17 +5067,18 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4798,18 +5100,19 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", request.ShapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", request.ParagraphIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", request.PortionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
             PickFiles(files, request);
-            return InvokeApi<Portion>(resourcePath, "PUT", postBody, null, files, "application/json");
+            return InvokeApi<Portion>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
         /// <summary>

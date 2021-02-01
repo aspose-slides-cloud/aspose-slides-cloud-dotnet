@@ -12859,6 +12859,125 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test GetSlidesProtectionProperties
+        /// </summary>
+        [Test]
+        public void GetSlidesProtectionProperties()
+        {
+            TestExecutor<GetSlidesProtectionPropertiesRequest, ProtectionProperties> testExecutor =
+                new TestExecutor<GetSlidesProtectionPropertiesRequest, ProtectionProperties>("GetSlidesProtectionProperties", null);
+            GetSlidesProtectionPropertiesRequest request = testExecutor.PrepareRequest();
+            ProtectionProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesProtectionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesProtectionPropertiesInvalidName()
+        {
+            TestExecutor<GetSlidesProtectionPropertiesRequest, ProtectionProperties> testExecutor =
+                new TestExecutor<GetSlidesProtectionPropertiesRequest, ProtectionProperties>("GetSlidesProtectionProperties", "Name");
+            GetSlidesProtectionPropertiesRequest request = testExecutor.PrepareRequest();
+            ProtectionProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesProtectionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesProtectionPropertiesInvalidPassword()
+        {
+            TestExecutor<GetSlidesProtectionPropertiesRequest, ProtectionProperties> testExecutor =
+                new TestExecutor<GetSlidesProtectionPropertiesRequest, ProtectionProperties>("GetSlidesProtectionProperties", "Password");
+            GetSlidesProtectionPropertiesRequest request = testExecutor.PrepareRequest();
+            ProtectionProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesProtectionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesProtectionPropertiesInvalidFolder()
+        {
+            TestExecutor<GetSlidesProtectionPropertiesRequest, ProtectionProperties> testExecutor =
+                new TestExecutor<GetSlidesProtectionPropertiesRequest, ProtectionProperties>("GetSlidesProtectionProperties", "Folder");
+            GetSlidesProtectionPropertiesRequest request = testExecutor.PrepareRequest();
+            ProtectionProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesProtectionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesProtectionPropertiesInvalidStorage()
+        {
+            TestExecutor<GetSlidesProtectionPropertiesRequest, ProtectionProperties> testExecutor =
+                new TestExecutor<GetSlidesProtectionPropertiesRequest, ProtectionProperties>("GetSlidesProtectionProperties", "Storage");
+            GetSlidesProtectionPropertiesRequest request = testExecutor.PrepareRequest();
+            ProtectionProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesProtectionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test GetSlidesSlide
         /// </summary>
         [Test]
@@ -13413,6 +13532,125 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.GetSlidesSlideImages(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSlidesSlideProperties
+        /// </summary>
+        [Test]
+        public void GetSlidesSlideProperties()
+        {
+            TestExecutor<GetSlidesSlidePropertiesRequest, SlideProperties> testExecutor =
+                new TestExecutor<GetSlidesSlidePropertiesRequest, SlideProperties>("GetSlidesSlideProperties", null);
+            GetSlidesSlidePropertiesRequest request = testExecutor.PrepareRequest();
+            SlideProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesSlideProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesSlidePropertiesInvalidName()
+        {
+            TestExecutor<GetSlidesSlidePropertiesRequest, SlideProperties> testExecutor =
+                new TestExecutor<GetSlidesSlidePropertiesRequest, SlideProperties>("GetSlidesSlideProperties", "Name");
+            GetSlidesSlidePropertiesRequest request = testExecutor.PrepareRequest();
+            SlideProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesSlideProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesSlidePropertiesInvalidPassword()
+        {
+            TestExecutor<GetSlidesSlidePropertiesRequest, SlideProperties> testExecutor =
+                new TestExecutor<GetSlidesSlidePropertiesRequest, SlideProperties>("GetSlidesSlideProperties", "Password");
+            GetSlidesSlidePropertiesRequest request = testExecutor.PrepareRequest();
+            SlideProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesSlideProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesSlidePropertiesInvalidFolder()
+        {
+            TestExecutor<GetSlidesSlidePropertiesRequest, SlideProperties> testExecutor =
+                new TestExecutor<GetSlidesSlidePropertiesRequest, SlideProperties>("GetSlidesSlideProperties", "Folder");
+            GetSlidesSlidePropertiesRequest request = testExecutor.PrepareRequest();
+            SlideProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesSlideProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSlidesSlidePropertiesInvalidStorage()
+        {
+            TestExecutor<GetSlidesSlidePropertiesRequest, SlideProperties> testExecutor =
+                new TestExecutor<GetSlidesSlidePropertiesRequest, SlideProperties>("GetSlidesSlideProperties", "Storage");
+            GetSlidesSlidePropertiesRequest request = testExecutor.PrepareRequest();
+            SlideProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSlidesSlideProperties(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -21492,6 +21730,148 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test PostSlidesDocumentFromPdf
+        /// </summary>
+        [Test]
+        public void PostSlidesDocumentFromPdf()
+        {
+            TestExecutor<PostSlidesDocumentFromPdfRequest, Document> testExecutor =
+                new TestExecutor<PostSlidesDocumentFromPdfRequest, Document>("PostSlidesDocumentFromPdf", null);
+            PostSlidesDocumentFromPdfRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesDocumentFromPdf(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesDocumentFromPdfInvalidName()
+        {
+            TestExecutor<PostSlidesDocumentFromPdfRequest, Document> testExecutor =
+                new TestExecutor<PostSlidesDocumentFromPdfRequest, Document>("PostSlidesDocumentFromPdf", "Name");
+            PostSlidesDocumentFromPdfRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesDocumentFromPdf(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesDocumentFromPdfInvalidPdf()
+        {
+            TestExecutor<PostSlidesDocumentFromPdfRequest, Document> testExecutor =
+                new TestExecutor<PostSlidesDocumentFromPdfRequest, Document>("PostSlidesDocumentFromPdf", "Pdf");
+            PostSlidesDocumentFromPdfRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesDocumentFromPdf(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesDocumentFromPdfInvalidPassword()
+        {
+            TestExecutor<PostSlidesDocumentFromPdfRequest, Document> testExecutor =
+                new TestExecutor<PostSlidesDocumentFromPdfRequest, Document>("PostSlidesDocumentFromPdf", "Password");
+            PostSlidesDocumentFromPdfRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesDocumentFromPdf(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesDocumentFromPdfInvalidStorage()
+        {
+            TestExecutor<PostSlidesDocumentFromPdfRequest, Document> testExecutor =
+                new TestExecutor<PostSlidesDocumentFromPdfRequest, Document>("PostSlidesDocumentFromPdf", "Storage");
+            PostSlidesDocumentFromPdfRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesDocumentFromPdf(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PostSlidesDocumentFromPdfInvalidFolder()
+        {
+            TestExecutor<PostSlidesDocumentFromPdfRequest, Document> testExecutor =
+                new TestExecutor<PostSlidesDocumentFromPdfRequest, Document>("PostSlidesDocumentFromPdf", "Folder");
+            PostSlidesDocumentFromPdfRequest request = testExecutor.PrepareRequest();
+            Document response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesDocumentFromPdf(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test PostSlidesDocumentFromSource
         /// </summary>
         [Test]
@@ -28509,6 +28889,148 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test PutSlidesProtectionProperties
+        /// </summary>
+        [Test]
+        public void PutSlidesProtectionProperties()
+        {
+            TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties> testExecutor =
+                new TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties>("PutSlidesProtectionProperties", null);
+            PutSlidesProtectionPropertiesRequest request = testExecutor.PrepareRequest();
+            ProtectionProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesProtectionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesProtectionPropertiesInvalidName()
+        {
+            TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties> testExecutor =
+                new TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties>("PutSlidesProtectionProperties", "Name");
+            PutSlidesProtectionPropertiesRequest request = testExecutor.PrepareRequest();
+            ProtectionProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesProtectionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesProtectionPropertiesInvalidDto()
+        {
+            TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties> testExecutor =
+                new TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties>("PutSlidesProtectionProperties", "Dto");
+            PutSlidesProtectionPropertiesRequest request = testExecutor.PrepareRequest();
+            ProtectionProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesProtectionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesProtectionPropertiesInvalidPassword()
+        {
+            TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties> testExecutor =
+                new TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties>("PutSlidesProtectionProperties", "Password");
+            PutSlidesProtectionPropertiesRequest request = testExecutor.PrepareRequest();
+            ProtectionProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesProtectionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesProtectionPropertiesInvalidFolder()
+        {
+            TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties> testExecutor =
+                new TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties>("PutSlidesProtectionProperties", "Folder");
+            PutSlidesProtectionPropertiesRequest request = testExecutor.PrepareRequest();
+            ProtectionProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesProtectionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesProtectionPropertiesInvalidStorage()
+        {
+            TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties> testExecutor =
+                new TestExecutor<PutSlidesProtectionPropertiesRequest, ProtectionProperties>("PutSlidesProtectionProperties", "Storage");
+            PutSlidesProtectionPropertiesRequest request = testExecutor.PrepareRequest();
+            ProtectionProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesProtectionProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test PutSlidesSaveAs
         /// </summary>
         [Test]
@@ -29366,6 +29888,148 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.PutSlidesSlideBackgroundColor(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test PutSlidesSlideProperties
+        /// </summary>
+        [Test]
+        public void PutSlidesSlideProperties()
+        {
+            TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties> testExecutor =
+                new TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties>("PutSlidesSlideProperties", null);
+            PutSlidesSlidePropertiesRequest request = testExecutor.PrepareRequest();
+            SlideProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesSlideProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesSlidePropertiesInvalidName()
+        {
+            TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties> testExecutor =
+                new TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties>("PutSlidesSlideProperties", "Name");
+            PutSlidesSlidePropertiesRequest request = testExecutor.PrepareRequest();
+            SlideProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesSlideProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesSlidePropertiesInvalidDto()
+        {
+            TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties> testExecutor =
+                new TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties>("PutSlidesSlideProperties", "Dto");
+            PutSlidesSlidePropertiesRequest request = testExecutor.PrepareRequest();
+            SlideProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesSlideProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesSlidePropertiesInvalidPassword()
+        {
+            TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties> testExecutor =
+                new TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties>("PutSlidesSlideProperties", "Password");
+            PutSlidesSlidePropertiesRequest request = testExecutor.PrepareRequest();
+            SlideProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesSlideProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesSlidePropertiesInvalidFolder()
+        {
+            TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties> testExecutor =
+                new TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties>("PutSlidesSlideProperties", "Folder");
+            PutSlidesSlidePropertiesRequest request = testExecutor.PrepareRequest();
+            SlideProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesSlideProperties(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void PutSlidesSlidePropertiesInvalidStorage()
+        {
+            TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties> testExecutor =
+                new TestExecutor<PutSlidesSlidePropertiesRequest, SlideProperties>("PutSlidesSlideProperties", "Storage");
+            PutSlidesSlidePropertiesRequest request = testExecutor.PrepareRequest();
+            SlideProperties response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PutSlidesSlideProperties(request);
                 needAssertResponse = true;
             }
             catch (Exception ex)

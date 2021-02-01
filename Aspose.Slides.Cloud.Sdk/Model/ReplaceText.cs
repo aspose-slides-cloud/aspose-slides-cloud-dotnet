@@ -63,7 +63,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static Dictionary<string, object> TypeDeterminers
+        public static new Dictionary<string, object> TypeDeterminers
         {
             get
             {

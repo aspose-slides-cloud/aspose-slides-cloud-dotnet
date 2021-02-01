@@ -11,8 +11,14 @@ This repository contains Aspose.Slides Cloud SDK for .NET source code. This SDK 
 * Support of Aspose.Storage API
 
 ### New Features & Recent API Changes
+#### 21.1
+* New PostSlidesDocumentFromPdf method allows creating presentations or adding slides to it using a PDF file as a source.
+* New GetSlidesSlideProperties, GetSlidesProtectionProperties, PutSlidesSlideProperties, PutSlidesProtectionProperties allow to get/set presentaion properties like slide size, orientaion, read-only etc.
+* PutSlidesDocumentFromHtml method is deprecated and will be deleted in 21.4 release. Use PostSlidesDocumentFromHtml method instead.
+* PutSlidesSlideSize method is deprecated and will be deleted in 21.4 release. Use PutSlidesProtectionProperties method instead.
+
 #### 20.12
-* Added HttpRequestTimeout Configuration property.
+* HttpRequestTimeout property is added to Configuration class. It allows to specify a custom timeout (in seconds) for HTTP requests made by the SDK.
 
 #### 20.10
 * Removed ShapeType property from BaseShape class; replaced GeometryShapeType with ShapeType property for GeometryShape.

@@ -23,7 +23,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Collections.Generic;
 using System.IO;
 using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Model.Requests;

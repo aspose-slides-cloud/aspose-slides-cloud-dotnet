@@ -24,6 +24,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Collections;
+using System.Collections.Generic;
 
 #if NETFRAMEWORK
 using System;
@@ -73,6 +74,13 @@ namespace Aspose.Slides.Cloud.Sdk
 #else
             return Microsoft.AspNetCore.WebUtilities.QueryHelpers.AddQueryString(url, parameterName, GetValue(parameterValue));
 #endif
+        }
+        public static void AddHeaderParameter(Dictionary<string, string> parameters, string parameterName, object parameterValue)
+        {
+            if (parameterValue != null && !string.IsNullOrEmpty(parameterValue.ToString()))
+            {
+                parameters.Add(parameterName, parameterValue.ToString());
+            }
         }
 
         public static string GetValue(object value)
