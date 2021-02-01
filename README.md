@@ -1,37 +1,43 @@
-# Aspose.Slides Cloud SDK for .NET [![NuGet](https://img.shields.io/nuget/v/Aspose.Slides-Cloud.svg)](https://www.nuget.org/packages/Aspose.Slides-Cloud/)
-This repository contains Aspose.Slides Cloud SDK for .NET source code. This SDK allows you to work with Aspose.Slides Cloud REST APIs in your .NET applications.
+# .NET REST API to Process Presentation in Cloud
+This repository contains Aspose.slides Cloud SDK for .NET source code. This SDK allows you to [process & manipulate PPT, PPTX, ODP, OTP](https://products.aspose.cloud/slides/net) using Aspose.slides Cloud REST APIs in your .NET applications.
 
-## Key Features
-* Conversion between various document-related formats (20+ formats supported), including PDF<->PowerPoint conversion
-* Download slides and shapes in various formats, including PDF and SVG
-* Merge and split PowerPoint presentations
-* Access PowerPoint presentation metadata and statistics
-* Find and replace
-* Full read & write access to Document Object Model, including slides, shapes, paragraphs, portions and many others
-* Support of Aspose.Storage API
+## Presentation Processing Features
 
-### New Features & Recent API Changes
-#### 21.1
-* New PostSlidesDocumentFromPdf method allows creating presentations or adding slides to it using a PDF file as a source.
-* New GetSlidesSlideProperties, GetSlidesProtectionProperties, PutSlidesSlideProperties, PutSlidesProtectionProperties allow to get/set presentaion properties like slide size, orientaion, read-only etc.
-* PutSlidesDocumentFromHtml method is deprecated and will be deleted in 21.4 release. Use PostSlidesDocumentFromHtml method instead.
-* PutSlidesSlideSize method is deprecated and will be deleted in 21.4 release. Use PutSlidesProtectionProperties method instead.
+- Fetch presentation images in any of the supported file formats.
+- Copy the layout side or clone the master slide from the source presentation.
+- Process slides shapes, slides notes, placeholders, colors & font theme info.
+- Programmatically create a presentation from HTML & export it to various formats.
+- Merge multiple presentations or split the single presentation into multiple ones.
+- Extract and replace text from a specific slide or an entire presentation.
 
-#### 20.12
-* HttpRequestTimeout property is added to Configuration class. It allows to specify a custom timeout (in seconds) for HTTP requests made by the SDK.
+## Read & Write Presentation Formats
+**Microsoft PowerPoint:** PPT, PPTX, PPS, PPSX, PPTM, PPSM, POTX, POTM
+**OpenOffice:** ODP, OTP, FODP
 
-#### 20.10
-* Removed ShapeType property from BaseShape class; replaced GeometryShapeType with ShapeType property for GeometryShape.
-* Removed redundant ResourceUriElement class. All properties of ResourceUriElement type are changed to ResourceUri type.
+## Save Presentation As
+**Fixed Layout:** PDF, PDF/A, XPS
+**Images:** JPEG, PNG, BMP, TIFF, SVG
+**Web:** HTML
+**Other:** SWF (export whole presentations)
 
-#### 20.9
-* New GetSections, PutSections, PutSection, PostSection, PostSectionMove, DeleteSection, DeleteSections methods to add, update and delete presentation sections.
-* New PostSlidesHeaderFooter, PostSlideHeaderFooter, GetSlideHeaderFooter, PostNotesSlideHeaderFooter, GetNotesSlideHeaderFooter methods to manage header/footer settings for slides.
-* Replaced Categories for ParentCategories & Level properties in ChartCategory class to properly support Sunburst & Treeview charts.
+## Enhancements in Version 21.1
+* New **PostSlidesDocumentFromPdf** method allows creating presentations or adding slides to it using a PDF file as a source.
+* New **GetSlidesSlideProperties**, **GetSlidesProtectionProperties**, **PutSlidesSlideProperties**, **PutSlidesProtectionProperties** allow to get/set presentaion properties like slide size, orientaion, read-only etc.
+* **PutSlidesDocumentFromHtml** method is deprecated and will be deleted in 21.4 release. Use **PostSlidesDocumentFromHtml** method instead.
+* **PutSlidesSlideSize** method is deprecated and will be deleted in 21.4 release. Use **PutSlidesProtectionProperties** method instead.
 
-#### 20.8
-* New PostChartCategory, PutChartCategory, DeleteChartCategory, PostChartDataPoint, PutChartDataPoint, DeleteChartDataPoint methods to add, update and delete categories & data points. Also, DataPoints property was added to ChartCategory class.
-* New DefaultRegularFont property in ExportOptions class.
+## Enhancements in Version 20.12
+- Updated the SDK to run with cloud image.
+- **HttpRequestTimeout** property is added to SDK configuration. It allows specifying a custom timeout (in seconds) for **HTTP** requests made by the SDK.
+
+## Enhancements in Version 20.10
+* Removed ****ShapeType** property from BaseShape class; replaced **GeometryShapeType** with **ShapeType** property for **GeometryShape**.
+* Removed redundant **ResourceUriElement** class. All properties of **ResourceUriElement** type are changed to ResourceUri type.
+
+## Enhancements in Version 20.9
+* New **GetSections, PutSections, PutSection, PostSection, PostSectionMove, DeleteSection, DeleteSections** methods to add, update and delete presentation sections.
+* New **PostslidesHeaderFooter, PostSlideHeaderFooter, GetSlideHeaderFooter, PostNotesSlideHeaderFooter, GetNotesSlideHeaderFooter** methods to manage header/footer settings for slides.
+* Replaced Categories for **ParentCategories** & Level properties in **ChartCategory** class to properly support Sunburst & Treeview charts.
 
 ## Licensing
 All Aspose.Slides Cloud SDKs are licensed under MIT License.
