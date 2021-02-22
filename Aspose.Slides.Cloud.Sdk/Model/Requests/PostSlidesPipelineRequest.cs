@@ -1,4 +1,3 @@
-
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostSlidesPipelineRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -46,14 +45,21 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Initializes a new instance of the <see cref="PostSlidesPipelineRequest"/> class.
         /// </summary>
         /// <param name="pipeline">A Pipeline object.</param>
-        public PostSlidesPipelineRequest(Pipeline pipeline)
+        /// <param name="files">Files to upload with the pipeline</param>
+        public PostSlidesPipelineRequest(Pipeline pipeline, List<FileInfo> files = null)
         {
             this.Pipeline = pipeline;
+            this.Files = files;
         }
 
         /// <summary>
         /// A Pipeline object.
         /// </summary>  
         public Pipeline Pipeline { get; set; }
+
+        /// <summary>
+        /// Files to upload with the pipeline
+        /// </summary>  
+        public List<FileInfo> Files { get; set; }
   }
 }

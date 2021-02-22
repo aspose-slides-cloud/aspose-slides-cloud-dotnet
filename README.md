@@ -20,6 +20,10 @@ This repository contains Aspose.slides Cloud SDK for .NET source code. This SDK 
 **Web:** HTML
 **Other:** SWF (export whole presentations)
 
+## Enhancements in Version 21.2
+* New **Map** value of **ChartTypeEnum** type to manage map charts.
+* New **SketchFromat** property of **LineFormat** class.
+
 ## Enhancements in Version 21.1
 * New **PostSlidesDocumentFromPdf** method allows creating presentations or adding slides to it using a PDF file as a source.
 * New **GetSlidesSlideProperties**, **GetSlidesProtectionProperties**, **PutSlidesSlideProperties**, **PutSlidesProtectionProperties** allow to get/set presentaion properties like slide size, orientaion, read-only etc.

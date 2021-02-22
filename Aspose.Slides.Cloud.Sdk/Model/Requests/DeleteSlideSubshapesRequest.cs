@@ -1,4 +1,3 @@
-
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="DeleteSlideSubshapesRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud

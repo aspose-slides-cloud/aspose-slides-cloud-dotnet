@@ -22342,6 +22342,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             }
         }
 
+        [Test]
+        public void PostSlidesPipelineInvalidFiles()
+        {
+            TestExecutor<PostSlidesPipelineRequest, System.IO.Stream> testExecutor =
+                new TestExecutor<PostSlidesPipelineRequest, System.IO.Stream>("PostSlidesPipeline", "Files");
+            PostSlidesPipelineRequest request = testExecutor.PrepareRequest();
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.PostSlidesPipeline(request);
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
         
         /// <summary>
         /// Test PostSlidesPresentationReplaceText

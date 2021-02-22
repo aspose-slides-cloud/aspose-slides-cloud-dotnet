@@ -450,7 +450,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// <summary>
             /// Enum Funnel for "Funnel"
             /// </summary>
-            Funnel
+            Funnel,
+            
+            /// <summary>
+            /// Enum Map for "Map"
+            /// </summary>
+            Map
         }
 
         /// <summary>

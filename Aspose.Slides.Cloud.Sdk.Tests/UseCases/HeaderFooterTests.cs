@@ -123,7 +123,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Dto = new NotesSlideHeaderFooter
                 {
                     IsHeaderVisible = true,
-                    HeaderText = "footer",
+                    HeaderText = "header",
                     IsDateTimeVisible = false
                 }
             };

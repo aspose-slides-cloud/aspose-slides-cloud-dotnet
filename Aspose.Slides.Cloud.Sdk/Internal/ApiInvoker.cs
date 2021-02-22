@@ -149,58 +149,58 @@ namespace Aspose.Slides.Cloud.Sdk
 
         private void WriteBodyAndFiles(Stream stream, B body, List<FileInfo> files, ref string contentType)
         {
-            string formDataBoundary = Guid.NewGuid().ToString();
-            int partCount = files.Count + (body != null ? 1 : 0);
-            int partIndex = 0;
-            if (files.Count > 0)
+            //content is multipart if there are multiple files and/or body params
+            if (files.Count + (body != null ? 1 : 0) > 1)
             {
-                contentType = partCount > 1 ? "multipart/form-data; boundary=" + formDataBoundary : "multipart/form-data";
-            }
-            if (body != null)
-            {
-                WriteMultipartFormDataHeader(stream, null, contentType, formDataBoundary, ref partIndex, partCount);
-                CopyToStream(body, stream);
-            }
-            foreach (FileInfo file in files)
-            {
-                WriteMultipartFormDataHeader(stream, file.Name, file.MimeType, formDataBoundary, ref partIndex, partCount);
-                StreamHelper.CopyTo(file.Content, stream);
-            }
-            if (partCount > 1)
-            {
+                string formDataBoundary = Guid.NewGuid().ToString();
+                int partIndex = 0;
+                contentType = "multipart/form-data; boundary=" + formDataBoundary;
+                if (body != null)
+                {
+                    WriteMultipartFormDataHeader(stream, null, contentType, formDataBoundary, ref partIndex);
+                    CopyToStream(body, stream);
+                }
+                foreach (FileInfo file in files)
+                {
+                    WriteMultipartFormDataHeader(stream, file.Name, file.MimeType, formDataBoundary, ref partIndex);
+                    StreamHelper.CopyTo(file.Content, stream);
+                }
                 // Add the end of the request.  Start with a newline
                 WriteToStream(stream, "\r\n--" + formDataBoundary + "--\r\n");
+            }
+            else if (body != null)
+            {
+                CopyToStream(body, stream);
+            }
+            else if (files.Count > 0)
+            {
+                StreamHelper.CopyTo(files[0].Content, stream);
             }
         }
 
         private static void WriteMultipartFormDataHeader(
-            Stream stream, string name, string mimeType, string boundary, ref int partIndex, int partCount)
+            Stream stream, string name, string mimeType, string boundary, ref int partIndex)
         {
-            if (partCount > 1)
+            // Thanks to feedback from commenters, add a CRLF to allow multiple parameters to be added.
+            // Skip it on the first parameter, add it to subsequent parameters.
+            if (partIndex > 0)
             {
-                // Thanks to feedback from commenters, add a CRLF to allow multiple parameters to be added.
-                // Skip it on the first parameter, add it to subsequent parameters.
-                if (partIndex > 0)
-                {
-                    WriteToStream(stream, "\r\n");
-                    stream.Write(Encoding.UTF8.GetBytes("\r\n"), 0, Encoding.UTF8.GetByteCount("\r\n"));
-                }
-                partIndex++;
-
-
-                WriteToStream(stream, "--" + boundary + "\r\n");
-                if (!string.IsNullOrEmpty(mimeType))
-                {
-                    WriteToStream(stream, "Content-type: " + mimeType + "; charset=utf-8\r\n");
-                }
-                if (!string.IsNullOrEmpty(name))
-                {
-                    WriteToStream(stream, "Content-Disposition: form-data; name=" + Path.GetFileNameWithoutExtension(name) + "; filename=" + name + "\r\n\r\n");
-                }
-                else
-                {
-                    WriteToStream(stream, "Content-Disposition: form-data\r\n\r\n");
-                }
+                WriteToStream(stream, "\r\n");
+                stream.Write(Encoding.UTF8.GetBytes("\r\n"), 0, Encoding.UTF8.GetByteCount("\r\n"));
+            }
+            partIndex++;
+            WriteToStream(stream, "--" + boundary + "\r\n");
+            if (!string.IsNullOrEmpty(mimeType))
+            {
+                WriteToStream(stream, "Content-type: " + mimeType + "; charset=utf-8\r\n");
+            }
+            if (!string.IsNullOrEmpty(name))
+            {
+                WriteToStream(stream, "Content-Disposition: form-data; name=" + Path.GetFileNameWithoutExtension(name) + "; filename=" + name + "\r\n\r\n");
+            }
+            else
+            {
+                WriteToStream(stream, "Content-Disposition: form-data\r\n\r\n");
             }
         }
 

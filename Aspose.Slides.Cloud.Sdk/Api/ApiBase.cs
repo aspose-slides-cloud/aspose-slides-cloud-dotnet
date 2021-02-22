@@ -139,44 +139,6 @@ namespace Aspose.Slides.Cloud.Sdk
             m_api.InvokeVoidStreamApi(url, method, body, headerParams, files, contentType);
         }
 
-        protected void PickFiles(List<FileInfo> files, object entity)
-        {
-            if (entity != null)
-            {
-                if (entity is FileInfo)
-                {
-                    files.Add((FileInfo)entity);
-                }
-                else
-                {
-                    IEnumerable<FileInfo> entityFiles = entity as IEnumerable<FileInfo>;
-                    if (entityFiles != null)
-                    {
-                        files.AddRange(entityFiles);
-                    }
-                    else
-                    {
-                        if (!(entity is IEnumerable) && !(entity is Stream))
-                        {
-#if NETFRAMEWORK
-                            foreach (PropertyInfo property in entity.GetType().GetProperties())
-#else
-                            foreach (PropertyInfo property in entity.GetType().GetTypeInfo().DeclaredProperties)
-#endif
-                            {
-                                PickFiles(files, property.GetValue(entity, null));
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        protected void AddFileParameter(List<FileInfo> files, Stream file, string paramName)
-        {
-            files.Add(new FileInfo { Name = "paramName", Content = file });
-        }
-
         private readonly ApiAccessor m_api;
         private readonly Configuration m_configuration;
     }

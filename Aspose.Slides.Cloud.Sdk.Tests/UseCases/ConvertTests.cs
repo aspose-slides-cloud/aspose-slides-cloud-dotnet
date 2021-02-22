@@ -71,12 +71,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 OutPath = c_outPath
             };
             TestUtils.SlidesApi.PutSlidesConvert(putRequest);
-            PutSlidesConvertRequest existsRequest = new PutSlidesConvertRequest
-            {
-                Password = c_password,
-                Format = c_format,
-                OutPath = c_outPath
-            };
             ObjectExist exists = TestUtils.SlidesApi.ObjectExists(new ObjectExistsRequest { Path = c_outPath });
             Assert.IsTrue(exists.Exists.Value);
         }
@@ -111,12 +105,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 OutPath = c_outPath
             };
             TestUtils.SlidesApi.PutSlidesSaveAs(request);
-            PutSlidesConvertRequest existsRequest = new PutSlidesConvertRequest
-            {
-                Password = c_password,
-                Format = c_format,
-                OutPath = c_outPath
-            };
             ObjectExist exists = TestUtils.SlidesApi.ObjectExists(new ObjectExistsRequest { Path = c_outPath });
             Assert.IsTrue(exists.Exists.Value);
         }

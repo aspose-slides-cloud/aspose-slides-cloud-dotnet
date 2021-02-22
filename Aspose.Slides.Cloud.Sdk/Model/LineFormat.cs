@@ -235,6 +235,40 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// Sketch type.
+        /// </summary>
+        /// <value>Sketch type.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SketchTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Curved for "Curved"
+            /// </summary>
+            Curved,
+            
+            /// <summary>
+            /// Enum Freehand for "Freehand"
+            /// </summary>
+            Freehand,
+            
+            /// <summary>
+            /// Enum Scribble for "Scribble"
+            /// </summary>
+            Scribble,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
         /// Alignment.
         /// </summary>
         public AlignmentEnum? Alignment { get; set; }
@@ -258,6 +292,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Style.
         /// </summary>
         public StyleEnum? Style { get; set; }
+
+        /// <summary>
+        /// Sketch type.
+        /// </summary>
+        public SketchTypeEnum? SketchType { get; set; }
 
         /// <summary>
         /// Begin arrowhead.
@@ -326,6 +365,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  DashStyle: ").Append(this.DashStyle).Append("\n");
             sb.Append("  JoinStyle: ").Append(this.JoinStyle).Append("\n");
             sb.Append("  Style: ").Append(this.Style).Append("\n");
+            sb.Append("  SketchType: ").Append(this.SketchType).Append("\n");
             sb.Append("  BeginArrowHead: ").Append(this.BeginArrowHead).Append("\n");
             sb.Append("  EndArrowHead: ").Append(this.EndArrowHead).Append("\n");
             sb.Append("  CustomDashPattern: ").Append(this.CustomDashPattern).Append("\n");

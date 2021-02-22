@@ -1,4 +1,3 @@
-
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostSlidesDocumentFromSourceRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud

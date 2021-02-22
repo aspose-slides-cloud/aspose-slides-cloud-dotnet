@@ -40,9 +40,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class SlideProperties : ResourceBase 
     {                       
         /// <summary>
-        /// Last used view mode.
+        /// Slide orientation.
         /// </summary>
-        /// <value>Last used view mode.</value>
+        /// <value>Slide orientation.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OrientationEnum
         {
@@ -177,7 +177,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Last used view mode.
+        /// Slide orientation.
         /// </summary>
         public OrientationEnum? Orientation { get; set; }
 

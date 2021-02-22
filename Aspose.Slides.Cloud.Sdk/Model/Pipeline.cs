@@ -49,13 +49,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public List<Task> Tasks { get; set; }
 
-        /// <summary>
-        /// Gets or sets Files
-        /// </summary>
-        [XmlIgnore]
-        [JsonIgnore]
-        public FileInfo[] Files { get; set; }
-
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -90,7 +83,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("class Pipeline {\n");
             sb.Append("  Input: ").Append(this.Input).Append("\n");
             sb.Append("  Tasks: ").Append(this.Tasks).Append("\n");
-            sb.Append("  Files: ").Append(this.Files).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

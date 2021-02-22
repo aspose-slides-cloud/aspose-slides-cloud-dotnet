@@ -81,7 +81,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destStorageName", request.DestStorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "versionId", request.VersionId);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "PUT", null, null, files, "application/json");
         }
 
@@ -109,7 +108,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "srcStorageName", request.SrcStorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destStorageName", request.DestStorageName);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "PUT", null, null, files, "application/json");
         }
 
@@ -125,7 +123,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "PUT", null, null, files, "application/json");
         }
 
@@ -152,7 +149,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Chart>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -180,7 +176,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Chart>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -207,7 +202,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Chart>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -224,7 +218,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "versionId", request.VersionId);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
@@ -241,7 +234,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "recursive", request.Recursive);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "DELETE", null, null, files, "application/json");
         }
 
@@ -266,7 +258,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Slide>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -293,7 +284,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -320,7 +310,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -348,7 +337,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -376,7 +364,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -402,7 +389,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -428,7 +414,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -455,7 +440,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -482,7 +466,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -510,7 +493,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -538,7 +520,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -564,7 +545,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Sections>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -590,7 +570,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Sections>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -615,7 +594,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -641,7 +619,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -667,7 +644,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -694,7 +670,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -719,7 +694,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -744,7 +718,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -769,7 +742,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -795,7 +767,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -821,7 +792,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -848,7 +818,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -875,7 +844,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -900,7 +868,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -924,7 +891,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<DocumentProperties>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -954,7 +920,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<DocumentProperties>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -979,7 +944,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideBackground>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -1007,7 +971,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -1035,7 +998,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -1064,7 +1026,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -1093,7 +1054,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, files, "application/json");
         }
 
@@ -1110,7 +1070,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "versionId", request.VersionId);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeBinaryApi(resourcePath, "GET", null, null, files, "application/json");
         }
 
@@ -1125,7 +1084,6 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/storage/disc");
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<DiscUsage>(resourcePath, "GET", null, null, files, "application/json");
         }
 
@@ -1141,7 +1099,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<FileVersions>(resourcePath, "GET", null, null, files, "application/json");
         }
 
@@ -1157,7 +1114,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<FilesList>(resourcePath, "GET", null, null, files, "application/json");
         }
 
@@ -1182,7 +1138,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<LayoutSlide>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1206,7 +1161,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<LayoutSlides>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1231,7 +1185,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<MasterSlide>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1255,7 +1208,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<MasterSlides>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1280,7 +1232,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<NotesSlide>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1305,7 +1256,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<EntityExists>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1330,7 +1280,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<NotesSlideHeaderFooter>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1356,7 +1305,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ShapeBase>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1383,7 +1331,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1409,7 +1356,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraphs>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1437,7 +1383,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1464,7 +1409,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portions>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1489,7 +1433,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Shapes>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1518,7 +1461,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeBinaryApi(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1546,7 +1488,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1573,7 +1514,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portions>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1597,7 +1537,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Sections>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1623,7 +1562,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1648,7 +1586,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<HeaderFooter>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1674,7 +1611,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ShapeBase>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1701,7 +1637,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1727,7 +1662,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraphs>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1752,7 +1686,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Shapes>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1779,7 +1712,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ShapeBase>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1807,7 +1739,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1834,7 +1765,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraphs>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1860,7 +1790,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Shapes>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1897,7 +1826,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Document>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1921,7 +1849,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<DocumentProperties>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1951,7 +1878,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<DocumentProperty>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -1976,7 +1902,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeBinaryApi(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2002,7 +1927,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeBinaryApi(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2026,7 +1950,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Images>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2052,7 +1975,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Placeholder>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2077,7 +1999,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Placeholders>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2102,7 +2023,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<TextItems>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2126,7 +2046,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ProtectionProperties>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2151,7 +2070,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Slide>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2176,7 +2094,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideBackground>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2201,7 +2118,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideComments>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2226,7 +2142,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Images>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2250,7 +2165,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideProperties>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2276,7 +2190,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<TextItems>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2300,7 +2213,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Model.Slides>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2325,7 +2237,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Theme>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2350,7 +2261,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ColorScheme>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2375,7 +2285,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<FontScheme>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2400,7 +2309,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<FormatScheme>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2424,7 +2332,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ViewProperties>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2453,7 +2360,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2481,7 +2387,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portions>(resourcePath, "GET", null, headerParams, files, "application/json");
         }
 
@@ -2510,7 +2415,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destStorageName", request.DestStorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "versionId", request.VersionId);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "PUT", null, null, files, "application/json");
         }
 
@@ -2538,7 +2442,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "srcStorageName", request.SrcStorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destStorageName", request.DestStorageName);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "PUT", null, null, files, "application/json");
         }
 
@@ -2555,7 +2458,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "versionId", request.VersionId);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ObjectExist>(resourcePath, "GET", null, null, files, "application/json");
         }
 
@@ -2588,7 +2490,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraph>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -2622,7 +2523,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portion>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -2650,7 +2550,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -2679,7 +2578,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -2713,7 +2611,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraph>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -2748,7 +2645,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portion>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -2779,7 +2675,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<NotesSlide>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -2811,7 +2706,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Category); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Chart>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -2844,7 +2738,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.DataPoint); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Chart>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -2876,7 +2769,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Series); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Chart>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -2910,7 +2802,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "cloneFromPassword", request.CloneFromPassword);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<LayoutSlide>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
@@ -2945,7 +2836,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "cloneFromPassword", request.CloneFromPassword);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<MasterSlide>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
@@ -2964,12 +2854,15 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/slides/{slideIndex}/notesSlide");
             var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
-            var postBody = request.Document;
             var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeStreamApi<NotesSlide>(resourcePath, "POST", postBody, headerParams, files, "application/json");
+            if (request.Document != null) 
+            {
+                files.Add(new FileInfo { Name = "document", Content = request.Document });
+            }
+            return InvokeStreamApi<NotesSlide>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -2987,12 +2880,15 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/slides/{slideIndex}/notesSlide/exist");
             var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
-            var postBody = request.Document;
             var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeStreamApi<EntityExists>(resourcePath, "POST", postBody, headerParams, files, "application/json");
+            if (request.Document != null) 
+            {
+                files.Add(new FileInfo { Name = "document", Content = request.Document });
+            }
+            return InvokeStreamApi<EntityExists>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3010,16 +2906,19 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/slides/{slideIndex}/notesSlide/{format}");
             var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", request.SlideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", request.Width);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", request.Height);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
-            var postBody = request.Document;
             var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeBinaryStreamApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
+            if (request.Document != null) 
+            {
+                files.Add(new FileInfo { Name = "document", Content = request.Document });
+            }
+            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3051,7 +2950,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraph>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3085,7 +2983,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portion>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3118,7 +3015,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3150,7 +3046,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3180,7 +3075,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Document>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3211,7 +3105,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Sections>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
@@ -3237,7 +3130,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Sections>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
@@ -3269,7 +3161,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3300,7 +3191,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3331,7 +3221,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Sequence); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3363,7 +3252,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3393,7 +3281,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3419,7 +3306,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "layoutAlias", request.LayoutAlias);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Model.Slides>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
@@ -3438,13 +3324,16 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/convert/{format}");
             var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
-            var postBody = request.Document;
             var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeBinaryStreamApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
+            if (request.Document != null) 
+            {
+                files.Add(new FileInfo { Name = "document", Content = request.Document });
+            }
+            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3473,7 +3362,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "sourcePassword", request.SourcePassword);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Model.Slides>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
@@ -3493,15 +3381,18 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/{name}");
             var headerParams = new Dictionary<string, string>();
             
+            var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             UrlHelper.AddHeaderParameter(headerParams, "inputPassword", request.InputPassword);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
-            var postBody = request.Data;
             var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeStreamApi<Document>(resourcePath, "POST", postBody, headerParams, files, "application/json");
+            if (request.Data != null) 
+            {
+                files.Add(new FileInfo { Name = "data", Content = request.Data });
+            }
+            return InvokeStreamApi<Document>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3525,7 +3416,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Html); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Document>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3544,14 +3434,17 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/fromPdf");
             var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", request.Name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
-            var postBody = request.Pdf;
             var files = new List<FileInfo>();
-            PickFiles(files, request);
-            return InvokeStreamApi<Document>(resourcePath, "POST", postBody, headerParams, files, "application/json");
+            if (request.Pdf != null) 
+            {
+                files.Add(new FileInfo { Name = "pdf", Content = request.Pdf });
+            }
+            return InvokeStreamApi<Document>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -3578,7 +3471,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "sourcePassword", request.SourcePassword);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Document>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
@@ -3613,7 +3505,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Data); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Document>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3631,9 +3522,13 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/pipeline");
+            var formParams = new Dictionary<string, object>();
             var postBody = SerializationHelper.Serialize(request.Pipeline); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
+            if (request.Files != null) 
+            {
+                files.AddRange(request.Files);
+            }
             return InvokeBinaryApi(resourcePath, "POST", postBody, null, files, "application/json");
         }
 
@@ -3670,7 +3565,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<DocumentReplaceResult>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
@@ -3696,7 +3590,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Model.Slides>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
@@ -3722,7 +3615,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Model.Slides>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
@@ -3749,7 +3641,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3779,7 +3670,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Properties); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<DocumentProperties>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3817,7 +3707,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideReplaceResult>(resourcePath, "POST", null, headerParams, files, "application/json");
         }
 
@@ -3849,7 +3738,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SplitDocumentResult>(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3882,7 +3770,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, files, "application/json");
         }
 
@@ -3915,7 +3802,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Category); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Chart>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -3949,7 +3835,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.DataPoint); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Chart>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -3982,7 +3867,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Series); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Chart>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4013,7 +3897,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.SlideDto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<LayoutSlide>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4044,7 +3927,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<NotesSlideHeaderFooter>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4082,7 +3964,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4112,7 +3993,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Request); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Document>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4143,7 +4023,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Sections>(resourcePath, "PUT", null, headerParams, files, "application/json");
         }
 
@@ -4173,7 +4052,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Sections); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Sections>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4207,7 +4085,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portion>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4240,7 +4117,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4275,7 +4151,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portion>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4309,7 +4184,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4347,7 +4221,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4378,7 +4251,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Animation); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4410,7 +4282,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4443,7 +4314,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Effect); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4474,7 +4344,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<HeaderFooter>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4510,7 +4379,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4542,7 +4410,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4575,7 +4442,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4599,14 +4465,17 @@ namespace Aspose.Slides.Cloud.Sdk
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/convert/{format}");
             var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", request.Format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", request.FontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
-            var postBody = request.Document;
             var files = new List<FileInfo>();
-            PickFiles(files, request);
-            InvokeVoidStreamApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
+            if (request.Document != null) 
+            {
+                files.Add(new FileInfo { Name = "document", Content = request.Document });
+            }
+            InvokeVoidStreamApi(resourcePath, "PUT", null, headerParams, files, "application/json");
         }
 
         /// <summary>
@@ -4631,7 +4500,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Html); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Document>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4661,7 +4529,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Document>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4691,7 +4558,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ProtectionProperties>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4724,7 +4590,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4760,7 +4625,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Property); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<DocumentProperty>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4791,7 +4655,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.SlideDto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Slide>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4822,7 +4685,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Background); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideBackground>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4853,7 +4715,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideBackground>(resourcePath, "PUT", null, headerParams, files, "application/json");
         }
 
@@ -4883,7 +4744,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<SlideProperties>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4912,7 +4772,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleType", request.ScaleType);
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Document>(resourcePath, "PUT", null, headerParams, files, "application/json");
         }
 
@@ -4942,7 +4801,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ViewProperties>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -4981,7 +4839,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Options); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -5012,7 +4869,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<NotesSlide>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -5044,7 +4900,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -5077,7 +4932,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -5111,7 +4965,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", request.Password);
             var postBody = SerializationHelper.Serialize(request.Dto); // http body (model) parameter
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<Portion>(resourcePath, "PUT", postBody, headerParams, files, "application/json");
         }
 
@@ -5131,7 +4984,6 @@ namespace Aspose.Slides.Cloud.Sdk
             string resourcePath = GetResourceUrl("/slides/storage/{storageName}/exist");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "storageName", request.StorageName);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             return InvokeApi<StorageExist>(resourcePath, "GET", null, null, files, "application/json");
         }
 
@@ -5153,12 +5005,11 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", request.Path);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", request.StorageName);
             var files = new List<FileInfo>();
-            PickFiles(files, request);
             if (request.File != null) 
             {
-                AddFileParameter(files, request.File, "file");
+                files.Add(new FileInfo { Name = "file", Content = request.File });
             }
-            return InvokeApi<FilesUploadResult>(resourcePath, "PUT", null, null, files, "application/json");
+            return InvokeStreamApi<FilesUploadResult>(resourcePath, "PUT", null, null, files, "application/json");
         }
     }
 }
