@@ -40,6 +40,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class PresentationToMerge 
     {                       
         /// <summary>
+        /// Merge (request or storage). 
+        /// </summary>
+        /// <value>Merge (request or storage). </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SourceEnum
+        {
+            
+            /// <summary>
+            /// Enum Storage for "Storage"
+            /// </summary>
+            Storage,
+            
+            /// <summary>
+            /// Enum Request for "Request"
+            /// </summary>
+            Request
+        }
+
+        /// <summary>
+        /// Merge (request or storage). 
+        /// </summary>
+        public SourceEnum? Source { get; set; }
+
+        /// <summary>
         /// Get or sets the presentation path
         /// </summary>
         public string Path { get; set; }
@@ -89,6 +113,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Path: ").Append(this.Path).Append("\n");
             sb.Append("  Password: ").Append(this.Password).Append("\n");
             sb.Append("  Slides: ").Append(this.Slides).Append("\n");
+            sb.Append("  Source: ").Append(this.Source).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

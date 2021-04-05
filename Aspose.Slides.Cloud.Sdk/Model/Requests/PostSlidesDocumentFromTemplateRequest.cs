@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostSlidesDocumentFromTemplateRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -51,9 +52,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="templateStorage">Template storage name.</param>
         /// <param name="isImageDataEmbedded">True if image data is embedded.</param>
         /// <param name="password">The document password.</param>
-        /// <param name="storage">Document storage.</param>
         /// <param name="folder">Document folder.</param>
-        public PostSlidesDocumentFromTemplateRequest(string name, string templatePath, string data = null, string templatePassword = null, string templateStorage = null, bool? isImageDataEmbedded = null, string password = null, string storage = null, string folder = null)
+        /// <param name="storage">Document storage.</param>
+        public PostSlidesDocumentFromTemplateRequest(string name, string templatePath, string data = null, string templatePassword = null, string templateStorage = null, bool? isImageDataEmbedded = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.TemplatePath = templatePath;
@@ -62,8 +63,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.TemplateStorage = templateStorage;
             this.IsImageDataEmbedded = isImageDataEmbedded;
             this.Password = password;
-            this.Storage = storage;
             this.Folder = folder;
+            this.Storage = storage;
         }
 
         /// <summary>
@@ -102,13 +103,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// Document storage.
-        /// </summary>  
-        public string Storage { get; set; }
-
-        /// <summary>
         /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
+
+        /// <summary>
+        /// Document storage.
+        /// </summary>  
+        public string Storage { get; set; }
   }
 }

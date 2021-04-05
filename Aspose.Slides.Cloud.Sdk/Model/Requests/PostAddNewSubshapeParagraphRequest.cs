@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostAddNewSubshapeParagraphRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -49,21 +50,21 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="shapeIndex">Shape index.</param>
         /// <param name="dto">Paragraph DTO.</param>
         /// <param name="path">Shape path.</param>
+        /// <param name="position">Position of the new paragraph in the list. Default is at the end of the list.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        /// <param name="position">Position of the new paragraph in the list. Default is at the end of the list.</param>
-        public PostAddNewSubshapeParagraphRequest(string name, int slideIndex, int shapeIndex, Paragraph dto, string path = null, string password = null, string folder = null, string storage = null, int? position = null)
+        public PostAddNewSubshapeParagraphRequest(string name, int slideIndex, int shapeIndex, Paragraph dto, string path = null, int? position = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.ShapeIndex = shapeIndex;
             this.Dto = dto;
             this.Path = path;
+            this.Position = position;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
-            this.Position = position;
         }
 
         /// <summary>
@@ -92,6 +93,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Path { get; set; }
 
         /// <summary>
+        /// Position of the new paragraph in the list. Default is at the end of the list.
+        /// </summary>  
+        public int? Position { get; set; }
+
+        /// <summary>
         /// Document password.
         /// </summary>  
         public string Password { get; set; }
@@ -105,10 +111,5 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
-
-        /// <summary>
-        /// Position of the new paragraph in the list. Default is at the end of the list.
-        /// </summary>  
-        public int? Position { get; set; }
   }
 }

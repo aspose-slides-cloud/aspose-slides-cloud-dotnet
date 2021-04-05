@@ -46,10 +46,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 #if NETFRAMEWORK
             return new Configuration
             {
-                DebugMode = GetBoolConfigValue("DebugMode", true),
+                DebugMode = GetBoolConfigValue("Debug", true),
                 ApiBaseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"] ?? "https://api-qa.aspose.cloud",
                 AuthBaseUrl = ConfigurationManager.AppSettings["AuthBaseUrl"]
-                    ?? ConfigurationManager.AppSettings["ApiBaseUrl"]
+                    ?? ConfigurationManager.AppSettings["BaseUrl"]
                     ?? "https://api-qa.aspose.cloud",
                 AppSid = ConfigurationManager.AppSettings["ClientId"],
                 AppKey = ConfigurationManager.AppSettings["ClientSecret"]
@@ -58,9 +58,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             IConfiguration config = new ConfigurationBuilder().AddJsonFile("testConfig.json").Build();
             return new Configuration
             {
-                DebugMode = GetBoolConfigValue(config, "DebugMode", true),
-                ApiBaseUrl = config["ApiBaseUrl"] ?? "https://api-qa.aspose.cloud",
-                AuthBaseUrl = config["AuthBaseUrl"] ?? config["ApiBaseUrl"] ?? "https://api-qa.aspose.cloud",
+                DebugMode = GetBoolConfigValue(config, "Debug", true),
+                ApiBaseUrl = config["BaseUrl"] ?? "https://api-qa.aspose.cloud",
+                AuthBaseUrl = config["AuthBaseUrl"] ?? config["BaseUrl"] ?? "https://api-qa.aspose.cloud",
                 AppSid = config["ClientId"],
                 AppKey = config["ClientSecret"]
             };
@@ -76,10 +76,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                     foreach (string file in Directory.EnumerateFiles(TestDataPath))
                     {
                         string filePath = $"{c_tempTestFolder}/{Path.GetFileName(file)}";
-                        SlidesApi.UploadFile(new UploadFileRequest { Path = filePath, File = File.OpenRead(file) });
+                        SlidesApi.UploadFile(File.OpenRead(file), filePath);
                     }
                     Stream versionFile = new MemoryStream(Encoding.UTF8.GetBytes(c_expectedVersion.ToString()));
-                    SlidesApi.UploadFile(new UploadFileRequest { Path = $"{c_tempTestFolder}/{c_versionFile}", File = versionFile });
+                    SlidesApi.UploadFile(versionFile, $"{c_tempTestFolder}/{c_versionFile}");
                 }
                 s_initialized = true;
             }
@@ -87,12 +87,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         public static void Upload(string localPath, string storagePath)
         {
-            SlidesApi.CopyFile(new CopyFileRequest { SrcPath = $"{c_tempTestFolder}/{localPath}", DestPath = storagePath });
+            SlidesApi.CopyFile($"{c_tempTestFolder}/{localPath}", storagePath);
         }
 
         public static void DeleteFile(string storagePath)
         {
-            SlidesApi.DeleteFile(new DeleteFileRequest { Path = storagePath });
+            SlidesApi.DeleteFile(storagePath);
         }
 
         public static FileInfo GetLocalFile(string path, string mimeType)
@@ -105,7 +105,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         internal const string TestDataPath = "../../../../TestData";
 
-        private const int c_expectedVersion = 1;
+        private const int c_expectedVersion = 0;
         private const string c_tempTestFolder = "TempTests";
         private const string c_versionFile = "version.txt";
         private static bool s_initialized;
@@ -130,7 +130,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         private static bool IsTestDataUpToDate()
         {
-            Stream version = SlidesApi.DownloadFile(new DownloadFileRequest { Path = $"{c_tempTestFolder}/{c_versionFile}" });
+            Stream version = SlidesApi.DownloadFile($"{c_tempTestFolder}/{c_versionFile}");
             if (version != null)
             {
                 int actualVersion = 0;

@@ -26,7 +26,6 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using Aspose.Slides.Cloud.Sdk.Model;
-using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests
@@ -55,62 +54,39 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             const double max1 = 104.3;
             const double max2 = 87;
             TestUtils.Upload(fileName, folderName + "/" + fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
+            Chart dto = new Chart
             {
-                Name = fileName,
-                Folder = folderName,
-                Password = "password",
-                SlideIndex = 1,
-                Dto = new Chart
+                ChartType = Chart.ChartTypeEnum.Line,
+                Width = 400,
+                Height = 300,
+                Title = new ChartTitle { HasTitle = true, Text = "MyTitle" },
+                Series = new List<Series>
                 {
-                    ChartType = Chart.ChartTypeEnum.Line,
-                    Width = 400,
-                    Height = 300,
-                    Title = new ChartTitle { HasTitle = true, Text = "MyTitle" },
-                    Series = new List<Series>
+                    new OneValueSeries
                     {
-                        new OneValueSeries
-                        {
-                            Type = Series.TypeEnum.ClusteredColumn,
-                            DataPointType = OneValueSeries.DataPointTypeEnum.OneValue,
-                            Name = "Series1",
-                            DataPoints = new List<OneValueChartDataPoint> { new OneValueChartDataPoint { Value = 40 }, new OneValueChartDataPoint { Value = 50 } }
-                        }
-                    },
-                    Axes = new Axes { HorizontalAxis = new Axis { IsAutomaticMinValue = false, MinValue = min1, IsAutomaticMaxValue = false, MaxValue = max1 } }
-                }
+                        Type = Series.TypeEnum.ClusteredColumn,
+                        DataPointType = OneValueSeries.DataPointTypeEnum.OneValue,
+                        Name = "Series1",
+                        DataPoints = new List<OneValueChartDataPoint> { new OneValueChartDataPoint { Value = 40 }, new OneValueChartDataPoint { Value = 50 } }
+                    }
+                },
+                Axes = new Axes { HorizontalAxis = new Axis { IsAutomaticMinValue = false, MinValue = min1, IsAutomaticMaxValue = false, MaxValue = max1 } }
             };
-            ShapeBase shape = TestUtils.SlidesApi.PostAddNewShape(request);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(fileName, 1, dto, password: "password", folder: folderName);
             Assert.IsInstanceOf<Chart>(shape);
-            GetSlideShapeRequest getRequest = new GetSlideShapeRequest
-            {
-                Name = fileName,
-                Folder = folderName,
-                Password = "password",
-                SlideIndex = 1,
-                ShapeIndex = 4,
-            };
-            shape = TestUtils.SlidesApi.GetSlideShape(getRequest);
+            shape = TestUtils.SlidesApi.GetShape(fileName, 1, 4, "password", folderName);
             Assert.AreEqual(min1, ((Chart)shape).Axes.HorizontalAxis.MinValue);
             Assert.AreEqual(max1, ((Chart)shape).Axes.HorizontalAxis.MaxValue);
-            PutSlideShapeInfoRequest putRequest = new PutSlideShapeInfoRequest
-            {
-                Name = fileName,
-                Folder = folderName,
-                Password = "password",
-                SlideIndex = 1,
-                ShapeIndex = 4,
-                Dto = new Chart { Axes = new Axes { HorizontalAxis = new Axis { MinValue = min2 } } }
-            };
-            shape = TestUtils.SlidesApi.PutSlideShapeInfo(putRequest);
+            dto = new Chart { Axes = new Axes { HorizontalAxis = new Axis { MinValue = min2 } } };
+            shape = TestUtils.SlidesApi.UpdateShape(fileName, 1, 4, dto, "password", folderName);
             Assert.IsInstanceOf<Chart>(shape);
-            shape = TestUtils.SlidesApi.GetSlideShape(getRequest);
+            shape = TestUtils.SlidesApi.GetShape(fileName, 1, 4, "password", folderName);
             Assert.AreEqual(min2, ((Chart)shape).Axes.HorizontalAxis.MinValue);
             Assert.AreEqual(max1, ((Chart)shape).Axes.HorizontalAxis.MaxValue);
-            ((Chart)putRequest.Dto).Axes = new Axes { HorizontalAxis = new Axis { MaxValue = max2 } };
-            shape = TestUtils.SlidesApi.PutSlideShapeInfo(putRequest);
+            dto.Axes = new Axes { HorizontalAxis = new Axis { MaxValue = max2 } };
+            shape = TestUtils.SlidesApi.UpdateShape(fileName, 1, 4, dto, "password", folderName);
             Assert.IsInstanceOf<Chart>(shape);
-            shape = TestUtils.SlidesApi.GetSlideShape(getRequest);
+            shape = TestUtils.SlidesApi.GetShape(fileName, 1, 4, "password", folderName);
             Assert.AreEqual(min2, ((Chart)shape).Axes.HorizontalAxis.MinValue);
             Assert.AreEqual(max2, ((Chart)shape).Axes.HorizontalAxis.MaxValue);
         }

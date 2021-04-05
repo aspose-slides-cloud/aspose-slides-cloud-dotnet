@@ -40,7 +40,7 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
         {
             m_configuration = configuration;
 #if !NETFRAMEWORK
-            m_logger = new LoggerFactory().AddDebug(LogLevel.Trace).CreateLogger<DebugLogRequestHandler>();
+            m_logger = LoggerFactory.Create(builder => builder.SetMinimumLevel(LogLevel.Trace).AddConsole()).CreateLogger<SlidesApi>();
 #endif
         }
 

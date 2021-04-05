@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostAddNewSubshapePortionRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -50,11 +51,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="paragraphIndex">Paragraph index.</param>
         /// <param name="dto">Portion DTO.</param>
         /// <param name="path">Shape path.</param>
+        /// <param name="position">Position of the new portion in the list. Default is at the end of the list.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        /// <param name="position">Position of the new portion in the list. Default is at the end of the list.</param>
-        public PostAddNewSubshapePortionRequest(string name, int slideIndex, int shapeIndex, int paragraphIndex, Portion dto, string path = null, string password = null, string folder = null, string storage = null, int? position = null)
+        public PostAddNewSubshapePortionRequest(string name, int slideIndex, int shapeIndex, int paragraphIndex, Portion dto, string path = null, int? position = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
@@ -62,10 +63,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.ParagraphIndex = paragraphIndex;
             this.Dto = dto;
             this.Path = path;
+            this.Position = position;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
-            this.Position = position;
         }
 
         /// <summary>
@@ -99,6 +100,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Path { get; set; }
 
         /// <summary>
+        /// Position of the new portion in the list. Default is at the end of the list.
+        /// </summary>  
+        public int? Position { get; set; }
+
+        /// <summary>
         /// Document password.
         /// </summary>  
         public string Password { get; set; }
@@ -112,10 +118,5 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
-
-        /// <summary>
-        /// Position of the new portion in the list. Default is at the end of the list.
-        /// </summary>  
-        public int? Position { get; set; }
   }
 }

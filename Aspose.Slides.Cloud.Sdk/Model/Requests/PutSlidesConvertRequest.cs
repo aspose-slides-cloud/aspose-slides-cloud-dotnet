@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PutSlidesConvertRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -48,13 +49,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="format">Export format.</param>
         /// <param name="outPath">Path to save result.</param>
         /// <param name="password">Document password.</param>
+        /// <param name="storage">Document storage.</param>
         /// <param name="fontsFolder">Custom fonts folder.</param>
-        public PutSlidesConvertRequest(System.IO.Stream document, ExportFormat format, string outPath, string password = null, string fontsFolder = null)
+        public PutSlidesConvertRequest(System.IO.Stream document, ExportFormat format, string outPath, string password = null, string storage = null, string fontsFolder = null)
         {
             this.Document = document;
             this.Format = format;
             this.OutPath = outPath;
             this.Password = password;
+            this.Storage = storage;
             this.FontsFolder = fontsFolder;
         }
 
@@ -77,6 +80,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Document password.
         /// </summary>  
         public string Password { get; set; }
+
+        /// <summary>
+        /// Document storage.
+        /// </summary>  
+        public string Storage { get; set; }
 
         /// <summary>
         /// Custom fonts folder.

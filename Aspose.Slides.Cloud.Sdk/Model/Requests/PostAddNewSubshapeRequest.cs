@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostAddNewSubshapeRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -48,22 +49,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="slideIndex">Slide index.</param>
         /// <param name="path">Shape path.</param>
         /// <param name="dto">Shape DTO.</param>
+        /// <param name="shapeToClone">Optional index for clone shape instead of adding a new one.</param>
+        /// <param name="position">Position of the new shape in the list. Default is at the end of the list.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        /// <param name="shapeToClone">Optional index for clone shape instead of adding a new one.</param>
-        /// <param name="position">Position of the new shape in the list. Default is at the end of the list.</param>
-        public PostAddNewSubshapeRequest(string name, int slideIndex, string path = null, ShapeBase dto = null, string password = null, string folder = null, string storage = null, int? shapeToClone = null, int? position = null)
+        public PostAddNewSubshapeRequest(string name, int slideIndex, string path = null, ShapeBase dto = null, int? shapeToClone = null, int? position = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
             this.Path = path;
             this.Dto = dto;
+            this.ShapeToClone = shapeToClone;
+            this.Position = position;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
-            this.ShapeToClone = shapeToClone;
-            this.Position = position;
         }
 
         /// <summary>
@@ -87,6 +88,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public ShapeBase Dto { get; set; }
 
         /// <summary>
+        /// Optional index for clone shape instead of adding a new one.
+        /// </summary>  
+        public int? ShapeToClone { get; set; }
+
+        /// <summary>
+        /// Position of the new shape in the list. Default is at the end of the list.
+        /// </summary>  
+        public int? Position { get; set; }
+
+        /// <summary>
         /// Document password.
         /// </summary>  
         public string Password { get; set; }
@@ -100,15 +111,5 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
-
-        /// <summary>
-        /// Optional index for clone shape instead of adding a new one.
-        /// </summary>  
-        public int? ShapeToClone { get; set; }
-
-        /// <summary>
-        /// Position of the new shape in the list. Default is at the end of the list.
-        /// </summary>  
-        public int? Position { get; set; }
   }
 }

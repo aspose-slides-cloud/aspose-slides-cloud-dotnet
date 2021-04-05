@@ -24,7 +24,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using Aspose.Slides.Cloud.Sdk.Model;
-using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -49,37 +48,18 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void DocumentPropertiesBuiltin()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            GetSlidesDocumentPropertyRequest getRequest = new GetSlidesDocumentPropertyRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password,
-                PropertyName = c_builtinPropertyName
-            };
-            DocumentProperty documentProperty = TestUtils.SlidesApi.GetSlidesDocumentProperty(getRequest);
+            DocumentProperty documentProperty = TestUtils.SlidesApi.GetDocumentProperty(
+                c_fileName, c_builtinPropertyName, c_password, c_folderName);
             Assert.AreEqual(c_builtinPropertyName, documentProperty.Name);
             Assert.IsTrue(documentProperty.BuiltIn);
-            PutSlidesSetDocumentPropertyRequest putRequest = new PutSlidesSetDocumentPropertyRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password,
-                PropertyName = c_builtinPropertyName,
-                Property = new DocumentProperty { Value = c_updatedPropertyValue }
-            };
-            DocumentProperty updatedProperty = TestUtils.SlidesApi.PutSlidesSetDocumentProperty(putRequest);
+            DocumentProperty property = new DocumentProperty { Value = c_updatedPropertyValue };
+            DocumentProperty updatedProperty = TestUtils.SlidesApi.SetDocumentProperty(
+                c_fileName, c_builtinPropertyName, property, c_password, c_folderName);
             Assert.IsTrue(updatedProperty.BuiltIn);
             Assert.AreEqual(c_updatedPropertyValue, updatedProperty.Value);
-            DeleteSlidesDocumentPropertyRequest deleteRequest = new DeleteSlidesDocumentPropertyRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password,
-                PropertyName = c_builtinPropertyName
-            };
-            TestUtils.SlidesApi.DeleteSlidesDocumentProperty(deleteRequest);
+            TestUtils.SlidesApi.DeleteDocumentProperty(c_fileName, c_builtinPropertyName, c_password, c_folderName);
             //built-in property is not actually deleted
-            documentProperty = TestUtils.SlidesApi.GetSlidesDocumentProperty(getRequest);
+            documentProperty = TestUtils.SlidesApi.GetDocumentProperty(c_fileName, c_builtinPropertyName, c_password, c_folderName);
             Assert.AreEqual(c_builtinPropertyName, documentProperty.Name);
             Assert.IsTrue(documentProperty.BuiltIn);
             Assert.AreNotEqual(c_updatedPropertyValue, documentProperty.Value);
@@ -89,90 +69,40 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void DocumentPropertiesCustom()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PutSlidesSetDocumentPropertyRequest putRequest = new PutSlidesSetDocumentPropertyRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password,
-                PropertyName = c_customPropertyName,
-                Property = new DocumentProperty { Value = c_updatedPropertyValue }
-            };
-            DocumentProperty updatedProperty = TestUtils.SlidesApi.PutSlidesSetDocumentProperty(putRequest);
+            DocumentProperty property = new DocumentProperty { Value = c_updatedPropertyValue };
+            DocumentProperty updatedProperty = TestUtils.SlidesApi.SetDocumentProperty(
+                c_fileName, c_customPropertyName, property, c_password, c_folderName);
             Assert.IsFalse(updatedProperty.BuiltIn);
             Assert.AreEqual(c_updatedPropertyValue, updatedProperty.Value);
-            DeleteSlidesDocumentPropertyRequest deleteRequest = new DeleteSlidesDocumentPropertyRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password,
-                PropertyName = c_customPropertyName
-            };
-            TestUtils.SlidesApi.DeleteSlidesDocumentProperty(deleteRequest);
-            GetSlidesDocumentPropertyRequest getRequest = new GetSlidesDocumentPropertyRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password,
-                PropertyName = c_customPropertyName
-            };
-            Assert.IsNull(TestUtils.SlidesApi.GetSlidesDocumentProperty(getRequest));
+            TestUtils.SlidesApi.DeleteDocumentProperty(c_fileName, c_customPropertyName, c_password, c_folderName);
+            Assert.IsNull(TestUtils.SlidesApi.GetDocumentProperty(c_fileName, c_customPropertyName, c_password, c_folderName));
         }
 
         [Test]
         public void DocumentPropertiesBulkUpdate()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            GetSlidesDocumentPropertiesRequest getRequest = new GetSlidesDocumentPropertiesRequest
+            int count = TestUtils.SlidesApi.GetDocumentProperties(c_fileName, c_password, c_folderName).List.Count;
+            DocumentProperties properties = new DocumentProperties
             {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password
-            };
-            int count = TestUtils.SlidesApi.GetSlidesDocumentProperties(getRequest).List.Count;
-            PostSlidesSetDocumentPropertiesRequest postRequest = new PostSlidesSetDocumentPropertiesRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password,
-                Properties = new DocumentProperties
+                List = new List<DocumentProperty>
                 {
-                    List = new List<DocumentProperty>
-                    {
-                        new DocumentProperty { Name = c_builtinPropertyName, Value = c_updatedPropertyValue },
-                        new DocumentProperty { Name = c_customPropertyName, Value = c_updatedPropertyValue }
-                    }
+                    new DocumentProperty { Name = c_builtinPropertyName, Value = c_updatedPropertyValue },
+                    new DocumentProperty { Name = c_customPropertyName, Value = c_updatedPropertyValue }
                 }
             };
-            Assert.AreEqual(count + 1, TestUtils.SlidesApi.PostSlidesSetDocumentProperties(postRequest).List.Count);
-            DeleteSlidesDocumentPropertiesRequest deleteRequest = new DeleteSlidesDocumentPropertiesRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password
-            };
+            Assert.AreEqual(count + 1, TestUtils.SlidesApi.SetDocumentProperties(c_fileName, properties, c_password, c_folderName).List.Count);
             //One custom property was contained in the original presentation; it also must be deleted
-            Assert.AreEqual(count - 1, TestUtils.SlidesApi.DeleteSlidesDocumentProperties(deleteRequest).List.Count);
+            Assert.AreEqual(count - 1, TestUtils.SlidesApi.DeleteDocumentProperties(c_fileName, c_password, c_folderName).List.Count);
         }
 
         [Test]
         public void SlideProperties()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            GetSlidesSlidePropertiesRequest getRequest = new GetSlidesSlidePropertiesRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password
-            };
-            SlideProperties slideProperties = TestUtils.SlidesApi.GetSlidesSlideProperties(getRequest);
-            PutSlidesSlidePropertiesRequest putRequest = new PutSlidesSlidePropertiesRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password,
-                Dto = new SlideProperties { FirstSlideNumber = slideProperties.FirstSlideNumber + 2 }
-            };
-            SlideProperties updatedProperties = TestUtils.SlidesApi.PutSlidesSlideProperties(putRequest);
+            SlideProperties slideProperties = TestUtils.SlidesApi.GetSlideProperties(c_fileName, c_password, c_folderName);
+            SlideProperties dto = new SlideProperties { FirstSlideNumber = slideProperties.FirstSlideNumber + 2 };
+            SlideProperties updatedProperties = TestUtils.SlidesApi.SetSlideProperties(c_fileName, dto, c_password, c_folderName);
             Assert.AreNotEqual(slideProperties.FirstSlideNumber, updatedProperties.FirstSlideNumber);
             Assert.AreEqual(slideProperties.Orientation, updatedProperties.Orientation);
         }
@@ -181,14 +111,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void SlideSizePreset()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PutSlidesSlidePropertiesRequest putRequest = new PutSlidesSlidePropertiesRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password,
-                Dto = new SlideProperties { SizeType = Model.SlideProperties.SizeTypeEnum.B4IsoPaper }
-            };
-            SlideProperties updatedProperties = TestUtils.SlidesApi.PutSlidesSlideProperties(putRequest);
+            SlideProperties dto = new SlideProperties { SizeType = Model.SlideProperties.SizeTypeEnum.B4IsoPaper };
+            SlideProperties updatedProperties = TestUtils.SlidesApi.SetSlideProperties(c_fileName, dto, c_password, c_folderName);
             Assert.AreEqual(Model.SlideProperties.SizeTypeEnum.B4IsoPaper, updatedProperties.SizeType);
             Assert.AreEqual(852, updatedProperties.Width);
             Assert.AreEqual(639, updatedProperties.Height);
@@ -200,14 +124,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             const int c_width = 800;
             const int c_height = 500;
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PutSlidesSlidePropertiesRequest putRequest = new PutSlidesSlidePropertiesRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password,
-                Dto = new SlideProperties { Width = c_width, Height = c_height }
-            };
-            SlideProperties updatedProperties = TestUtils.SlidesApi.PutSlidesSlideProperties(putRequest);
+            SlideProperties dto = new SlideProperties { Width = c_width, Height = c_height };
+            SlideProperties updatedProperties = TestUtils.SlidesApi.SetSlideProperties(c_fileName, dto, c_password, c_folderName);
             Assert.AreEqual(Model.SlideProperties.SizeTypeEnum.Custom, updatedProperties.SizeType);
             Assert.AreEqual(c_width, updatedProperties.Width);
             Assert.AreEqual(c_height, updatedProperties.Height);
@@ -217,21 +135,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ProtectionProperties()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            GetSlidesProtectionPropertiesRequest getRequest = new GetSlidesProtectionPropertiesRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password
-            };
-            ProtectionProperties protectionProperties = TestUtils.SlidesApi.GetSlidesProtectionProperties(getRequest);
-            PutSlidesProtectionPropertiesRequest putRequest = new PutSlidesProtectionPropertiesRequest
-            {
-                Folder = c_folderName,
-                Name = c_fileName,
-                Password = c_password,
-                Dto = new ProtectionProperties { ReadOnlyRecommended = !protectionProperties.ReadOnlyRecommended }
-            };
-            ProtectionProperties updatedProperties = TestUtils.SlidesApi.PutSlidesProtectionProperties(putRequest);
+            ProtectionProperties protectionProperties = TestUtils.SlidesApi.GetProtectionProperties(c_fileName, c_password, c_folderName);
+            ProtectionProperties dto = new ProtectionProperties { ReadOnlyRecommended = !protectionProperties.ReadOnlyRecommended };
+            ProtectionProperties updatedProperties = TestUtils.SlidesApi.SetProtectionProperties(c_fileName, dto, c_password, c_folderName);
             Assert.AreNotEqual(protectionProperties.ReadOnlyRecommended, updatedProperties.ReadOnlyRecommended);
             Assert.AreEqual(protectionProperties.EncryptDocumentProperties, updatedProperties.EncryptDocumentProperties);
         }

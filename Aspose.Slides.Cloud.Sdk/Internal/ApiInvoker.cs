@@ -160,10 +160,14 @@ namespace Aspose.Slides.Cloud.Sdk
                     WriteMultipartFormDataHeader(stream, null, contentType, formDataBoundary, ref partIndex);
                     CopyToStream(body, stream);
                 }
+                int i = 1;
                 foreach (FileInfo file in files)
                 {
-                    WriteMultipartFormDataHeader(stream, file.Name, file.MimeType, formDataBoundary, ref partIndex);
+                    string fileName = file.Name ?? "file" + i;
+                    string fileType = file.MimeType ?? "application/octet-stream";
+                    WriteMultipartFormDataHeader(stream, fileName, fileType, formDataBoundary, ref partIndex);
                     StreamHelper.CopyTo(file.Content, stream);
+                    i++;
                 }
                 // Add the end of the request.  Start with a newline
                 WriteToStream(stream, "\r\n--" + formDataBoundary + "--\r\n");

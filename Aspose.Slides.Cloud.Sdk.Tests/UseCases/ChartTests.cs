@@ -24,7 +24,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using Aspose.Slides.Cloud.Sdk.Model;
-using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -49,15 +48,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ChartGet()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            GetSlideShapeRequest request = new GetSlideShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                ShapeIndex = c_shapeIndex
-            };
-            Chart chart = TestUtils.SlidesApi.GetSlideShape(request) as Chart;
+            Chart chart = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, c_shapeIndex, c_password, c_folderName) as Chart;
             Assert.IsNotNull(chart);
             Assert.AreEqual(c_seriesCount, chart.Series.Count);
             Assert.AreEqual(c_categoryCount, chart.Categories.Count);
@@ -67,49 +58,43 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ChartCreate()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
+            ShapeBase dto = new Chart
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new Chart
+                ChartType = Chart.ChartTypeEnum.ClusteredColumn,
+                Width = 400,
+                Height = 300,
+                Categories = new List<ChartCategory>
                 {
-                    ChartType = Chart.ChartTypeEnum.ClusteredColumn,
-                    Width = 400,
-                    Height = 300,
-                    Categories = new List<ChartCategory>
+                    new ChartCategory { Value = "Category1" },
+                    new ChartCategory { Value = "Category2" },
+                    new ChartCategory { Value = "Category3" }
+                },
+                Series = new List<Series>
+                {
+                    new OneValueSeries
                     {
-                        new ChartCategory { Value = "Category1" },
-                        new ChartCategory { Value = "Category2" },
-                        new ChartCategory { Value = "Category3" }
+                        Name = "Series1",
+                        DataPoints = new List<OneValueChartDataPoint>
+                        {
+                            new OneValueChartDataPoint { Value = 40 },
+                            new OneValueChartDataPoint { Value = 50 },
+                            new OneValueChartDataPoint { Value = 70 }
+                        }
                     },
-                    Series = new List<Series>
+                    new OneValueSeries
                     {
-                        new OneValueSeries
+                        Name = "Series2",
+                        DataPoints = new List<OneValueChartDataPoint>
                         {
-                            Name = "Series1",
-                            DataPoints = new List<OneValueChartDataPoint>
-                            {
-                                new OneValueChartDataPoint { Value = 40 },
-                                new OneValueChartDataPoint { Value = 50 },
-                                new OneValueChartDataPoint { Value = 70 }
-                            }
-                        },
-                        new OneValueSeries
-                        {
-                            Name = "Series2",
-                            DataPoints = new List<OneValueChartDataPoint>
-                            {
-                                new OneValueChartDataPoint { Value = 55 },
-                                new OneValueChartDataPoint { Value = 35 },
-                                new OneValueChartDataPoint { Value = 90 }
-                            }
+                            new OneValueChartDataPoint { Value = 55 },
+                            new OneValueChartDataPoint { Value = 35 },
+                            new OneValueChartDataPoint { Value = 90 }
                         }
                     }
                 }
             };
-            Chart chart = TestUtils.SlidesApi.PostAddNewShape(request) as Chart;
+            Chart chart = TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName) as Chart;
             Assert.IsNotNull(chart);
             Assert.AreEqual(2, chart.Series.Count);
             Assert.AreEqual(3, chart.Categories.Count);
@@ -119,50 +104,42 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ChartUpdate()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PutSlideShapeInfoRequest request = new PutSlideShapeInfoRequest
+            ShapeBase dto = new Chart
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                ShapeIndex = c_shapeIndex,
-                Dto = new Chart
+                ChartType = Chart.ChartTypeEnum.ClusteredColumn,
+                Width = 400,
+                Height = 300,
+                Categories = new List<ChartCategory>
                 {
-                    ChartType = Chart.ChartTypeEnum.ClusteredColumn,
-                    Width = 400,
-                    Height = 300,
-                    Categories = new List<ChartCategory>
+                    new ChartCategory { Value = "Category1" },
+                    new ChartCategory { Value = "Category2" },
+                    new ChartCategory { Value = "Category3" }
+                },
+                Series = new List<Series>
+                {
+                    new OneValueSeries
                     {
-                        new ChartCategory { Value = "Category1" },
-                        new ChartCategory { Value = "Category2" },
-                        new ChartCategory { Value = "Category3" }
+                        Name = "Series1",
+                        DataPoints = new List<OneValueChartDataPoint>
+                        {
+                            new OneValueChartDataPoint { Value = 40 },
+                            new OneValueChartDataPoint { Value = 50 },
+                            new OneValueChartDataPoint { Value = 70 }
+                        }
                     },
-                    Series = new List<Series>
+                    new OneValueSeries
                     {
-                        new OneValueSeries
+                        Name = "Series2",
+                        DataPoints = new List<OneValueChartDataPoint>
                         {
-                            Name = "Series1",
-                            DataPoints = new List<OneValueChartDataPoint>
-                            {
-                                new OneValueChartDataPoint { Value = 40 },
-                                new OneValueChartDataPoint { Value = 50 },
-                                new OneValueChartDataPoint { Value = 70 }
-                            }
-                        },
-                        new OneValueSeries
-                        {
-                            Name = "Series2",
-                            DataPoints = new List<OneValueChartDataPoint>
-                            {
-                                new OneValueChartDataPoint { Value = 55 },
-                                new OneValueChartDataPoint { Value = 35 },
-                                new OneValueChartDataPoint { Value = 90 }
-                            }
+                            new OneValueChartDataPoint { Value = 55 },
+                            new OneValueChartDataPoint { Value = 35 },
+                            new OneValueChartDataPoint { Value = 90 }
                         }
                     }
                 }
             };
-            Chart chart = TestUtils.SlidesApi.PutSlideShapeInfo(request) as Chart;
+            Chart chart = TestUtils.SlidesApi.UpdateShape(c_fileName, c_slideIndex, c_shapeIndex, dto, c_password, c_folderName) as Chart;
             Assert.IsNotNull(chart);
             Assert.AreEqual(2, chart.Series.Count);
             Assert.AreEqual(3, chart.Categories.Count);
@@ -172,26 +149,18 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ChartSeriesCreate()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostChartSeriesRequest request = new PostChartSeriesRequest
+            Series series = new OneValueSeries
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                ShapeIndex = c_shapeIndex,
-                Series = new OneValueSeries
+                Name = "Series1",
+                DataPoints = new List<OneValueChartDataPoint>
                 {
-                    Name = "Series1",
-                    DataPoints = new List<OneValueChartDataPoint>
-                    {
-                        new OneValueChartDataPoint { Value = 40 },
-                        new OneValueChartDataPoint { Value = 50 },
-                        new OneValueChartDataPoint { Value = 14 },
-                        new OneValueChartDataPoint { Value = 70 }
-                    }
+                    new OneValueChartDataPoint { Value = 40 },
+                    new OneValueChartDataPoint { Value = 50 },
+                    new OneValueChartDataPoint { Value = 14 },
+                    new OneValueChartDataPoint { Value = 70 }
                 }
             };
-            Chart chart = TestUtils.SlidesApi.PostChartSeries(request) as Chart;
+            Chart chart = TestUtils.SlidesApi.CreateChartSeries(c_fileName, c_slideIndex, c_shapeIndex, series, c_password, c_folderName);
             Assert.IsNotNull(chart);
             Assert.AreEqual(c_seriesCount + 1, chart.Series.Count);
             Assert.AreEqual(c_categoryCount, chart.Categories.Count);
@@ -201,26 +170,18 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ChartSeriesUpdate()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PutChartSeriesRequest request = new PutChartSeriesRequest
+            Series series = new OneValueSeries
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                ShapeIndex = c_shapeIndex,
-                SeriesIndex = c_seriesIndex,
-                Series = new OneValueSeries
+                DataPoints = new List<OneValueChartDataPoint>
                 {
-                    DataPoints = new List<OneValueChartDataPoint>
-                    {
-                        new OneValueChartDataPoint { Value = 40 },
-                        new OneValueChartDataPoint { Value = 50 },
-                        new OneValueChartDataPoint { Value = 14 },
-                        new OneValueChartDataPoint { Value = 70 }
-                    }
+                    new OneValueChartDataPoint { Value = 40 },
+                    new OneValueChartDataPoint { Value = 50 },
+                    new OneValueChartDataPoint { Value = 14 },
+                    new OneValueChartDataPoint { Value = 70 }
                 }
             };
-            Chart chart = TestUtils.SlidesApi.PutChartSeries(request) as Chart;
+            Chart chart = TestUtils.SlidesApi.UpdateChartSeries(
+                c_fileName, c_slideIndex, c_shapeIndex, c_seriesIndex, series, c_password, c_folderName);
             Assert.IsNotNull(chart);
             Assert.AreEqual(c_seriesCount, chart.Series.Count);
             Assert.AreEqual(c_categoryCount, chart.Categories.Count);
@@ -230,16 +191,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ChartSeriesDelete()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            DeleteChartSeriesRequest request = new DeleteChartSeriesRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                ShapeIndex = c_shapeIndex,
-                SeriesIndex = c_seriesIndex
-            };
-            Chart chart = TestUtils.SlidesApi.DeleteChartSeries(request) as Chart;
+            Chart chart = TestUtils.SlidesApi.DeleteChartSeries(
+                c_fileName, c_slideIndex, c_shapeIndex, c_seriesIndex, c_password, c_folderName);
             Assert.IsNotNull(chart);
             Assert.AreEqual(c_seriesCount - 1, chart.Series.Count);
             Assert.AreEqual(c_categoryCount, chart.Categories.Count);
@@ -249,77 +202,53 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ChartCategoryCreate()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostChartCategoryRequest request = new PostChartCategoryRequest
+            ChartCategory category = new ChartCategory
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                ShapeIndex = c_shapeIndex,
-                Category = new ChartCategory
+                Value = "NewCategory",
+                DataPoints = new List<OneValueChartDataPoint>
                 {
-                    Value = "NewCategory",
-                    DataPoints = new List<OneValueChartDataPoint>
-                    {
-                        new OneValueChartDataPoint { Value = 40 },
-                        new OneValueChartDataPoint { Value = 50 },
-                        new OneValueChartDataPoint { Value = 14 }
-                    }
+                    new OneValueChartDataPoint { Value = 40 },
+                    new OneValueChartDataPoint { Value = 50 },
+                    new OneValueChartDataPoint { Value = 14 }
                 }
             };
-            Chart chart = TestUtils.SlidesApi.PostChartCategory(request) as Chart;
+            Chart chart = TestUtils.SlidesApi.CreateChartCategory(c_fileName, c_slideIndex, c_shapeIndex, category, c_password, c_folderName);
             Assert.IsNotNull(chart);
             Assert.AreEqual(c_seriesCount, chart.Series.Count);
             Assert.AreEqual(c_categoryCount + 1, chart.Categories.Count);
             Assert.AreEqual(c_categoryCount + 1, ((OneValueSeries)chart.Series[0]).DataPoints.Count);
-            Assert.AreEqual(request.Category.DataPoints[0].Value, ((OneValueSeries)chart.Series[0]).DataPoints[c_categoryCount].Value);
+            Assert.AreEqual(category.DataPoints[0].Value, ((OneValueSeries)chart.Series[0]).DataPoints[c_categoryCount].Value);
         }
 
         [Test]
         public void ChartCategoryUpdate()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PutChartCategoryRequest request = new PutChartCategoryRequest
+            ChartCategory category = new ChartCategory
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                ShapeIndex = c_shapeIndex,
-                CategoryIndex = c_categoryIndex,
-                Category = new ChartCategory
+                Value = "NewCategory",
+                DataPoints = new List<OneValueChartDataPoint>
                 {
-                    Value = "NewCategory",
-                    DataPoints = new List<OneValueChartDataPoint>
-                    {
-                        new OneValueChartDataPoint { Value = 40 },
-                        new OneValueChartDataPoint { Value = 50 },
-                        new OneValueChartDataPoint { Value = 14 }
-                    }
+                    new OneValueChartDataPoint { Value = 40 },
+                    new OneValueChartDataPoint { Value = 50 },
+                    new OneValueChartDataPoint { Value = 14 }
                 }
             };
-            Chart chart = TestUtils.SlidesApi.PutChartCategory(request) as Chart;
+            Chart chart = TestUtils.SlidesApi.UpdateChartCategory(
+                c_fileName, c_slideIndex, c_shapeIndex, c_categoryIndex, category, c_password, c_folderName);
             Assert.IsNotNull(chart);
             Assert.AreEqual(c_seriesCount, chart.Series.Count);
             Assert.AreEqual(c_categoryCount, chart.Categories.Count);
             Assert.AreEqual(c_categoryCount, ((OneValueSeries)chart.Series[0]).DataPoints.Count);
-            Assert.AreEqual(request.Category.DataPoints[0].Value, ((OneValueSeries)chart.Series[0]).DataPoints[c_categoryIndex - 1].Value);
+            Assert.AreEqual(category.DataPoints[0].Value, ((OneValueSeries)chart.Series[0]).DataPoints[c_categoryIndex - 1].Value);
         }
 
         [Test]
         public void ChartCategoryDelete()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            DeleteChartCategoryRequest request = new DeleteChartCategoryRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                ShapeIndex = c_shapeIndex,
-                CategoryIndex = c_categoryIndex
-            };
-            Chart chart = TestUtils.SlidesApi.DeleteChartCategory(request) as Chart;
+            Chart chart = TestUtils.SlidesApi.DeleteChartCategory(
+                c_fileName, c_slideIndex, c_shapeIndex, c_categoryIndex, c_password, c_folderName);
             Assert.IsNotNull(chart);
             Assert.AreEqual(c_seriesCount, chart.Series.Count);
             Assert.AreEqual(c_categoryCount - 1, chart.Categories.Count);
@@ -330,58 +259,32 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ChartDataPointCreate()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostChartDataPointRequest request = new PostChartDataPointRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                ShapeIndex = c_shapeIndex,
-                SeriesIndex = c_seriesIndex,
-                DataPoint = new OneValueChartDataPoint { Value = 40 }
-            };
+            DataPoint dataPoint = new OneValueChartDataPoint { Value = 40 };
             //Must throw ApiException because adding data points only works with Scatter & Bubble charts.
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.PostChartDataPoint(request));
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CreateChartDataPoint(
+                c_fileName, c_slideIndex, c_shapeIndex, c_seriesIndex, dataPoint, c_password, c_folderName));
         }
 
         [Test]
         public void ChartDataPointUpdate()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PutChartDataPointRequest request = new PutChartDataPointRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                ShapeIndex = c_shapeIndex,
-                SeriesIndex = c_seriesIndex,
-                PointIndex = c_categoryIndex,
-                DataPoint = new OneValueChartDataPoint { Value = 40 }
-            };
-            Chart chart = TestUtils.SlidesApi.PutChartDataPoint(request) as Chart;
+            OneValueChartDataPoint dataPoint = new OneValueChartDataPoint { Value = 40 };
+            Chart chart = TestUtils.SlidesApi.UpdateChartDataPoint(
+                c_fileName, c_slideIndex, c_shapeIndex, c_seriesIndex, c_categoryIndex, dataPoint, c_password, c_folderName);
             Assert.IsNotNull(chart);
             Assert.AreEqual(c_seriesCount, chart.Series.Count);
             Assert.AreEqual(c_categoryCount, chart.Categories.Count);
             Assert.AreEqual(c_categoryCount, ((OneValueSeries)chart.Series[0]).DataPoints.Count);
-            Assert.AreEqual(((OneValueChartDataPoint)request.DataPoint).Value, ((OneValueSeries)chart.Series[c_seriesIndex - 1]).DataPoints[c_categoryIndex - 1].Value);
+            Assert.AreEqual(dataPoint.Value, ((OneValueSeries)chart.Series[c_seriesIndex - 1]).DataPoints[c_categoryIndex - 1].Value);
         }
 
         [Test]
         public void ChartDataPointDelete()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            DeleteChartDataPointRequest request = new DeleteChartDataPointRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                ShapeIndex = c_shapeIndex,
-                SeriesIndex = c_seriesIndex,
-                PointIndex = c_categoryIndex
-            };
-            Chart chart = TestUtils.SlidesApi.DeleteChartDataPoint(request) as Chart;
+            Chart chart = TestUtils.SlidesApi.DeleteChartDataPoint(
+                c_fileName, c_slideIndex, c_shapeIndex, c_seriesIndex, c_categoryIndex, c_password, c_folderName);
             Assert.IsNotNull(chart);
             Assert.AreEqual(c_seriesCount, chart.Series.Count);
             Assert.AreEqual(c_categoryCount, chart.Categories.Count);
@@ -392,41 +295,35 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void SunburstChart()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
+            ShapeBase dto = new Chart
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new Chart
+                ChartType = Chart.ChartTypeEnum.Sunburst,
+                Width = 400,
+                Height = 300,
+                Categories = new List<ChartCategory>
                 {
-                    ChartType = Chart.ChartTypeEnum.Sunburst,
-                    Width = 400,
-                    Height = 300,
-                    Categories = new List<ChartCategory>
+                    new ChartCategory { Value = "Leaf1", Level = 3, ParentCategories = new List<string> { "Branch1", "Stem1" } },
+                    new ChartCategory { Value = "Leaf2", Level = 3, ParentCategories = new List<string> { "Branch1", "Stem1" } },
+                    new ChartCategory { Value = "Branch2", Level = 2, ParentCategories = new List<string> { "Stem1" } },
+                    new ChartCategory { Value = "Stem2", Level = 1 }
+                },
+                Series = new List<Series>
+                {
+                    new OneValueSeries
                     {
-                        new ChartCategory { Value = "Leaf1", Level = 3, ParentCategories = new List<string> { "Branch1", "Stem1" } },
-                        new ChartCategory { Value = "Leaf2", Level = 3, ParentCategories = new List<string> { "Branch1", "Stem1" } },
-                        new ChartCategory { Value = "Branch2", Level = 2, ParentCategories = new List<string> { "Stem1" } },
-                        new ChartCategory { Value = "Stem2", Level = 1 }
-                    },
-                    Series = new List<Series>
-                    {
-                        new OneValueSeries
+                        Name = "Series1",
+                        DataPoints = new List<OneValueChartDataPoint>
                         {
-                            Name = "Series1",
-                            DataPoints = new List<OneValueChartDataPoint>
-                            {
-                                new OneValueChartDataPoint { Value = 40 },
-                                new OneValueChartDataPoint { Value = 50 },
-                                new OneValueChartDataPoint { Value = 70 },
-                                new OneValueChartDataPoint { Value = 80 }
-                            }
+                            new OneValueChartDataPoint { Value = 40 },
+                            new OneValueChartDataPoint { Value = 50 },
+                            new OneValueChartDataPoint { Value = 70 },
+                            new OneValueChartDataPoint { Value = 80 }
                         }
                     }
                 }
             };
-            Chart chart = TestUtils.SlidesApi.PostAddNewShape(request) as Chart;
+            Chart chart = TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName) as Chart;
             Assert.IsNotNull(chart);
             Assert.AreEqual(1, chart.Series.Count);
             Assert.AreEqual(4, chart.Categories.Count);

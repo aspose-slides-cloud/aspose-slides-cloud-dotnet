@@ -29,23 +29,71 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 {
-    internal class VoidTestExecutor<TRequest> where TRequest : class, new()
+    internal class VoidTestExecutor
     {
         public VoidTestExecutor(string methodName, string invalidPropertyName)
         {
             m_methodName = methodName;
             InvalidPropertyName = invalidPropertyName;
+            InitFiles();
         }
 
-        public TRequest PrepareRequest()
+        public T GetTestValue<T>(string name)
         {
-            TRequest request = CreateRequestInstance<TRequest>();
-            InitFiles();
-            return request;
+            Type type = typeof(T);
+            object value = GetParameterValue(name, ref type);
+            if (value != null)
+            {
+                if (type == typeof(Stream))
+                {
+                    string fileName = "test.pptx";
+                    if (m_methodName.Equals("PostSlidesDocumentFromPdf", StringComparison.OrdinalIgnoreCase))
+                    {
+                        fileName = "test.pdf";
+                    }
+                    value = File.OpenRead(TestUtils.TestDataPath + "\\" + fileName);
+                }
+                else if (type == typeof(List<FileInfo>))
+                {
+                    value = new List<FileInfo>
+                    {
+                        new FileInfo { Name = "test1.pptx", Content = File.OpenRead(TestUtils.TestDataPath + "\\test.pptx") },
+                        new FileInfo { Name = "test2.pptx", Content = File.OpenRead(TestUtils.TestDataPath + "\\test-unprotected.pptx") }
+                    };
+                }
+                else if (value.GetType() != type)
+                {
+                    JArray jArrayValue = value as JArray;
+                    if (jArrayValue != null)
+                    {
+                        value = jArrayValue.ToObject(type);
+                    }
+                    else
+                    {
+                        JObject jObjectValue = value as JObject;
+                        if (jObjectValue != null)
+                        {
+                            value = jObjectValue.ToObject(type);
+                        }
+                        else
+                        {
+                            Type notNullableType = Nullable.GetUnderlyingType(type);
+                            if (notNullableType != null)
+                            {
+                                value = ConvertToSimpleType(value, notNullableType);
+                            }
+                            else
+                            {
+                                value = ConvertToSimpleType(value, type);
+                            }
+                        }
+                    }
+                }
+            }
+            return (T)value;
         }
 
         public void AssertResult()
@@ -146,61 +194,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             }
         }
 
-        private T CreateRequestInstance<T>() where T : class, new()
-        {
-            T instance = new T();
-            foreach (PropertyInfo propertyInfo in instance.GetType().GetProperties())
-            {
-                if (propertyInfo.CanWrite)
-                {
-                    Type type = propertyInfo.PropertyType;
-                    object value = GetPropertyValue(propertyInfo, ref type);
-                    if (value != null)
-                    {
-                        if (propertyInfo.PropertyType == typeof(Stream))
-                        {
-                            string fileName = "test.pptx";
-                            if (m_methodName.Equals("PostSlidesDocumentFromPdf", StringComparison.OrdinalIgnoreCase))
-                            {
-                                fileName = "test.pdf";
-                            }
-                            value = File.OpenRead(TestUtils.TestDataPath + "\\" + fileName);
-                        }
-                        else if (value.GetType() != type)
-                        {
-                            JArray jArrayValue = value as JArray;
-                            if (jArrayValue != null)
-                            {
-                                value = jArrayValue.ToObject(type);
-                            }
-                            else
-                            {
-                                JObject jObjectValue = value as JObject;
-                                if (jObjectValue != null)
-                                {
-                                    value = jObjectValue.ToObject(type);
-                                }
-                                else
-                                {
-                                    Type notNullableType = Nullable.GetUnderlyingType(type);
-                                    if (notNullableType != null)
-                                    {
-                                        value = ConvertToSimpleType(value, notNullableType);
-                                    }
-                                    else
-                                    {
-                                        value = ConvertToSimpleType(value, type);
-                                    }
-                                }
-                            }
-                        }
-                        propertyInfo.SetValue(instance, value);
-                    }
-                }
-            }
-            return instance;
-        }
-
         private object ConvertToSimpleType(object value, Type type)
         {
             if (type.IsEnum)
@@ -210,16 +203,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             return Convert.ChangeType(value, type);
         }
 
-        private object GetPropertyValue(PropertyInfo propertyInfo, ref Type type)
+        public object GetParameterValue(string name, ref Type type)
         {
-            object value = "test" + propertyInfo.Name;
+            object value = "test" + name;
             object invalidValue = null;
-            foreach (ValueRule rule in EnumerateRules(Rules.Values, propertyInfo.Name))
+            foreach (ValueRule rule in EnumerateRules(Rules.Values, name))
             {
                 if (rule.Type != null)
                 {
                     Type ruleType = Type.GetType("Aspose.Slides.Cloud.Sdk.Model." + rule.Type + ", " + typeof(ApiBase).Assembly.GetName().Name);
-                    if (!propertyInfo.PropertyType.IsAssignableFrom(ruleType))
+                    if (!type.IsAssignableFrom(ruleType))
                     {
                         continue;
                     }
@@ -234,7 +227,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                     invalidValue = rule.InvalidValue;
                 }
             }
-            if (propertyInfo.Name.Equals(InvalidPropertyName, StringComparison.InvariantCultureIgnoreCase))
+            if (name.Equals(InvalidPropertyName, StringComparison.InvariantCultureIgnoreCase))
             {
                 m_invalidPropertyValue = Untemplatize(invalidValue, value);
                 return m_invalidPropertyValue;
@@ -253,6 +246,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
         private void InitFiles()
         {
             Dictionary<string, FileRule> rulesToApply = new Dictionary<string, FileRule>();
+            if (InvalidPropertyName != null)
+            {
+                //necessary to fill m_invalidPropertyValue
+                Type type = typeof(string);
+                GetParameterValue(InvalidPropertyName, ref type);
+            }
             foreach (FileRule rule in EnumerateRules(Rules.Files, InvalidPropertyName))
             {
                 string actualName = Untemplatize(rule.File, m_invalidPropertyValue);

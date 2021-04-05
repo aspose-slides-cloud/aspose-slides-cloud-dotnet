@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostSlidesSplitRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -49,26 +50,26 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="format">Export format. Default value is jpeg.</param>
         /// <param name="width">The width of created images.</param>
         /// <param name="height">The height of created images.</param>
-        /// <param name="to">The last slide number for splitting, if is not specified splitting ends at the last slide of the document.</param>
         /// <param name="from">The start slide number for splitting, if is not specified splitting starts from the first slide of the presentation.</param>
+        /// <param name="to">The last slide number for splitting, if is not specified splitting ends at the last slide of the document.</param>
         /// <param name="destFolder">Folder on storage where images are going to be uploaded. If not specified then images are uploaded to same folder as presentation.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="storage">Document storage.</param>
         /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         /// <param name="fontsFolder">Custom fonts folder.</param>
-        public PostSlidesSplitRequest(string name, ExportOptions options = null, SlideExportFormat? format = null, int? width = null, int? height = null, int? to = null, int? from = null, string destFolder = null, string password = null, string storage = null, string folder = null, string fontsFolder = null)
+        public PostSlidesSplitRequest(string name, ExportOptions options = null, SlideExportFormat? format = null, int? width = null, int? height = null, int? from = null, int? to = null, string destFolder = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
         {
             this.Name = name;
             this.Options = options;
             this.Format = format;
             this.Width = width;
             this.Height = height;
-            this.To = to;
             this.From = from;
+            this.To = to;
             this.DestFolder = destFolder;
             this.Password = password;
-            this.Storage = storage;
             this.Folder = folder;
+            this.Storage = storage;
             this.FontsFolder = fontsFolder;
         }
 
@@ -98,14 +99,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int? Height { get; set; }
 
         /// <summary>
-        /// The last slide number for splitting, if is not specified splitting ends at the last slide of the document.
-        /// </summary>  
-        public int? To { get; set; }
-
-        /// <summary>
         /// The start slide number for splitting, if is not specified splitting starts from the first slide of the presentation.
         /// </summary>  
         public int? From { get; set; }
+
+        /// <summary>
+        /// The last slide number for splitting, if is not specified splitting ends at the last slide of the document.
+        /// </summary>  
+        public int? To { get; set; }
 
         /// <summary>
         /// Folder on storage where images are going to be uploaded. If not specified then images are uploaded to same folder as presentation.
@@ -118,14 +119,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// Document storage.
-        /// </summary>  
-        public string Storage { get; set; }
-
-        /// <summary>
         /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
+
+        /// <summary>
+        /// Document storage.
+        /// </summary>  
+        public string Storage { get; set; }
 
         /// <summary>
         /// Custom fonts folder.

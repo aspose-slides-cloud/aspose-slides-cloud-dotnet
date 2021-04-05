@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PutSlidesHeaderFooterRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -47,15 +48,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="name">Document name.</param>
         /// <param name="dto">HeaderFooter instance.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="storage">Document storage.</param>
         /// <param name="folder">Document folder.</param>
-        public PutSlidesHeaderFooterRequest(string name, HeaderFooter dto, string password = null, string storage = null, string folder = null)
+        /// <param name="storage">Document storage.</param>
+        public PutSlidesHeaderFooterRequest(string name, HeaderFooter dto, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.Dto = dto;
             this.Password = password;
-            this.Storage = storage;
             this.Folder = folder;
+            this.Storage = storage;
         }
 
         /// <summary>
@@ -74,13 +75,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// Document storage.
-        /// </summary>  
-        public string Storage { get; set; }
-
-        /// <summary>
         /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
+
+        /// <summary>
+        /// Document storage.
+        /// </summary>  
+        public string Storage { get; set; }
   }
 }

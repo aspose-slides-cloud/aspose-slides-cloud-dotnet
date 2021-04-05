@@ -45,7 +45,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void GoodCredentials()
         {
-            new SlidesApi(TestUtils.Configuration).GetSlidesApiInfo();
+            new SlidesApi(TestUtils.Configuration).GetApiInfo();
         }
 
         [Test]
@@ -55,7 +55,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             config.AppSid = "invalid";
             try
             {
-                new SlidesApi(config).GetSlidesApiInfo();
+                new SlidesApi(config).GetApiInfo();
                 Assert.Fail("Must have failed");
             }
             catch (ApiException ex)
@@ -68,9 +68,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void GoodAuthToken()
         {
             Configuration config = TestUtils.GetConfiguration();
-            new SlidesApi(config).GetSlidesApiInfo();
+            new SlidesApi(config).GetApiInfo();
             config.AppSid = "invalid";
-            new SlidesApi(config).GetSlidesApiInfo();
+            new SlidesApi(config).GetApiInfo();
         }
 
         [Test]
@@ -78,7 +78,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             Configuration config = TestUtils.GetConfiguration();
             config.AuthToken = "invalid";
-            new SlidesApi(config).GetSlidesApiInfo();
+            new SlidesApi(config).GetApiInfo();
         }
     }
 }

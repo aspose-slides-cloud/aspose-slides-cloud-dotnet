@@ -24,11 +24,9 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using Aspose.Slides.Cloud.Sdk.Model;
-using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 using System.Collections.Generic;
-using System.IO;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
@@ -49,31 +47,28 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void TemplateInput()
         {
-            PostSlidesPipelineRequest request = new PostSlidesPipelineRequest
+            Pipeline pipeline = new Pipeline
             {
-                Pipeline = new Pipeline
+                Input = new Input
                 {
-                    Input = new Input
+                    TemplateData = new RequestInputFile { Index = 0 },
+                    Template = new RequestInputFile { Index = 1 }
+                },
+                Tasks = new List<Task>
+                {
+                    new Save
                     {
-                        TemplateData = new RequestInputFile { Index = 0 },
-                        Template = new RequestInputFile { Index = 1 }
-                    },
-                    Tasks = new List<Task>
-                    {
-                        new Save
-                        {
-                            Format = Save.FormatEnum.Pptx,
-                            Output = new ResponseOutputFile()
-                        }
+                        Format = Save.FormatEnum.Pptx,
+                        Output = new ResponseOutputFile()
                     }
-                },
-                Files = new List<FileInfo>
-                {
-                    TestUtils.GetLocalFile("TemplatingCVDataWithBase64.xml", "text/xml"),
-                    TestUtils.GetLocalFile("TemplateCV.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation")
-                },
+                }
             };
-            object response = TestUtils.SlidesApi.PostSlidesPipeline(request);
+            List<FileInfo>  files = new List<FileInfo>
+            {
+                TestUtils.GetLocalFile("TemplatingCVDataWithBase64.xml", "text/xml"),
+                TestUtils.GetLocalFile("TemplateCV.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation")
+            };
+            object response = TestUtils.SlidesApi.Pipeline(pipeline, files);
             Assert.IsNotNull(response);
         }
     }

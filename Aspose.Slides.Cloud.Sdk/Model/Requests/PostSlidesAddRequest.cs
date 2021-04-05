@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostSlidesAddRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -45,25 +46,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Initializes a new instance of the <see cref="PostSlidesAddRequest"/> class.
         /// </summary>
         /// <param name="name">Document name.</param>
+        /// <param name="layoutAlias">Alias of layout slide for new slide. Alias may be the type of layout, name of layout slide or index</param>
         /// <param name="position">The target position at which to create the slide. Add to the end by default.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        /// <param name="layoutAlias">Alias of layout slide for new slide. Alias may be the type of layout, name of layout slide or index</param>
-        public PostSlidesAddRequest(string name, int? position = null, string password = null, string folder = null, string storage = null, string layoutAlias = null)
+        public PostSlidesAddRequest(string name, string layoutAlias = null, int? position = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
+            this.LayoutAlias = layoutAlias;
             this.Position = position;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
-            this.LayoutAlias = layoutAlias;
         }
 
         /// <summary>
         /// Document name.
         /// </summary>  
         public string Name { get; set; }
+
+        /// <summary>
+        /// Alias of layout slide for new slide. Alias may be the type of layout, name of layout slide or index
+        /// </summary>  
+        public string LayoutAlias { get; set; }
 
         /// <summary>
         /// The target position at which to create the slide. Add to the end by default.
@@ -84,10 +90,5 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
-
-        /// <summary>
-        /// Alias of layout slide for new slide. Alias may be the type of layout, name of layout slide or index
-        /// </summary>  
-        public string LayoutAlias { get; set; }
   }
 }

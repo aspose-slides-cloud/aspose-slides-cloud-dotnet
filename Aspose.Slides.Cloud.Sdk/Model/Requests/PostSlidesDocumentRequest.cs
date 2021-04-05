@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostSlidesDocumentRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -48,16 +49,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="data">Document input data.</param>
         /// <param name="inputPassword">The password for input document.</param>
         /// <param name="password">The document password.</param>
-        /// <param name="storage">Document storage.</param>
         /// <param name="folder">Document folder.</param>
-        public PostSlidesDocumentRequest(string name, System.IO.Stream data = null, string inputPassword = null, string password = null, string storage = null, string folder = null)
+        /// <param name="storage">Document storage.</param>
+        public PostSlidesDocumentRequest(string name, System.IO.Stream data = null, string inputPassword = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.Data = data;
             this.InputPassword = inputPassword;
             this.Password = password;
-            this.Storage = storage;
             this.Folder = folder;
+            this.Storage = storage;
         }
 
         /// <summary>
@@ -81,13 +82,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// Document storage.
-        /// </summary>  
-        public string Storage { get; set; }
-
-        /// <summary>
         /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
+
+        /// <summary>
+        /// Document storage.
+        /// </summary>  
+        public string Storage { get; set; }
   }
 }

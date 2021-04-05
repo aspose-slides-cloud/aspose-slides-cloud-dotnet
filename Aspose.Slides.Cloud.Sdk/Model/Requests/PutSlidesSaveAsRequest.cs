@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PutSlidesSaveAsRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -45,22 +46,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Initializes a new instance of the <see cref="PutSlidesSaveAsRequest"/> class.
         /// </summary>
         /// <param name="name">Document name.</param>
-        /// <param name="outPath">Output path.</param>
         /// <param name="format">Export format.</param>
+        /// <param name="outPath">Output path.</param>
         /// <param name="options">Export options.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="storage">Document storage.</param>
         /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         /// <param name="fontsFolder">Custom fonts folder.</param>
-        public PutSlidesSaveAsRequest(string name, string outPath, ExportFormat format, ExportOptions options = null, string password = null, string storage = null, string folder = null, string fontsFolder = null)
+        public PutSlidesSaveAsRequest(string name, ExportFormat format, string outPath, ExportOptions options = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
         {
             this.Name = name;
-            this.OutPath = outPath;
             this.Format = format;
+            this.OutPath = outPath;
             this.Options = options;
             this.Password = password;
-            this.Storage = storage;
             this.Folder = folder;
+            this.Storage = storage;
             this.FontsFolder = fontsFolder;
         }
 
@@ -70,14 +71,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Name { get; set; }
 
         /// <summary>
-        /// Output path.
-        /// </summary>  
-        public string OutPath { get; set; }
-
-        /// <summary>
         /// Export format.
         /// </summary>  
         public ExportFormat Format { get; set; }
+
+        /// <summary>
+        /// Output path.
+        /// </summary>  
+        public string OutPath { get; set; }
 
         /// <summary>
         /// Export options.
@@ -90,14 +91,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// Document storage.
-        /// </summary>  
-        public string Storage { get; set; }
-
-        /// <summary>
         /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
+
+        /// <summary>
+        /// Document storage.
+        /// </summary>  
+        public string Storage { get; set; }
 
         /// <summary>
         /// Custom fonts folder.

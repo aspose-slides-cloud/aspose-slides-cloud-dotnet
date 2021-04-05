@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PutSubshapeSaveAsRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -51,14 +52,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="outPath">Output path.</param>
         /// <param name="path">Shape path (for smart art and group shapes).</param>
         /// <param name="options">export options</param>
-        /// <param name="password">Document password.</param>
-        /// <param name="folder">Presentation folder.</param>
-        /// <param name="storage">Presentation storage.</param>
         /// <param name="scaleX">X scale ratio.</param>
         /// <param name="scaleY">Y scale ratio.</param>
         /// <param name="bounds">Shape thumbnail bounds type.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="folder">Presentation folder.</param>
+        /// <param name="storage">Presentation storage.</param>
         /// <param name="fontsFolder">Fonts folder.</param>
-        public PutSubshapeSaveAsRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string outPath, string path = null, IShapeExportOptions options = null, string password = null, string folder = null, string storage = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string fontsFolder = null)
+        public PutSubshapeSaveAsRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string outPath, string path = null, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
@@ -67,12 +68,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
             this.OutPath = outPath;
             this.Path = path;
             this.Options = options;
-            this.Password = password;
-            this.Folder = folder;
-            this.Storage = storage;
             this.ScaleX = scaleX;
             this.ScaleY = scaleY;
             this.Bounds = bounds;
+            this.Password = password;
+            this.Folder = folder;
+            this.Storage = storage;
             this.FontsFolder = fontsFolder;
         }
 
@@ -112,21 +113,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public IShapeExportOptions Options { get; set; }
 
         /// <summary>
-        /// Document password.
-        /// </summary>  
-        public string Password { get; set; }
-
-        /// <summary>
-        /// Presentation folder.
-        /// </summary>  
-        public string Folder { get; set; }
-
-        /// <summary>
-        /// Presentation storage.
-        /// </summary>  
-        public string Storage { get; set; }
-
-        /// <summary>
         /// X scale ratio.
         /// </summary>  
         public double? ScaleX { get; set; }
@@ -140,6 +126,21 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Shape thumbnail bounds type.
         /// </summary>  
         public ShapeThumbnailBounds? Bounds { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
+
+        /// <summary>
+        /// Presentation folder.
+        /// </summary>  
+        public string Folder { get; set; }
+
+        /// <summary>
+        /// Presentation storage.
+        /// </summary>  
+        public string Storage { get; set; }
 
         /// <summary>
         /// Fonts folder.

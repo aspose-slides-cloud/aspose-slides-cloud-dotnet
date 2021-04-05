@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PutUpdateNotesSlideShapeRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud

@@ -28,7 +28,7 @@ using NUnit.Framework;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 {
-    internal class TestExecutor<TRequest, TResponse> : VoidTestExecutor<TRequest> where TRequest : class, new()
+    internal class TestExecutor<TResponse> : VoidTestExecutor
     {
         public TestExecutor(string methodName, string invalidPropertyName) : base(methodName, invalidPropertyName)
         {

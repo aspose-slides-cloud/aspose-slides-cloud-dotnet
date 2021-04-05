@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="GetSlidesSlideTextItemsRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -46,7 +47,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="slideIndex">Slide index.</param>
-        /// <param name="withEmpty">True to incude empty items.</param>
+        /// <param name="withEmpty">True to include empty items.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
@@ -71,7 +72,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
-        /// True to incude empty items.
+        /// True to include empty items.
         /// </summary>  
         public bool? WithEmpty { get; set; }
 

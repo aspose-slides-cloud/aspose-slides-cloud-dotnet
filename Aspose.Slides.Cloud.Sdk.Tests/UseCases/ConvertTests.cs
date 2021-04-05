@@ -25,7 +25,6 @@
 
 using System.IO;
 using Aspose.Slides.Cloud.Sdk.Model;
-using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 
@@ -48,13 +47,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void ConvertPostFromRequest()
         {
-            PostSlidesConvertRequest request = new PostSlidesConvertRequest
-            {
-                Document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)),
-                Password = c_password,
-                Format = c_format
-            };
-            Stream converted = TestUtils.SlidesApi.PostSlidesConvert(request);
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            Stream converted = TestUtils.SlidesApi.Convert(file, c_format, c_password);
             Assert.IsNotNull(converted);
             Assert.Greater(converted.Length, 0);
             Assert.IsTrue(converted.CanRead);
@@ -63,15 +57,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void ConvertPutFromRequest()
         {
-            PutSlidesConvertRequest putRequest = new PutSlidesConvertRequest
-            {
-                Document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)),
-                Password = c_password,
-                Format = c_format,
-                OutPath = c_outPath
-            };
-            TestUtils.SlidesApi.PutSlidesConvert(putRequest);
-            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(new ObjectExistsRequest { Path = c_outPath });
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            TestUtils.SlidesApi.ConvertAndSave(file, c_format, c_outPath, c_password);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
             Assert.IsTrue(exists.Exists.Value);
         }
 
@@ -79,14 +67,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ConvertPostFromStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostSlidesSaveAsRequest request = new PostSlidesSaveAsRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                Format = c_format
-            };
-            Stream converted = TestUtils.SlidesApi.PostSlidesSaveAs(request);
+            Stream converted = TestUtils.SlidesApi.DownloadPresentation(c_fileName, c_format, password: c_password, folder: c_folderName);
             Assert.IsNotNull(converted);
             Assert.Greater(converted.Length, 0);
             Assert.IsTrue(converted.CanRead);
@@ -96,16 +77,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ConvertPutFromStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PutSlidesSaveAsRequest request = new PutSlidesSaveAsRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                Format = c_format,
-                OutPath = c_outPath
-            };
-            TestUtils.SlidesApi.PutSlidesSaveAs(request);
-            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(new ObjectExistsRequest { Path = c_outPath });
+            TestUtils.SlidesApi.SavePresentation(c_fileName, c_format, c_outPath, password: c_password, folder: c_folderName);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
             Assert.IsTrue(exists.Exists.Value);
         }
 
@@ -113,24 +86,102 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ConvertWithOptions()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostSlidesSaveAsRequest request = new PostSlidesSaveAsRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                Format = c_format
-            };
-            Stream converted = TestUtils.SlidesApi.PostSlidesSaveAs(request);
-            request = new PostSlidesSaveAsRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                Format = c_format,
-                Options = new PdfExportOptions { DrawSlidesFrame = true }
-            };
-            Stream convertedWithOptions = TestUtils.SlidesApi.PostSlidesSaveAs(request);
+            Stream converted = TestUtils.SlidesApi.DownloadPresentation(c_fileName, c_format, password: c_password, folder: c_folderName);
+            ExportOptions options = new PdfExportOptions { DrawSlidesFrame = true };
+            Stream convertedWithOptions = TestUtils.SlidesApi.DownloadPresentation(c_fileName, c_format, options, c_password, c_folderName);
             Assert.AreNotEqual(converted.Length, convertedWithOptions.Length);
+        }
+
+        [Test]
+        public void ConvertSlidePostFromRequest()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            Stream converted = TestUtils.SlidesApi.DownloadSlideOnline(file, c_slideIndex, c_slideFormat, password: c_password);
+            Assert.IsNotNull(converted);
+            Assert.Greater(converted.Length, 0);
+            Assert.IsTrue(converted.CanRead);
+        }
+
+        [Test]
+        public void ConvertSlidePutFromRequest()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            TestUtils.SlidesApi.SaveSlideOnline(file, c_slideIndex, c_slideFormat, c_outPath, password: c_password);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
+            Assert.IsTrue(exists.Exists.Value);
+        }
+
+        [Test]
+        public void ConvertSlidePostFromStorage()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Stream converted = TestUtils.SlidesApi.DownloadSlide(
+                c_fileName, c_slideIndex, c_slideFormat, password: c_password, folder: c_folderName);
+            Assert.IsNotNull(converted);
+            Assert.Greater(converted.Length, 0);
+            Assert.IsTrue(converted.CanRead);
+        }
+
+        [Test]
+        public void ConvertSlidePutFromStorage()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            TestUtils.SlidesApi.SaveSlide(c_fileName, c_slideIndex, c_slideFormat, c_outPath, password: c_password, folder: c_folderName);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
+            Assert.IsTrue(exists.Exists.Value);
+        }
+
+        [Test]
+        public void ConvertSlideWithOptions()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Stream converted = TestUtils.SlidesApi.DownloadSlide(
+                c_fileName, c_slideIndex, c_slideFormat, password: c_password, folder: c_folderName);
+            ExportOptions options = new PdfExportOptions { DrawSlidesFrame = true };
+            Stream convertedWithOptions = TestUtils.SlidesApi.DownloadSlide(
+                c_fileName, c_slideIndex, c_slideFormat, options, password: c_password, folder: c_folderName);
+            Assert.AreNotEqual(converted.Length, convertedWithOptions.Length);
+        }
+
+        [Test]
+        public void ConvertShapePostFromRequest()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            Stream converted = TestUtils.SlidesApi.DownloadShapeOnline(
+                file, c_slideIndex, c_shapeIndex, c_shapeFormat, password: c_password);
+            Assert.IsNotNull(converted);
+            Assert.Greater(converted.Length, 0);
+            Assert.IsTrue(converted.CanRead);
+        }
+
+        [Test]
+        public void ConvertShapePutFromRequest()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            TestUtils.SlidesApi.SaveShapeOnline(file, c_slideIndex, c_shapeIndex, c_shapeFormat, c_outPath, password: c_password);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
+            Assert.IsTrue(exists.Exists.Value);
+        }
+
+        [Test]
+        public void ConvertShapePostFromStorage()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Stream converted = TestUtils.SlidesApi.DownloadShape(
+                c_fileName, c_slideIndex, c_shapeIndex, c_shapeFormat, password: c_password, folder: c_folderName);
+            Assert.IsNotNull(converted);
+            Assert.Greater(converted.Length, 0);
+            Assert.IsTrue(converted.CanRead);
+        }
+
+        [Test]
+        public void ConvertShapePutFromStorage()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            TestUtils.SlidesApi.SaveShape(
+                c_fileName, c_slideIndex, c_shapeIndex, c_shapeFormat, c_outPath, password: c_password, folder: c_folderName);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
+            Assert.IsTrue(exists.Exists.Value);
         }
 
         const string c_folderName = "TempSlidesSDK";
@@ -138,5 +189,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const string c_password = "password";
         const string c_outPath = c_folderName + "/converted.pdf";
         const ExportFormat c_format = ExportFormat.Pdf;
+        const SlideExportFormat c_slideFormat = SlideExportFormat.Pdf;
+        const ShapeExportFormat c_shapeFormat = ShapeExportFormat.Svg;
+        const int c_slideIndex = 1;
+        const int c_shapeIndex = 3;
     }
 }

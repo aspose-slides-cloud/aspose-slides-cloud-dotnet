@@ -24,7 +24,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using Aspose.Slides.Cloud.Sdk.Model;
-using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 
@@ -50,15 +49,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             const string folderName = "TempSlidesSDK";
             const string fileName = "test.pptx";
             TestUtils.Upload(fileName, folderName + "/" + fileName);
-            GetSlideShapeRequest request = new GetSlideShapeRequest
-            {
-                Name = fileName,
-                Folder = folderName,
-                Password = "password",
-                SlideIndex = 1,
-                ShapeIndex = 1
-            };
-            ShapeBase shape = TestUtils.SlidesApi.GetSlideShape(request);
+            ShapeBase shape = TestUtils.SlidesApi.GetShape(fileName, 1, 1, "password", folderName);
             Assert.IsInstanceOf<Shape>(shape);
             Assert.IsFalse(string.IsNullOrEmpty(((Shape)shape).Text));
         }

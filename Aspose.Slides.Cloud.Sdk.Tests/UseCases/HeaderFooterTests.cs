@@ -23,9 +23,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
 using Aspose.Slides.Cloud.Sdk.Model;
-using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 
@@ -49,28 +47,15 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void SlidesFooter()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PutSlidesHeaderFooterRequest putRequest = new PutSlidesHeaderFooterRequest
+            HeaderFooter dto = new HeaderFooter
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                Dto = new HeaderFooter
-                {
-                    IsFooterVisible = true,
-                    FooterText = "footer",
-                    IsDateTimeVisible = false
-                }
+                IsFooterVisible = true,
+                FooterText = "footer",
+                IsDateTimeVisible = false
             };
-            Document document = TestUtils.SlidesApi.PutSlidesHeaderFooter(putRequest);
+            Document document = TestUtils.SlidesApi.SetPresentationHeaderFooter(c_fileName, dto, c_password, c_folderName);
             Assert.IsNotNull(document);
-            GetSlideHeaderFooterRequest getRequest = new GetSlideHeaderFooterRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex
-            };
-            HeaderFooter headerFooter = TestUtils.SlidesApi.GetSlideHeaderFooter(getRequest);
+            HeaderFooter headerFooter = TestUtils.SlidesApi.GetSlideHeaderFooter(c_fileName, c_slideIndex, c_password, c_folderName);
             Assert.IsNotNull(headerFooter);
             Assert.IsTrue(headerFooter.IsFooterVisible.Value);
             Assert.IsFalse(headerFooter.IsDateTimeVisible.Value);
@@ -80,31 +65,17 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void SlideFooter()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PutSlideHeaderFooterRequest putRequest = new PutSlideHeaderFooterRequest
+            HeaderFooter dto = new HeaderFooter
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new HeaderFooter
-                {
-                    IsFooterVisible = true,
-                    FooterText = "footer",
-                    IsDateTimeVisible = false
-                }
+                IsFooterVisible = true,
+                FooterText = "footer",
+                IsDateTimeVisible = false
             };
-            HeaderFooter headerFooter = TestUtils.SlidesApi.PutSlideHeaderFooter(putRequest);
+            HeaderFooter headerFooter = TestUtils.SlidesApi.SetSlideHeaderFooter(c_fileName, c_slideIndex, dto, c_password, c_folderName);
             Assert.IsNotNull(headerFooter);
             Assert.IsTrue(headerFooter.IsFooterVisible.Value);
             Assert.IsFalse(headerFooter.IsDateTimeVisible.Value);
-            GetSlideHeaderFooterRequest getRequest = new GetSlideHeaderFooterRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex
-            };
-            headerFooter = TestUtils.SlidesApi.GetSlideHeaderFooter(getRequest);
+            headerFooter = TestUtils.SlidesApi.GetSlideHeaderFooter(c_fileName, c_slideIndex, c_password, c_folderName);
             Assert.IsNotNull(headerFooter);
             Assert.IsTrue(headerFooter.IsFooterVisible.Value);
             Assert.IsFalse(headerFooter.IsDateTimeVisible.Value);
@@ -114,31 +85,18 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void NotesSlideFooter()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PutNotesSlideHeaderFooterRequest putRequest = new PutNotesSlideHeaderFooterRequest
+            NotesSlideHeaderFooter dto = new NotesSlideHeaderFooter
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new NotesSlideHeaderFooter
-                {
-                    IsHeaderVisible = true,
-                    HeaderText = "header",
-                    IsDateTimeVisible = false
-                }
+                IsHeaderVisible = true,
+                HeaderText = "header",
+                IsDateTimeVisible = false
             };
-            NotesSlideHeaderFooter headerFooter = TestUtils.SlidesApi.PutNotesSlideHeaderFooter(putRequest);
+            NotesSlideHeaderFooter headerFooter = TestUtils.SlidesApi.SetNotesSlideHeaderFooter(
+                c_fileName, c_slideIndex, dto, c_password, c_folderName);
             Assert.IsNotNull(headerFooter);
             Assert.IsTrue(headerFooter.IsHeaderVisible.Value);
             Assert.IsFalse(headerFooter.IsDateTimeVisible.Value);
-            GetNotesSlideHeaderFooterRequest getRequest = new GetNotesSlideHeaderFooterRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex
-            };
-            headerFooter = TestUtils.SlidesApi.GetNotesSlideHeaderFooter(getRequest);
+            headerFooter = TestUtils.SlidesApi.GetNotesSlideHeaderFooter(c_fileName, c_slideIndex, c_password, c_folderName);
             Assert.IsNotNull(headerFooter);
             Assert.IsTrue(headerFooter.IsHeaderVisible.Value);
             Assert.IsFalse(headerFooter.IsDateTimeVisible.Value);
@@ -148,6 +106,5 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const string c_fileName = "test.pptx";
         const string c_password = "password";
         const int c_slideIndex = 1;
-        const NotesSlideExportFormat c_format = NotesSlideExportFormat.Png;
     }
 }

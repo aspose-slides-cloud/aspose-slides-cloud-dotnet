@@ -25,7 +25,6 @@
 
 using System.IO;
 using Aspose.Slides.Cloud.Sdk.Model;
-using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 
@@ -49,14 +48,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void NotesSlideGetStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            GetNotesSlideRequest request = new GetNotesSlideRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex
-            };
-            NotesSlide notesSlide = TestUtils.SlidesApi.GetNotesSlide(request);
+            NotesSlide notesSlide = TestUtils.SlidesApi.GetNotesSlide(c_fileName, c_slideIndex, c_password, c_folderName);
             Assert.IsNotNull(notesSlide);
         }
 
@@ -64,14 +56,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void NotesSlideExistsStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            GetNotesSlideExistsRequest request = new GetNotesSlideExistsRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex
-            };
-            EntityExists exists = TestUtils.SlidesApi.GetNotesSlideExists(request);
+            EntityExists exists = TestUtils.SlidesApi.NotesSlideExists(c_fileName, c_slideIndex, c_password, c_folderName);
             Assert.IsTrue(exists.Exists.Value);
         }
 
@@ -79,15 +64,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void NotesSlideDownloadStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            GetNotesSlideWithFormatRequest request = new GetNotesSlideWithFormatRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Format = c_format
-            };
-            Stream notesSlide = TestUtils.SlidesApi.GetNotesSlideWithFormat(request);
+            Stream notesSlide = TestUtils.SlidesApi.DownloadNotesSlide(
+                c_fileName, c_slideIndex, c_format, password: c_password, folder: c_folderName);
             Assert.IsNotNull(notesSlide);
             Assert.Greater(notesSlide.Length, 0);
             Assert.IsTrue(notesSlide.CanRead);
@@ -96,40 +74,24 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void NotesSlideGetRequest()
         {
-            PostGetNotesSlideRequest request = new PostGetNotesSlideRequest
-            {
-                Document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)),
-                Password = c_password,
-                SlideIndex = c_slideIndex
-            };
-            NotesSlide notesSlide = TestUtils.SlidesApi.PostGetNotesSlide(request);
+            Stream document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            NotesSlide notesSlide = TestUtils.SlidesApi.GetNotesSlideOnline(document, c_slideIndex, c_password);
             Assert.IsNotNull(notesSlide);
         }
 
         [Test]
         public void NotesSlideExistsRequest()
         {
-            PostGetNotesSlideExistsRequest request = new PostGetNotesSlideExistsRequest
-            {
-                Document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)),
-                Password = c_password,
-                SlideIndex = c_slideIndex
-            };
-            EntityExists exists = TestUtils.SlidesApi.PostGetNotesSlideExists(request);
+            Stream document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            EntityExists exists = TestUtils.SlidesApi.NotesSlideExistsOnline(document, c_slideIndex, c_password);
             Assert.IsTrue(exists.Exists.Value);
         }
 
         [Test]
         public void NotesSlideDownloadRequest()
         {
-            PostGetNotesSlideWithFormatRequest request = new PostGetNotesSlideWithFormatRequest
-            {
-                Document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)),
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Format = c_format
-            };
-            Stream notesSlide = TestUtils.SlidesApi.PostGetNotesSlideWithFormat(request);
+            Stream document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            Stream notesSlide = TestUtils.SlidesApi.DownloadNotesSlideOnline(document, c_slideIndex, c_format, password: c_password);
             Assert.IsNotNull(notesSlide);
             Assert.Greater(notesSlide.Length, 0);
             Assert.IsTrue(notesSlide.CanRead);

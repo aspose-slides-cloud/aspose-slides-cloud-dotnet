@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PostSlidesSaveAsRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
@@ -48,17 +49,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="format">Export format.</param>
         /// <param name="options">Export options.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="storage">Document storage.</param>
         /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
         /// <param name="fontsFolder">Custom fonts folder.</param>
-        public PostSlidesSaveAsRequest(string name, ExportFormat format, ExportOptions options = null, string password = null, string storage = null, string folder = null, string fontsFolder = null)
+        public PostSlidesSaveAsRequest(string name, ExportFormat format, ExportOptions options = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
         {
             this.Name = name;
             this.Format = format;
             this.Options = options;
             this.Password = password;
-            this.Storage = storage;
             this.Folder = folder;
+            this.Storage = storage;
             this.FontsFolder = fontsFolder;
         }
 
@@ -83,14 +84,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Password { get; set; }
 
         /// <summary>
-        /// Document storage.
-        /// </summary>  
-        public string Storage { get; set; }
-
-        /// <summary>
         /// Document folder.
         /// </summary>  
         public string Folder { get; set; }
+
+        /// <summary>
+        /// Document storage.
+        /// </summary>  
+        public string Storage { get; set; }
 
         /// <summary>
         /// Custom fonts folder.

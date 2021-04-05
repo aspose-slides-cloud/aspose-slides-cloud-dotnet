@@ -24,7 +24,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using Aspose.Slides.Cloud.Sdk.Model;
-using Aspose.Slides.Cloud.Sdk.Model.Requests;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -49,15 +48,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ShapeAdd()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new Shape { ShapeType = GeometryShape.ShapeTypeEnum.Callout1 }
-            };
-            ShapeBase shape = TestUtils.SlidesApi.PostAddNewShape(request);
+            Shape dto = new Shape { ShapeType = GeometryShape.ShapeTypeEnum.Callout1 };
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<Shape>(shape);
         }
 
@@ -65,51 +57,32 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ShapeEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new Shape()
-            }; //Cannot create shape with no ShapeType specified
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.PostAddNewShape(request));
+            //Cannot create shape with no ShapeType specified
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new Shape(), password: c_password, folder: c_folderName));
         }
 
         [Test]
         public void GraphicalObjectEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new GraphicalObject()
-            }; //Cannot create a graphical object
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.PostAddNewShape(request));
+            //Cannot create a graphical object
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new GraphicalObject(), password: c_password, folder: c_folderName));
         }
 
         [Test]
         public void PictureFrameAdd()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
+            ShapeBase dto = new PictureFrame
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new PictureFrame
+                PictureFillFormat = new PictureFill
                 {
-                    PictureFillFormat = new PictureFill
-                    {
-                        Base64Data = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY5g+ffp/AAZTAsWGL27gAAAAAElFTkSuQmCC"
-                    }
+                    Base64Data = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY5g+ffp/AAZTAsWGL27gAAAAAElFTkSuQmCC"
                 }
             };
-            ShapeBase shape = TestUtils.SlidesApi.PostAddNewShape(request);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<PictureFrame>(shape);
         }
 
@@ -117,30 +90,17 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void PictureFrameEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new PictureFrame()
-            }; //Cannot create picture with no data specified
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.PostAddNewShape(request));
+            //Cannot create picture with no data specified
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new PictureFrame(), password: c_password, folder: c_folderName));
         }
 
         [Test]
         public void AudioFrameAdd()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new AudioFrame { Base64Data = "bXAzc2FtcGxl" }
-            };
-            ShapeBase shape = TestUtils.SlidesApi.PostAddNewShape(request);
+            ShapeBase dto = new AudioFrame { Base64Data = "bXAzc2FtcGxl" };
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<AudioFrame>(shape);
         }
 
@@ -148,30 +108,17 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void AudioFrameEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new AudioFrame()
-            }; //Cannot create audio with no data specified
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.PostAddNewShape(request));
+            //Cannot create audio with no data specified
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new AudioFrame(), password: c_password, folder: c_folderName));
         }
 
         [Test]
         public void VideoFrameAdd()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new VideoFrame { Base64Data = "bXAzc2FtcGxl" }
-            };
-            ShapeBase shape = TestUtils.SlidesApi.PostAddNewShape(request);
+            ShapeBase dto = new VideoFrame { Base64Data = "bXAzc2FtcGxl" };
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<VideoFrame>(shape);
         }
 
@@ -179,67 +126,48 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void VideoFrameEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new VideoFrame()
-            }; //Cannot create video with no data specified
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.PostAddNewShape(request));
+            //Cannot create video with no data specified
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new VideoFrame(), password: c_password, folder: c_folderName));
         }
 
         [Test]
         public void OleObjectFrameEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new OleObjectFrame()
-            }; //Cannot create an OleObjectFrame
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.PostAddNewShape(request));
+            //Cannot create an OleObjectFrame
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new OleObjectFrame(), password: c_password, folder: c_folderName));
         }
 
         [Test]
         public void SmartArtAdd()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
+            ShapeBase dto = new SmartArt
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new SmartArt
+                X = 0,
+                Y = 0,
+                Width = 300,
+                Height = 200,
+                Layout = SmartArt.LayoutEnum.BasicProcess,
+                QuickStyle = SmartArt.QuickStyleEnum.SimpleFill,
+                ColorStyle = SmartArt.ColorStyleEnum.ColoredFillAccent1,
+                Nodes = new List<SmartArtNode>
                 {
-                    X = 0,
-                    Y = 0,
-                    Width = 300,
-                    Height = 200,
-                    Layout = SmartArt.LayoutEnum.BasicProcess,
-                    QuickStyle = SmartArt.QuickStyleEnum.SimpleFill,
-                    ColorStyle = SmartArt.ColorStyleEnum.ColoredFillAccent1,
-                    Nodes = new List<SmartArtNode>
+                    new SmartArtNode
                     {
-                        new SmartArtNode
+                        Text = "First",
+                        OrgChartLayout = SmartArtNode.OrgChartLayoutEnum.Initial,
+                        Nodes = new List<SmartArtNode>
                         {
-                            Text = "First",
-                            OrgChartLayout = SmartArtNode.OrgChartLayoutEnum.Initial,
-                            Nodes = new List<SmartArtNode>
-                            {
-                                new SmartArtNode { Text = "SubFirst", OrgChartLayout = SmartArtNode.OrgChartLayoutEnum.Initial }
-                            }
-                        },
-                        new SmartArtNode { Text = "Second", OrgChartLayout = SmartArtNode.OrgChartLayoutEnum.Initial }
-                    }
+                            new SmartArtNode { Text = "SubFirst", OrgChartLayout = SmartArtNode.OrgChartLayoutEnum.Initial }
+                        }
+                    },
+                    new SmartArtNode { Text = "Second", OrgChartLayout = SmartArtNode.OrgChartLayoutEnum.Initial }
                 }
             };
-            ShapeBase shape = TestUtils.SlidesApi.PostAddNewShape(request);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<SmartArt>(shape);
         }
 
@@ -247,15 +175,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void SmartArtEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new SmartArt()
-            };
-            ShapeBase shape = TestUtils.SlidesApi.PostAddNewShape(request);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new SmartArt(), password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<SmartArt>(shape);
         }
 
@@ -263,15 +184,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ChartEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new Chart()
-            };
-            ShapeBase shape = TestUtils.SlidesApi.PostAddNewShape(request);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new Chart(), password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<Chart>(shape);
         }
 
@@ -279,73 +193,66 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void TableAdd()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
+            ShapeBase dto = new Table
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new Table
+                X = 30,
+                Y = 20,
+                Style = Table.StyleEnum.MediumStyle2Accent1,
+                Rows = new List<TableRow>
                 {
-                    X = 30,
-                    Y = 20,
-                    Style = Table.StyleEnum.MediumStyle2Accent1,
-                    Rows = new List<TableRow>
+                    new TableRow
                     {
-                        new TableRow
+                        Cells = new List<TableCell>
                         {
-                            Cells = new List<TableCell>
-                            {
-                                new TableCell { Text = "0.1" },
-                                new TableCell { Text = "0.2" },
-                                new TableCell { Text = "0.3" },
-                                new TableCell { Text = "0.4" }
-                            }
-                        },
-                        new TableRow
-                        {
-                            MinimalHeight = 60,
-                            Cells = new List<TableCell>
-                            {
-                                new TableCell { Text = "1" },
-                                new TableCell { Text = "2-3", ColSpan = 2, RowSpan = 2 },
-                                new TableCell { Text = "4" }
-                            }
-                        },
-                        new TableRow { Cells = new List<TableCell> { new TableCell { Text = "first" }, new TableCell { Text = "last" } } },
-                        new TableRow
-                        {
-                            Cells = new List<TableCell>
-                            {
-                                new TableCell { Text = "3.1" },
-                                new TableCell { Text = "3.2" },
-                                new TableCell { Text = "3.3" },
-                                new TableCell { Text = "3.4" }
-                            }
-                        },
-                        new TableRow
-                        {
-                            Cells = new List<TableCell>
-                            {
-                                new TableCell { Text = "4.1" },
-                                new TableCell { Text = "4.2" },
-                                new TableCell { Text = "4.3" },
-                                new TableCell { Text = "4.4" }
-                            }
+                            new TableCell { Text = "0.1" },
+                            new TableCell { Text = "0.2" },
+                            new TableCell { Text = "0.3" },
+                            new TableCell { Text = "0.4" }
                         }
                     },
-                                Columns = new List<TableColumn>
+                    new TableRow
                     {
-                        new TableColumn { Width = 100 },
-                        new TableColumn { Width = 100 },
-                        new TableColumn { Width = 100 },
-                        new TableColumn { Width = 100 }
+                        MinimalHeight = 60,
+                        Cells = new List<TableCell>
+                        {
+                            new TableCell { Text = "1" },
+                            new TableCell { Text = "2-3", ColSpan = 2, RowSpan = 2 },
+                            new TableCell { Text = "4" }
+                        }
                     },
-                    FirstRow = true,
-                    HorizontalBanding = true
-                }
+                    new TableRow { Cells = new List<TableCell> { new TableCell { Text = "first" }, new TableCell { Text = "last" } } },
+                    new TableRow
+                    {
+                        Cells = new List<TableCell>
+                        {
+                            new TableCell { Text = "3.1" },
+                            new TableCell { Text = "3.2" },
+                            new TableCell { Text = "3.3" },
+                            new TableCell { Text = "3.4" }
+                        }
+                    },
+                    new TableRow
+                    {
+                        Cells = new List<TableCell>
+                        {
+                            new TableCell { Text = "4.1" },
+                            new TableCell { Text = "4.2" },
+                            new TableCell { Text = "4.3" },
+                            new TableCell { Text = "4.4" }
+                        }
+                    }
+                },
+                            Columns = new List<TableColumn>
+                {
+                    new TableColumn { Width = 100 },
+                    new TableColumn { Width = 100 },
+                    new TableColumn { Width = 100 },
+                    new TableColumn { Width = 100 }
+                },
+                FirstRow = true,
+                HorizontalBanding = true
             };
-            ShapeBase shape = TestUtils.SlidesApi.PostAddNewShape(request);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<Table>(shape);
         }
 
@@ -353,50 +260,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void TableEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new Table()
-            }; //Cannot create table with no cell data specified
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.PostAddNewShape(request));
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new Table(), password: c_password, folder: c_folderName));
         }
 
         [Test]
         public void GroupShapeEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new GroupShape()
-            }; //Cannot create a group shape
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.PostAddNewShape(request));
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new GroupShape(), password: c_password, folder: c_folderName));
         }
 
         [Test]
         public void ConnectorAdd()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
+            ShapeBase dto = new Connector
             {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new Connector
-                {
-                    ShapeType = GeometryShape.ShapeTypeEnum.BentConnector3,
-                    StartShapeConnectedTo = new ResourceUri { Href = "https://api.aspose.cloud/v3.0/slides/myPresentation.pptx/slides/1/shapes/1" },
-                    EndShapeConnectedTo = new ResourceUri { Href = "https://api.aspose.cloud/v3.0/slides/myPresentation.pptx/slides/1/shapes/2" }
-                }
+                ShapeType = GeometryShape.ShapeTypeEnum.BentConnector3,
+                StartShapeConnectedTo = new ResourceUri { Href = "https://api.aspose.cloud/v3.0/slides/myPresentation.pptx/slides/1/shapes/1" },
+                EndShapeConnectedTo = new ResourceUri { Href = "https://api.aspose.cloud/v3.0/slides/myPresentation.pptx/slides/1/shapes/2" }
             };
-            ShapeBase shape = TestUtils.SlidesApi.PostAddNewShape(request);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<Connector>(shape);
         }
 
@@ -404,16 +290,34 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ConnectorEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            PostAddNewShapeRequest request = new PostAddNewShapeRequest
-            {
-                Name = c_fileName,
-                Folder = c_folderName,
-                Password = c_password,
-                SlideIndex = c_slideIndex,
-                Dto = new Connector()
-            };
-            ShapeBase shape = TestUtils.SlidesApi.PostAddNewShape(request);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new Connector(), password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<Connector>(shape);
+        }
+
+        [Test]
+        public void ShapesAlign()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            ShapeBase shape1 = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, 1, c_password, c_folderName);
+            ShapeBase shape2 = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, 2, c_password, c_folderName);
+            Assert.AreNotEqual(shape1.X, shape2.X);
+            Assert.AreNotEqual(shape1.Y, shape2.Y);
+
+            TestUtils.SlidesApi.AlignShapes(
+                c_fileName, c_slideIndex, ShapesAlignmentType.AlignTop, null, null, c_password, c_folderName);
+            shape1 = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, 1, c_password, c_folderName);
+            shape2 = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, 2, c_password, c_folderName);
+            Assert.AreNotEqual(shape1.X, shape2.X);
+            Assert.AreEqual(shape1.Y.Value, shape2.Y.Value, 1.0);
+            
+            TestUtils.SlidesApi.AlignShapes(
+                c_fileName, c_slideIndex, ShapesAlignmentType.AlignLeft, true, new List<int> { 1, 2 }, c_password, c_folderName);
+            shape1 = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, 1, c_password, c_folderName);
+            shape2 = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, 2, c_password, c_folderName);
+            Assert.AreEqual(shape1.X, shape2.X);
+            Assert.AreEqual(shape1.Y.Value, shape2.Y.Value, 1.0);
+            Assert.AreEqual(0, shape1.X.Value, 1.0);
         }
 
         const string c_folderName = "TempSlidesSDK";

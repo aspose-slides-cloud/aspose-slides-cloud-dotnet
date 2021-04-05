@@ -1,3 +1,4 @@
+
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PutSlideAnimationInteractiveSequenceEffectRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
