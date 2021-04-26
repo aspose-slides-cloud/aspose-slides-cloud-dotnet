@@ -1,5 +1,6 @@
+
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ScaleType.cs">
+// <copyright company="Aspose" file="DeleteSlidesProtectionPropertiesOnlineRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,39 +24,43 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
-using System.Text;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System.Xml.Serialization;
+using System.IO;
+using Aspose.Slides.Cloud.Sdk.Model;
 
-namespace Aspose.Slides.Cloud.Sdk.Model
+namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    /// Scale type of slide content.
-    /// </summary>
-    /// <value>Scale type of slide content.</value>
-    [JsonConverter(typeof(StringEnumConverter))]
-    public enum ScaleType
-    {
-        
+  /// <summary>
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.DeleteSlidesProtectionPropertiesOnline" /> operation.
+  /// </summary>  
+  public class DeleteSlidesProtectionPropertiesOnlineRequest  
+  {
         /// <summary>
-        /// Enum DoNotScale for "DoNotScale"
-        /// </summary>
-        DoNotScale,
-        
-        /// <summary>
-        /// Enum EnsureFit for "EnsureFit"
-        /// </summary>
-        EnsureFit,
-        
-        /// <summary>
-        /// Enum Maximize for "Maximize"
-        /// </summary>
-        Maximize
-    }
+        /// Initializes a new instance of the <see cref="DeleteSlidesProtectionPropertiesOnlineRequest"/> class.
+        /// </summary>        
+        public DeleteSlidesProtectionPropertiesOnlineRequest()
+        {
+        }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DeleteSlidesProtectionPropertiesOnlineRequest"/> class.
+        /// </summary>
+        /// <param name="document">Document data.</param>
+        /// <param name="password">Presentation password.</param>
+        public DeleteSlidesProtectionPropertiesOnlineRequest(System.IO.Stream document, string password)
+        {
+            this.Document = document;
+            this.Password = password;
+        }
+
+        /// <summary>
+        /// Document data.
+        /// </summary>  
+        public System.IO.Stream Document { get; set; }
+
+        /// <summary>
+        /// Presentation password.
+        /// </summary>  
+        public string Password { get; set; }
+  }
 }

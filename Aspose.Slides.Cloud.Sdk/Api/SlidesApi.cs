@@ -146,8 +146,13 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="path">Folder path to create e.g. 'folder_1/folder_2/'</param> 
         /// <param name="storageName">Storage name</param> 
         /// <returns><see cref=""/></returns>            
-        public void CreateFolder(string path = null, string storageName = null)
+        public void CreateFolder(string path, string storageName = null)
         {
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling CreateFolder");
+            }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/folder/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
@@ -305,8 +310,13 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="storageName">Storage name</param> 
         /// <param name="versionId">File version ID to delete</param> 
         /// <returns><see cref=""/></returns>            
-        public void DeleteFile(string path = null, string storageName = null, string versionId = null)
+        public void DeleteFile(string path, string storageName = null, string versionId = null)
         {
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteFile");
+            }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/file/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
@@ -334,8 +344,13 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="storageName">Storage name</param> 
         /// <param name="recursive">Enable to delete folders, subfolders and files</param> 
         /// <returns><see cref=""/></returns>            
-        public void DeleteFolder(string path = null, string storageName = null, bool? recursive = null)
+        public void DeleteFolder(string path, string storageName = null, bool? recursive = null)
         {
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteFolder");
+            }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/folder/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
@@ -1279,18 +1294,23 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Shapes"/></returns>            
-        public Shapes DeleteSubshape(string name, int slideIndex, int shapeIndex, string path = null, string password = null, string folder = null, string storage = null)
+        public Shapes DeleteSubshape(string name, int slideIndex, string path, int shapeIndex, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideSubshape");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSlideSubshape");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}");
@@ -1314,7 +1334,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use DeleteSubshape method")]
         public Shapes DeleteSlideSubshape(DeleteSlideSubshapeRequest request)
         {
-            return DeleteSubshape(request.Name, request.SlideIndex, request.ShapeIndex, request.Path, request.Password, request.Folder, request.Storage);
+            return DeleteSubshape(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -1328,12 +1348,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Shapes"/></returns>            
-        public Shapes DeleteSubshapes(string name, int slideIndex, string path = null, List<int> shapes = null, string password = null, string folder = null, string storage = null)
+        public Shapes DeleteSubshapes(string name, int slideIndex, string path, List<int> shapes = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlideSubshapes");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSlideSubshapes");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}");
@@ -1481,6 +1506,85 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Resets all presentation protection settings.  
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="password">Presentation password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="ProtectionProperties"/></returns>            
+        public ProtectionProperties DeleteProtection(string name, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSlidesProtectionProperties");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/protection");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<ProtectionProperties>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Resets all presentation protection settings.  
+        /// </summary>
+        /// <param name="request">Request. <see cref="DeleteSlidesProtectionPropertiesRequest" /></param> 
+        /// <returns><see cref="ProtectionProperties"/></returns>            
+        [System.Obsolete("Use DeleteProtection method")]
+        public ProtectionProperties DeleteSlidesProtectionProperties(DeleteSlidesProtectionPropertiesRequest request)
+        {
+            return DeleteProtection(request.Name, request.Password, request.Folder, request.Storage);
+        }
+
+        /// <summary>
+        /// Resets all presentation protection settings.  
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="password">Presentation password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream DeleteProtectionOnline(System.IO.Stream document, string password)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling DeleteSlidesProtectionPropertiesOnline");
+            }
+            // verify the required parameter 'password' is set
+            if (password == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'password' when calling DeleteSlidesProtectionPropertiesOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/protection/delete");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Resets all presentation protection settings.  
+        /// </summary>
+        /// <param name="request">Request. <see cref="DeleteSlidesProtectionPropertiesOnlineRequest" /></param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        [System.Obsolete("Use DeleteProtectionOnline method")]
+        public System.IO.Stream DeleteSlidesProtectionPropertiesOnline(DeleteSlidesProtectionPropertiesOnlineRequest request)
+        {
+            return DeleteProtectionOnline(request.Document, request.Password);
+        }
+
+        /// <summary>
         /// Remove background from a slide. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -1524,19 +1628,24 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Paragraphs"/></returns>            
-        public Paragraphs DeleteSubshapeParagraph(string name, int slideIndex, int shapeIndex, int paragraphIndex, string path = null, string password = null, string folder = null, string storage = null)
+        public Paragraphs DeleteSubshapeParagraph(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSubshapeParagraph");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSubshapeParagraph");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
@@ -1561,7 +1670,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use DeleteSubshapeParagraph method")]
         public Paragraphs DeleteSubshapeParagraph(DeleteSubshapeParagraphRequest request)
         {
-            return DeleteSubshapeParagraph(request.Name, request.SlideIndex, request.ShapeIndex, request.ParagraphIndex, request.Path, request.Password, request.Folder, request.Storage);
+            return DeleteSubshapeParagraph(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.ParagraphIndex, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -1569,19 +1678,24 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphs">The indices of the shapes to be deleted; delete all by default.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Paragraphs"/></returns>            
-        public Paragraphs DeleteSubshapeParagraphs(string name, int slideIndex, int shapeIndex, string path = null, List<int> paragraphs = null, string password = null, string folder = null, string storage = null)
+        public Paragraphs DeleteSubshapeParagraphs(string name, int slideIndex, string path, int shapeIndex, List<int> paragraphs = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSubshapeParagraphs");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSubshapeParagraphs");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs");
@@ -1606,7 +1720,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use DeleteSubshapeParagraphs method")]
         public Paragraphs DeleteSubshapeParagraphs(DeleteSubshapeParagraphsRequest request)
         {
-            return DeleteSubshapeParagraphs(request.Name, request.SlideIndex, request.ShapeIndex, request.Path, request.Paragraphs, request.Password, request.Folder, request.Storage);
+            return DeleteSubshapeParagraphs(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.Paragraphs, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -1614,20 +1728,25 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphIndex">Paragraph index.</param> 
         /// <param name="portionIndex">Portion index.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Portions"/></returns>            
-        public Portions DeleteSubshapePortion(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string path = null, string password = null, string folder = null, string storage = null)
+        public Portions DeleteSubshapePortion(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSubshapePortion");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSubshapePortion");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
@@ -1653,7 +1772,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use DeleteSubshapePortion method")]
         public Portions DeleteSubshapePortion(DeleteSubshapePortionRequest request)
         {
-            return DeleteSubshapePortion(request.Name, request.SlideIndex, request.ShapeIndex, request.ParagraphIndex, request.PortionIndex, request.Path, request.Password, request.Folder, request.Storage);
+            return DeleteSubshapePortion(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.ParagraphIndex, request.PortionIndex, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -1661,20 +1780,25 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="portions">The indices of the shapes to be deleted; delete all by default.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Portions"/></returns>            
-        public Portions DeleteSubshapePortions(string name, int slideIndex, int shapeIndex, int paragraphIndex, string path = null, List<int> portions = null, string password = null, string folder = null, string storage = null)
+        public Portions DeleteSubshapePortions(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, List<int> portions = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSubshapePortions");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSubshapePortions");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
@@ -1700,7 +1824,46 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use DeleteSubshapePortions method")]
         public Portions DeleteSubshapePortions(DeleteSubshapePortionsRequest request)
         {
-            return DeleteSubshapePortions(request.Name, request.SlideIndex, request.ShapeIndex, request.ParagraphIndex, request.Path, request.Portions, request.Password, request.Folder, request.Storage);
+            return DeleteSubshapePortions(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.ParagraphIndex, request.Portions, request.Password, request.Folder, request.Storage);
+        }
+
+        /// <summary>
+        /// Removes shapes with name \&quot;watermark\&quot; from the presentation. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="shapeName">Name of the watermark shape. If null, default value \"watermark\"is used.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void DeleteWatermark(string name, string shapeName = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteWatermark");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/watermark/delete");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeName", shapeName);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            InvokeVoidApi(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Removes shapes with name \&quot;watermark\&quot; from the presentation. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="DeleteWatermarkRequest" /></param> 
+        /// <returns><see cref=""/></returns>            
+        [System.Obsolete("Use DeleteWatermark method")]
+        public void DeleteWatermark(DeleteWatermarkRequest request)
+        {
+            DeleteWatermark(request.Name, request.ShapeName, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -1710,8 +1873,13 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="storageName">Storage name</param> 
         /// <param name="versionId">File version ID to download</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadFile(string path = null, string storageName = null, string versionId = null)
+        public System.IO.Stream DownloadFile(string path, string storageName = null, string versionId = null)
         {
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DownloadFile");
+            }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/file/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
@@ -1763,8 +1931,13 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="path">File path e.g. '/file.ext'</param> 
         /// <param name="storageName">Storage name</param> 
         /// <returns><see cref="FileVersions"/></returns>            
-        public FileVersions GetFileVersions(string path = null, string storageName = null)
+        public FileVersions GetFileVersions(string path, string storageName = null)
         {
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetFileVersions");
+            }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/version/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
@@ -1790,8 +1963,13 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="path">Folder path e.g. '/folder'</param> 
         /// <param name="storageName">Storage name</param> 
         /// <returns><see cref="FilesList"/></returns>            
-        public FilesList GetFilesList(string path = null, string storageName = null)
+        public FilesList GetFilesList(string path, string storageName = null)
         {
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetFilesList");
+            }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/folder/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
@@ -2753,18 +2931,23 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="ShapeBase"/></returns>            
-        public ShapeBase GetSubshape(string name, int slideIndex, int shapeIndex, string path = null, string password = null, string folder = null, string storage = null)
+        public ShapeBase GetSubshape(string name, int slideIndex, string path, int shapeIndex, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideSubshape");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSlideSubshape");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}");
@@ -2788,7 +2971,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use GetSubshape method")]
         public ShapeBase GetSlideSubshape(GetSlideSubshapeRequest request)
         {
-            return GetSubshape(request.Name, request.SlideIndex, request.ShapeIndex, request.Path, request.Password, request.Folder, request.Storage);
+            return GetSubshape(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -2796,19 +2979,24 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Paragraph"/></returns>            
-        public Paragraph GetSubshapeParagraph(string name, int slideIndex, int shapeIndex, int paragraphIndex, string path = null, string password = null, string folder = null, string storage = null)
+        public Paragraph GetSubshapeParagraph(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideSubshapeParagraph");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSlideSubshapeParagraph");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
@@ -2833,7 +3021,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use GetSubshapeParagraph method")]
         public Paragraph GetSlideSubshapeParagraph(GetSlideSubshapeParagraphRequest request)
         {
-            return GetSubshapeParagraph(request.Name, request.SlideIndex, request.ShapeIndex, request.ParagraphIndex, request.Path, request.Password, request.Folder, request.Storage);
+            return GetSubshapeParagraph(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.ParagraphIndex, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -2841,18 +3029,23 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Paragraphs"/></returns>            
-        public Paragraphs GetSubshapeParagraphs(string name, int slideIndex, int shapeIndex, string path = null, string password = null, string folder = null, string storage = null)
+        public Paragraphs GetSubshapeParagraphs(string name, int slideIndex, string path, int shapeIndex, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideSubshapeParagraphs");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSlideSubshapeParagraphs");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs");
@@ -2876,7 +3069,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use GetSubshapeParagraphs method")]
         public Paragraphs GetSlideSubshapeParagraphs(GetSlideSubshapeParagraphsRequest request)
         {
-            return GetSubshapeParagraphs(request.Name, request.SlideIndex, request.ShapeIndex, request.Path, request.Password, request.Folder, request.Storage);
+            return GetSubshapeParagraphs(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -2889,12 +3082,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Shapes"/></returns>            
-        public Shapes GetSubshapes(string name, int slideIndex, string path = null, string password = null, string folder = null, string storage = null)
+        public Shapes GetSubshapes(string name, int slideIndex, string path, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlideSubshapes");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSlideSubshapes");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}");
@@ -2949,7 +3147,7 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="name">Document name.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Documentstorage.</param> 
+        /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Document"/></returns>            
         public Document GetPresentation(string name, string password = null, string folder = null, string storage = null)
         {
@@ -3313,7 +3511,7 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSlidesProtectionProperties");
             }
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/protectionProperties");
+            string resourcePath = GetResourceUrl("/slides/{name}/protection");
             var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
@@ -3803,20 +4001,25 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphIndex">Paragraph index.</param> 
         /// <param name="portionIndex">Portion index.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Portion"/></returns>            
-        public Portion GetSubshapePortion(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string path = null, string password = null, string folder = null, string storage = null)
+        public Portion GetSubshapePortion(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSubshapeParagraphPortion");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSubshapeParagraphPortion");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
@@ -3842,7 +4045,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use GetSubshapePortion method")]
         public Portion GetSubshapeParagraphPortion(GetSubshapeParagraphPortionRequest request)
         {
-            return GetSubshapePortion(request.Name, request.SlideIndex, request.ShapeIndex, request.ParagraphIndex, request.PortionIndex, request.Path, request.Password, request.Folder, request.Storage);
+            return GetSubshapePortion(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.ParagraphIndex, request.PortionIndex, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -3850,19 +4053,24 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Portions"/></returns>            
-        public Portions GetSubshapePortions(string name, int slideIndex, int shapeIndex, int paragraphIndex, string path = null, string password = null, string folder = null, string storage = null)
+        public Portions GetSubshapePortions(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling GetSubshapeParagraphPortions");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSubshapeParagraphPortions");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
@@ -3887,7 +4095,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use GetSubshapePortions method")]
         public Portions GetSubshapeParagraphPortions(GetSubshapeParagraphPortionsRequest request)
         {
-            return GetSubshapePortions(request.Name, request.SlideIndex, request.ShapeIndex, request.ParagraphIndex, request.Path, request.Password, request.Folder, request.Storage);
+            return GetSubshapePortions(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.ParagraphIndex, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -3981,8 +4189,13 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="storageName">Storage name</param> 
         /// <param name="versionId">File version ID</param> 
         /// <returns><see cref="ObjectExist"/></returns>            
-        public ObjectExist ObjectExists(string path = null, string storageName = null, string versionId = null)
+        public ObjectExist ObjectExists(string path, string storageName = null, string versionId = null)
         {
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling ObjectExists");
+            }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/storage/exist/{path}");
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
@@ -4163,12 +4376,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="ShapeBase"/></returns>            
-        public ShapeBase CreateSubshape(string name, int slideIndex, string path = null, ShapeBase dto = null, int? shapeToClone = null, int? position = null, string password = null, string folder = null, string storage = null)
+        public ShapeBase CreateSubshape(string name, int slideIndex, string path, ShapeBase dto = null, int? shapeToClone = null, int? position = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewSubshape");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling PostAddNewSubshape");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}");
@@ -4202,20 +4420,25 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="dto">Paragraph DTO.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="position">Position of the new paragraph in the list. Default is at the end of the list.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Paragraph"/></returns>            
-        public Paragraph CreateSubshapeParagraph(string name, int slideIndex, int shapeIndex, Paragraph dto, string path = null, int? position = null, string password = null, string folder = null, string storage = null)
+        public Paragraph CreateSubshapeParagraph(string name, int slideIndex, string path, int shapeIndex, Paragraph dto, int? position = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewSubshapeParagraph");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling PostAddNewSubshapeParagraph");
             }
             // verify the required parameter 'dto' is set
             if (dto == null)
@@ -4246,7 +4469,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use CreateSubshapeParagraph method")]
         public Paragraph PostAddNewSubshapeParagraph(PostAddNewSubshapeParagraphRequest request)
         {
-            return CreateSubshapeParagraph(request.Name, request.SlideIndex, request.ShapeIndex, request.Dto, request.Path, request.Position, request.Password, request.Folder, request.Storage);
+            return CreateSubshapeParagraph(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.Dto, request.Position, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -4254,21 +4477,26 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphIndex">Paragraph index.</param> 
         /// <param name="dto">Portion DTO.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="position">Position of the new portion in the list. Default is at the end of the list.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Portion"/></returns>            
-        public Portion CreateSubshapePortion(string name, int slideIndex, int shapeIndex, int paragraphIndex, Portion dto, string path = null, int? position = null, string password = null, string folder = null, string storage = null)
+        public Portion CreateSubshapePortion(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, Portion dto, int? position = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostAddNewSubshapePortion");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling PostAddNewSubshapePortion");
             }
             // verify the required parameter 'dto' is set
             if (dto == null)
@@ -4300,7 +4528,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use CreateSubshapePortion method")]
         public Portion PostAddNewSubshapePortion(PostAddNewSubshapePortionRequest request)
         {
-            return CreateSubshapePortion(request.Name, request.SlideIndex, request.ShapeIndex, request.ParagraphIndex, request.Dto, request.Path, request.Position, request.Password, request.Folder, request.Storage);
+            return CreateSubshapePortion(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.ParagraphIndex, request.Dto, request.Position, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -4846,14 +5074,14 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="shapeIndex">Index of shape starting from 1</param> 
         /// <param name="format">Export picture format.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="storage">Document storage.</param> 
         /// <param name="scaleX">X scale ratio.</param> 
         /// <param name="scaleY">Y scale ratio.</param> 
         /// <param name="bounds">Shape thumbnail bounds type.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Fonts folder.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadShapeOnline(System.IO.Stream document, int slideIndex, int shapeIndex, ShapeExportFormat format, string password = null, string storage = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string fontsFolder = null)
+        public System.IO.Stream DownloadShapeOnline(System.IO.Stream document, int slideIndex, int shapeIndex, ShapeExportFormat format, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string storage = null, string fontsFolder = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -4867,10 +5095,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", scaleX);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", scaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", bounds);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
@@ -4889,7 +5117,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use DownloadShapeOnline method")]
         public System.IO.Stream PostExportShape(PostExportShapeRequest request)
         {
-            return DownloadShapeOnline(request.Document, request.SlideIndex, request.ShapeIndex, request.Format, request.Password, request.Storage, request.ScaleX, request.ScaleY, request.Bounds, request.FontsFolder);
+            return DownloadShapeOnline(request.Document, request.SlideIndex, request.ShapeIndex, request.Format, request.ScaleX, request.ScaleY, request.Bounds, request.Password, request.Storage, request.FontsFolder);
         }
 
         /// <summary>
@@ -5064,6 +5292,96 @@ namespace Aspose.Slides.Cloud.Sdk
         public System.IO.Stream PostGetNotesSlideWithFormat(PostGetNotesSlideWithFormatRequest request)
         {
             return DownloadNotesSlideOnline(request.Document, request.SlideIndex, request.Format, request.Width, request.Height, request.Password, request.FontsFolder);
+        }
+
+        /// <summary>
+        /// Adds an image watermark to each slide of the presentation.  Image can be provided as a part of the form or withing PictureFrame DTO for detailed customization. Both options are applicable simultaneously.  
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="image">Image data.</param> 
+        /// <param name="pictureFrame">PictureFrame DTO</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void CreateImageWatermark(string name, System.IO.Stream image = null, PictureFrame pictureFrame = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostImageWatermark");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/watermark/image");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(pictureFrame); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            if (image != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "image", Content = image });
+            }
+            InvokeVoidApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Adds an image watermark to each slide of the presentation.  Image can be provided as a part of the form or withing PictureFrame DTO for detailed customization. Both options are applicable simultaneously.  
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostImageWatermarkRequest" /></param> 
+        /// <returns><see cref=""/></returns>            
+        [System.Obsolete("Use CreateImageWatermark method")]
+        public void PostImageWatermark(PostImageWatermarkRequest request)
+        {
+            CreateImageWatermark(request.Name, request.Image, request.PictureFrame, request.Password, request.Folder, request.Storage);
+        }
+
+        /// <summary>
+        /// Adds an image watermark to each slide of the presentation.  Image can be provided as a part of the form or withing PictureFrame DTO for detailed customization. Both options are applicable simultaneously.  
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="image">Image data.</param> 
+        /// <param name="pictureFrame">PictureFrame DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream CreateImageWatermarkOnline(System.IO.Stream document, System.IO.Stream image = null, PictureFrame pictureFrame = null, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling PostImageWatermarkOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/watermark/image");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(pictureFrame); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            if (image != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "image", Content = image });
+            }
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Adds an image watermark to each slide of the presentation.  Image can be provided as a part of the form or withing PictureFrame DTO for detailed customization. Both options are applicable simultaneously.  
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostImageWatermarkOnlineRequest" /></param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        [System.Obsolete("Use CreateImageWatermarkOnline method")]
+        public System.IO.Stream PostImageWatermarkOnline(PostImageWatermarkOnlineRequest request)
+        {
+            return CreateImageWatermarkOnline(request.Document, request.Image, request.PictureFrame, request.Password);
         }
 
         /// <summary>
@@ -6602,9 +6920,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Presentation name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Index of shape starting from 1</param> 
         /// <param name="format">Export picture format.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="options">export options</param> 
         /// <param name="scaleX">X scale ratio.</param> 
         /// <param name="scaleY">Y scale ratio.</param> 
@@ -6614,12 +6932,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="storage">Presentation storage.</param> 
         /// <param name="fontsFolder">Fonts folder.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadSubshape(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string path = null, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
+        public System.IO.Stream DownloadSubshape(string name, int slideIndex, string path, int shapeIndex, ShapeExportFormat format, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PostSubshapeSaveAs");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling PostSubshapeSaveAs");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/{format}");
@@ -6649,7 +6972,140 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use DownloadSubshape method")]
         public System.IO.Stream PostSubshapeSaveAs(PostSubshapeSaveAsRequest request)
         {
-            return DownloadSubshape(request.Name, request.SlideIndex, request.ShapeIndex, request.Format, request.Path, request.Options, request.ScaleX, request.ScaleY, request.Bounds, request.Password, request.Folder, request.Storage, request.FontsFolder);
+            return DownloadSubshape(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.Format, request.Options, request.ScaleX, request.ScaleY, request.Bounds, request.Password, request.Folder, request.Storage, request.FontsFolder);
+        }
+
+        /// <summary>
+        /// Adds a text watermark to each slide of the presentation. Text watermark can be setup via method arguments or withing Shape DTO for detailed customization. Both options are applicable simultaneously.  
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="shape">Shape DTO</param> 
+        /// <param name="fontHeight">Watermark font height.</param> 
+        /// <param name="text">Watermark text.</param> 
+        /// <param name="fontName">Watermark font name.</param> 
+        /// <param name="fontColor">Watermark font color.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void CreateWatermark(string name, Shape shape = null, double? fontHeight = null, string text = null, string fontName = null, string fontColor = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostWatermark");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/watermark");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontHeight", fontHeight);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "text", text);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontName", fontName);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontColor", fontColor);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(shape); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            InvokeVoidApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Adds a text watermark to each slide of the presentation. Text watermark can be setup via method arguments or withing Shape DTO for detailed customization. Both options are applicable simultaneously.  
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostWatermarkRequest" /></param> 
+        /// <returns><see cref=""/></returns>            
+        [System.Obsolete("Use CreateWatermark method")]
+        public void PostWatermark(PostWatermarkRequest request)
+        {
+            CreateWatermark(request.Name, request.Shape, request.FontHeight, request.Text, request.FontName, request.FontColor, request.Password, request.Folder, request.Storage);
+        }
+
+        /// <summary>
+        /// Removes shapes with name \&quot;watermark\&quot; from the presentation. 
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="shapeName">Name of the watermark shape. If null, default value \"watermark\"is used.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream DeleteWatermarkOnline(System.IO.Stream document, string shapeName = null, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling PostWatermarkDeleteOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/watermark/delete");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeName", shapeName);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Removes shapes with name \&quot;watermark\&quot; from the presentation. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostWatermarkDeleteOnlineRequest" /></param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        [System.Obsolete("Use DeleteWatermarkOnline method")]
+        public System.IO.Stream PostWatermarkDeleteOnline(PostWatermarkDeleteOnlineRequest request)
+        {
+            return DeleteWatermarkOnline(request.Document, request.ShapeName, request.Password);
+        }
+
+        /// <summary>
+        /// Adds a text watermark to each slide of the presentation. Text watermark can be setup via method arguments or withing Shape DTO for detailed customization. Both options are applicable simultaneously.  
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="shape">Shape DTO</param> 
+        /// <param name="fontHeight">Watermark font height.</param> 
+        /// <param name="text">Watermark text.</param> 
+        /// <param name="fontName">Watermark font name.</param> 
+        /// <param name="fontColor">Watermark font color.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream CreateWatermarkOnline(System.IO.Stream document, Shape shape = null, double? fontHeight = null, string text = null, string fontName = null, string fontColor = null, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling PostWatermarkOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/watermark");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontHeight", fontHeight);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "text", text);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontName", fontName);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontColor", fontColor);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(shape); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Adds a text watermark to each slide of the presentation. Text watermark can be setup via method arguments or withing Shape DTO for detailed customization. Both options are applicable simultaneously.  
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostWatermarkOnlineRequest" /></param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        [System.Obsolete("Use CreateWatermarkOnline method")]
+        public System.IO.Stream PostWatermarkOnline(PostWatermarkOnlineRequest request)
+        {
+            return CreateWatermarkOnline(request.Document, request.Shape, request.FontHeight, request.Text, request.FontName, request.FontColor, request.Password);
         }
 
         /// <summary>
@@ -6812,14 +7268,14 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="shapeIndex">Index of shape starting from 1</param> 
         /// <param name="format">Export picture format.</param> 
         /// <param name="outPath">Path to save result.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="storage">Document storage.</param> 
         /// <param name="scaleX">X scale ratio.</param> 
         /// <param name="scaleY">Y scale ratio.</param> 
         /// <param name="bounds">Shape thumbnail bounds type.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Fonts folder.</param> 
         /// <returns><see cref=""/></returns>            
-        public void SaveShapeOnline(System.IO.Stream document, int slideIndex, int shapeIndex, ShapeExportFormat format, string outPath, string password = null, string storage = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string fontsFolder = null)
+        public void SaveShapeOnline(System.IO.Stream document, int slideIndex, int shapeIndex, ShapeExportFormat format, string outPath, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string storage = null, string fontsFolder = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -6839,10 +7295,10 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", outPath);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", scaleX);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", scaleY);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", bounds);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
@@ -6861,7 +7317,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use SaveShapeOnline method")]
         public void PutExportShape(PutExportShapeRequest request)
         {
-            SaveShapeOnline(request.Document, request.SlideIndex, request.ShapeIndex, request.Format, request.OutPath, request.Password, request.Storage, request.ScaleX, request.ScaleY, request.Bounds, request.FontsFolder);
+            SaveShapeOnline(request.Document, request.SlideIndex, request.ShapeIndex, request.Format, request.OutPath, request.ScaleX, request.ScaleY, request.Bounds, request.Password, request.Storage, request.FontsFolder);
         }
 
         /// <summary>
@@ -7366,21 +7822,26 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphIndex">Paragraph index.</param> 
         /// <param name="portionIndex">Portion index.</param> 
         /// <param name="dto">Portion DTO.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Portion"/></returns>            
-        public Portion UpdateSubshapePortion(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, Portion dto, string path = null, string password = null, string folder = null, string storage = null)
+        public Portion UpdateSubshapePortion(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, int portionIndex, Portion dto, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSetSubshapeParagraphPortionProperties");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling PutSetSubshapeParagraphPortionProperties");
             }
             // verify the required parameter 'dto' is set
             if (dto == null)
@@ -7412,7 +7873,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use UpdateSubshapePortion method")]
         public Portion PutSetSubshapeParagraphPortionProperties(PutSetSubshapeParagraphPortionPropertiesRequest request)
         {
-            return UpdateSubshapePortion(request.Name, request.SlideIndex, request.ShapeIndex, request.ParagraphIndex, request.PortionIndex, request.Dto, request.Path, request.Password, request.Folder, request.Storage);
+            return UpdateSubshapePortion(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.ParagraphIndex, request.PortionIndex, request.Dto, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -7420,20 +7881,25 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphIndex">Paragraph index.</param> 
         /// <param name="dto">Paragraph DTO.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Paragraph"/></returns>            
-        public Paragraph UpdateSubshapeParagraph(string name, int slideIndex, int shapeIndex, int paragraphIndex, Paragraph dto, string path = null, string password = null, string folder = null, string storage = null)
+        public Paragraph UpdateSubshapeParagraph(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, Paragraph dto, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSetSubshapeParagraphProperties");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling PutSetSubshapeParagraphProperties");
             }
             // verify the required parameter 'dto' is set
             if (dto == null)
@@ -7464,7 +7930,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use UpdateSubshapeParagraph method")]
         public Paragraph PutSetSubshapeParagraphProperties(PutSetSubshapeParagraphPropertiesRequest request)
         {
-            return UpdateSubshapeParagraph(request.Name, request.SlideIndex, request.ShapeIndex, request.ParagraphIndex, request.Dto, request.Path, request.Password, request.Folder, request.Storage);
+            return UpdateSubshapeParagraph(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.ParagraphIndex, request.Dto, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -7826,19 +8292,24 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="dto">Shape DTO.</param> 
-        /// <param name="path">Shape path.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="ShapeBase"/></returns>            
-        public ShapeBase UpdateSubshape(string name, int slideIndex, int shapeIndex, ShapeBase dto, string path = null, string password = null, string folder = null, string storage = null)
+        public ShapeBase UpdateSubshape(string name, int slideIndex, string path, int shapeIndex, ShapeBase dto, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSlideSubshapeInfo");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling PutSlideSubshapeInfo");
             }
             // verify the required parameter 'dto' is set
             if (dto == null)
@@ -7868,7 +8339,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use UpdateSubshape method")]
         public ShapeBase PutSlideSubshapeInfo(PutSlideSubshapeInfoRequest request)
         {
-            return UpdateSubshape(request.Name, request.SlideIndex, request.ShapeIndex, request.Dto, request.Path, request.Password, request.Folder, request.Storage);
+            return UpdateSubshape(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.Dto, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -7919,46 +8390,6 @@ namespace Aspose.Slides.Cloud.Sdk
         public void PutSlidesConvert(PutSlidesConvertRequest request)
         {
             ConvertAndSave(request.Document, request.Format, request.OutPath, request.Password, request.Storage, request.FontsFolder);
-        }
-
-        /// <summary>
-        /// Update presentation document from html. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="html">HTML data.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Document"/></returns>            
-        [System.Obsolete]
-        public Document PutSlidesDocumentFromHtml(string name, string html = null, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesDocumentFromHtml");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/fromHtml");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var postBody = SerializationHelper.Serialize(html); // http body (model) parameter
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Document>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Update presentation document from html. 
-        /// </summary>
-        /// <param name="request">Request. <see cref="PutSlidesDocumentFromHtmlRequest" /></param> 
-        /// <returns><see cref="Document"/></returns>            
-        [System.Obsolete("Use PutSlidesDocumentFromHtml method")]
-        public Document PutSlidesDocumentFromHtml(PutSlidesDocumentFromHtmlRequest request)
-        {
-            return PutSlidesDocumentFromHtml(request.Name, request.Html, request.Password, request.Folder, request.Storage);
         }
 
         /// <summary>
@@ -8049,15 +8480,15 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Update presentation protection properties. 
+        /// Updates presentation protection properties. 
         /// </summary>
         /// <param name="name">Document name.</param> 
-        /// <param name="dto">The view properties data.</param> 
+        /// <param name="dto">Protection properties.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="ProtectionProperties"/></returns>            
-        public ProtectionProperties SetProtectionProperties(string name, ProtectionProperties dto, string password = null, string folder = null, string storage = null)
+        public ProtectionProperties SetProtection(string name, ProtectionProperties dto, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8070,7 +8501,7 @@ namespace Aspose.Slides.Cloud.Sdk
                 throw new ApiException(400, "Missing required parameter 'dto' when calling PutSlidesProtectionProperties");
             }
             // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/protectionProperties");
+            string resourcePath = GetResourceUrl("/slides/{name}/protection");
             var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
@@ -8082,14 +8513,58 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Update presentation protection properties. 
+        /// Updates presentation protection properties. 
         /// </summary>
         /// <param name="request">Request. <see cref="PutSlidesProtectionPropertiesRequest" /></param> 
         /// <returns><see cref="ProtectionProperties"/></returns>            
-        [System.Obsolete("Use SetProtectionProperties method")]
+        [System.Obsolete("Use SetProtection method")]
         public ProtectionProperties PutSlidesProtectionProperties(PutSlidesProtectionPropertiesRequest request)
         {
-            return SetProtectionProperties(request.Name, request.Dto, request.Password, request.Folder, request.Storage);
+            return SetProtection(request.Name, request.Dto, request.Password, request.Folder, request.Storage);
+        }
+
+        /// <summary>
+        /// Sets presentation protection options.  
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="dto">Protection properties.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream SetProtectionOnline(System.IO.Stream document, ProtectionProperties dto, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling PutSlidesProtectionPropertiesOnline");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling PutSlidesProtectionPropertiesOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/protection");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryApi(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Sets presentation protection options.  
+        /// </summary>
+        /// <param name="request">Request. <see cref="PutSlidesProtectionPropertiesOnlineRequest" /></param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        [System.Obsolete("Use SetProtectionOnline method")]
+        public System.IO.Stream PutSlidesProtectionPropertiesOnline(PutSlidesProtectionPropertiesOnlineRequest request)
+        {
+            return SetProtectionOnline(request.Document, request.Dto, request.Password);
         }
 
         /// <summary>
@@ -8376,52 +8851,6 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Set slide size for a presentation. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="width">Slide width.</param> 
-        /// <param name="height">Slide height.</param> 
-        /// <param name="sizeType">Standard slide size type.</param> 
-        /// <param name="scaleType">Standard slide scale type.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Document"/></returns>            
-        [System.Obsolete]
-        public Document PutSlidesSlideSize(string name, int? width = null, int? height = null, SizeType? sizeType = null, ScaleType? scaleType = null, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling PutSlidesSlideSize");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slideSize");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", width);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", height);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "sizeType", sizeType);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleType", scaleType);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Document>(resourcePath, "PUT", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Set slide size for a presentation. 
-        /// </summary>
-        /// <param name="request">Request. <see cref="PutSlidesSlideSizeRequest" /></param> 
-        /// <returns><see cref="Document"/></returns>            
-        [System.Obsolete("Use PutSlidesSlideSize method")]
-        public Document PutSlidesSlideSize(PutSlidesSlideSizeRequest request)
-        {
-            return PutSlidesSlideSize(request.Name, request.Width, request.Height, request.SizeType, request.ScaleType, request.Password, request.Folder, request.Storage);
-        }
-
-        /// <summary>
         /// Update presentation document properties. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -8470,10 +8899,10 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Presentation name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path (for smart art and group shapes).</param> 
         /// <param name="shapeIndex">Index of shape starting from 1</param> 
         /// <param name="format">Export picture format.</param> 
         /// <param name="outPath">Output path.</param> 
-        /// <param name="path">Shape path (for smart art and group shapes).</param> 
         /// <param name="options">export options</param> 
         /// <param name="scaleX">X scale ratio.</param> 
         /// <param name="scaleY">Y scale ratio.</param> 
@@ -8483,12 +8912,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="storage">Presentation storage.</param> 
         /// <param name="fontsFolder">Fonts folder.</param> 
         /// <returns><see cref=""/></returns>            
-        public void SaveSubshape(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string outPath, string path = null, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
+        public void SaveSubshape(string name, int slideIndex, string path, int shapeIndex, ShapeExportFormat format, string outPath, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling PutSubshapeSaveAs");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling PutSubshapeSaveAs");
             }
             // verify the required parameter 'outPath' is set
             if (outPath == null)
@@ -8524,7 +8958,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use SaveSubshape method")]
         public void PutSubshapeSaveAs(PutSubshapeSaveAsRequest request)
         {
-            SaveSubshape(request.Name, request.SlideIndex, request.ShapeIndex, request.Format, request.OutPath, request.Path, request.Options, request.ScaleX, request.ScaleY, request.Bounds, request.Password, request.Folder, request.Storage, request.FontsFolder);
+            SaveSubshape(request.Name, request.SlideIndex, request.Path, request.ShapeIndex, request.Format, request.OutPath, request.Options, request.ScaleX, request.ScaleY, request.Bounds, request.Password, request.Folder, request.Storage, request.FontsFolder);
         }
 
         /// <summary>
@@ -8756,12 +9190,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <summary>
         /// Upload file 
         /// </summary>
-        /// <param name="file">File to upload</param> 
         /// <param name="path">Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             </param> 
+        /// <param name="file">File to upload</param> 
         /// <param name="storageName">Storage name</param> 
         /// <returns><see cref="FilesUploadResult"/></returns>            
-        public FilesUploadResult UploadFile(System.IO.Stream file, string path = null, string storageName = null)
+        public FilesUploadResult UploadFile(string path, System.IO.Stream file, string storageName = null)
         {
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling UploadFile");
+            }
             // verify the required parameter 'file' is set
             if (file == null)
             {
@@ -8788,7 +9227,7 @@ namespace Aspose.Slides.Cloud.Sdk
         [System.Obsolete("Use UploadFile method")]
         public FilesUploadResult UploadFile(UploadFileRequest request)
         {
-            return UploadFile(request.File, request.Path, request.StorageName);
+            return UploadFile(request.Path, request.File, request.StorageName);
         }
     }
 }

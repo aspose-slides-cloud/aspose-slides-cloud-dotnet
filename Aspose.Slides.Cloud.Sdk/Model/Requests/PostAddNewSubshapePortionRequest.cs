@@ -47,22 +47,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="slideIndex">Slide index.</param>
+        /// <param name="path">Shape path.</param>
         /// <param name="shapeIndex">Shape index.</param>
         /// <param name="paragraphIndex">Paragraph index.</param>
         /// <param name="dto">Portion DTO.</param>
-        /// <param name="path">Shape path.</param>
         /// <param name="position">Position of the new portion in the list. Default is at the end of the list.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PostAddNewSubshapePortionRequest(string name, int slideIndex, int shapeIndex, int paragraphIndex, Portion dto, string path = null, int? position = null, string password = null, string folder = null, string storage = null)
+        public PostAddNewSubshapePortionRequest(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, Portion dto, int? position = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
+            this.Path = path;
             this.ShapeIndex = shapeIndex;
             this.ParagraphIndex = paragraphIndex;
             this.Dto = dto;
-            this.Path = path;
             this.Position = position;
             this.Password = password;
             this.Folder = folder;
@@ -80,6 +80,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
+        /// Shape path.
+        /// </summary>  
+        public string Path { get; set; }
+
+        /// <summary>
         /// Shape index.
         /// </summary>  
         public int ShapeIndex { get; set; }
@@ -93,11 +98,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Portion DTO.
         /// </summary>  
         public Portion Dto { get; set; }
-
-        /// <summary>
-        /// Shape path.
-        /// </summary>  
-        public string Path { get; set; }
 
         /// <summary>
         /// Position of the new portion in the list. Default is at the end of the list.

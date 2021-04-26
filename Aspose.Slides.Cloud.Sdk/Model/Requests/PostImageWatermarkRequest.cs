@@ -1,6 +1,6 @@
 
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="PutSetSubshapeParagraphPropertiesRequest.cs">
+// <copyright company="Aspose" file="PostImageWatermarkRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,37 +31,31 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PutSetSubshapeParagraphProperties" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostImageWatermark" /> operation.
   /// </summary>  
-  public class PutSetSubshapeParagraphPropertiesRequest  
+  public class PostImageWatermarkRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutSetSubshapeParagraphPropertiesRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostImageWatermarkRequest"/> class.
         /// </summary>        
-        public PutSetSubshapeParagraphPropertiesRequest()
+        public PostImageWatermarkRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutSetSubshapeParagraphPropertiesRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostImageWatermarkRequest"/> class.
         /// </summary>
         /// <param name="name">Document name.</param>
-        /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path">Shape path.</param>
-        /// <param name="shapeIndex">Shape index.</param>
-        /// <param name="paragraphIndex">Paragraph index.</param>
-        /// <param name="dto">Paragraph DTO.</param>
+        /// <param name="image">Image data.</param>
+        /// <param name="pictureFrame">PictureFrame DTO</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PutSetSubshapeParagraphPropertiesRequest(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, Paragraph dto, string password = null, string folder = null, string storage = null)
+        public PostImageWatermarkRequest(string name, System.IO.Stream image = null, PictureFrame pictureFrame = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
-            this.SlideIndex = slideIndex;
-            this.Path = path;
-            this.ShapeIndex = shapeIndex;
-            this.ParagraphIndex = paragraphIndex;
-            this.Dto = dto;
+            this.Image = image;
+            this.PictureFrame = pictureFrame;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
@@ -73,29 +67,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Name { get; set; }
 
         /// <summary>
-        /// Slide index.
+        /// Image data.
         /// </summary>  
-        public int SlideIndex { get; set; }
+        public System.IO.Stream Image { get; set; }
 
         /// <summary>
-        /// Shape path.
+        /// PictureFrame DTO
         /// </summary>  
-        public string Path { get; set; }
-
-        /// <summary>
-        /// Shape index.
-        /// </summary>  
-        public int ShapeIndex { get; set; }
-
-        /// <summary>
-        /// Paragraph index.
-        /// </summary>  
-        public int ParagraphIndex { get; set; }
-
-        /// <summary>
-        /// Paragraph DTO.
-        /// </summary>  
-        public Paragraph Dto { get; set; }
+        public PictureFrame PictureFrame { get; set; }
 
         /// <summary>
         /// Document password.

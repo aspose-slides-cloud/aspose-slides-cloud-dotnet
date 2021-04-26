@@ -1,6 +1,6 @@
 
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="PutSlidesDocumentFromHtmlRequest.cs">
+// <copyright company="Aspose" file="PutSlidesProtectionPropertiesOnlineRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,57 +31,43 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PutSlidesDocumentFromHtml" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PutSlidesProtectionPropertiesOnline" /> operation.
   /// </summary>  
-  public class PutSlidesDocumentFromHtmlRequest  
+  public class PutSlidesProtectionPropertiesOnlineRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutSlidesDocumentFromHtmlRequest"/> class.
+        /// Initializes a new instance of the <see cref="PutSlidesProtectionPropertiesOnlineRequest"/> class.
         /// </summary>        
-        public PutSlidesDocumentFromHtmlRequest()
+        public PutSlidesProtectionPropertiesOnlineRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutSlidesDocumentFromHtmlRequest"/> class.
+        /// Initializes a new instance of the <see cref="PutSlidesProtectionPropertiesOnlineRequest"/> class.
         /// </summary>
-        /// <param name="name">Document name.</param>
-        /// <param name="html">HTML data.</param>
+        /// <param name="document">Document data.</param>
+        /// <param name="dto">Protection properties.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="folder">Document folder.</param>
-        /// <param name="storage">Document storage.</param>
-        public PutSlidesDocumentFromHtmlRequest(string name, string html = null, string password = null, string folder = null, string storage = null)
+        public PutSlidesProtectionPropertiesOnlineRequest(System.IO.Stream document, ProtectionProperties dto, string password = null)
         {
-            this.Name = name;
-            this.Html = html;
+            this.Document = document;
+            this.Dto = dto;
             this.Password = password;
-            this.Folder = folder;
-            this.Storage = storage;
         }
 
         /// <summary>
-        /// Document name.
+        /// Document data.
         /// </summary>  
-        public string Name { get; set; }
+        public System.IO.Stream Document { get; set; }
 
         /// <summary>
-        /// HTML data.
+        /// Protection properties.
         /// </summary>  
-        public string Html { get; set; }
+        public ProtectionProperties Dto { get; set; }
 
         /// <summary>
         /// Document password.
         /// </summary>  
         public string Password { get; set; }
-
-        /// <summary>
-        /// Document folder.
-        /// </summary>  
-        public string Folder { get; set; }
-
-        /// <summary>
-        /// Document storage.
-        /// </summary>  
-        public string Storage { get; set; }
   }
 }

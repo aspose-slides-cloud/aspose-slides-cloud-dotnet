@@ -1,6 +1,6 @@
 
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="CreateFolderRequest.cs">
+// <copyright company="Aspose" file="DeleteSlidesProtectionPropertiesRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,36 +31,50 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.CreateFolder" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.DeleteSlidesProtectionProperties" /> operation.
   /// </summary>  
-  public class CreateFolderRequest  
+  public class DeleteSlidesProtectionPropertiesRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateFolderRequest"/> class.
+        /// Initializes a new instance of the <see cref="DeleteSlidesProtectionPropertiesRequest"/> class.
         /// </summary>        
-        public CreateFolderRequest()
+        public DeleteSlidesProtectionPropertiesRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateFolderRequest"/> class.
+        /// Initializes a new instance of the <see cref="DeleteSlidesProtectionPropertiesRequest"/> class.
         /// </summary>
-        /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
-        /// <param name="storageName">Storage name</param>
-        public CreateFolderRequest(string path, string storageName = null)
+        /// <param name="name">Document name.</param>
+        /// <param name="password">Presentation password.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
+        public DeleteSlidesProtectionPropertiesRequest(string name, string password = null, string folder = null, string storage = null)
         {
-            this.Path = path;
-            this.StorageName = storageName;
+            this.Name = name;
+            this.Password = password;
+            this.Folder = folder;
+            this.Storage = storage;
         }
 
         /// <summary>
-        /// Folder path to create e.g. 'folder_1/folder_2/'
+        /// Document name.
         /// </summary>  
-        public string Path { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// Storage name
+        /// Presentation password.
         /// </summary>  
-        public string StorageName { get; set; }
+        public string Password { get; set; }
+
+        /// <summary>
+        /// Document folder.
+        /// </summary>  
+        public string Folder { get; set; }
+
+        /// <summary>
+        /// Document storage.
+        /// </summary>  
+        public string Storage { get; set; }
   }
 }

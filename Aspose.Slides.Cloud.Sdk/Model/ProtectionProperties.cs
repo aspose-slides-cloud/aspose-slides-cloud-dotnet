@@ -49,6 +49,26 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? ReadOnlyRecommended { get; set; }
 
+        /// <summary>
+        /// Password for read protection.
+        /// </summary>
+        public string ReadPassword { get; set; }
+
+        /// <summary>
+        /// Password for write protection.
+        /// </summary>
+        public string WritePassword { get; set; }
+
+        /// <summary>
+        /// Returns true if the presentation protected for editing. 
+        /// </summary>
+        public bool? IsWriteProtected { get; set; }
+
+        /// <summary>
+        /// Returns true if the presentation protected for reading. 
+        /// </summary>
+        public bool? IsEncrypted { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -85,6 +105,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
             sb.Append("  EncryptDocumentProperties: ").Append(this.EncryptDocumentProperties).Append("\n");
             sb.Append("  ReadOnlyRecommended: ").Append(this.ReadOnlyRecommended).Append("\n");
+            sb.Append("  ReadPassword: ").Append(this.ReadPassword).Append("\n");
+            sb.Append("  WritePassword: ").Append(this.WritePassword).Append("\n");
+            sb.Append("  IsWriteProtected: ").Append(this.IsWriteProtected).Append("\n");
+            sb.Append("  IsEncrypted: ").Append(this.IsEncrypted).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

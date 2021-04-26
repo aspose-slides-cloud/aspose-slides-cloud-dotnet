@@ -47,19 +47,19 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Document name.</param>
         /// <param name="slideIndex">Slide index.</param>
+        /// <param name="path">Shape path.</param>
         /// <param name="shapeIndex">Shape index.</param>
         /// <param name="dto">Shape DTO.</param>
-        /// <param name="path">Shape path.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PutSlideSubshapeInfoRequest(string name, int slideIndex, int shapeIndex, ShapeBase dto, string path = null, string password = null, string folder = null, string storage = null)
+        public PutSlideSubshapeInfoRequest(string name, int slideIndex, string path, int shapeIndex, ShapeBase dto, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
+            this.Path = path;
             this.ShapeIndex = shapeIndex;
             this.Dto = dto;
-            this.Path = path;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
@@ -76,6 +76,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
+        /// Shape path.
+        /// </summary>  
+        public string Path { get; set; }
+
+        /// <summary>
         /// Shape index.
         /// </summary>  
         public int ShapeIndex { get; set; }
@@ -84,11 +89,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Shape DTO.
         /// </summary>  
         public ShapeBase Dto { get; set; }
-
-        /// <summary>
-        /// Shape path.
-        /// </summary>  
-        public string Path { get; set; }
 
         /// <summary>
         /// Document password.

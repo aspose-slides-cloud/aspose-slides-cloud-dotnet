@@ -48,7 +48,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="path">File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;</param>
         /// <param name="storageName">Storage name</param>
         /// <param name="versionId">File version ID</param>
-        public ObjectExistsRequest(string path = null, string storageName = null, string versionId = null)
+        public ObjectExistsRequest(string path, string storageName = null, string versionId = null)
         {
             this.Path = path;
             this.StorageName = storageName;

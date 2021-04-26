@@ -1,6 +1,6 @@
 
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="PutSlidesSlideSizeRequest.cs">
+// <copyright company="Aspose" file="PostWatermarkOnlineRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,78 +31,71 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PutSlidesSlideSize" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostWatermarkOnline" /> operation.
   /// </summary>  
-  public class PutSlidesSlideSizeRequest  
+  public class PostWatermarkOnlineRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutSlidesSlideSizeRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostWatermarkOnlineRequest"/> class.
         /// </summary>        
-        public PutSlidesSlideSizeRequest()
+        public PostWatermarkOnlineRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutSlidesSlideSizeRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostWatermarkOnlineRequest"/> class.
         /// </summary>
-        /// <param name="name">Document name.</param>
-        /// <param name="width">Slide width.</param>
-        /// <param name="height">Slide height.</param>
-        /// <param name="sizeType">Standard slide size type.</param>
-        /// <param name="scaleType">Standard slide scale type.</param>
+        /// <param name="document">Document data.</param>
+        /// <param name="shape">Shape DTO</param>
+        /// <param name="fontHeight">Watermark font height.</param>
+        /// <param name="text">Watermark text.</param>
+        /// <param name="fontName">Watermark font name.</param>
+        /// <param name="fontColor">Watermark font color.</param>
         /// <param name="password">Document password.</param>
-        /// <param name="folder">Document folder.</param>
-        /// <param name="storage">Document storage.</param>
-        public PutSlidesSlideSizeRequest(string name, int? width = null, int? height = null, SizeType? sizeType = null, ScaleType? scaleType = null, string password = null, string folder = null, string storage = null)
+        public PostWatermarkOnlineRequest(System.IO.Stream document, Shape shape = null, double? fontHeight = null, string text = null, string fontName = null, string fontColor = null, string password = null)
         {
-            this.Name = name;
-            this.Width = width;
-            this.Height = height;
-            this.SizeType = sizeType;
-            this.ScaleType = scaleType;
+            this.Document = document;
+            this.Shape = shape;
+            this.FontHeight = fontHeight;
+            this.Text = text;
+            this.FontName = fontName;
+            this.FontColor = fontColor;
             this.Password = password;
-            this.Folder = folder;
-            this.Storage = storage;
         }
 
         /// <summary>
-        /// Document name.
+        /// Document data.
         /// </summary>  
-        public string Name { get; set; }
+        public System.IO.Stream Document { get; set; }
 
         /// <summary>
-        /// Slide width.
+        /// Shape DTO
         /// </summary>  
-        public int? Width { get; set; }
+        public Shape Shape { get; set; }
 
         /// <summary>
-        /// Slide height.
+        /// Watermark font height.
         /// </summary>  
-        public int? Height { get; set; }
+        public double? FontHeight { get; set; }
 
         /// <summary>
-        /// Standard slide size type.
+        /// Watermark text.
         /// </summary>  
-        public SizeType? SizeType { get; set; }
+        public string Text { get; set; }
 
         /// <summary>
-        /// Standard slide scale type.
+        /// Watermark font name.
         /// </summary>  
-        public ScaleType? ScaleType { get; set; }
+        public string FontName { get; set; }
+
+        /// <summary>
+        /// Watermark font color.
+        /// </summary>  
+        public string FontColor { get; set; }
 
         /// <summary>
         /// Document password.
         /// </summary>  
         public string Password { get; set; }
-
-        /// <summary>
-        /// Document folder.
-        /// </summary>  
-        public string Folder { get; set; }
-
-        /// <summary>
-        /// Document storage.
-        /// </summary>  
-        public string Storage { get; set; }
   }
 }

@@ -48,7 +48,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="name">Document name.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
-        /// <param name="storage">Documentstorage.</param>
+        /// <param name="storage">Document storage.</param>
         public GetSlidesDocumentRequest(string name, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
@@ -73,7 +73,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Folder { get; set; }
 
         /// <summary>
-        /// Documentstorage.
+        /// Document storage.
         /// </summary>  
         public string Storage { get; set; }
   }

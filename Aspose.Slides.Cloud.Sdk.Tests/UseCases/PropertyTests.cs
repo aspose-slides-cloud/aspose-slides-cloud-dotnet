@@ -27,6 +27,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
@@ -51,17 +52,17 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             DocumentProperty documentProperty = TestUtils.SlidesApi.GetDocumentProperty(
                 c_fileName, c_builtinPropertyName, c_password, c_folderName);
             Assert.AreEqual(c_builtinPropertyName, documentProperty.Name);
-            Assert.IsTrue(documentProperty.BuiltIn);
+            Assert.IsTrue(documentProperty.BuiltIn.Value);
             DocumentProperty property = new DocumentProperty { Value = c_updatedPropertyValue };
             DocumentProperty updatedProperty = TestUtils.SlidesApi.SetDocumentProperty(
                 c_fileName, c_builtinPropertyName, property, c_password, c_folderName);
-            Assert.IsTrue(updatedProperty.BuiltIn);
+            Assert.IsTrue(updatedProperty.BuiltIn.Value);
             Assert.AreEqual(c_updatedPropertyValue, updatedProperty.Value);
             TestUtils.SlidesApi.DeleteDocumentProperty(c_fileName, c_builtinPropertyName, c_password, c_folderName);
             //built-in property is not actually deleted
             documentProperty = TestUtils.SlidesApi.GetDocumentProperty(c_fileName, c_builtinPropertyName, c_password, c_folderName);
             Assert.AreEqual(c_builtinPropertyName, documentProperty.Name);
-            Assert.IsTrue(documentProperty.BuiltIn);
+            Assert.IsTrue(documentProperty.BuiltIn.Value);
             Assert.AreNotEqual(c_updatedPropertyValue, documentProperty.Value);
         }
 
@@ -72,7 +73,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             DocumentProperty property = new DocumentProperty { Value = c_updatedPropertyValue };
             DocumentProperty updatedProperty = TestUtils.SlidesApi.SetDocumentProperty(
                 c_fileName, c_customPropertyName, property, c_password, c_folderName);
-            Assert.IsFalse(updatedProperty.BuiltIn);
+            Assert.IsFalse(updatedProperty.BuiltIn.Value);
             Assert.AreEqual(c_updatedPropertyValue, updatedProperty.Value);
             TestUtils.SlidesApi.DeleteDocumentProperty(c_fileName, c_customPropertyName, c_password, c_folderName);
             Assert.IsNull(TestUtils.SlidesApi.GetDocumentProperty(c_fileName, c_customPropertyName, c_password, c_folderName));
@@ -132,14 +133,41 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ProtectionProperties()
+        public void Protection()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ProtectionProperties protectionProperties = TestUtils.SlidesApi.GetProtectionProperties(c_fileName, c_password, c_folderName);
             ProtectionProperties dto = new ProtectionProperties { ReadOnlyRecommended = !protectionProperties.ReadOnlyRecommended };
-            ProtectionProperties updatedProperties = TestUtils.SlidesApi.SetProtectionProperties(c_fileName, dto, c_password, c_folderName);
+            ProtectionProperties updatedProperties = TestUtils.SlidesApi.SetProtection(c_fileName, dto, c_password, c_folderName);
             Assert.AreNotEqual(protectionProperties.ReadOnlyRecommended, updatedProperties.ReadOnlyRecommended);
             Assert.AreEqual(protectionProperties.EncryptDocumentProperties, updatedProperties.EncryptDocumentProperties);
+        }
+
+        [Test]
+        public void DeleteProtection()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+                ProtectionProperties protectionProperties = TestUtils.SlidesApi.DeleteProtection(c_fileName, c_password, c_folderName);
+            Assert.IsFalse(protectionProperties.ReadOnlyRecommended.Value);
+            Assert.IsFalse(protectionProperties.IsEncrypted.Value);
+            Assert.IsNull(protectionProperties.ReadPassword);
+        }
+
+        [Test]
+        public void ProtectOnline()
+        {
+            Stream document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            ProtectionProperties dto = new ProtectionProperties { ReadPassword = "newPassword" };
+            Stream outputDocument = TestUtils.SlidesApi.SetProtectionOnline(document, dto, c_password);
+            Assert.AreNotEqual(document.Length, outputDocument.Length);
+        }
+
+        [Test]
+        public void UnprotectOnline()
+        {
+            Stream document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            Stream outputDocument = TestUtils.SlidesApi.DeleteProtectionOnline(document, c_password);
+            Assert.AreNotEqual(document.Length, outputDocument.Length);
         }
 
         const string c_folderName = "TempSlidesSDK";

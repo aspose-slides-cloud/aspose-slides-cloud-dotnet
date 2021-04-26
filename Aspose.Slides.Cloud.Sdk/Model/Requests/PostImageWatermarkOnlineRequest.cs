@@ -1,6 +1,6 @@
 
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="CreateFolderRequest.cs">
+// <copyright company="Aspose" file="PostImageWatermarkOnlineRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,36 +31,50 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.CreateFolder" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostImageWatermarkOnline" /> operation.
   /// </summary>  
-  public class CreateFolderRequest  
+  public class PostImageWatermarkOnlineRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateFolderRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostImageWatermarkOnlineRequest"/> class.
         /// </summary>        
-        public CreateFolderRequest()
+        public PostImageWatermarkOnlineRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateFolderRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostImageWatermarkOnlineRequest"/> class.
         /// </summary>
-        /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
-        /// <param name="storageName">Storage name</param>
-        public CreateFolderRequest(string path, string storageName = null)
+        /// <param name="document">Document data.</param>
+        /// <param name="image">Image data.</param>
+        /// <param name="pictureFrame">PictureFrame DTO.</param>
+        /// <param name="password">Document password.</param>
+        public PostImageWatermarkOnlineRequest(System.IO.Stream document, System.IO.Stream image = null, PictureFrame pictureFrame = null, string password = null)
         {
-            this.Path = path;
-            this.StorageName = storageName;
+            this.Document = document;
+            this.Image = image;
+            this.PictureFrame = pictureFrame;
+            this.Password = password;
         }
 
         /// <summary>
-        /// Folder path to create e.g. 'folder_1/folder_2/'
+        /// Document data.
         /// </summary>  
-        public string Path { get; set; }
+        public System.IO.Stream Document { get; set; }
 
         /// <summary>
-        /// Storage name
+        /// Image data.
         /// </summary>  
-        public string StorageName { get; set; }
+        public System.IO.Stream Image { get; set; }
+
+        /// <summary>
+        /// PictureFrame DTO.
+        /// </summary>  
+        public PictureFrame PictureFrame { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
   }
 }

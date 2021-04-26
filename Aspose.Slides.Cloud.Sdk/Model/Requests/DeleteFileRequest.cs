@@ -48,7 +48,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
         /// <param name="storageName">Storage name</param>
         /// <param name="versionId">File version ID to delete</param>
-        public DeleteFileRequest(string path = null, string storageName = null, string versionId = null)
+        public DeleteFileRequest(string path, string storageName = null, string versionId = null)
         {
             this.Path = path;
             this.StorageName = storageName;

@@ -47,9 +47,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="name">Presentation name.</param>
         /// <param name="slideIndex">Slide index.</param>
+        /// <param name="path">Shape path.</param>
         /// <param name="shapeIndex">Index of shape starting from 1</param>
         /// <param name="format">Export picture format.</param>
-        /// <param name="path">Shape path.</param>
         /// <param name="options">export options</param>
         /// <param name="scaleX">X scale ratio.</param>
         /// <param name="scaleY">Y scale ratio.</param>
@@ -58,13 +58,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="folder">Presentation folder.</param>
         /// <param name="storage">Presentation storage.</param>
         /// <param name="fontsFolder">Fonts folder.</param>
-        public PostSubshapeSaveAsRequest(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string path = null, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
+        public PostSubshapeSaveAsRequest(string name, int slideIndex, string path, int shapeIndex, ShapeExportFormat format, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
+            this.Path = path;
             this.ShapeIndex = shapeIndex;
             this.Format = format;
-            this.Path = path;
             this.Options = options;
             this.ScaleX = scaleX;
             this.ScaleY = scaleY;
@@ -86,6 +86,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public int SlideIndex { get; set; }
 
         /// <summary>
+        /// Shape path.
+        /// </summary>  
+        public string Path { get; set; }
+
+        /// <summary>
         /// Index of shape starting from 1
         /// </summary>  
         public int ShapeIndex { get; set; }
@@ -94,11 +99,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Export picture format.
         /// </summary>  
         public ShapeExportFormat Format { get; set; }
-
-        /// <summary>
-        /// Shape path.
-        /// </summary>  
-        public string Path { get; set; }
 
         /// <summary>
         /// export options

@@ -66,7 +66,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             };
 #endif
         }
-
         public static void Init()
         {
             if (!s_initialized)
@@ -76,10 +75,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                     foreach (string file in Directory.EnumerateFiles(TestDataPath))
                     {
                         string filePath = $"{c_tempTestFolder}/{Path.GetFileName(file)}";
-                        SlidesApi.UploadFile(File.OpenRead(file), filePath);
+                        SlidesApi.UploadFile(filePath, File.OpenRead(file));
                     }
                     Stream versionFile = new MemoryStream(Encoding.UTF8.GetBytes(c_expectedVersion.ToString()));
-                    SlidesApi.UploadFile(versionFile, $"{c_tempTestFolder}/{c_versionFile}");
+                    SlidesApi.UploadFile($"{c_tempTestFolder}/{c_versionFile}", versionFile);
                 }
                 s_initialized = true;
             }

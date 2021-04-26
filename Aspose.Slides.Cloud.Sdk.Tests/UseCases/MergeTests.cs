@@ -28,7 +28,6 @@ using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.IO;
-using System.IO.Compression;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
@@ -93,18 +92,21 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
 
             TestUtils.SlidesApi.MergeAndSaveOnline(c_outpath, new List<FileInfo> { file1, file2 }, password: c_password);
-            Assert.IsTrue(TestUtils.SlidesApi.ObjectExists(c_outpath).Exists);
+            Assert.IsTrue(TestUtils.SlidesApi.ObjectExists(c_outpath).Exists.Value);
         }
 
         [Test]
         public void MergeOrderedRequest()
         {
-            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)) };
-            FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
+            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)), Name = "file1.pptx" };
+            FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)), Name = "file2.pptx" };
 
             OrderedMergeRequest request = new OrderedMergeRequest
             {
-                Presentations = new List<PresentationToMerge> { new PresentationToMerge { Slides = new List<int?> { 1, 2 } } }
+                Presentations = new List<PresentationToMerge>
+                {
+                    new PresentationToMerge { Path = "file2.pptx", Slides = new List<int?> { 1, 2 } }
+                }
             };
 
             Stream result = TestUtils.SlidesApi.MergeOnline(new List<FileInfo> { file1, file2 }, request, c_password);

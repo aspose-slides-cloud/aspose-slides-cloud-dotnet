@@ -49,23 +49,23 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="slideIndex">Slide index.</param>
         /// <param name="shapeIndex">Index of shape starting from 1</param>
         /// <param name="format">Export picture format.</param>
-        /// <param name="password">Document password.</param>
-        /// <param name="storage">Document storage.</param>
         /// <param name="scaleX">X scale ratio.</param>
         /// <param name="scaleY">Y scale ratio.</param>
         /// <param name="bounds">Shape thumbnail bounds type.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="storage">Document storage.</param>
         /// <param name="fontsFolder">Fonts folder.</param>
-        public PostExportShapeRequest(System.IO.Stream document, int slideIndex, int shapeIndex, ShapeExportFormat format, string password = null, string storage = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string fontsFolder = null)
+        public PostExportShapeRequest(System.IO.Stream document, int slideIndex, int shapeIndex, ShapeExportFormat format, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string storage = null, string fontsFolder = null)
         {
             this.Document = document;
             this.SlideIndex = slideIndex;
             this.ShapeIndex = shapeIndex;
             this.Format = format;
-            this.Password = password;
-            this.Storage = storage;
             this.ScaleX = scaleX;
             this.ScaleY = scaleY;
             this.Bounds = bounds;
+            this.Password = password;
+            this.Storage = storage;
             this.FontsFolder = fontsFolder;
         }
 
@@ -90,16 +90,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public ShapeExportFormat Format { get; set; }
 
         /// <summary>
-        /// Document password.
-        /// </summary>  
-        public string Password { get; set; }
-
-        /// <summary>
-        /// Document storage.
-        /// </summary>  
-        public string Storage { get; set; }
-
-        /// <summary>
         /// X scale ratio.
         /// </summary>  
         public double? ScaleX { get; set; }
@@ -113,6 +103,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Shape thumbnail bounds type.
         /// </summary>  
         public ShapeThumbnailBounds? Bounds { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
+
+        /// <summary>
+        /// Document storage.
+        /// </summary>  
+        public string Storage { get; set; }
 
         /// <summary>
         /// Fonts folder.

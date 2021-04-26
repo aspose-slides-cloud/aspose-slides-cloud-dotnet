@@ -57,7 +57,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
             string url = result.Slides[0].Href;
             string path = url.Substring(url.IndexOf("/storage/file/") + "/storage/file/".Length);
-            Assert.IsTrue(TestUtils.SlidesApi.ObjectExists(path).Exists);
+            Assert.IsTrue(TestUtils.SlidesApi.ObjectExists(path).Exists.Value);
         }
 
         [Test]
@@ -86,7 +86,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
             string url = result.Slides[0].Href;
             string path = url.Substring(url.IndexOf("/storage/file/") + "/storage/file/".Length);
-            Assert.IsTrue(TestUtils.SlidesApi.ObjectExists(path).Exists);
+            Assert.IsTrue(TestUtils.SlidesApi.ObjectExists(path).Exists.Value);
         }
 
         [Test]
@@ -99,7 +99,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
             string url = result.Slides[0].Href;
             string path = url.Substring(url.IndexOf("/storage/file/") + "/storage/file/".Length);
-            Assert.IsTrue(TestUtils.SlidesApi.ObjectExists(path).Exists);
+            Assert.IsTrue(TestUtils.SlidesApi.ObjectExists(path).Exists.Value);
         }
 
         const string c_folderName = "TempSlidesSDK";

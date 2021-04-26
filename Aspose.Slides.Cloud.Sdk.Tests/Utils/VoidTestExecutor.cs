@@ -54,6 +54,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                     {
                         fileName = "test.pdf";
                     }
+                    if (name.Equals("image", StringComparison.OrdinalIgnoreCase))
+                    {
+                        fileName = "watermark.png";
+                    }
                     value = File.OpenRead(TestUtils.TestDataPath + "\\" + fileName);
                 }
                 else if (type == typeof(List<FileInfo>))

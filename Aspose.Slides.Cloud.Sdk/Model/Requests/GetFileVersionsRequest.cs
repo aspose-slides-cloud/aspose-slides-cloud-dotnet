@@ -47,7 +47,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// </summary>
         /// <param name="path">File path e.g. &#39;/file.ext&#39;</param>
         /// <param name="storageName">Storage name</param>
-        public GetFileVersionsRequest(string path = null, string storageName = null)
+        public GetFileVersionsRequest(string path, string storageName = null)
         {
             this.Path = path;
             this.StorageName = storageName;

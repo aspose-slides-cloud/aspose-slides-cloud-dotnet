@@ -40,6 +40,7 @@ OpenAPI spec version: 1.1
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
@@ -83,15 +84,22 @@ OpenAPI spec version: 1.1
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UseCases\AbstractClassTests.cs" />
     <Compile Include="UseCases\AuthTests.cs" />
-    <Compile Include="UseCases\ShapeTests.cs" />
     <Compile Include="UseCases\ChartTests.cs" />
     <Compile Include="UseCases\ConvertTests.cs" />
+    <Compile Include="UseCases\CreateTests.cs" />
     <Compile Include="UseCases\HeaderFooterTests.cs" />
+    <Compile Include="UseCases\ImageTests.cs" />
+    <Compile Include="UseCases\MergeTests.cs" />
     <Compile Include="UseCases\NotesSlideTests.cs" />
     <Compile Include="UseCases\NullableFieldTests.cs" />
     <Compile Include="UseCases\PipelineTests.cs" />
+    <Compile Include="UseCases\PropertyTests.cs" />
     <Compile Include="UseCases\SectionTests.cs" />
+    <Compile Include="UseCases\ShapeTests.cs" />
+    <Compile Include="UseCases\SplitTests.cs" />
+    <Compile Include="UseCases\TextTests.cs" />
     <Compile Include="UseCases\TimeoutTests.cs" />
+    <Compile Include="UseCases\WatermarkTests.cs" />
     <Compile Include="Utils\TestExecutor.cs" />
     <Compile Include="Utils\TestRules.cs" />
     <Compile Include="Utils\TestUtils.cs" />

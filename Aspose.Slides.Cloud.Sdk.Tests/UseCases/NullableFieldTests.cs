@@ -48,7 +48,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void DefaultChartValues()
         {
             const string folderName = "TempSlidesSDK";
-            const string fileName = "placeholders.pptx";
+            const string fileName = "test.pptx";
+            const int slideIndex = 1;
+            const int shapeIndex = 5;
             const double min1  = 44.3;
             const double min2 = 12;
             const double max1 = 104.3;
@@ -72,21 +74,21 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 },
                 Axes = new Axes { HorizontalAxis = new Axis { IsAutomaticMinValue = false, MinValue = min1, IsAutomaticMaxValue = false, MaxValue = max1 } }
             };
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(fileName, 1, dto, password: "password", folder: folderName);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(fileName, slideIndex, dto, password: "password", folder: folderName);
             Assert.IsInstanceOf<Chart>(shape);
-            shape = TestUtils.SlidesApi.GetShape(fileName, 1, 4, "password", folderName);
+            shape = TestUtils.SlidesApi.GetShape(fileName, slideIndex, shapeIndex, "password", folderName);
             Assert.AreEqual(min1, ((Chart)shape).Axes.HorizontalAxis.MinValue);
             Assert.AreEqual(max1, ((Chart)shape).Axes.HorizontalAxis.MaxValue);
             dto = new Chart { Axes = new Axes { HorizontalAxis = new Axis { MinValue = min2 } } };
-            shape = TestUtils.SlidesApi.UpdateShape(fileName, 1, 4, dto, "password", folderName);
+            shape = TestUtils.SlidesApi.UpdateShape(fileName, slideIndex, shapeIndex, dto, "password", folderName);
             Assert.IsInstanceOf<Chart>(shape);
-            shape = TestUtils.SlidesApi.GetShape(fileName, 1, 4, "password", folderName);
+            shape = TestUtils.SlidesApi.GetShape(fileName, slideIndex, shapeIndex, "password", folderName);
             Assert.AreEqual(min2, ((Chart)shape).Axes.HorizontalAxis.MinValue);
             Assert.AreEqual(max1, ((Chart)shape).Axes.HorizontalAxis.MaxValue);
             dto.Axes = new Axes { HorizontalAxis = new Axis { MaxValue = max2 } };
-            shape = TestUtils.SlidesApi.UpdateShape(fileName, 1, 4, dto, "password", folderName);
+            shape = TestUtils.SlidesApi.UpdateShape(fileName, slideIndex, shapeIndex, dto, "password", folderName);
             Assert.IsInstanceOf<Chart>(shape);
-            shape = TestUtils.SlidesApi.GetShape(fileName, 1, 4, "password", folderName);
+            shape = TestUtils.SlidesApi.GetShape(fileName, slideIndex, shapeIndex, "password", folderName);
             Assert.AreEqual(min2, ((Chart)shape).Axes.HorizontalAxis.MinValue);
             Assert.AreEqual(max2, ((Chart)shape).Axes.HorizontalAxis.MaxValue);
         }

@@ -46,7 +46,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// Initializes a new instance of the <see cref="PutSlidesProtectionPropertiesRequest"/> class.
         /// </summary>
         /// <param name="name">Document name.</param>
-        /// <param name="dto">The view properties data.</param>
+        /// <param name="dto">Protection properties.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
@@ -65,7 +65,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Name { get; set; }
 
         /// <summary>
-        /// The view properties data.
+        /// Protection properties.
         /// </summary>  
         public ProtectionProperties Dto { get; set; }
 

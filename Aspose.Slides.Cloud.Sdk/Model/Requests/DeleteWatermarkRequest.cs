@@ -1,6 +1,6 @@
 
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="CreateFolderRequest.cs">
+// <copyright company="Aspose" file="DeleteWatermarkRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,36 +31,57 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.CreateFolder" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.DeleteWatermark" /> operation.
   /// </summary>  
-  public class CreateFolderRequest  
+  public class DeleteWatermarkRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateFolderRequest"/> class.
+        /// Initializes a new instance of the <see cref="DeleteWatermarkRequest"/> class.
         /// </summary>        
-        public CreateFolderRequest()
+        public DeleteWatermarkRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateFolderRequest"/> class.
+        /// Initializes a new instance of the <see cref="DeleteWatermarkRequest"/> class.
         /// </summary>
-        /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
-        /// <param name="storageName">Storage name</param>
-        public CreateFolderRequest(string path, string storageName = null)
+        /// <param name="name">Document name.</param>
+        /// <param name="shapeName">Name of the watermark shape. If null, default value \&quot;watermark\&quot;is used.</param>
+        /// <param name="password">Document password.</param>
+        /// <param name="folder">Document folder.</param>
+        /// <param name="storage">Document storage.</param>
+        public DeleteWatermarkRequest(string name, string shapeName = null, string password = null, string folder = null, string storage = null)
         {
-            this.Path = path;
-            this.StorageName = storageName;
+            this.Name = name;
+            this.ShapeName = shapeName;
+            this.Password = password;
+            this.Folder = folder;
+            this.Storage = storage;
         }
 
         /// <summary>
-        /// Folder path to create e.g. 'folder_1/folder_2/'
+        /// Document name.
         /// </summary>  
-        public string Path { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// Storage name
+        /// Name of the watermark shape. If null, default value \"watermark\"is used.
         /// </summary>  
-        public string StorageName { get; set; }
+        public string ShapeName { get; set; }
+
+        /// <summary>
+        /// Document password.
+        /// </summary>  
+        public string Password { get; set; }
+
+        /// <summary>
+        /// Document folder.
+        /// </summary>  
+        public string Folder { get; set; }
+
+        /// <summary>
+        /// Document storage.
+        /// </summary>  
+        public string Storage { get; set; }
   }
 }

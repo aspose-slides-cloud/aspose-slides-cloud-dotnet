@@ -1,6 +1,6 @@
 
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="PutSetSubshapeParagraphPropertiesRequest.cs">
+// <copyright company="Aspose" file="PostWatermarkRequest.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -31,37 +31,37 @@ using Aspose.Slides.Cloud.Sdk.Model;
 namespace Aspose.Slides.Cloud.Sdk.Model.Requests 
 {
   /// <summary>
-  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PutSetSubshapeParagraphProperties" /> operation.
+  /// Request model for <see cref="Aspose.Slides.Cloud.Sdk.Api.SlidesApi.PostWatermark" /> operation.
   /// </summary>  
-  public class PutSetSubshapeParagraphPropertiesRequest  
+  public class PostWatermarkRequest  
   {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutSetSubshapeParagraphPropertiesRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostWatermarkRequest"/> class.
         /// </summary>        
-        public PutSetSubshapeParagraphPropertiesRequest()
+        public PostWatermarkRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutSetSubshapeParagraphPropertiesRequest"/> class.
+        /// Initializes a new instance of the <see cref="PostWatermarkRequest"/> class.
         /// </summary>
         /// <param name="name">Document name.</param>
-        /// <param name="slideIndex">Slide index.</param>
-        /// <param name="path">Shape path.</param>
-        /// <param name="shapeIndex">Shape index.</param>
-        /// <param name="paragraphIndex">Paragraph index.</param>
-        /// <param name="dto">Paragraph DTO.</param>
+        /// <param name="shape">Shape DTO</param>
+        /// <param name="fontHeight">Watermark font height.</param>
+        /// <param name="text">Watermark text.</param>
+        /// <param name="fontName">Watermark font name.</param>
+        /// <param name="fontColor">Watermark font color.</param>
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PutSetSubshapeParagraphPropertiesRequest(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, Paragraph dto, string password = null, string folder = null, string storage = null)
+        public PostWatermarkRequest(string name, Shape shape = null, double? fontHeight = null, string text = null, string fontName = null, string fontColor = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
-            this.SlideIndex = slideIndex;
-            this.Path = path;
-            this.ShapeIndex = shapeIndex;
-            this.ParagraphIndex = paragraphIndex;
-            this.Dto = dto;
+            this.Shape = shape;
+            this.FontHeight = fontHeight;
+            this.Text = text;
+            this.FontName = fontName;
+            this.FontColor = fontColor;
             this.Password = password;
             this.Folder = folder;
             this.Storage = storage;
@@ -73,29 +73,29 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         public string Name { get; set; }
 
         /// <summary>
-        /// Slide index.
+        /// Shape DTO
         /// </summary>  
-        public int SlideIndex { get; set; }
+        public Shape Shape { get; set; }
 
         /// <summary>
-        /// Shape path.
+        /// Watermark font height.
         /// </summary>  
-        public string Path { get; set; }
+        public double? FontHeight { get; set; }
 
         /// <summary>
-        /// Shape index.
+        /// Watermark text.
         /// </summary>  
-        public int ShapeIndex { get; set; }
+        public string Text { get; set; }
 
         /// <summary>
-        /// Paragraph index.
+        /// Watermark font name.
         /// </summary>  
-        public int ParagraphIndex { get; set; }
+        public string FontName { get; set; }
 
         /// <summary>
-        /// Paragraph DTO.
+        /// Watermark font color.
         /// </summary>  
-        public Paragraph Dto { get; set; }
+        public string FontColor { get; set; }
 
         /// <summary>
         /// Document password.

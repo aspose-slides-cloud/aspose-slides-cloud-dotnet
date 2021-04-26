@@ -54,7 +54,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model.Requests
         /// <param name="password">Document password.</param>
         /// <param name="folder">Document folder.</param>
         /// <param name="storage">Document storage.</param>
-        public PostAddNewSubshapeRequest(string name, int slideIndex, string path = null, ShapeBase dto = null, int? shapeToClone = null, int? position = null, string password = null, string folder = null, string storage = null)
+        public PostAddNewSubshapeRequest(string name, int slideIndex, string path, ShapeBase dto = null, int? shapeToClone = null, int? position = null, string password = null, string folder = null, string storage = null)
         {
             this.Name = name;
             this.SlideIndex = slideIndex;
