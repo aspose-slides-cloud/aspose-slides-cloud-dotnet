@@ -77,10 +77,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void MergeRequest()
         {
-            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)) };
+            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
             FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
 
-            Stream result = TestUtils.SlidesApi.MergeOnline(new List<FileInfo> { file1, file2 }, password: c_password);
+            Stream result = TestUtils.SlidesApi.MergeOnline(new List<FileInfo> { file1, file2 });
             Assert.IsNotNull(result);
             Assert.IsTrue(result.CanRead);
         }
@@ -88,28 +88,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void MergeAndSaveRequest()
         {
-            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)) };
+            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
             FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
 
-            TestUtils.SlidesApi.MergeAndSaveOnline(c_outpath, new List<FileInfo> { file1, file2 }, password: c_password);
+            TestUtils.SlidesApi.MergeAndSaveOnline(c_outpath, new List<FileInfo> { file1, file2 });
             Assert.IsTrue(TestUtils.SlidesApi.ObjectExists(c_outpath).Exists.Value);
         }
 
         [Test]
         public void MergeOrderedRequest()
         {
-            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)), Name = "file1.pptx" };
-            FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)), Name = "file2.pptx" };
+            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)), Name = "file1.pptx" };
+            FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)), Name = "file2.pptx" };
 
             OrderedMergeRequest request = new OrderedMergeRequest
             {
                 Presentations = new List<PresentationToMerge>
                 {
-                    new PresentationToMerge { Path = "file2.pptx", Slides = new List<int?> { 1, 2 } }
+                    new PresentationToMerge { Path = "file1.pptx" },
+                    new PresentationToMerge { Path = "file2.pptx", Password = c_password, Slides = new List<int?> { 1, 2 } }
                 }
             };
 
-            Stream result = TestUtils.SlidesApi.MergeOnline(new List<FileInfo> { file1, file2 }, request, c_password);
+            Stream result = TestUtils.SlidesApi.MergeOnline(new List<FileInfo> { file1, file2 }, request);
             Assert.IsNotNull(result);
             Assert.IsTrue(result.CanRead);
         }
@@ -117,13 +118,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void MergeOrderedCombined()
         {
-            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)) };
+            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)), Name="file1.pptx" };
             TestUtils.Upload(c_fileName2, c_folderName + "/" + c_fileName2);
 
             OrderedMergeRequest request = new OrderedMergeRequest
             {
                 Presentations = new List<PresentationToMerge>
                 {
+                    new PresentationToMerge { Path = "file1.pptx", Password = c_password },
                     new PresentationToMerge
                     {
                         Slides = new List<int?> { 1, 2 },
@@ -133,7 +135,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 }
             };
 
-            Stream result = TestUtils.SlidesApi.MergeOnline(new List<FileInfo> { file1 }, request, c_password);
+            Stream result = TestUtils.SlidesApi.MergeOnline(new List<FileInfo> { file1 }, request);
             Assert.IsNotNull(result);
             Assert.IsTrue(result.CanRead);
         }

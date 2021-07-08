@@ -50,7 +50,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 if (type == typeof(Stream))
                 {
                     string fileName = "test.pptx";
-                    if (m_methodName.Equals("PostSlidesDocumentFromPdf", StringComparison.OrdinalIgnoreCase))
+                    if (m_methodName.Equals("ImportFromPdf", StringComparison.OrdinalIgnoreCase))
                     {
                         fileName = "test.pdf";
                     }
@@ -64,8 +64,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 {
                     value = new List<FileInfo>
                     {
-                        new FileInfo { Name = "test1.pptx", Content = File.OpenRead(TestUtils.TestDataPath + "\\test.pptx") },
-                        new FileInfo { Name = "test2.pptx", Content = File.OpenRead(TestUtils.TestDataPath + "\\test-unprotected.pptx") }
+                        new FileInfo { Name = "test.pptx", Content = File.OpenRead(TestUtils.TestDataPath + "\\test.pptx") },
+                        new FileInfo { Name = "test-unprotected.pptx", Content = File.OpenRead(TestUtils.TestDataPath + "\\test-unprotected.pptx") }
                     };
                 }
                 else if (value.GetType() != type)

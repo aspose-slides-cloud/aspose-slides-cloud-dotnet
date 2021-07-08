@@ -23,7 +23,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using Aspose.Slides.Cloud.Sdk.Model.Requests;
 #if NETFRAMEWORK
 using System.Configuration;
 #else
