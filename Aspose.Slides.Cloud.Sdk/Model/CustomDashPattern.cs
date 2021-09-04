@@ -42,7 +42,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Pattern items.
         /// </summary>
-        public List<double?> Items { get; set; }
+        public List<double> Items { get; set; }
 
 
         /// <summary>

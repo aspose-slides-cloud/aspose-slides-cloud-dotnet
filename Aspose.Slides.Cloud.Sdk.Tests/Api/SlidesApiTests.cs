@@ -272,7 +272,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -293,7 +293,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -314,7 +314,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -335,7 +335,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -356,7 +356,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -377,7 +377,28 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void ConvertInvallidSlides()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("Convert", "Slides");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -402,7 +423,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -423,7 +444,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -444,7 +465,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -465,7 +486,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -486,7 +507,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -507,7 +528,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -528,7 +549,28 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void ConvertAndSaveInvallidSlides()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("ConvertAndSave", "Slides");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -14605,7 +14647,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -14626,7 +14668,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -14647,7 +14689,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -14668,7 +14710,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -14689,7 +14731,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -14710,7 +14752,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -14731,7 +14773,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -14752,7 +14794,28 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadPresentationInvallidSlides()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadPresentation", "Slides");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadPresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25690,7 +25753,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25711,7 +25774,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25732,7 +25795,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25753,7 +25816,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25774,7 +25837,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25795,7 +25858,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25816,7 +25879,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25837,7 +25900,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25858,7 +25921,28 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SavePresentationInvallidSlides()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SavePresentation", "Slides");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SavePresentation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<ExportOptions>("Options"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
                 needAssertResponse = true;
             }
             catch (Exception ex)

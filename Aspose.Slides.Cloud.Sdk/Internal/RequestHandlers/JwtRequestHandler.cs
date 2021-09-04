@@ -57,8 +57,7 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
 
         public void ProcessResponse(HttpWebResponse response, Stream resultStream)
         {
-            if (response.StatusCode == HttpStatusCode.Unauthorized
-                || (response.StatusCode == HttpStatusCode.InternalServerError && response.ContentLength == 0))
+            if (response.StatusCode == HttpStatusCode.Unauthorized)
             {
                 RequestToken();
                 throw new NeedRepeatRequestException();

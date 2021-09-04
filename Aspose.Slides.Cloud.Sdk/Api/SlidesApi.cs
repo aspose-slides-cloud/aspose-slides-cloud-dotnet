@@ -97,8 +97,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Custom fonts folder.</param> 
+        /// <param name="slides">The indices of the slides to be converted. If not specified, all slides are converted by default.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream Convert(System.IO.Stream document, ExportFormat format, string password = null, string storage = null, string fontsFolder = null)
+        public System.IO.Stream Convert(System.IO.Stream document, ExportFormat format, string password = null, string storage = null, string fontsFolder = null, List<int> slides = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -112,6 +113,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", slides);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             if (document != null) 
@@ -130,8 +132,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Custom fonts folder.</param> 
+        /// <param name="slides">The indices of the slides to be converted. If not specified, all slides are converted by default.</param> 
         /// <returns><see cref=""/></returns>            
-        public void ConvertAndSave(System.IO.Stream document, ExportFormat format, string outPath, string password = null, string storage = null, string fontsFolder = null)
+        public void ConvertAndSave(System.IO.Stream document, ExportFormat format, string outPath, string password = null, string storage = null, string fontsFolder = null, List<int> slides = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -151,6 +154,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", outPath);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", slides);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             if (document != null) 
@@ -3139,8 +3143,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Custom fonts folder.</param> 
+        /// <param name="slides">The indices of the slides to be saved. If not specified, all slides are saved by default.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadPresentation(string name, ExportFormat format, ExportOptions options = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
+        public System.IO.Stream DownloadPresentation(string name, ExportFormat format, ExportOptions options = null, string password = null, string folder = null, string storage = null, string fontsFolder = null, List<int> slides = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -3155,6 +3160,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", slides);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
@@ -5534,8 +5540,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Custom fonts folder.</param> 
+        /// <param name="slides">The indices of the slides to be saved. If not specified, all slides are saved by default.</param> 
         /// <returns><see cref=""/></returns>            
-        public void SavePresentation(string name, ExportFormat format, string outPath, ExportOptions options = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
+        public void SavePresentation(string name, ExportFormat format, string outPath, ExportOptions options = null, string password = null, string folder = null, string storage = null, string fontsFolder = null, List<int> slides = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5556,6 +5563,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", slides);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();

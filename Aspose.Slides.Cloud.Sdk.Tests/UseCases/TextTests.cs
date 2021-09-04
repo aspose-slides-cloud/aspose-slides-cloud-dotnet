@@ -27,6 +27,7 @@ using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 using System.IO;
+using System.Threading;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {

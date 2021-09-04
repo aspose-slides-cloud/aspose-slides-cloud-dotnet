@@ -76,7 +76,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Get or sets the indexes of slides to merge
         /// </summary>
-        public List<int?> Slides { get; set; }
+        public List<int> Slides { get; set; }
 
 
         /// <summary>

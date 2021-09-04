@@ -23,6 +23,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.IO;
 using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
@@ -49,9 +50,13 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream converted = TestUtils.SlidesApi.Convert(file, c_format, c_password);
+            Stream convertedSlides = TestUtils.SlidesApi.Convert(file, c_format, c_password, slides: new List<int> { 2, 4 });
             Assert.IsNotNull(converted);
             Assert.Greater(converted.Length, 0);
+            Assert.Greater(convertedSlides.Length, 0);
+            Assert.Greater(converted.Length, convertedSlides.Length);
             Assert.IsTrue(converted.CanRead);
+            Assert.IsTrue(convertedSlides.CanRead);
         }
 
         [Test]

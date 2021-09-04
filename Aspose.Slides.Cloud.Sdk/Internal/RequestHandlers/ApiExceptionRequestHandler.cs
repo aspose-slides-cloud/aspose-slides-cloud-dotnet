@@ -37,7 +37,7 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
 
         public void ProcessResponse(HttpWebResponse response, Stream resultStream)
         {
-            if (response.StatusCode != HttpStatusCode.OK && response.StatusCode != HttpStatusCode.Created)
+            if (response.StatusCode >= HttpStatusCode.Ambiguous)
             {
                 try
                 {

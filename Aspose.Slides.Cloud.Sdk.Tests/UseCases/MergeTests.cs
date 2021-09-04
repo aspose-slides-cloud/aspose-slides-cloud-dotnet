@@ -67,7 +67,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             {
                 Presentations = new List<PresentationToMerge>
                 {
-                    new PresentationToMerge { Path = c_folderName + "/" + c_fileName2, Slides = new List<int?> { 2, 1 } }
+                    new PresentationToMerge { Path = c_folderName + "/" + c_fileName2, Slides = new List<int> { 2, 1 } }
                 }
             };
             Document result = TestUtils.SlidesApi.OrderedMerge(c_fileName, request, c_password, c_folderName);
@@ -106,7 +106,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Presentations = new List<PresentationToMerge>
                 {
                     new PresentationToMerge { Path = "file1.pptx" },
-                    new PresentationToMerge { Path = "file2.pptx", Password = c_password, Slides = new List<int?> { 1, 2 } }
+                    new PresentationToMerge { Path = "file2.pptx", Password = c_password, Slides = new List<int> { 1, 2 } }
                 }
             };
 
@@ -128,7 +128,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                     new PresentationToMerge { Path = "file1.pptx", Password = c_password },
                     new PresentationToMerge
                     {
-                        Slides = new List<int?> { 1, 2 },
+                        Slides = new List<int> { 1, 2 },
                         Source = PresentationToMerge.SourceEnum.Storage,
                         Path = c_folderName + "/" + c_fileName2
                     }

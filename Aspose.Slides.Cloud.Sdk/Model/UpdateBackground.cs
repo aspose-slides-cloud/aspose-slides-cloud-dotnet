@@ -42,7 +42,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// List of slide indices.
         /// </summary>
-        public List<int?> Slides { get; set; }
+        public List<int> Slides { get; set; }
 
         /// <summary>
         /// Background DTO.
