@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ExportOptions.cs">
+// <copyright company="Aspose" file="SpecialSlideType.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,57 +35,27 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents export options for whole presentation.
-    /// </summary>  
-    public class ExportOptions 
-    {                       
+    /// 
+    /// </summary>
+    /// <value></value>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum SpecialSlideType
+    {
+        
         /// <summary>
-        /// Default regular font for rendering the presentation. 
+        /// Enum MasterSlide for "MasterSlide"
         /// </summary>
-        public string DefaultRegularFont { get; set; }
-
+        MasterSlide,
+        
         /// <summary>
-        /// Gets or sets Format
+        /// Enum LayoutSlide for "LayoutSlide"
         /// </summary>
-        public string Format { get; set; }
-
-
+        LayoutSlide,
+        
         /// <summary>
-        /// Property values to determine the type when deserializing from Json
+        /// Enum NotesSlide for "NotesSlide"
         /// </summary>
-        public static Dictionary<string, object> TypeDeterminers
-        {
-            get
-            {
-                if (s_typeDeterminers == null)
-                {
-                    s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                }
-                return s_typeDeterminers;
-            }
-        }
-
-        private static Dictionary<string, object> s_typeDeterminers;
-        /// <summary>
-        /// Create an instance of the object
-        /// </summary>
-        public ExportOptions() : base()
-        {
-        }
-
-        /// <summary>
-        /// Get the string presentation of the object
-        /// </summary>
-        /// <returns>String presentation of the object</returns>
-        public override string ToString()  
-        {
-            var sb = new StringBuilder();
-            sb.Append("class ExportOptions {\n");
-            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
-            sb.Append("  Format: ").Append(this.Format).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
-        }
+        NotesSlide
     }
 
 }

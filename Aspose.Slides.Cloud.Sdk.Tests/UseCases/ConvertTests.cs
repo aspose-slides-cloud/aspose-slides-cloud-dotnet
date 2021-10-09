@@ -88,7 +88,17 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertWithOptions()
+        public void ConvertWithOptionsFromRequest()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            Stream converted = TestUtils.SlidesApi.Convert(file, c_format, password: c_password);
+            ExportOptions options = new PdfExportOptions { DrawSlidesFrame = true };
+            Stream convertedWithOptions = TestUtils.SlidesApi.Convert(file, c_format, c_password, options: options);
+            Assert.AreNotEqual(converted.Length, convertedWithOptions.Length);
+        }
+
+        [Test]
+        public void ConvertWithOptionsFromStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Stream converted = TestUtils.SlidesApi.DownloadPresentation(c_fileName, c_format, password: c_password, folder: c_folderName);
@@ -137,7 +147,18 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertSlideWithOptions()
+        public void ConvertSlideWithOptionsFromRequest()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            Stream converted = TestUtils.SlidesApi.DownloadSlideOnline(file, c_slideIndex, c_slideFormat, password: c_password);
+            ExportOptions options = new PdfExportOptions { DrawSlidesFrame = true };
+            Stream convertedWithOptions = TestUtils.SlidesApi.DownloadSlideOnline(
+                file, c_slideIndex, c_slideFormat, password: c_password, options: options);
+            Assert.AreNotEqual(converted.Length, convertedWithOptions.Length);
+        }
+
+        [Test]
+        public void ConvertSlideWithOptionsFromStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Stream converted = TestUtils.SlidesApi.DownloadSlide(

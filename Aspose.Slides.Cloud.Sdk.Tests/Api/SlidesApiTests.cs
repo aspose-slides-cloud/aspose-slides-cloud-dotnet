@@ -262,6 +262,220 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test AlignSpecialSlideShapes
+        /// </summary>
+        [Test]
+        public void AlignSpecialSlideShapes()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSpecialSlideShapes", null);
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSpecialSlideShapesInvallidName()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSpecialSlideShapes", "Name");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSpecialSlideShapesInvallidSlideIndex()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSpecialSlideShapes", "SlideIndex");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSpecialSlideShapesInvallidSlideType()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSpecialSlideShapes", "SlideType");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSpecialSlideShapesInvallidAlignmentType()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSpecialSlideShapes", "AlignmentType");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSpecialSlideShapesInvallidAlignToSlide()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSpecialSlideShapes", "AlignToSlide");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSpecialSlideShapesInvallidShapes()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSpecialSlideShapes", "Shapes");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSpecialSlideShapesInvallidPassword()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSpecialSlideShapes", "Password");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSpecialSlideShapesInvallidFolder()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSpecialSlideShapes", "Folder");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSpecialSlideShapesInvallidStorage()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSpecialSlideShapes", "Storage");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test Convert
         /// </summary>
         [Test]
@@ -272,7 +486,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -293,7 +507,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -314,7 +528,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -335,7 +549,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -356,7 +570,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -377,7 +591,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -398,7 +612,28 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void ConvertInvallidOptions()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("Convert", "Options");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.Convert(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -423,7 +658,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -444,7 +679,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -465,7 +700,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -486,7 +721,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -507,7 +742,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -528,7 +763,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -549,7 +784,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -570,7 +805,28 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"));
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void ConvertAndSaveInvallidOptions()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("ConvertAndSave", "Options");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.ConvertAndSave(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<ExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -3194,606 +3450,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
-        /// Test CreateNotesSlideParagraph
-        /// </summary>
-        [Test]
-        public void CreateNotesSlideParagraph()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateNotesSlideParagraph", null);
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideParagraphInvallidName()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateNotesSlideParagraph", "Name");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideParagraphInvallidSlideIndex()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateNotesSlideParagraph", "SlideIndex");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideParagraphInvallidShapeIndex()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateNotesSlideParagraph", "ShapeIndex");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideParagraphInvallidDto()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateNotesSlideParagraph", "Dto");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideParagraphInvallidPosition()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateNotesSlideParagraph", "Position");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideParagraphInvallidPassword()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateNotesSlideParagraph", "Password");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideParagraphInvallidFolder()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateNotesSlideParagraph", "Folder");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideParagraphInvallidStorage()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateNotesSlideParagraph", "Storage");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test CreateNotesSlidePortion
-        /// </summary>
-        [Test]
-        public void CreateNotesSlidePortion()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateNotesSlidePortion", null);
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlidePortionInvallidName()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateNotesSlidePortion", "Name");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlidePortionInvallidSlideIndex()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateNotesSlidePortion", "SlideIndex");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlidePortionInvallidShapeIndex()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateNotesSlidePortion", "ShapeIndex");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlidePortionInvallidParagraphIndex()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateNotesSlidePortion", "ParagraphIndex");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlidePortionInvallidDto()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateNotesSlidePortion", "Dto");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlidePortionInvallidPosition()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateNotesSlidePortion", "Position");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlidePortionInvallidPassword()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateNotesSlidePortion", "Password");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlidePortionInvallidFolder()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateNotesSlidePortion", "Folder");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlidePortionInvallidStorage()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateNotesSlidePortion", "Storage");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test CreateNotesSlideShape
-        /// </summary>
-        [Test]
-        public void CreateNotesSlideShape()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateNotesSlideShape", null);
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideShapeInvallidName()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateNotesSlideShape", "Name");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideShapeInvallidSlideIndex()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateNotesSlideShape", "SlideIndex");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideShapeInvallidDto()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateNotesSlideShape", "Dto");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideShapeInvallidShapeToClone()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateNotesSlideShape", "ShapeToClone");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideShapeInvallidPosition()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateNotesSlideShape", "Position");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideShapeInvallidPassword()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateNotesSlideShape", "Password");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideShapeInvallidFolder()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateNotesSlideShape", "Folder");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void CreateNotesSlideShapeInvallidStorage()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateNotesSlideShape", "Storage");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.CreateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
         /// Test CreateParagraph
         /// </summary>
         [Test]
@@ -5219,6 +4875,1932 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.CreateSlide(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<string>("LayoutAlias"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test CreateSpecialSlideAnimationEffect
+        /// </summary>
+        [Test]
+        public void CreateSpecialSlideAnimationEffect()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationEffect", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationEffectInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationEffect", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationEffectInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationEffect", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationEffectInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationEffect", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationEffectInvallidEffect()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationEffect", "Effect");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationEffectInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationEffect", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationEffectInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationEffect", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationEffectInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationEffect", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test CreateSpecialSlideAnimationInteractiveSequence
+        /// </summary>
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequence()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequence", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<InteractiveSequence>("Sequence"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequence", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<InteractiveSequence>("Sequence"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequence", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<InteractiveSequence>("Sequence"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequence", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<InteractiveSequence>("Sequence"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceInvallidSequence()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequence", "Sequence");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<InteractiveSequence>("Sequence"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequence", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<InteractiveSequence>("Sequence"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequence", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<InteractiveSequence>("Sequence"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequence", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<InteractiveSequence>("Sequence"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test CreateSpecialSlideAnimationInteractiveSequenceEffect
+        /// </summary>
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceEffect()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequenceEffect", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceEffectInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequenceEffect", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceEffectInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequenceEffect", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceEffectInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequenceEffect", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceEffectInvallidSequenceIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequenceEffect", "SequenceIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceEffectInvallidEffect()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequenceEffect", "Effect");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceEffectInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequenceEffect", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceEffectInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequenceEffect", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideAnimationInteractiveSequenceEffectInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("CreateSpecialSlideAnimationInteractiveSequenceEffect", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test CreateSpecialSlideParagraph
+        /// </summary>
+        [Test]
+        public void CreateSpecialSlideParagraph()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideParagraph", null);
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideParagraphInvallidName()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideParagraph", "Name");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideParagraphInvallidSlideIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideParagraph", "SlideIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideParagraphInvallidSlideType()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideParagraph", "SlideType");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideParagraphInvallidShapeIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideParagraph", "ShapeIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideParagraphInvallidDto()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideParagraph", "Dto");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideParagraphInvallidPosition()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideParagraph", "Position");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideParagraphInvallidPassword()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideParagraph", "Password");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideParagraphInvallidFolder()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideParagraph", "Folder");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideParagraphInvallidStorage()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideParagraph", "Storage");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test CreateSpecialSlidePortion
+        /// </summary>
+        [Test]
+        public void CreateSpecialSlidePortion()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlidePortion", null);
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlidePortionInvallidName()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlidePortion", "Name");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlidePortionInvallidSlideIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlidePortion", "SlideIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlidePortionInvallidSlideType()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlidePortion", "SlideType");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlidePortionInvallidShapeIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlidePortion", "ShapeIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlidePortionInvallidParagraphIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlidePortion", "ParagraphIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlidePortionInvallidDto()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlidePortion", "Dto");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlidePortionInvallidPosition()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlidePortion", "Position");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlidePortionInvallidPassword()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlidePortion", "Password");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlidePortionInvallidFolder()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlidePortion", "Folder");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlidePortionInvallidStorage()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlidePortion", "Storage");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test CreateSpecialSlideShape
+        /// </summary>
+        [Test]
+        public void CreateSpecialSlideShape()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideShape", null);
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideShapeInvallidName()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideShape", "Name");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideShapeInvallidSlideIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideShape", "SlideIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideShapeInvallidSlideType()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideShape", "SlideType");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideShapeInvallidDto()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideShape", "Dto");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideShapeInvallidShapeToClone()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideShape", "ShapeToClone");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideShapeInvallidPosition()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideShape", "Position");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideShapeInvallidPassword()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideShape", "Password");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideShapeInvallidFolder()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideShape", "Folder");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideShapeInvallidStorage()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideShape", "Storage");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test CreateSpecialSlideSubshape
+        /// </summary>
+        [Test]
+        public void CreateSpecialSlideSubshape()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideSubshape", null);
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeInvallidName()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideSubshape", "Name");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeInvallidSlideIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideSubshape", "SlideIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeInvallidSlideType()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideSubshape", "SlideType");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeInvallidPath()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideSubshape", "Path");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeInvallidDto()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideSubshape", "Dto");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeInvallidShapeToClone()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideSubshape", "ShapeToClone");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeInvallidPosition()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideSubshape", "Position");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeInvallidPassword()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideSubshape", "Password");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeInvallidFolder()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideSubshape", "Folder");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeInvallidStorage()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("CreateSpecialSlideSubshape", "Storage");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<int?>("ShapeToClone"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test CreateSpecialSlideSubshapeParagraph
+        /// </summary>
+        [Test]
+        public void CreateSpecialSlideSubshapeParagraph()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideSubshapeParagraph", null);
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeParagraphInvallidName()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideSubshapeParagraph", "Name");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeParagraphInvallidSlideIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideSubshapeParagraph", "SlideIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeParagraphInvallidSlideType()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideSubshapeParagraph", "SlideType");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeParagraphInvallidPath()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideSubshapeParagraph", "Path");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeParagraphInvallidShapeIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideSubshapeParagraph", "ShapeIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeParagraphInvallidDto()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideSubshapeParagraph", "Dto");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeParagraphInvallidPosition()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideSubshapeParagraph", "Position");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeParagraphInvallidPassword()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideSubshapeParagraph", "Password");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeParagraphInvallidFolder()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideSubshapeParagraph", "Folder");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapeParagraphInvallidStorage()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("CreateSpecialSlideSubshapeParagraph", "Storage");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test CreateSpecialSlideSubshapePortion
+        /// </summary>
+        [Test]
+        public void CreateSpecialSlideSubshapePortion()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", null);
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapePortionInvallidName()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", "Name");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapePortionInvallidSlideIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", "SlideIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapePortionInvallidSlideType()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", "SlideType");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapePortionInvallidPath()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", "Path");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapePortionInvallidShapeIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", "ShapeIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapePortionInvallidParagraphIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", "ParagraphIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapePortionInvallidDto()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", "Dto");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapePortionInvallidPosition()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", "Position");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapePortionInvallidPassword()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", "Password");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapePortionInvallidFolder()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", "Folder");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void CreateSpecialSlideSubshapePortionInvallidStorage()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("CreateSpecialSlideSubshapePortion", "Storage");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.CreateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<int?>("Position"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -8576,1038 +10158,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
-        /// Test DeleteNotesSlideParagraph
-        /// </summary>
-        [Test]
-        public void DeleteNotesSlideParagraph()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraph", null);
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphInvallidName()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraph", "Name");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphInvallidSlideIndex()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraph", "SlideIndex");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphInvallidShapeIndex()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraph", "ShapeIndex");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphInvallidParagraphIndex()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraph", "ParagraphIndex");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphInvallidPassword()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraph", "Password");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphInvallidFolder()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraph", "Folder");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphInvallidStorage()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraph", "Storage");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test DeleteNotesSlideParagraphs
-        /// </summary>
-        [Test]
-        public void DeleteNotesSlideParagraphs()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraphs", null);
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphsInvallidName()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraphs", "Name");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphsInvallidSlideIndex()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraphs", "SlideIndex");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphsInvallidShapeIndex()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraphs", "ShapeIndex");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphsInvallidParagraphs()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraphs", "Paragraphs");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphsInvallidPassword()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraphs", "Password");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphsInvallidFolder()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraphs", "Folder");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideParagraphsInvallidStorage()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteNotesSlideParagraphs", "Storage");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test DeleteNotesSlidePortion
-        /// </summary>
-        [Test]
-        public void DeleteNotesSlidePortion()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortion", null);
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionInvallidName()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortion", "Name");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionInvallidSlideIndex()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortion", "SlideIndex");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionInvallidShapeIndex()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortion", "ShapeIndex");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionInvallidParagraphIndex()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortion", "ParagraphIndex");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionInvallidPortionIndex()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortion", "PortionIndex");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionInvallidPassword()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortion", "Password");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionInvallidFolder()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortion", "Folder");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionInvallidStorage()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortion", "Storage");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test DeleteNotesSlidePortions
-        /// </summary>
-        [Test]
-        public void DeleteNotesSlidePortions()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortions", null);
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionsInvallidName()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortions", "Name");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionsInvallidSlideIndex()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortions", "SlideIndex");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionsInvallidShapeIndex()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortions", "ShapeIndex");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionsInvallidParagraphIndex()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortions", "ParagraphIndex");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionsInvallidPortions()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortions", "Portions");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionsInvallidPassword()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortions", "Password");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionsInvallidFolder()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortions", "Folder");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlidePortionsInvallidStorage()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteNotesSlidePortions", "Storage");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test DeleteNotesSlideShape
-        /// </summary>
-        [Test]
-        public void DeleteNotesSlideShape()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShape", null);
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapeInvallidName()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShape", "Name");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapeInvallidSlideIndex()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShape", "SlideIndex");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapeInvallidShapeIndex()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShape", "ShapeIndex");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapeInvallidPassword()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShape", "Password");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapeInvallidFolder()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShape", "Folder");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapeInvallidStorage()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShape", "Storage");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test DeleteNotesSlideShapes
-        /// </summary>
-        [Test]
-        public void DeleteNotesSlideShapes()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShapes", null);
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapesInvallidName()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShapes", "Name");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapesInvallidSlideIndex()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShapes", "SlideIndex");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapesInvallidShapes()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShapes", "Shapes");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapesInvallidPassword()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShapes", "Password");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapesInvallidFolder()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShapes", "Folder");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DeleteNotesSlideShapesInvallidStorage()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteNotesSlideShapes", "Storage");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DeleteNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
         /// Test DeleteParagraph
         /// </summary>
         [Test]
@@ -11624,6 +12174,3438 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.DeleteSlides(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<List<int>>("Slides"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideAnimation
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideAnimation()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimation", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimation", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimation", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimation", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimation", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimation", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimation", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideAnimationEffect
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideAnimationEffect()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationEffect", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationEffectInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationEffect", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationEffectInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationEffect", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationEffectInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationEffect", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationEffectInvallidEffectIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationEffect", "EffectIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationEffectInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationEffect", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationEffectInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationEffect", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationEffectInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationEffect", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideAnimationInteractiveSequence
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequence()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequence", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequence", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequence", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequence", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceInvallidSequenceIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequence", "SequenceIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequence", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequence", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequence", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideAnimationInteractiveSequenceEffect
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceEffect()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequenceEffect", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceEffectInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequenceEffect", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceEffectInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequenceEffect", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceEffectInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequenceEffect", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceEffectInvallidSequenceIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequenceEffect", "SequenceIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceEffectInvallidEffectIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequenceEffect", "EffectIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceEffectInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequenceEffect", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceEffectInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequenceEffect", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequenceEffectInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequenceEffect", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideAnimationInteractiveSequences
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequences()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequences", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequences(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequencesInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequences", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequences(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequencesInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequences", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequences(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequencesInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequences", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequences(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequencesInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequences", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequences(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequencesInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequences", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequences(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationInteractiveSequencesInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationInteractiveSequences", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationInteractiveSequences(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideAnimationMainSequence
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideAnimationMainSequence()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationMainSequence", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationMainSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationMainSequenceInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationMainSequence", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationMainSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationMainSequenceInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationMainSequence", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationMainSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationMainSequenceInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationMainSequence", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationMainSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationMainSequenceInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationMainSequence", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationMainSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationMainSequenceInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationMainSequence", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationMainSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideAnimationMainSequenceInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("DeleteSpecialSlideAnimationMainSequence", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideAnimationMainSequence(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideParagraph
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideParagraph()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraph", null);
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphInvallidName()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraph", "Name");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphInvallidSlideIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraph", "SlideIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphInvallidSlideType()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraph", "SlideType");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphInvallidShapeIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraph", "ShapeIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphInvallidParagraphIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraph", "ParagraphIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphInvallidPassword()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraph", "Password");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphInvallidFolder()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraph", "Folder");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphInvallidStorage()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraph", "Storage");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideParagraphs
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideParagraphs()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraphs", null);
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphsInvallidName()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraphs", "Name");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphsInvallidSlideIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraphs", "SlideIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphsInvallidSlideType()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraphs", "SlideType");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphsInvallidShapeIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraphs", "ShapeIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphsInvallidParagraphs()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraphs", "Paragraphs");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphsInvallidPassword()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraphs", "Password");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphsInvallidFolder()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraphs", "Folder");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideParagraphsInvallidStorage()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideParagraphs", "Storage");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlidePortion
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlidePortion()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortion", null);
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionInvallidName()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortion", "Name");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionInvallidSlideIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortion", "SlideIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionInvallidSlideType()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortion", "SlideType");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionInvallidShapeIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortion", "ShapeIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionInvallidParagraphIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortion", "ParagraphIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionInvallidPortionIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortion", "PortionIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionInvallidPassword()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortion", "Password");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionInvallidFolder()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortion", "Folder");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionInvallidStorage()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortion", "Storage");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlidePortions
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlidePortions()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortions", null);
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionsInvallidName()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortions", "Name");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionsInvallidSlideIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortions", "SlideIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionsInvallidSlideType()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortions", "SlideType");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionsInvallidShapeIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortions", "ShapeIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionsInvallidParagraphIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortions", "ParagraphIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionsInvallidPortions()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortions", "Portions");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionsInvallidPassword()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortions", "Password");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionsInvallidFolder()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortions", "Folder");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlidePortionsInvallidStorage()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlidePortions", "Storage");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideShape
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideShape()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShape", null);
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapeInvallidName()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShape", "Name");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapeInvallidSlideIndex()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShape", "SlideIndex");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapeInvallidSlideType()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShape", "SlideType");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapeInvallidShapeIndex()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShape", "ShapeIndex");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapeInvallidPassword()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShape", "Password");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapeInvallidFolder()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShape", "Folder");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapeInvallidStorage()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShape", "Storage");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideShapes
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideShapes()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShapes", null);
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapesInvallidName()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShapes", "Name");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapesInvallidSlideIndex()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShapes", "SlideIndex");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapesInvallidSlideType()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShapes", "SlideType");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapesInvallidShapes()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShapes", "Shapes");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapesInvallidPassword()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShapes", "Password");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapesInvallidFolder()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShapes", "Folder");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideShapesInvallidStorage()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideShapes", "Storage");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideSubshape
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideSubshape()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshape", null);
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeInvallidName()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshape", "Name");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeInvallidSlideIndex()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshape", "SlideIndex");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeInvallidSlideType()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshape", "SlideType");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeInvallidPath()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshape", "Path");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeInvallidShapeIndex()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshape", "ShapeIndex");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeInvallidPassword()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshape", "Password");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeInvallidFolder()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshape", "Folder");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeInvallidStorage()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshape", "Storage");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideSubshapeParagraph
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraph()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraph", null);
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphInvallidName()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraph", "Name");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphInvallidSlideIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraph", "SlideIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphInvallidSlideType()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraph", "SlideType");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphInvallidPath()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraph", "Path");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphInvallidShapeIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraph", "ShapeIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphInvallidParagraphIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraph", "ParagraphIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphInvallidPassword()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraph", "Password");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphInvallidFolder()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraph", "Folder");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphInvallidStorage()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraph", "Storage");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideSubshapeParagraphs
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphs()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraphs", null);
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphsInvallidName()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraphs", "Name");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphsInvallidSlideIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraphs", "SlideIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphsInvallidSlideType()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraphs", "SlideType");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphsInvallidPath()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraphs", "Path");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphsInvallidShapeIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraphs", "ShapeIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphsInvallidParagraphs()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraphs", "Paragraphs");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphsInvallidPassword()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraphs", "Password");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphsInvallidFolder()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraphs", "Folder");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapeParagraphsInvallidStorage()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("DeleteSpecialSlideSubshapeParagraphs", "Storage");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<List<int>>("Paragraphs"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideSubshapePortion
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideSubshapePortion()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortion", null);
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionInvallidName()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortion", "Name");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionInvallidSlideIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortion", "SlideIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionInvallidSlideType()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortion", "SlideType");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionInvallidPath()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortion", "Path");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionInvallidShapeIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortion", "ShapeIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionInvallidParagraphIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortion", "ParagraphIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionInvallidPortionIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortion", "PortionIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionInvallidPassword()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortion", "Password");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionInvallidFolder()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortion", "Folder");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionInvallidStorage()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortion", "Storage");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideSubshapePortions
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideSubshapePortions()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortions", null);
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionsInvallidName()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortions", "Name");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionsInvallidSlideIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortions", "SlideIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionsInvallidSlideType()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortions", "SlideType");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionsInvallidPath()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortions", "Path");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionsInvallidShapeIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortions", "ShapeIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionsInvallidParagraphIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortions", "ParagraphIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionsInvallidPortions()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortions", "Portions");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionsInvallidPassword()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortions", "Password");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionsInvallidFolder()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortions", "Folder");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapePortionsInvallidStorage()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("DeleteSpecialSlideSubshapePortions", "Storage");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<List<int>>("Portions"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteSpecialSlideSubshapes
+        /// </summary>
+        [Test]
+        public void DeleteSpecialSlideSubshapes()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshapes", null);
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapesInvallidName()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshapes", "Name");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapesInvallidSlideIndex()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshapes", "SlideIndex");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapesInvallidSlideType()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshapes", "SlideType");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapesInvallidPath()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshapes", "Path");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapesInvallidShapes()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshapes", "Shapes");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapesInvallidPassword()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshapes", "Password");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapesInvallidFolder()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshapes", "Folder");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteSpecialSlideSubshapesInvallidStorage()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("DeleteSpecialSlideSubshapes", "Storage");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -14360,283 +18342,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
-        /// Test DownloadNotesSlideShape
-        /// </summary>
-        [Test]
-        public void DownloadNotesSlideShape()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", null);
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidName()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "Name");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidSlideIndex()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "SlideIndex");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidShapeIndex()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "ShapeIndex");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidFormat()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "Format");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidOptions()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "Options");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidScaleX()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "ScaleX");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidScaleY()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "ScaleY");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidBounds()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "Bounds");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidPassword()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "Password");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidFolder()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "Folder");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidStorage()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "Storage");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void DownloadNotesSlideShapeInvallidFontsFolder()
-        {
-            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadNotesSlideShape", "FontsFolder");
-            System.IO.Stream response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.DownloadNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
         /// Test DownloadPresentation
         /// </summary>
         [Test]
@@ -15117,7 +18822,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15138,7 +18843,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15159,7 +18864,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15180,7 +18885,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15201,7 +18906,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15222,7 +18927,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15243,7 +18948,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15264,7 +18969,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15285,7 +18990,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15306,7 +19011,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15327,7 +19032,28 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadShapeOnlineInvallidOptions()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadShapeOnline", "Options");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15587,7 +19313,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15608,7 +19334,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15629,7 +19355,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15650,7 +19376,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15671,7 +19397,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15692,7 +19418,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15713,7 +19439,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15734,7 +19460,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -15755,7 +19481,645 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSlideOnlineInvallidOptions()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSlideOnline", "Options");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DownloadSpecialSlideShape
+        /// </summary>
+        [Test]
+        public void DownloadSpecialSlideShape()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", null);
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidName()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "Name");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidSlideIndex()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "SlideIndex");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidSlideType()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "SlideType");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidShapeIndex()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "ShapeIndex");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidFormat()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "Format");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidOptions()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "Options");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidScaleX()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "ScaleX");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidScaleY()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "ScaleY");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidBounds()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "Bounds");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidPassword()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "Password");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidFolder()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "Folder");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidStorage()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "Storage");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideShapeInvallidFontsFolder()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideShape", "FontsFolder");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DownloadSpecialSlideSubshape
+        /// </summary>
+        [Test]
+        public void DownloadSpecialSlideSubshape()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", null);
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidName()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "Name");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidSlideIndex()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "SlideIndex");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidSlideType()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "SlideType");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidPath()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "Path");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidShapeIndex()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "ShapeIndex");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidFormat()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "Format");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidOptions()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "Options");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidScaleX()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "ScaleX");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidScaleY()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "ScaleY");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidBounds()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "Bounds");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidPassword()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "Password");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidFolder()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "Folder");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidStorage()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "Storage");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadSpecialSlideSubshapeInvallidFontsFolder()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadSpecialSlideSubshape", "FontsFolder");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -17995,975 +22359,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.GetNotesSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Password"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test GetNotesSlideParagraph
-        /// </summary>
-        [Test]
-        public void GetNotesSlideParagraph()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetNotesSlideParagraph", null);
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphInvallidName()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetNotesSlideParagraph", "Name");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphInvallidSlideIndex()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetNotesSlideParagraph", "SlideIndex");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphInvallidShapeIndex()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetNotesSlideParagraph", "ShapeIndex");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphInvallidParagraphIndex()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetNotesSlideParagraph", "ParagraphIndex");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphInvallidPassword()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetNotesSlideParagraph", "Password");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphInvallidFolder()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetNotesSlideParagraph", "Folder");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphInvallidStorage()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetNotesSlideParagraph", "Storage");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test GetNotesSlideParagraphs
-        /// </summary>
-        [Test]
-        public void GetNotesSlideParagraphs()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetNotesSlideParagraphs", null);
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphsInvallidName()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetNotesSlideParagraphs", "Name");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphsInvallidSlideIndex()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetNotesSlideParagraphs", "SlideIndex");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphsInvallidShapeIndex()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetNotesSlideParagraphs", "ShapeIndex");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphsInvallidPassword()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetNotesSlideParagraphs", "Password");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphsInvallidFolder()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetNotesSlideParagraphs", "Folder");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideParagraphsInvallidStorage()
-        {
-            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetNotesSlideParagraphs", "Storage");
-            Paragraphs response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test GetNotesSlidePortion
-        /// </summary>
-        [Test]
-        public void GetNotesSlidePortion()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetNotesSlidePortion", null);
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionInvallidName()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetNotesSlidePortion", "Name");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionInvallidSlideIndex()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetNotesSlidePortion", "SlideIndex");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionInvallidShapeIndex()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetNotesSlidePortion", "ShapeIndex");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionInvallidParagraphIndex()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetNotesSlidePortion", "ParagraphIndex");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionInvallidPortionIndex()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetNotesSlidePortion", "PortionIndex");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionInvallidPassword()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetNotesSlidePortion", "Password");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionInvallidFolder()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetNotesSlidePortion", "Folder");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionInvallidStorage()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetNotesSlidePortion", "Storage");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test GetNotesSlidePortions
-        /// </summary>
-        [Test]
-        public void GetNotesSlidePortions()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetNotesSlidePortions", null);
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionsInvallidName()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetNotesSlidePortions", "Name");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionsInvallidSlideIndex()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetNotesSlidePortions", "SlideIndex");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionsInvallidShapeIndex()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetNotesSlidePortions", "ShapeIndex");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionsInvallidParagraphIndex()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetNotesSlidePortions", "ParagraphIndex");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionsInvallidPassword()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetNotesSlidePortions", "Password");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionsInvallidFolder()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetNotesSlidePortions", "Folder");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlidePortionsInvallidStorage()
-        {
-            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetNotesSlidePortions", "Storage");
-            Portions response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test GetNotesSlideShape
-        /// </summary>
-        [Test]
-        public void GetNotesSlideShape()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetNotesSlideShape", null);
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideShapeInvallidName()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetNotesSlideShape", "Name");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideShapeInvallidSlideIndex()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetNotesSlideShape", "SlideIndex");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideShapeInvallidShapeIndex()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetNotesSlideShape", "ShapeIndex");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideShapeInvallidPassword()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetNotesSlideShape", "Password");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideShapeInvallidFolder()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetNotesSlideShape", "Folder");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideShapeInvallidStorage()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetNotesSlideShape", "Storage");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test GetNotesSlideShapes
-        /// </summary>
-        [Test]
-        public void GetNotesSlideShapes()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetNotesSlideShapes", null);
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideShapesInvallidName()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetNotesSlideShapes", "Name");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideShapesInvallidSlideIndex()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetNotesSlideShapes", "SlideIndex");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideShapesInvallidPassword()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetNotesSlideShapes", "Password");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideShapesInvallidFolder()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetNotesSlideShapes", "Folder");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void GetNotesSlideShapesInvallidStorage()
-        {
-            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetNotesSlideShapes", "Storage");
-            Shapes response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.GetNotesSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -21669,6 +25064,2494 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.GetSlides(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlideAnimation
+        /// </summary>
+        [Test]
+        public void GetSpecialSlideAnimation()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("GetSpecialSlideAnimation", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideAnimationInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("GetSpecialSlideAnimation", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideAnimationInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("GetSpecialSlideAnimation", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideAnimationInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("GetSpecialSlideAnimation", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideAnimationInvallidShapeIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("GetSpecialSlideAnimation", "ShapeIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideAnimationInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("GetSpecialSlideAnimation", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideAnimationInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("GetSpecialSlideAnimation", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideAnimationInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("GetSpecialSlideAnimation", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlideParagraph
+        /// </summary>
+        [Test]
+        public void GetSpecialSlideParagraph()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideParagraph", null);
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphInvallidName()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideParagraph", "Name");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphInvallidSlideIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideParagraph", "SlideIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphInvallidSlideType()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideParagraph", "SlideType");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphInvallidShapeIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideParagraph", "ShapeIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphInvallidParagraphIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideParagraph", "ParagraphIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphInvallidPassword()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideParagraph", "Password");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphInvallidFolder()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideParagraph", "Folder");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphInvallidStorage()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideParagraph", "Storage");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlideParagraphs
+        /// </summary>
+        [Test]
+        public void GetSpecialSlideParagraphs()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideParagraphs", null);
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphsInvallidName()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideParagraphs", "Name");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphsInvallidSlideIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideParagraphs", "SlideIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphsInvallidSlideType()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideParagraphs", "SlideType");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphsInvallidShapeIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideParagraphs", "ShapeIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphsInvallidPassword()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideParagraphs", "Password");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphsInvallidFolder()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideParagraphs", "Folder");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideParagraphsInvallidStorage()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideParagraphs", "Storage");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlidePortion
+        /// </summary>
+        [Test]
+        public void GetSpecialSlidePortion()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlidePortion", null);
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionInvallidName()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlidePortion", "Name");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionInvallidSlideIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlidePortion", "SlideIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionInvallidSlideType()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlidePortion", "SlideType");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionInvallidShapeIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlidePortion", "ShapeIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionInvallidParagraphIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlidePortion", "ParagraphIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionInvallidPortionIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlidePortion", "PortionIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionInvallidPassword()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlidePortion", "Password");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionInvallidFolder()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlidePortion", "Folder");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionInvallidStorage()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlidePortion", "Storage");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlidePortions
+        /// </summary>
+        [Test]
+        public void GetSpecialSlidePortions()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlidePortions", null);
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionsInvallidName()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlidePortions", "Name");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionsInvallidSlideIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlidePortions", "SlideIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionsInvallidSlideType()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlidePortions", "SlideType");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionsInvallidShapeIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlidePortions", "ShapeIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionsInvallidParagraphIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlidePortions", "ParagraphIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionsInvallidPassword()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlidePortions", "Password");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionsInvallidFolder()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlidePortions", "Folder");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlidePortionsInvallidStorage()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlidePortions", "Storage");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlidePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlideShape
+        /// </summary>
+        [Test]
+        public void GetSpecialSlideShape()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideShape", null);
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapeInvallidName()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideShape", "Name");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapeInvallidSlideIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideShape", "SlideIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapeInvallidSlideType()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideShape", "SlideType");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapeInvallidShapeIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideShape", "ShapeIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapeInvallidPassword()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideShape", "Password");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapeInvallidFolder()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideShape", "Folder");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapeInvallidStorage()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideShape", "Storage");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlideShapes
+        /// </summary>
+        [Test]
+        public void GetSpecialSlideShapes()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideShapes", null);
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapesInvallidName()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideShapes", "Name");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapesInvallidSlideIndex()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideShapes", "SlideIndex");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapesInvallidSlideType()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideShapes", "SlideType");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapesInvallidPassword()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideShapes", "Password");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapesInvallidFolder()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideShapes", "Folder");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideShapesInvallidStorage()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideShapes", "Storage");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideShapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlideSubshape
+        /// </summary>
+        [Test]
+        public void GetSpecialSlideSubshape()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideSubshape", null);
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeInvallidName()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideSubshape", "Name");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeInvallidSlideIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideSubshape", "SlideIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeInvallidSlideType()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideSubshape", "SlideType");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeInvallidPath()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideSubshape", "Path");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeInvallidShapeIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideSubshape", "ShapeIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeInvallidPassword()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideSubshape", "Password");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeInvallidFolder()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideSubshape", "Folder");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeInvallidStorage()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("GetSpecialSlideSubshape", "Storage");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlideSubshapeParagraph
+        /// </summary>
+        [Test]
+        public void GetSpecialSlideSubshapeParagraph()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideSubshapeParagraph", null);
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphInvallidName()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideSubshapeParagraph", "Name");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphInvallidSlideIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideSubshapeParagraph", "SlideIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphInvallidSlideType()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideSubshapeParagraph", "SlideType");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphInvallidPath()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideSubshapeParagraph", "Path");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphInvallidShapeIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideSubshapeParagraph", "ShapeIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphInvallidParagraphIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideSubshapeParagraph", "ParagraphIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphInvallidPassword()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideSubshapeParagraph", "Password");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphInvallidFolder()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideSubshapeParagraph", "Folder");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphInvallidStorage()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("GetSpecialSlideSubshapeParagraph", "Storage");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlideSubshapeParagraphs
+        /// </summary>
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphs()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideSubshapeParagraphs", null);
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphsInvallidName()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideSubshapeParagraphs", "Name");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphsInvallidSlideIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideSubshapeParagraphs", "SlideIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphsInvallidSlideType()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideSubshapeParagraphs", "SlideType");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphsInvallidPath()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideSubshapeParagraphs", "Path");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphsInvallidShapeIndex()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideSubshapeParagraphs", "ShapeIndex");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphsInvallidPassword()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideSubshapeParagraphs", "Password");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphsInvallidFolder()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideSubshapeParagraphs", "Folder");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapeParagraphsInvallidStorage()
+        {
+            TestExecutor<Paragraphs> testExecutor = new TestExecutor<Paragraphs>("GetSpecialSlideSubshapeParagraphs", "Storage");
+            Paragraphs response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapeParagraphs(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlideSubshapePortion
+        /// </summary>
+        [Test]
+        public void GetSpecialSlideSubshapePortion()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlideSubshapePortion", null);
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionInvallidName()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlideSubshapePortion", "Name");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionInvallidSlideIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlideSubshapePortion", "SlideIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionInvallidSlideType()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlideSubshapePortion", "SlideType");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionInvallidPath()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlideSubshapePortion", "Path");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionInvallidShapeIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlideSubshapePortion", "ShapeIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionInvallidParagraphIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlideSubshapePortion", "ParagraphIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionInvallidPortionIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlideSubshapePortion", "PortionIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionInvallidPassword()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlideSubshapePortion", "Password");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionInvallidFolder()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlideSubshapePortion", "Folder");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionInvallidStorage()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("GetSpecialSlideSubshapePortion", "Storage");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlideSubshapePortions
+        /// </summary>
+        [Test]
+        public void GetSpecialSlideSubshapePortions()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlideSubshapePortions", null);
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionsInvallidName()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlideSubshapePortions", "Name");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionsInvallidSlideIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlideSubshapePortions", "SlideIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionsInvallidSlideType()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlideSubshapePortions", "SlideType");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionsInvallidPath()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlideSubshapePortions", "Path");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionsInvallidShapeIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlideSubshapePortions", "ShapeIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionsInvallidParagraphIndex()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlideSubshapePortions", "ParagraphIndex");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionsInvallidPassword()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlideSubshapePortions", "Password");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionsInvallidFolder()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlideSubshapePortions", "Folder");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapePortionsInvallidStorage()
+        {
+            TestExecutor<Portions> testExecutor = new TestExecutor<Portions>("GetSpecialSlideSubshapePortions", "Storage");
+            Portions response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapePortions(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetSpecialSlideSubshapes
+        /// </summary>
+        [Test]
+        public void GetSpecialSlideSubshapes()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideSubshapes", null);
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapesInvallidName()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideSubshapes", "Name");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapesInvallidSlideIndex()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideSubshapes", "SlideIndex");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapesInvallidSlideType()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideSubshapes", "SlideType");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapesInvallidPath()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideSubshapes", "Path");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapesInvallidPassword()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideSubshapes", "Password");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapesInvallidFolder()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideSubshapes", "Folder");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideSubshapesInvallidStorage()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("GetSpecialSlideSubshapes", "Storage");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25445,304 +31328,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
-        /// Test SaveNotesSlideShape
-        /// </summary>
-        [Test]
-        public void SaveNotesSlideShape()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", null);
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidName()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "Name");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidSlideIndex()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "SlideIndex");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidShapeIndex()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "ShapeIndex");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidFormat()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "Format");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidOutPath()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "OutPath");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidOptions()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "Options");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidScaleX()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "ScaleX");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidScaleY()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "ScaleY");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidBounds()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "Bounds");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidPassword()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "Password");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidFolder()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "Folder");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidStorage()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "Storage");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        [Test]
-        public void SaveNotesSlideShapeInvallidFontsFolder()
-        {
-            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveNotesSlideShape", "FontsFolder");
-            
-            bool needAssertResponse = false;
-            try
-            {
-                m_instance.SaveNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult();
-            }
-        }
-
-        
-        /// <summary>
         /// Test SavePresentation
         /// </summary>
         [Test]
@@ -26265,7 +31850,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26286,7 +31871,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26307,7 +31892,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26328,7 +31913,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26349,7 +31934,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26370,7 +31955,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26391,7 +31976,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26412,7 +31997,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26433,7 +32018,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26454,7 +32039,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26475,7 +32060,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26496,7 +32081,28 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveShapeOnlineInvallidOptions()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveShapeOnline", "Options");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveShapeOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<IShapeExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26777,7 +32383,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26798,7 +32404,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26819,7 +32425,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26840,7 +32446,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26861,7 +32467,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26882,7 +32488,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26903,7 +32509,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26924,7 +32530,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26945,7 +32551,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -26966,7 +32572,687 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSlideOnlineInvallidOptions()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSlideOnline", "Options");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSlideOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SlideExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<int?>("Width"), testExecutor.GetTestValue<int?>("Height"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"), testExecutor.GetTestValue<ExportOptions>("Options"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        
+        /// <summary>
+        /// Test SaveSpecialSlideShape
+        /// </summary>
+        [Test]
+        public void SaveSpecialSlideShape()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", null);
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidName()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "Name");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidSlideIndex()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "SlideIndex");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidSlideType()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "SlideType");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidShapeIndex()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "ShapeIndex");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidFormat()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "Format");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidOutPath()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "OutPath");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidOptions()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "Options");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidScaleX()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "ScaleX");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidScaleY()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "ScaleY");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidBounds()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "Bounds");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidPassword()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "Password");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidFolder()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "Folder");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidStorage()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "Storage");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideShapeInvallidFontsFolder()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideShape", "FontsFolder");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        
+        /// <summary>
+        /// Test SaveSpecialSlideSubshape
+        /// </summary>
+        [Test]
+        public void SaveSpecialSlideSubshape()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", null);
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidName()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "Name");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidSlideIndex()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "SlideIndex");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidSlideType()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "SlideType");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidPath()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "Path");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidShapeIndex()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "ShapeIndex");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidFormat()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "Format");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidOutPath()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "OutPath");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidOptions()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "Options");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidScaleX()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "ScaleX");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidScaleY()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "ScaleY");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidBounds()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "Bounds");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidPassword()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "Password");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidFolder()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "Folder");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidStorage()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "Storage");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SaveSpecialSlideSubshapeInvallidFontsFolder()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SaveSpecialSlideSubshape", "FontsFolder");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SaveSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeExportFormat>("Format"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<IShapeExportOptions>("Options"), testExecutor.GetTestValue<double?>("ScaleX"), testExecutor.GetTestValue<double?>("ScaleY"), testExecutor.GetTestValue<ShapeThumbnailBounds?>("Bounds"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"), testExecutor.GetTestValue<string>("FontsFolder"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -28930,6 +35216,178 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.SetSlideProperties(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<SlideProperties>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test SetSpecialSlideAnimation
+        /// </summary>
+        [Test]
+        public void SetSpecialSlideAnimation()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("SetSpecialSlideAnimation", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<SlideAnimation>("Animation"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetSpecialSlideAnimationInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("SetSpecialSlideAnimation", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<SlideAnimation>("Animation"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetSpecialSlideAnimationInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("SetSpecialSlideAnimation", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<SlideAnimation>("Animation"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetSpecialSlideAnimationInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("SetSpecialSlideAnimation", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<SlideAnimation>("Animation"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetSpecialSlideAnimationInvallidAnimation()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("SetSpecialSlideAnimation", "Animation");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<SlideAnimation>("Animation"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetSpecialSlideAnimationInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("SetSpecialSlideAnimation", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<SlideAnimation>("Animation"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetSpecialSlideAnimationInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("SetSpecialSlideAnimation", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<SlideAnimation>("Animation"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetSpecialSlideAnimationInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("SetSpecialSlideAnimation", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<SlideAnimation>("Animation"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -31113,585 +37571,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
-        /// Test UpdateNotesSlideParagraph
-        /// </summary>
-        [Test]
-        public void UpdateNotesSlideParagraph()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateNotesSlideParagraph", null);
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideParagraphInvallidName()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateNotesSlideParagraph", "Name");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideParagraphInvallidSlideIndex()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateNotesSlideParagraph", "SlideIndex");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideParagraphInvallidShapeIndex()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateNotesSlideParagraph", "ShapeIndex");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideParagraphInvallidParagraphIndex()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateNotesSlideParagraph", "ParagraphIndex");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideParagraphInvallidDto()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateNotesSlideParagraph", "Dto");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideParagraphInvallidPassword()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateNotesSlideParagraph", "Password");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideParagraphInvallidFolder()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateNotesSlideParagraph", "Folder");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideParagraphInvallidStorage()
-        {
-            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateNotesSlideParagraph", "Storage");
-            Paragraph response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test UpdateNotesSlidePortion
-        /// </summary>
-        [Test]
-        public void UpdateNotesSlidePortion()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateNotesSlidePortion", null);
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlidePortionInvallidName()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateNotesSlidePortion", "Name");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlidePortionInvallidSlideIndex()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateNotesSlidePortion", "SlideIndex");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlidePortionInvallidShapeIndex()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateNotesSlidePortion", "ShapeIndex");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlidePortionInvallidParagraphIndex()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateNotesSlidePortion", "ParagraphIndex");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlidePortionInvallidPortionIndex()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateNotesSlidePortion", "PortionIndex");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlidePortionInvallidDto()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateNotesSlidePortion", "Dto");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlidePortionInvallidPassword()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateNotesSlidePortion", "Password");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlidePortionInvallidFolder()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateNotesSlidePortion", "Folder");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlidePortionInvallidStorage()
-        {
-            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateNotesSlidePortion", "Storage");
-            Portion response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
-        /// Test UpdateNotesSlideShape
-        /// </summary>
-        [Test]
-        public void UpdateNotesSlideShape()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateNotesSlideShape", null);
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideShapeInvallidName()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateNotesSlideShape", "Name");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideShapeInvallidSlideIndex()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateNotesSlideShape", "SlideIndex");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideShapeInvallidShapeIndex()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateNotesSlideShape", "ShapeIndex");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideShapeInvallidDto()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateNotesSlideShape", "Dto");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideShapeInvallidPassword()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateNotesSlideShape", "Password");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideShapeInvallidFolder()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateNotesSlideShape", "Folder");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        [Test]
-        public void UpdateNotesSlideShapeInvallidStorage()
-        {
-            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateNotesSlideShape", "Storage");
-            ShapeBase response = null;
-            bool needAssertResponse = false;
-            try
-            {
-                response = m_instance.UpdateNotesSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
-                needAssertResponse = true;
-            }
-            catch (Exception ex)
-            {
-                testExecutor.AssertException(ex);
-            }
-            if (needAssertResponse)
-            {
-                testExecutor.AssertResult(response);
-            }
-        }
-
-        
-        /// <summary>
         /// Test UpdateParagraph
         /// </summary>
         [Test]
@@ -32559,6 +38438,1760 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.UpdateSlide(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<Slide>("SlideDto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test UpdateSpecialSlideAnimationEffect
+        /// </summary>
+        [Test]
+        public void UpdateSpecialSlideAnimationEffect()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationEffect", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationEffectInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationEffect", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationEffectInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationEffect", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationEffectInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationEffect", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationEffectInvallidEffectIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationEffect", "EffectIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationEffectInvallidEffect()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationEffect", "Effect");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationEffectInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationEffect", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationEffectInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationEffect", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationEffectInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationEffect", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test UpdateSpecialSlideAnimationInteractiveSequenceEffect
+        /// </summary>
+        [Test]
+        public void UpdateSpecialSlideAnimationInteractiveSequenceEffect()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationInteractiveSequenceEffect", null);
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationInteractiveSequenceEffectInvallidName()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationInteractiveSequenceEffect", "Name");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationInteractiveSequenceEffectInvallidSlideIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationInteractiveSequenceEffect", "SlideIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationInteractiveSequenceEffectInvallidSlideType()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationInteractiveSequenceEffect", "SlideType");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationInteractiveSequenceEffectInvallidSequenceIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationInteractiveSequenceEffect", "SequenceIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationInteractiveSequenceEffectInvallidEffectIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationInteractiveSequenceEffect", "EffectIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationInteractiveSequenceEffectInvallidEffect()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationInteractiveSequenceEffect", "Effect");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationInteractiveSequenceEffectInvallidPassword()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationInteractiveSequenceEffect", "Password");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationInteractiveSequenceEffectInvallidFolder()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationInteractiveSequenceEffect", "Folder");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideAnimationInteractiveSequenceEffectInvallidStorage()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("UpdateSpecialSlideAnimationInteractiveSequenceEffect", "Storage");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideAnimationInteractiveSequenceEffect(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("SequenceIndex"), testExecutor.GetTestValue<int>("EffectIndex"), testExecutor.GetTestValue<Effect>("Effect"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test UpdateSpecialSlideParagraph
+        /// </summary>
+        [Test]
+        public void UpdateSpecialSlideParagraph()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideParagraph", null);
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideParagraphInvallidName()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideParagraph", "Name");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideParagraphInvallidSlideIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideParagraph", "SlideIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideParagraphInvallidSlideType()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideParagraph", "SlideType");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideParagraphInvallidShapeIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideParagraph", "ShapeIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideParagraphInvallidParagraphIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideParagraph", "ParagraphIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideParagraphInvallidDto()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideParagraph", "Dto");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideParagraphInvallidPassword()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideParagraph", "Password");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideParagraphInvallidFolder()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideParagraph", "Folder");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideParagraphInvallidStorage()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideParagraph", "Storage");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test UpdateSpecialSlidePortion
+        /// </summary>
+        [Test]
+        public void UpdateSpecialSlidePortion()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlidePortion", null);
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlidePortionInvallidName()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlidePortion", "Name");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlidePortionInvallidSlideIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlidePortion", "SlideIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlidePortionInvallidSlideType()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlidePortion", "SlideType");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlidePortionInvallidShapeIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlidePortion", "ShapeIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlidePortionInvallidParagraphIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlidePortion", "ParagraphIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlidePortionInvallidPortionIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlidePortion", "PortionIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlidePortionInvallidDto()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlidePortion", "Dto");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlidePortionInvallidPassword()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlidePortion", "Password");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlidePortionInvallidFolder()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlidePortion", "Folder");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlidePortionInvallidStorage()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlidePortion", "Storage");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlidePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test UpdateSpecialSlideShape
+        /// </summary>
+        [Test]
+        public void UpdateSpecialSlideShape()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideShape", null);
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideShapeInvallidName()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideShape", "Name");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideShapeInvallidSlideIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideShape", "SlideIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideShapeInvallidSlideType()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideShape", "SlideType");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideShapeInvallidShapeIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideShape", "ShapeIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideShapeInvallidDto()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideShape", "Dto");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideShapeInvallidPassword()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideShape", "Password");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideShapeInvallidFolder()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideShape", "Folder");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideShapeInvallidStorage()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideShape", "Storage");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test UpdateSpecialSlideSubshape
+        /// </summary>
+        [Test]
+        public void UpdateSpecialSlideSubshape()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideSubshape", null);
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeInvallidName()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideSubshape", "Name");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeInvallidSlideIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideSubshape", "SlideIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeInvallidSlideType()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideSubshape", "SlideType");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeInvallidPath()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideSubshape", "Path");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeInvallidShapeIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideSubshape", "ShapeIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeInvallidDto()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideSubshape", "Dto");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeInvallidPassword()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideSubshape", "Password");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeInvallidFolder()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideSubshape", "Folder");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeInvallidStorage()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("UpdateSpecialSlideSubshape", "Storage");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<ShapeBase>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test UpdateSpecialSlideSubshapeParagraph
+        /// </summary>
+        [Test]
+        public void UpdateSpecialSlideSubshapeParagraph()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideSubshapeParagraph", null);
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeParagraphInvallidName()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideSubshapeParagraph", "Name");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeParagraphInvallidSlideIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideSubshapeParagraph", "SlideIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeParagraphInvallidSlideType()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideSubshapeParagraph", "SlideType");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeParagraphInvallidPath()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideSubshapeParagraph", "Path");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeParagraphInvallidShapeIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideSubshapeParagraph", "ShapeIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeParagraphInvallidParagraphIndex()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideSubshapeParagraph", "ParagraphIndex");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeParagraphInvallidDto()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideSubshapeParagraph", "Dto");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeParagraphInvallidPassword()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideSubshapeParagraph", "Password");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeParagraphInvallidFolder()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideSubshapeParagraph", "Folder");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapeParagraphInvallidStorage()
+        {
+            TestExecutor<Paragraph> testExecutor = new TestExecutor<Paragraph>("UpdateSpecialSlideSubshapeParagraph", "Storage");
+            Paragraph response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapeParagraph(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<Paragraph>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test UpdateSpecialSlideSubshapePortion
+        /// </summary>
+        [Test]
+        public void UpdateSpecialSlideSubshapePortion()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", null);
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapePortionInvallidName()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", "Name");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapePortionInvallidSlideIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", "SlideIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapePortionInvallidSlideType()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", "SlideType");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapePortionInvallidPath()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", "Path");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapePortionInvallidShapeIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", "ShapeIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapePortionInvallidParagraphIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", "ParagraphIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapePortionInvallidPortionIndex()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", "PortionIndex");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapePortionInvallidDto()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", "Dto");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapePortionInvallidPassword()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", "Password");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapePortionInvallidFolder()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", "Folder");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void UpdateSpecialSlideSubshapePortionInvallidStorage()
+        {
+            TestExecutor<Portion> testExecutor = new TestExecutor<Portion>("UpdateSpecialSlideSubshapePortion", "Storage");
+            Portion response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.UpdateSpecialSlideSubshapePortion(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<Portion>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)

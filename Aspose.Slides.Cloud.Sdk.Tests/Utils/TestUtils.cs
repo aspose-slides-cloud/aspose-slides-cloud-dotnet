@@ -103,7 +103,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 
         internal const string TestDataPath = "../../../../TestData";
 
-        private const int c_expectedVersion = 0;
+        private const int c_expectedVersion = 1;
         private const string c_tempTestFolder = "TempTests";
         private const string c_versionFile = "version.txt";
         private static bool s_initialized;

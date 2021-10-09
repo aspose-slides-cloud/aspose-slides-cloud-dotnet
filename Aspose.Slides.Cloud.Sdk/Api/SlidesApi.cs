@@ -90,6 +90,42 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Changes the placement of selected shapes on the master slide. Aligns shapes to the margins or the edge of the slide or aligns them relative to each other. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="alignmentType">Alignment type that will be applied to the shapes.</param> 
+        /// <param name="alignToSlide">If true, shapes will be aligned relative to the slide edges.</param> 
+        /// <param name="shapes">Shapes indexes.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Shapes"/></returns>            
+        public Shapes AlignSpecialSlideShapes(string name, int slideIndex, SpecialSlideType slideType, ShapesAlignmentType alignmentType, bool? alignToSlide = null, List<int> shapes = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling AlignSpecialSlideShapes");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/align/{alignmentType}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "alignmentType", alignmentType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "alignToSlide", alignToSlide);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapes", shapes);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Shapes>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Convert presentation from request content to format specified. 
         /// </summary>
         /// <param name="document">Document data.</param> 
@@ -98,8 +134,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Custom fonts folder.</param> 
         /// <param name="slides">The indices of the slides to be converted. If not specified, all slides are converted by default.</param> 
+        /// <param name="options">Export options.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream Convert(System.IO.Stream document, ExportFormat format, string password = null, string storage = null, string fontsFolder = null, List<int> slides = null)
+        public System.IO.Stream Convert(System.IO.Stream document, ExportFormat format, string password = null, string storage = null, string fontsFolder = null, List<int> slides = null, ExportOptions options = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -115,12 +152,13 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", slides);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             if (document != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -133,8 +171,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Custom fonts folder.</param> 
         /// <param name="slides">The indices of the slides to be converted. If not specified, all slides are converted by default.</param> 
+        /// <param name="options">Export options.</param> 
         /// <returns><see cref=""/></returns>            
-        public void ConvertAndSave(System.IO.Stream document, ExportFormat format, string outPath, string password = null, string storage = null, string fontsFolder = null, List<int> slides = null)
+        public void ConvertAndSave(System.IO.Stream document, ExportFormat format, string outPath, string password = null, string storage = null, string fontsFolder = null, List<int> slides = null, ExportOptions options = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -156,12 +195,13 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", slides);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             if (document != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            InvokeVoidStreamApi(resourcePath, "PUT", null, headerParams, requestFiles, "application/json");
+            InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -771,125 +811,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Paragraph"/></returns>            
-        public Paragraph CreateNotesSlideParagraph(string name, int slideIndex, int shapeIndex, Paragraph dto, int? position = null, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling CreateNotesSlideParagraph");
-            }
-            // verify the required parameter 'dto' is set
-            if (dto == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'dto' when calling CreateNotesSlideParagraph");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Creates new portion. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="dto">Portion DTO.</param> 
-        /// <param name="position">Position of the new portion in the list. Default is at the end of the list.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Portion"/></returns>            
-        public Portion CreateNotesSlidePortion(string name, int slideIndex, int shapeIndex, int paragraphIndex, Portion dto, int? position = null, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling CreateNotesSlidePortion");
-            }
-            // verify the required parameter 'dto' is set
-            if (dto == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'dto' when calling CreateNotesSlidePortion");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Portion>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Create new shape. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="dto">Shape DTO.</param> 
-        /// <param name="shapeToClone">Optional index for clone shape instead of adding a new one.</param> 
-        /// <param name="position">Position of the new shape in the list. Default is at the end of the list.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="ShapeBase"/></returns>            
-        public ShapeBase CreateNotesSlideShape(string name, int slideIndex, ShapeBase dto, int? shapeToClone = null, int? position = null, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling CreateNotesSlideShape");
-            }
-            // verify the required parameter 'dto' is set
-            if (dto == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'dto' when calling CreateNotesSlideShape");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", shapeToClone);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Creates new paragraph. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="dto">Paragraph DTO.</param> 
-        /// <param name="position">Position of the new paragraph in the list. Default is at the end of the list.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Paragraph"/></returns>            
         public Paragraph CreateParagraph(string name, int slideIndex, int shapeIndex, Paragraph dto, int? position = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
@@ -1165,6 +1086,380 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Model.Slides>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Add an effect to special slide (master, layout, notes) animation. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="effect">Animation effect DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation CreateSpecialSlideAnimationEffect(string name, int slideIndex, SpecialSlideType slideType, Effect effect, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateSpecialSlideAnimationEffect");
+            }
+            // verify the required parameter 'effect' is set
+            if (effect == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'effect' when calling CreateSpecialSlideAnimationEffect");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation/mainSequence");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(effect); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Set special slide (master, layout, notes) animation. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="sequence">Animation sequence DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation CreateSpecialSlideAnimationInteractiveSequence(string name, int slideIndex, SpecialSlideType slideType, InteractiveSequence sequence, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateSpecialSlideAnimationInteractiveSequence");
+            }
+            // verify the required parameter 'sequence' is set
+            if (sequence == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'sequence' when calling CreateSpecialSlideAnimationInteractiveSequence");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation/interactiveSequences");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(sequence); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Add an animation effect to a special slide (master, layout, notes) interactive sequence. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="sequenceIndex">The position of the interactive sequence.</param> 
+        /// <param name="effect">Animation effect DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation CreateSpecialSlideAnimationInteractiveSequenceEffect(string name, int slideIndex, SpecialSlideType slideType, int sequenceIndex, Effect effect, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateSpecialSlideAnimationInteractiveSequenceEffect");
+            }
+            // verify the required parameter 'effect' is set
+            if (effect == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'effect' when calling CreateSpecialSlideAnimationInteractiveSequenceEffect");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation/interactiveSequences/{sequenceIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "sequenceIndex", sequenceIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(effect); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Creates new paragraph. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="dto">Paragraph DTO.</param> 
+        /// <param name="position">Position of the new paragraph in the list. Default is at the end of the list.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraph"/></returns>            
+        public Paragraph CreateSpecialSlideParagraph(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, Paragraph dto, int? position = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateSpecialSlideParagraph");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling CreateSpecialSlideParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Creates new portion. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="dto">Portion DTO.</param> 
+        /// <param name="position">Position of the new portion in the list. Default is at the end of the list.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portion"/></returns>            
+        public Portion CreateSpecialSlidePortion(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, int paragraphIndex, Portion dto, int? position = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateSpecialSlidePortion");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling CreateSpecialSlidePortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portion>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Create new shape. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="dto">Shape DTO.</param> 
+        /// <param name="shapeToClone">Optional index for clone shape instead of adding a new one.</param> 
+        /// <param name="position">Position of the new shape in the list. Default is at the end of the list.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="ShapeBase"/></returns>            
+        public ShapeBase CreateSpecialSlideShape(string name, int slideIndex, SpecialSlideType slideType, ShapeBase dto = null, int? shapeToClone = null, int? position = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateSpecialSlideShape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", shapeToClone);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Create new shape (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="dto">Shape DTO.</param> 
+        /// <param name="shapeToClone">Optional index for clone shape instead of adding a new one.</param> 
+        /// <param name="position">Position of the new shape in the list. Default is at the end of the list.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="ShapeBase"/></returns>            
+        public ShapeBase CreateSpecialSlideSubshape(string name, int slideIndex, SpecialSlideType slideType, string path, ShapeBase dto = null, int? shapeToClone = null, int? position = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateSpecialSlideSubshape");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling CreateSpecialSlideSubshape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeToClone", shapeToClone);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Creates new paragraph (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="dto">Paragraph DTO.</param> 
+        /// <param name="position">Position of the new paragraph in the list. Default is at the end of the list.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraph"/></returns>            
+        public Paragraph CreateSpecialSlideSubshapeParagraph(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, Paragraph dto, int? position = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateSpecialSlideSubshapeParagraph");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling CreateSpecialSlideSubshapeParagraph");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling CreateSpecialSlideSubshapeParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Creates new portion (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="dto">Portion DTO.</param> 
+        /// <param name="position">Position of the new portion in the list. Default is at the end of the list.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portion"/></returns>            
+        public Portion CreateSpecialSlideSubshapePortion(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, int paragraphIndex, Portion dto, int? position = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateSpecialSlideSubshapePortion");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling CreateSpecialSlideSubshapePortion");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling CreateSpecialSlideSubshapePortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portion>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -1876,198 +2171,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Paragraphs"/></returns>            
-        public Paragraphs DeleteNotesSlideParagraph(string name, int slideIndex, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideParagraph");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Remove a range of paragraphs. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphs">The indices of the shapes to be deleted; delete all by default.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Paragraphs"/></returns>            
-        public Paragraphs DeleteNotesSlideParagraphs(string name, int slideIndex, int shapeIndex, List<int> paragraphs = null, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideParagraphs");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "paragraphs", paragraphs);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Remove a portion. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="portionIndex">Portion index.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Portions"/></returns>            
-        public Portions DeleteNotesSlidePortion(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlidePortion");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Remove a range of portions. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="portions">The indices of the shapes to be deleted; delete all by default.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Portions"/></returns>            
-        public Portions DeleteNotesSlidePortions(string name, int slideIndex, int shapeIndex, int paragraphIndex, List<int> portions = null, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlidePortions");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "portions", portions);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Remove a shape. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Shapes"/></returns>            
-        public Shapes DeleteNotesSlideShape(string name, int slideIndex, int shapeIndex, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideShape");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Remove a range of shapes. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapes">The indices of the shapes to be deleted; delete all by default.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Shapes"/></returns>            
-        public Shapes DeleteNotesSlideShapes(string name, int slideIndex, List<int> shapes = null, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteNotesSlideShapes");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapes", shapes);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Remove a paragraph. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Paragraphs"/></returns>            
         public Paragraphs DeleteParagraph(string name, int slideIndex, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
@@ -2480,6 +2583,644 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove animation from a special slide (master, layout, notes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation DeleteSpecialSlideAnimation(string name, int slideIndex, SpecialSlideType slideType, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideAnimation");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove an effect from special slide (master, layout, notes) animation. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="effectIndex">Index of the effect to be removed.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation DeleteSpecialSlideAnimationEffect(string name, int slideIndex, SpecialSlideType slideType, int effectIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideAnimationEffect");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation/mainSequence/{effectIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "effectIndex", effectIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove an interactive sequence from special slide (master, layout, notes) animation. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="sequenceIndex">The index of an interactive sequence to be deleted.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation DeleteSpecialSlideAnimationInteractiveSequence(string name, int slideIndex, SpecialSlideType slideType, int sequenceIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideAnimationInteractiveSequence");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation/interactiveSequences/{sequenceIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "sequenceIndex", sequenceIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove an effect from special slide (master, layout, notes) animation interactive sequence. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="sequenceIndex">Interactive sequence index.</param> 
+        /// <param name="effectIndex">Index of the effect to be removed.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation DeleteSpecialSlideAnimationInteractiveSequenceEffect(string name, int slideIndex, SpecialSlideType slideType, int sequenceIndex, int effectIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideAnimationInteractiveSequenceEffect");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation/interactiveSequences/{sequenceIndex}/{effectIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "sequenceIndex", sequenceIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "effectIndex", effectIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Clear all interactive sequences from special slide (master, layout, notes) animation. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation DeleteSpecialSlideAnimationInteractiveSequences(string name, int slideIndex, SpecialSlideType slideType, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideAnimationInteractiveSequences");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation/interactiveSequences");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Clear main sequence in special slide (master, layout, notes) animation. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation DeleteSpecialSlideAnimationMainSequence(string name, int slideIndex, SpecialSlideType slideType, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideAnimationMainSequence");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation/mainSequence");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a paragraph. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraphs"/></returns>            
+        public Paragraphs DeleteSpecialSlideParagraph(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a range of paragraphs. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphs">The indices of the shapes to be deleted; delete all by default.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraphs"/></returns>            
+        public Paragraphs DeleteSpecialSlideParagraphs(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, List<int> paragraphs = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideParagraphs");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "paragraphs", paragraphs);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a portion. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portions"/></returns>            
+        public Portions DeleteSpecialSlidePortion(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlidePortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a range of portions. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portions">The indices of the shapes to be deleted; delete all by default.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portions"/></returns>            
+        public Portions DeleteSpecialSlidePortions(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, int paragraphIndex, List<int> portions = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlidePortions");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "portions", portions);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a shape. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Shapes"/></returns>            
+        public Shapes DeleteSpecialSlideShape(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideShape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a range of shapes. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapes">The indices of the shapes to be deleted; delete all by default.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Shapes"/></returns>            
+        public Shapes DeleteSpecialSlideShapes(string name, int slideIndex, SpecialSlideType slideType, List<int> shapes = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideShapes");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapes", shapes);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a shape (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Shapes"/></returns>            
+        public Shapes DeleteSpecialSlideSubshape(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideSubshape");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSpecialSlideSubshape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a paragraph (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraphs"/></returns>            
+        public Paragraphs DeleteSpecialSlideSubshapeParagraph(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideSubshapeParagraph");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSpecialSlideSubshapeParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a range of paragraphs (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphs">The indices of the shapes to be deleted; delete all by default.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraphs"/></returns>            
+        public Paragraphs DeleteSpecialSlideSubshapeParagraphs(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, List<int> paragraphs = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideSubshapeParagraphs");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSpecialSlideSubshapeParagraphs");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "paragraphs", paragraphs);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a portion (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portions"/></returns>            
+        public Portions DeleteSpecialSlideSubshapePortion(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideSubshapePortion");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSpecialSlideSubshapePortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a range of portions (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portions">The indices of the shapes to be deleted; delete all by default.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portions"/></returns>            
+        public Portions DeleteSpecialSlideSubshapePortions(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, int paragraphIndex, List<int> portions = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideSubshapePortions");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSpecialSlideSubshapePortions");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "portions", portions);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Remove a range of shapes (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapes">The indices of the shapes to be deleted; delete all by default.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Shapes"/></returns>            
+        public Shapes DeleteSpecialSlideSubshapes(string name, int slideIndex, SpecialSlideType slideType, string path, List<int> shapes = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSpecialSlideSubshapes");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DeleteSpecialSlideSubshapes");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapes", shapes);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3092,48 +3833,6 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Render shape to specified picture format. 
-        /// </summary>
-        /// <param name="name">Presentation name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Index of shape starting from 1</param> 
-        /// <param name="format">Export picture format.</param> 
-        /// <param name="options">export options</param> 
-        /// <param name="scaleX">X scale ratio.</param> 
-        /// <param name="scaleY">Y scale ratio.</param> 
-        /// <param name="bounds">Shape thumbnail bounds type.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Presentation folder.</param> 
-        /// <param name="storage">Presentation storage.</param> 
-        /// <param name="fontsFolder">Fonts folder.</param> 
-        /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadNotesSlideShape(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling DownloadNotesSlideShape");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/{format}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", scaleX);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", scaleY);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", bounds);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
-            var requestFiles = new List<FileInfo>();
-            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
         /// Save a presentation to a specified format. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -3222,8 +3921,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Fonts folder.</param> 
+        /// <param name="options">Export options.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadShapeOnline(System.IO.Stream document, int slideIndex, int shapeIndex, ShapeExportFormat format, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string storage = null, string fontsFolder = null)
+        public System.IO.Stream DownloadShapeOnline(System.IO.Stream document, int slideIndex, int shapeIndex, ShapeExportFormat format, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string storage = null, string fontsFolder = null, IShapeExportOptions options = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -3243,12 +3943,13 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             if (document != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3300,8 +4001,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Storage folder containing custom fonts to be used with the document.</param> 
+        /// <param name="options">Export options.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadSlideOnline(System.IO.Stream document, int slideIndex, SlideExportFormat format, int? width = null, int? height = null, string password = null, string storage = null, string fontsFolder = null)
+        public System.IO.Stream DownloadSlideOnline(System.IO.Stream document, int slideIndex, SlideExportFormat format, int? width = null, int? height = null, string password = null, string storage = null, string fontsFolder = null, ExportOptions options = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -3319,12 +4021,108 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             if (document != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Render shape to specified picture format. 
+        /// </summary>
+        /// <param name="name">Presentation name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Index of shape starting from 1</param> 
+        /// <param name="format">Export picture format.</param> 
+        /// <param name="options">Export options</param> 
+        /// <param name="scaleX">X scale ratio.</param> 
+        /// <param name="scaleY">Y scale ratio.</param> 
+        /// <param name="bounds">Shape thumbnail bounds type.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Presentation folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <param name="fontsFolder">Fonts folder.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream DownloadSpecialSlideShape(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, ShapeExportFormat format, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DownloadSpecialSlideShape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", scaleX);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", scaleY);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", bounds);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Render shape to specified picture format (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Presentation name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Index of shape starting from 1</param> 
+        /// <param name="format">Export picture format.</param> 
+        /// <param name="options">export options</param> 
+        /// <param name="scaleX">X scale ratio.</param> 
+        /// <param name="scaleY">Y scale ratio.</param> 
+        /// <param name="bounds">Shape thumbnail bounds type.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Presentation folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <param name="fontsFolder">Fonts folder.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream DownloadSpecialSlideSubshape(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, ShapeExportFormat format, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DownloadSpecialSlideSubshape");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling DownloadSpecialSlideSubshape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", scaleX);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", scaleY);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", bounds);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3835,192 +4633,6 @@ namespace Aspose.Slides.Cloud.Sdk
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
             return InvokeStreamApi<NotesSlide>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Read shape paragraph info. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Paragraph"/></returns>            
-        public Paragraph GetNotesSlideParagraph(string name, int slideIndex, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideParagraph");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Read shape paragraphs info. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Paragraphs"/></returns>            
-        public Paragraphs GetNotesSlideParagraphs(string name, int slideIndex, int shapeIndex, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideParagraphs");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Paragraphs>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Read paragraph portion info. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="portionIndex">Portion index.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Portion"/></returns>            
-        public Portion GetNotesSlidePortion(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlidePortion");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Read paragraph portions info. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Portions"/></returns>            
-        public Portions GetNotesSlidePortions(string name, int slideIndex, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlidePortions");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Portions>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Read slide shape info. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="ShapeBase"/></returns>            
-        public ShapeBase GetNotesSlideShape(string name, int slideIndex, int shapeIndex, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShape");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<ShapeBase>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Read slide shapes info. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Shapes"/></returns>            
-        public Shapes GetNotesSlideShapes(string name, int slideIndex, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling GetNotesSlideShapes");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Shapes>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -4591,6 +5203,476 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Model.Slides>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read special slide (master, layout, notes) animation effects. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index. If specified, only effects related to that shape are returned.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation GetSpecialSlideAnimation(string name, int slideIndex, SpecialSlideType slideType, int? shapeIndex = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlideAnimation");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read shape paragraph info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraph"/></returns>            
+        public Paragraph GetSpecialSlideParagraph(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlideParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read special shape paragraphs info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraphs"/></returns>            
+        public Paragraphs GetSpecialSlideParagraphs(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlideParagraphs");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraphs>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read paragraph portion info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portion"/></returns>            
+        public Portion GetSpecialSlidePortion(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlidePortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read paragraph portions info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portions"/></returns>            
+        public Portions GetSpecialSlidePortions(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlidePortions");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portions>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read special slide shape info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="ShapeBase"/></returns>            
+        public ShapeBase GetSpecialSlideShape(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlideShape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<ShapeBase>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read special slide shapes info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Shapes"/></returns>            
+        public Shapes GetSpecialSlideShapes(string name, int slideIndex, SpecialSlideType slideType, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlideShapes");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Shapes>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read special slide shape info (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="ShapeBase"/></returns>            
+        public ShapeBase GetSpecialSlideSubshape(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlideSubshape");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSpecialSlideSubshape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<ShapeBase>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read shape paragraph info (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraph"/></returns>            
+        public Paragraph GetSpecialSlideSubshapeParagraph(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlideSubshapeParagraph");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSpecialSlideSubshapeParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read shape paragraphs info (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraphs"/></returns>            
+        public Paragraphs GetSpecialSlideSubshapeParagraphs(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlideSubshapeParagraphs");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSpecialSlideSubshapeParagraphs");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraphs>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read paragraph portion info (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portion"/></returns>            
+        public Portion GetSpecialSlideSubshapePortion(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlideSubshapePortion");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSpecialSlideSubshapePortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read paragraph portions info (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portions"/></returns>            
+        public Portions GetSpecialSlideSubshapePortions(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlideSubshapePortions");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSpecialSlideSubshapePortions");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portions>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read special slide shapes info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path (for smart art and group shapes).</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Shapes"/></returns>            
+        public Shapes GetSpecialSlideSubshapes(string name, int slideIndex, SpecialSlideType slideType, string path, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSpecialSlideSubshapes");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSpecialSlideSubshapes");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Shapes>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -5481,55 +6563,6 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Render shape to specified picture format. 
-        /// </summary>
-        /// <param name="name">Presentation name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Index of shape starting from 1</param> 
-        /// <param name="format">Export picture format.</param> 
-        /// <param name="outPath">Output path.</param> 
-        /// <param name="options">export options</param> 
-        /// <param name="scaleX">X scale ratio.</param> 
-        /// <param name="scaleY">Y scale ratio.</param> 
-        /// <param name="bounds">Shape thumbnail bounds type.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Presentation folder.</param> 
-        /// <param name="storage">Presentation storage.</param> 
-        /// <param name="fontsFolder">Fonts folder.</param> 
-        /// <returns><see cref=""/></returns>            
-        public void SaveNotesSlideShape(string name, int slideIndex, int shapeIndex, ShapeExportFormat format, string outPath, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling SaveNotesSlideShape");
-            }
-            // verify the required parameter 'outPath' is set
-            if (outPath == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'outPath' when calling SaveNotesSlideShape");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/{format}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", outPath);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", scaleX);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", scaleY);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", bounds);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
-            var requestFiles = new List<FileInfo>();
-            InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
         /// Save a presentation to a specified format. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -5633,8 +6666,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Fonts folder.</param> 
+        /// <param name="options">Export options.</param> 
         /// <returns><see cref=""/></returns>            
-        public void SaveShapeOnline(System.IO.Stream document, int slideIndex, int shapeIndex, ShapeExportFormat format, string outPath, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string storage = null, string fontsFolder = null)
+        public void SaveShapeOnline(System.IO.Stream document, int slideIndex, int shapeIndex, ShapeExportFormat format, string outPath, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string storage = null, string fontsFolder = null, IShapeExportOptions options = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -5660,12 +6694,13 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             if (document != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            InvokeVoidStreamApi(resourcePath, "PUT", null, headerParams, requestFiles, "application/json");
+            InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -5725,8 +6760,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Storage folder containing custom fonts to be used with the document.</param> 
+        /// <param name="options">Export options.</param> 
         /// <returns><see cref=""/></returns>            
-        public void SaveSlideOnline(System.IO.Stream document, int slideIndex, SlideExportFormat format, string outPath, int? width = null, int? height = null, string password = null, string storage = null, string fontsFolder = null)
+        public void SaveSlideOnline(System.IO.Stream document, int slideIndex, SlideExportFormat format, string outPath, int? width = null, int? height = null, string password = null, string storage = null, string fontsFolder = null, ExportOptions options = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -5750,12 +6786,122 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             if (document != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            InvokeVoidStreamApi(resourcePath, "PUT", null, headerParams, requestFiles, "application/json");
+            InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Render shape to specified picture format. 
+        /// </summary>
+        /// <param name="name">Presentation name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Index of shape starting from 1</param> 
+        /// <param name="format">Export picture format.</param> 
+        /// <param name="outPath">Output path.</param> 
+        /// <param name="options">export options</param> 
+        /// <param name="scaleX">X scale ratio.</param> 
+        /// <param name="scaleY">Y scale ratio.</param> 
+        /// <param name="bounds">Shape thumbnail bounds type.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Presentation folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <param name="fontsFolder">Fonts folder.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void SaveSpecialSlideShape(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, ShapeExportFormat format, string outPath, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SaveSpecialSlideShape");
+            }
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling SaveSpecialSlideShape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", outPath);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", scaleX);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", scaleY);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", bounds);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Render shape to specified picture format. 
+        /// </summary>
+        /// <param name="name">Presentation name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path (for smart art and group shapes).</param> 
+        /// <param name="shapeIndex">Index of shape starting from 1</param> 
+        /// <param name="format">Export picture format.</param> 
+        /// <param name="outPath">Output path.</param> 
+        /// <param name="options">export options</param> 
+        /// <param name="scaleX">X scale ratio.</param> 
+        /// <param name="scaleY">Y scale ratio.</param> 
+        /// <param name="bounds">Shape thumbnail bounds type.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Presentation folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <param name="fontsFolder">Fonts folder.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void SaveSpecialSlideSubshape(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, ShapeExportFormat format, string outPath, IShapeExportOptions options = null, double? scaleX = null, double? scaleY = null, ShapeThumbnailBounds? bounds = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SaveSpecialSlideSubshape");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling SaveSpecialSlideSubshape");
+            }
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling SaveSpecialSlideSubshape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/{format}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", outPath);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleX", scaleX);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "scaleY", scaleY);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "bounds", bounds);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            InvokeVoidApi(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -6228,6 +7374,43 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Set special slide (master, layout, notes) animation. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="animation">Animation DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation SetSpecialSlideAnimation(string name, int slideIndex, SpecialSlideType slideType, SlideAnimation animation, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SetSpecialSlideAnimation");
+            }
+            // verify the required parameter 'animation' is set
+            if (animation == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'animation' when calling SetSpecialSlideAnimation");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(animation); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Update presentation document properties. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -6680,123 +7863,6 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Paragraph"/></returns>            
-        public Paragraph UpdateNotesSlideParagraph(string name, int slideIndex, int shapeIndex, int paragraphIndex, Paragraph dto, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateNotesSlideParagraph");
-            }
-            // verify the required parameter 'dto' is set
-            if (dto == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateNotesSlideParagraph");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Update portion properties. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="portionIndex">Portion index.</param> 
-        /// <param name="dto">Portion DTO.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Portion"/></returns>            
-        public Portion UpdateNotesSlidePortion(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, Portion dto, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateNotesSlidePortion");
-            }
-            // verify the required parameter 'dto' is set
-            if (dto == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateNotesSlidePortion");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Portion>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Update shape properties. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="dto">Shape DTO.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="ShapeBase"/></returns>            
-        public ShapeBase UpdateNotesSlideShape(string name, int slideIndex, int shapeIndex, ShapeBase dto, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateNotesSlideShape");
-            }
-            // verify the required parameter 'dto' is set
-            if (dto == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateNotesSlideShape");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/notesSlide/shapes/{shapeIndex}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Update paragraph properties. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="dto">Paragraph DTO.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Paragraph"/></returns>            
         public Paragraph UpdateParagraph(string name, int slideIndex, int shapeIndex, int paragraphIndex, Paragraph dto, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
@@ -6970,6 +8036,353 @@ namespace Aspose.Slides.Cloud.Sdk
             var postBody = SerializationHelper.Serialize(slideDto); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Slide>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Modify an animation effect for a special slide (master, layout, notes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="effectIndex">The position of the effect to be modified.</param> 
+        /// <param name="effect">Animation effect DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation UpdateSpecialSlideAnimationEffect(string name, int slideIndex, SpecialSlideType slideType, int effectIndex, Effect effect, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateSpecialSlideAnimationEffect");
+            }
+            // verify the required parameter 'effect' is set
+            if (effect == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'effect' when calling UpdateSpecialSlideAnimationEffect");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation/mainSequence/{effectIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "effectIndex", effectIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(effect); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Modify an animation effect for a special slide (master, layout, notes) interactive sequence. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="sequenceIndex">The position of the interactive sequence.</param> 
+        /// <param name="effectIndex">The position of the effect to be modified.</param> 
+        /// <param name="effect">Animation effect DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SlideAnimation"/></returns>            
+        public SlideAnimation UpdateSpecialSlideAnimationInteractiveSequenceEffect(string name, int slideIndex, SpecialSlideType slideType, int sequenceIndex, int effectIndex, Effect effect, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateSpecialSlideAnimationInteractiveSequenceEffect");
+            }
+            // verify the required parameter 'effect' is set
+            if (effect == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'effect' when calling UpdateSpecialSlideAnimationInteractiveSequenceEffect");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/animation/interactiveSequences/{sequenceIndex}/{effectIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "sequenceIndex", sequenceIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "effectIndex", effectIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(effect); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SlideAnimation>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Update paragraph properties. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="dto">Paragraph DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraph"/></returns>            
+        public Paragraph UpdateSpecialSlideParagraph(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, int paragraphIndex, Paragraph dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateSpecialSlideParagraph");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateSpecialSlideParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Update portion properties. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="dto">Portion DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portion"/></returns>            
+        public Portion UpdateSpecialSlidePortion(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, int paragraphIndex, int portionIndex, Portion dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateSpecialSlidePortion");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateSpecialSlidePortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portion>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Update shape properties. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="dto">Shape DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="ShapeBase"/></returns>            
+        public ShapeBase UpdateSpecialSlideShape(string name, int slideIndex, SpecialSlideType slideType, int shapeIndex, ShapeBase dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateSpecialSlideShape");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateSpecialSlideShape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Update shape properties (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="dto">Shape DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="ShapeBase"/></returns>            
+        public ShapeBase UpdateSpecialSlideSubshape(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, ShapeBase dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateSpecialSlideSubshape");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling UpdateSpecialSlideSubshape");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateSpecialSlideSubshape");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Update paragraph properties (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="dto">Paragraph DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraph"/></returns>            
+        public Paragraph UpdateSpecialSlideSubshapeParagraph(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, int paragraphIndex, Paragraph dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateSpecialSlideSubshapeParagraph");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling UpdateSpecialSlideSubshapeParagraph");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateSpecialSlideSubshapeParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Update portion properties (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Parent slide index.</param> 
+        /// <param name="slideType">Slide type (master, layout or notes).</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="dto">Portion DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portion"/></returns>            
+        public Portion UpdateSpecialSlideSubshapePortion(string name, int slideIndex, SpecialSlideType slideType, string path, int shapeIndex, int paragraphIndex, int portionIndex, Portion dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateSpecialSlideSubshapePortion");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling UpdateSpecialSlideSubshapePortion");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateSpecialSlideSubshapePortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portion>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>

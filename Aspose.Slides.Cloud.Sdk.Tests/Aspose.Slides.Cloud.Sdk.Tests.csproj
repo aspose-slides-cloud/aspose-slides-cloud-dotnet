@@ -89,6 +89,8 @@ OpenAPI spec version: 1.1
     <Compile Include="UseCases\CreateTests.cs" />
     <Compile Include="UseCases\HeaderFooterTests.cs" />
     <Compile Include="UseCases\ImageTests.cs" />
+    <Compile Include="UseCases\LayoutSlideTests.cs" />
+    <Compile Include="UseCases\MasterSlideTests.cs" />
     <Compile Include="UseCases\MergeTests.cs" />
     <Compile Include="UseCases\NotesSlideTests.cs" />
     <Compile Include="UseCases\NullableFieldTests.cs" />

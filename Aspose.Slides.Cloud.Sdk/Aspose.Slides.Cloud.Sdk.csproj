@@ -137,6 +137,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\SlideExportFormat.cs" />
     <Compile Include="Model\SmartArtNode.cs" />
     <Compile Include="Model\SoftEdgeEffect.cs" />
+    <Compile Include="Model\SpecialSlideType.cs" />
     <Compile Include="Model\StorageExist.cs" />
     <Compile Include="Model\StorageFile.cs" />
     <Compile Include="Model\TableCell.cs" />
