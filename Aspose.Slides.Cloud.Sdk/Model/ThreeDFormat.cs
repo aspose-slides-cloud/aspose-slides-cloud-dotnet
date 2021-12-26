@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ShapeBase.cs">
+// <copyright company="Aspose" file="ThreeDFormat.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,158 +35,154 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Slide shape.
+    /// ThreeDFormat
     /// </summary>  
-    public class ShapeBase : ResourceBase 
+    public class ThreeDFormat 
     {                       
         /// <summary>
-        /// Gets or Sets Type
+        /// Material
         /// </summary>
+        /// <value>Material</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum
+        public enum MaterialEnum
         {
             
             /// <summary>
-            /// Enum Shape for "Shape"
+            /// Enum Clear for "Clear"
             /// </summary>
-            Shape,
+            Clear,
             
             /// <summary>
-            /// Enum Chart for "Chart"
+            /// Enum DkEdge for "DkEdge"
             /// </summary>
-            Chart,
+            DkEdge,
             
             /// <summary>
-            /// Enum Table for "Table"
+            /// Enum Flat for "Flat"
             /// </summary>
-            Table,
+            Flat,
             
             /// <summary>
-            /// Enum PictureFrame for "PictureFrame"
+            /// Enum LegacyMatte for "LegacyMatte"
             /// </summary>
-            PictureFrame,
+            LegacyMatte,
             
             /// <summary>
-            /// Enum VideoFrame for "VideoFrame"
+            /// Enum LegacyMetal for "LegacyMetal"
             /// </summary>
-            VideoFrame,
+            LegacyMetal,
             
             /// <summary>
-            /// Enum AudioFrame for "AudioFrame"
+            /// Enum LegacyPlastic for "LegacyPlastic"
             /// </summary>
-            AudioFrame,
+            LegacyPlastic,
             
             /// <summary>
-            /// Enum SmartArt for "SmartArt"
+            /// Enum LegacyWireframe for "LegacyWireframe"
             /// </summary>
-            SmartArt,
+            LegacyWireframe,
             
             /// <summary>
-            /// Enum OleObjectFrame for "OleObjectFrame"
+            /// Enum Matte for "Matte"
             /// </summary>
-            OleObjectFrame,
+            Matte,
             
             /// <summary>
-            /// Enum GroupShape for "GroupShape"
+            /// Enum Metal for "Metal"
             /// </summary>
-            GroupShape,
+            Metal,
             
             /// <summary>
-            /// Enum GraphicalObject for "GraphicalObject"
+            /// Enum Plastic for "Plastic"
             /// </summary>
-            GraphicalObject,
+            Plastic,
             
             /// <summary>
-            /// Enum Connector for "Connector"
+            /// Enum Powder for "Powder"
             /// </summary>
-            Connector,
+            Powder,
             
             /// <summary>
-            /// Enum SmartArtShape for "SmartArtShape"
+            /// Enum SoftEdge for "SoftEdge"
             /// </summary>
-            SmartArtShape
+            SoftEdge,
+            
+            /// <summary>
+            /// Enum Softmetal for "Softmetal"
+            /// </summary>
+            Softmetal,
+            
+            /// <summary>
+            /// Enum TranslucentPowder for "TranslucentPowder"
+            /// </summary>
+            TranslucentPowder,
+            
+            /// <summary>
+            /// Enum WarmMatte for "WarmMatte"
+            /// </summary>
+            WarmMatte,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
         }
 
         /// <summary>
-        /// Gets or sets Type
+        /// Material
         /// </summary>
-        public TypeEnum? Type { get; set; }
+        public MaterialEnum? Material { get; set; }
 
         /// <summary>
-        /// Gets or sets the name.
+        /// Type of a bottom 3D bevel.             
         /// </summary>
-        public string Name { get; set; }
+        public ShapeBevel BevelBottom { get; set; }
 
         /// <summary>
-        /// Gets or sets the width.
+        /// Type of a top 3D bevel.             
         /// </summary>
-        public double? Width { get; set; }
+        public ShapeBevel BevelTop { get; set; }
 
         /// <summary>
-        /// Gets or sets the height.
+        /// Camera
         /// </summary>
-        public double? Height { get; set; }
+        public Camera Camera { get; set; }
 
         /// <summary>
-        /// Gets or sets the alternative text.
+        /// Contour color
         /// </summary>
-        public string AlternativeText { get; set; }
+        public string ContourColor { get; set; }
 
         /// <summary>
-        /// The title of alternative text associated with the shape.
+        /// Contour width
         /// </summary>
-        public string AlternativeTextTitle { get; set; }
+        public double? ContourWidth { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this ShapeBase is hidden.
+        /// Depth
         /// </summary>
-        public bool? Hidden { get; set; }
+        public double? Depth { get; set; }
 
         /// <summary>
-        /// Gets or sets the X
+        /// Extrusion color
         /// </summary>
-        public double? X { get; set; }
+        public string ExtrusionColor { get; set; }
 
         /// <summary>
-        /// Gets or sets the Y.
+        /// Extrusion height
         /// </summary>
-        public double? Y { get; set; }
+        public double? ExtrusionHeight { get; set; }
 
         /// <summary>
-        /// Gets z-order position of shape
+        /// Light rig
         /// </summary>
-        public int? ZOrderPosition { get; set; }
-
-        /// <summary>
-        /// Gets or sets the link to shapes.
-        /// </summary>
-        public ResourceUri Shapes { get; set; }
-
-        /// <summary>
-        /// Gets or sets the fill format.
-        /// </summary>
-        public FillFormat FillFormat { get; set; }
-
-        /// <summary>
-        /// Gets or sets the effect format.
-        /// </summary>
-        public EffectFormat EffectFormat { get; set; }
-
-        /// <summary>
-        /// Gets or sets the 3D format
-        /// </summary>
-        public ThreeDFormat ThreeDFormat { get; set; }
-
-        /// <summary>
-        /// Gets or sets the line format.
-        /// </summary>
-        public LineFormat LineFormat { get; set; }
+        public LightRig LightRig { get; set; }
 
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static new Dictionary<string, object> TypeDeterminers
+        public static Dictionary<string, object> TypeDeterminers
         {
             get
             {
@@ -202,7 +198,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public ShapeBase() : base()
+        public ThreeDFormat() : base()
         {
         }
 
@@ -213,24 +209,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class ShapeBase {\n");
-            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  Width: ").Append(this.Width).Append("\n");
-            sb.Append("  Height: ").Append(this.Height).Append("\n");
-            sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
-            sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
-            sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
-            sb.Append("  X: ").Append(this.X).Append("\n");
-            sb.Append("  Y: ").Append(this.Y).Append("\n");
-            sb.Append("  ZOrderPosition: ").Append(this.ZOrderPosition).Append("\n");
-            sb.Append("  Shapes: ").Append(this.Shapes).Append("\n");
-            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-            sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
-            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("class ThreeDFormat {\n");
+            sb.Append("  BevelBottom: ").Append(this.BevelBottom).Append("\n");
+            sb.Append("  BevelTop: ").Append(this.BevelTop).Append("\n");
+            sb.Append("  Camera: ").Append(this.Camera).Append("\n");
+            sb.Append("  ContourColor: ").Append(this.ContourColor).Append("\n");
+            sb.Append("  ContourWidth: ").Append(this.ContourWidth).Append("\n");
+            sb.Append("  Depth: ").Append(this.Depth).Append("\n");
+            sb.Append("  ExtrusionColor: ").Append(this.ExtrusionColor).Append("\n");
+            sb.Append("  ExtrusionHeight: ").Append(this.ExtrusionHeight).Append("\n");
+            sb.Append("  LightRig: ").Append(this.LightRig).Append("\n");
+            sb.Append("  Material: ").Append(this.Material).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

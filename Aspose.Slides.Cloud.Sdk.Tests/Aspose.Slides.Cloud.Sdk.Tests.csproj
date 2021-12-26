@@ -83,6 +83,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Api\SlidesApiTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UseCases\AbstractClassTests.cs" />
+    <Compile Include="UseCases\AnimationTests.cs" />
     <Compile Include="UseCases\AuthTests.cs" />
     <Compile Include="UseCases\ChartTests.cs" />
     <Compile Include="UseCases\ConvertTests.cs" />
@@ -98,6 +99,7 @@ OpenAPI spec version: 1.1
     <Compile Include="UseCases\PropertyTests.cs" />
     <Compile Include="UseCases\SectionTests.cs" />
     <Compile Include="UseCases\ShapeTests.cs" />
+    <Compile Include="UseCases\ShapeFormatTests.cs" />
     <Compile Include="UseCases\SplitTests.cs" />
     <Compile Include="UseCases\TextTests.cs" />
     <Compile Include="UseCases\TimeoutTests.cs" />

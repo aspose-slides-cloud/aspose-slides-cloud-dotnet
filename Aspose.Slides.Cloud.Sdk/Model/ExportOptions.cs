@@ -45,6 +45,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string DefaultRegularFont { get; set; }
 
         /// <summary>
+        /// Gets or sets the height of slides in the output format, e.g. image size, pdf page size etc.
+        /// </summary>
+        public int? Height { get; set; }
+
+        /// <summary>
+        /// Gets or sets the height of slides in the output format, e.g. image size, pdf page size etc.
+        /// </summary>
+        public int? Width { get; set; }
+
+        /// <summary>
         /// Gets or sets Format
         /// </summary>
         public string Format { get; set; }
@@ -82,6 +92,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class ExportOptions {\n");
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
+            sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

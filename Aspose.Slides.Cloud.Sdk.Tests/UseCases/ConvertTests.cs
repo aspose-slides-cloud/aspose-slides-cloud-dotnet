@@ -71,8 +71,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void ConvertPostFromStorage()
         {
-            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Stream converted = TestUtils.SlidesApi.DownloadPresentation(c_fileName, c_format, password: c_password, folder: c_folderName);
+            const string fileName = "test.pdf";
+            TestUtils.Upload(fileName, c_folderName + "/" + fileName);
+            Stream converted = TestUtils.SlidesApi.DownloadPresentation(fileName, ExportFormat.Html5, folder: c_folderName);
             Assert.IsNotNull(converted);
             Assert.Greater(converted.Length, 0);
             Assert.IsTrue(converted.CanRead);
@@ -100,11 +101,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void ConvertWithOptionsFromStorage()
         {
+            ExportFormat format = ExportFormat.Png;
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Stream converted = TestUtils.SlidesApi.DownloadPresentation(c_fileName, c_format, password: c_password, folder: c_folderName);
-            ExportOptions options = new PdfExportOptions { DrawSlidesFrame = true };
-            Stream convertedWithOptions = TestUtils.SlidesApi.DownloadPresentation(c_fileName, c_format, options, c_password, c_folderName);
-            Assert.AreNotEqual(converted.Length, convertedWithOptions.Length);
+            Stream converted = TestUtils.SlidesApi.DownloadPresentation(c_fileName, format, password: c_password, folder: c_folderName);
+            ExportOptions options = new ImageExportOptions { Width = 480, Height = 360 };
+            Stream convertedWithOptions = TestUtils.SlidesApi.DownloadPresentation(c_fileName, format, options, c_password, c_folderName);
+            Assert.Greater(converted.Length, convertedWithOptions.Length);
         }
 
         [Test]

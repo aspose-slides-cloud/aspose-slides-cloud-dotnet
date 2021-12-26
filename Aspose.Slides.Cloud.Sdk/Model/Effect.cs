@@ -1205,6 +1205,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public int? ShapeIndex { get; set; }
 
         /// <summary>
+        /// Paragraph index.
+        /// </summary>
+        public int? ParagraphIndex { get; set; }
+
+        /// <summary>
         /// The percentage of duration accelerate behavior effect.
         /// </summary>
         public double? Accelerate { get; set; }
@@ -1280,6 +1285,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Subtype: ").Append(this.Subtype).Append("\n");
             sb.Append("  PresetClassType: ").Append(this.PresetClassType).Append("\n");
             sb.Append("  ShapeIndex: ").Append(this.ShapeIndex).Append("\n");
+            sb.Append("  ParagraphIndex: ").Append(this.ParagraphIndex).Append("\n");
             sb.Append("  TriggerType: ").Append(this.TriggerType).Append("\n");
             sb.Append("  Accelerate: ").Append(this.Accelerate).Append("\n");
             sb.Append("  AutoReverse: ").Append(this.AutoReverse).Append("\n");

@@ -883,8 +883,8 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Create a presentation. 
         /// </summary>
         /// <param name="name">Document name.</param> 
-        /// <param name="data">Document input data.</param> 
-        /// <param name="inputPassword">The password for input document.</param> 
+        /// <param name="data">Source presentation binary data.</param> 
+        /// <param name="inputPassword">The password for source presentation.</param> 
         /// <param name="password">The document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
@@ -918,9 +918,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Create a presentation from an existing source. 
         /// </summary>
         /// <param name="name">Document name.</param> 
-        /// <param name="sourcePath">Template file path.</param> 
-        /// <param name="sourcePassword">Template file password.</param> 
-        /// <param name="sourceStorage">Template storage name.</param> 
+        /// <param name="sourcePath">Source file path.</param> 
+        /// <param name="sourcePassword">Source file password.</param> 
+        /// <param name="sourceStorage">Source storage name.</param> 
         /// <param name="password">The document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
@@ -4180,11 +4180,12 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="shapeIndex">Shape index. If specified, only effects related to that shape are returned.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="SlideAnimation"/></returns>            
-        public SlideAnimation GetAnimation(string name, int slideIndex, int? shapeIndex = null, string password = null, string folder = null, string storage = null)
+        public SlideAnimation GetAnimation(string name, int slideIndex, int? shapeIndex = null, int? paragraphIndex = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -4197,6 +4198,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "paragraphIndex", paragraphIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
@@ -5212,11 +5214,12 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="slideIndex">Parent slide index.</param> 
         /// <param name="slideType">Slide type (master, layout or notes).</param> 
         /// <param name="shapeIndex">Shape index. If specified, only effects related to that shape are returned.</param> 
+        /// <param name="paragraphIndex">Paragraph index. If specified, only effects related to that paragraph are returned.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="SlideAnimation"/></returns>            
-        public SlideAnimation GetSpecialSlideAnimation(string name, int slideIndex, SpecialSlideType slideType, int? shapeIndex = null, string password = null, string folder = null, string storage = null)
+        public SlideAnimation GetSpecialSlideAnimation(string name, int slideIndex, SpecialSlideType slideType, int? shapeIndex = null, int? paragraphIndex = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5230,6 +5233,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideType", slideType);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "paragraphIndex", paragraphIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);

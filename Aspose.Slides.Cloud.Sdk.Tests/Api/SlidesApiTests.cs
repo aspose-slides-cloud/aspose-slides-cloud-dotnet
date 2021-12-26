@@ -20442,7 +20442,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -20463,7 +20463,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -20484,7 +20484,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -20505,7 +20505,28 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetAnimationInvallidParagraphIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("GetAnimation", "ParagraphIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -20526,7 +20547,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -20547,7 +20568,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -20568,7 +20589,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25088,7 +25109,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25109,7 +25130,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25130,7 +25151,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25151,7 +25172,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25172,7 +25193,28 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetSpecialSlideAnimationInvallidParagraphIndex()
+        {
+            TestExecutor<SlideAnimation> testExecutor = new TestExecutor<SlideAnimation>("GetSpecialSlideAnimation", "ParagraphIndex");
+            SlideAnimation response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25193,7 +25235,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25214,7 +25256,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -25235,7 +25277,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             bool needAssertResponse = false;
             try
             {
-                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                response = m_instance.GetSpecialSlideAnimation(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<SpecialSlideType>("SlideType"), testExecutor.GetTestValue<int?>("ShapeIndex"), testExecutor.GetTestValue<int?>("ParagraphIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)

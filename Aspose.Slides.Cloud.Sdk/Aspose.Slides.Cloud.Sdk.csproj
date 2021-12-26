@@ -60,7 +60,7 @@ OpenAPI spec version: 1.1
   <ItemGroup>
     <Compile Include="Api\ApiBase.cs" />
     <Compile Include="Api\ApiException.cs" />
-    <Compile Include="Api\Configutation.cs" />
+    <Compile Include="Api\Configuration.cs" />
     <Compile Include="Api\SlidesApi.cs" />
     <Compile Include="Internal\ApiAccessor.cs" />
     <Compile Include="Internal\ApiInvoker.cs" />
@@ -82,6 +82,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\Axes.cs" />
     <Compile Include="Model\Axis.cs" />
     <Compile Include="Model\BlurEffect.cs" />
+    <Compile Include="Model\Camera.cs" />
     <Compile Include="Model\ChartCategory.cs" />
     <Compile Include="Model\ChartTitle.cs" />
     <Compile Include="Model\ChartWall.cs" />
@@ -111,6 +112,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\InputFile.cs" />
     <Compile Include="Model\InteractiveSequence.cs" />
     <Compile Include="Model\Legend.cs" />
+    <Compile Include="Model\LightRig.cs" />
     <Compile Include="Model\LineFormat.cs" />
     <Compile Include="Model\MergingSource.cs" />
     <Compile Include="Model\NormalViewRestoredProperties.cs" />
@@ -129,6 +131,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\ResourceUri.cs" />
     <Compile Include="Model\Series.cs" />
     <Compile Include="Model\SeriesMarker.cs" />
+    <Compile Include="Model\ShapeBevel.cs" />
     <Compile Include="Model\ShapeExportFormat.cs" />
     <Compile Include="Model\ShapeImageExportOptions.cs" />
     <Compile Include="Model\ShapeThumbnailBounds.cs" />
@@ -145,6 +148,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\TableRow.cs" />
     <Compile Include="Model\Task.cs" />
     <Compile Include="Model\TextItem.cs" />
+    <Compile Include="Model\ThreeDFormat.cs" />
     <Compile Include="Model\AddLayoutSlide.cs" />
     <Compile Include="Model\AddMasterSlide.cs" />
     <Compile Include="Model\AddShape.cs" />
@@ -160,6 +164,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\FormatScheme.cs" />
     <Compile Include="Model\GradientFill.cs" />
     <Compile Include="Model\HeaderFooter.cs" />
+    <Compile Include="Model\Html5ExportOptions.cs" />
     <Compile Include="Model\HtmlExportOptions.cs" />
     <Compile Include="Model\Image.cs" />
     <Compile Include="Model\ImageExportOptions.cs" />

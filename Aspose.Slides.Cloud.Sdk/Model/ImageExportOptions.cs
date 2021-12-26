@@ -142,6 +142,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class ImageExportOptions {\n");
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
+            sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
             sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");

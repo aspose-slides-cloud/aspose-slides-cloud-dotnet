@@ -209,8 +209,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideAnimation animation = TestUtils.SlidesApi.GetSpecialSlideAnimation(
-                c_fileName, c_slideIndex, SpecialSlideType.LayoutSlide, null, c_password, c_folderName);
-            Assert.AreEqual(1, animation.MainSequence.Count);
+                c_fileName, c_slideIndex, SpecialSlideType.LayoutSlide, null, null, c_password, c_folderName);
+            Assert.AreEqual(0, animation.MainSequence.Count);
 
             SlideAnimation dto = new SlideAnimation
             {
@@ -232,14 +232,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 c_fileName, c_slideIndex, SpecialSlideType.LayoutSlide, dto, c_password, c_folderName);
             Assert.AreEqual(dto.MainSequence.Count, animation.MainSequence.Count);
             animation = TestUtils.SlidesApi.GetSpecialSlideAnimation(
-                c_fileName, c_slideIndex, SpecialSlideType.LayoutSlide, 3, c_password, c_folderName);
+                c_fileName, c_slideIndex, SpecialSlideType.LayoutSlide, 3, null, c_password, c_folderName);
             Assert.AreEqual(1, animation.MainSequence.Count);
 
             animation = TestUtils.SlidesApi.DeleteSpecialSlideAnimationEffect(
                 c_fileName, c_slideIndex, SpecialSlideType.LayoutSlide, 2, c_password, c_folderName);
             Assert.AreEqual(dto.MainSequence.Count - 1, animation.MainSequence.Count);
             animation = TestUtils.SlidesApi.GetSpecialSlideAnimation(
-                c_fileName, c_slideIndex, SpecialSlideType.LayoutSlide, 3, c_password, c_folderName);
+                c_fileName, c_slideIndex, SpecialSlideType.LayoutSlide, 3, null, c_password, c_folderName);
             Assert.AreEqual(0, animation.MainSequence.Count);
 
             animation = TestUtils.SlidesApi.DeleteSpecialSlideAnimation(
@@ -252,7 +252,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const string c_password = "password";
         const int c_slideIndex = 1;
         const int c_shapeIndex = 2;
-        const int c_shapeCount = 6;
+        const int c_shapeCount = 5;
         const int c_paragraphIndex = 1;
         const int c_paragraphCount = 1;
         const int c_portionCount = 1;

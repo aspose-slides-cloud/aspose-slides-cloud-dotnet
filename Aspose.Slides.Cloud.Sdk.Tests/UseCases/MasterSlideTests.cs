@@ -209,7 +209,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideAnimation animation = TestUtils.SlidesApi.GetSpecialSlideAnimation(
-                c_fileName, c_slideIndex, SpecialSlideType.MasterSlide, null, c_password, c_folderName);
+                c_fileName, c_slideIndex, SpecialSlideType.MasterSlide, null, null, c_password, c_folderName);
             Assert.AreEqual(1, animation.MainSequence.Count);
 
             SlideAnimation dto = new SlideAnimation
@@ -232,14 +232,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 c_fileName, c_slideIndex, SpecialSlideType.MasterSlide, dto, c_password, c_folderName);
             Assert.AreEqual(dto.MainSequence.Count, animation.MainSequence.Count);
             animation = TestUtils.SlidesApi.GetSpecialSlideAnimation(
-                c_fileName, c_slideIndex, SpecialSlideType.MasterSlide, 3, c_password, c_folderName);
+                c_fileName, c_slideIndex, SpecialSlideType.MasterSlide, 3, null, c_password, c_folderName);
             Assert.AreEqual(1, animation.MainSequence.Count);
 
             animation = TestUtils.SlidesApi.DeleteSpecialSlideAnimationEffect(
                 c_fileName, c_slideIndex, SpecialSlideType.MasterSlide, 2, c_password, c_folderName);
             Assert.AreEqual(dto.MainSequence.Count - 1, animation.MainSequence.Count);
             animation = TestUtils.SlidesApi.GetSpecialSlideAnimation(
-                c_fileName, c_slideIndex, SpecialSlideType.MasterSlide, 3, c_password, c_folderName);
+                c_fileName, c_slideIndex, SpecialSlideType.MasterSlide, 3, null, c_password, c_folderName);
             Assert.AreEqual(0, animation.MainSequence.Count);
 
             animation = TestUtils.SlidesApi.DeleteSpecialSlideAnimation(

@@ -118,20 +118,15 @@ namespace Aspose.Slides.Cloud.Sdk
                 case "POST":
                 case "PUT":
                 case "DELETE":
-                    using (MemoryStream inputData = new MemoryStream())
-                    {
-                        WriteBodyAndFiles(inputData, body, files, ref contentType);
-                        client.ContentType = contentType;
-                        m_requestHandlers.ForEach(p => p.BeforeSend(client, inputData));
-                        inputData.Position = 0;
 #if NETFRAMEWORK
-                        using (Stream requestStream = client.GetRequestStream())
+                    using (Stream requestStream = client.GetRequestStream())
 #else
-                        using (Stream requestStream = client.GetRequestStreamAsync().Result)
+                    using (Stream requestStream = client.GetRequestStreamAsync().Result)
 #endif
-                        {
-                            StreamHelper.CopyTo(inputData, requestStream);
-                        }
+                    {
+                        WriteBodyAndFiles(requestStream, body, files, ref contentType);
+                        client.ContentType = contentType;
+                        m_requestHandlers.ForEach(p => p.BeforeSend(client, null));
                     }
                     break;
                 default:
