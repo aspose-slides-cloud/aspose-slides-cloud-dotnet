@@ -32,7 +32,7 @@ using System.IO.Compression;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    ///  Class for testing image methods
     /// </summary>
     [TestFixture]
     public class ImageTests

@@ -32,7 +32,7 @@ using System.IO;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    ///  Class for testing merge methods
     /// </summary>
     [TestFixture]
     public class MergeTests
@@ -50,9 +50,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TestUtils.Upload(c_fileName2, c_folderName + "/" + c_fileName2);
+            TestUtils.Upload(c_pdfFileName, c_folderName + "/" + c_pdfFileName);
             PresentationsMergeRequest request = new PresentationsMergeRequest
             {
-                PresentationPaths = new List<string> { c_folderName + "/" + c_fileName2 }
+                PresentationPaths = new List<string> { c_folderName + "/" + c_fileName2, c_folderName + "/" + c_pdfFileName }
             };
             Document result = TestUtils.SlidesApi.Merge(c_fileName, request, c_password, c_folderName);
             Assert.IsNotNull(result);
@@ -142,6 +143,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
+        const string c_pdfFileName = "test.pdf";
         const string c_fileName2 = "test-unprotected.pptx";
         const string c_outpath = "merged.pptx";
         const string c_password = "password";

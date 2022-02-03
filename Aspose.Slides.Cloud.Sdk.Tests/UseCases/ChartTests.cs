@@ -31,7 +31,7 @@ using System.Collections.Generic;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    ///  Class for testing chart API
     /// </summary>
     [TestFixture]
     public class ChartTests

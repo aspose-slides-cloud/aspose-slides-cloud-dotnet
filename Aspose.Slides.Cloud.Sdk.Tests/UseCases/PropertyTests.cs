@@ -32,7 +32,7 @@ using System.IO;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    ///  Class for testing property methods
     /// </summary>
     [TestFixture]
     public class PropertyTests

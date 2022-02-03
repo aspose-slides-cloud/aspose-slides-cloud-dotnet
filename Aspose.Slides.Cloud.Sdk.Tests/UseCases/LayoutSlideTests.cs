@@ -31,7 +31,7 @@ using NUnit.Framework;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    ///  Class for testing layout slide methods
     /// </summary>
     [TestFixture]
     public class LayoutSlideTests
@@ -210,7 +210,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideAnimation animation = TestUtils.SlidesApi.GetSpecialSlideAnimation(
                 c_fileName, c_slideIndex, SpecialSlideType.LayoutSlide, null, null, c_password, c_folderName);
-            Assert.AreEqual(0, animation.MainSequence.Count);
+            Assert.AreEqual(1, animation.MainSequence.Count);
 
             SlideAnimation dto = new SlideAnimation
             {
@@ -252,7 +252,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const string c_password = "password";
         const int c_slideIndex = 1;
         const int c_shapeIndex = 2;
-        const int c_shapeCount = 5;
+        const int c_shapeCount = 6;
         const int c_paragraphIndex = 1;
         const int c_paragraphCount = 1;
         const int c_portionCount = 1;

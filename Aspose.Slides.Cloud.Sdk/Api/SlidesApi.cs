@@ -126,6 +126,47 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Changes the placement of selected shapes on the slide. Aligns shapes to the margins or the edge of the slide or aligns them relative to each other (for group shapes only). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path (for smart art and group shapes).</param> 
+        /// <param name="alignmentType">Alignment type that will be applied to the shapes.</param> 
+        /// <param name="alignToSlide">If true, shapes will be aligned relative to the slide edges.</param> 
+        /// <param name="shapes">Shapes indexes.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Shapes"/></returns>            
+        public Shapes AlignSubshapes(string name, int slideIndex, string path, ShapesAlignmentType alignmentType, bool? alignToSlide = null, List<int> shapes = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling AlignSubshapes");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling AlignSubshapes");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/align/{alignmentType}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "alignmentType", alignmentType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "alignToSlide", alignToSlide);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapes", shapes);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Shapes>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Convert presentation from request content to format specified. 
         /// </summary>
         /// <param name="document">Document data.</param> 
@@ -2198,7 +2239,7 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphs">The indices of the shapes to be deleted; delete all by default.</param> 
+        /// <param name="paragraphs">The indices of the paragraphs to be deleted; delete all by default.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
@@ -2265,7 +2306,7 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="portions">The indices of the shapes to be deleted; delete all by default.</param> 
+        /// <param name="portions">The indices of the portions to be deleted; delete all by default.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
@@ -3306,7 +3347,7 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphs">The indices of the shapes to be deleted; delete all by default.</param> 
+        /// <param name="paragraphs">The indices of the paragraphs to be deleted; delete all by default.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
@@ -3387,7 +3428,7 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="path">Shape path.</param> 
         /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="portions">The indices of the shapes to be deleted; delete all by default.</param> 
+        /// <param name="portions">The indices of the portions to be deleted; delete all by default.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
@@ -3830,6 +3871,40 @@ namespace Aspose.Slides.Cloud.Sdk
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
             return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Convert Mathematical Text to MathML Format 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream DownloadPortionAsMathMl(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DownloadPortionAsMathMl");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}/mathml");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -4983,6 +5058,36 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<ShapeBase>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Returns geometry path of the shape 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="GeometryPaths"/></returns>            
+        public GeometryPaths GetShapeGeometryPath(string name, int slideIndex, int shapeIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetShapeGeometryPath");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/geometryPath");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<GeometryPaths>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -6567,6 +6672,47 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Convert Mathematical Text to MathML Format and saves result to the storage 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="outPath">Path to save result.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Presentation folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void SavePortionAsMathMl(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string outPath, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SavePortionAsMathMl");
+            }
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling SavePortionAsMathMl");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}/mathml");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", outPath);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            InvokeVoidApi(resourcePath, "PUT", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Save a presentation to a specified format. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -7307,6 +7453,43 @@ namespace Aspose.Slides.Cloud.Sdk
             var postBody = SerializationHelper.Serialize(sections); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Sections>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Sets geometry path to the shape 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="dto">Geometry paths DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="ShapeBase"/></returns>            
+        public ShapeBase SetShapeGeometryPath(string name, int slideIndex, int shapeIndex, GeometryPaths dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SetShapeGeometryPath");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling SetShapeGeometryPath");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/geometryPath");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<ShapeBase>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>

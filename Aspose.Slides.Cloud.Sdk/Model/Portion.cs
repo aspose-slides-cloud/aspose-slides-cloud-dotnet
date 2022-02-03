@@ -425,6 +425,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string Text { get; set; }
 
         /// <summary>
+        /// Math paragraph.
+        /// </summary>
+        public MathParagraph MathParagraph { get; set; }
+
+        /// <summary>
         /// Superscript or subscript of the text.
         /// </summary>
         public double? Escapement { get; set; }
@@ -494,6 +499,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public LineFormat UnderlineLineFormat { get; set; }
 
+        /// <summary>
+        /// Hyperlink defined for mouse click.
+        /// </summary>
+        public Hyperlink HyperlinkClick { get; set; }
+
+        /// <summary>
+        /// Hyperlink defined for mouse over.
+        /// </summary>
+        public Hyperlink HyperlinkMouseOver { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -529,6 +544,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
             sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
             sb.Append("  Text: ").Append(this.Text).Append("\n");
+            sb.Append("  MathParagraph: ").Append(this.MathParagraph).Append("\n");
             sb.Append("  FontBold: ").Append(this.FontBold).Append("\n");
             sb.Append("  FontItalic: ").Append(this.FontItalic).Append("\n");
             sb.Append("  FontUnderline: ").Append(this.FontUnderline).Append("\n");
@@ -553,6 +569,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  UnderlineFillFormat: ").Append(this.UnderlineFillFormat).Append("\n");
             sb.Append("  UnderlineLineFormat: ").Append(this.UnderlineLineFormat).Append("\n");
+            sb.Append("  HyperlinkClick: ").Append(this.HyperlinkClick).Append("\n");
+            sb.Append("  HyperlinkMouseOver: ").Append(this.HyperlinkMouseOver).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

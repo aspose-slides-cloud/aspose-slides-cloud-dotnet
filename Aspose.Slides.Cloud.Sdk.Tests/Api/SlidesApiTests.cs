@@ -476,6 +476,220 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test AlignSubshapes
+        /// </summary>
+        [Test]
+        public void AlignSubshapes()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSubshapes", null);
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSubshapesInvallidName()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSubshapes", "Name");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSubshapesInvallidSlideIndex()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSubshapes", "SlideIndex");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSubshapesInvallidPath()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSubshapes", "Path");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSubshapesInvallidAlignmentType()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSubshapes", "AlignmentType");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSubshapesInvallidAlignToSlide()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSubshapes", "AlignToSlide");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSubshapesInvallidShapes()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSubshapes", "Shapes");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSubshapesInvallidPassword()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSubshapes", "Password");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSubshapesInvallidFolder()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSubshapes", "Folder");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void AlignSubshapesInvallidStorage()
+        {
+            TestExecutor<Shapes> testExecutor = new TestExecutor<Shapes>("AlignSubshapes", "Storage");
+            Shapes response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.AlignSubshapes(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<string>("Path"), testExecutor.GetTestValue<ShapesAlignmentType>("AlignmentType"), testExecutor.GetTestValue<bool?>("AlignToSlide"), testExecutor.GetTestValue<List<int>>("Shapes"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test Convert
         /// </summary>
         [Test]
@@ -18342,6 +18556,199 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test DownloadPortionAsMathMl
+        /// </summary>
+        [Test]
+        public void DownloadPortionAsMathMl()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadPortionAsMathMl", null);
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadPortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadPortionAsMathMlInvallidName()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadPortionAsMathMl", "Name");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadPortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadPortionAsMathMlInvallidSlideIndex()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadPortionAsMathMl", "SlideIndex");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadPortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadPortionAsMathMlInvallidShapeIndex()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadPortionAsMathMl", "ShapeIndex");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadPortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadPortionAsMathMlInvallidParagraphIndex()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadPortionAsMathMl", "ParagraphIndex");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadPortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadPortionAsMathMlInvallidPortionIndex()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadPortionAsMathMl", "PortionIndex");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadPortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadPortionAsMathMlInvallidPassword()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadPortionAsMathMl", "Password");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadPortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadPortionAsMathMlInvallidFolder()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadPortionAsMathMl", "Folder");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadPortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DownloadPortionAsMathMlInvallidStorage()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DownloadPortionAsMathMl", "Storage");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DownloadPortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test DownloadPresentation
         /// </summary>
         [Test]
@@ -24066,6 +24473,157 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.GetShape(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test GetShapeGeometryPath
+        /// </summary>
+        [Test]
+        public void GetShapeGeometryPath()
+        {
+            TestExecutor<GeometryPaths> testExecutor = new TestExecutor<GeometryPaths>("GetShapeGeometryPath", null);
+            GeometryPaths response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetShapeGeometryPathInvallidName()
+        {
+            TestExecutor<GeometryPaths> testExecutor = new TestExecutor<GeometryPaths>("GetShapeGeometryPath", "Name");
+            GeometryPaths response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetShapeGeometryPathInvallidSlideIndex()
+        {
+            TestExecutor<GeometryPaths> testExecutor = new TestExecutor<GeometryPaths>("GetShapeGeometryPath", "SlideIndex");
+            GeometryPaths response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetShapeGeometryPathInvallidShapeIndex()
+        {
+            TestExecutor<GeometryPaths> testExecutor = new TestExecutor<GeometryPaths>("GetShapeGeometryPath", "ShapeIndex");
+            GeometryPaths response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetShapeGeometryPathInvallidPassword()
+        {
+            TestExecutor<GeometryPaths> testExecutor = new TestExecutor<GeometryPaths>("GetShapeGeometryPath", "Password");
+            GeometryPaths response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetShapeGeometryPathInvallidFolder()
+        {
+            TestExecutor<GeometryPaths> testExecutor = new TestExecutor<GeometryPaths>("GetShapeGeometryPath", "Folder");
+            GeometryPaths response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void GetShapeGeometryPathInvallidStorage()
+        {
+            TestExecutor<GeometryPaths> testExecutor = new TestExecutor<GeometryPaths>("GetShapeGeometryPath", "Storage");
+            GeometryPaths response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.GetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)
@@ -31370,6 +31928,220 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test SavePortionAsMathMl
+        /// </summary>
+        [Test]
+        public void SavePortionAsMathMl()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SavePortionAsMathMl", null);
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SavePortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SavePortionAsMathMlInvallidName()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SavePortionAsMathMl", "Name");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SavePortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SavePortionAsMathMlInvallidSlideIndex()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SavePortionAsMathMl", "SlideIndex");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SavePortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SavePortionAsMathMlInvallidShapeIndex()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SavePortionAsMathMl", "ShapeIndex");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SavePortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SavePortionAsMathMlInvallidParagraphIndex()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SavePortionAsMathMl", "ParagraphIndex");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SavePortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SavePortionAsMathMlInvallidPortionIndex()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SavePortionAsMathMl", "PortionIndex");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SavePortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SavePortionAsMathMlInvallidOutPath()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SavePortionAsMathMl", "OutPath");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SavePortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SavePortionAsMathMlInvallidPassword()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SavePortionAsMathMl", "Password");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SavePortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SavePortionAsMathMlInvallidFolder()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SavePortionAsMathMl", "Folder");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SavePortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        [Test]
+        public void SavePortionAsMathMlInvallidStorage()
+        {
+            VoidTestExecutor testExecutor = new VoidTestExecutor("SavePortionAsMathMl", "Storage");
+            
+            bool needAssertResponse = false;
+            try
+            {
+                m_instance.SavePortionAsMathMl(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<int>("ParagraphIndex"), testExecutor.GetTestValue<int>("PortionIndex"), testExecutor.GetTestValue<string>("OutPath"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult();
+            }
+        }
+
+        
+        /// <summary>
         /// Test SavePresentation
         /// </summary>
         [Test]
@@ -34977,6 +35749,178 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.SetSections(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<Sections>("Sections"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test SetShapeGeometryPath
+        /// </summary>
+        [Test]
+        public void SetShapeGeometryPath()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("SetShapeGeometryPath", null);
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<GeometryPaths>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetShapeGeometryPathInvallidName()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("SetShapeGeometryPath", "Name");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<GeometryPaths>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetShapeGeometryPathInvallidSlideIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("SetShapeGeometryPath", "SlideIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<GeometryPaths>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetShapeGeometryPathInvallidShapeIndex()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("SetShapeGeometryPath", "ShapeIndex");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<GeometryPaths>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetShapeGeometryPathInvallidDto()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("SetShapeGeometryPath", "Dto");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<GeometryPaths>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetShapeGeometryPathInvallidPassword()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("SetShapeGeometryPath", "Password");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<GeometryPaths>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetShapeGeometryPathInvallidFolder()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("SetShapeGeometryPath", "Folder");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<GeometryPaths>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void SetShapeGeometryPathInvallidStorage()
+        {
+            TestExecutor<ShapeBase> testExecutor = new TestExecutor<ShapeBase>("SetShapeGeometryPath", "Storage");
+            ShapeBase response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.SetShapeGeometryPath(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<GeometryPaths>("Dto"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)

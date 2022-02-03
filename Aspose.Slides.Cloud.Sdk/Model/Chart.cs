@@ -563,6 +563,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  HyperlinkClick: ").Append(this.HyperlinkClick).Append("\n");
+            sb.Append("  HyperlinkMouseOver: ").Append(this.HyperlinkMouseOver).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  ChartType: ").Append(this.ChartType).Append("\n");
             sb.Append("  ShowDataLabelsOverMaximum: ").Append(this.ShowDataLabelsOverMaximum).Append("\n");

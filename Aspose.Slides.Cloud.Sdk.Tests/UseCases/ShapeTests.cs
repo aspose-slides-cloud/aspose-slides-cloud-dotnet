@@ -31,7 +31,7 @@ using System.Collections.Generic;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    ///  Class for testing shape methods
     /// </summary>
     [TestFixture]
     public class ShapeTests
@@ -268,8 +268,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void GroupShapeEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CreateShape(
-                c_fileName, c_slideIndex, new GroupShape(), password: c_password, folder: c_folderName));
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new GroupShape(), password: c_password, folder: c_folderName);
+            Assert.IsInstanceOf<GroupShape>(shape);
         }
 
         [Test]
@@ -318,6 +319,68 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(shape1.X, shape2.X);
             Assert.AreEqual(shape1.Y.Value, shape2.Y.Value, 1.0);
             Assert.AreEqual(0, shape1.X.Value, 1.0);
+        }
+
+        [Test]
+        public void ShapesAlignGroup()
+        {
+            const int slideIndex = 1;
+            string path = "4/shapes";
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            ShapeBase shape1 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, path, 1, c_password, c_folderName);
+            ShapeBase shape2 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, path, 2, c_password, c_folderName);
+            Assert.AreNotEqual(shape1.X, shape2.X);
+            Assert.AreNotEqual(shape1.Y, shape2.Y);
+
+            TestUtils.SlidesApi.AlignSubshapes(
+                c_fileName, slideIndex, path, ShapesAlignmentType.AlignTop, null, null, c_password, c_folderName);
+            shape1 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, path, 1, c_password, c_folderName);
+            shape2 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, path, 2, c_password, c_folderName);
+            Assert.AreNotEqual(shape1.X, shape2.X);
+            Assert.AreEqual(shape1.Y.Value, shape2.Y.Value, 1.0);
+
+            TestUtils.SlidesApi.AlignSubshapes(
+                c_fileName, slideIndex, path, ShapesAlignmentType.AlignLeft, true, new List<int> { 1, 2 }, c_password, c_folderName);
+            shape1 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, path, 1, c_password, c_folderName);
+            shape2 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, path, 2, c_password, c_folderName);
+            Assert.AreEqual(shape1.X.Value, shape2.X.Value, 1.0);
+            Assert.AreEqual(shape1.Y.Value, shape2.Y.Value, 1.0);
+            Assert.AreEqual(0, shape1.X.Value, 1.0);
+        }
+
+        [Test]
+        public void ShapeGeometryGet()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            GeometryPaths paths = TestUtils.SlidesApi.GetShapeGeometryPath(c_fileName, 4, 2, c_password, c_folderName);
+            Assert.IsNotNull(paths.Paths);
+            Assert.AreEqual(1, paths.Paths.Count);
+        }
+
+        [Test]
+        public void ShapeGeometrySet()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            GeometryPaths dto = new GeometryPaths
+            {
+                Paths = new List<GeometryPath>
+                {
+                    new GeometryPath
+                    {
+                        PathData = new List<PathSegment>
+                        {
+                            new MoveToPathSegment { X = 0, Y = 0 },
+                            new LineToPathSegment { X = 0, Y = 200 },
+                            new LineToPathSegment { X = 200, Y = 300 },
+                            new LineToPathSegment { X = 400, Y = 200 },
+                            new LineToPathSegment { X = 400, Y = 0 },
+                            new ClosePathSegment()
+                        }
+                    }
+                }
+            };
+            ShapeBase shape = TestUtils.SlidesApi.SetShapeGeometryPath(c_fileName, 4, 1, dto, c_password, c_folderName);
+            Assert.IsNotNull(shape);
         }
 
         const string c_folderName = "TempSlidesSDK";

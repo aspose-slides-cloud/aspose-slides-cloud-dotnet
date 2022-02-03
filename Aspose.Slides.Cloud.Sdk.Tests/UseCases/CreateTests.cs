@@ -31,7 +31,7 @@ using NUnit.Framework;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    ///  Class for testing presentation creation API
     /// </summary>
     [TestFixture]
     public class CreateTests

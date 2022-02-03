@@ -150,7 +150,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// <summary>
             /// Enum Fodp for "Fodp"
             /// </summary>
-            Fodp
+            Fodp,
+            
+            /// <summary>
+            /// Enum Xaml for "Xaml"
+            /// </summary>
+            Xaml
         }
 
         /// <summary>

@@ -31,7 +31,7 @@ using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    ///  Class for testing nullable fields
     /// </summary>
     [TestFixture]
     public class NullableFieldTests

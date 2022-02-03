@@ -63,6 +63,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             AllSlides,
             
             /// <summary>
+            /// Enum InClickSequence for "InClickSequence"
+            /// </summary>
+            InClickSequence,
+            
+            /// <summary>
             /// Enum Mixed for "Mixed"
             /// </summary>
             Mixed
@@ -152,6 +157,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string Base64Data { get; set; }
 
+        /// <summary>
+        /// Determines whether an audio is playing across the slides.
+        /// </summary>
+        public bool? PlayAcrossSlides { get; set; }
+
+        /// <summary>
+        /// Determines whether audio is automatically rewound to start after playing.
+        /// </summary>
+        public bool? RewindAudio { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -202,6 +217,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  HyperlinkClick: ").Append(this.HyperlinkClick).Append("\n");
+            sb.Append("  HyperlinkMouseOver: ").Append(this.HyperlinkMouseOver).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
             sb.Append("  AudioCdEndTrack: ").Append(this.AudioCdEndTrack).Append("\n");
@@ -214,6 +231,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  PlayMode: ").Append(this.PlayMode).Append("\n");
             sb.Append("  Volume: ").Append(this.Volume).Append("\n");
             sb.Append("  Base64Data: ").Append(this.Base64Data).Append("\n");
+            sb.Append("  PlayAcrossSlides: ").Append(this.PlayAcrossSlides).Append("\n");
+            sb.Append("  RewindAudio: ").Append(this.RewindAudio).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

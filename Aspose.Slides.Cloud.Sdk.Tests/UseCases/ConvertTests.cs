@@ -32,7 +32,7 @@ using NUnit.Framework;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    ///  Class for testing conversion methods
     /// </summary>
     [TestFixture]
     public class ConvertTests

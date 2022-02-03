@@ -30,7 +30,7 @@ using NUnit.Framework;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    ///  Class for testing abstract classes
     /// </summary>
     [TestFixture]
     public class AbstractClassTests

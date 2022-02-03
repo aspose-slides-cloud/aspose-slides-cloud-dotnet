@@ -63,6 +63,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             AllSlides,
             
             /// <summary>
+            /// Enum InClickSequence for "InClickSequence"
+            /// </summary>
+            InClickSequence,
+            
+            /// <summary>
             /// Enum Mixed for "Mixed"
             /// </summary>
             Mixed
@@ -187,6 +192,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  HyperlinkClick: ").Append(this.HyperlinkClick).Append("\n");
+            sb.Append("  HyperlinkMouseOver: ").Append(this.HyperlinkMouseOver).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
             sb.Append("  FullScreenMode: ").Append(this.FullScreenMode).Append("\n");
