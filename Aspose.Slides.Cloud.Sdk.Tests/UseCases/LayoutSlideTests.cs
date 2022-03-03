@@ -24,6 +24,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Collections.Generic;
+using System.IO;
 using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
@@ -246,6 +247,27 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 c_fileName, c_slideIndex, SpecialSlideType.LayoutSlide, c_password, c_folderName);
             Assert.AreEqual(0, animation.MainSequence.Count);
         }
+        
+        [Test]
+        public void LayoutSlideDeleteUnused()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            LayoutSlides layoutSlidesBefore = TestUtils.SlidesApi.GetLayoutSlides(c_fileName, c_password, c_folderName);
+            Assert.AreEqual(c_slidesCount, layoutSlidesBefore.SlideList.Count);
+            
+            LayoutSlides layoutSlidesAfter = TestUtils.SlidesApi.DeleteUnusedLayoutSlides(c_fileName, c_password,c_folderName);
+            Assert.AreEqual(2, layoutSlidesAfter.SlideList.Count);
+        }
+        
+        [Test]
+        public void LayoutSlideDeleteUnusedOnline()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+
+            Stream result = TestUtils.SlidesApi.DeleteUnusedLayoutSlidesOnline(file, c_password);
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.CanRead);
+        }
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
@@ -256,5 +278,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const int c_paragraphIndex = 1;
         const int c_paragraphCount = 1;
         const int c_portionCount = 1;
+        const int c_slidesCount = 11;
     }
 }

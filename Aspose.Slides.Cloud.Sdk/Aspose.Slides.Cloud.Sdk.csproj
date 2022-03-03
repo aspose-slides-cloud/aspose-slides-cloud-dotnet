@@ -153,6 +153,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\TableColumn.cs" />
     <Compile Include="Model\TableRow.cs" />
     <Compile Include="Model\Task.cs" />
+    <Compile Include="Model\TextFrameFormat.cs" />
     <Compile Include="Model\TextItem.cs" />
     <Compile Include="Model\ThreeDFormat.cs" />
     <Compile Include="Model\AccentElement.cs" />
@@ -167,7 +168,6 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\BlockElement.cs" />
     <Compile Include="Model\BorderBoxElement.cs" />
     <Compile Include="Model\BoxElement.cs" />
-    <Compile Include="Model\BubbleSeries.cs" />
     <Compile Include="Model\ClosePathSegment.cs" />
     <Compile Include="Model\ColorScheme.cs" />
     <Compile Include="Model\CubicBezierToPathSegment.cs" />
@@ -232,7 +232,6 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\SaveShape.cs" />
     <Compile Include="Model\SaveSlide.cs" />
     <Compile Include="Model\ScatterChartDataPoint.cs" />
-    <Compile Include="Model\ScatterSeries.cs" />
     <Compile Include="Model\Section.cs" />
     <Compile Include="Model\Sections.cs" />
     <Compile Include="Model\ShapeBase.cs" />
@@ -255,28 +254,37 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\TiffExportOptions.cs" />
     <Compile Include="Model\UpdateBackground.cs" />
     <Compile Include="Model\UpdateShape.cs" />
+    <Compile Include="Model\VideoExportOptions.cs" />
     <Compile Include="Model\ViewProperties.cs" />
+    <Compile Include="Model\XYSeries.cs" />
     <Compile Include="Model\XamlExportOptions.cs" />
     <Compile Include="Model\XpsExportOptions.cs" />
     <Compile Include="Model\BoxAndWhiskerSeries.cs" />
     <Compile Include="Model\BubbleChartDataPoint.cs" />
+    <Compile Include="Model\BubbleSeries.cs" />
     <Compile Include="Model\Chart.cs" />
     <Compile Include="Model\DocumentReplaceResult.cs" />
     <Compile Include="Model\GeometryShape.cs" />
     <Compile Include="Model\GraphicalObject.cs" />
     <Compile Include="Model\GroupShape.cs" />
     <Compile Include="Model\OleObjectFrame.cs" />
+    <Compile Include="Model\ScatterSeries.cs" />
     <Compile Include="Model\SlideReplaceResult.cs" />
     <Compile Include="Model\SmartArt.cs" />
+    <Compile Include="Model\SummaryZoomFrame.cs" />
     <Compile Include="Model\Table.cs" />
     <Compile Include="Model\WaterfallChartDataPoint.cs" />
     <Compile Include="Model\WaterfallSeries.cs" />
+    <Compile Include="Model\ZoomObject.cs" />
     <Compile Include="Model\AudioFrame.cs" />
     <Compile Include="Model\Connector.cs" />
     <Compile Include="Model\PictureFrame.cs" />
+    <Compile Include="Model\SectionZoomFrame.cs" />
     <Compile Include="Model\Shape.cs" />
     <Compile Include="Model\SmartArtShape.cs" />
     <Compile Include="Model\VideoFrame.cs" />
+    <Compile Include="Model\ZoomFrame.cs" />
+    <Compile Include="Model\SummaryZoomSection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -382,6 +382,41 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             ShapeBase shape = TestUtils.SlidesApi.SetShapeGeometryPath(c_fileName, 4, 1, dto, c_password, c_folderName);
             Assert.IsNotNull(shape);
         }
+        
+        [Test]
+        public void ZoomFrameAdd()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            ZoomFrame dto = new ZoomFrame()
+            {
+                X = 20,
+                Y = 20,
+                Width = 200,
+                Height = 100,
+                TargetSlideIndex = 2
+            };
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            Assert.IsInstanceOf<ZoomFrame>(shape);
+            Assert.AreEqual(((ZoomFrame)shape).TargetSlideIndex, 2);
+        }
+        
+        [Test]
+        public void SectionZoomFrameAdd()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            SectionZoomFrame dto = new SectionZoomFrame()
+            {
+                X = 20,
+                Y = 20,
+                Width = 200,
+                Height = 100,
+                TargetSectionIndex = 2
+            };
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            Assert.IsInstanceOf<SectionZoomFrame>(shape);
+            Assert.AreEqual(((SectionZoomFrame)shape).TargetSectionIndex, 2);
+        }
+        
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";

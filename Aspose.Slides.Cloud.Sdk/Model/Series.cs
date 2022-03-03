@@ -522,26 +522,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public int? Order { get; set; }
 
         /// <summary>
-        /// The number format for the series y values.
-        /// </summary>
-        public string NumberFormatOfYValues { get; set; }
-
-        /// <summary>
-        /// The number format for the series x values.
-        /// </summary>
-        public string NumberFormatOfXValues { get; set; }
-
-        /// <summary>
-        /// The number format for the series values.
-        /// </summary>
-        public string NumberFormatOfValues { get; set; }
-
-        /// <summary>
-        /// The number format for the series bubble sizes.
-        /// </summary>
-        public string NumberFormatOfBubbleSizes { get; set; }
-
-        /// <summary>
         /// True if the series shall invert its colors if the value is negative. Applies to bar, column and bubble series.
         /// </summary>
         public bool? InvertIfNegative { get; set; }
@@ -610,10 +590,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
             sb.Append("  PlotOnSecondAxis: ").Append(this.PlotOnSecondAxis).Append("\n");
             sb.Append("  Order: ").Append(this.Order).Append("\n");
-            sb.Append("  NumberFormatOfYValues: ").Append(this.NumberFormatOfYValues).Append("\n");
-            sb.Append("  NumberFormatOfXValues: ").Append(this.NumberFormatOfXValues).Append("\n");
-            sb.Append("  NumberFormatOfValues: ").Append(this.NumberFormatOfValues).Append("\n");
-            sb.Append("  NumberFormatOfBubbleSizes: ").Append(this.NumberFormatOfBubbleSizes).Append("\n");
             sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");
             sb.Append("  Explosion: ").Append(this.Explosion).Append("\n");
             sb.Append("  Marker: ").Append(this.Marker).Append("\n");

@@ -32,7 +32,7 @@ using System.Threading;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    ///  Class for testing Text methods
     /// </summary>
     [TestFixture]
     public class TextTests
@@ -96,12 +96,46 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsTrue(slideResult.CanRead);
             Assert.IsTrue(slideResultIgnoreCase.CanRead);
         }
+        
+        [Test]
+        public void HighlightShapeText()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            const int shapeIndex = 1, slideIndex = 6, paragraphIndex = 1;
+            TestUtils.SlidesApi.HighlightShapeText(
+                c_fileName, slideIndex, shapeIndex, c_textToHighlight, c_highlightColor, null, false, c_password, c_folderName);
+            
+            Paragraph para = TestUtils.SlidesApi.GetParagraph(c_fileName, slideIndex, shapeIndex, paragraphIndex, c_password, c_folderName);
+            Assert.AreNotEqual(para.PortionList[0].Text, c_textToHighlight);
+            Assert.AreNotEqual(para.PortionList[0].HighlightColor, c_highlightColor);
+            Assert.AreEqual(para.PortionList[1].Text, c_textToHighlight);
+            Assert.AreEqual(para.PortionList[1].HighlightColor, c_highlightColor);
+        }
+        
+        [Test]
+        public void HighlightShapeRegex()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            const int shapeIndex = 1, slideIndex = 6, paragraphIndex = 1;
+            
+            TestUtils.SlidesApi.HighlightShapeRegex(
+                c_fileName, slideIndex, shapeIndex, c_highlightRegex, c_highlightColor, null, false, c_password, c_folderName);
+
+            Paragraph para = TestUtils.SlidesApi.GetParagraph(c_fileName, slideIndex, shapeIndex, paragraphIndex, c_password, c_folderName);
+            Assert.AreNotEqual(para.PortionList[0].Text, c_textToHighlight);
+            Assert.AreNotEqual(para.PortionList[0].HighlightColor, c_highlightColor);
+            Assert.AreEqual(para.PortionList[1].Text, c_textToHighlight);
+            Assert.AreEqual(para.PortionList[1].HighlightColor, c_highlightColor);
+        }
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
         const string c_password = "password";
         const string c_oldValue = "text";
         const string c_newValue = "new_text";
+        const string c_textToHighlight = "highlight";
+        const string c_highlightColor = "#FFF5FF8A";
+        const string c_highlightRegex = "h.ghl[abci]ght";
         const int c_slideIndex = 1;
     }
 }

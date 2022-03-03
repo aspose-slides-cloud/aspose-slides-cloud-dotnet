@@ -141,6 +141,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             
             /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
             /// Enum Days for "Days"
             /// </summary>
             Days,
@@ -163,6 +168,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MajorUnitScaleEnum
         {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
             
             /// <summary>
             /// Enum Days for "Days"
@@ -216,6 +226,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MinorUnitScaleEnum
         {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
             
             /// <summary>
             /// Enum Days for "Days"

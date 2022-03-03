@@ -85,10 +85,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
             sb.Append("  PlotOnSecondAxis: ").Append(this.PlotOnSecondAxis).Append("\n");
             sb.Append("  Order: ").Append(this.Order).Append("\n");
-            sb.Append("  NumberFormatOfYValues: ").Append(this.NumberFormatOfYValues).Append("\n");
-            sb.Append("  NumberFormatOfXValues: ").Append(this.NumberFormatOfXValues).Append("\n");
-            sb.Append("  NumberFormatOfValues: ").Append(this.NumberFormatOfValues).Append("\n");
-            sb.Append("  NumberFormatOfBubbleSizes: ").Append(this.NumberFormatOfBubbleSizes).Append("\n");
             sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");
             sb.Append("  Explosion: ").Append(this.Explosion).Append("\n");
             sb.Append("  Marker: ").Append(this.Marker).Append("\n");
@@ -97,6 +93,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
             sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
+            sb.Append("  NumberFormatOfValues: ").Append(this.NumberFormatOfValues).Append("\n");
             sb.Append("  ShowConnectorLines: ").Append(this.ShowConnectorLines).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

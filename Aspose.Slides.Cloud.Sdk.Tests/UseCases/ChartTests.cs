@@ -302,10 +302,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Height = 300,
                 Categories = new List<ChartCategory>
                 {
-                    new ChartCategory { Value = "Leaf1", Level = 3, ParentCategories = new List<string> { "Branch1", "Stem1" } },
-                    new ChartCategory { Value = "Leaf2", Level = 3, ParentCategories = new List<string> { "Branch1", "Stem1" } },
-                    new ChartCategory { Value = "Branch2", Level = 2, ParentCategories = new List<string> { "Stem1" } },
-                    new ChartCategory { Value = "Stem2", Level = 1 }
+                    new ChartCategory { Value = "Leaf1", ParentCategories = new List<string> { "Branch1", "Stem1" } },
+                    new ChartCategory { Value = "Leaf2", ParentCategories = new List<string> { "Branch1", "Stem1" } },
+                    new ChartCategory { Value = "Branch2", ParentCategories = new List<string> { "Stem1" } },
+                    new ChartCategory { Value = "Stem2" }
                 },
                 Series = new List<Series>
                 {
@@ -327,7 +327,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsNotNull(chart);
             Assert.AreEqual(1, chart.Series.Count);
             Assert.AreEqual(4, chart.Categories.Count);
-            Assert.AreEqual(3, chart.Categories[0].Level.Value);
         }
 
         const string c_folderName = "TempSlidesSDK";

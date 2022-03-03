@@ -16992,6 +16992,182 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         
         /// <summary>
+        /// Test DeleteUnusedLayoutSlides
+        /// </summary>
+        [Test]
+        public void DeleteUnusedLayoutSlides()
+        {
+            TestExecutor<LayoutSlides> testExecutor = new TestExecutor<LayoutSlides>("DeleteUnusedLayoutSlides", null);
+            LayoutSlides response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteUnusedLayoutSlides(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteUnusedLayoutSlidesInvallidName()
+        {
+            TestExecutor<LayoutSlides> testExecutor = new TestExecutor<LayoutSlides>("DeleteUnusedLayoutSlides", "Name");
+            LayoutSlides response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteUnusedLayoutSlides(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteUnusedLayoutSlidesInvallidPassword()
+        {
+            TestExecutor<LayoutSlides> testExecutor = new TestExecutor<LayoutSlides>("DeleteUnusedLayoutSlides", "Password");
+            LayoutSlides response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteUnusedLayoutSlides(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteUnusedLayoutSlidesInvallidFolder()
+        {
+            TestExecutor<LayoutSlides> testExecutor = new TestExecutor<LayoutSlides>("DeleteUnusedLayoutSlides", "Folder");
+            LayoutSlides response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteUnusedLayoutSlides(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteUnusedLayoutSlidesInvallidStorage()
+        {
+            TestExecutor<LayoutSlides> testExecutor = new TestExecutor<LayoutSlides>("DeleteUnusedLayoutSlides", "Storage");
+            LayoutSlides response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteUnusedLayoutSlides(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test DeleteUnusedLayoutSlidesOnline
+        /// </summary>
+        [Test]
+        public void DeleteUnusedLayoutSlidesOnline()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DeleteUnusedLayoutSlidesOnline", null);
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteUnusedLayoutSlidesOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<string>("Password"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteUnusedLayoutSlidesOnlineInvallidDocument()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DeleteUnusedLayoutSlidesOnline", "Document");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteUnusedLayoutSlidesOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<string>("Password"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void DeleteUnusedLayoutSlidesOnlineInvallidPassword()
+        {
+            TestExecutor<System.IO.Stream> testExecutor = new TestExecutor<System.IO.Stream>("DeleteUnusedLayoutSlidesOnline", "Password");
+            System.IO.Stream response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.DeleteUnusedLayoutSlidesOnline(testExecutor.GetTestValue<System.IO.Stream>("Document"), testExecutor.GetTestValue<string>("Password"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
         /// Test DeleteWatermark
         /// </summary>
         [Test]
@@ -29486,6 +29662,476 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             try
             {
                 response = m_instance.GetViewProperties(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test HighlightShapeRegex
+        /// </summary>
+        [Test]
+        public void HighlightShapeRegex()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeRegex", null);
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeRegex(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Regex"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeRegexInvallidName()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeRegex", "Name");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeRegex(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Regex"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeRegexInvallidSlideIndex()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeRegex", "SlideIndex");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeRegex(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Regex"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeRegexInvallidShapeIndex()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeRegex", "ShapeIndex");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeRegex(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Regex"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeRegexInvallidRegex()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeRegex", "Regex");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeRegex(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Regex"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeRegexInvallidColor()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeRegex", "Color");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeRegex(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Regex"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeRegexInvallidWholeWordsOnly()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeRegex", "WholeWordsOnly");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeRegex(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Regex"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeRegexInvallidIgnoreCase()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeRegex", "IgnoreCase");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeRegex(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Regex"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeRegexInvallidPassword()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeRegex", "Password");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeRegex(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Regex"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeRegexInvallidFolder()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeRegex", "Folder");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeRegex(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Regex"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeRegexInvallidStorage()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeRegex", "Storage");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeRegex(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Regex"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        
+        /// <summary>
+        /// Test HighlightShapeText
+        /// </summary>
+        [Test]
+        public void HighlightShapeText()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeText", null);
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeText(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Text"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeTextInvallidName()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeText", "Name");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeText(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Text"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeTextInvallidSlideIndex()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeText", "SlideIndex");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeText(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Text"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeTextInvallidShapeIndex()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeText", "ShapeIndex");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeText(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Text"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeTextInvallidText()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeText", "Text");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeText(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Text"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeTextInvallidColor()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeText", "Color");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeText(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Text"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeTextInvallidWholeWordsOnly()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeText", "WholeWordsOnly");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeText(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Text"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeTextInvallidIgnoreCase()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeText", "IgnoreCase");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeText(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Text"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeTextInvallidPassword()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeText", "Password");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeText(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Text"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeTextInvallidFolder()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeText", "Folder");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeText(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Text"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
+                needAssertResponse = true;
+            }
+            catch (Exception ex)
+            {
+                testExecutor.AssertException(ex);
+            }
+            if (needAssertResponse)
+            {
+                testExecutor.AssertResult(response);
+            }
+        }
+
+        [Test]
+        public void HighlightShapeTextInvallidStorage()
+        {
+            TestExecutor<Shape> testExecutor = new TestExecutor<Shape>("HighlightShapeText", "Storage");
+            Shape response = null;
+            bool needAssertResponse = false;
+            try
+            {
+                response = m_instance.HighlightShapeText(testExecutor.GetTestValue<string>("Name"), testExecutor.GetTestValue<int>("SlideIndex"), testExecutor.GetTestValue<int>("ShapeIndex"), testExecutor.GetTestValue<string>("Text"), testExecutor.GetTestValue<string>("Color"), testExecutor.GetTestValue<bool?>("WholeWordsOnly"), testExecutor.GetTestValue<bool?>("IgnoreCase"), testExecutor.GetTestValue<string>("Password"), testExecutor.GetTestValue<string>("Folder"), testExecutor.GetTestValue<string>("Storage"));
                 needAssertResponse = true;
             }
             catch (Exception ex)

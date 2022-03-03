@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ShapeBase.cs">
+// <copyright company="Aspose" file="ZoomObject.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,182 +35,53 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Slide shape.
+    /// 
     /// </summary>  
-    public class ShapeBase : ResourceBase 
+    public class ZoomObject : ShapeBase 
     {                       
         /// <summary>
-        /// Gets or Sets Type
+        /// Image type of a zoom object. 
         /// </summary>
+        /// <value>Image type of a zoom object. </value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum
+        public enum ImageTypeEnum
         {
             
             /// <summary>
-            /// Enum Shape for "Shape"
+            /// Enum Preview for "Preview"
             /// </summary>
-            Shape,
+            Preview,
             
             /// <summary>
-            /// Enum Chart for "Chart"
+            /// Enum Cover for "Cover"
             /// </summary>
-            Chart,
-            
-            /// <summary>
-            /// Enum Table for "Table"
-            /// </summary>
-            Table,
-            
-            /// <summary>
-            /// Enum PictureFrame for "PictureFrame"
-            /// </summary>
-            PictureFrame,
-            
-            /// <summary>
-            /// Enum VideoFrame for "VideoFrame"
-            /// </summary>
-            VideoFrame,
-            
-            /// <summary>
-            /// Enum AudioFrame for "AudioFrame"
-            /// </summary>
-            AudioFrame,
-            
-            /// <summary>
-            /// Enum SmartArt for "SmartArt"
-            /// </summary>
-            SmartArt,
-            
-            /// <summary>
-            /// Enum OleObjectFrame for "OleObjectFrame"
-            /// </summary>
-            OleObjectFrame,
-            
-            /// <summary>
-            /// Enum GroupShape for "GroupShape"
-            /// </summary>
-            GroupShape,
-            
-            /// <summary>
-            /// Enum GraphicalObject for "GraphicalObject"
-            /// </summary>
-            GraphicalObject,
-            
-            /// <summary>
-            /// Enum Connector for "Connector"
-            /// </summary>
-            Connector,
-            
-            /// <summary>
-            /// Enum SmartArtShape for "SmartArtShape"
-            /// </summary>
-            SmartArtShape,
-            
-            /// <summary>
-            /// Enum ZoomFrame for "ZoomFrame"
-            /// </summary>
-            ZoomFrame,
-            
-            /// <summary>
-            /// Enum SectionZoomFrame for "SectionZoomFrame"
-            /// </summary>
-            SectionZoomFrame,
-            
-            /// <summary>
-            /// Enum SummaryZoomFrame for "SummaryZoomFrame"
-            /// </summary>
-            SummaryZoomFrame,
-            
-            /// <summary>
-            /// Enum SummaryZoomSection for "SummaryZoomSection"
-            /// </summary>
-            SummaryZoomSection
+            Cover
         }
 
         /// <summary>
-        /// Gets or sets Type
+        /// Image type of a zoom object. 
         /// </summary>
-        public TypeEnum? Type { get; set; }
+        public ImageTypeEnum? ImageType { get; set; }
 
         /// <summary>
-        /// Gets or sets the name.
+        /// Navigation behavior in slideshow. 
         /// </summary>
-        public string Name { get; set; }
+        public bool? ReturnToParent { get; set; }
 
         /// <summary>
-        /// Gets or sets the width.
+        /// Specifies whether the Zoom will use the background of the destination slide.
         /// </summary>
-        public double? Width { get; set; }
+        public bool? ShowBackground { get; set; }
 
         /// <summary>
-        /// Gets or sets the height.
+        /// Internal image link for zoom object
         /// </summary>
-        public double? Height { get; set; }
+        public ResourceUri Image { get; set; }
 
         /// <summary>
-        /// Gets or sets the alternative text.
+        /// Duration of the transition between Zoom and slide.
         /// </summary>
-        public string AlternativeText { get; set; }
-
-        /// <summary>
-        /// The title of alternative text associated with the shape.
-        /// </summary>
-        public string AlternativeTextTitle { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether this ShapeBase is hidden.
-        /// </summary>
-        public bool? Hidden { get; set; }
-
-        /// <summary>
-        /// Gets or sets the X
-        /// </summary>
-        public double? X { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Y.
-        /// </summary>
-        public double? Y { get; set; }
-
-        /// <summary>
-        /// Gets z-order position of shape
-        /// </summary>
-        public int? ZOrderPosition { get; set; }
-
-        /// <summary>
-        /// Gets or sets the link to shapes.
-        /// </summary>
-        public ResourceUri Shapes { get; set; }
-
-        /// <summary>
-        /// Gets or sets the fill format.
-        /// </summary>
-        public FillFormat FillFormat { get; set; }
-
-        /// <summary>
-        /// Gets or sets the effect format.
-        /// </summary>
-        public EffectFormat EffectFormat { get; set; }
-
-        /// <summary>
-        /// Gets or sets the 3D format
-        /// </summary>
-        public ThreeDFormat ThreeDFormat { get; set; }
-
-        /// <summary>
-        /// Gets or sets the line format.
-        /// </summary>
-        public LineFormat LineFormat { get; set; }
-
-        /// <summary>
-        /// Hyperlink defined for mouse click.
-        /// </summary>
-        public Hyperlink HyperlinkClick { get; set; }
-
-        /// <summary>
-        /// Hyperlink defined for mouse over.
-        /// </summary>
-        public Hyperlink HyperlinkMouseOver { get; set; }
+        public double? TransitionDuration { get; set; }
 
 
         /// <summary>
@@ -232,7 +103,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public ShapeBase() : base()
+        public ZoomObject() : base()
         {
         }
 
@@ -243,7 +114,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class ShapeBase {\n");
+            sb.Append("class ZoomObject {\n");
             sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
             sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
             sb.Append("  Name: ").Append(this.Name).Append("\n");
@@ -263,6 +134,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  HyperlinkClick: ").Append(this.HyperlinkClick).Append("\n");
             sb.Append("  HyperlinkMouseOver: ").Append(this.HyperlinkMouseOver).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  ImageType: ").Append(this.ImageType).Append("\n");
+            sb.Append("  ReturnToParent: ").Append(this.ReturnToParent).Append("\n");
+            sb.Append("  ShowBackground: ").Append(this.ShowBackground).Append("\n");
+            sb.Append("  Image: ").Append(this.Image).Append("\n");
+            sb.Append("  TransitionDuration: ").Append(this.TransitionDuration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

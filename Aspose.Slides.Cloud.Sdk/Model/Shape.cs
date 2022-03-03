@@ -49,6 +49,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public ResourceUri Paragraphs { get; set; }
 
+        /// <summary>
+        /// Returns TextFrame's formatting properties.
+        /// </summary>
+        public TextFrameFormat TextFrameFormat { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -105,6 +110,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
             sb.Append("  Text: ").Append(this.Text).Append("\n");
             sb.Append("  Paragraphs: ").Append(this.Paragraphs).Append("\n");
+            sb.Append("  TextFrameFormat: ").Append(this.TextFrameFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

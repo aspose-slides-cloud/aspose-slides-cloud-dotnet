@@ -160,7 +160,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Enum Xaml for "Xaml"
         /// </summary>
-        Xaml
+        Xaml,
+        
+        /// <summary>
+        /// Enum Mpeg4 for "Mpeg4"
+        /// </summary>
+        Mpeg4
     }
 
 }

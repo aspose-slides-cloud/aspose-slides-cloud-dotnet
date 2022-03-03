@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="BubbleSeries.cs">
+// <copyright company="Aspose" file="SummaryZoomSection.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,19 +35,19 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// A bubble series.
+    /// Represents summary zoom section
     /// </summary>  
-    public class BubbleSeries : XYSeries 
+    public class SummaryZoomSection : SectionZoomFrame 
     {                       
         /// <summary>
-        /// Gets or sets the values.
+        /// Section title
         /// </summary>
-        public List<BubbleChartDataPoint> DataPoints { get; set; }
+        public string Title { get; set; }
 
         /// <summary>
-        /// The number format for the series bubble sizes.
+        /// Description of the Summary Zoom Section object. 
         /// </summary>
-        public string NumberFormatOfBubbleSizes { get; set; }
+        public string Description { get; set; }
 
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("DataPointType", DataPointTypeEnum.Bubble);
+                    s_typeDeterminers.Add("Type", TypeEnum.SummaryZoomSection);
                 }
                 return s_typeDeterminers;
             }
@@ -70,9 +70,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public BubbleSeries() : base()
+        public SummaryZoomSection() : base()
         {
-            DataPointType = DataPointTypeEnum.Bubble;
+            Type = TypeEnum.SummaryZoomSection;
         }
 
         /// <summary>
@@ -82,25 +82,34 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class BubbleSeries {\n");
-            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("class SummaryZoomSection {\n");
+            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
+            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
             sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  IsColorVaried: ").Append(this.IsColorVaried).Append("\n");
-            sb.Append("  InvertedSolidFillColor: ").Append(this.InvertedSolidFillColor).Append("\n");
-            sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
-            sb.Append("  PlotOnSecondAxis: ").Append(this.PlotOnSecondAxis).Append("\n");
-            sb.Append("  Order: ").Append(this.Order).Append("\n");
-            sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");
-            sb.Append("  Explosion: ").Append(this.Explosion).Append("\n");
-            sb.Append("  Marker: ").Append(this.Marker).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
+            sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
+            sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
+            sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
+            sb.Append("  X: ").Append(this.X).Append("\n");
+            sb.Append("  Y: ").Append(this.Y).Append("\n");
+            sb.Append("  ZOrderPosition: ").Append(this.ZOrderPosition).Append("\n");
+            sb.Append("  Shapes: ").Append(this.Shapes).Append("\n");
             sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-            sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
-            sb.Append("  NumberFormatOfYValues: ").Append(this.NumberFormatOfYValues).Append("\n");
-            sb.Append("  NumberFormatOfXValues: ").Append(this.NumberFormatOfXValues).Append("\n");
-            sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
-            sb.Append("  NumberFormatOfBubbleSizes: ").Append(this.NumberFormatOfBubbleSizes).Append("\n");
+            sb.Append("  HyperlinkClick: ").Append(this.HyperlinkClick).Append("\n");
+            sb.Append("  HyperlinkMouseOver: ").Append(this.HyperlinkMouseOver).Append("\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  ImageType: ").Append(this.ImageType).Append("\n");
+            sb.Append("  ReturnToParent: ").Append(this.ReturnToParent).Append("\n");
+            sb.Append("  ShowBackground: ").Append(this.ShowBackground).Append("\n");
+            sb.Append("  Image: ").Append(this.Image).Append("\n");
+            sb.Append("  TransitionDuration: ").Append(this.TransitionDuration).Append("\n");
+            sb.Append("  TargetSectionIndex: ").Append(this.TargetSectionIndex).Append("\n");
+            sb.Append("  Title: ").Append(this.Title).Append("\n");
+            sb.Append("  Description: ").Append(this.Description).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

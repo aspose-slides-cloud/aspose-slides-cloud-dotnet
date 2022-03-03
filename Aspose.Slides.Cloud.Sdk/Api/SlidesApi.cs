@@ -3499,6 +3499,58 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Removes unused layout slides. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="LayoutSlides"/></returns>            
+        public LayoutSlides DeleteUnusedLayoutSlides(string name, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteUnusedLayoutSlides");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/layoutSlides");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<LayoutSlides>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Removes unused layout slides. 
+        /// </summary>
+        /// <param name="document">Document data</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream DeleteUnusedLayoutSlidesOnline(System.IO.Stream document, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling DeleteUnusedLayoutSlidesOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/layoutSlides/delete");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Removes shapes with name \&quot;watermark\&quot; from the presentation. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -6064,6 +6116,102 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<ViewProperties>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Highlight all matches of sample in text frame text using specified color. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="regex">Regular expression.</param> 
+        /// <param name="color">Highlighting color.</param> 
+        /// <param name="wholeWordsOnly">Match only whole words.</param> 
+        /// <param name="ignoreCase">True to search ignoring char case.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Shape"/></returns>            
+        public Shape HighlightShapeRegex(string name, int slideIndex, int shapeIndex, string regex, string color, bool? wholeWordsOnly = null, bool? ignoreCase = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling HighlightShapeRegex");
+            }
+            // verify the required parameter 'regex' is set
+            if (regex == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'regex' when calling HighlightShapeRegex");
+            }
+            // verify the required parameter 'color' is set
+            if (color == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'color' when calling HighlightShapeRegex");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/highlightRegex");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "regex", regex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "color", color);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "wholeWordsOnly", wholeWordsOnly);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignoreCase", ignoreCase);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Shape>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Highlight all matches of sample in text frame text using specified color. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="text">Text sample to highlight.</param> 
+        /// <param name="color">Highlighting color.</param> 
+        /// <param name="wholeWordsOnly">Match only whole words.</param> 
+        /// <param name="ignoreCase">True to search ignoring char case.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Shape"/></returns>            
+        public Shape HighlightShapeText(string name, int slideIndex, int shapeIndex, string text, string color, bool? wholeWordsOnly = null, bool? ignoreCase = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling HighlightShapeText");
+            }
+            // verify the required parameter 'text' is set
+            if (text == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'text' when calling HighlightShapeText");
+            }
+            // verify the required parameter 'color' is set
+            if (color == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'color' when calling HighlightShapeText");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/highlightText");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "text", text);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "color", color);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "wholeWordsOnly", wholeWordsOnly);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignoreCase", ignoreCase);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Shape>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>

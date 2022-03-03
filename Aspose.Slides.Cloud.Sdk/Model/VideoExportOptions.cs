@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="BubbleSeries.cs">
+// <copyright company="Aspose" file="VideoExportOptions.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,19 +35,48 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// A bubble series.
+    /// Provides options that control how a presentation is saved in an video format.
     /// </summary>  
-    public class BubbleSeries : XYSeries 
+    public class VideoExportOptions : ExportOptions 
     {                       
         /// <summary>
-        /// Gets or sets the values.
+        /// Video resolution type
         /// </summary>
-        public List<BubbleChartDataPoint> DataPoints { get; set; }
+        /// <value>Video resolution type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum VideoResolutionTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum FullHD for "FullHD"
+            /// </summary>
+            FullHD,
+            
+            /// <summary>
+            /// Enum SD for "SD"
+            /// </summary>
+            SD,
+            
+            /// <summary>
+            /// Enum HD for "HD"
+            /// </summary>
+            HD,
+            
+            /// <summary>
+            /// Enum QHD for "QHD"
+            /// </summary>
+            QHD
+        }
 
         /// <summary>
-        /// The number format for the series bubble sizes.
+        /// Video resolution type
         /// </summary>
-        public string NumberFormatOfBubbleSizes { get; set; }
+        public VideoResolutionTypeEnum? VideoResolutionType { get; set; }
+
+        /// <summary>
+        /// Transition duration.
+        /// </summary>
+        public int? TransitionDuration { get; set; }
 
 
         /// <summary>
@@ -60,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("DataPointType", DataPointTypeEnum.Bubble);
+                    s_typeDeterminers.Add("Format", "mpeg4");
                 }
                 return s_typeDeterminers;
             }
@@ -70,9 +99,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public BubbleSeries() : base()
+        public VideoExportOptions() : base()
         {
-            DataPointType = DataPointTypeEnum.Bubble;
+            Format = "mpeg4";
         }
 
         /// <summary>
@@ -82,25 +111,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class BubbleSeries {\n");
-            sb.Append("  Type: ").Append(this.Type).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  IsColorVaried: ").Append(this.IsColorVaried).Append("\n");
-            sb.Append("  InvertedSolidFillColor: ").Append(this.InvertedSolidFillColor).Append("\n");
-            sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
-            sb.Append("  PlotOnSecondAxis: ").Append(this.PlotOnSecondAxis).Append("\n");
-            sb.Append("  Order: ").Append(this.Order).Append("\n");
-            sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");
-            sb.Append("  Explosion: ").Append(this.Explosion).Append("\n");
-            sb.Append("  Marker: ").Append(this.Marker).Append("\n");
-            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-            sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
-            sb.Append("  NumberFormatOfYValues: ").Append(this.NumberFormatOfYValues).Append("\n");
-            sb.Append("  NumberFormatOfXValues: ").Append(this.NumberFormatOfXValues).Append("\n");
-            sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
-            sb.Append("  NumberFormatOfBubbleSizes: ").Append(this.NumberFormatOfBubbleSizes).Append("\n");
+            sb.Append("class VideoExportOptions {\n");
+            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
+            sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  TransitionDuration: ").Append(this.TransitionDuration).Append("\n");
+            sb.Append("  VideoResolutionType: ").Append(this.VideoResolutionType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
