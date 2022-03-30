@@ -84,6 +84,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\BlurEffect.cs" />
     <Compile Include="Model\Camera.cs" />
     <Compile Include="Model\ChartCategory.cs" />
+    <Compile Include="Model\ChartLinesFormat.cs" />
     <Compile Include="Model\ChartTitle.cs" />
     <Compile Include="Model\ChartWall.cs" />
     <Compile Include="Model\CommonSlideViewProperties.cs" />
@@ -102,6 +103,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\FilesUploadResult.cs" />
     <Compile Include="Model\FillFormat.cs" />
     <Compile Include="Model\FillOverlayEffect.cs" />
+    <Compile Include="Model\FontFallbackRule.cs" />
     <Compile Include="Model\FontSet.cs" />
     <Compile Include="Model\GeometryPath.cs" />
     <Compile Include="Model\GeometryPaths.cs" />
@@ -141,8 +143,9 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\ShapeExportFormat.cs" />
     <Compile Include="Model\ShapeImageExportOptions.cs" />
     <Compile Include="Model\ShapeThumbnailBounds.cs" />
+    <Compile Include="Model\ShapeType.cs" />
     <Compile Include="Model\ShapesAlignmentType.cs" />
-    <Compile Include="Model\SlideComment.cs" />
+    <Compile Include="Model\SlideCommentBase.cs" />
     <Compile Include="Model\SlideExportFormat.cs" />
     <Compile Include="Model\SmartArtNode.cs" />
     <Compile Include="Model\SoftEdgeEffect.cs" />
@@ -153,6 +156,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\TableColumn.cs" />
     <Compile Include="Model\TableRow.cs" />
     <Compile Include="Model\Task.cs" />
+    <Compile Include="Model\TextBounds.cs" />
     <Compile Include="Model\TextFrameFormat.cs" />
     <Compile Include="Model\TextItem.cs" />
     <Compile Include="Model\ThreeDFormat.cs" />
@@ -239,7 +243,9 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\Slide.cs" />
     <Compile Include="Model\SlideAnimation.cs" />
     <Compile Include="Model\SlideBackground.cs" />
+    <Compile Include="Model\SlideComment.cs" />
     <Compile Include="Model\SlideComments.cs" />
+    <Compile Include="Model\SlideModernComment.cs" />
     <Compile Include="Model\SlideProperties.cs" />
     <Compile Include="Model\Slides.cs" />
     <Compile Include="Model\SolidFill.cs" />

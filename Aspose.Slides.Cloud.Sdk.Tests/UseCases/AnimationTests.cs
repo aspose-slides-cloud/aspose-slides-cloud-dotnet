@@ -34,7 +34,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing animation API
     /// </summary>
     [TestFixture]
-    public class AnimationTests
+    public class AnimationTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

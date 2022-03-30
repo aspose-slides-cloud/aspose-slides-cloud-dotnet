@@ -35,7 +35,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing Text methods
     /// </summary>
     [TestFixture]
-    public class TextTests
+    public class TextTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

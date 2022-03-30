@@ -4,7 +4,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.Slides.Cloud.Sdk", "Aspose.Slides.Cloud.Sdk\Aspose.Slides.Cloud.Sdk.csproj", "{4DC3F199-BCAC-4A0F-BCCB-2198CC72C13E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.Slides.Cloud.Sdk.Tests", "Aspose.Slides.Cloud.Sdk.Tests\Aspose.Slides.Cloud.Sdk.Tests.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.Slides.Cloud.Sdk.Tests", "Aspose.Slides.Cloud.Sdk.Tests\Aspose.Slides.Cloud.Sdk.Tests.csproj", "{C9312C0A-8E65-4DE9-921C-2CFC02D01477}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,22 +34,22 @@ Global
 		{4DC3F199-BCAC-4A0F-BCCB-2198CC72C13E}.Release|NET3.5.Build.0 = Release|NET3.5
 		{4DC3F199-BCAC-4A0F-BCCB-2198CC72C13E}.Release|NET4.6.1.ActiveCfg = Release|NET4.6.1
 		{4DC3F199-BCAC-4A0F-BCCB-2198CC72C13E}.Release|NET4.6.1.Build.0 = Release|NET4.6.1
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|NET2.0.ActiveCfg = Debug|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|NET2.0.Build.0 = Debug|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|NET3.5.ActiveCfg = Debug|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|NET3.5.Build.0 = Debug|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|NET4.6.1.ActiveCfg = Debug|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|NET4.6.1.Build.0 = Debug|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.Build.0 = Release|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|NET2.0.ActiveCfg = Release|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|NET2.0.Build.0 = Release|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|NET3.5.ActiveCfg = Release|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|NET3.5.Build.0 = Release|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|NET4.6.1.ActiveCfg = Release|Any CPU
-		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|NET4.6.1.Build.0 = Release|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Debug|NET2.0.ActiveCfg = Debug|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Debug|NET2.0.Build.0 = Debug|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Debug|NET3.5.ActiveCfg = Debug|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Debug|NET3.5.Build.0 = Debug|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Debug|NET4.6.1.ActiveCfg = Debug|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Debug|NET4.6.1.Build.0 = Debug|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Release|NET2.0.ActiveCfg = Release|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Release|NET2.0.Build.0 = Release|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Release|NET3.5.ActiveCfg = Release|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Release|NET3.5.Build.0 = Release|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Release|NET4.6.1.ActiveCfg = Release|Any CPU
+		{C9312C0A-8E65-4DE9-921C-2CFC02D01477}.Release|NET4.6.1.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

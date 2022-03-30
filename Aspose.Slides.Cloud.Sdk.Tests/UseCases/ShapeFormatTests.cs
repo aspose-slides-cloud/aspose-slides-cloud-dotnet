@@ -33,7 +33,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing shape formats
     /// </summary>
     [TestFixture]
-    public class ShapeFormatTests
+    public class ShapeFormatTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

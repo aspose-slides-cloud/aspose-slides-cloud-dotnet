@@ -30,7 +30,7 @@ using NUnit.Framework;
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
     [TestFixture]
-    public class TextFormatTests
+    public class TextFormatTests : BaseTests
     {
         [Test]
         public void TextFormat3D()

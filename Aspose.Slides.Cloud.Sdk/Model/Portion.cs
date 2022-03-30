@@ -509,6 +509,21 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public Hyperlink HyperlinkMouseOver { get; set; }
 
+        /// <summary>
+        /// Returns or sets the Latin font info.
+        /// </summary>
+        public string LatinFont { get; set; }
+
+        /// <summary>
+        /// Returns or sets the East Asian font info.
+        /// </summary>
+        public string EastAsianFont { get; set; }
+
+        /// <summary>
+        /// Returns or sets the complex script font info.
+        /// </summary>
+        public string ComplexScriptFont { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -571,6 +586,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  UnderlineLineFormat: ").Append(this.UnderlineLineFormat).Append("\n");
             sb.Append("  HyperlinkClick: ").Append(this.HyperlinkClick).Append("\n");
             sb.Append("  HyperlinkMouseOver: ").Append(this.HyperlinkMouseOver).Append("\n");
+            sb.Append("  LatinFont: ").Append(this.LatinFont).Append("\n");
+            sb.Append("  EastAsianFont: ").Append(this.EastAsianFont).Append("\n");
+            sb.Append("  ComplexScriptFont: ").Append(this.ComplexScriptFont).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

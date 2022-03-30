@@ -35,7 +35,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing merge methods
     /// </summary>
     [TestFixture]
-    public class MergeTests
+    public class MergeTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

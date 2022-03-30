@@ -35,7 +35,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing watermark methods
     /// </summary>
     [TestFixture]
-    public class WatermarkTests
+    public class WatermarkTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

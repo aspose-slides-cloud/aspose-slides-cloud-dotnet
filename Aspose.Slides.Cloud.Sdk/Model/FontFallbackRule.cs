@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="SlideComment.cs">
+// <copyright company="Aspose" file="FontFallbackRule.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,22 +35,36 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents comment of slide
+    /// Represents font fallback rule.             
     /// </summary>  
-    public class SlideComment : SlideCommentBase 
+    public class FontFallbackRule 
     {                       
+        /// <summary>
+        /// First index of continuous unicode range.
+        /// </summary>
+        public int? RangeStartIndex { get; set; }
+
+        /// <summary>
+        /// Last index of continuous unicode range.
+        /// </summary>
+        public int? RangeEndIndex { get; set; }
+
+        /// <summary>
+        /// List of fallback font links.
+        /// </summary>
+        public List<string> FallbackFontList { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static new Dictionary<string, object> TypeDeterminers
+        public static Dictionary<string, object> TypeDeterminers
         {
             get
             {
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("Type", TypeEnum.Regular);
                 }
                 return s_typeDeterminers;
             }
@@ -60,9 +74,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public SlideComment() : base()
+        public FontFallbackRule() : base()
         {
-            Type = TypeEnum.Regular;
         }
 
         /// <summary>
@@ -72,12 +85,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class SlideComment {\n");
-            sb.Append("  Author: ").Append(this.Author).Append("\n");
-            sb.Append("  Text: ").Append(this.Text).Append("\n");
-            sb.Append("  CreatedTime: ").Append(this.CreatedTime).Append("\n");
-            sb.Append("  ChildComments: ").Append(this.ChildComments).Append("\n");
-            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("class FontFallbackRule {\n");
+            sb.Append("  RangeStartIndex: ").Append(this.RangeStartIndex).Append("\n");
+            sb.Append("  RangeEndIndex: ").Append(this.RangeEndIndex).Append("\n");
+            sb.Append("  FallbackFontList: ").Append(this.FallbackFontList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

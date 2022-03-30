@@ -35,7 +35,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing image methods
     /// </summary>
     [TestFixture]
-    public class ImageTests
+    public class ImageTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

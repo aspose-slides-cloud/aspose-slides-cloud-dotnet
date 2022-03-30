@@ -34,7 +34,7 @@ using System.Text;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
 {
-    internal static class TestUtils
+    public static class TestUtils
     {
         public static SlidesApi SlidesApi { get { return s_slidesApi ?? (s_slidesApi = new SlidesApi(Configuration)); } }
 
@@ -101,7 +101,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             };
         }
 
-        internal const string TestDataPath = "../../../../TestData";
+        public const string TestDataPath = "../../../../TestData";
 
         private const int c_expectedVersion = 1;
         private const string c_tempTestFolder = "TempTests";

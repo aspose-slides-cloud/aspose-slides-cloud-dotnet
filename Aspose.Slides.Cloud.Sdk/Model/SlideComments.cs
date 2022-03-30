@@ -42,7 +42,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Slide comment list.
         /// </summary>
-        public List<SlideComment> List { get; set; }
+        public List<SlideCommentBase> List { get; set; }
 
 
         /// <summary>

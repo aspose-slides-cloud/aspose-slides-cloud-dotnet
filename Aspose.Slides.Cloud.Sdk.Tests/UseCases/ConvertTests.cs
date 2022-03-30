@@ -35,7 +35,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing conversion methods
     /// </summary>
     [TestFixture]
-    public class ConvertTests
+    public class ConvertTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test
@@ -203,6 +203,17 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void ConvertSubshapePostFromStorage()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Stream converted = TestUtils.SlidesApi.DownloadSubshape(
+                c_fileName, c_slideIndex, "4/shapes", 1, c_shapeFormat, password: c_password, folder: c_folderName);
+            Assert.IsNotNull(converted);
+            Assert.Greater(converted.Length, 0);
+            Assert.IsTrue(converted.CanRead);
+        }
+
+        [Test]
         public void ConvertShapePutFromStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
@@ -210,6 +221,48 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 c_fileName, c_slideIndex, c_shapeIndex, c_shapeFormat, c_outPath, password: c_password, folder: c_folderName);
             ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
             Assert.IsTrue(exists.Exists.Value);
+        }
+        
+        [Test]
+        public void ConvertSubshapePutFromStorage()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            TestUtils.SlidesApi.SaveSubshape(
+                c_fileName, c_slideIndex, "4/shapes", 1, c_shapeFormat, c_outPath, password: c_password,
+                folder: c_folderName);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
+            Assert.IsTrue(exists.Exists.Value);
+        }
+        
+        [Test]
+        public void ConvertWithFontFallBackRules()
+        {
+            List<FontFallbackRule> fontRules = new List<FontFallbackRule>();
+            fontRules.Add(new FontFallbackRule()
+            {
+                RangeStartIndex = c_startUnicodeIndex,
+                RangeEndIndex = c_endUnicodeIndex,
+                FallbackFontList = new List<string>() { "Vijaya" }
+            });
+
+            fontRules.Add(new FontFallbackRule()
+            {
+                RangeStartIndex = c_startUnicodeIndex,
+                RangeEndIndex = c_endUnicodeIndex,
+                FallbackFontList = new List<string>() { "Segoe UI Emoji, Segoe UI Symbol", "Arial" }
+            });
+
+            ImageExportOptions exportOptions = new ImageExportOptions()
+            {
+                FontFallbackRules = fontRules
+            };
+            
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            
+            Stream response = TestUtils.SlidesApi.DownloadPresentation(c_fileName, ExportFormat.Png, exportOptions,
+                c_password, c_folderName);
+            Assert.IsNotNull(response);
+            Assert.Greater(response.Length, 0);
         }
 
         const string c_folderName = "TempSlidesSDK";
@@ -221,5 +274,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const ShapeExportFormat c_shapeFormat = ShapeExportFormat.Svg;
         const int c_slideIndex = 1;
         const int c_shapeIndex = 3;
+        int c_startUnicodeIndex = 0x0B80;
+        int c_endUnicodeIndex = 0x0BFF;
     }
 }

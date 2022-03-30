@@ -35,7 +35,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing notes slide methods
     /// </summary>
     [TestFixture]
-    public class NotesSlideTests
+    public class NotesSlideTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test
@@ -235,6 +235,45 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 c_fileName, c_slideIndex, SpecialSlideType.NotesSlide, c_shapeIndex, c_paragraphIndex, c_password, c_folderName);
             Assert.AreEqual(c_portionCount, portions.Items.Count);
         }
+        
+        [Test]
+        public void CreateNotesSlide()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            
+            NotesSlide dto = new NotesSlide()
+            {
+                Text = c_notesSlideText
+            };
+            
+            NotesSlide response = TestUtils.SlidesApi.CreateNotesSlide(c_fileName, c_slideIndex, dto, c_password, c_folderName);
+            
+            Assert.AreEqual(c_notesSlideText, response.Text);
+        }
+        
+        [Test]
+        public void UpdateNotesSlide()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            
+            NotesSlide dto = new NotesSlide()
+            {
+                Text = c_notesSlideText
+            };
+            
+            NotesSlide response = TestUtils.SlidesApi.UpdateNotesSlide(c_fileName, c_slideIndex, dto, c_password, c_folderName);
+            
+            Assert.AreEqual(c_notesSlideText, response.Text);
+        }
+        
+        [Test]
+        public void DeleteNotesSlide()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            
+            Slide response = TestUtils.SlidesApi.DeleteNotesSlide(c_fileName, c_slideIndex, c_password, c_folderName);
+            Assert.IsNull(response.NotesSlide);
+        }
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
@@ -246,5 +285,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const int c_paragraphIndex = 1;
         const int c_paragraphCount = 1;
         const int c_portionCount = 1;
+        const string c_notesSlideText = "Notes slide text";
     }
 }

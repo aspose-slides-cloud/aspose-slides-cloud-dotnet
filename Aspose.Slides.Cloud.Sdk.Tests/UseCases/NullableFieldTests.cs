@@ -34,7 +34,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing nullable fields
     /// </summary>
     [TestFixture]
-    public class NullableFieldTests
+    public class NullableFieldTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

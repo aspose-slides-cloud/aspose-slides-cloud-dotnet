@@ -529,6 +529,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public LineFormat LineFormat { get; set; }
 
+        /// <summary>
+        /// Get or sets the format of major grid lines.
+        /// </summary>
+        public ChartLinesFormat MajorGridLinesFormat { get; set; }
+
+        /// <summary>
+        /// Get or sets the format of major grid lines.
+        /// </summary>
+        public ChartLinesFormat MinorGridLinesFormat { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -597,6 +607,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  MajorGridLinesFormat: ").Append(this.MajorGridLinesFormat).Append("\n");
+            sb.Append("  MinorGridLinesFormat: ").Append(this.MinorGridLinesFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

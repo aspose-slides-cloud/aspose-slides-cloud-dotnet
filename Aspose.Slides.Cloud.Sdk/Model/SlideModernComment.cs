@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="SlideComment.cs">
+// <copyright company="Aspose" file="SlideModernComment.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,10 +35,54 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents comment of slide
+    /// Represents modern comment of slide
     /// </summary>  
-    public class SlideComment : SlideCommentBase 
+    public class SlideModernComment : SlideCommentBase 
     {                       
+        /// <summary>
+        /// Returns or sets the status of the comment. Read/write ModernCommentStatus.
+        /// </summary>
+        /// <value>Returns or sets the status of the comment. Read/write ModernCommentStatus.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum
+        {
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined,
+            
+            /// <summary>
+            /// Enum Active for "Active"
+            /// </summary>
+            Active,
+            
+            /// <summary>
+            /// Enum Resolved for "Resolved"
+            /// </summary>
+            Resolved,
+            
+            /// <summary>
+            /// Enum Closed for "Closed"
+            /// </summary>
+            Closed
+        }
+
+        /// <summary>
+        /// Returns or sets the status of the comment. Read/write ModernCommentStatus.
+        /// </summary>
+        public StatusEnum? Status { get; set; }
+
+        /// <summary>
+        /// Returns or sets starting position of text selection in text frame if the comment associated with AutoShape. Read/write Int32.
+        /// </summary>
+        public int? TextSelectionStart { get; set; }
+
+        /// <summary>
+        /// Returns or sets text selection length in text frame if the comment associated with AutoShape. Read/write Int32.
+        /// </summary>
+        public int? TextSelectionLength { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -50,7 +94,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("Type", TypeEnum.Regular);
+                    s_typeDeterminers.Add("Type", TypeEnum.Modern);
                 }
                 return s_typeDeterminers;
             }
@@ -60,9 +104,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public SlideComment() : base()
+        public SlideModernComment() : base()
         {
-            Type = TypeEnum.Regular;
+            Type = TypeEnum.Modern;
         }
 
         /// <summary>
@@ -72,12 +116,15 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class SlideComment {\n");
+            sb.Append("class SlideModernComment {\n");
             sb.Append("  Author: ").Append(this.Author).Append("\n");
             sb.Append("  Text: ").Append(this.Text).Append("\n");
             sb.Append("  CreatedTime: ").Append(this.CreatedTime).Append("\n");
             sb.Append("  ChildComments: ").Append(this.ChildComments).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  TextSelectionStart: ").Append(this.TextSelectionStart).Append("\n");
+            sb.Append("  TextSelectionLength: ").Append(this.TextSelectionLength).Append("\n");
+            sb.Append("  Status: ").Append(this.Status).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

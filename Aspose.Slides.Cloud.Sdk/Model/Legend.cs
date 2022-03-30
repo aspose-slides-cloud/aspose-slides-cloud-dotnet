@@ -118,6 +118,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public LineFormat LineFormat { get; set; }
 
+        /// <summary>
+        /// Get or sets value determines the visibility of legend
+        /// </summary>
+        public bool? HasLegend { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -159,6 +164,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  HasLegend: ").Append(this.HasLegend).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

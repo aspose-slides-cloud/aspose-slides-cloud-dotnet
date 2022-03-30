@@ -652,11 +652,12 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="dto">Comment DTO.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="SlideComments"/></returns>            
-        public SlideComments CreateComment(string name, int slideIndex, SlideComment dto, string password = null, string folder = null, string storage = null)
+        public SlideComments CreateComment(string name, int slideIndex, SlideCommentBase dto, int? shapeIndex = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -673,6 +674,7 @@ namespace Aspose.Slides.Cloud.Sdk
             var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeIndex", shapeIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
@@ -687,9 +689,10 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="document">Document data.</param> 
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="dto">Comment DTO.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="password">Document password.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream CreateCommentOnline(System.IO.Stream document, int slideIndex, SlideComment dto, string password = null)
+        public System.IO.Stream CreateCommentOnline(System.IO.Stream document, int slideIndex, SlideCommentBase dto, int? shapeIndex = null, string password = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -706,6 +709,7 @@ namespace Aspose.Slides.Cloud.Sdk
             var headerParams = new Dictionary<string, string>();
             var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeIndex", shapeIndex);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
@@ -4797,6 +4801,38 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Return coordinates of rect that bounds paragraph. The rect includes all the lines of text in paragraph, including empty ones. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="TextBounds"/></returns>            
+        public TextBounds GetParagraphRectangle(string name, int slideIndex, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetParagraphRectangle");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/bounds");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<TextBounds>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Read shape paragraphs info. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -4916,6 +4952,40 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Return coordinates of rect that bounds paragraph. The rect includes all the lines of text in paragraph, including empty ones. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="TextBounds"/></returns>            
+        public TextBounds GetPortionRectangle(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetPortionRectangle");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}/bounds");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<TextBounds>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -5150,8 +5220,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
+        /// <param name="shapeType">Shape type.</param> 
         /// <returns><see cref="Shapes"/></returns>            
-        public Shapes GetShapes(string name, int slideIndex, string password = null, string folder = null, string storage = null)
+        public Shapes GetShapes(string name, int slideIndex, string password = null, string folder = null, string storage = null, ShapeType? shapeType = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5165,6 +5236,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapeType", shapeType);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Shapes>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
@@ -6251,12 +6323,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Document"/></returns>            
-        public Document ImportFromPdf(string name, System.IO.Stream pdf = null, string password = null, string folder = null, string storage = null)
+        public Document ImportFromPdf(string name, System.IO.Stream pdf, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImportFromPdf");
+            }
+            // verify the required parameter 'pdf' is set
+            if (pdf == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'pdf' when calling ImportFromPdf");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/fromPdf");

@@ -32,7 +32,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing authentication
     /// </summary>
     [TestFixture]
-    public class AuthTests
+    public class AuthTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

@@ -33,7 +33,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing Timeout config parameter
     /// </summary>
     [TestFixture]
-    public class TimeoutTests
+    public class TimeoutTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

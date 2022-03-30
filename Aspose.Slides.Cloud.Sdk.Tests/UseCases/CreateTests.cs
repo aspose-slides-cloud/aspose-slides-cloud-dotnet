@@ -34,7 +34,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing presentation creation API
     /// </summary>
     [TestFixture]
-    public class CreateTests
+    public class CreateTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

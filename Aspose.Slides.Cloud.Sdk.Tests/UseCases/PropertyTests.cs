@@ -35,7 +35,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing property methods
     /// </summary>
     [TestFixture]
-    public class PropertyTests
+    public class PropertyTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test
@@ -147,7 +147,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void DeleteProtection()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-                ProtectionProperties protectionProperties = TestUtils.SlidesApi.DeleteProtection(c_fileName, c_password, c_folderName);
+            ProtectionProperties protectionProperties = TestUtils.SlidesApi.DeleteProtection(c_fileName, c_password, c_folderName);
             Assert.IsFalse(protectionProperties.ReadOnlyRecommended.Value);
             Assert.IsFalse(protectionProperties.IsEncrypted.Value);
             Assert.IsNull(protectionProperties.ReadPassword);
@@ -169,6 +169,34 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Stream outputDocument = TestUtils.SlidesApi.DeleteProtectionOnline(document, c_password);
             Assert.AreNotEqual(document.Length, outputDocument.Length);
         }
+        
+        [Test]
+        public void GetViewProperties()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            ViewProperties respose = TestUtils.SlidesApi.GetViewProperties(c_fileName, c_password, c_folderName);
+            Assert.AreEqual(ViewProperties.ShowCommentsEnum.True, respose.ShowComments);
+        }
+        
+        [Test]
+        public void SetViewProperties()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            ViewProperties dto = new ViewProperties()
+            {
+              ShowComments = ViewProperties.ShowCommentsEnum.False,
+              SlideViewProperties = new CommonSlideViewProperties()
+              {
+                  Scale = 50
+              }
+            };
+ 
+            ViewProperties respose = TestUtils.SlidesApi.SetViewProperties( c_fileName, dto, c_password, c_folderName);
+            
+            Assert.AreEqual(ViewProperties.ShowCommentsEnum.False, respose.ShowComments);
+            Assert.AreEqual(50, respose.SlideViewProperties.Scale);
+        }
+
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";

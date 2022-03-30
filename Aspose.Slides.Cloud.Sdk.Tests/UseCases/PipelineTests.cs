@@ -34,7 +34,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing Pipeline Api
     /// </summary>
     [TestFixture]
-    public class PipelineTests
+    public class PipelineTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

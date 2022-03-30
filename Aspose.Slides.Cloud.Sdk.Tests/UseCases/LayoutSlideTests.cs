@@ -35,7 +35,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing layout slide methods
     /// </summary>
     [TestFixture]
-    public class LayoutSlideTests
+    public class LayoutSlideTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test
@@ -268,7 +268,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsNotNull(result);
             Assert.IsTrue(result.CanRead);
         }
-
+        
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
         const string c_password = "password";

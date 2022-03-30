@@ -35,7 +35,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing split methods
     /// </summary>
     [TestFixture]
-    public class SplitTests
+    public class SplitTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

@@ -35,7 +35,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing math methods & objects
     /// </summary>
     [TestFixture]
-    public class HyperlinkTests
+    public class HyperlinkTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="SlideComment.cs">
+// <copyright company="Aspose" file="ChartLinesFormat.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,22 +35,31 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents comment of slide
+    /// Represents the lines format of chart elements. 
     /// </summary>  
-    public class SlideComment : SlideCommentBase 
+    public class ChartLinesFormat 
     {                       
+        /// <summary>
+        /// Get or sets the effect format.
+        /// </summary>
+        public EffectFormat EffectFormat { get; set; }
+
+        /// <summary>
+        /// Get or sets the line format.
+        /// </summary>
+        public LineFormat LineFormat { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static new Dictionary<string, object> TypeDeterminers
+        public static Dictionary<string, object> TypeDeterminers
         {
             get
             {
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("Type", TypeEnum.Regular);
                 }
                 return s_typeDeterminers;
             }
@@ -60,9 +69,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public SlideComment() : base()
+        public ChartLinesFormat() : base()
         {
-            Type = TypeEnum.Regular;
         }
 
         /// <summary>
@@ -72,12 +80,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class SlideComment {\n");
-            sb.Append("  Author: ").Append(this.Author).Append("\n");
-            sb.Append("  Text: ").Append(this.Text).Append("\n");
-            sb.Append("  CreatedTime: ").Append(this.CreatedTime).Append("\n");
-            sb.Append("  ChildComments: ").Append(this.ChildComments).Append("\n");
-            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("class ChartLinesFormat {\n");
+            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

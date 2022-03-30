@@ -33,7 +33,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing heade/footer methods
     /// </summary>
     [TestFixture]
-    public class HeaderFooterTests
+    public class HeaderFooterTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

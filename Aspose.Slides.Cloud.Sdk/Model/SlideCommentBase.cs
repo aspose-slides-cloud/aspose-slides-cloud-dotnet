@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="SlideComment.cs">
+// <copyright company="Aspose" file="SlideCommentBase.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,22 +35,64 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents comment of slide
+    /// Represents slide comment
     /// </summary>  
-    public class SlideComment : SlideCommentBase 
+    public class SlideCommentBase 
     {                       
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Regular for "Regular"
+            /// </summary>
+            Regular,
+            
+            /// <summary>
+            /// Enum Modern for "Modern"
+            /// </summary>
+            Modern
+        }
+
+        /// <summary>
+        /// Gets or sets Type
+        /// </summary>
+        public TypeEnum? Type { get; set; }
+
+        /// <summary>
+        /// Author.
+        /// </summary>
+        public string Author { get; set; }
+
+        /// <summary>
+        /// Text.
+        /// </summary>
+        public string Text { get; set; }
+
+        /// <summary>
+        /// Creation time.
+        /// </summary>
+        public string CreatedTime { get; set; }
+
+        /// <summary>
+        /// Child comments.
+        /// </summary>
+        public List<SlideCommentBase> ChildComments { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static new Dictionary<string, object> TypeDeterminers
+        public static Dictionary<string, object> TypeDeterminers
         {
             get
             {
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("Type", TypeEnum.Regular);
                 }
                 return s_typeDeterminers;
             }
@@ -60,9 +102,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public SlideComment() : base()
+        public SlideCommentBase() : base()
         {
-            Type = TypeEnum.Regular;
         }
 
         /// <summary>
@@ -72,7 +113,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class SlideComment {\n");
+            sb.Append("class SlideCommentBase {\n");
             sb.Append("  Author: ").Append(this.Author).Append("\n");
             sb.Append("  Text: ").Append(this.Text).Append("\n");
             sb.Append("  CreatedTime: ").Append(this.CreatedTime).Append("\n");

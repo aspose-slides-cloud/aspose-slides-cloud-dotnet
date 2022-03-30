@@ -33,7 +33,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing abstract classes
     /// </summary>
     [TestFixture]
-    public class AbstractClassTests
+    public class AbstractClassTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

@@ -34,7 +34,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
     ///  Class for testing master slide methods
     /// </summary>
     [TestFixture]
-    public class MasterSlideTests
+    public class MasterSlideTests : BaseTests
     {
         /// <summary>
         /// Clean up after each unit test

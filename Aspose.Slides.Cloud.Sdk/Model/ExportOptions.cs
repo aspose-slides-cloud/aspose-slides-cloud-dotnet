@@ -55,6 +55,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public int? Width { get; set; }
 
         /// <summary>
+        /// Gets of sets list of font fallback rules.
+        /// </summary>
+        public List<FontFallbackRule> FontFallbackRules { get; set; }
+
+        /// <summary>
         /// Gets or sets Format
         /// </summary>
         public string Format { get; set; }
@@ -94,6 +99,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
             sb.Append("  Height: ").Append(this.Height).Append("\n");
             sb.Append("  Width: ").Append(this.Width).Append("\n");
+            sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
