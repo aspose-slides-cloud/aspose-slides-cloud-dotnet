@@ -40,6 +40,165 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class VideoExportOptions : ExportOptions 
     {                       
         /// <summary>
+        /// Video transition type
+        /// </summary>
+        /// <value>Video transition type</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TransitionTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Fade for "Fade"
+            /// </summary>
+            Fade,
+            
+            /// <summary>
+            /// Enum Distance for "Distance"
+            /// </summary>
+            Distance,
+            
+            /// <summary>
+            /// Enum Slidedown for "Slidedown"
+            /// </summary>
+            Slidedown,
+            
+            /// <summary>
+            /// Enum Slideright for "Slideright"
+            /// </summary>
+            Slideright,
+            
+            /// <summary>
+            /// Enum Slideleft for "Slideleft"
+            /// </summary>
+            Slideleft,
+            
+            /// <summary>
+            /// Enum Slideup for "Slideup"
+            /// </summary>
+            Slideup,
+            
+            /// <summary>
+            /// Enum Smoothleft for "Smoothleft"
+            /// </summary>
+            Smoothleft,
+            
+            /// <summary>
+            /// Enum Smoothright for "Smoothright"
+            /// </summary>
+            Smoothright,
+            
+            /// <summary>
+            /// Enum Smoothup for "Smoothup"
+            /// </summary>
+            Smoothup,
+            
+            /// <summary>
+            /// Enum Smoothdown for "Smoothdown"
+            /// </summary>
+            Smoothdown,
+            
+            /// <summary>
+            /// Enum Rectcrop for "Rectcrop"
+            /// </summary>
+            Rectcrop,
+            
+            /// <summary>
+            /// Enum Circlecrop for "Circlecrop"
+            /// </summary>
+            Circlecrop,
+            
+            /// <summary>
+            /// Enum Circleclose for "Circleclose"
+            /// </summary>
+            Circleclose,
+            
+            /// <summary>
+            /// Enum Circleopen for "Circleopen"
+            /// </summary>
+            Circleopen,
+            
+            /// <summary>
+            /// Enum Horzclose for "Horzclose"
+            /// </summary>
+            Horzclose,
+            
+            /// <summary>
+            /// Enum Horzopen for "Horzopen"
+            /// </summary>
+            Horzopen,
+            
+            /// <summary>
+            /// Enum Vertclose for "Vertclose"
+            /// </summary>
+            Vertclose,
+            
+            /// <summary>
+            /// Enum Vertopen for "Vertopen"
+            /// </summary>
+            Vertopen,
+            
+            /// <summary>
+            /// Enum Diagbl for "Diagbl"
+            /// </summary>
+            Diagbl,
+            
+            /// <summary>
+            /// Enum Diagbr for "Diagbr"
+            /// </summary>
+            Diagbr,
+            
+            /// <summary>
+            /// Enum Diagtl for "Diagtl"
+            /// </summary>
+            Diagtl,
+            
+            /// <summary>
+            /// Enum Diagtr for "Diagtr"
+            /// </summary>
+            Diagtr,
+            
+            /// <summary>
+            /// Enum Hlslice for "Hlslice"
+            /// </summary>
+            Hlslice,
+            
+            /// <summary>
+            /// Enum Hrslice for "Hrslice"
+            /// </summary>
+            Hrslice,
+            
+            /// <summary>
+            /// Enum Vuslice for "Vuslice"
+            /// </summary>
+            Vuslice,
+            
+            /// <summary>
+            /// Enum Vdslice for "Vdslice"
+            /// </summary>
+            Vdslice,
+            
+            /// <summary>
+            /// Enum Dissolve for "Dissolve"
+            /// </summary>
+            Dissolve,
+            
+            /// <summary>
+            /// Enum Pixelize for "Pixelize"
+            /// </summary>
+            Pixelize,
+            
+            /// <summary>
+            /// Enum Radial for "Radial"
+            /// </summary>
+            Radial
+        }
+
+        /// <summary>
         /// Video resolution type
         /// </summary>
         /// <value>Video resolution type</value>
@@ -69,12 +228,22 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// Video transition type
+        /// </summary>
+        public TransitionTypeEnum? TransitionType { get; set; }
+
+        /// <summary>
         /// Video resolution type
         /// </summary>
         public VideoResolutionTypeEnum? VideoResolutionType { get; set; }
 
         /// <summary>
-        /// Transition duration.
+        /// Slides transition duration.
+        /// </summary>
+        public int? SlidesTransitionDuration { get; set; }
+
+        /// <summary>
+        /// Duration of transition defined in TransitionType property.
         /// </summary>
         public int? TransitionDuration { get; set; }
 
@@ -113,10 +282,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class VideoExportOptions {\n");
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
-            sb.Append("  Height: ").Append(this.Height).Append("\n");
-            sb.Append("  Width: ").Append(this.Width).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  SlidesTransitionDuration: ").Append(this.SlidesTransitionDuration).Append("\n");
+            sb.Append("  TransitionType: ").Append(this.TransitionType).Append("\n");
             sb.Append("  TransitionDuration: ").Append(this.TransitionDuration).Append("\n");
             sb.Append("  VideoResolutionType: ").Append(this.VideoResolutionType).Append("\n");
             sb.Append("}\n");

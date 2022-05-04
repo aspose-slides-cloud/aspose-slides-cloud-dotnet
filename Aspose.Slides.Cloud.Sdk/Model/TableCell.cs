@@ -207,6 +207,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public LineFormat BorderDiagonalDown { get; set; }
 
+        /// <summary>
+        /// Cell column index
+        /// </summary>
+        public int? ColumnIndex { get; set; }
+
+        /// <summary>
+        /// Cell row index
+        /// </summary>
+        public int? RowIndex { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -255,6 +265,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  BorderBottom: ").Append(this.BorderBottom).Append("\n");
             sb.Append("  BorderDiagonalUp: ").Append(this.BorderDiagonalUp).Append("\n");
             sb.Append("  BorderDiagonalDown: ").Append(this.BorderDiagonalDown).Append("\n");
+            sb.Append("  ColumnIndex: ").Append(this.ColumnIndex).Append("\n");
+            sb.Append("  RowIndex: ").Append(this.RowIndex).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

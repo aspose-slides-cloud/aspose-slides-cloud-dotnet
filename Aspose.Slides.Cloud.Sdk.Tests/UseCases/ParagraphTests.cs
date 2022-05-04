@@ -23,7 +23,9 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
+using System.Threading;
 using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
@@ -240,6 +242,40 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.Greater(response.Y, 0);
             Assert.Greater(response.Width, 0);
             Assert.Greater(response.Height, 0);
+        }
+        
+        [Test]
+        public void ParagraphDefaultPortionFormat()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+
+            Paragraph dto = new Paragraph()
+            {
+                DefaultPortionFormat = new PortionFormat()
+                {
+                  FontHeight  = 20,
+                  LatinFont = "Arial"
+                },
+                PortionList = new List<Portion>()
+                {
+                    new Portion()
+                    {
+                        Text = "Portion1"
+                    },
+                    new Portion()
+                    {
+                        Text = "Portion2",
+                        FontBold = Portion.FontBoldEnum.True
+                    }
+                }
+            };
+            
+            Paragraph response = TestUtils.SlidesApi.CreateParagraph(c_fileName, c_slideIndex, c_shapeIndex, dto,
+                null, c_password, c_folderName);
+            Assert.AreEqual(response.PortionList.Count, 2);
+            Assert.IsNotNull(response.DefaultPortionFormat);
+            Assert.AreEqual(response.DefaultPortionFormat.LatinFont, dto.DefaultPortionFormat.LatinFont);
+            Assert.AreEqual(response.DefaultPortionFormat.FontHeight, dto.DefaultPortionFormat.FontHeight);
         }
 
         const string c_folderName = "TempSlidesSDK";

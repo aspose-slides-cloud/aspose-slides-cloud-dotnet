@@ -25,7 +25,6 @@
 
 
 using System.Collections.Generic;
-using System.Net.Mail;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 using Aspose.Slides.Cloud.Sdk.Model;
@@ -65,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void DuplicateSlide()
+        public void CopySlide()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
 

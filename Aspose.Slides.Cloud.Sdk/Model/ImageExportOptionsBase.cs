@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="SmartArtShape.cs">
+// <copyright company="Aspose" file="ImageExportOptionsBase.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,10 +35,20 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents SmartArt resource.
+    /// The class provides shared options for image formats.
     /// </summary>  
-    public class SmartArtShape : GeometryShape 
+    public class ImageExportOptionsBase : ExportOptions 
     {                       
+        /// <summary>
+        /// Gets or sets the height of slides in the output image format.
+        /// </summary>
+        public int? Height { get; set; }
+
+        /// <summary>
+        /// Gets or sets the height of slides in the output the output image format.
+        /// </summary>
+        public int? Width { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -50,7 +60,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("Type", TypeEnum.SmartArtShape);
                 }
                 return s_typeDeterminers;
             }
@@ -60,9 +69,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public SmartArtShape() : base()
+        public ImageExportOptionsBase() : base()
         {
-            Type = TypeEnum.SmartArtShape;
         }
 
         /// <summary>
@@ -72,26 +80,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class SmartArtShape {\n");
-            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  Width: ").Append(this.Width).Append("\n");
+            sb.Append("class ImageExportOptionsBase {\n");
+            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
+            sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
+            sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  Height: ").Append(this.Height).Append("\n");
-            sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
-            sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
-            sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
-            sb.Append("  X: ").Append(this.X).Append("\n");
-            sb.Append("  Y: ").Append(this.Y).Append("\n");
-            sb.Append("  ZOrderPosition: ").Append(this.ZOrderPosition).Append("\n");
-            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-            sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
-            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-            sb.Append("  HyperlinkClick: ").Append(this.HyperlinkClick).Append("\n");
-            sb.Append("  HyperlinkMouseOver: ").Append(this.HyperlinkMouseOver).Append("\n");
-            sb.Append("  Type: ").Append(this.Type).Append("\n");
-            sb.Append("  ShapeType: ").Append(this.ShapeType).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

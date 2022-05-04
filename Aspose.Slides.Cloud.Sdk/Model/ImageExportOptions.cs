@@ -37,7 +37,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     /// <summary>
     /// Provides options that control how a presentation is saved in an image format.
     /// </summary>  
-    public class ImageExportOptions : ExportOptions 
+    public class ImageExportOptions : ImageExportOptionsBase 
     {                       
         /// <summary>
         /// Gets or sets the position of the notes on the page.
@@ -142,10 +142,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class ImageExportOptions {\n");
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
-            sb.Append("  Height: ").Append(this.Height).Append("\n");
-            sb.Append("  Width: ").Append(this.Width).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
             sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
             sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
             sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");

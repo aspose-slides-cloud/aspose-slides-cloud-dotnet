@@ -37,7 +37,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     /// <summary>
     /// Provides options that control how a presentation is saved in TIFF format.
     /// </summary>  
-    public class TiffExportOptions : ExportOptions 
+    public class TiffExportOptions : ImageExportOptionsBase 
     {                       
         /// <summary>
         /// Compression type.
@@ -245,10 +245,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class TiffExportOptions {\n");
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
-            sb.Append("  Height: ").Append(this.Height).Append("\n");
-            sb.Append("  Width: ").Append(this.Width).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("  Height: ").Append(this.Height).Append("\n");
+            sb.Append("  Width: ").Append(this.Width).Append("\n");
             sb.Append("  Compression: ").Append(this.Compression).Append("\n");
             sb.Append("  DpiX: ").Append(this.DpiX).Append("\n");
             sb.Append("  DpiY: ").Append(this.DpiY).Append("\n");

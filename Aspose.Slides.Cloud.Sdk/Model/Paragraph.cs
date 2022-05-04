@@ -571,6 +571,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public List<Portion> PortionList { get; set; }
 
+        /// <summary>
+        /// Default portion format.
+        /// </summary>
+        public PortionFormat DefaultPortionFormat { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -625,6 +630,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  LatinLineBreak: ").Append(this.LatinLineBreak).Append("\n");
             sb.Append("  RightToLeft: ").Append(this.RightToLeft).Append("\n");
             sb.Append("  PortionList: ").Append(this.PortionList).Append("\n");
+            sb.Append("  DefaultPortionFormat: ").Append(this.DefaultPortionFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

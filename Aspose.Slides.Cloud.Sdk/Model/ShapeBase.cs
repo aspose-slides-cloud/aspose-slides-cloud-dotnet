@@ -178,11 +178,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public int? ZOrderPosition { get; set; }
 
         /// <summary>
-        /// Gets or sets the link to shapes.
-        /// </summary>
-        public ResourceUri Shapes { get; set; }
-
-        /// <summary>
         /// Gets or sets the fill format.
         /// </summary>
         public FillFormat FillFormat { get; set; }
@@ -255,7 +250,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  X: ").Append(this.X).Append("\n");
             sb.Append("  Y: ").Append(this.Y).Append("\n");
             sb.Append("  ZOrderPosition: ").Append(this.ZOrderPosition).Append("\n");
-            sb.Append("  Shapes: ").Append(this.Shapes).Append("\n");
             sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");

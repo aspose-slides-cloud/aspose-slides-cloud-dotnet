@@ -49,6 +49,41 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string SubstitutePictureTitle { get; set; }
 
+        /// <summary>
+        /// OleObject image fill properties.
+        /// </summary>
+        public PictureFill SubstitutePictureFormat { get; set; }
+
+        /// <summary>
+        /// Returns or sets the name of an object.
+        /// </summary>
+        public string ObjectName { get; set; }
+
+        /// <summary>
+        /// File data of embedded OLE object. 
+        /// </summary>
+        public string EmbeddedFileBase64Data { get; set; }
+
+        /// <summary>
+        /// File extension for the current embedded OLE object
+        /// </summary>
+        public string EmbeddedFileExtension { get; set; }
+
+        /// <summary>
+        /// ProgID of an object.
+        /// </summary>
+        public string ObjectProgId { get; set; }
+
+        /// <summary>
+        /// Full path to a linked file.
+        /// </summary>
+        public string LinkPath { get; set; }
+
+        /// <summary>
+        /// Determines if the linked embedded object is automatically updated when the presentation is opened or printed. Read/write Boolean.
+        /// </summary>
+        public bool? UpdateAutomatic { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -94,7 +129,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  X: ").Append(this.X).Append("\n");
             sb.Append("  Y: ").Append(this.Y).Append("\n");
             sb.Append("  ZOrderPosition: ").Append(this.ZOrderPosition).Append("\n");
-            sb.Append("  Shapes: ").Append(this.Shapes).Append("\n");
             sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
@@ -104,6 +138,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  IsObjectIcon: ").Append(this.IsObjectIcon).Append("\n");
             sb.Append("  SubstitutePictureTitle: ").Append(this.SubstitutePictureTitle).Append("\n");
+            sb.Append("  SubstitutePictureFormat: ").Append(this.SubstitutePictureFormat).Append("\n");
+            sb.Append("  ObjectName: ").Append(this.ObjectName).Append("\n");
+            sb.Append("  EmbeddedFileBase64Data: ").Append(this.EmbeddedFileBase64Data).Append("\n");
+            sb.Append("  EmbeddedFileExtension: ").Append(this.EmbeddedFileExtension).Append("\n");
+            sb.Append("  ObjectProgId: ").Append(this.ObjectProgId).Append("\n");
+            sb.Append("  LinkPath: ").Append(this.LinkPath).Append("\n");
+            sb.Append("  UpdateAutomatic: ").Append(this.UpdateAutomatic).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

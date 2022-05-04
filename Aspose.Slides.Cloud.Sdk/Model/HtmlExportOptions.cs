@@ -221,8 +221,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class HtmlExportOptions {\n");
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
-            sb.Append("  Height: ").Append(this.Height).Append("\n");
-            sb.Append("  Width: ").Append(this.Width).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  SaveAsZip: ").Append(this.SaveAsZip).Append("\n");

@@ -23,10 +23,12 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
@@ -587,9 +589,81 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(((SectionZoomFrame)shape).TargetSectionIndex, 2);
         }
         
+        [Test]
+        public void OleObjectFrameAddByLink()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            OleObjectFrame dto = new OleObjectFrame()
+            {
+                X = 100,
+                Y = 100,
+                Width = 200,
+                Height = 200,
+                LinkPath =  c_oleObjectFileName,
+                ObjectProgId = "Excel.Sheet.8"
+            };
+            
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password:c_password ,folder: c_folderName);
+            Assert.IsInstanceOf<OleObjectFrame>(shape);
+            Assert.AreEqual(((OleObjectFrame)shape).LinkPath, dto.LinkPath);
+        }
+        
+        [Test]
+        public void OleObjectFrameAddEmbedded()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_oleObjectFileName));
+            byte[] buffer = new byte[file.Length];
+            file.Read(buffer, 0, buffer.Length);
+            
+            OleObjectFrame dto = new OleObjectFrame()
+            {
+                X = 100,
+                Y = 100,
+                Width = 200,
+                Height = 200,
+                EmbeddedFileBase64Data = Convert.ToBase64String(buffer),
+                EmbeddedFileExtension = "xlsx"
+            };
+            
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password:c_password ,folder: c_folderName);
+            Assert.IsInstanceOf<OleObjectFrame>(shape);
+            Assert.IsNotNull(((OleObjectFrame)shape).EmbeddedFileBase64Data);
+            Assert.IsNotEmpty(((OleObjectFrame)shape).EmbeddedFileBase64Data);
+        }
+        
+        [Test]
+        public void GroupShapeAdd()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            int slideIndex = 5;
+            
+            Shapes shapes = TestUtils.SlidesApi.GetShapes(c_fileName, slideIndex, password:c_password, folder:c_folderName);
+            Assert.AreEqual(0, shapes.ShapesLinks.Count);
+            
+            //add GroupShape
+            GroupShape dto = new GroupShape();
+            TestUtils.SlidesApi.CreateShape(c_fileName, slideIndex, dto, password:c_password, folder:c_folderName);
+            
+            //add sub-shapes
+            Shape shape1 = new Shape{ShapeType = GeometryShape.ShapeTypeEnum.Rectangle, X = 50, Y = 400, Width = 50, Height = 50};
+            Shape shape2 = new Shape{ShapeType = GeometryShape.ShapeTypeEnum.Ellipse, X = 150, Y = 400, Width = 50, Height = 50};
+            Shape shape3 = new Shape{ShapeType = GeometryShape.ShapeTypeEnum.Triangle, X = 250, Y = 400, Width = 50, Height = 50};
+
+            TestUtils.SlidesApi.CreateSubshape(c_fileName, slideIndex, "1/shapes", shape1, password:c_password, folder:c_folderName);
+            TestUtils.SlidesApi.CreateSubshape(c_fileName, slideIndex, "1/shapes", shape2, password:c_password, folder:c_folderName);
+            TestUtils.SlidesApi.CreateSubshape(c_fileName, slideIndex, "1/shapes", shape3, password:c_password, folder:c_folderName);
+            
+            shapes = TestUtils.SlidesApi.GetShapes(c_fileName, slideIndex, password:c_password, folder:c_folderName);
+            Assert.AreEqual(1, shapes.ShapesLinks.Count);
+            
+            shapes = TestUtils.SlidesApi.GetSubshapes(c_fileName, slideIndex, "1/shapes", c_password, c_folderName);
+            Assert.AreEqual(3, shapes.ShapesLinks.Count);
+        }
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
+        const string c_oleObjectFileName = "oleObject.xlsx";
         const string c_password = "password";
         const int c_slideIndex = 3;
         const string c_color = "#FFF5FF8A";
