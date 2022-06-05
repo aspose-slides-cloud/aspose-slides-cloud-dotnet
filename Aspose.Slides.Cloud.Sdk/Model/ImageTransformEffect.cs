@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Task.cs">
+// <copyright company="Aspose" file="ImageTransformEffect.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents task for pipeline.
+    /// Image transform effect
     /// </summary>  
-    public class Task 
+    public class ImageTransformEffect 
     {                       
         /// <summary>
         /// Gets or Sets Type
@@ -47,79 +47,89 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             
             /// <summary>
-            /// Enum Save for "Save"
+            /// Enum AlphaBiLevel for "AlphaBiLevel"
             /// </summary>
-            Save,
+            AlphaBiLevel,
             
             /// <summary>
-            /// Enum SaveSlide for "SaveSlide"
+            /// Enum AlphaCeiling for "AlphaCeiling"
             /// </summary>
-            SaveSlide,
+            AlphaCeiling,
             
             /// <summary>
-            /// Enum SaveShape for "SaveShape"
+            /// Enum AlphaFloor for "AlphaFloor"
             /// </summary>
-            SaveShape,
+            AlphaFloor,
             
             /// <summary>
-            /// Enum AddSlide for "AddSlide"
+            /// Enum AlphaInverse for "AlphaInverse"
             /// </summary>
-            AddSlide,
+            AlphaInverse,
             
             /// <summary>
-            /// Enum AddMasterSlide for "AddMasterSlide"
+            /// Enum AlphaModulate for "AlphaModulate"
             /// </summary>
-            AddMasterSlide,
+            AlphaModulate,
             
             /// <summary>
-            /// Enum AddLayoutSlide for "AddLayoutSlide"
+            /// Enum AlphaModulateFixed for "AlphaModulateFixed"
             /// </summary>
-            AddLayoutSlide,
+            AlphaModulateFixed,
             
             /// <summary>
-            /// Enum RemoveSlide for "RemoveSlide"
+            /// Enum AlphaReplace for "AlphaReplace"
             /// </summary>
-            RemoveSlide,
+            AlphaReplace,
             
             /// <summary>
-            /// Enum ReoderSlide for "ReoderSlide"
+            /// Enum BiLevel for "BiLevel"
             /// </summary>
-            ReoderSlide,
+            BiLevel,
             
             /// <summary>
-            /// Enum Merge for "Merge"
+            /// Enum Blur for "Blur"
             /// </summary>
-            Merge,
+            Blur,
             
             /// <summary>
-            /// Enum UpdateBackground for "UpdateBackground"
+            /// Enum ColorChange for "ColorChange"
             /// </summary>
-            UpdateBackground,
+            ColorChange,
             
             /// <summary>
-            /// Enum ResetSlide for "ResetSlide"
+            /// Enum ColorReplace for "ColorReplace"
             /// </summary>
-            ResetSlide,
+            ColorReplace,
             
             /// <summary>
-            /// Enum AddShape for "AddShape"
+            /// Enum Duotone for "Duotone"
             /// </summary>
-            AddShape,
+            Duotone,
             
             /// <summary>
-            /// Enum RemoveShape for "RemoveShape"
+            /// Enum FillOverlay for "FillOverlay"
             /// </summary>
-            RemoveShape,
+            FillOverlay,
             
             /// <summary>
-            /// Enum UpdateShape for "UpdateShape"
+            /// Enum GrayScale for "GrayScale"
             /// </summary>
-            UpdateShape,
+            GrayScale,
             
             /// <summary>
-            /// Enum ReplaceText for "ReplaceText"
+            /// Enum Hsl for "Hsl"
             /// </summary>
-            ReplaceText
+            Hsl,
+            
+            /// <summary>
+            /// Enum Luminance for "Luminance"
+            /// </summary>
+            Luminance,
+            
+            /// <summary>
+            /// Enum Tint for "Tint"
+            /// </summary>
+            Tint
         }
 
         /// <summary>
@@ -147,7 +157,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public Task() : base()
+        public ImageTransformEffect() : base()
         {
         }
 
@@ -158,7 +168,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class Task {\n");
+            sb.Append("class ImageTransformEffect {\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

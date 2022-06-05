@@ -40,6 +40,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class OneValueSeries : Series 
     {                       
         /// <summary>
+        /// Quartile method. Applied to BoxAndWhisker series only.
+        /// </summary>
+        /// <value>Quartile method. Applied to BoxAndWhisker series only.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum QuartileMethodEnum
+        {
+            
+            /// <summary>
+            /// Enum Exclusive for "Exclusive"
+            /// </summary>
+            Exclusive,
+            
+            /// <summary>
+            /// Enum Inclusive for "Inclusive"
+            /// </summary>
+            Inclusive
+        }
+
+        /// <summary>
+        /// Quartile method. Applied to BoxAndWhisker series only.
+        /// </summary>
+        public QuartileMethodEnum? QuartileMethod { get; set; }
+
+        /// <summary>
         /// Gets or sets the values.
         /// </summary>
         public List<OneValueChartDataPoint> DataPoints { get; set; }
@@ -48,6 +72,31 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// The number format for the series values.
         /// </summary>
         public string NumberFormatOfValues { get; set; }
+
+        /// <summary>
+        /// True if inner points are shown. Applied to Waterfall series only.
+        /// </summary>
+        public bool? ShowConnectorLines { get; set; }
+
+        /// <summary>
+        /// True if inner points are shown. Applied to BoxAndWhisker series only.
+        /// </summary>
+        public bool? ShowInnerPoints { get; set; }
+
+        /// <summary>
+        /// True if mean line is shown. Applied to BoxAndWhisker series only.
+        /// </summary>
+        public bool? ShowMeanLine { get; set; }
+
+        /// <summary>
+        /// True if mean markers are shown. Applied to BoxAndWhisker series only.
+        /// </summary>
+        public bool? ShowMeanMarkers { get; set; }
+
+        /// <summary>
+        /// True if outlier points are shown. Applied to BoxAndWhisker series only.
+        /// </summary>
+        public bool? ShowOutlierPoints { get; set; }
 
 
         /// <summary>
@@ -99,6 +148,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
             sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
             sb.Append("  NumberFormatOfValues: ").Append(this.NumberFormatOfValues).Append("\n");
+            sb.Append("  ShowConnectorLines: ").Append(this.ShowConnectorLines).Append("\n");
+            sb.Append("  QuartileMethod: ").Append(this.QuartileMethod).Append("\n");
+            sb.Append("  ShowInnerPoints: ").Append(this.ShowInnerPoints).Append("\n");
+            sb.Append("  ShowMeanLine: ").Append(this.ShowMeanLine).Append("\n");
+            sb.Append("  ShowMeanMarkers: ").Append(this.ShowMeanMarkers).Append("\n");
+            sb.Append("  ShowOutlierPoints: ").Append(this.ShowOutlierPoints).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

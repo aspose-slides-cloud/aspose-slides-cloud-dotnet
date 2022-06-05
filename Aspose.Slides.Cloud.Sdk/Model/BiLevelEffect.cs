@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WaterfallSeries.cs">
+// <copyright company="Aspose" file="BiLevelEffect.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,14 +35,14 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// One value series.
+    /// Represents an BiLevel effect.
     /// </summary>  
-    public class WaterfallSeries : OneValueSeries 
+    public class BiLevelEffect : ImageTransformEffect 
     {                       
         /// <summary>
-        /// True if inner points are shown.
+        /// Returns effect threshold.
         /// </summary>
-        public bool? ShowConnectorLines { get; set; }
+        public double? Threshold { get; set; }
 
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("DataPointType", DataPointTypeEnum.OneValue);
+                    s_typeDeterminers.Add("Type", TypeEnum.BiLevel);
                 }
                 return s_typeDeterminers;
             }
@@ -65,9 +65,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public WaterfallSeries() : base()
+        public BiLevelEffect() : base()
         {
-            DataPointType = DataPointTypeEnum.OneValue;
+            Type = TypeEnum.BiLevel;
         }
 
         /// <summary>
@@ -77,24 +77,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class WaterfallSeries {\n");
+            sb.Append("class BiLevelEffect {\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  IsColorVaried: ").Append(this.IsColorVaried).Append("\n");
-            sb.Append("  InvertedSolidFillColor: ").Append(this.InvertedSolidFillColor).Append("\n");
-            sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
-            sb.Append("  PlotOnSecondAxis: ").Append(this.PlotOnSecondAxis).Append("\n");
-            sb.Append("  Order: ").Append(this.Order).Append("\n");
-            sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");
-            sb.Append("  Explosion: ").Append(this.Explosion).Append("\n");
-            sb.Append("  Marker: ").Append(this.Marker).Append("\n");
-            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-            sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
-            sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
-            sb.Append("  NumberFormatOfValues: ").Append(this.NumberFormatOfValues).Append("\n");
-            sb.Append("  ShowConnectorLines: ").Append(this.ShowConnectorLines).Append("\n");
+            sb.Append("  Threshold: ").Append(this.Threshold).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

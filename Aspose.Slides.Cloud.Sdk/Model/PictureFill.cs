@@ -103,6 +103,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string SvgData { get; set; }
 
+        /// <summary>
+        /// Image transform effects.
+        /// </summary>
+        public List<ImageTransformEffect> ImageTransformList { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -147,6 +152,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Base64Data: ").Append(this.Base64Data).Append("\n");
             sb.Append("  SvgData: ").Append(this.SvgData).Append("\n");
             sb.Append("  PictureFillMode: ").Append(this.PictureFillMode).Append("\n");
+            sb.Append("  ImageTransformList: ").Append(this.ImageTransformList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

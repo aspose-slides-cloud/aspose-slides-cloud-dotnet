@@ -489,7 +489,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets DataPointType
         /// </summary>
-        public DataPointTypeEnum? DataPointType { get; set; }
+        public DataPointTypeEnum? DataPointType { get; protected set; }
 
         /// <summary>
         /// Series name.

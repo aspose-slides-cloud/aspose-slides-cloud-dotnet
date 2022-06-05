@@ -67,7 +67,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                     new OneValueSeries
                     {
                         Type = Series.TypeEnum.ClusteredColumn,
-                        DataPointType = OneValueSeries.DataPointTypeEnum.OneValue,
                         Name = "Series1",
                         DataPoints = new List<OneValueChartDataPoint> { new OneValueChartDataPoint { Value = 40 }, new OneValueChartDataPoint { Value = 50 } }
                     }

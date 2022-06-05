@@ -249,7 +249,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             {
                 RangeStartIndex = c_startUnicodeIndex,
                 RangeEndIndex = c_endUnicodeIndex,
-                FallbackFontList = new List<string>() { "Segoe UI Emoji, Segoe UI Symbol", "Arial" }
+                FallbackFontList = new List<string>() { "Segoe UI Emoji", "Segoe UI Symbol", "Arial" }
             });
 
             ImageExportOptions exportOptions = new ImageExportOptions()

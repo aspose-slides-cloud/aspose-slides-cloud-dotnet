@@ -174,8 +174,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void GetViewProperties()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            ViewProperties respose = TestUtils.SlidesApi.GetViewProperties(c_fileName, c_password, c_folderName);
-            Assert.AreEqual(ViewProperties.ShowCommentsEnum.True, respose.ShowComments);
+            ViewProperties response = TestUtils.SlidesApi.GetViewProperties(c_fileName, c_password, c_folderName);
+            Assert.AreEqual(ViewProperties.ShowCommentsEnum.True, response.ShowComments);
         }
         
         [Test]
@@ -191,10 +191,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
               }
             };
  
-            ViewProperties respose = TestUtils.SlidesApi.SetViewProperties( c_fileName, dto, c_password, c_folderName);
+            ViewProperties response = TestUtils.SlidesApi.SetViewProperties( c_fileName, dto, c_password, c_folderName);
             
-            Assert.AreEqual(ViewProperties.ShowCommentsEnum.False, respose.ShowComments);
-            Assert.AreEqual(50, respose.SlideViewProperties.Scale);
+            Assert.AreEqual(ViewProperties.ShowCommentsEnum.False, response.ShowComments);
+            Assert.AreEqual(50, response.SlideViewProperties.Scale);
         }
 
 

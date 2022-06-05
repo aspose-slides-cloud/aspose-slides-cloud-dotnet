@@ -65,7 +65,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets Type
         /// </summary>
-        public TypeEnum? Type { get; set; }
+        public TypeEnum? Type { get; protected set; }
 
         /// <summary>
         /// Get or sets password to open document.

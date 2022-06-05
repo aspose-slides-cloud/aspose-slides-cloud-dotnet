@@ -98,6 +98,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string Text { get; set; }
 
+        /// <summary>
+        /// Get or sets list to paragraphs list
+        /// </summary>
+        public ResourceUri Paragraphs { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -135,6 +140,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  IsAssistant: ").Append(this.IsAssistant).Append("\n");
             sb.Append("  Text: ").Append(this.Text).Append("\n");
             sb.Append("  OrgChartLayout: ").Append(this.OrgChartLayout).Append("\n");
+            sb.Append("  Paragraphs: ").Append(this.Paragraphs).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

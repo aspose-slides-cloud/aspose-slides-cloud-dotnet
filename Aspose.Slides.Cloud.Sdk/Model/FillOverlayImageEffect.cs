@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="BoxAndWhiskerSeries.cs">
+// <copyright company="Aspose" file="FillOverlayImageEffect.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,53 +35,53 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// One value series.
+    /// Represents a Fill Overlay effect. A fill overlay may be used to specify an additional fill for an object and blend the two fills together.
     /// </summary>  
-    public class BoxAndWhiskerSeries : OneValueSeries 
+    public class FillOverlayImageEffect : ImageTransformEffect 
     {                       
         /// <summary>
-        /// Quartile method.
+        /// FillBlendMode.
         /// </summary>
-        /// <value>Quartile method.</value>
+        /// <value>FillBlendMode.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum QuartileMethodEnum
+        public enum BlendEnum
         {
             
             /// <summary>
-            /// Enum Exclusive for "Exclusive"
+            /// Enum Darken for "Darken"
             /// </summary>
-            Exclusive,
+            Darken,
             
             /// <summary>
-            /// Enum Inclusive for "Inclusive"
+            /// Enum Lighten for "Lighten"
             /// </summary>
-            Inclusive
+            Lighten,
+            
+            /// <summary>
+            /// Enum Multiply for "Multiply"
+            /// </summary>
+            Multiply,
+            
+            /// <summary>
+            /// Enum Overlay for "Overlay"
+            /// </summary>
+            Overlay,
+            
+            /// <summary>
+            /// Enum Screen for "Screen"
+            /// </summary>
+            Screen
         }
 
         /// <summary>
-        /// Quartile method.
+        /// FillBlendMode.
         /// </summary>
-        public QuartileMethodEnum? QuartileMethod { get; set; }
+        public BlendEnum? Blend { get; set; }
 
         /// <summary>
-        /// True if inner points are shown.
+        /// Fill format.
         /// </summary>
-        public bool? ShowInnerPoints { get; set; }
-
-        /// <summary>
-        /// True if mean line is shown.
-        /// </summary>
-        public bool? ShowMeanLine { get; set; }
-
-        /// <summary>
-        /// True if mean markers are shown.
-        /// </summary>
-        public bool? ShowMeanMarkers { get; set; }
-
-        /// <summary>
-        /// True if outlier points are shown.
-        /// </summary>
-        public bool? ShowOutlierPoints { get; set; }
+        public FillFormat FillFormat { get; set; }
 
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("DataPointType", DataPointTypeEnum.OneValue);
+                    s_typeDeterminers.Add("Type", TypeEnum.FillOverlay);
                 }
                 return s_typeDeterminers;
             }
@@ -104,9 +104,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public BoxAndWhiskerSeries() : base()
+        public FillOverlayImageEffect() : base()
         {
-            DataPointType = DataPointTypeEnum.OneValue;
+            Type = TypeEnum.FillOverlay;
         }
 
         /// <summary>
@@ -116,28 +116,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class BoxAndWhiskerSeries {\n");
+            sb.Append("class FillOverlayImageEffect {\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  IsColorVaried: ").Append(this.IsColorVaried).Append("\n");
-            sb.Append("  InvertedSolidFillColor: ").Append(this.InvertedSolidFillColor).Append("\n");
-            sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
-            sb.Append("  PlotOnSecondAxis: ").Append(this.PlotOnSecondAxis).Append("\n");
-            sb.Append("  Order: ").Append(this.Order).Append("\n");
-            sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");
-            sb.Append("  Explosion: ").Append(this.Explosion).Append("\n");
-            sb.Append("  Marker: ").Append(this.Marker).Append("\n");
+            sb.Append("  Blend: ").Append(this.Blend).Append("\n");
             sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-            sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
-            sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
-            sb.Append("  NumberFormatOfValues: ").Append(this.NumberFormatOfValues).Append("\n");
-            sb.Append("  QuartileMethod: ").Append(this.QuartileMethod).Append("\n");
-            sb.Append("  ShowInnerPoints: ").Append(this.ShowInnerPoints).Append("\n");
-            sb.Append("  ShowMeanLine: ").Append(this.ShowMeanLine).Append("\n");
-            sb.Append("  ShowMeanMarkers: ").Append(this.ShowMeanMarkers).Append("\n");
-            sb.Append("  ShowOutlierPoints: ").Append(this.ShowOutlierPoints).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -130,7 +130,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets Type
         /// </summary>
-        public TypeEnum? Type { get; set; }
+        public TypeEnum? Type { get; protected set; }
 
         /// <summary>
         /// Gets or sets the name.

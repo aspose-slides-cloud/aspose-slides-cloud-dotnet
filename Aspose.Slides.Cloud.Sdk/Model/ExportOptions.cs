@@ -52,7 +52,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets Format
         /// </summary>
-        public string Format { get; set; }
+        public string Format { get; protected set; }
 
 
         /// <summary>

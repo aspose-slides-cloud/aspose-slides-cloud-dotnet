@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WaterfallChartDataPoint.cs">
+// <copyright company="Aspose" file="AlphaCeilingEffect.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,15 +35,10 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// One value chart data point.
+    /// Represents an Alpha Ceiling effect.
     /// </summary>  
-    public class WaterfallChartDataPoint : OneValueChartDataPoint 
+    public class AlphaCeilingEffect : ImageTransformEffect 
     {                       
-        /// <summary>
-        /// Value.
-        /// </summary>
-        public bool? SetAsTotal { get; set; }
-
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -55,6 +50,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.AlphaCeiling);
                 }
                 return s_typeDeterminers;
             }
@@ -64,8 +60,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public WaterfallChartDataPoint() : base()
+        public AlphaCeilingEffect() : base()
         {
+            Type = TypeEnum.AlphaCeiling;
         }
 
         /// <summary>
@@ -75,9 +72,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class WaterfallChartDataPoint {\n");
-            sb.Append("  Value: ").Append(this.Value).Append("\n");
-            sb.Append("  SetAsTotal: ").Append(this.SetAsTotal).Append("\n");
+            sb.Append("class AlphaCeilingEffect {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

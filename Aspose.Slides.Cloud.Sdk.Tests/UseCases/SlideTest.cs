@@ -39,7 +39,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Model.Slides slides = TestUtils.SlidesApi.GetSlides(c_fileName, c_password, c_folderName);
-            Assert.AreEqual(6, slides.SlideList.Count);
+            Assert.AreEqual(c_slideCount, slides.SlideList.Count);
         }
 
         [Test]
@@ -57,10 +57,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
             Model.Slides slides =
                 TestUtils.SlidesApi.CreateSlide(c_fileName, c_layoutSlidePath, 1, c_password, c_folderName);
-            Assert.AreEqual(7, slides.SlideList.Count);
+            Assert.AreEqual(c_slideCount + 1, slides.SlideList.Count);
 
             slides = TestUtils.SlidesApi.CreateSlide(c_fileName, password: c_password, folder: c_folderName);
-            Assert.AreEqual(8, slides.SlideList.Count);
+            Assert.AreEqual(c_slideCount + 2, slides.SlideList.Count);
         }
 
         [Test]
@@ -70,7 +70,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
             Model.Slides slides =
                 TestUtils.SlidesApi.CopySlide(c_fileName, 3, password: c_password, folder: c_folderName);
-            Assert.AreEqual(7, slides.SlideList.Count);
+            Assert.AreEqual(c_slideCount + 1, slides.SlideList.Count);
         }
 
         [Test]
@@ -79,10 +79,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TestUtils.Upload(c_sourceFileName, c_folderName + "/" + c_sourceFileName);
 
-            Model.Slides slides = TestUtils.SlidesApi.CopySlide(c_fileName, c_slideIndex, 1,
-                $"{c_folderName}/{c_sourceFileName}",
+            Model.Slides slides = TestUtils.SlidesApi.CopySlide(c_fileName, c_slideIndex, 1, $"{c_folderName}/{c_sourceFileName}",
                 password: c_password, folder: c_folderName);
-            Assert.AreEqual(7, slides.SlideList.Count);
+            Assert.AreEqual(c_slideCount + 1, slides.SlideList.Count);
         }
 
         [Test]
@@ -90,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Model.Slides slides = TestUtils.SlidesApi.MoveSlide(c_fileName, c_slideIndex, 2, c_password, c_folderName);
-            Assert.AreEqual(6, slides.SlideList.Count);
+            Assert.AreEqual(c_slideCount, slides.SlideList.Count);
         }
 
         [Test]
@@ -102,7 +101,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
             Model.Slides slides =
                 TestUtils.SlidesApi.ReorderSlides(c_fileName, oldPositions, newPositions, c_password, c_folderName);
-            Assert.AreEqual(6, slides.SlideList.Count);
+            Assert.AreEqual(c_slideCount, slides.SlideList.Count);
         }
         
         [Test]
@@ -135,7 +134,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             List<int> indexes = new List<int>{1,3,5};
             Model.Slides slides = TestUtils.SlidesApi.DeleteSlides(c_fileName, indexes, c_password, c_folderName);
-            Assert.AreEqual(3, slides.SlideList.Count);
+            Assert.AreEqual(c_slideCount - 3, slides.SlideList.Count);
         }
         
         [Test]
@@ -143,7 +142,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Model.Slides slides = TestUtils.SlidesApi.DeleteSlide(c_fileName, c_slideIndex, c_password, c_folderName);
-            Assert.AreEqual(5, slides.SlideList.Count);
+            Assert.AreEqual(c_slideCount - 1, slides.SlideList.Count);
         }
         
         [Test]
@@ -197,6 +196,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const string c_sourceFileName = "TemplateCV.pptx";
         const string c_password = "password";
         const int c_slideIndex = 1;
+        const int c_slideCount = 7;
         const string c_layoutSlidePath = "layoutSlides/3";
         const string c_color = "#FFF5FF8A";
     }

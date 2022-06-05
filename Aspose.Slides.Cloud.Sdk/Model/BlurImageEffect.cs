@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ResourceUri.cs">
+// <copyright company="Aspose" file="BlurImageEffect.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,51 +35,32 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents Resource URI
+    /// Represents a Blur effect that is applied to the entire shape, including its fill. All color channels, including alpha, are affected.
     /// </summary>  
-    public class ResourceUri 
+    public class BlurImageEffect : ImageTransformEffect 
     {                       
         /// <summary>
-        /// Gets or sets the href.
+        /// Returns or sets blur radius.
         /// </summary>
-        public string Href { get; set; }
+        public double? Radius { get; set; }
 
         /// <summary>
-        /// Gets or sets the relation.
+        /// Determines whether the bounds of the object should be grown as a result of the blurring. True indicates the bounds are grown while false indicates that they are not.
         /// </summary>
-        public string Relation { get; set; }
-
-        /// <summary>
-        /// Gets or sets the type of link.
-        /// </summary>
-        public string LinkType { get; set; }
-
-        /// <summary>
-        /// Gets or sets the title of link.
-        /// </summary>
-        public string Title { get; set; }
-
-        /// <summary>
-        /// Resource slide index.
-        /// </summary>
-        public int? SlideIndex { get; set; }
-
-        /// <summary>
-        /// Resource shape index.
-        /// </summary>
-        public int? ShapeIndex { get; set; }
+        public bool? Grow { get; set; }
 
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static Dictionary<string, object> TypeDeterminers
+        public static new Dictionary<string, object> TypeDeterminers
         {
             get
             {
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Blur);
                 }
                 return s_typeDeterminers;
             }
@@ -89,8 +70,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public ResourceUri() : base()
+        public BlurImageEffect() : base()
         {
+            Type = TypeEnum.Blur;
         }
 
         /// <summary>
@@ -100,13 +82,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class ResourceUri {\n");
-            sb.Append("  Href: ").Append(this.Href).Append("\n");
-            sb.Append("  Relation: ").Append(this.Relation).Append("\n");
-            sb.Append("  LinkType: ").Append(this.LinkType).Append("\n");
-            sb.Append("  Title: ").Append(this.Title).Append("\n");
-            sb.Append("  SlideIndex: ").Append(this.SlideIndex).Append("\n");
-            sb.Append("  ShapeIndex: ").Append(this.ShapeIndex).Append("\n");
+            sb.Append("class BlurImageEffect {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Radius: ").Append(this.Radius).Append("\n");
+            sb.Append("  Grow: ").Append(this.Grow).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

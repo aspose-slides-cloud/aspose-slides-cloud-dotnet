@@ -44,6 +44,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public double? Value { get; set; }
 
+        /// <summary>
+        /// SetAsTotal. Applied to Waterfall data points only.
+        /// </summary>
+        public bool? SetAsTotal { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -77,6 +82,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class OneValueChartDataPoint {\n");
             sb.Append("  Value: ").Append(this.Value).Append("\n");
+            sb.Append("  SetAsTotal: ").Append(this.SetAsTotal).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

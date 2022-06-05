@@ -264,8 +264,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                     },
                     new Portion()
                     {
-                        Text = "Portion2",
-                        FontBold = Portion.FontBoldEnum.True
+                        Text = "Portion2"
                     }
                 }
             };

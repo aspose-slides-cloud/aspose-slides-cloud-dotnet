@@ -142,6 +142,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string Base64Data { get; set; }
 
+        /// <summary>
+        /// Picture fill format.
+        /// </summary>
+        public PictureFill PictureFillFormat { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -202,6 +207,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  RewindVideo: ").Append(this.RewindVideo).Append("\n");
             sb.Append("  Volume: ").Append(this.Volume).Append("\n");
             sb.Append("  Base64Data: ").Append(this.Base64Data).Append("\n");
+            sb.Append("  PictureFillFormat: ").Append(this.PictureFillFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

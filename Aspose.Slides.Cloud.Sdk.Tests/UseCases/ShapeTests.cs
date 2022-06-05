@@ -212,6 +212,32 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<SmartArt>(shape);
         }
+        
+        [Test]
+        public void SmartArtTextFormatting()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Portion portion = new Portion()
+            {
+                Text = "New text",
+                FontHeight = 24,
+                FontBold = Portion.FontBoldEnum.True,
+                Spacing = 3,
+                FillFormat = new SolidFill() { Color = "#FFFFFF00" }
+            };
+            
+            string targetNodePath = "1/nodes/1/nodes";
+            int slideIndex = 7;
+            Portion response = TestUtils.SlidesApi.UpdateSubshapePortion(c_fileName, slideIndex, targetNodePath, 2, 1, 1, portion,
+             c_password, c_folderName);
+            
+            Assert.IsNotNull(response);
+            Assert.AreEqual(portion.Text, response.Text);
+            Assert.AreEqual(portion.FontHeight, response.FontHeight);
+            Assert.AreEqual(portion.FontBold, response.FontBold);
+            Assert.AreEqual(portion.Spacing, response.Spacing);
+            Assert.AreEqual(((SolidFill)portion.FillFormat).Color, ((SolidFill)response.FillFormat).Color);
+        }
 
         [Test]
         public void SmartArtEmpty()

@@ -111,7 +111,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
         
         [Test]
-        public void DeleteSlidesComments()
+        public void DeleteSlideComments()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TestUtils.SlidesApi.DeleteSlideComments(c_fileName, c_slideIndex, null, c_password, c_folderName);
@@ -131,7 +131,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void CreateModernComment()
         {
             int textSelectionStartIndex = 1;
-            int textSellectionLength = 5;
+            int textSelectionLength = 5;
             
             SlideModernComment childComment = new SlideModernComment()
             {
@@ -145,7 +145,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Text = c_commentText,
                 Status  = SlideModernComment.StatusEnum.Active,
                 TextSelectionStart = textSelectionStartIndex,
-                TextSelectionLength = textSellectionLength,
+                TextSelectionLength = textSelectionLength,
                 ChildComments = new List<SlideCommentBase>(){childComment}
             };
             
@@ -159,7 +159,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void CreateShapeModernComment()
         {
             int textSelectionStartIndex = 1;
-            int textSellectionLength = 5;
+            int textSelectionLength = 5;
             
             SlideModernComment childComment = new SlideModernComment()
             {
@@ -173,7 +173,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Text = c_commentText,
                 Status  = SlideModernComment.StatusEnum.Active,
                 TextSelectionStart = textSelectionStartIndex,
-                TextSelectionLength = textSellectionLength,
+                TextSelectionLength = textSelectionLength,
                 ChildComments = new List<SlideCommentBase>(){childComment}
             };
             
