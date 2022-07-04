@@ -40,24 +40,24 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class FormatScheme : ResourceBase 
     {                       
         /// <summary>
-        /// Background style links.
+        /// Background styles.
         /// </summary>
-        public List<ResourceUri> BackgroundStyles { get; set; }
+        public List<FillFormat> BackgroundStyles { get; set; }
 
         /// <summary>
-        /// Effect style links.
+        /// Effect styles.
         /// </summary>
-        public List<ResourceUri> EffectStyles { get; set; }
+        public List<EffectFormat> EffectStyles { get; set; }
 
         /// <summary>
-        /// Fill style links.
+        /// Fill styles.
         /// </summary>
-        public List<ResourceUri> FillStyles { get; set; }
+        public List<FillFormat> FillStyles { get; set; }
 
         /// <summary>
-        /// Line style links.
+        /// Line style.
         /// </summary>
-        public List<ResourceUri> LineStyles { get; set; }
+        public List<LineFormat> LineStyles { get; set; }
 
 
         /// <summary>

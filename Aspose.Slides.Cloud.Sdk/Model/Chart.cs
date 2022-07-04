@@ -513,6 +513,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public PlotArea PlotArea { get; set; }
 
+        /// <summary>
+        /// Specifies the chart area shall have rounded corners.
+        /// </summary>
+        public bool? HasRoundedCorners { get; set; }
+
+        /// <summary>
+        /// Gets groups of series. 
+        /// </summary>
+        public List<ChartSeriesGroup> SeriesGroups { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -576,6 +586,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Legend: ").Append(this.Legend).Append("\n");
             sb.Append("  Axes: ").Append(this.Axes).Append("\n");
             sb.Append("  PlotArea: ").Append(this.PlotArea).Append("\n");
+            sb.Append("  HasRoundedCorners: ").Append(this.HasRoundedCorners).Append("\n");
+            sb.Append("  SeriesGroups: ").Append(this.SeriesGroups).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

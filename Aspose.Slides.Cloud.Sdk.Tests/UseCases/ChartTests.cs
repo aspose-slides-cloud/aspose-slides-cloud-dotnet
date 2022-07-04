@@ -477,6 +477,20 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsInstanceOf<GradientFill>(chart.Axes.VerticalAxis.MajorGridLinesFormat.LineFormat.FillFormat);
             Assert.IsInstanceOf<NoFill>(chart.Axes.VerticalAxis.MinorGridLinesFormat.LineFormat.FillFormat);
         }
+        
+        [Test]
+        public void ChartSeriesGroups()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Chart chart =
+                (Chart)TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, c_shapeIndex, c_password, c_folderName);
+            Assert.AreEqual(1, chart.SeriesGroups.Count);
+            ChartSeriesGroup seriesGroup = chart.SeriesGroups[0];
+            seriesGroup.Overlap = 10;
+            chart = TestUtils.SlidesApi.UpdateChartSeriesGroup(c_fileName, c_slideIndex, c_shapeIndex,
+                c_seriesGroupIndex, seriesGroup, c_password, c_folderName);
+            Assert.AreEqual(10, chart.SeriesGroups[0].Overlap);
+        }
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
@@ -487,5 +501,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const int c_categoryIndex = 2;
         const int c_seriesCount = 3;
         const int c_categoryCount = 4;
+        const int c_seriesGroupIndex = 1;
     }
 }

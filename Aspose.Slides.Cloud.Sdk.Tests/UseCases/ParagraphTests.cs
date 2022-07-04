@@ -276,6 +276,24 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(response.DefaultPortionFormat.LatinFont, dto.DefaultPortionFormat.LatinFont);
             Assert.AreEqual(response.DefaultPortionFormat.FontHeight, dto.DefaultPortionFormat.FontHeight);
         }
+        
+        [Test]
+        public void GetParagraphEffective()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Paragraph response =
+                TestUtils.SlidesApi.GetParagraphEffective(c_fileName, c_slideIndex, c_shapeIndex, 1, c_password, c_folderName);
+            Assert.AreEqual(72, response.DefaultTabSize);
+        }
+
+        [Test]
+        public void GetSubshapeParagraphEffective()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Paragraph response = TestUtils.SlidesApi.GetSubshapeParagraphEffective(c_fileName, c_slideIndex, c_shapePath,
+                1, 1, c_password, c_folderName);
+            Assert.AreEqual(72, response.DefaultTabSize);
+        }
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";

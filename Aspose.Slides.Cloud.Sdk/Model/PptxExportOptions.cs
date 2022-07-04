@@ -48,19 +48,19 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             
             /// <summary>
-            /// Enum Ecma3762006 for "Ecma376_2006"
+            /// Enum Ecma376 for "Ecma376"
             /// </summary>
-            Ecma3762006,
+            Ecma376,
             
             /// <summary>
-            /// Enum Iso295002008Transitional for "Iso29500_2008_Transitional"
+            /// Enum Iso29500Transitional for "Iso29500Transitional"
             /// </summary>
-            Iso295002008Transitional,
+            Iso29500Transitional,
             
             /// <summary>
-            /// Enum Iso295002008Strict for "Iso29500_2008_Strict"
+            /// Enum Iso29500Strict for "Iso29500Strict"
             /// </summary>
-            Iso295002008Strict
+            Iso29500Strict
         }
 
         /// <summary>

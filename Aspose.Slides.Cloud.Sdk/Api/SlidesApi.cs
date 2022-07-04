@@ -4090,8 +4090,8 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="format">Output file format.</param> 
         /// <param name="options">Export options.</param> 
-        /// <param name="width">Output file width; 0 to not adjust the size. Default is 0.</param> 
-        /// <param name="height">Output file height; 0 to not adjust the size. Default is 0.</param> 
+        /// <param name="width">The width of the slide representation in the output format; 0 to not adjust the size. Default is 0.</param> 
+        /// <param name="height">The height of the slide representation in the output format; 0 to not adjust the size. Default is 0.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
@@ -4127,8 +4127,8 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="document">Document data.</param> 
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="format">Output file format.</param> 
-        /// <param name="width">Output file width; 0 to not adjust the size. Default is 0.</param> 
-        /// <param name="height">Output file height; 0 to not adjust the size. Default is 0.</param> 
+        /// <param name="width">The width of the slide representation in the output format; 0 to not adjust the size. Default is 0.</param> 
+        /// <param name="height">The height of the slide representation in the output format; 0 to not adjust the size. Default is 0.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Storage folder containing custom fonts to be used with the document.</param> 
@@ -4801,6 +4801,38 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Read effective paragraph info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraph"/></returns>            
+        public Paragraph GetParagraphEffective(string name, int slideIndex, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetParagraphEffective");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/effective");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Return coordinates of rect that bounds paragraph. The rect includes all the lines of text in paragraph, including empty ones. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -4941,6 +4973,40 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read effective portion info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portion"/></returns>            
+        public Portion GetPortionEffective(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetPortionEffective");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}/effective");
             var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
@@ -5985,6 +6051,45 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Read effective paragraph info (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraph"/></returns>            
+        public Paragraph GetSubshapeParagraphEffective(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSubshapeParagraphEffective");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSubshapeParagraphEffective");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/effective");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Read shape paragraphs info (for smart art and group shapes). 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -6048,6 +6153,47 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Read effective portion info (for smart art and group shapes). 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="path">Shape path.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portion"/></returns>            
+        public Portion GetSubshapePortionEffective(string name, int slideIndex, string path, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetSubshapePortionEffective");
+            }
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling GetSubshapePortionEffective");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{path}/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}/effective");
             var headerParams = new Dictionary<string, string>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
@@ -7086,8 +7232,8 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="format">Output file format.</param> 
         /// <param name="outPath">Path to upload the output file to.</param> 
         /// <param name="options">Export options.</param> 
-        /// <param name="width">Output file width; 0 to not adjust the size. Default is 0.</param> 
-        /// <param name="height">Output file height; 0 to not adjust the size. Default is 0.</param> 
+        /// <param name="width">The width of the slide representation in the output format; 0 to not adjust the size. Default is 0.</param> 
+        /// <param name="height">The height of the slide representation in the output format; 0 to not adjust the size. Default is 0.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
@@ -7130,8 +7276,8 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="format">Output file format.</param> 
         /// <param name="outPath">Path to save result.</param> 
-        /// <param name="width">Output file width; 0 to not adjust the size. Default is 0.</param> 
-        /// <param name="height">Output file height; 0 to not adjust the size. Default is 0.</param> 
+        /// <param name="width">The width of the slide representation in the output format; 0 to not adjust the size. Default is 0.</param> 
+        /// <param name="height">The height of the slide representation in the output format; 0 to not adjust the size. Default is 0.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Storage folder containing custom fonts to be used with the document.</param> 
@@ -8189,6 +8335,45 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var postBody = SerializationHelper.Serialize(series); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Chart>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Update a series group in a chart. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index (must be a chart).</param> 
+        /// <param name="seriesGroupIndex">Series group index.</param> 
+        /// <param name="seriesGroup">Series group DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Chart"/></returns>            
+        public Chart UpdateChartSeriesGroup(string name, int slideIndex, int shapeIndex, int seriesGroupIndex, ChartSeriesGroup seriesGroup, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateChartSeriesGroup");
+            }
+            // verify the required parameter 'seriesGroup' is set
+            if (seriesGroup == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'seriesGroup' when calling UpdateChartSeriesGroup");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/seriesGroup/{seriesGroupIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesGroupIndex", seriesGroupIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(seriesGroup); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Chart>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
         }

@@ -49,6 +49,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? SetAsTotal { get; set; }
 
+        /// <summary>
+        /// True if the data point shall invert its colors if the value is negative. Applies to bar, column and bubble series.
+        /// </summary>
+        public bool? InvertIfNegative { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -83,6 +88,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("class OneValueChartDataPoint {\n");
             sb.Append("  Value: ").Append(this.Value).Append("\n");
             sb.Append("  SetAsTotal: ").Append(this.SetAsTotal).Append("\n");
+            sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

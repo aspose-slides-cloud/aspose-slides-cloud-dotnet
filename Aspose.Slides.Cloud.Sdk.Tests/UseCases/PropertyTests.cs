@@ -197,6 +197,18 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(50, response.SlideViewProperties.Scale);
         }
 
+        [Test]
+        public void ProtectionCheck()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            ProtectionProperties protectionProperties = TestUtils.SlidesApi.GetProtectionProperties(c_fileName, null, c_folderName);
+            Assert.IsTrue(protectionProperties.IsEncrypted.Value);
+            Assert.IsNull(protectionProperties.ReadPassword);
+            
+            protectionProperties = TestUtils.SlidesApi.GetProtectionProperties(c_fileName, c_password, c_folderName);
+            Assert.IsTrue(protectionProperties.IsEncrypted.Value);
+            Assert.IsNotNull(protectionProperties.ReadPassword);
+        }
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";

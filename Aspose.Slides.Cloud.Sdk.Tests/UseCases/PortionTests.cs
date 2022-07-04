@@ -244,6 +244,24 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.Greater(response.Height, 0);
         }
         
+        [Test]
+        public void GetPortionEffective()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Portion response = TestUtils.SlidesApi.GetPortionEffective(c_fileName, c_slideIndex, c_shapeIndex,
+                c_paragraphIndex, c_portionIndex, c_password, c_folderName);
+            Assert.AreEqual(18, response.FontHeight);
+        }
+
+        [Test]
+        public void GetSubshapePortionEffective()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Portion response = TestUtils.SlidesApi.GetSubshapePortionEffective(c_fileName, c_slideIndex, c_shapePath, 1,
+                c_paragraphIndex, c_portionIndex, c_password, c_folderName);
+            Assert.AreEqual(18, response.FontHeight);
+        }
+        
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
         const string c_password = "password";

@@ -86,6 +86,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\Camera.cs" />
     <Compile Include="Model\ChartCategory.cs" />
     <Compile Include="Model\ChartLinesFormat.cs" />
+    <Compile Include="Model\ChartSeriesGroup.cs" />
     <Compile Include="Model\ChartTitle.cs" />
     <Compile Include="Model\ChartWall.cs" />
     <Compile Include="Model\CommonSlideViewProperties.cs" />
