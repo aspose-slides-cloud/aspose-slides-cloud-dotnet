@@ -55,7 +55,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// <summary>
             /// Enum Request for "Request"
             /// </summary>
-            Request
+            Request,
+            
+            /// <summary>
+            /// Enum Url for "Url"
+            /// </summary>
+            Url
         }
 
         /// <summary>

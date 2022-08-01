@@ -24,6 +24,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Collections.Generic;
+using System.IO;
 using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
@@ -245,6 +246,24 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             animation = TestUtils.SlidesApi.DeleteSpecialSlideAnimation(
                 c_fileName, c_slideIndex, SpecialSlideType.MasterSlide, c_password, c_folderName);
             Assert.AreEqual(0, animation.MainSequence.Count);
+        }
+
+        [Test]
+        public void MasterSlideDeleteUnused()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            MasterSlides masterSlides =
+                TestUtils.SlidesApi.DeleteUnusedMasterSlides(c_fileName, true, c_password, c_folderName);
+            Assert.AreEqual(1, masterSlides.SlideList.Count);
+        }
+        
+        [Test]
+        public void MasterSlideDeleteUnusedOnline()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            Stream result = TestUtils.SlidesApi.DeleteUnusedMasterSlidesOnline(file, true, c_password);
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.CanRead);
         }
 
         const string c_folderName = "TempSlidesSDK";

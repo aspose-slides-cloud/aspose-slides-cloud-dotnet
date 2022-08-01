@@ -3555,6 +3555,62 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Removes unused master slides. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="ignorePreserveField">Determines, whether this method should remove unused master even if its             preserve property is set to true.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="MasterSlides"/></returns>            
+        public MasterSlides DeleteUnusedMasterSlides(string name, bool? ignorePreserveField = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteUnusedMasterSlides");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/masterSlides");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignorePreserveField", ignorePreserveField);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<MasterSlides>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Removes unused master slides. 
+        /// </summary>
+        /// <param name="document">Document data</param> 
+        /// <param name="ignorePreserveField">Determines, whether this method should remove unused master even if its             preserve property is set to true.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream DeleteUnusedMasterSlidesOnline(System.IO.Stream document, bool? ignorePreserveField = null, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling DeleteUnusedMasterSlidesOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/masterSlides/delete");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignorePreserveField", ignorePreserveField);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Removes shapes with name \&quot;watermark\&quot; from the presentation. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -7587,6 +7643,160 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Set chart axis. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="axisType">Axis type. Horizontal, Vertical, SecondaryHorizontal or SecondaryVertical.</param> 
+        /// <param name="axis">Axis DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Axis"/></returns>            
+        public Axis SetChartAxis(string name, int slideIndex, int shapeIndex, AxisType axisType, Axis axis, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SetChartAxis");
+            }
+            // verify the required parameter 'axis' is set
+            if (axis == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'axis' when calling SetChartAxis");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/{axisType}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "axisType", axisType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(axis); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Axis>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Set chart axis. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="legend">Chart legend DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Legend"/></returns>            
+        public Legend SetChartLegend(string name, int slideIndex, int shapeIndex, Legend legend, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SetChartLegend");
+            }
+            // verify the required parameter 'legend' is set
+            if (legend == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'legend' when calling SetChartLegend");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/legend");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(legend); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Legend>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Set a series group in a chart. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index (must be a chart).</param> 
+        /// <param name="seriesGroupIndex">Series group index.</param> 
+        /// <param name="seriesGroup">Series group DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Chart"/></returns>            
+        public Chart SetChartSeriesGroup(string name, int slideIndex, int shapeIndex, int seriesGroupIndex, ChartSeriesGroup seriesGroup, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SetChartSeriesGroup");
+            }
+            // verify the required parameter 'seriesGroup' is set
+            if (seriesGroup == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'seriesGroup' when calling SetChartSeriesGroup");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/seriesGroup/{seriesGroupIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesGroupIndex", seriesGroupIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(seriesGroup); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Chart>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Set 3D chart wall. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="chartWallType">Chart wall type: floor, sideWall or backWall.</param> 
+        /// <param name="chartWall">Chart wall DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="ChartWall"/></returns>            
+        public ChartWall SetChartWall(string name, int slideIndex, int shapeIndex, ChartWallType chartWallType, ChartWall chartWall, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SetChartWall");
+            }
+            // verify the required parameter 'chartWall' is set
+            if (chartWall == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'chartWall' when calling SetChartWall");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/{chartWallType}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "chartWallType", chartWallType);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(chartWall); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<ChartWall>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Set document properties. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -8335,45 +8545,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var postBody = SerializationHelper.Serialize(series); // http body (model) parameter
-            var requestFiles = new List<FileInfo>();
-            return InvokeApi<Chart>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Update a series group in a chart. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index (must be a chart).</param> 
-        /// <param name="seriesGroupIndex">Series group index.</param> 
-        /// <param name="seriesGroup">Series group DTO.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="Chart"/></returns>            
-        public Chart UpdateChartSeriesGroup(string name, int slideIndex, int shapeIndex, int seriesGroupIndex, ChartSeriesGroup seriesGroup, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateChartSeriesGroup");
-            }
-            // verify the required parameter 'seriesGroup' is set
-            if (seriesGroup == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'seriesGroup' when calling UpdateChartSeriesGroup");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/seriesGroup/{seriesGroupIndex}");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "seriesGroupIndex", seriesGroupIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var postBody = SerializationHelper.Serialize(seriesGroup); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Chart>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
         }

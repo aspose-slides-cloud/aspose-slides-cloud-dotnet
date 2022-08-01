@@ -150,7 +150,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Enum Xaml for "Xaml"
         /// </summary>
-        Xaml
+        Xaml,
+        
+        /// <summary>
+        /// Enum Html5 for "Html5"
+        /// </summary>
+        Html5
     }
 
 }

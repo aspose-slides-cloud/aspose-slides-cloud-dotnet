@@ -65,7 +65,97 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Enum Tiff for "Tiff"
         /// </summary>
-        Tiff
+        Tiff,
+        
+        /// <summary>
+        /// Enum Html for "Html"
+        /// </summary>
+        Html,
+        
+        /// <summary>
+        /// Enum Pdf for "Pdf"
+        /// </summary>
+        Pdf,
+        
+        /// <summary>
+        /// Enum Xps for "Xps"
+        /// </summary>
+        Xps,
+        
+        /// <summary>
+        /// Enum Pptx for "Pptx"
+        /// </summary>
+        Pptx,
+        
+        /// <summary>
+        /// Enum Odp for "Odp"
+        /// </summary>
+        Odp,
+        
+        /// <summary>
+        /// Enum Otp for "Otp"
+        /// </summary>
+        Otp,
+        
+        /// <summary>
+        /// Enum Ppt for "Ppt"
+        /// </summary>
+        Ppt,
+        
+        /// <summary>
+        /// Enum Pps for "Pps"
+        /// </summary>
+        Pps,
+        
+        /// <summary>
+        /// Enum Ppsx for "Ppsx"
+        /// </summary>
+        Ppsx,
+        
+        /// <summary>
+        /// Enum Pptm for "Pptm"
+        /// </summary>
+        Pptm,
+        
+        /// <summary>
+        /// Enum Ppsm for "Ppsm"
+        /// </summary>
+        Ppsm,
+        
+        /// <summary>
+        /// Enum Potx for "Potx"
+        /// </summary>
+        Potx,
+        
+        /// <summary>
+        /// Enum Pot for "Pot"
+        /// </summary>
+        Pot,
+        
+        /// <summary>
+        /// Enum Potm for "Potm"
+        /// </summary>
+        Potm,
+        
+        /// <summary>
+        /// Enum Svg for "Svg"
+        /// </summary>
+        Svg,
+        
+        /// <summary>
+        /// Enum Fodp for "Fodp"
+        /// </summary>
+        Fodp,
+        
+        /// <summary>
+        /// Enum Xaml for "Xaml"
+        /// </summary>
+        Xaml,
+        
+        /// <summary>
+        /// Enum Html5 for "Html5"
+        /// </summary>
+        Html5
     }
 
 }

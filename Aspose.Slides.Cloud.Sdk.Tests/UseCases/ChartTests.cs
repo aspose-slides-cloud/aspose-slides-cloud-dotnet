@@ -468,16 +468,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                     }
                 }
             };
-            
+
             chart = (Chart)TestUtils.SlidesApi.UpdateShape(c_fileName, c_slideIndex, c_shapeIndex, chart, c_password,
                 c_folderName);
-                
+
             Assert.IsInstanceOf<NoFill>(chart.Axes.HorizontalAxis.MajorGridLinesFormat.LineFormat.FillFormat);
             Assert.IsInstanceOf<SolidFill>(chart.Axes.HorizontalAxis.MinorGridLinesFormat.LineFormat.FillFormat);
             Assert.IsInstanceOf<GradientFill>(chart.Axes.VerticalAxis.MajorGridLinesFormat.LineFormat.FillFormat);
             Assert.IsInstanceOf<NoFill>(chart.Axes.VerticalAxis.MinorGridLinesFormat.LineFormat.FillFormat);
         }
-        
+
         [Test]
         public void ChartSeriesGroups()
         {
@@ -487,11 +487,58 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(1, chart.SeriesGroups.Count);
             ChartSeriesGroup seriesGroup = chart.SeriesGroups[0];
             seriesGroup.Overlap = 10;
-            chart = TestUtils.SlidesApi.UpdateChartSeriesGroup(c_fileName, c_slideIndex, c_shapeIndex,
+            chart = TestUtils.SlidesApi.SetChartSeriesGroup(c_fileName, c_slideIndex, c_shapeIndex,
                 c_seriesGroupIndex, seriesGroup, c_password, c_folderName);
             Assert.AreEqual(10, chart.SeriesGroups[0].Overlap);
         }
 
+        [Test]
+        public void SetChartLegend()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Legend legendDto = new Legend();
+            legendDto.Overlay = true;
+            legendDto.FillFormat = new SolidFill()
+            {
+                Color = c_color
+            };
+
+            Legend response = TestUtils.SlidesApi.SetChartLegend(c_fileName, c_slideIndex, c_shapeIndex, legendDto,
+                c_password, c_folderName);
+
+            Assert.True(response.Overlay.Value);
+            Assert.IsInstanceOf<SolidFill>(response.FillFormat);
+        }
+
+        [Test]
+        public void SetChartAxis()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Axis axisDto = new Axis();
+            axisDto.HasTitle = true;
+            axisDto.IsAutomaticMaxValue = false;
+            axisDto.MaxValue = 10;
+
+            Axis response = TestUtils.SlidesApi.SetChartAxis(c_fileName, c_slideIndex, c_shapeIndex,
+                AxisType.VerticalAxis, axisDto, c_password, c_folderName);
+            Assert.True(response.HasTitle.Value);
+            Assert.False(response.IsAutomaticMaxValue.Value);
+            Assert.AreEqual(axisDto.MaxValue.Value, response.MaxValue.Value);
+        }
+
+        [Test]
+        public void SetChartWall()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            int slideIndex = 8, shapeIndex = 2;
+            ChartWall wallDto = new ChartWall();
+            wallDto.FillFormat = new SolidFill() { Color = c_color };
+            ChartWall response = TestUtils.SlidesApi.SetChartWall(c_fileName, slideIndex, shapeIndex,
+                ChartWallType.BackWall, wallDto, c_password, c_folderName);
+            Assert.IsInstanceOf<SolidFill>(response.FillFormat);
+        }
+
+        const string c_color = "#77CEF9";
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
         const string c_password = "password";

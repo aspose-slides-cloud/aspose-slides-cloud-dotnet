@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file=".cs">
+// <copyright company="Aspose" file="AxisType.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,38 +23,44 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-#if NETFRAMEWORK
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.Xml.Serialization;
 
-using System.Reflection;
-using System.Runtime.InteropServices;
+namespace Aspose.Slides.Cloud.Sdk.Model
+{
+    /// <summary>
+    /// Defines axis type.
+    /// </summary>
+    /// <value>Defines axis type.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum AxisType
+    {
+        
+        /// <summary>
+        /// Enum HorizontalAxis for "HorizontalAxis"
+        /// </summary>
+        HorizontalAxis,
+        
+        /// <summary>
+        /// Enum VerticalAxis for "VerticalAxis"
+        /// </summary>
+        VerticalAxis,
+        
+        /// <summary>
+        /// Enum SecondaryHorizontalAxis for "SecondaryHorizontalAxis"
+        /// </summary>
+        SecondaryHorizontalAxis,
+        
+        /// <summary>
+        /// Enum SecondaryVerticalAxis for "SecondaryVerticalAxis"
+        /// </summary>
+        SecondaryVerticalAxis
+    }
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("Aspose.Slides.Cloud.Sdk")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Aspose.Slides.Cloud.Sdk.Properties")]
-[assembly: AssemblyCopyright("Copyright �  2018")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-
-// Setting ComVisible to false makes the types in this assembly not visible 
-// to COM components.  If you need to access a type in this assembly from 
-// COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fec6e585-8ced-4654-a98a-c1ef99b00813")]
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-[assembly: AssemblyVersion("22.7.0")]
-[assembly: AssemblyFileVersion("22.7.0")]
-
-#endif
+}

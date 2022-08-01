@@ -82,6 +82,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\ArrowHeadProperties.cs" />
     <Compile Include="Model\Axes.cs" />
     <Compile Include="Model\Axis.cs" />
+    <Compile Include="Model\AxisType.cs" />
     <Compile Include="Model\BlurEffect.cs" />
     <Compile Include="Model\Camera.cs" />
     <Compile Include="Model\ChartCategory.cs" />
@@ -89,6 +90,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\ChartSeriesGroup.cs" />
     <Compile Include="Model\ChartTitle.cs" />
     <Compile Include="Model\ChartWall.cs" />
+    <Compile Include="Model\ChartWallType.cs" />
     <Compile Include="Model\CommonSlideViewProperties.cs" />
     <Compile Include="Model\CustomDashPattern.cs" />
     <Compile Include="Model\DataPoint.cs" />

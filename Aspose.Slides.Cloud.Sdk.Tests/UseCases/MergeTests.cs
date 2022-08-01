@@ -140,7 +140,37 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsNotNull(result);
             Assert.IsTrue(result.CanRead);
         }
+        
+        [Test]
+        public void MergeOrderedUrl()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
 
+            OrderedMergeRequest request = new OrderedMergeRequest
+            {
+                Presentations = new List<PresentationToMerge>
+                {
+                    new PresentationToMerge
+                    {
+                        Slides = new List<int> { 1, 2 },
+                        Source = PresentationToMerge.SourceEnum.Storage,
+                        Path = c_folderName + "/" + c_fileName,
+                        Password = c_password
+                    },
+                    new PresentationToMerge()
+                    {
+                        Slides = new List<int> { 1 },
+                        Source = PresentationToMerge.SourceEnum.Url,
+                        Path = c_urlPath
+                    }
+                }
+            };
+            Stream result = TestUtils.SlidesApi.MergeOnline(null, request);
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.CanRead);
+        }
+
+        const string c_urlPath = "https://drive.google.com/uc?export=download&id=1ycMzd7e--Ro9H8eH2GL5fPP7-2HjX4My";
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
         const string c_pdfFileName = "test.pdf";
