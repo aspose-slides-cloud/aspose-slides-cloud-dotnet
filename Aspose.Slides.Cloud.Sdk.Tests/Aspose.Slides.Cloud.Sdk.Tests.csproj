@@ -81,6 +81,7 @@
     <Compile Include="UseCases\CommentTest.cs" />
     <Compile Include="UseCases\ConvertTests.cs" />
     <Compile Include="UseCases\CreateTests.cs" />
+    <Compile Include="UseCases\FontTests.cs" />
     <Compile Include="UseCases\HeaderFooterTests.cs" />
     <Compile Include="UseCases\HyperlinkTests.cs" />
     <Compile Include="UseCases\ImageTests.cs" />

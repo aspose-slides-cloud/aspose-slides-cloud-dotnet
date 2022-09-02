@@ -45,7 +45,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void Cleanup()
         {
         }
-        
+
         [Test]
         public void GetShapes()
         {
@@ -53,15 +53,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Shapes shapes = TestUtils.SlidesApi.GetShapes(c_fileName, c_slideIndex, c_password, c_folderName);
             Assert.AreEqual(2, shapes.ShapesLinks.Count);
         }
-        
+
         [Test]
         public void GetShapesByType()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Shapes shapes = TestUtils.SlidesApi.GetShapes(c_fileName, c_slideIndex, c_password, c_folderName, null, ShapeType.Chart);
+            Shapes shapes = TestUtils.SlidesApi.GetShapes(c_fileName, c_slideIndex, c_password, c_folderName, null,
+                ShapeType.Chart);
             Assert.AreEqual(2, shapes.ShapesLinks.Count);
         }
-        
+
         [Test]
         public void GetSubshapes()
         {
@@ -85,13 +86,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             ShapeBase shape = TestUtils.SlidesApi.GetSubshape(c_fileName, 1, "4/shapes", 1, c_password, c_folderName);
             Assert.AreEqual(ShapeBase.TypeEnum.Shape, shape.Type);
         }
-        
+
         [Test]
         public void ShapeAdd()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Shape dto = new Shape { ShapeType = GeometryShape.ShapeTypeEnum.Callout1 };
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password,
+                folder: c_folderName);
             Assert.IsInstanceOf<Shape>(shape);
         }
 
@@ -121,10 +123,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             {
                 PictureFillFormat = new PictureFill
                 {
-                    Base64Data = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY5g+ffp/AAZTAsWGL27gAAAAAElFTkSuQmCC"
+                    Base64Data =
+                        "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY5g+ffp/AAZTAsWGL27gAAAAAElFTkSuQmCC"
                 }
             };
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password,
+                folder: c_folderName);
             Assert.IsInstanceOf<PictureFrame>(shape);
         }
 
@@ -142,7 +146,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ShapeBase dto = new AudioFrame { Base64Data = "bXAzc2FtcGxl" };
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password,
+                folder: c_folderName);
             Assert.IsInstanceOf<AudioFrame>(shape);
         }
 
@@ -160,7 +165,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ShapeBase dto = new VideoFrame { Base64Data = "bXAzc2FtcGxl" };
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password,
+                folder: c_folderName);
             Assert.IsInstanceOf<VideoFrame>(shape);
         }
 
@@ -203,16 +209,18 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                         OrgChartLayout = SmartArtNode.OrgChartLayoutEnum.Initial,
                         Nodes = new List<SmartArtNode>
                         {
-                            new SmartArtNode { Text = "SubFirst", OrgChartLayout = SmartArtNode.OrgChartLayoutEnum.Initial }
+                            new SmartArtNode
+                                { Text = "SubFirst", OrgChartLayout = SmartArtNode.OrgChartLayoutEnum.Initial }
                         }
                     },
                     new SmartArtNode { Text = "Second", OrgChartLayout = SmartArtNode.OrgChartLayoutEnum.Initial }
                 }
             };
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password,
+                folder: c_folderName);
             Assert.IsInstanceOf<SmartArt>(shape);
         }
-        
+
         [Test]
         public void SmartArtTextFormatting()
         {
@@ -225,12 +233,13 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Spacing = 3,
                 FillFormat = new SolidFill() { Color = "#FFFFFF00" }
             };
-            
+
             string targetNodePath = "1/nodes/1/nodes";
             int slideIndex = 7;
-            Portion response = TestUtils.SlidesApi.UpdateSubshapePortion(c_fileName, slideIndex, targetNodePath, 2, 1, 1, portion,
-             c_password, c_folderName);
-            
+            Portion response = TestUtils.SlidesApi.UpdateSubshapePortion(c_fileName, slideIndex, targetNodePath, 2, 1,
+                1, portion,
+                c_password, c_folderName);
+
             Assert.IsNotNull(response);
             Assert.AreEqual(portion.Text, response.Text);
             Assert.AreEqual(portion.FontHeight, response.FontHeight);
@@ -288,7 +297,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                             new TableCell { Text = "4" }
                         }
                     },
-                    new TableRow { Cells = new List<TableCell> { new TableCell { Text = "first" }, new TableCell { Text = "last" } } },
+                    new TableRow
+                    {
+                        Cells = new List<TableCell>
+                            { new TableCell { Text = "first" }, new TableCell { Text = "last" } }
+                    },
                     new TableRow
                     {
                         Cells = new List<TableCell>
@@ -310,7 +323,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                         }
                     }
                 },
-                            Columns = new List<TableColumn>
+                Columns = new List<TableColumn>
                 {
                     new TableColumn { Width = 100 },
                     new TableColumn { Width = 100 },
@@ -320,7 +333,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 FirstRow = true,
                 HorizontalBanding = true
             };
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password,
+                folder: c_folderName);
             Assert.IsInstanceOf<Table>(shape);
         }
 
@@ -348,10 +362,13 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             ShapeBase dto = new Connector
             {
                 ShapeType = GeometryShape.ShapeTypeEnum.BentConnector3,
-                StartShapeConnectedTo = new ResourceUri { Href = "https://api.aspose.cloud/v3.0/slides/myPresentation.pptx/slides/1/shapes/1" },
-                EndShapeConnectedTo = new ResourceUri { Href = "https://api.aspose.cloud/v3.0/slides/myPresentation.pptx/slides/1/shapes/2" }
+                StartShapeConnectedTo = new ResourceUri
+                    { Href = "https://api.aspose.cloud/v3.0/slides/myPresentation.pptx/slides/1/shapes/1" },
+                EndShapeConnectedTo = new ResourceUri
+                    { Href = "https://api.aspose.cloud/v3.0/slides/myPresentation.pptx/slides/1/shapes/2" }
             };
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password,
+                folder: c_folderName);
             Assert.IsInstanceOf<Connector>(shape);
         }
 
@@ -363,7 +380,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 c_fileName, c_slideIndex, new Connector(), password: c_password, folder: c_folderName);
             Assert.IsInstanceOf<Connector>(shape);
         }
-        
+
         [Test]
         public void CreateSubshape()
         {
@@ -377,42 +394,43 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             };
 
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            ShapeBase response = TestUtils.SlidesApi.CreateSubshape(c_fileName, 1, c_shapePath, dto, password: c_password,
+            ShapeBase response = TestUtils.SlidesApi.CreateSubshape(c_fileName, 1, c_shapePath, dto,
+                password: c_password,
                 folder: c_folderName);
-                
+
             Assert.IsInstanceOf<Shape>(response);
         }
-        
+
         [Test]
         public void UpdateShape()
         {
             Shape dto = new Shape()
             {
-                Width = 200, 
+                Width = 200,
                 Height = 200,
                 FillFormat = new SolidFill()
                 {
                     Color = c_color
                 }
             };
-        
+
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            
+
             ShapeBase response = TestUtils.SlidesApi.UpdateShape(c_fileName, 1, 3, dto, c_password,
                 c_folderName);
-                
+
             Assert.IsInstanceOf<Shape>(response);
             Assert.AreEqual(dto.Width, response.Width);
             Assert.AreEqual(dto.Height, response.Height);
             Assert.IsInstanceOf<SolidFill>(response.FillFormat);
         }
-        
+
         [Test]
         public void UpdateSubshape()
         {
             Shape dto = new Shape()
             {
-                Width = 200, 
+                Width = 200,
                 Height = 200,
                 FillFormat = new GradientFill()
                 {
@@ -433,34 +451,35 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                     }
                 }
             };
-        
+
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            
+
             ShapeBase response = TestUtils.SlidesApi.UpdateSubshape(c_fileName, 1, c_shapePath, 1, dto, c_password,
                 c_folderName);
-                
+
             Assert.IsInstanceOf<Shape>(response);
             Assert.AreEqual(dto.Width, response.Width);
             Assert.AreEqual(dto.Height, response.Height);
             Assert.IsInstanceOf<GradientFill>(response.FillFormat);
         }
-        
+
         [Test]
         public void DeleteShapes()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Shapes shapes = TestUtils.SlidesApi.DeleteShapes(c_fileName, c_slideIndex, null, c_password, c_folderName);
-            Assert.AreEqual(0,shapes.ShapesLinks.Count);
+            Assert.AreEqual(0, shapes.ShapesLinks.Count);
         }
-        
+
         [Test]
         public void DeleteShapesIndexes()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Shapes response = TestUtils.SlidesApi.DeleteShapes(c_fileName, c_slideIndex, new List<int>{2}, c_password, c_folderName);
+            Shapes response = TestUtils.SlidesApi.DeleteShapes(c_fileName, c_slideIndex, new List<int> { 2 },
+                c_password, c_folderName);
             Assert.AreEqual(1, response.ShapesLinks.Count);
         }
-        
+
         [Test]
         public void DeleteSubshapes()
         {
@@ -469,16 +488,17 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 c_folderName);
             Assert.AreEqual(0, response.ShapesLinks.Count);
         }
-        
+
         [Test]
         public void DeleteSubshapesIndexes()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Shapes response = TestUtils.SlidesApi.DeleteSubshapes(c_fileName, 1, c_shapePath, new List<int>{2}, c_password,
+            Shapes response = TestUtils.SlidesApi.DeleteSubshapes(c_fileName, 1, c_shapePath, new List<int> { 2 },
+                c_password,
                 c_folderName);
             Assert.AreEqual(1, response.ShapesLinks.Count);
         }
-        
+
         [Test]
         public void DeleteShape()
         {
@@ -486,12 +506,13 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Shapes response = TestUtils.SlidesApi.DeleteShape(c_fileName, 1, 4, c_password, c_folderName);
             Assert.AreEqual(3, response.ShapesLinks.Count);
         }
-        
+
         [Test]
         public void DeleteSubshape()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Shapes response = TestUtils.SlidesApi.DeleteSubshape(c_fileName, 1, c_shapePath, 1, c_password, c_folderName);
+            Shapes response =
+                TestUtils.SlidesApi.DeleteSubshape(c_fileName, 1, c_shapePath, 1, c_password, c_folderName);
             Assert.AreEqual(1, response.ShapesLinks.Count);
         }
 
@@ -510,9 +531,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             shape2 = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, 2, c_password, c_folderName);
             Assert.AreNotEqual(shape1.X, shape2.X);
             Assert.AreEqual(shape1.Y.Value, shape2.Y.Value, 1.0);
-            
+
             TestUtils.SlidesApi.AlignShapes(
-                c_fileName, c_slideIndex, ShapesAlignmentType.AlignLeft, true, new List<int> { 1, 2 }, c_password, c_folderName);
+                c_fileName, c_slideIndex, ShapesAlignmentType.AlignLeft, true, new List<int> { 1, 2 }, c_password,
+                c_folderName);
             shape1 = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, 1, c_password, c_folderName);
             shape2 = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, 2, c_password, c_folderName);
             Assert.AreEqual(shape1.X, shape2.X);
@@ -525,20 +547,24 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             const int slideIndex = 1;
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            ShapeBase shape1 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, c_shapePath, 1, c_password, c_folderName);
-            ShapeBase shape2 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, c_shapePath, 2, c_password, c_folderName);
+            ShapeBase shape1 =
+                TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, c_shapePath, 1, c_password, c_folderName);
+            ShapeBase shape2 =
+                TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, c_shapePath, 2, c_password, c_folderName);
             Assert.AreNotEqual(shape1.X, shape2.X);
             Assert.AreNotEqual(shape1.Y, shape2.Y);
 
             TestUtils.SlidesApi.AlignSubshapes(
-                c_fileName, slideIndex, c_shapePath, ShapesAlignmentType.AlignTop, null, null, c_password, c_folderName);
+                c_fileName, slideIndex, c_shapePath, ShapesAlignmentType.AlignTop, null, null, c_password,
+                c_folderName);
             shape1 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, c_shapePath, 1, c_password, c_folderName);
             shape2 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, c_shapePath, 2, c_password, c_folderName);
             Assert.AreNotEqual(shape1.X, shape2.X);
             Assert.AreEqual(shape1.Y.Value, shape2.Y.Value, 1.0);
 
             TestUtils.SlidesApi.AlignSubshapes(
-                c_fileName, slideIndex, c_shapePath, ShapesAlignmentType.AlignLeft, true, new List<int> { 1, 2 }, c_password, c_folderName);
+                c_fileName, slideIndex, c_shapePath, ShapesAlignmentType.AlignLeft, true, new List<int> { 1, 2 },
+                c_password, c_folderName);
             shape1 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, c_shapePath, 1, c_password, c_folderName);
             shape2 = TestUtils.SlidesApi.GetSubshape(c_fileName, slideIndex, c_shapePath, 2, c_password, c_folderName);
             Assert.AreEqual(shape1.X.Value, shape2.X.Value, 1.0);
@@ -580,7 +606,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             ShapeBase shape = TestUtils.SlidesApi.SetShapeGeometryPath(c_fileName, 4, 1, dto, c_password, c_folderName);
             Assert.IsNotNull(shape);
         }
-        
+
         [Test]
         public void ZoomFrameAdd()
         {
@@ -593,11 +619,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Height = 100,
                 TargetSlideIndex = 2
             };
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password,
+                folder: c_folderName);
             Assert.IsInstanceOf<ZoomFrame>(shape);
             Assert.AreEqual(((ZoomFrame)shape).TargetSlideIndex, 2);
         }
-        
+
         [Test]
         public void SectionZoomFrameAdd()
         {
@@ -610,11 +637,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Height = 100,
                 TargetSectionIndex = 2
             };
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password,
+                folder: c_folderName);
             Assert.IsInstanceOf<SectionZoomFrame>(shape);
             Assert.AreEqual(((SectionZoomFrame)shape).TargetSectionIndex, 2);
         }
-        
+
         [Test]
         public void OleObjectFrameAddByLink()
         {
@@ -625,15 +653,16 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Y = 100,
                 Width = 200,
                 Height = 200,
-                LinkPath =  c_oleObjectFileName,
+                LinkPath = c_oleObjectFileName,
                 ObjectProgId = "Excel.Sheet.8"
             };
-            
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password:c_password ,folder: c_folderName);
+
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password,
+                folder: c_folderName);
             Assert.IsInstanceOf<OleObjectFrame>(shape);
             Assert.AreEqual(((OleObjectFrame)shape).LinkPath, dto.LinkPath);
         }
-        
+
         [Test]
         public void OleObjectFrameAddEmbedded()
         {
@@ -641,7 +670,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_oleObjectFileName));
             byte[] buffer = new byte[file.Length];
             file.Read(buffer, 0, buffer.Length);
-            
+
             OleObjectFrame dto = new OleObjectFrame()
             {
                 X = 100,
@@ -651,44 +680,65 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 EmbeddedFileBase64Data = Convert.ToBase64String(buffer),
                 EmbeddedFileExtension = "xlsx"
             };
-            
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password:c_password ,folder: c_folderName);
+
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password,
+                folder: c_folderName);
             Assert.IsInstanceOf<OleObjectFrame>(shape);
             Assert.IsNotNull(((OleObjectFrame)shape).EmbeddedFileBase64Data);
             Assert.IsNotEmpty(((OleObjectFrame)shape).EmbeddedFileBase64Data);
         }
-        
+
         [Test]
         public void GroupShapeAdd()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             int slideIndex = 5;
-            
-            Shapes shapes = TestUtils.SlidesApi.GetShapes(c_fileName, slideIndex, password:c_password, folder:c_folderName);
+
+            Shapes shapes =
+                TestUtils.SlidesApi.GetShapes(c_fileName, slideIndex, password: c_password, folder: c_folderName);
             Assert.AreEqual(0, shapes.ShapesLinks.Count);
-            
+
             //add GroupShape
             GroupShape dto = new GroupShape();
-            TestUtils.SlidesApi.CreateShape(c_fileName, slideIndex, dto, password:c_password, folder:c_folderName);
-            
-            //add sub-shapes
-            Shape shape1 = new Shape{ShapeType = GeometryShape.ShapeTypeEnum.Rectangle, X = 50, Y = 400, Width = 50, Height = 50};
-            Shape shape2 = new Shape{ShapeType = GeometryShape.ShapeTypeEnum.Ellipse, X = 150, Y = 400, Width = 50, Height = 50};
-            Shape shape3 = new Shape{ShapeType = GeometryShape.ShapeTypeEnum.Triangle, X = 250, Y = 400, Width = 50, Height = 50};
+            TestUtils.SlidesApi.CreateShape(c_fileName, slideIndex, dto, password: c_password, folder: c_folderName);
 
-            TestUtils.SlidesApi.CreateSubshape(c_fileName, slideIndex, "1/shapes", shape1, password:c_password, folder:c_folderName);
-            TestUtils.SlidesApi.CreateSubshape(c_fileName, slideIndex, "1/shapes", shape2, password:c_password, folder:c_folderName);
-            TestUtils.SlidesApi.CreateSubshape(c_fileName, slideIndex, "1/shapes", shape3, password:c_password, folder:c_folderName);
-            
-            shapes = TestUtils.SlidesApi.GetShapes(c_fileName, slideIndex, password:c_password, folder:c_folderName);
+            //add sub-shapes
+            Shape shape1 = new Shape
+                { ShapeType = GeometryShape.ShapeTypeEnum.Rectangle, X = 50, Y = 400, Width = 50, Height = 50 };
+            Shape shape2 = new Shape
+                { ShapeType = GeometryShape.ShapeTypeEnum.Ellipse, X = 150, Y = 400, Width = 50, Height = 50 };
+            Shape shape3 = new Shape
+                { ShapeType = GeometryShape.ShapeTypeEnum.Triangle, X = 250, Y = 400, Width = 50, Height = 50 };
+
+            TestUtils.SlidesApi.CreateSubshape(c_fileName, slideIndex, "1/shapes", shape1, password: c_password,
+                folder: c_folderName);
+            TestUtils.SlidesApi.CreateSubshape(c_fileName, slideIndex, "1/shapes", shape2, password: c_password,
+                folder: c_folderName);
+            TestUtils.SlidesApi.CreateSubshape(c_fileName, slideIndex, "1/shapes", shape3, password: c_password,
+                folder: c_folderName);
+
+            shapes = TestUtils.SlidesApi.GetShapes(c_fileName, slideIndex, password: c_password, folder: c_folderName);
             Assert.AreEqual(1, shapes.ShapesLinks.Count);
-            
+
             shapes = TestUtils.SlidesApi.GetSubshapes(c_fileName, slideIndex, "1/shapes", c_password, c_folderName);
             Assert.AreEqual(3, shapes.ShapesLinks.Count);
         }
 
+        [Test]
+        public void ImportShapesFromSvg()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_svgFileName));
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            int slideIndex = 5;
+
+            Shapes response = TestUtils.SlidesApi.ImportShapesFromSvg(c_fileName, slideIndex, file, 50, 50, 300, 300,
+                new List<int> { 1, 3, 5 }, c_password, c_folderName);
+            Assert.AreEqual(3, response.ShapesLinks.Count);
+        }
+
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
+        const string c_svgFileName = "shapes.svg";
         const string c_oleObjectFileName = "oleObject.xlsx";
         const string c_password = "password";
         const int c_slideIndex = 3;

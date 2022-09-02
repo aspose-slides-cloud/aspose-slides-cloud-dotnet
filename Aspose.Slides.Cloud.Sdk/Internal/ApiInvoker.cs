@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Web;
 
 namespace Aspose.Slides.Cloud.Sdk
 {
@@ -68,6 +69,7 @@ namespace Aspose.Slides.Cloud.Sdk
                 }
                 if (returnType == null)
                 {
+                    
                     return null;
                 }
                 if (typeof(Stream).IsAssignableFrom(returnType))
@@ -78,7 +80,7 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             catch (ApiException ex)
             {
-                if (ex.ErrorCode == 404 && returnType != null)
+                if (ex.ErrorCode == 404 && returnType != null && method == "GET")
                 {
                     return null;
                 }

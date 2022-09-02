@@ -87,7 +87,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 null, c_password, c_folderName);
 
             Assert.AreEqual(dto.MarginLeft, response.MarginLeft);
-            Assert.AreEqual(dto.MarginRight, response.MarginLeft);
+            Assert.AreEqual(dto.MarginRight, response.MarginRight);
             Assert.AreEqual(Paragraph.AlignmentEnum.Center, response.Alignment);
         }
 

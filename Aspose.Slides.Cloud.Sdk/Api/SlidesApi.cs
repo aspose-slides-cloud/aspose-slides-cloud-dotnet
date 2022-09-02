@@ -2132,6 +2132,72 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Removes specified embedded font and returns presentation fonts info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="fontName">Font name.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="FontsData"/></returns>            
+        public FontsData DeleteEmbeddedFont(string name, string fontName, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteEmbeddedFont");
+            }
+            // verify the required parameter 'fontName' is set
+            if (fontName == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'fontName' when calling DeleteEmbeddedFont");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/fonts/embedded/{fontName}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "fontName", fontName);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<FontsData>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Removes specified embedded font and returns presentation. 
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="fontName">Document name.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream DeleteEmbeddedFontOnline(System.IO.Stream document, string fontName, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling DeleteEmbeddedFontOnline");
+            }
+            // verify the required parameter 'fontName' is set
+            if (fontName == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'fontName' when calling DeleteEmbeddedFontOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/fonts/embedded/{fontName}/delete");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "fontName", fontName);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Delete file 
         /// </summary>
         /// <param name="path">File path e.g. '/folder/file.ext'</param> 
@@ -4605,6 +4671,58 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Returns presentation fonts info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="FontsData"/></returns>            
+        public FontsData GetFonts(string name, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetFonts");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/fonts");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<FontsData>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Returns presentation fonts info. 
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="FontsData"/></returns>            
+        public FontsData GetFontsOnline(System.IO.Stream document, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling GetFontsOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/fonts");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeStreamApi<FontsData>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Read slide theme format scheme info. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -6554,6 +6672,50 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Imports shapes from SVG file. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="image">SVG image data.</param> 
+        /// <param name="x">The X coordinate of the imported group of shapes (0 is default if not specified).</param> 
+        /// <param name="y">The Y coordinate of the imported group of shapes (0 is default if not specified).</param> 
+        /// <param name="width">The width of the imported group of shapes (default is SVG image width).</param> 
+        /// <param name="height">The height of the imported group of shapes (default is SVG image width).</param> 
+        /// <param name="shapes">Indexes of shapes to import. All shapes are imported if not specified.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Presentation folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <returns><see cref="Shapes"/></returns>            
+        public Shapes ImportShapesFromSvg(string name, int slideIndex, System.IO.Stream image = null, int? x = null, int? y = null, int? width = null, int? height = null, List<int> shapes = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling ImportShapesFromSvg");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/fromSvg");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "x", x);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "y", y);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", width);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", height);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapes", shapes);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (image != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "image", Content = image });
+            }
+            return InvokeStreamApi<Shapes>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Merge the presentation with other presentations specified in the request parameter. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -7867,6 +8029,76 @@ namespace Aspose.Slides.Cloud.Sdk
             var postBody = SerializationHelper.Serialize(property); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             return InvokeApi<DocumentProperty>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Embeds specified font and returns presentation fonts info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="fontName">Document name.</param> 
+        /// <param name="onlyUsed">Only used characters will be embedded.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="FontsData"/></returns>            
+        public FontsData SetEmbeddedFont(string name, string fontName, bool? onlyUsed = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SetEmbeddedFont");
+            }
+            // verify the required parameter 'fontName' is set
+            if (fontName == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'fontName' when calling SetEmbeddedFont");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/fonts/embedded/{fontName}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "fontName", fontName);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "onlyUsed", onlyUsed);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<FontsData>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Embeds specified font and returns presentation. 
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="fontName">Font name.</param> 
+        /// <param name="onlyUsed">Only used characters will be embedded.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream SetEmbeddedFontOnline(System.IO.Stream document, string fontName, bool? onlyUsed = null, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling SetEmbeddedFontOnline");
+            }
+            // verify the required parameter 'fontName' is set
+            if (fontName == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'fontName' when calling SetEmbeddedFontOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/fonts/embedded/{fontName}");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "fontName", fontName);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "onlyUsed", onlyUsed);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
