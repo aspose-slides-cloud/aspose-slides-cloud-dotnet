@@ -278,14 +278,14 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             OneValueChartDataPoint dataPoint = new OneValueChartDataPoint { Value = 40 };
             Chart chart = TestUtils.SlidesApi.UpdateChartDataPoint(
-                c_fileName, c_slideIndex, c_shapeIndex, c_seriesIndex, c_categoryIndex, dataPoint, c_password,
+                c_fileName, c_slideIndex, c_shapeIndex, c_seriesIndex, c_dataPointIndex, dataPoint, c_password,
                 c_folderName);
             Assert.IsNotNull(chart);
             Assert.AreEqual(c_seriesCount, chart.Series.Count);
             Assert.AreEqual(c_categoryCount, chart.Categories.Count);
             Assert.AreEqual(c_categoryCount, ((OneValueSeries)chart.Series[0]).DataPoints.Count);
             Assert.AreEqual(dataPoint.Value,
-                ((OneValueSeries)chart.Series[c_seriesIndex - 1]).DataPoints[c_categoryIndex - 1].Value);
+                ((OneValueSeries)chart.Series[c_seriesIndex - 1]).DataPoints[c_dataPointIndex - 1].Value);
         }
 
         [Test]
@@ -293,11 +293,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Chart chart = TestUtils.SlidesApi.DeleteChartDataPoint(
-                c_fileName, c_slideIndex, c_shapeIndex, c_seriesIndex, c_categoryIndex, c_password, c_folderName);
+                c_fileName, c_slideIndex, c_shapeIndex, c_seriesIndex, c_dataPointIndex, c_password, c_folderName);
             Assert.IsNotNull(chart);
             Assert.AreEqual(c_seriesCount, chart.Series.Count);
             Assert.AreEqual(c_categoryCount, chart.Categories.Count);
-            Assert.IsNull(((OneValueSeries)chart.Series[c_seriesIndex - 1]).DataPoints[c_categoryIndex - 1]);
+            Assert.IsNull(((OneValueSeries)chart.Series[c_seriesIndex - 1]).DataPoints[c_dataPointIndex - 1]);
         }
 
         [Test]
@@ -500,7 +500,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             legendDto.Overlay = true;
             legendDto.FillFormat = new SolidFill()
             {
-                Color = c_color
+                Color = c_fillColor
             };
 
             Legend response = TestUtils.SlidesApi.SetChartLegend(c_fileName, c_slideIndex, c_shapeIndex, legendDto,
@@ -532,13 +532,47 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             int slideIndex = 8, shapeIndex = 2;
             ChartWall wallDto = new ChartWall();
-            wallDto.FillFormat = new SolidFill() { Color = c_color };
+            wallDto.FillFormat = new SolidFill() { Color = c_fillColor };
             ChartWall response = TestUtils.SlidesApi.SetChartWall(c_fileName, slideIndex, shapeIndex,
                 ChartWallType.BackWall, wallDto, c_password, c_folderName);
             Assert.IsInstanceOf<SolidFill>(response.FillFormat);
         }
+        
+        [Test]
+        public void UpdateDataPointFormat()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            int slideIndex = 8, shapeIndex = 2;
+            
+            OneValueChartDataPoint dto = new OneValueChartDataPoint
+            {
+                Value = 40,
+                FillFormat = new SolidFill(){ Color = c_fillColor },
+                LineFormat = new LineFormat()
+                {
+                    FillFormat = new SolidFill() { Color = c_lineColor }
+                },
+                EffectFormat = new EffectFormat()
+                {
+                    Blur = new BlurEffect()
+                    {
+                        Grow = true,
+                        Radius = 5
+                    }
+                }
+            };
+            
+            Chart chart = TestUtils.SlidesApi.UpdateChartDataPoint(
+                c_fileName, slideIndex, shapeIndex, c_seriesIndex, c_dataPointIndex, dto, c_password,
+                c_folderName);
+            OneValueChartDataPoint dataPoint = ((OneValueSeries)chart.Series[c_seriesIndex - 1]).DataPoints[c_dataPointIndex - 1];
+            Assert.IsInstanceOf<SolidFill>(dataPoint.FillFormat);
+            Assert.IsInstanceOf<SolidFill>(dataPoint.LineFormat.FillFormat);
+            Assert.IsNotNull(dataPoint.EffectFormat.Blur);
+        }
 
-        const string c_color = "#77CEF9";
+        const string c_fillColor = "#77CEF9";
+        const string c_lineColor = "#E85052";
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
         const string c_password = "password";
@@ -546,6 +580,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const int c_shapeIndex = 1;
         const int c_seriesIndex = 2;
         const int c_categoryIndex = 2;
+        const int c_dataPointIndex = 2;
         const int c_seriesCount = 3;
         const int c_categoryCount = 4;
         const int c_seriesGroupIndex = 1;

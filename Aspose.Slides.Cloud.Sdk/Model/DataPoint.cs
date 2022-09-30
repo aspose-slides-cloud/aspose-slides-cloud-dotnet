@@ -39,6 +39,26 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     /// </summary>  
     public class DataPoint 
     {                       
+        /// <summary>
+        /// Gets or sets the fill format.
+        /// </summary>
+        public FillFormat FillFormat { get; set; }
+
+        /// <summary>
+        /// Gets or sets the effect format.
+        /// </summary>
+        public EffectFormat EffectFormat { get; set; }
+
+        /// <summary>
+        /// Gets or sets the 3D format
+        /// </summary>
+        public ThreeDFormat ThreeDFormat { get; set; }
+
+        /// <summary>
+        /// Gets or sets the line format.
+        /// </summary>
+        public LineFormat LineFormat { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -71,6 +91,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DataPoint {\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
+            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

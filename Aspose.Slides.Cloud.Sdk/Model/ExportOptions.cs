@@ -50,6 +50,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public List<FontFallbackRule> FontFallbackRules { get; set; }
 
         /// <summary>
+        /// Gets of sets list of font substitution rules.
+        /// </summary>
+        public List<FontSubstRule> FontSubstRules { get; set; }
+
+        /// <summary>
         /// Gets or sets Format
         /// </summary>
         public string Format { get; protected set; }
@@ -88,6 +93,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("class ExportOptions {\n");
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
+            sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

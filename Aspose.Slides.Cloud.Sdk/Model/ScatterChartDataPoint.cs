@@ -81,6 +81,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScatterChartDataPoint {\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
+            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  XValue: ").Append(this.XValue).Append("\n");
             sb.Append("  YValue: ").Append(this.YValue).Append("\n");
             sb.Append("}\n");

@@ -956,7 +956,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "data", Content = data });
             }
-            return InvokeStreamApi<Document>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeApi<Document>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -1131,6 +1131,42 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Model.Slides>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Add SmartArt node 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="smartArtIndex">Index of the object on the slide among the same type of objects.</param> 
+        /// <param name="subNode">Sub-node path (e.g. \"3\", \"3/nodes/2).</param> 
+        /// <param name="text">Node text.</param> 
+        /// <param name="position">Position to insert a new node.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SmartArt"/></returns>            
+        public SmartArt CreateSmartArtNode(string name, int slideIndex, int smartArtIndex, string subNode = null, string text = null, int? position = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateSmartArtNode");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/SmartArts/{smartArtIndex}/nodes");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "smartArtIndex", smartArtIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "subNode", subNode);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "text", text);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SmartArt>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -2069,7 +2105,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -2168,7 +2204,7 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Removes specified embedded font and returns presentation. 
         /// </summary>
         /// <param name="document">Document data.</param> 
-        /// <param name="fontName">Document name.</param> 
+        /// <param name="fontName">Font name.</param> 
         /// <param name="password">Document password.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
         public System.IO.Stream DeleteEmbeddedFontOnline(System.IO.Stream document, string fontName, string password = null)
@@ -2194,7 +2230,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -2457,7 +2493,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -2665,7 +2701,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -2694,6 +2730,40 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Model.Slides>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Delete SmartArt node 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="smartArtIndex">Index of the object on the slide among the same type of objects.</param> 
+        /// <param name="nodeIndex">Root level node index.</param> 
+        /// <param name="subNode">Sub-node path (e.g. \"3\", \"3/nodes/2).</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="SmartArt"/></returns>            
+        public SmartArt DeleteSmartArtNode(string name, int slideIndex, int smartArtIndex, int nodeIndex, string subNode = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteSmartArtNode");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/SmartArts/{smartArtIndex}/nodes/{nodeIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "smartArtIndex", smartArtIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "nodeIndex", nodeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "subNode", subNode);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<SmartArt>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3617,7 +3687,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3673,7 +3743,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3729,7 +3799,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3838,7 +3908,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3868,7 +3938,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3948,7 +4018,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3976,7 +4046,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3985,8 +4055,8 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="name">Document name.</param> 
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="format">Output file format.</param> 
-        /// <param name="width">Output file width.</param> 
-        /// <param name="height">Output file height.</param> 
+        /// <param name="width">The width of the slide representation in the output format.</param> 
+        /// <param name="height">The height of the slide representation in the output format</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
@@ -4021,8 +4091,8 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="document">Document data.</param> 
         /// <param name="slideIndex">Slide index.</param> 
         /// <param name="format">Output file format.</param> 
-        /// <param name="width">Output file width.</param> 
-        /// <param name="height">Output file height.</param> 
+        /// <param name="width">The width of the slide representation in the output format.</param> 
+        /// <param name="height">The height of the slide representation in the output format.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="fontsFolder">Storage folder containing custom fonts to be used with the document.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
@@ -4048,7 +4118,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -4719,7 +4789,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeStreamApi<FontsData>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeApi<FontsData>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -4939,7 +5009,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeStreamApi<NotesSlide>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeApi<NotesSlide>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -6668,7 +6738,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "pdf", Content = pdf });
             }
-            return InvokeStreamApi<Document>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeApi<Document>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -6682,11 +6752,12 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="width">The width of the imported group of shapes (default is SVG image width).</param> 
         /// <param name="height">The height of the imported group of shapes (default is SVG image width).</param> 
         /// <param name="shapes">Indexes of shapes to import. All shapes are imported if not specified.</param> 
+        /// <param name="group">If true, the set of shapes will be imported as a one group shape.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Presentation folder.</param> 
         /// <param name="storage">Presentation storage.</param> 
         /// <returns><see cref="Shapes"/></returns>            
-        public Shapes ImportShapesFromSvg(string name, int slideIndex, System.IO.Stream image = null, int? x = null, int? y = null, int? width = null, int? height = null, List<int> shapes = null, string password = null, string folder = null, string storage = null)
+        public Shapes ImportShapesFromSvg(string name, int slideIndex, System.IO.Stream image = null, int? x = null, int? y = null, int? width = null, int? height = null, List<int> shapes = null, bool? group = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6704,6 +6775,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", width);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", height);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "shapes", shapes);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "group", group);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
@@ -6712,7 +6784,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "image", Content = image });
             }
-            return InvokeStreamApi<Shapes>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeApi<Shapes>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -6974,7 +7046,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeStreamApi<EntityExists>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeApi<EntityExists>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -7089,6 +7161,94 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Replaces specified font and returns presentation fonts info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="sourceFont">Source font name.</param> 
+        /// <param name="targetFont">Target font name.</param> 
+        /// <param name="embed">Embed target font.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <param name="fontsFolder">Custom fonts folder.</param> 
+        /// <returns><see cref="FontsData"/></returns>            
+        public FontsData ReplaceFont(string name, string sourceFont, string targetFont, bool? embed = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling ReplaceFont");
+            }
+            // verify the required parameter 'sourceFont' is set
+            if (sourceFont == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'sourceFont' when calling ReplaceFont");
+            }
+            // verify the required parameter 'targetFont' is set
+            if (targetFont == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'targetFont' when calling ReplaceFont");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/fonts/{sourceFont}/replace/{targetFont}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "sourceFont", sourceFont);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "targetFont", targetFont);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "embed", embed);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<FontsData>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Replaces specified font and returns presentation. 
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="sourceFont">Source font name.</param> 
+        /// <param name="targetFont">Target font name.</param> 
+        /// <param name="embed">Embed target font.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="fontsFolder">Custom fonts folder.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream ReplaceFontOnline(System.IO.Stream document, string sourceFont, string targetFont, bool? embed = null, string password = null, string fontsFolder = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling ReplaceFontOnline");
+            }
+            // verify the required parameter 'sourceFont' is set
+            if (sourceFont == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'sourceFont' when calling ReplaceFontOnline");
+            }
+            // verify the required parameter 'targetFont' is set
+            if (targetFont == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'targetFont' when calling ReplaceFontOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/fonts/{sourceFont}/replace/{targetFont}");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "sourceFont", sourceFont);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "targetFont", targetFont);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "embed", embed);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Replace text with a new value. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -7169,7 +7329,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -7257,7 +7417,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -8035,13 +8195,14 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Embeds specified font and returns presentation fonts info. 
         /// </summary>
         /// <param name="name">Document name.</param> 
-        /// <param name="fontName">Document name.</param> 
+        /// <param name="fontName">Font name.</param> 
         /// <param name="onlyUsed">Only used characters will be embedded.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
+        /// <param name="fontsFolder">Custom fonts folder.</param> 
         /// <returns><see cref="FontsData"/></returns>            
-        public FontsData SetEmbeddedFont(string name, string fontName, bool? onlyUsed = null, string password = null, string folder = null, string storage = null)
+        public FontsData SetEmbeddedFont(string name, string fontName, bool? onlyUsed = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8061,9 +8222,88 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "onlyUsed", onlyUsed);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<FontsData>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Embeds font from request and returns presentation fonts info. 
+        /// </summary>
+        /// <param name="font">Font data.</param> 
+        /// <param name="name">Document name.</param> 
+        /// <param name="onlyUsed">Only used characters will be embedded.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="FontsData"/></returns>            
+        public FontsData SetEmbeddedFontFromRequest(System.IO.Stream font, string name, bool? onlyUsed = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'font' is set
+            if (font == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'font' when calling SetEmbeddedFontFromRequest");
+            }
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SetEmbeddedFontFromRequest");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/fonts/embedded");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "onlyUsed", onlyUsed);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (font != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "font", Content = font });
+            }
+            return InvokeApi<FontsData>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Embeds font from request and returns presentation. 
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="font">Font data.</param> 
+        /// <param name="onlyUsed">Only used characters will be embedded.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream SetEmbeddedFontFromRequestOnline(System.IO.Stream document, System.IO.Stream font, bool? onlyUsed = null, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling SetEmbeddedFontFromRequestOnline");
+            }
+            // verify the required parameter 'font' is set
+            if (font == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'font' when calling SetEmbeddedFontFromRequestOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/fonts/embedded");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "onlyUsed", onlyUsed);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            if (font != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "font", Content = font });
+            }
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -8073,8 +8313,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="fontName">Font name.</param> 
         /// <param name="onlyUsed">Only used characters will be embedded.</param> 
         /// <param name="password">Document password.</param> 
+        /// <param name="fontsFolder">Custom fonts folder.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream SetEmbeddedFontOnline(System.IO.Stream document, string fontName, bool? onlyUsed = null, string password = null)
+        public System.IO.Stream SetEmbeddedFontOnline(System.IO.Stream document, string fontName, bool? onlyUsed = null, string password = null, string fontsFolder = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -8092,13 +8333,14 @@ namespace Aspose.Slides.Cloud.Sdk
             var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "fontName", fontName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "onlyUsed", onlyUsed);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             if (document != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -8524,7 +8766,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeStreamApi<SplitDocumentResult>(resourcePath, "PUT", null, headerParams, requestFiles, "application/json");
+            return InvokeApi<SplitDocumentResult>(resourcePath, "PUT", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -8564,7 +8806,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryStreamApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -9552,7 +9794,7 @@ namespace Aspose.Slides.Cloud.Sdk
             {
                 requestFiles.Add(new FileInfo { Name = "file", Content = file });
             }
-            return InvokeStreamApi<FilesUploadResult>(resourcePath, "PUT", null, null, requestFiles, "application/json");
+            return InvokeApi<FilesUploadResult>(resourcePath, "PUT", null, null, requestFiles, "application/json");
         }
     }
 }

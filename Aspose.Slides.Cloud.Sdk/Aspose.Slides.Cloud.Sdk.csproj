@@ -110,6 +110,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\FontData.cs" />
     <Compile Include="Model\FontFallbackRule.cs" />
     <Compile Include="Model\FontSet.cs" />
+    <Compile Include="Model\FontSubstRule.cs" />
     <Compile Include="Model\FontsData.cs" />
     <Compile Include="Model\GeometryPath.cs" />
     <Compile Include="Model\GeometryPaths.cs" />

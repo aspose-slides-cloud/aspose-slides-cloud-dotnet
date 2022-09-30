@@ -86,6 +86,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OneValueChartDataPoint {\n");
+            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
+            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
+            sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
+            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  Value: ").Append(this.Value).Append("\n");
             sb.Append("  SetAsTotal: ").Append(this.SetAsTotal).Append("\n");
             sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");

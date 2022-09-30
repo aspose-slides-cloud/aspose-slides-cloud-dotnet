@@ -732,8 +732,76 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             int slideIndex = 5;
 
             Shapes response = TestUtils.SlidesApi.ImportShapesFromSvg(c_fileName, slideIndex, file, 50, 50, 300, 300,
-                new List<int> { 1, 3, 5 }, c_password, c_folderName);
+                new List<int> { 1, 3, 5 }, false, c_password, c_folderName);
             Assert.AreEqual(3, response.ShapesLinks.Count);
+        }
+
+
+        [Test]
+        public void CreateSmartArtNode()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            int slideIndex = 7;
+            int smartArtIndex = 1;
+            string newNodeText = "New root node";
+            SmartArt response = TestUtils.SlidesApi.CreateSmartArtNode(c_fileName, slideIndex, smartArtIndex, null,
+                newNodeText, null, c_password, c_folderName);
+            Assert.AreEqual(2, response.Nodes.Count);
+            Assert.AreEqual(newNodeText, response.Nodes[1].Text);
+        }
+
+        [Test]
+        public void CreateSmartArtSubNode()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            int slideIndex = 7;
+            int smartArtIndex = 1;
+            string subNodePath = "1";
+            string newSubNodeText = "New sub-node";
+            SmartArt response = TestUtils.SlidesApi.CreateSmartArtNode(c_fileName, slideIndex, smartArtIndex,
+                subNodePath, newSubNodeText, 1, c_password, c_folderName);
+            Assert.AreEqual(5, response.Nodes[0].Nodes.Count);
+            Assert.AreEqual(newSubNodeText, response.Nodes[0].Nodes[0].Text);
+        }
+
+        [Test]
+        public void CreateSmartArtSubSubNode()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            int slideIndex = 7;
+            int smartArtIndex = 1;
+            string subSubNodePath = "1/nodes/1";
+            string newSubNodeText = "New sub-sub-node";
+            SmartArt response = TestUtils.SlidesApi.CreateSmartArtNode(c_fileName, slideIndex, smartArtIndex, subSubNodePath,
+                newSubNodeText, null, c_password, c_folderName);
+            Assert.AreEqual(1, response.Nodes[0].Nodes[0].Nodes.Count);
+            Assert.AreEqual(newSubNodeText, response.Nodes[0].Nodes[0].Nodes[0].Text);
+        }
+
+        [Test]
+        public void DeleteSmartArtNode()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            int slideIndex = 7;
+            int smartArtIndex = 2;
+            int nodeIndex = 1;
+            SmartArt response = TestUtils.SlidesApi.DeleteSmartArtNode(c_fileName, slideIndex, smartArtIndex, nodeIndex, null,
+                c_password, c_folderName);
+                
+            Assert.AreEqual(2, response.Nodes.Count);
+        }
+
+        [Test]
+        public void DeleteSmartArtSubNode()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            int slideIndex = 7;
+            int smartArtIndex = 1;
+            int nodeIndex = 1;
+            string subNodePath = "2";
+            SmartArt response = TestUtils.SlidesApi.DeleteSmartArtNode(c_fileName, slideIndex, smartArtIndex, nodeIndex,
+                subNodePath, c_password, c_folderName);
+            Assert.AreEqual(3, response.Nodes[0].Nodes.Count);
         }
 
         const string c_folderName = "TempSlidesSDK";

@@ -147,7 +147,7 @@ namespace Aspose.Slides.Cloud.Sdk
         private void WriteBodyAndFiles(Stream stream, B body, List<FileInfo> files, ref string contentType)
         {
             //content is multipart if there are multiple files and/or body params
-            if (files.Count + (body != null ? 1 : 0) > 1)
+            if (files.Count > 0)
             {
                 string formDataBoundary = Guid.NewGuid().ToString();
                 int partIndex = 0;
@@ -172,10 +172,6 @@ namespace Aspose.Slides.Cloud.Sdk
             else if (body != null)
             {
                 CopyToStream(body, stream);
-            }
-            else if (files.Count > 0)
-            {
-                StreamHelper.CopyTo(files[0].Content, stream);
             }
         }
 

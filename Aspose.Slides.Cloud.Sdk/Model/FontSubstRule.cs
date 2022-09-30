@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="XamlExportOptions.cs">
+// <copyright company="Aspose" file="FontSubstRule.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,27 +35,36 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Provides options that control how a presentation is saved in XAML format.
+    /// Represents font substitution rule.
     /// </summary>  
-    public class XamlExportOptions : ExportOptions 
+    public class FontSubstRule 
     {                       
         /// <summary>
-        /// Export hidden slides
+        /// Font to substitute.
         /// </summary>
-        public bool? ExportHiddenSlides { get; set; }
+        public string SourceFont { get; set; }
+
+        /// <summary>
+        /// Substitution font.
+        /// </summary>
+        public string TargetFont { get; set; }
+
+        /// <summary>
+        /// Substitute when font is not found. Default: true.
+        /// </summary>
+        public bool? NotFoundOnly { get; set; }
 
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static new Dictionary<string, object> TypeDeterminers
+        public static Dictionary<string, object> TypeDeterminers
         {
             get
             {
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("Format", "xaml");
                 }
                 return s_typeDeterminers;
             }
@@ -65,9 +74,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public XamlExportOptions() : base()
+        public FontSubstRule() : base()
         {
-            Format = "xaml";
         }
 
         /// <summary>
@@ -77,12 +85,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class XamlExportOptions {\n");
-            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
-            sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
-            sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
-            sb.Append("  Format: ").Append(this.Format).Append("\n");
-            sb.Append("  ExportHiddenSlides: ").Append(this.ExportHiddenSlides).Append("\n");
+            sb.Append("class FontSubstRule {\n");
+            sb.Append("  SourceFont: ").Append(this.SourceFont).Append("\n");
+            sb.Append("  TargetFont: ").Append(this.TargetFont).Append("\n");
+            sb.Append("  NotFoundOnly: ").Append(this.NotFoundOnly).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
