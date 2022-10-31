@@ -22,10 +22,7 @@
 //  SOFTWARE.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-using System;
 using System.Collections.Generic;
-using System.Threading;
 using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
@@ -54,20 +51,20 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetSubshapeParagraph()
+        public void GetSubShapeParagraph()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Paragraph response = TestUtils.SlidesApi.GetSubshapeParagraph(c_fileName, c_slideIndex, c_shapePath,
-                1, 1, c_password, c_folderName);
+            Paragraph response = TestUtils.SlidesApi.GetParagraph(c_fileName, c_slideIndex,
+                3, 1, c_password, c_folderName, subShape: "1");
             Assert.AreEqual(2, response.PortionList.Count);
         }
 
         [Test]
-        public void GetSubshapeParagraphs()
+        public void GetSubShapeParagraphs()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Paragraphs response = TestUtils.SlidesApi.GetSubshapeParagraphs(c_fileName, c_slideIndex, c_shapePath,
-                1, c_password, c_folderName);
+            Paragraphs response = TestUtils.SlidesApi.GetParagraphs(c_fileName, c_slideIndex,
+                3, c_password, c_folderName, subShape: "1");
             Assert.AreEqual(2, response.ParagraphLinks.Count);
         }
 
@@ -119,7 +116,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void CreateSubshapeParagraph()
+        public void CreateSubShapeParagraph()
         {
             Paragraph dto = new Paragraph()
             {
@@ -129,8 +126,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             };
 
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Paragraph response = TestUtils.SlidesApi.CreateSubshapeParagraph(c_fileName, c_slideIndex, c_shapePath,
-                1, dto, null, c_password, c_folderName);
+            Paragraph response = TestUtils.SlidesApi.CreateParagraph(c_fileName, c_slideIndex,
+                3, dto, null, c_password, c_folderName, subShape: "1");
 
             Assert.AreEqual(dto.MarginLeft, response.MarginLeft);
             Assert.AreEqual(dto.MarginRight, response.MarginLeft);
@@ -158,7 +155,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void UpdateSubshapeParagraph()
+        public void UpdateSubShapeParagraph()
         {
             Paragraph dto = new Paragraph()
             {
@@ -168,8 +165,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             };
 
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Paragraph response = TestUtils.SlidesApi.UpdateSubshapeParagraph(c_fileName, c_slideIndex, c_shapePath,
-                1, 1, dto, c_password, c_folderName);
+            Paragraph response = TestUtils.SlidesApi.UpdateParagraph(c_fileName, c_slideIndex,
+                3, 1, dto, c_password, c_folderName, subShape: "1");
 
             Assert.AreEqual(dto.MarginLeft, response.MarginLeft);
             Assert.AreEqual(dto.MarginRight, response.MarginLeft);
@@ -195,20 +192,20 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void DeleteSubshapeParagraphs()
+        public void DeleteSubShapeParagraphs()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Paragraphs response = TestUtils.SlidesApi.DeleteSubshapeParagraphs(c_fileName, c_slideIndex, c_shapePath, 1,
-                null, c_password, c_folderName);
+            Paragraphs response = TestUtils.SlidesApi.DeleteParagraphs(c_fileName, c_slideIndex, 3,
+                null, c_password, c_folderName, subShape:"1");
             Assert.AreEqual(0, response.ParagraphLinks.Count);
         }
 
         [Test]
-        public void DeleteSubshapeParagraphsIndexes()
+        public void DeleteSubShapeParagraphsIndexes()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Paragraphs response = TestUtils.SlidesApi.DeleteSubshapeParagraphs(c_fileName, c_slideIndex, c_shapePath, 1,
-                new List<int> { 1 }, c_password, c_folderName);
+            Paragraphs response = TestUtils.SlidesApi.DeleteParagraphs(c_fileName, c_slideIndex, 3, 
+                new List<int> { 1 }, c_password, c_folderName, subShape: "1");
             Assert.AreEqual(1, response.ParagraphLinks.Count);
         }
 
@@ -222,11 +219,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void DeleteSubshapeParagraph()
+        public void DeleteSubShapeParagraph()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Paragraphs response = TestUtils.SlidesApi.DeleteSubshapeParagraph(c_fileName, c_slideIndex, c_shapePath,
-                1, 1, c_password, c_folderName);
+            Paragraphs response = TestUtils.SlidesApi.DeleteParagraph(c_fileName, c_slideIndex, 3,
+                1, c_password, c_folderName, subShape: "1");
             Assert.AreEqual(1, response.ParagraphLinks.Count);
         }
 
@@ -287,11 +284,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetSubshapeParagraphEffective()
+        public void GetSubShapeParagraphEffective()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Paragraph response = TestUtils.SlidesApi.GetSubshapeParagraphEffective(c_fileName, c_slideIndex, c_shapePath,
-                1, 1, c_password, c_folderName);
+            Paragraph response = TestUtils.SlidesApi.GetParagraphEffective(c_fileName, c_slideIndex, 3,
+                1, c_password, c_folderName, subShape: "1");
             Assert.AreEqual(72, response.DefaultTabSize);
         }
 
@@ -300,6 +297,5 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const string c_password = "password";
         const int c_slideIndex = 6;
         const int c_shapeIndex = 2;
-        const string c_shapePath = "3/shapes";
     }
 }

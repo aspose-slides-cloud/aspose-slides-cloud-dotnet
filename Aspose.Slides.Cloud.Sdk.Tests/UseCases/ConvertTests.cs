@@ -203,11 +203,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertSubshapePostFromStorage()
+        public void ConvertSubShapePostFromStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Stream converted = TestUtils.SlidesApi.DownloadSubshape(
-                c_fileName, c_slideIndex, "4/shapes", 1, c_shapeFormat, password: c_password, folder: c_folderName);
+            Stream converted = TestUtils.SlidesApi.DownloadShape(
+                c_fileName, c_slideIndex, 4, c_shapeFormat, password: c_password, folder: c_folderName, subShape:"1");
             Assert.IsNotNull(converted);
             Assert.Greater(converted.Length, 0);
             Assert.IsTrue(converted.CanRead);
@@ -224,12 +224,12 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
         
         [Test]
-        public void ConvertSubshapePutFromStorage()
+        public void ConvertSubShapePutFromStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            TestUtils.SlidesApi.SaveSubshape(
-                c_fileName, c_slideIndex, "4/shapes", 1, c_shapeFormat, c_outPath, password: c_password,
-                folder: c_folderName);
+            TestUtils.SlidesApi.SaveShape(
+                c_fileName, c_slideIndex, 4, c_shapeFormat, c_outPath, password: c_password,
+                folder: c_folderName, subShape: "1");
             ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
             Assert.IsTrue(exists.Exists.Value);
         }

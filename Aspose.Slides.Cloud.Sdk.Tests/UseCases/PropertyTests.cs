@@ -209,6 +209,32 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsTrue(protectionProperties.IsEncrypted.Value);
             Assert.IsNotNull(protectionProperties.ReadPassword);
         }
+        
+        [Test]
+        public void GetSlideShowProperties()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            SlideShowProperties properties = TestUtils.SlidesApi.GetSlideShowProperties(c_fileName, c_password, c_folderName);
+            Assert.True(properties.ShowAnimation.Value);
+            Assert.True(properties.ShowNarration.Value);
+        }
+        
+        [Test]
+        public void SetSlideShowProperties()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            SlideShowProperties properties = new SlideShowProperties()
+            {
+                Loop = true,
+                UseTimings = true,
+                SlideShowType = SlideShowProperties.SlideShowTypeEnum.PresentedBySpeaker
+            };
+            SlideShowProperties response =
+                TestUtils.SlidesApi.SetSlideShowProperties(c_fileName, properties, c_password, c_folderName);
+            Assert.AreEqual(properties.Loop, response.Loop);
+            Assert.AreEqual(properties.UseTimings, response.UseTimings);
+            Assert.AreEqual(properties.SlideShowType, response.SlideShowType);
+        }
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";

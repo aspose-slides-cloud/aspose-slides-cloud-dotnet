@@ -43,11 +43,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetSubshapePortions()
+        public void GetSubShapePortions()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Portions response = TestUtils.SlidesApi.GetSubshapePortions(c_fileName, c_slideIndex, c_shapePath, 1,
-                c_paragraphIndex, c_password, c_folderName);
+            Portions response = TestUtils.SlidesApi.GetPortions(c_fileName, c_slideIndex, 3,
+                c_paragraphIndex, c_password, c_folderName, subShape: "1");
             Assert.AreEqual(2, response.Items.Count);
         }
 
@@ -61,11 +61,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetSubshapePortion()
+        public void GetSubShapePortion()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Portion response = TestUtils.SlidesApi.GetSubshapePortion(c_fileName, c_slideIndex, c_shapePath, 1,
-                c_paragraphIndex, c_portionIndex, c_password, c_folderName);
+            Portion response = TestUtils.SlidesApi.GetPortion(c_fileName, c_slideIndex, 3,
+                c_paragraphIndex, c_portionIndex, c_password, c_folderName, subShape: "1");
             Assert.IsTrue(response.Text.Contains(c_portionText));
         }
 
@@ -96,7 +96,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void CreateSubshapePortion()
+        public void CreateSubShapePortion()
         {
             Portion dto = new Portion()
             {
@@ -111,9 +111,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             };
 
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Portion response = TestUtils.SlidesApi.CreateSubshapePortion(c_fileName, c_slideIndex, c_shapePath,
-                c_shapeIndex, 1, dto,
-                null, c_password, c_folderName);
+            Portion response = TestUtils.SlidesApi.CreatePortion(c_fileName, c_slideIndex, 3, 1, dto,
+                null, c_password, c_folderName, subShape: "2");
 
             Assert.AreEqual(dto.Text, response.Text);
             Assert.AreEqual(dto.FontBold, response.FontBold);
@@ -149,7 +148,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void UpdateSubshapePortion()
+        public void UpdateSubShapePortion()
         {
             Portion dto = new Portion()
             {
@@ -164,9 +163,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             };
 
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Portion response = TestUtils.SlidesApi.UpdateSubshapePortion(c_fileName, c_slideIndex, c_shapePath,
-                c_shapeIndex, 1,
-                1, dto, c_password, c_folderName);
+            Portion response = TestUtils.SlidesApi.UpdatePortion(c_fileName, c_slideIndex, 3, 1,
+                1, dto, c_password, c_folderName, subShape: "2");
 
             Assert.AreEqual(dto.Text, response.Text);
             Assert.AreEqual(dto.FontBold, response.FontBold);
@@ -194,20 +192,20 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void DeleteSubshapePortions()
+        public void DeleteSubShapePortions()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Portions response = TestUtils.SlidesApi.DeleteSubshapePortions(c_fileName, c_slideIndex, c_shapePath,
-                1, c_paragraphIndex, null, c_password, c_folderName);
+            Portions response = TestUtils.SlidesApi.DeletePortions(c_fileName, c_slideIndex,
+                3, c_paragraphIndex, null, c_password, c_folderName, subShape: "1");
             Assert.AreEqual(0, response.Items.Count);
         }
 
         [Test]
-        public void DeleteSubshapePortionsIndexes()
+        public void DeleteSubShapePortionsIndexes()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Portions response = TestUtils.SlidesApi.DeleteSubshapePortions(c_fileName, c_slideIndex, c_shapePath,
-                1, c_paragraphIndex, new List<int> { 1 }, c_password, c_folderName);
+            Portions response = TestUtils.SlidesApi.DeletePortions(c_fileName, c_slideIndex,
+                3, c_paragraphIndex, new List<int> { 1 }, c_password, c_folderName, subShape: "1");
             Assert.AreEqual(1, response.Items.Count);
         }
 
@@ -221,11 +219,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void DeleteSubshapePortion()
+        public void DeleteSubShapePortion()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Portions response = TestUtils.SlidesApi.DeleteSubshapePortion(c_fileName, c_slideIndex, c_shapePath,
-                1, c_paragraphIndex, c_portionIndex, c_password, c_folderName);
+            Portions response = TestUtils.SlidesApi.DeletePortion(c_fileName, c_slideIndex, 3, c_paragraphIndex,
+                c_portionIndex, c_password, c_folderName, subShape: "1");
             Assert.AreEqual(1, response.Items.Count);
         }
 
@@ -234,8 +232,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TextBounds response = TestUtils.SlidesApi.GetPortionRectangle(c_fileName, c_slideIndex, c_shapeIndex,
-                c_paragraphIndex, c_portionIndex, c_password,
-                c_folderName);
+                c_paragraphIndex, c_portionIndex, c_password, c_folderName);
 
             Assert.IsNotNull(response);
             Assert.Greater(response.X, 0);
@@ -254,11 +251,11 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetSubshapePortionEffective()
+        public void GetSubShapePortionEffective()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Portion response = TestUtils.SlidesApi.GetSubshapePortionEffective(c_fileName, c_slideIndex, c_shapePath, 1,
-                c_paragraphIndex, c_portionIndex, c_password, c_folderName);
+            Portion response = TestUtils.SlidesApi.GetPortionEffective(c_fileName, c_slideIndex, 3,
+                c_paragraphIndex, c_portionIndex, c_password, c_folderName, subShape: "1");
             Assert.AreEqual(18, response.FontHeight);
         }
         
@@ -272,7 +269,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const string c_portionText = "portion 1";
         const string c_newPortionText = "new portion text";
         const string c_fontColor = "#FFF5FF8A";
-        const string c_shapePath = "3/shapes";
         const string c_fontName = "Arial";
     }
 }

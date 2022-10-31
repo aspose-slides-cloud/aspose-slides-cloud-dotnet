@@ -1249,6 +1249,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public double? TriggerDelayTime { get; set; }
 
+        /// <summary>
+        /// Specifies if the effect will repeat until the end of slide.
+        /// </summary>
+        public bool? RepeatUntilEndSlide { get; set; }
+
+        /// <summary>
+        /// Specifies if the effect will repeat until the next click.
+        /// </summary>
+        public bool? RepeatUntilNextClick { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -1296,6 +1306,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Restart: ").Append(this.Restart).Append("\n");
             sb.Append("  Speed: ").Append(this.Speed).Append("\n");
             sb.Append("  TriggerDelayTime: ").Append(this.TriggerDelayTime).Append("\n");
+            sb.Append("  RepeatUntilEndSlide: ").Append(this.RepeatUntilEndSlide).Append("\n");
+            sb.Append("  RepeatUntilNextClick: ").Append(this.RepeatUntilNextClick).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
