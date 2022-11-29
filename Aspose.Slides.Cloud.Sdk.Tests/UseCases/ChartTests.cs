@@ -56,7 +56,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartCreate()
+        public void ChartCreateAutoDataSource()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ShapeBase dto = new Chart
@@ -85,6 +85,133 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                     new OneValueSeries
                     {
                         Name = "Series2",
+                        DataPoints = new List<OneValueChartDataPoint>
+                        {
+                            new OneValueChartDataPoint { Value = 55 },
+                            new OneValueChartDataPoint { Value = 35 },
+                            new OneValueChartDataPoint { Value = 90 }
+                        }
+                    }
+                }
+            };
+            Chart chart = TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName) as Chart;
+            Assert.IsNotNull(chart);
+            Assert.AreEqual(2, chart.Series.Count);
+            Assert.AreEqual(3, chart.Categories.Count);
+        }
+        
+        [Test]
+        public void ChartCreateWorkbook()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            ShapeBase dto = new Chart
+            {
+                ChartType = Chart.ChartTypeEnum.ClusteredColumn,
+                Width = 400,
+                Height = 300,
+                DataSourceForCategories = new Workbook()
+                {
+                    WorksheetIndex = 0,
+                    ColumnIndex = 0,
+                    RowIndex = 1
+                },
+                Categories = new List<ChartCategory>
+                {
+                    new ChartCategory { Value = "Category1" },
+                    new ChartCategory { Value = "Category2" },
+                    new ChartCategory { Value = "Category3" }
+                },
+                Series = new List<Series>
+                {
+                    new OneValueSeries
+                    {
+                        Name = "Series1",
+                        DataSourceForSeriesName = new Workbook()
+                        {
+                            WorksheetIndex = 0,
+                            ColumnIndex = 1,
+                            RowIndex = 0
+                        },
+                        DataSourceForValues = new Workbook()
+                        {
+                            WorksheetIndex = 0,
+                            ColumnIndex = 1,
+                            RowIndex = 1
+                        },
+                        DataPoints = new List<OneValueChartDataPoint>
+                        {
+                            new OneValueChartDataPoint { Value = 40 },
+                            new OneValueChartDataPoint { Value = 50 },
+                            new OneValueChartDataPoint { Value = 70 }
+                        }
+                    },
+                    new OneValueSeries
+                    {
+                        Name = "Series2",
+                        DataSourceForSeriesName = new Workbook()
+                        {
+                            WorksheetIndex = 0,
+                            ColumnIndex = 2,
+                            RowIndex = 0
+                        },
+                        DataSourceForValues = new Workbook()
+                        {
+                            WorksheetIndex = 0,
+                            ColumnIndex = 2,
+                            RowIndex = 1
+                        },
+                        DataPoints = new List<OneValueChartDataPoint>
+                        {
+                            new OneValueChartDataPoint { Value = 55 },
+                            new OneValueChartDataPoint { Value = 35 },
+                            new OneValueChartDataPoint { Value = 90 }
+                        }
+                    }
+                }
+            };
+            Chart chart = TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName) as Chart;
+            Assert.IsNotNull(chart);
+            Assert.AreEqual(2, chart.Series.Count);
+            Assert.AreEqual(3, chart.Categories.Count);
+        }
+        
+        [Test]
+        public void ChartCreateLiterals()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            ShapeBase dto = new Chart
+            {
+                ChartType = Chart.ChartTypeEnum.ClusteredColumn,
+                Width = 400,
+                Height = 300,
+                DataSourceForCategories = new Literals(),
+                Categories = new List<ChartCategory>
+                {
+                    new ChartCategory { Value = "Category1" },
+                    new ChartCategory { Value = "Category2" },
+                    new ChartCategory { Value = "Category3" }
+                },
+                Series = new List<Series>
+                {
+                    new OneValueSeries
+                    {
+                        Name = "Series1",
+                        DataSourceForSeriesName = new Literals(),
+                        DataSourceForValues = new Literals(),
+                        DataPoints = new List<OneValueChartDataPoint>
+                        {
+                            new OneValueChartDataPoint { Value = 40 },
+                            new OneValueChartDataPoint { Value = 50 },
+                            new OneValueChartDataPoint { Value = 70 }
+                        }
+                    },
+                    new OneValueSeries
+                    {
+                        Name = "Series2",
+                        DataSourceForSeriesName = new Literals(),
+                        DataSourceForValues = new Literals(),
                         DataPoints = new List<OneValueChartDataPoint>
                         {
                             new OneValueChartDataPoint { Value = 55 },
@@ -569,6 +696,56 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsInstanceOf<SolidFill>(dataPoint.FillFormat);
             Assert.IsInstanceOf<SolidFill>(dataPoint.LineFormat.FillFormat);
             Assert.IsNotNull(dataPoint.EffectFormat.Blur);
+        }
+        
+        [Test]
+        public void ChartWorkbookFormulas()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            ShapeBase dto = new Chart
+            {
+                ChartType = Chart.ChartTypeEnum.ClusteredColumn,
+                Width = 400,
+                Height = 300,
+                DataSourceForCategories = new Workbook()
+                {
+                    WorksheetIndex = 0,
+                    ColumnIndex = 0,
+                    RowIndex = 1
+                },
+                Categories = new List<ChartCategory>
+                {
+                    new ChartCategory { Value = "Category1" },
+                    new ChartCategory { Value = "Category2" },
+                    new ChartCategory { Value = "Category3" }
+                },
+                Series = new List<Series>
+                {
+                    new OneValueSeries
+                    {
+                        DataSourceForValues = new Workbook()
+                        {
+                            WorksheetIndex = 0,
+                            ColumnIndex = 1,
+                            RowIndex = 1
+                        },
+                        DataPoints = new List<OneValueChartDataPoint>
+                        {
+                            new OneValueChartDataPoint { Value = 40 },
+                            new OneValueChartDataPoint { Value = 50 },
+                            new OneValueChartDataPoint
+                            {
+                                Value = 5,
+                                ValueFormula = "SUM(B2:B3)"
+                            }
+                        }
+                    }
+                }
+            };
+            Chart chart = TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName) as Chart;
+            Assert.IsNotNull(chart);
+            Assert.AreEqual(90, (chart.Series[0] as OneValueSeries).DataPoints[2].Value);
         }
 
         const string c_fillColor = "#77CEF9";

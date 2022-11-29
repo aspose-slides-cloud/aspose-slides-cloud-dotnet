@@ -147,6 +147,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? DeletePicturesCroppedAreas { get; set; }
 
+        /// <summary>
+        /// Determines whether the text frame will be included in a rendering area or not.
+        /// </summary>
+        public bool? UseFrameSize { get; set; }
+
+        /// <summary>
+        /// Determines whether to perform the specified rotation of the shape when rendering or not.
+        /// </summary>
+        public bool? UseFrameRotation { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -194,6 +204,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  PicturesCompression: ").Append(this.PicturesCompression).Append("\n");
             sb.Append("  DeletePicturesCroppedAreas: ").Append(this.DeletePicturesCroppedAreas).Append("\n");
             sb.Append("  ExternalFontsHandling: ").Append(this.ExternalFontsHandling).Append("\n");
+            sb.Append("  UseFrameSize: ").Append(this.UseFrameSize).Append("\n");
+            sb.Append("  UseFrameRotation: ").Append(this.UseFrameRotation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

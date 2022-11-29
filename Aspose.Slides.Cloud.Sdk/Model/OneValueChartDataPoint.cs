@@ -45,6 +45,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public double? Value { get; set; }
 
         /// <summary>
+        /// Spreadsheet formula in A1-style.
+        /// </summary>
+        public string ValueFormula { get; set; }
+
+        /// <summary>
         /// SetAsTotal. Applied to Waterfall data points only.
         /// </summary>
         public bool? SetAsTotal { get; set; }
@@ -91,6 +96,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  Value: ").Append(this.Value).Append("\n");
+            sb.Append("  ValueFormula: ").Append(this.ValueFormula).Append("\n");
             sb.Append("  SetAsTotal: ").Append(this.SetAsTotal).Append("\n");
             sb.Append("  InvertIfNegative: ").Append(this.InvertIfNegative).Append("\n");
             sb.Append("}\n");

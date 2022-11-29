@@ -91,6 +91,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
         public static void DeleteFile(string storagePath)
         {
             SlidesApi.DeleteFile(storagePath);
+            SlidesApi.DeleteFolder(storagePath);
         }
 
         public static FileInfo GetLocalFile(string path, string mimeType)

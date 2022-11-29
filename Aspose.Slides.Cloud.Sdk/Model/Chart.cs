@@ -479,6 +479,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public List<ChartCategory> Categories { get; set; }
 
         /// <summary>
+        /// Data source type for categories.
+        /// </summary>
+        public DataSource DataSourceForCategories { get; set; }
+
+        /// <summary>
         /// Gets or sets the title.
         /// </summary>
         public ChartTitle Title { get; set; }
@@ -579,6 +584,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  ShowDataLabelsOverMaximum: ").Append(this.ShowDataLabelsOverMaximum).Append("\n");
             sb.Append("  Series: ").Append(this.Series).Append("\n");
             sb.Append("  Categories: ").Append(this.Categories).Append("\n");
+            sb.Append("  DataSourceForCategories: ").Append(this.DataSourceForCategories).Append("\n");
             sb.Append("  Title: ").Append(this.Title).Append("\n");
             sb.Append("  BackWall: ").Append(this.BackWall).Append("\n");
             sb.Append("  SideWall: ").Append(this.SideWall).Append("\n");

@@ -35,9 +35,8 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Defines ShapesAlignmentType
     /// </summary>
-    /// <value></value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ShapesAlignmentType
     {

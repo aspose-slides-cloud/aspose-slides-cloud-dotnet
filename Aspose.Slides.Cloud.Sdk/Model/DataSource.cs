@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="BubbleChartDataPoint.cs">
+// <copyright company="Aspose" file="DataSource.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,25 +35,38 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Bubble chart data point.
+    /// Data source for chart values.
     /// </summary>  
-    public class BubbleChartDataPoint : ScatterChartDataPoint 
+    public class DataSource 
     {                       
         /// <summary>
-        /// Bubble size.
+        /// Gets or Sets Type
         /// </summary>
-        public double? BubbleSize { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Workbook for "Workbook"
+            /// </summary>
+            Workbook,
+            
+            /// <summary>
+            /// Enum Literals for "Literals"
+            /// </summary>
+            Literals
+        }
 
         /// <summary>
-        /// Spreadsheet formula in A1-style.
+        /// Gets or sets Type
         /// </summary>
-        public string BubbleSizeFormula { get; set; }
+        public TypeEnum? Type { get; protected set; }
 
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static new Dictionary<string, object> TypeDeterminers
+        public static Dictionary<string, object> TypeDeterminers
         {
             get
             {
@@ -69,7 +82,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public BubbleChartDataPoint() : base()
+        public DataSource() : base()
         {
         }
 
@@ -80,17 +93,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class BubbleChartDataPoint {\n");
-            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-            sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
-            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-            sb.Append("  XValue: ").Append(this.XValue).Append("\n");
-            sb.Append("  YValue: ").Append(this.YValue).Append("\n");
-            sb.Append("  XValueFormula: ").Append(this.XValueFormula).Append("\n");
-            sb.Append("  YValueFormula: ").Append(this.YValueFormula).Append("\n");
-            sb.Append("  BubbleSize: ").Append(this.BubbleSize).Append("\n");
-            sb.Append("  BubbleSizeFormula: ").Append(this.BubbleSizeFormula).Append("\n");
+            sb.Append("class DataSource {\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

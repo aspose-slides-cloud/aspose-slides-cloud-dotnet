@@ -80,6 +80,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("class ScatterSeries {\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  Name: ").Append(this.Name).Append("\n");
+            sb.Append("  DataSourceForSeriesName: ").Append(this.DataSourceForSeriesName).Append("\n");
             sb.Append("  IsColorVaried: ").Append(this.IsColorVaried).Append("\n");
             sb.Append("  InvertedSolidFillColor: ").Append(this.InvertedSolidFillColor).Append("\n");
             sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
@@ -94,6 +95,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
             sb.Append("  NumberFormatOfYValues: ").Append(this.NumberFormatOfYValues).Append("\n");
             sb.Append("  NumberFormatOfXValues: ").Append(this.NumberFormatOfXValues).Append("\n");
+            sb.Append("  DataSourceForXValues: ").Append(this.DataSourceForXValues).Append("\n");
+            sb.Append("  DataSourceForYValues: ").Append(this.DataSourceForYValues).Append("\n");
             sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

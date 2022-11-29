@@ -47,7 +47,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Get or sets list to paragraphs list
         /// </summary>
-        public ResourceUri Paragraphs { get; set; }
+        public ResourceUri Paragraphs { get; protected set; }
 
         /// <summary>
         /// Returns TextFrame's formatting properties.

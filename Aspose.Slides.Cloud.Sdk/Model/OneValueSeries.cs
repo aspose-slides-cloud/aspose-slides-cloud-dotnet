@@ -74,6 +74,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string NumberFormatOfValues { get; set; }
 
         /// <summary>
+        /// Data source type for values.
+        /// </summary>
+        public DataSource DataSourceForValues { get; set; }
+
+        /// <summary>
         /// True if inner points are shown. Applied to Waterfall series only.
         /// </summary>
         public bool? ShowConnectorLines { get; set; }
@@ -134,6 +139,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("class OneValueSeries {\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  Name: ").Append(this.Name).Append("\n");
+            sb.Append("  DataSourceForSeriesName: ").Append(this.DataSourceForSeriesName).Append("\n");
             sb.Append("  IsColorVaried: ").Append(this.IsColorVaried).Append("\n");
             sb.Append("  InvertedSolidFillColor: ").Append(this.InvertedSolidFillColor).Append("\n");
             sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
@@ -148,6 +154,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  DataPointType: ").Append(this.DataPointType).Append("\n");
             sb.Append("  DataPoints: ").Append(this.DataPoints).Append("\n");
             sb.Append("  NumberFormatOfValues: ").Append(this.NumberFormatOfValues).Append("\n");
+            sb.Append("  DataSourceForValues: ").Append(this.DataSourceForValues).Append("\n");
             sb.Append("  ShowConnectorLines: ").Append(this.ShowConnectorLines).Append("\n");
             sb.Append("  QuartileMethod: ").Append(this.QuartileMethod).Append("\n");
             sb.Append("  ShowInnerPoints: ").Append(this.ShowInnerPoints).Append("\n");

@@ -497,6 +497,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Series name data source.
+        /// </summary>
+        public DataSource DataSourceForSeriesName { get; set; }
+
+        /// <summary>
         /// True if each data marker in the series has a different color.
         /// </summary>
         public bool? IsColorVaried { get; set; }
@@ -585,6 +590,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("class Series {\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  Name: ").Append(this.Name).Append("\n");
+            sb.Append("  DataSourceForSeriesName: ").Append(this.DataSourceForSeriesName).Append("\n");
             sb.Append("  IsColorVaried: ").Append(this.IsColorVaried).Append("\n");
             sb.Append("  InvertedSolidFillColor: ").Append(this.InvertedSolidFillColor).Append("\n");
             sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");

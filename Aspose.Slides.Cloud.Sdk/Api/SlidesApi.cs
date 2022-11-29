@@ -5208,7 +5208,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Read presentation document properties. 
+        /// Read presentation view properties. 
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="password">Document password.</param> 
@@ -7229,7 +7229,7 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Update presentation document properties. 
+        /// Update presentation view properties. 
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="dto">The view properties data.</param> 

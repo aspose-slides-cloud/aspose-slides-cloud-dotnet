@@ -86,7 +86,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Nary Operator Character
         /// </summary>
-        public string _Operator { get; set; }
+        public string Operator { get; set; }
 
         /// <summary>
         /// Operator Character grows vertically to match its operand height
@@ -141,7 +141,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Base: ").Append(this.Base).Append("\n");
             sb.Append("  Subscript: ").Append(this.Subscript).Append("\n");
             sb.Append("  Superscript: ").Append(this.Superscript).Append("\n");
-            sb.Append("  _Operator: ").Append(this._Operator).Append("\n");
+            sb.Append("  Operator: ").Append(this.Operator).Append("\n");
             sb.Append("  LimitLocation: ").Append(this.LimitLocation).Append("\n");
             sb.Append("  GrowToMatchOperandHeight: ").Append(this.GrowToMatchOperandHeight).Append("\n");
             sb.Append("  HideSubscript: ").Append(this.HideSubscript).Append("\n");

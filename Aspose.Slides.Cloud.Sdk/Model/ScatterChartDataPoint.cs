@@ -49,6 +49,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public double? YValue { get; set; }
 
+        /// <summary>
+        /// Spreadsheet formula in A1-style.
+        /// </summary>
+        public string XValueFormula { get; set; }
+
+        /// <summary>
+        /// Spreadsheet formula in A1-style.
+        /// </summary>
+        public string YValueFormula { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -87,6 +97,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
             sb.Append("  XValue: ").Append(this.XValue).Append("\n");
             sb.Append("  YValue: ").Append(this.YValue).Append("\n");
+            sb.Append("  XValueFormula: ").Append(this.XValueFormula).Append("\n");
+            sb.Append("  YValueFormula: ").Append(this.YValueFormula).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

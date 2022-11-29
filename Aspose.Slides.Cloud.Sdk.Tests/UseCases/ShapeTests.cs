@@ -261,9 +261,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void ChartEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            ShapeBase shape = TestUtils.SlidesApi.CreateShape(
-                c_fileName, c_slideIndex, new Chart(), password: c_password, folder: c_folderName);
-            Assert.IsInstanceOf<Chart>(shape);
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CreateShape(
+                c_fileName, c_slideIndex, new Chart(), password: c_password, folder: c_folderName));
         }
 
         [Test]
