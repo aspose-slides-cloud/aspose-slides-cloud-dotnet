@@ -62,11 +62,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Width = 400,
                 Height = 300,
                 Title = new ChartTitle { HasTitle = true, Text = "MyTitle" },
-                Categories = new List<ChartCategory>
-                {
-                    new ChartCategory { Value = "Category1" },
-                    new ChartCategory { Value = "Category2" }
-                },
                 Series = new List<Series>
                 {
                     new OneValueSeries

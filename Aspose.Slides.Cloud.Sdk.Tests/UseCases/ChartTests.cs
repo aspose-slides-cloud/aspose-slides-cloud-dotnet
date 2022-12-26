@@ -112,9 +112,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Height = 300,
                 DataSourceForCategories = new Workbook()
                 {
-                    WorksheetIndex = 0,
-                    ColumnIndex = 0,
-                    RowIndex = 1
+                    WorksheetIndex = 1,
+                    ColumnIndex = 1,
+                    RowIndex = 2
                 },
                 Categories = new List<ChartCategory>
                 {
@@ -129,15 +129,15 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                         Name = "Series1",
                         DataSourceForSeriesName = new Workbook()
                         {
-                            WorksheetIndex = 0,
-                            ColumnIndex = 1,
-                            RowIndex = 0
+                            WorksheetIndex = 1,
+                            ColumnIndex = 2,
+                            RowIndex = 1
                         },
                         DataSourceForValues = new Workbook()
                         {
-                            WorksheetIndex = 0,
-                            ColumnIndex = 1,
-                            RowIndex = 1
+                            WorksheetIndex = 1,
+                            ColumnIndex = 2,
+                            RowIndex = 2
                         },
                         DataPoints = new List<OneValueChartDataPoint>
                         {
@@ -151,15 +151,15 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                         Name = "Series2",
                         DataSourceForSeriesName = new Workbook()
                         {
-                            WorksheetIndex = 0,
-                            ColumnIndex = 2,
-                            RowIndex = 0
+                            WorksheetIndex = 1,
+                            ColumnIndex = 3,
+                            RowIndex = 1
                         },
                         DataSourceForValues = new Workbook()
                         {
-                            WorksheetIndex = 0,
-                            ColumnIndex = 2,
-                            RowIndex = 1
+                            WorksheetIndex = 1,
+                            ColumnIndex = 3,
+                            RowIndex = 2
                         },
                         DataPoints = new List<OneValueChartDataPoint>
                         {
@@ -709,9 +709,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 Height = 300,
                 DataSourceForCategories = new Workbook()
                 {
-                    WorksheetIndex = 0,
-                    ColumnIndex = 0,
-                    RowIndex = 1
+                    WorksheetIndex = 1,
+                    ColumnIndex = 1,
+                    RowIndex = 2
                 },
                 Categories = new List<ChartCategory>
                 {
@@ -725,9 +725,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                     {
                         DataSourceForValues = new Workbook()
                         {
-                            WorksheetIndex = 0,
-                            ColumnIndex = 1,
-                            RowIndex = 1
+                            WorksheetIndex = 1,
+                            ColumnIndex = 2,
+                            RowIndex = 2
                         },
                         DataPoints = new List<OneValueChartDataPoint>
                         {
@@ -735,7 +735,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                             new OneValueChartDataPoint { Value = 50 },
                             new OneValueChartDataPoint
                             {
-                                Value = 5,
                                 ValueFormula = "SUM(B2:B3)"
                             }
                         }

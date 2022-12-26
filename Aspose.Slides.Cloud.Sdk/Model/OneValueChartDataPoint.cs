@@ -70,6 +70,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.OneValue);
                 }
                 return s_typeDeterminers;
             }
@@ -81,6 +82,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public OneValueChartDataPoint() : base()
         {
+            Type = TypeEnum.OneValue;
         }
 
         /// <summary>
@@ -95,6 +97,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  Value: ").Append(this.Value).Append("\n");
             sb.Append("  ValueFormula: ").Append(this.ValueFormula).Append("\n");
             sb.Append("  SetAsTotal: ").Append(this.SetAsTotal).Append("\n");

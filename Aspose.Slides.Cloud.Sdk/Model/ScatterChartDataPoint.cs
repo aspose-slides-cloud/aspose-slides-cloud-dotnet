@@ -70,6 +70,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+                    s_typeDeterminers.Add("Type", TypeEnum.Scatter);
                 }
                 return s_typeDeterminers;
             }
@@ -81,6 +82,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public ScatterChartDataPoint() : base()
         {
+            Type = TypeEnum.Scatter;
         }
 
         /// <summary>
@@ -95,6 +97,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  XValue: ").Append(this.XValue).Append("\n");
             sb.Append("  YValue: ").Append(this.YValue).Append("\n");
             sb.Append("  XValueFormula: ").Append(this.XValueFormula).Append("\n");
