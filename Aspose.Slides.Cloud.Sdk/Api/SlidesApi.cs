@@ -130,6 +130,58 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Compresses embedded fonts by removing unused characters. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void CompressEmbeddedFonts(string name, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CompressEmbeddedFonts");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/fonts/embedded/compress");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            InvokeVoidApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Compresses embedded fonts by removing unused characters. 
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream CompressEmbeddedFontsOnline(System.IO.Stream document, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling CompressEmbeddedFontsOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/fonts/embedded/compress");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Convert presentation from request content to format specified. 
         /// </summary>
         /// <param name="document">Document data.</param> 

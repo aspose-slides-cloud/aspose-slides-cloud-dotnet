@@ -99,7 +99,29 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Stream response = TestUtils.SlidesApi.SetEmbeddedFontFromRequestOnline(file, fontFile, false, c_password);
             Assert.Greater(response.Length, file.Length);
         }
-        
+
+        [Test]
+        public void CompressEmbeddedFonts()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            FontsData response = TestUtils.SlidesApi.SetEmbeddedFont(c_fileName, c_fontNameCalibri, false, c_password, c_folderName);
+            Assert.IsTrue(response.List[2].IsEmbedded.Value);
+            //In a real world example, you would rather get the same result by calling SetEmbeddedFont with onlyUsed = true
+            TestUtils.SlidesApi.CompressEmbeddedFonts(c_fileName, c_password, c_folderName);
+            Assert.IsTrue(response.List[2].IsEmbedded.HasValue);
+        }
+
+        [Test]
+        public void CompressEmbeddedFontOnline()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            Stream resultEmbedded = TestUtils.SlidesApi.SetEmbeddedFontOnline(file, c_fontNameCalibri, false, c_password);
+            Assert.Greater(resultEmbedded.Length, file.Length);
+            //In a real world example, you would rather get the same result by calling SetEmbeddedFont with onlyUsed = true
+            Stream resultDeleted = TestUtils.SlidesApi.CompressEmbeddedFontsOnline(resultEmbedded, c_password);
+            Assert.Less(resultDeleted.Length, resultEmbedded.Length);
+        }
+
         [Test]
         public void DeleteEmbeddedFont()
         {
