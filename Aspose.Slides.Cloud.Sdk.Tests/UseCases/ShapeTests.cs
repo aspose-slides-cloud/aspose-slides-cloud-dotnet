@@ -799,6 +799,22 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 subNodePath, c_password, c_folderName);
             Assert.AreEqual(3, response.Nodes[0].Nodes.Count);
         }
+        
+        [Test]
+        public void DownloadShapeFromDto()
+        {
+            var dto = new Shape
+            {
+                ShapeType = GeometryShape.ShapeTypeEnum.Rectangle,
+                Width = 400,
+                Height = 200,
+                Text = "New shape"
+            };
+            Stream stream = TestUtils.SlidesApi.DownloadShapeFromDto(ShapeExportFormat.Png, dto);
+            Assert.IsNotNull(stream);
+            Assert.Greater(stream.Length, 0);
+            Assert.IsTrue(stream.CanRead);
+        }
 
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";

@@ -1259,6 +1259,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? RepeatUntilNextClick { get; set; }
 
+        /// <summary>
+        /// This attribute specifies if the animation effect stops the previous sound.
+        /// </summary>
+        public bool? StopPreviousSound { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -1308,6 +1313,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  TriggerDelayTime: ").Append(this.TriggerDelayTime).Append("\n");
             sb.Append("  RepeatUntilEndSlide: ").Append(this.RepeatUntilEndSlide).Append("\n");
             sb.Append("  RepeatUntilNextClick: ").Append(this.RepeatUntilNextClick).Append("\n");
+            sb.Append("  StopPreviousSound: ").Append(this.StopPreviousSound).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

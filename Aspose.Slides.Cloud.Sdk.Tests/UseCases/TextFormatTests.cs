@@ -88,6 +88,37 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsInstanceOf<Shape>(shape);
         }
         
+        [Test]
+        public void TextFrameFormatTest()
+        {
+            Shape dto = new Shape()
+            {
+                ShapeType = GeometryShape.ShapeTypeEnum.Rectangle,
+                X = 100, Y = 100, Height = 100, Width = 200,
+                Text = "Sample text"
+            };
+            
+            dto.TextFrameFormat = new TextFrameFormat()
+            {
+                MarginLeft = 2,
+                MarginRight = 2,
+                MarginTop = 2,
+                MarginBottom = 2,
+                CenterText = TextFrameFormat.CenterTextEnum.True,
+                DefaultParagraphFormat = new ParagraphFormat()
+                {
+                    BulletFillFormat = new SolidFill()
+                    {
+                        Color = "#FF0000"
+                    }
+                }
+            };
+            
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            ShapeBase shape = TestUtils.SlidesApi.CreateShape(c_fileName, c_slideIndex, dto, password: c_password, folder: c_folderName);
+            Assert.IsInstanceOf<Shape>(shape);
+        }
+        
         const string c_folderName = "TempSlidesSDK";
         const string c_fileName = "test.pptx";
         const string c_password = "password";

@@ -215,6 +215,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\OuterShadowEffect.cs" />
     <Compile Include="Model\OutputFile.cs" />
     <Compile Include="Model\Paragraph.cs" />
+    <Compile Include="Model\ParagraphFormat.cs" />
     <Compile Include="Model\Paragraphs.cs" />
     <Compile Include="Model\PathInputFile.cs" />
     <Compile Include="Model\PathOutputFile.cs" />

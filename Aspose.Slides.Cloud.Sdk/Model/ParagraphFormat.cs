@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Paragraph.cs">
+// <copyright company="Aspose" file="ParagraphFormat.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,9 +35,9 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents paragraph resource
+    /// Paragraph formatting properties.
     /// </summary>  
-    public class Paragraph : ResourceBase 
+    public class ParagraphFormat 
     {                       
         /// <summary>
         /// Text alignment.
@@ -123,11 +123,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// True if hanging punctuation is used with the paragraph.
+        /// Determines whether the Right to Left writing is used in a paragraph. No inheritance applied.
         /// </summary>
-        /// <value>True if hanging punctuation is used with the paragraph.</value>
+        /// <value>Determines whether the Right to Left writing is used in a paragraph. No inheritance applied.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum HangingPunctuationEnum
+        public enum RightToLeftEnum
         {
             
             /// <summary>
@@ -147,9 +147,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// True if East Asian line break is used with the paragraph.
+        /// Determines whether the East Asian line break is used in a paragraph. No inheritance applied.
         /// </summary>
-        /// <value>True if East Asian line break is used with the paragraph.</value>
+        /// <value>Determines whether the East Asian line break is used in a paragraph. No inheritance applied.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum EastAsianLineBreakEnum
         {
@@ -171,9 +171,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// True if Latin line break is used with the paragraph.
+        /// Determines whether the Latin line break is used in a paragraph. No inheritance applied.
         /// </summary>
-        /// <value>True if Latin line break is used with the paragraph.</value>
+        /// <value>Determines whether the Latin line break is used in a paragraph. No inheritance applied.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum LatinLineBreakEnum
         {
@@ -195,11 +195,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// True if right to left direction is used with the paragraph.
+        /// Determines whether the hanging punctuation is used in a paragraph. No inheritance applied.
         /// </summary>
-        /// <value>True if right to left direction is used with the paragraph.</value>
+        /// <value>Determines whether the hanging punctuation is used in a paragraph. No inheritance applied.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum RightToLeftEnum
+        public enum HangingPunctuationEnum
         {
             
             /// <summary>
@@ -482,24 +482,24 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public FontAlignmentEnum? FontAlignment { get; set; }
 
         /// <summary>
-        /// True if hanging punctuation is used with the paragraph.
+        /// Determines whether the Right to Left writing is used in a paragraph. No inheritance applied.
         /// </summary>
-        public HangingPunctuationEnum? HangingPunctuation { get; set; }
+        public RightToLeftEnum? RightToLeft { get; set; }
 
         /// <summary>
-        /// True if East Asian line break is used with the paragraph.
+        /// Determines whether the East Asian line break is used in a paragraph. No inheritance applied.
         /// </summary>
         public EastAsianLineBreakEnum? EastAsianLineBreak { get; set; }
 
         /// <summary>
-        /// True if Latin line break is used with the paragraph.
+        /// Determines whether the Latin line break is used in a paragraph. No inheritance applied.
         /// </summary>
         public LatinLineBreakEnum? LatinLineBreak { get; set; }
 
         /// <summary>
-        /// True if right to left direction is used with the paragraph.
+        /// Determines whether the hanging punctuation is used in a paragraph. No inheritance applied.
         /// </summary>
-        public RightToLeftEnum? RightToLeft { get; set; }
+        public HangingPunctuationEnum? HangingPunctuation { get; set; }
 
         /// <summary>
         /// Bullet type.
@@ -510,6 +510,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Numbered bullet style.
         /// </summary>
         public NumberedBulletStyleEnum? NumberedBulletStyle { get; set; }
+
+        /// <summary>
+        /// Depth.
+        /// </summary>
+        public int? Depth { get; set; }
 
         /// <summary>
         /// Left margin.
@@ -542,19 +547,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public double? Indent { get; set; }
 
         /// <summary>
-        /// Default tabulation size.
+        /// Returns or sets default tabulation size with no inheritance.
         /// </summary>
         public double? DefaultTabSize { get; set; }
-
-        /// <summary>
-        /// Depth.
-        /// </summary>
-        public int? Depth { get; set; }
-
-        /// <summary>
-        /// List of portion links.
-        /// </summary>
-        public List<Portion> PortionList { get; set; }
 
         /// <summary>
         /// Default portion format.
@@ -585,7 +580,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static new Dictionary<string, object> TypeDeterminers
+        public static Dictionary<string, object> TypeDeterminers
         {
             get
             {
@@ -601,7 +596,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public Paragraph() : base()
+        public ParagraphFormat() : base()
         {
         }
 
@@ -612,24 +607,21 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class Paragraph {\n");
-            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
+            sb.Append("class ParagraphFormat {\n");
+            sb.Append("  Depth: ").Append(this.Depth).Append("\n");
+            sb.Append("  Alignment: ").Append(this.Alignment).Append("\n");
             sb.Append("  MarginLeft: ").Append(this.MarginLeft).Append("\n");
             sb.Append("  MarginRight: ").Append(this.MarginRight).Append("\n");
             sb.Append("  SpaceBefore: ").Append(this.SpaceBefore).Append("\n");
             sb.Append("  SpaceAfter: ").Append(this.SpaceAfter).Append("\n");
             sb.Append("  SpaceWithin: ").Append(this.SpaceWithin).Append("\n");
-            sb.Append("  Indent: ").Append(this.Indent).Append("\n");
-            sb.Append("  Alignment: ").Append(this.Alignment).Append("\n");
             sb.Append("  FontAlignment: ").Append(this.FontAlignment).Append("\n");
-            sb.Append("  DefaultTabSize: ").Append(this.DefaultTabSize).Append("\n");
-            sb.Append("  Depth: ").Append(this.Depth).Append("\n");
-            sb.Append("  HangingPunctuation: ").Append(this.HangingPunctuation).Append("\n");
+            sb.Append("  Indent: ").Append(this.Indent).Append("\n");
+            sb.Append("  RightToLeft: ").Append(this.RightToLeft).Append("\n");
             sb.Append("  EastAsianLineBreak: ").Append(this.EastAsianLineBreak).Append("\n");
             sb.Append("  LatinLineBreak: ").Append(this.LatinLineBreak).Append("\n");
-            sb.Append("  RightToLeft: ").Append(this.RightToLeft).Append("\n");
-            sb.Append("  PortionList: ").Append(this.PortionList).Append("\n");
+            sb.Append("  HangingPunctuation: ").Append(this.HangingPunctuation).Append("\n");
+            sb.Append("  DefaultTabSize: ").Append(this.DefaultTabSize).Append("\n");
             sb.Append("  DefaultPortionFormat: ").Append(this.DefaultPortionFormat).Append("\n");
             sb.Append("  BulletChar: ").Append(this.BulletChar).Append("\n");
             sb.Append("  BulletHeight: ").Append(this.BulletHeight).Append("\n");

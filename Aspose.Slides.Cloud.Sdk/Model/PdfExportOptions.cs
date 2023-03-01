@@ -72,6 +72,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             Pdf15,
             
             /// <summary>
+            /// Enum Pdf16 for "Pdf16"
+            /// </summary>
+            Pdf16,
+            
+            /// <summary>
+            /// Enum Pdf17 for "Pdf17"
+            /// </summary>
+            Pdf17,
+            
+            /// <summary>
             /// Enum PdfA1b for "PdfA1b"
             /// </summary>
             PdfA1b,
@@ -82,9 +92,34 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             PdfA1a,
             
             /// <summary>
+            /// Enum PdfA2b for "PdfA2b"
+            /// </summary>
+            PdfA2b,
+            
+            /// <summary>
+            /// Enum PdfA2a for "PdfA2a"
+            /// </summary>
+            PdfA2a,
+            
+            /// <summary>
+            /// Enum PdfA3b for "PdfA3b"
+            /// </summary>
+            PdfA3b,
+            
+            /// <summary>
+            /// Enum PdfA3a for "PdfA3a"
+            /// </summary>
+            PdfA3a,
+            
+            /// <summary>
             /// Enum PdfUa for "PdfUa"
             /// </summary>
-            PdfUa
+            PdfUa,
+            
+            /// <summary>
+            /// Enum PdfA2u for "PdfA2u"
+            /// </summary>
+            PdfA2u
         }
 
         /// <summary>

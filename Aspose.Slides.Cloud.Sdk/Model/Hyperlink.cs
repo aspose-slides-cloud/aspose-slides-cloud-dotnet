@@ -197,6 +197,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? StopSoundOnClick { get; set; }
 
+        /// <summary>
+        /// Audio data encoded in base64. Represents the playing sound of the hyperlink. 
+        /// </summary>
+        public string SoundBase64 { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -239,6 +244,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  HighlightClick: ").Append(this.HighlightClick).Append("\n");
             sb.Append("  StopSoundOnClick: ").Append(this.StopSoundOnClick).Append("\n");
             sb.Append("  ColorSource: ").Append(this.ColorSource).Append("\n");
+            sb.Append("  SoundBase64: ").Append(this.SoundBase64).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

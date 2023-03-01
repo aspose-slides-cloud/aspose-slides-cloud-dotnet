@@ -3529,6 +3529,27 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Creates the shape from the DTO and returns the result in the specified format. 
+        /// </summary>
+        /// <param name="format">Export format</param> 
+        /// <param name="dto">Shape DTO.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream DownloadShapeFromDto(ShapeExportFormat format, ShapeBase dto)
+        {
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling DownloadShapeFromDto");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/shape/{format}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeBinaryApi(resourcePath, "POST", postBody, null, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Render shape to specified picture format. 
         /// </summary>
         /// <param name="document">Document data.</param> 

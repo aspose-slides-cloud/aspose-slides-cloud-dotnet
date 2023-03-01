@@ -264,14 +264,249 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// True if text is wrapped at TextFrame&#39;s margins.
+        /// </summary>
+        /// <value>True if text is wrapped at TextFrame&#39;s margins.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum WrapTextEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Returns or sets vertical anchor text in a TextFrame.
+        /// </summary>
+        /// <value>Returns or sets vertical anchor text in a TextFrame.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AnchoringTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Top for "Top"
+            /// </summary>
+            Top,
+            
+            /// <summary>
+            /// Enum Center for "Center"
+            /// </summary>
+            Center,
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>
+            Bottom,
+            
+            /// <summary>
+            /// Enum Justified for "Justified"
+            /// </summary>
+            Justified,
+            
+            /// <summary>
+            /// Enum Distributed for "Distributed"
+            /// </summary>
+            Distributed,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// If True then text should be centered in box horizontally.
+        /// </summary>
+        /// <value>If True then text should be centered in box horizontally.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CenterTextEnum
+        {
+            
+            /// <summary>
+            /// Enum False for "False"
+            /// </summary>
+            False,
+            
+            /// <summary>
+            /// Enum True for "True"
+            /// </summary>
+            True,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Determines text orientation. The resulted value of visual text rotation summarized from this property and custom angle in property RotationAngle.
+        /// </summary>
+        /// <value>Determines text orientation. The resulted value of visual text rotation summarized from this property and custom angle in property RotationAngle.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TextVerticalTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Horizontal for "Horizontal"
+            /// </summary>
+            Horizontal,
+            
+            /// <summary>
+            /// Enum Vertical for "Vertical"
+            /// </summary>
+            Vertical,
+            
+            /// <summary>
+            /// Enum Vertical270 for "Vertical270"
+            /// </summary>
+            Vertical270,
+            
+            /// <summary>
+            /// Enum WordArtVertical for "WordArtVertical"
+            /// </summary>
+            WordArtVertical,
+            
+            /// <summary>
+            /// Enum EastAsianVertical for "EastAsianVertical"
+            /// </summary>
+            EastAsianVertical,
+            
+            /// <summary>
+            /// Enum MongolianVertical for "MongolianVertical"
+            /// </summary>
+            MongolianVertical,
+            
+            /// <summary>
+            /// Enum WordArtVerticalRightToLeft for "WordArtVerticalRightToLeft"
+            /// </summary>
+            WordArtVerticalRightToLeft,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Returns or sets text&#39;s auto-fit mode.
+        /// </summary>
+        /// <value>Returns or sets text&#39;s auto-fit mode.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AutofitTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Normal for "Normal"
+            /// </summary>
+            Normal,
+            
+            /// <summary>
+            /// Enum Shape for "Shape"
+            /// </summary>
+            Shape,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
         /// Gets or sets text wrapping shape.
         /// </summary>
         public TransformEnum? Transform { get; set; }
 
         /// <summary>
+        /// True if text is wrapped at TextFrame's margins.
+        /// </summary>
+        public WrapTextEnum? WrapText { get; set; }
+
+        /// <summary>
+        /// Returns or sets vertical anchor text in a TextFrame.
+        /// </summary>
+        public AnchoringTypeEnum? AnchoringType { get; set; }
+
+        /// <summary>
+        /// If True then text should be centered in box horizontally.
+        /// </summary>
+        public CenterTextEnum? CenterText { get; set; }
+
+        /// <summary>
+        /// Determines text orientation. The resulted value of visual text rotation summarized from this property and custom angle in property RotationAngle.
+        /// </summary>
+        public TextVerticalTypeEnum? TextVerticalType { get; set; }
+
+        /// <summary>
+        /// Returns or sets text's auto-fit mode.
+        /// </summary>
+        public AutofitTypeEnum? AutofitType { get; set; }
+
+        /// <summary>
         /// Represents 3d effect properties for a text.
         /// </summary>
         public ThreeDFormat ThreeDFormat { get; set; }
+
+        /// <summary>
+        /// Left margin. Left margin.
+        /// </summary>
+        public double? MarginLeft { get; set; }
+
+        /// <summary>
+        /// Right margin.
+        /// </summary>
+        public double? MarginRight { get; set; }
+
+        /// <summary>
+        /// Top margin.
+        /// </summary>
+        public double? MarginTop { get; set; }
+
+        /// <summary>
+        /// Bottom margin.
+        /// </summary>
+        public double? MarginBottom { get; set; }
+
+        /// <summary>
+        /// Returns or sets number of columns in the text area. This value must be a positive number. Otherwise, the value will be set to zero.  Value 0 means undefined value.
+        /// </summary>
+        public int? ColumnCount { get; set; }
+
+        /// <summary>
+        /// Returns or sets the space between text columns in the text area (in points). This should only apply  when there is more than 1 column present. This value must be a positive number. Otherwise, the value will be set to zero. 
+        /// </summary>
+        public double? ColumnSpacing { get; set; }
+
+        /// <summary>
+        /// Returns or set keeping text out of 3D scene entirely.
+        /// </summary>
+        public bool? KeepTextFlat { get; set; }
+
+        /// <summary>
+        /// Specifies the custom rotation that is being applied to the text within the bounding box.
+        /// </summary>
+        public double? RotationAngle { get; set; }
+
+        /// <summary>
+        /// Default portion format.
+        /// </summary>
+        public ParagraphFormat DefaultParagraphFormat { get; set; }
 
 
         /// <summary>
@@ -307,6 +542,20 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("class TextFrameFormat {\n");
             sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
             sb.Append("  Transform: ").Append(this.Transform).Append("\n");
+            sb.Append("  MarginLeft: ").Append(this.MarginLeft).Append("\n");
+            sb.Append("  MarginRight: ").Append(this.MarginRight).Append("\n");
+            sb.Append("  MarginTop: ").Append(this.MarginTop).Append("\n");
+            sb.Append("  MarginBottom: ").Append(this.MarginBottom).Append("\n");
+            sb.Append("  WrapText: ").Append(this.WrapText).Append("\n");
+            sb.Append("  AnchoringType: ").Append(this.AnchoringType).Append("\n");
+            sb.Append("  CenterText: ").Append(this.CenterText).Append("\n");
+            sb.Append("  TextVerticalType: ").Append(this.TextVerticalType).Append("\n");
+            sb.Append("  AutofitType: ").Append(this.AutofitType).Append("\n");
+            sb.Append("  ColumnCount: ").Append(this.ColumnCount).Append("\n");
+            sb.Append("  ColumnSpacing: ").Append(this.ColumnSpacing).Append("\n");
+            sb.Append("  KeepTextFlat: ").Append(this.KeepTextFlat).Append("\n");
+            sb.Append("  RotationAngle: ").Append(this.RotationAngle).Append("\n");
+            sb.Append("  DefaultParagraphFormat: ").Append(this.DefaultParagraphFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
