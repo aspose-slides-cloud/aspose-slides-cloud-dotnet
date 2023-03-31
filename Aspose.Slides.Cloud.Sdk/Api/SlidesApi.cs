@@ -7389,8 +7389,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Custom fonts folder.</param> 
+        /// <param name="options">Export options.</param> 
         /// <returns><see cref="SplitDocumentResult"/></returns>            
-        public SplitDocumentResult SplitAndSaveOnline(System.IO.Stream document, SlideExportFormat format, string destFolder = null, int? width = null, int? height = null, int? from = null, int? to = null, string password = null, string storage = null, string fontsFolder = null)
+        public SplitDocumentResult SplitAndSaveOnline(System.IO.Stream document, SlideExportFormat format, string destFolder = null, int? width = null, int? height = null, int? from = null, int? to = null, string password = null, string storage = null, string fontsFolder = null, ExportOptions options = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -7410,12 +7411,13 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             if (document != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeApi<SplitDocumentResult>(resourcePath, "PUT", null, headerParams, requestFiles, "application/json");
+            return InvokeApi<SplitDocumentResult>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -7430,8 +7432,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="fontsFolder">Custom fonts folder.</param> 
+        /// <param name="options">Export options.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream SplitOnline(System.IO.Stream document, SlideExportFormat format, int? width = null, int? height = null, int? from = null, int? to = null, string password = null, string storage = null, string fontsFolder = null)
+        public System.IO.Stream SplitOnline(System.IO.Stream document, SlideExportFormat format, int? width = null, int? height = null, int? from = null, int? to = null, string password = null, string storage = null, string fontsFolder = null, ExportOptions options = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -7450,12 +7453,13 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             if (document != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
-            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>

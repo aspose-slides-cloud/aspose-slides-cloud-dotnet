@@ -107,6 +107,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public string CommentsAreaColor { get; set; }
 
+        /// <summary>
+        /// Show hidden slides. If true, hidden are exported.
+        /// </summary>
+        public bool? ShowHiddenSlides { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -151,6 +156,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
             sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
             sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
+            sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
