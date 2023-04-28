@@ -189,10 +189,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.True(response.Length > 0);
         }
         
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
         const string c_fontFileName = "calibri.ttf";
-        const string c_password = "password";
         const string c_fontNameCalibri = "Calibri";
         const string c_fontNameTimes = "Times New Roman";
     }

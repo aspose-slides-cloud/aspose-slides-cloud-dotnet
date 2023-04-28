@@ -217,6 +217,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public int? RowIndex { get; set; }
 
+        /// <summary>
+        /// Returns TextFrame's formatting properties.
+        /// </summary>
+        public TextFrameFormat TextFrameFormat { get; set; }
+
+        /// <summary>
+        /// Get or sets list to paragraphs list
+        /// </summary>
+        public ResourceUri Paragraphs { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -267,6 +277,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  BorderDiagonalDown: ").Append(this.BorderDiagonalDown).Append("\n");
             sb.Append("  ColumnIndex: ").Append(this.ColumnIndex).Append("\n");
             sb.Append("  RowIndex: ").Append(this.RowIndex).Append("\n");
+            sb.Append("  TextFrameFormat: ").Append(this.TextFrameFormat).Append("\n");
+            sb.Append("  Paragraphs: ").Append(this.Paragraphs).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

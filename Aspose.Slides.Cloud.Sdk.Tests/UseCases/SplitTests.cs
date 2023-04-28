@@ -46,7 +46,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SplitStorage()
+        public void Split()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SplitDocumentResult result = TestUtils.SlidesApi.Split(c_fileName, password: c_password, folder: c_folderName);
@@ -61,7 +61,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SplitRequest()
+        public void SplitOnline()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream result = TestUtils.SlidesApi.SplitOnline(file, SlideExportFormat.Png, password: c_password);
@@ -75,7 +75,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SplitAndSaveRequest()
+        public void SplitAndSaveOnline()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             SplitDocumentResult result = TestUtils.SlidesApi.SplitAndSaveOnline(file, SlideExportFormat.Png, password: c_password);
@@ -101,9 +101,5 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             string path = url.Substring(url.IndexOf("/storage/file/") + "/storage/file/".Length);
             Assert.IsTrue(TestUtils.SlidesApi.ObjectExists(path).Exists.Value);
         }
-
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
     }
 }

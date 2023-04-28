@@ -110,9 +110,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreNotEqual(image.Length, imagePng.Length);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const int c_imageIndex = 1;
     }
 }

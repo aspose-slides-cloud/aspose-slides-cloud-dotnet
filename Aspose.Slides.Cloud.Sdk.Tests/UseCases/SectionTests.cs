@@ -45,7 +45,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SectionsGet()
+        public void GetSections()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Sections sections = TestUtils.SlidesApi.GetSections(c_fileName, c_password, c_folderName);
@@ -54,7 +54,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SectionsPut()
+        public void SetSections()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Sections dto = new Sections
@@ -74,7 +74,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SectionPost()
+        public void CreateSection()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Sections sections = TestUtils.SlidesApi.CreateSection(c_fileName, "NewSection", 5, c_password, c_folderName);
@@ -83,7 +83,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SectionPut()
+        public void UpdateSection()
         {
             const string sectionName = "NewSection";
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
@@ -94,7 +94,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SectionMove()
+        public void MoveSection()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Sections sections = TestUtils.SlidesApi.MoveSection(c_fileName, 1, 2, c_password, c_folderName);
@@ -103,7 +103,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SectionsClear()
+        public void ClearSections()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Sections sections = TestUtils.SlidesApi.DeleteSections(c_fileName, password: c_password, folder: c_folderName);
@@ -112,7 +112,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SectionsDelete()
+        public void DeleteSections()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             List<int> indexes = new List<int> { 2, 3 };
@@ -122,7 +122,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SectionDelete()
+        public void DeleteSection()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Sections sections = TestUtils.SlidesApi.DeleteSection(c_fileName, 2, password: c_password, folder: c_folderName);
@@ -130,9 +130,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(c_sectionCount - 1, sections.SectionList.Count);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const int c_sectionCount = 3;
     }
 }

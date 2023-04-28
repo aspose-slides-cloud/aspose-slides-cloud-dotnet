@@ -276,7 +276,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartSeriesCreate()
+        public void CreateChartSeries()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Series series = new OneValueSeries
@@ -298,7 +298,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartSeriesUpdate()
+        public void UpdateChartSeries()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Series series = new OneValueSeries
@@ -319,7 +319,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartSeriesDelete()
+        public void DeleteChartSeries()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Chart chart = TestUtils.SlidesApi.DeleteChartSeries(
@@ -330,7 +330,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartCategoryCreate()
+        public void CreateChartCategory()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ChartCategory category = new ChartCategory
@@ -354,7 +354,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartCategoryUpdate()
+        public void UpdateChartCategory()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ChartCategory category = new ChartCategory
@@ -378,7 +378,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartCategoryDelete()
+        public void DeleteChartCategory()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Chart chart = TestUtils.SlidesApi.DeleteChartCategory(
@@ -390,7 +390,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartDataPointCreate()
+        public void CreateChartDataPoint()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             DataPoint dataPoint = new OneValueChartDataPoint { Value = 40 };
@@ -400,7 +400,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartDataPointUpdate()
+        public void UpdateChartDataPoint()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             OneValueChartDataPoint dataPoint = new OneValueChartDataPoint { Value = 40 };
@@ -416,7 +416,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartDataPointDelete()
+        public void DeleteChartDataPoint()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Chart chart = TestUtils.SlidesApi.DeleteChartDataPoint(
@@ -428,7 +428,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SunburstChart()
+        public void ChartSunburst()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ShapeBase dto = new Chart
@@ -466,7 +466,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void MultiLevelCategoryAxis()
+        public void ChartCategoryMultiLevel()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
 
@@ -520,7 +520,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void HideChartLegend()
+        public void ChartLegendHide()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Chart chart =
@@ -534,7 +534,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartGridLinesFormat()
+        public void ChartAxisGridLinesFormat()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Chart chart =
@@ -666,7 +666,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
         
         [Test]
-        public void UpdateDataPointFormat()
+        public void UpdateChartDataPointFormat()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             int slideIndex = 8, shapeIndex = 2;
@@ -749,9 +749,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         const string c_fillColor = "#77CEF9";
         const string c_lineColor = "#E85052";
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const int c_slideIndex = 3;
         const int c_shapeIndex = 1;
         const int c_seriesIndex = 2;

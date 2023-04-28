@@ -46,7 +46,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertPostFromRequest()
+        public void ConvertRequestToRequest()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream converted = TestUtils.SlidesApi.Convert(file, c_format, c_password);
@@ -60,7 +60,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertPutFromRequest()
+        public void ConvertRequestToStorage()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             TestUtils.SlidesApi.ConvertAndSave(file, c_format, c_outPath, c_password);
@@ -69,7 +69,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertPostFromStorage()
+        public void ConvertStorageToRequest()
         {
             const string fileName = "test.pdf";
             TestUtils.Upload(fileName, c_folderName + "/" + fileName);
@@ -80,7 +80,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertPutFromStorage()
+        public void ConvertStorageToStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TestUtils.SlidesApi.SavePresentation(c_fileName, c_format, c_outPath, password: c_password, folder: c_folderName);
@@ -89,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertWithOptionsFromRequest()
+        public void ConvertRequestWithOptions()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream converted = TestUtils.SlidesApi.Convert(file, c_format, password: c_password);
@@ -99,7 +99,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertWithOptionsFromStorage()
+        public void ConvertStorageWithOptions()
         {
             ExportFormat format = ExportFormat.Png;
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
@@ -110,7 +110,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertSlidePostFromRequest()
+        public void ConvertSlideRequestToRequest()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream converted = TestUtils.SlidesApi.DownloadSlideOnline(file, c_slideIndex, c_slideFormat, password: c_password);
@@ -120,7 +120,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertSlidePutFromRequest()
+        public void ConvertSlideRequestToStorage()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             TestUtils.SlidesApi.SaveSlideOnline(file, c_slideIndex, c_slideFormat, c_outPath, password: c_password);
@@ -129,7 +129,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertSlidePostFromStorage()
+        public void ConvertSlideStorageToRequest()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Stream converted = TestUtils.SlidesApi.DownloadSlide(
@@ -140,7 +140,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertSlidePutFromStorage()
+        public void ConvertSlideStorageToStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TestUtils.SlidesApi.SaveSlide(c_fileName, c_slideIndex, c_slideFormat, c_outPath, password: c_password, folder: c_folderName);
@@ -149,7 +149,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertSlideWithOptionsFromRequest()
+        public void ConvertSlideRequestWithOptions()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream converted = TestUtils.SlidesApi.DownloadSlideOnline(file, c_slideIndex, c_slideFormat, password: c_password);
@@ -160,7 +160,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertSlideWithOptionsFromStorage()
+        public void ConvertSlideStorageWithOptions()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Stream converted = TestUtils.SlidesApi.DownloadSlide(
@@ -172,7 +172,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertShapePostFromRequest()
+        public void ConvertShapeRequestToRequest()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream converted = TestUtils.SlidesApi.DownloadShapeOnline(
@@ -183,7 +183,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertShapePutFromRequest()
+        public void ConvertShapeRequestToStorage()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             TestUtils.SlidesApi.SaveShapeOnline(file, c_slideIndex, c_shapeIndex, c_shapeFormat, c_outPath, password: c_password);
@@ -192,7 +192,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertShapePostFromStorage()
+        public void ConvertShapeStorageToRequest()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Stream converted = TestUtils.SlidesApi.DownloadShape(
@@ -203,7 +203,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertSubShapePostFromStorage()
+        public void ConvertSubShapeStorageToRequest()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Stream converted = TestUtils.SlidesApi.DownloadShape(
@@ -214,7 +214,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ConvertShapePutFromStorage()
+        public void ConvertShapeStorageToStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TestUtils.SlidesApi.SaveShape(
@@ -224,7 +224,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
         
         [Test]
-        public void ConvertSubShapePutFromStorage()
+        public void ConvertSubShapeStorageToStorage()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TestUtils.SlidesApi.SaveShape(
@@ -265,9 +265,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.Greater(response.Length, 0);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const string c_outPath = c_folderName + "/converted.pdf";
         const ExportFormat c_format = ExportFormat.Pdf;
         const SlideExportFormat c_slideFormat = SlideExportFormat.Pdf;

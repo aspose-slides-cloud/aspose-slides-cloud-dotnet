@@ -45,7 +45,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationGet()
+        public void GetAnimation()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideAnimation animation = TestUtils.SlidesApi.GetAnimation(c_fileName, c_slideIndex, password: c_password, folder: c_folderName);
@@ -59,7 +59,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationSet()
+        public void SetAnimation()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideAnimation dto = new SlideAnimation
@@ -83,7 +83,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationCreateEffect()
+        public void CreateAnimationEffect()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Effect dto = new Effect { Type = Effect.TypeEnum.Blast, ShapeIndex = 3 };
@@ -93,7 +93,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationCreateInteractiveSequence()
+        public void CreateAnimationInteractiveSequence()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             InteractiveSequence dto = new InteractiveSequence
@@ -107,7 +107,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationCreateInteractiveSequenceEffect()
+        public void CreateAnimationInteractiveSequenceEffect()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Effect dto = new Effect { Type = Effect.TypeEnum.Blast, ShapeIndex = 3 };
@@ -117,7 +117,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationUpdateEffect()
+        public void UpdateAnimationEffect()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Effect dto = new Effect { Type = Effect.TypeEnum.Blast, ShapeIndex = 3 };
@@ -127,7 +127,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationUpdateInteractiveSequenceEffect()
+        public void UpdateAnimationInteractiveSequenceEffect()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Effect dto = new Effect { Type = Effect.TypeEnum.Blast, ShapeIndex = 3 };
@@ -137,7 +137,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationDelete()
+        public void DeleteAnimation()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideAnimation animation = TestUtils.SlidesApi.DeleteAnimation(c_fileName, c_slideIndex, password: c_password, folder: c_folderName);
@@ -146,7 +146,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationDeleteMainSequence()
+        public void DeleteAnimationMainSequence()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideAnimation animation = TestUtils.SlidesApi.DeleteAnimationMainSequence(c_fileName, c_slideIndex, password: c_password, folder: c_folderName);
@@ -155,7 +155,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationDeleteMainSequenceEffect()
+        public void DeleteAnimationEffect()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideAnimation animation = TestUtils.SlidesApi.DeleteAnimationEffect(c_fileName, c_slideIndex, 1, password: c_password, folder: c_folderName);
@@ -164,7 +164,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationDeleteInteractiveSequences()
+        public void DeleteAnimationInteractiveSequences()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideAnimation animation = TestUtils.SlidesApi.DeleteAnimationInteractiveSequences(c_fileName, c_slideIndex, password: c_password, folder: c_folderName);
@@ -173,7 +173,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationDeleteInteractiveSequence()
+        public void DeleteAnimationInteractiveSequence()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideAnimation animation = TestUtils.SlidesApi.DeleteAnimationInteractiveSequence(c_fileName, c_slideIndex, 1, password: c_password, folder: c_folderName);
@@ -182,7 +182,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void AnimationDeleteInteractiveSequenceEffect()
+        public void DeleteAnimationInteractiveSequenceEffect()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideAnimation animation = TestUtils.SlidesApi.DeleteAnimationInteractiveSequenceEffect(c_fileName, c_slideIndex, 1, 1, password: c_password, folder: c_folderName);
@@ -190,9 +190,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(c_interactiveSequenceCount, animation.InteractiveSequences.Count);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const int c_slideIndex = 1;
         const int c_effectCount = 1;
         const int c_interactiveSequenceCount = 1;

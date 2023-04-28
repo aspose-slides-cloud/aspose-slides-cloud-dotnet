@@ -191,12 +191,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsInstanceOf<NoFill>(response.FillFormat);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
         const string c_sourceFileName = "TemplateCV.pptx";
-        const string c_password = "password";
         const int c_slideIndex = 1;
-        const int c_slideCount = 8;
+        const int c_slideCount = 9;
         const string c_layoutSlidePath = "layoutSlides/3";
         const string c_color = "#FFF5FF8A";
     }

@@ -26,8 +26,6 @@
 using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
-using System.Collections.Generic;
-using System.IO;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
@@ -112,9 +110,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsNull(updatedShape.HyperlinkClick);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const int c_slideIndex = 2;
         const int c_shapeIndex = 2;
         const int c_hoverShapeIndex = 1;

@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="TimeoutTests.cs">
+// <copyright company="Aspose" file="TableCellSplitType.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -23,39 +23,44 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using NUnit.Framework;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.Xml.Serialization;
 
-namespace Aspose.Slides.Cloud.Sdk.Tests
+namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    ///  Class for testing Timeout config parameter
+    /// Table cell split type
     /// </summary>
-    [TestFixture]
-    public class TimeoutTests : BaseTests
+    /// <value>Table cell split type</value>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum TableCellSplitType
     {
+        
         /// <summary>
-        /// Clean up after each unit test
+        /// Enum SplitByWidth for "SplitByWidth"
         /// </summary>
-        [TearDown]
-        public void Cleanup()
-        {
-        }
-
-        [Test]
-        public void Timeout()
-        {
-            /* unstable test
-            Configuration configuration = TestUtils.Configuration;
-            configuration.Timeout = 1;
-            try
-            {
-                new SlidesApi(configuration).DownloadSlide("test.pptx", 1, SlideExportFormat.Svg, password: "password", folder: "TempSlidesSDK");
-                Assert.Fail("Timeout exception must have been thrown.");
-            }
-            catch (ApiException)// ex)
-            {
-                //Assert.AreEqual("The operation was canceled.", ex.Message);
-            } */
-        }
+        SplitByWidth,
+        
+        /// <summary>
+        /// Enum SplitByHeight for "SplitByHeight"
+        /// </summary>
+        SplitByHeight,
+        
+        /// <summary>
+        /// Enum SplitByColSpan for "SplitByColSpan"
+        /// </summary>
+        SplitByColSpan,
+        
+        /// <summary>
+        /// Enum SplitByRowSpan for "SplitByRowSpan"
+        /// </summary>
+        SplitByRowSpan
     }
+
 }

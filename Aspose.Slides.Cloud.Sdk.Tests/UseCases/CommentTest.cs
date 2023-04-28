@@ -156,7 +156,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
         
         [Test]
-        public void CreateShapeModernComment()
+        public void CreateModernCommentShape()
         {
             int textSelectionStartIndex = 1;
             int textSelectionLength = 5;
@@ -183,9 +183,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsInstanceOf(typeof(SlideModernComment), response.List[0]);
         }
         
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const string c_author = "Test author";
         const string c_childCommentText = "Child comment text";
         const string c_commentText = "Comment text";  

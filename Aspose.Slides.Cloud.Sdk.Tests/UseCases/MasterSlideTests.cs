@@ -249,7 +249,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void MasterSlideDeleteUnused()
+        public void DeleteUnusedMasterSlides()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             MasterSlides masterSlides =
@@ -258,7 +258,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
         
         [Test]
-        public void MasterSlideDeleteUnusedOnline()
+        public void DeleteUnusedMasterSlidesOnline()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream result = TestUtils.SlidesApi.DeleteUnusedMasterSlidesOnline(file, true, c_password);
@@ -266,9 +266,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsTrue(result.CanRead);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const int c_slideIndex = 1;
         const int c_shapeIndex = 2;
         const int c_shapeCount = 6;

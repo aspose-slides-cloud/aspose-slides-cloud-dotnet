@@ -1430,6 +1430,129 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Creates table cell paragraph. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="dto">Paragraph DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraph"/></returns>            
+        public Paragraph CreateTableCellParagraph(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, Paragraph dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateTableCellParagraph");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling CreateTableCellParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraph>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Creates table cell portion. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="dto">Portion DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portion"/></returns>            
+        public Portion CreateTableCellPortion(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, int paragraphIndex, Portion dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateTableCellPortion");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling CreateTableCellPortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portion>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Inserts the table row in the specified position. If position is not specified, the row add to the end of the table. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="dto">Table row data.</param> 
+        /// <param name="position">Position.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="TableRow"/></returns>            
+        public TableRow CreateTableRow(string name, int slideIndex, int shapeIndex, TableRow dto, int? position = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateTableRow");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling CreateTableRow");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<TableRow>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Adds a text watermark to each slide of the presentation. Text watermark can be setup via method arguments or withing Shape DTO for detailed customization. Both options are applicable simultaneously.  
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -2931,6 +3054,114 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Shapes>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Delete cell paragraph. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraphs"/></returns>            
+        public Paragraphs DeleteTableCellParagraph(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteTableCellParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Delete table ell portion. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portions"/></returns>            
+        public Portions DeleteTableCellPortion(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteTableCellPortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portions>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Deletes the table row. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="withAttachedRows">Also delete all attached rows.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Table"/></returns>            
+        public Table DeleteTableRow(string name, int slideIndex, int shapeIndex, int rowIndex, bool? withAttachedRows = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteTableRow");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "withAttachedRows", withAttachedRows);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Table>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -5253,6 +5484,150 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Returns paragraph info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraph"/></returns>            
+        public Paragraph GetTableCellParagraph(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetTableCellParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraph>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Returns table cell paragraphs. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraphs"/></returns>            
+        public Paragraphs GetTableCellParagraphs(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetTableCellParagraphs");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}/paragraphs");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraphs>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Returns table cell portion. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portion"/></returns>            
+        public Portion GetTableCellPortion(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetTableCellPortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portion>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Returns table cell portions. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portions"/></returns>            
+        public Portions GetTableCellPortions(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, int paragraphIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetTableCellPortions");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}/paragraphs/{paragraphIndex}/portions");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portions>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Read slide theme info. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -5595,6 +5970,43 @@ namespace Aspose.Slides.Cloud.Sdk
                 requestFiles.AddRange(files);
             }
             return InvokeBinaryApi(resourcePath, "POST", postBody, null, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Merge table cells. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="tableCellMergeOptions">Merge settings.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Table"/></returns>            
+        public Table MergeTableCells(string name, int slideIndex, int shapeIndex, TableCellMergeOptions tableCellMergeOptions, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling MergeTableCells");
+            }
+            // verify the required parameter 'tableCellMergeOptions' is set
+            if (tableCellMergeOptions == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'tableCellMergeOptions' when calling MergeTableCells");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/mergeCells");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(tableCellMergeOptions); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Table>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -7463,6 +7875,44 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Split table cell. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="splitType">Table cell split type (SplitByWidth, SplitByHeight,SplitByColSpan or SplitByRowSpan).</param> 
+        /// <param name="value">Split value. In case of splitting by column or row span, the value must be an integer number.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Table"/></returns>            
+        public Table SplitTableCell(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, TableCellSplitType splitType, double value, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling SplitTableCell");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}/{splitType}/{value}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "splitType", splitType);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "value", value);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Table>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Check if storage exists 
         /// </summary>
         /// <param name="storageName">Storage name</param> 
@@ -8146,6 +8596,174 @@ namespace Aspose.Slides.Cloud.Sdk
             var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             return InvokeApi<ShapeBase>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Update the table cell. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="dto">Table cell data.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="TableCell"/></returns>            
+        public TableCell UpdateTableCell(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, TableCell dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateTableCell");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateTableCell");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<TableCell>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Updates table cell paragraph. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="dto">Paragraph DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Paragraph"/></returns>            
+        public Paragraph UpdateTableCellParagraph(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, int paragraphIndex, Paragraph dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateTableCellParagraph");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateTableCellParagraph");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}/paragraphs/{paragraphIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Paragraph>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Updates table cell portion. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="cellIndex">Table cell index.</param> 
+        /// <param name="paragraphIndex">Paragraph index.</param> 
+        /// <param name="portionIndex">Portion index.</param> 
+        /// <param name="dto">Portion DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Portion"/></returns>            
+        public Portion UpdateTableCellPortion(string name, int slideIndex, int shapeIndex, int rowIndex, int cellIndex, int paragraphIndex, int portionIndex, Portion dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateTableCellPortion");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateTableCellPortion");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}/cells/{cellIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "cellIndex", cellIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Portion>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Update the table row. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="rowIndex">Row index.</param> 
+        /// <param name="dto">Table cell data.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="TableRow"/></returns>            
+        public TableRow UpdateTableRow(string name, int slideIndex, int shapeIndex, int rowIndex, TableRow dto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateTableRow");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling UpdateTableRow");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/rows/{rowIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "rowIndex", rowIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<TableRow>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>

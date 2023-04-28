@@ -816,11 +816,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsTrue(stream.CanRead);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
         const string c_svgFileName = "shapes.svg";
         const string c_oleObjectFileName = "oleObject.xlsx";
-        const string c_password = "password";
         const int c_slideIndex = 3;
         const string c_color = "#FFF5FF8A";
     }

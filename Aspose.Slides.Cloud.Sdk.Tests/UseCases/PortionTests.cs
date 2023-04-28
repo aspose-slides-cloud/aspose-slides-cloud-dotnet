@@ -228,7 +228,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetPortionRect()
+        public void GetPortionRectangle()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TextBounds response = TestUtils.SlidesApi.GetPortionRectangle(c_fileName, c_slideIndex, c_shapeIndex,
@@ -259,9 +259,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(18, response.FontHeight);
         }
         
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const int c_slideIndex = 6;
         const int c_shapeIndex = 2;
         const int c_paragraphIndex = 1;

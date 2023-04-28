@@ -149,9 +149,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.Less(documentWithNoWatermarks.Length, documentWithWatermarks.Length);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const string c_watermarkName = "watermark";
         const string c_watermarkText = "watermarkText";
         const string c_watermarkFileName = "watermark.png";

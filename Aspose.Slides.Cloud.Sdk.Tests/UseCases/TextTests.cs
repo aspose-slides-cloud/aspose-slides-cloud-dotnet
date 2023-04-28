@@ -27,7 +27,6 @@ using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
 using System.IO;
-using System.Threading;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
@@ -128,9 +127,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(para.PortionList[1].HighlightColor, c_highlightColor);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const string c_oldValue = "text";
         const string c_newValue = "new_text";
         const string c_textToHighlight = "highlight";

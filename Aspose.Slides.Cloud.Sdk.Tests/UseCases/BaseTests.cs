@@ -11,5 +11,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Init();
         }
+
+        protected const string c_folderName = "TempSlidesSDK";
+        protected const string c_fileName = "test.pptx";
+        protected const string c_password = "password";
     }
 }

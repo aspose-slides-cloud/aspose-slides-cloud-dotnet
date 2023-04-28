@@ -292,9 +292,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(72, response.DefaultTabSize);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const int c_slideIndex = 6;
         const int c_shapeIndex = 2;
     }

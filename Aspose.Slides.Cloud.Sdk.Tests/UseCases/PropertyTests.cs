@@ -236,9 +236,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(properties.SlideShowType, response.SlideShowType);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const string c_builtinPropertyName = "Author";
         const string c_customPropertyName = "CustomProperty2";
         const string c_updatedPropertyValue = "New Value";

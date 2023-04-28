@@ -89,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
         
         [Test]
-        public void TextFrameFormatTest()
+        public void TextFrameFormatGeneral()
         {
             Shape dto = new Shape()
             {
@@ -119,9 +119,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsInstanceOf<Shape>(shape);
         }
         
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const int c_slideIndex = 1;
     }
 }

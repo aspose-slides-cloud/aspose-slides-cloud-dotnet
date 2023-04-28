@@ -46,7 +46,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void MergeStorage()
+        public void Merge()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TestUtils.Upload(c_fileName2, c_folderName + "/" + c_fileName2);
@@ -60,7 +60,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void MergeOrderedStorage()
+        public void OrderedMerge()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TestUtils.Upload(c_fileName2, c_folderName + "/" + c_fileName2);
@@ -76,7 +76,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void MergeRequest()
+        public void MergeOnline()
         {
             FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
             FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
@@ -87,7 +87,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void MergeAndSaveRequest()
+        public void MergeAndSaveOnline()
         {
             FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
             FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
@@ -97,7 +97,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void MergeOrderedRequest()
+        public void MergeOnlineWithRequest()
         {
             FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)), Name = "file1.pptx" };
             FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)), Name = "file2.pptx" };
@@ -117,7 +117,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void MergeOrderedCombined()
+        public void MergeInlineCombined()
         {
             FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)), Name="file1.pptx" };
             TestUtils.Upload(c_fileName2, c_folderName + "/" + c_fileName2);
@@ -142,7 +142,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
         
         [Test]
-        public void MergeOrderedUrl()
+        public void MergeOnlineUrl()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
 
@@ -171,11 +171,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         const string c_urlPath = "https://drive.google.com/uc?export=download&id=1ycMzd7e--Ro9H8eH2GL5fPP7-2HjX4My";
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
         const string c_pdfFileName = "test.pdf";
         const string c_fileName2 = "test-unprotected.pptx";
         const string c_outpath = "merged.pptx";
-        const string c_password = "password";
     }
 }

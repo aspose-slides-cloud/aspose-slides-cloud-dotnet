@@ -297,6 +297,8 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\SwfExportOptions.cs" />
     <Compile Include="Model\Table.cs" />
     <Compile Include="Model\TableCell.cs" />
+    <Compile Include="Model\TableCellMergeOptions.cs" />
+    <Compile Include="Model\TableCellSplitType.cs" />
     <Compile Include="Model\TableColumn.cs" />
     <Compile Include="Model\TableRow.cs" />
     <Compile Include="Model\Task.cs" />

@@ -119,12 +119,9 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.Greater(TestUtils.SlidesApi.GetSlides(c_fileName, c_password, c_folderName).SlideList.Count, slideCount);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
         const string c_newFileName = "test2.pptx";
         const string c_templateFileName = "TemplateCV.pptx";
         const string c_pdfFileName = "test.pdf";
-        const string c_password = "password";
         const string c_html = "<html><body>New Content</body></html>";
         const string c_template = "<staff><person><name>John Doe</name><address><line1>10 Downing Street</line1><line2>London</line2></address><phone>+457 123456</phone><bio>Hi, I'm John and this is my CV</bio><skills><skill><title>C#</title><level>Excellent</level></skill><skill><title>C++</title><level>Good</level></skill><skill><title>Java</title><level>Average</level></skill></skills></person></staff>";
     }

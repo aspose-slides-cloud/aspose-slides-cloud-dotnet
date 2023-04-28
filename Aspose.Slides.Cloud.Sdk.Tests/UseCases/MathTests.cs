@@ -163,7 +163,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void MathDownloadNull()
+        public void DownloadPortionAsMathMl()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Assert.Throws<ApiException>(() => TestUtils.SlidesApi.DownloadPortionAsMathMl(
@@ -171,7 +171,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void MathSave()
+        public void SavePortionAsMathMl()
         {
             const string outPath = c_folderName + "/mathml.xml";
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
@@ -181,9 +181,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsTrue(exists.Exists.Value);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const int c_slideIndex = 2;
         const int c_shapeIndex = 3;
         const int c_notMathShapeIndex = 1;

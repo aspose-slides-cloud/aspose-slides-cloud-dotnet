@@ -46,7 +46,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void NotesSlideGetStorage()
+        public void GetNotesSlide()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             NotesSlide notesSlide = TestUtils.SlidesApi.GetNotesSlide(c_fileName, c_slideIndex, c_password, c_folderName);
@@ -54,7 +54,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void NotesSlideExistsStorage()
+        public void NotesSlideExists()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             EntityExists exists = TestUtils.SlidesApi.NotesSlideExists(c_fileName, c_slideIndex, c_password, c_folderName);
@@ -62,7 +62,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void NotesSlideDownloadStorage()
+        public void DownloadNotesSlide()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Stream notesSlide = TestUtils.SlidesApi.DownloadNotesSlide(
@@ -73,7 +73,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void NotesSlideGetRequest()
+        public void GetNotesSlideOnline()
         {
             Stream document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             NotesSlide notesSlide = TestUtils.SlidesApi.GetNotesSlideOnline(document, c_slideIndex, c_password);
@@ -81,7 +81,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void NotesSlideExistsRequest()
+        public void NotesSlideExistsOnline()
         {
             Stream document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             EntityExists exists = TestUtils.SlidesApi.NotesSlideExistsOnline(document, c_slideIndex, c_password);
@@ -89,7 +89,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void NotesSlideDownloadRequest()
+        public void DownloadNotesSlideOnline()
         {
             Stream document = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream notesSlide = TestUtils.SlidesApi.DownloadNotesSlideOnline(document, c_slideIndex, c_format, password: c_password);
@@ -275,9 +275,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsNull(response.NotesSlide);
         }
 
-        const string c_folderName = "TempSlidesSDK";
-        const string c_fileName = "test.pptx";
-        const string c_password = "password";
         const int c_slideIndex = 1;
         const NotesSlideExportFormat c_format = NotesSlideExportFormat.Png;
         const int c_shapeIndex = 2;
