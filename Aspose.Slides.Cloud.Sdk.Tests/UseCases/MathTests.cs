@@ -163,7 +163,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void DownloadPortionAsMathMl()
+        public void MathDownloadNull()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Assert.Throws<ApiException>(() => TestUtils.SlidesApi.DownloadPortionAsMathMl(
@@ -171,7 +171,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void SavePortionAsMathMl()
+        public void MathSave()
         {
             const string outPath = c_folderName + "/mathml.xml";
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);

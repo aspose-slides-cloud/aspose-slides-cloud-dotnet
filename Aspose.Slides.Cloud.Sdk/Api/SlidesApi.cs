@@ -1553,6 +1553,39 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Append module to VBA project              
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="moduleDto">VBA module DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="VbaModule"/></returns>            
+        public VbaModule CreateVbaModule(string name, VbaModule moduleDto, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateVbaModule");
+            }
+            // verify the required parameter 'moduleDto' is set
+            if (moduleDto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'moduleDto' when calling CreateVbaModule");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/vbaProject/modules");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(moduleDto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<VbaModule>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Adds a text watermark to each slide of the presentation. Text watermark can be setup via method arguments or withing Shape DTO for detailed customization. Both options are applicable simultaneously.  
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -3270,6 +3303,34 @@ namespace Aspose.Slides.Cloud.Sdk
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
             return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Delete module from VBA project. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="moduleIndex">The index of the macros module to remove.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="VbaProject"/></returns>            
+        public VbaProject DeleteVbaModule(string name, int moduleIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteVbaModule");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/vbaProject/modules/{moduleIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "moduleIndex", moduleIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<VbaProject>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -5653,6 +5714,60 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Theme>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Get VBA module info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="moduleIndex">The index of the macros module to remove.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="VbaModule"/></returns>            
+        public VbaModule GetVbaModule(string name, int moduleIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetVbaModule");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/vbaProject/modules/{moduleIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "moduleIndex", moduleIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<VbaModule>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Get VBA project info. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="VbaProject"/></returns>            
+        public VbaProject GetVbaProject(string name, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetVbaProject");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/vbaProject");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<VbaProject>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -8764,6 +8879,36 @@ namespace Aspose.Slides.Cloud.Sdk
             var postBody = SerializationHelper.Serialize(dto); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             return InvokeApi<TableRow>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Update VBA module. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="moduleIndex">The index of the macros module to remove.</param> 
+        /// <param name="moduleDto">VBA module DTO.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="VbaModule"/></returns>            
+        public VbaModule UpdateVbaModule(string name, int moduleIndex, VbaModule moduleDto = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling UpdateVbaModule");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/vbaProject/modules/{moduleIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "moduleIndex", moduleIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(moduleDto); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<VbaModule>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>

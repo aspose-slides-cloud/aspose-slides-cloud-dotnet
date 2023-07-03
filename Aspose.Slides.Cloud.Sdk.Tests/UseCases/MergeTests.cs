@@ -117,7 +117,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void MergeInlineCombined()
+        public void MergeOnlineCombined()
         {
             FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName)), Name="file1.pptx" };
             TestUtils.Upload(c_fileName2, c_folderName + "/" + c_fileName2);

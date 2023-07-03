@@ -313,6 +313,9 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\TintEffect.cs" />
     <Compile Include="Model\UpdateBackground.cs" />
     <Compile Include="Model\UpdateShape.cs" />
+    <Compile Include="Model\VbaModule.cs" />
+    <Compile Include="Model\VbaProject.cs" />
+    <Compile Include="Model\VbaReference.cs" />
     <Compile Include="Model\VideoExportOptions.cs" />
     <Compile Include="Model\VideoFrame.cs" />
     <Compile Include="Model\ViewProperties.cs" />

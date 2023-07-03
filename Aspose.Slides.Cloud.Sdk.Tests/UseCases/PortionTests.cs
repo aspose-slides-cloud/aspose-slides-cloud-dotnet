@@ -183,7 +183,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void DeletePortionsIndexes()
+        public void DeletePortionsByIndexes()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Portions response = TestUtils.SlidesApi.DeletePortions(c_fileName, c_slideIndex, c_shapeIndex,
@@ -201,7 +201,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void DeleteSubShapePortionsIndexes()
+        public void DeleteSubShapePortionsByIndexes()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Portions response = TestUtils.SlidesApi.DeletePortions(c_fileName, c_slideIndex,

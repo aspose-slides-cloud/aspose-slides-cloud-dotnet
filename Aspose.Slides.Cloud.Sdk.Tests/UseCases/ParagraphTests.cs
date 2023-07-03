@@ -183,7 +183,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void DeleteParagraphsIndexes()
+        public void DeleteParagraphsByIndexes()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Paragraphs response = TestUtils.SlidesApi.DeleteParagraphs(c_fileName, c_slideIndex, c_shapeIndex,
@@ -201,7 +201,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void DeleteSubShapeParagraphsIndexes()
+        public void DeleteSubShapeParagraphsByIndexes()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Paragraphs response = TestUtils.SlidesApi.DeleteParagraphs(c_fileName, c_slideIndex, 3, 

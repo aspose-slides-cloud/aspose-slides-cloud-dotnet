@@ -45,7 +45,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartGet()
+        public void GetChart()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Chart chart =
@@ -56,7 +56,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartCreateAutoDataSource()
+        public void CreateChartAutoDataSource()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ShapeBase dto = new Chart
@@ -102,7 +102,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
         
         [Test]
-        public void ChartCreateWorkbook()
+        public void CreateChartWorkbook()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ShapeBase dto = new Chart
@@ -178,7 +178,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
         
         [Test]
-        public void ChartCreateLiterals()
+        public void CreateChartLiterals()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ShapeBase dto = new Chart
@@ -229,7 +229,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartUpdate()
+        public void UpdateChart()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ShapeBase dto = new Chart
@@ -428,7 +428,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartSunburst()
+        public void SunburstChart()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             ShapeBase dto = new Chart
@@ -466,7 +466,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartCategoryMultiLevel()
+        public void MultiLevelChartCategory()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
 
@@ -520,7 +520,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void ChartLegendHide()
+        public void HideChartLegend()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Chart chart =

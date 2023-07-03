@@ -100,9 +100,11 @@
     <Compile Include="UseCases\ShapeFormatTests.cs" />
     <Compile Include="UseCases\SlideTest.cs" />
     <Compile Include="UseCases\SplitTests.cs" />
+    <Compile Include="UseCases\TableTests.cs" />
     <Compile Include="UseCases\TextFormatTests.cs" />
     <Compile Include="UseCases\TextTests.cs" />
     <Compile Include="UseCases\TimeoutTests.cs" />
+    <Compile Include="UseCases\VbaTests.cs" />
     <Compile Include="UseCases\WatermarkTests.cs" />
     <Compile Include="Utils\TestUtils.cs" />
   </ItemGroup>

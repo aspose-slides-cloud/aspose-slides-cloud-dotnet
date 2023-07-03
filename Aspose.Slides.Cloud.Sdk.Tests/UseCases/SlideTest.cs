@@ -129,7 +129,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
         
         [Test]
-        public void DeleteSlidesIndexes()
+        public void DeleteSlidesByIndexes()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             List<int> indexes = new List<int>{1,3,5};

@@ -40,9 +40,16 @@ namespace Aspose.Slides.Cloud.Sdk
 
             byte[] array = new byte[bufferSize];
             int count;
-            while ((count = source.Read(array, 0, array.Length)) != 0)
+            try
             {
-                destination.Write(array, 0, count);
+                while ((count = source.Read(array, 0, array.Length)) != 0)
+                {
+                    destination.Write(array, 0, count);
+                }
+            }
+            catch
+            {
+                // Throwing error here will break interceptor logic. Error will be thrown by interceptors anyway.
             }
         }
 
