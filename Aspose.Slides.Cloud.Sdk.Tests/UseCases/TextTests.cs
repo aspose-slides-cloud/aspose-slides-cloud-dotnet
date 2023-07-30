@@ -95,7 +95,38 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsTrue(slideResult.CanRead);
             Assert.IsTrue(slideResultIgnoreCase.CanRead);
         }
-        
+
+        [Test]
+        public void ReplaceTextFormatting()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            const string oldText = "banana";
+            const string newText = "orange";
+            const string color = "#FFFFA500";
+            const int shapeIndex = 1;
+            const int paragraphIndex = 1;
+            const int portionIndex = 1;
+            Portion portion = new Portion { Text = oldText };
+            PortionFormat portionFormat = new PortionFormat { FontColor = color };
+            TestUtils.SlidesApi.CreatePortion(
+                c_fileName, c_slideIndex, shapeIndex, paragraphIndex, portion, portionIndex, c_password, c_folderName);
+            TestUtils.SlidesApi.ReplaceTextFormatting(
+                c_fileName, oldText, newText, portionFormat, false, c_password, c_folderName);
+            Portion updatedPortion = TestUtils.SlidesApi.GetPortion(
+                c_fileName, c_slideIndex, shapeIndex, paragraphIndex, portionIndex, c_password, c_folderName);
+            Assert.AreEqual(newText, updatedPortion.Text);
+            Assert.AreEqual(color, updatedPortion.FontColor);
+        }
+
+        [Test]
+        public void ReplaceTextFormattingOnline()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            PortionFormat portionFormat = new PortionFormat { FontColor = "#FFFFA500" };
+            Stream result = TestUtils.SlidesApi.ReplaceTextFormattingOnline(file, "banana", "orange", portionFormat, false, c_password);
+            Assert.IsTrue(result.CanRead);
+        }
+
         [Test]
         public void HighlightShapeText()
         {

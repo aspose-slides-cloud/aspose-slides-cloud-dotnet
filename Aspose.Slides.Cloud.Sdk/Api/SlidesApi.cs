@@ -6674,6 +6674,94 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Finds and replaces text in presentation with given format. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="oldValue">Text value to be replaced.</param> 
+        /// <param name="newValue">Text value to replace with.</param> 
+        /// <param name="portionFormat">Portion format.</param> 
+        /// <param name="withMasters">Text replacement includes master slides.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="Document"/></returns>            
+        public Document ReplaceTextFormatting(string name, string oldValue, string newValue, PortionFormat portionFormat = null, bool? withMasters = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling ReplaceTextFormatting");
+            }
+            // verify the required parameter 'oldValue' is set
+            if (oldValue == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'oldValue' when calling ReplaceTextFormatting");
+            }
+            // verify the required parameter 'newValue' is set
+            if (newValue == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'newValue' when calling ReplaceTextFormatting");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/replaceTextFormatting");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "oldValue", oldValue);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newValue", newValue);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "withMasters", withMasters);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(portionFormat); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<Document>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Finds and replaces text in presentation with given format. 
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="oldValue">Text value to be replaced.</param> 
+        /// <param name="newValue">Text value to replace with.</param> 
+        /// <param name="portionFormat">Portion format.</param> 
+        /// <param name="withMasters">Text replacement includes master slides.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream ReplaceTextFormattingOnline(System.IO.Stream document, string oldValue, string newValue, PortionFormat portionFormat = null, bool? withMasters = null, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling ReplaceTextFormattingOnline");
+            }
+            // verify the required parameter 'oldValue' is set
+            if (oldValue == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'oldValue' when calling ReplaceTextFormattingOnline");
+            }
+            // verify the required parameter 'newValue' is set
+            if (newValue == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'newValue' when calling ReplaceTextFormattingOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/replaceTextFormatting");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "oldValue", oldValue);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newValue", newValue);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "withMasters", withMasters);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(portionFormat); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryApi(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Convert Mathematical Text to MathML Format and saves result to the storage 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -8891,12 +8979,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="VbaModule"/></returns>            
-        public VbaModule UpdateVbaModule(string name, int moduleIndex, VbaModule moduleDto = null, string password = null, string folder = null, string storage = null)
+        public VbaModule UpdateVbaModule(string name, int moduleIndex, VbaModule moduleDto, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling UpdateVbaModule");
+            }
+            // verify the required parameter 'moduleDto' is set
+            if (moduleDto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'moduleDto' when calling UpdateVbaModule");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/vbaProject/modules/{moduleIndex}");

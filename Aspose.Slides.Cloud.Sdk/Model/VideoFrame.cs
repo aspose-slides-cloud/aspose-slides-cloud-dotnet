@@ -147,6 +147,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public PictureFill PictureFillFormat { get; set; }
 
+        /// <summary>
+        /// Trim start [ms]
+        /// </summary>
+        public double? TrimFromStart { get; set; }
+
+        /// <summary>
+        /// Trim end [ms]
+        /// </summary>
+        public double? TrimFromEnd { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -208,6 +218,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Volume: ").Append(this.Volume).Append("\n");
             sb.Append("  Base64Data: ").Append(this.Base64Data).Append("\n");
             sb.Append("  PictureFillFormat: ").Append(this.PictureFillFormat).Append("\n");
+            sb.Append("  TrimFromStart: ").Append(this.TrimFromStart).Append("\n");
+            sb.Append("  TrimFromEnd: ").Append(this.TrimFromEnd).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

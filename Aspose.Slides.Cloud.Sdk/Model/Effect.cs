@@ -1175,6 +1175,35 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// Defined an after animation color for effect.
+        /// </summary>
+        /// <value>Defined an after animation color for effect.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AfterAnimationTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum DoNotDim for "DoNotDim"
+            /// </summary>
+            DoNotDim,
+            
+            /// <summary>
+            /// Enum Color for "Color"
+            /// </summary>
+            Color,
+            
+            /// <summary>
+            /// Enum HideAfterAnimation for "HideAfterAnimation"
+            /// </summary>
+            HideAfterAnimation,
+            
+            /// <summary>
+            /// Enum HideOnNextMouseClick for "HideOnNextMouseClick"
+            /// </summary>
+            HideOnNextMouseClick
+        }
+
+        /// <summary>
         /// Effect type.
         /// </summary>
         public TypeEnum? Type { get; set; }
@@ -1198,6 +1227,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// The way for a effect to restart after complete.
         /// </summary>
         public RestartEnum? Restart { get; set; }
+
+        /// <summary>
+        /// Defined an after animation color for effect.
+        /// </summary>
+        public AfterAnimationTypeEnum? AfterAnimationType { get; set; }
 
         /// <summary>
         /// Shape index.
@@ -1264,6 +1298,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? StopPreviousSound { get; set; }
 
+        /// <summary>
+        /// This attribute specifies if the effect will rewind when done playing.
+        /// </summary>
+        public bool? Rewind { get; set; }
+
+        /// <summary>
+        /// Defined an after animation color for effect. Applied when the AfterAnimationType property is set to Color.
+        /// </summary>
+        public string AfterAnimationColor { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -1314,6 +1358,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  RepeatUntilEndSlide: ").Append(this.RepeatUntilEndSlide).Append("\n");
             sb.Append("  RepeatUntilNextClick: ").Append(this.RepeatUntilNextClick).Append("\n");
             sb.Append("  StopPreviousSound: ").Append(this.StopPreviousSound).Append("\n");
+            sb.Append("  Rewind: ").Append(this.Rewind).Append("\n");
+            sb.Append("  AfterAnimationType: ").Append(this.AfterAnimationType).Append("\n");
+            sb.Append("  AfterAnimationColor: ").Append(this.AfterAnimationColor).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
