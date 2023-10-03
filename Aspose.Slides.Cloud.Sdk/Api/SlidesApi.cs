@@ -1405,12 +1405,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="storage">Document storage.</param> 
         /// <param name="subShape">Sub-shape path (e.g. \"3\", \"3/shapes/2).</param> 
         /// <returns><see cref="ShapeBase"/></returns>            
-        public ShapeBase CreateSpecialSlideShape(string name, int slideIndex, SpecialSlideType slideType, ShapeBase dto = null, int? shapeToClone = null, int? position = null, string password = null, string folder = null, string storage = null, string subShape = null)
+        public ShapeBase CreateSpecialSlideShape(string name, int slideIndex, SpecialSlideType slideType, ShapeBase dto, int? shapeToClone = null, int? position = null, string password = null, string folder = null, string storage = null, string subShape = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling CreateSpecialSlideShape");
+            }
+            // verify the required parameter 'dto' is set
+            if (dto == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'dto' when calling CreateSpecialSlideShape");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/{slideType}/shapes");
@@ -2386,17 +2391,12 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="document">Document data.</param> 
         /// <param name="password">Presentation password.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DeleteProtectionOnline(System.IO.Stream document, string password)
+        public System.IO.Stream DeleteProtectionOnline(System.IO.Stream document, string password = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
             {
                 throw new ApiException(400, "Missing required parameter 'document' when calling DeleteProtectionOnline");
-            }
-            // verify the required parameter 'password' is set
-            if (password == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'password' when calling DeleteProtectionOnline");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/protection/delete");
@@ -6497,6 +6497,74 @@ namespace Aspose.Slides.Cloud.Sdk
             if (document != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Replaces image by the specified index. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="imageIndex">Image index.</param> 
+        /// <param name="image">Image data.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void ReplaceImage(string name, int imageIndex, System.IO.Stream image = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling ReplaceImage");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/images/{imageIndex}/replace");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "imageIndex", imageIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (image != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "image", Content = image });
+            }
+            InvokeVoidStreamApi(resourcePath, "PUT", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Replaces image by the specified index and returns updated document.  
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="imageIndex">Image index.</param> 
+        /// <param name="image">Image data.</param> 
+        /// <param name="password">Password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream ReplaceImageOnline(System.IO.Stream document, int imageIndex, System.IO.Stream image = null, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling ReplaceImageOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/images/{imageIndex}/replace");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "imageIndex", imageIndex);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            if (image != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "image", Content = image });
             }
             return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }

@@ -110,6 +110,24 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreNotEqual(image.Length, imagePng.Length);
         }
 
-        const int c_imageIndex = 1;
+        [Test]
+        public void ReplaceImage()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Stream imageFile = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_imageFileName));
+            TestUtils.SlidesApi.ReplaceImage(c_fileName, c_imageIndex, imageFile, c_password, c_folderName);
+        }
+
+        [Test]
+        public void ReplaceImageRequest()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            Stream imageFile = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_imageFileName));
+            var stream = TestUtils.SlidesApi.ReplaceImageOnline(file, c_imageIndex, imageFile, c_password);
+            Assert.IsNotNull(stream);
+        }
+
+        private const int c_imageIndex = 1;
+        private const string c_imageFileName = "watermark.png";
     }
 }
