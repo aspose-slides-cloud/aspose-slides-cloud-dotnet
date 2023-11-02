@@ -60,6 +60,8 @@ namespace Aspose.Slides.Cloud.Sdk
             m_api = new ApiAccessor(configuration);
         }
 
+        protected abstract string GetBaseUrl(Configuration configuration);
+
         /// <summary>
         /// Gets image in specified format. 
         /// </summary>
@@ -67,7 +69,7 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <returns><see cref="System.IO.Stream"/></returns>            
         protected string GetResourceUrl(string resourcePath)
         {
-            string url = m_configuration.GetApiRootUrl() + resourcePath;
+            string url = GetBaseUrl(m_configuration) + resourcePath;
             return Regex.Replace(url, "\\*", string.Empty).Replace("&amp;", "&").Replace("/?", "?");
         }
 

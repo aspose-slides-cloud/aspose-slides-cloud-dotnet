@@ -34,7 +34,7 @@ namespace Aspose.Slides.Cloud.Sdk
     {
         public Configuration()
         {
-            AuthBaseUrl = ApiBaseUrl = "https://api.aspose.cloud";
+            AuthBaseUrl = AsyncApiBaseUrl = ApiBaseUrl = "https://api.aspose.cloud";
             Version = "v3.0";
             DebugMode = false;
             CustomHeaders = new Dictionary<string, string>();
@@ -48,6 +48,11 @@ namespace Aspose.Slides.Cloud.Sdk
 
         /// <summary>
         /// Aspose Cloud API base URL.
+        /// </summary>
+        public string AsyncApiBaseUrl { get; set; }
+
+        /// <summary>
+        /// Aspose Cloud Async API base URL.
         /// </summary>
         public string AuthBaseUrl { get; set; }
 
@@ -92,9 +97,19 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         public Dictionary<string, string> CustomHeaders { get; set; }
 
-        public string GetApiRootUrl()
+        public string GetSlidesApiRootUrl()
         {
-            var result = ApiBaseUrl + "/" + Version;
+            return GetRootUrl(ApiBaseUrl);
+        }
+
+        public string GetSlidesAsyncApiRootUrl()
+        {
+            return GetRootUrl(AsyncApiBaseUrl);
+        }
+
+        private string GetRootUrl(string baseUrl)
+        {
+            var result = baseUrl + "/" + Version;
             return result.EndsWith("/") ? result.Substring(0, result.Length - 1) : result;
         }
     }

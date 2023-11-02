@@ -9103,5 +9103,10 @@ namespace Aspose.Slides.Cloud.Sdk
             }
             return InvokeApi<FilesUploadResult>(resourcePath, "PUT", null, null, requestFiles, "application/json");
         }
+
+        protected override string GetBaseUrl(Configuration configuration)
+        {
+            return configuration.GetSlidesApiRootUrl();
+        }
     }
 }

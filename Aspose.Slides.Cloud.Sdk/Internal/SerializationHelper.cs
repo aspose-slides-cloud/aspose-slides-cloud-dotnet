@@ -129,6 +129,10 @@ namespace Aspose.Slides.Cloud.Sdk
 
         public static object Deserialize(string json, Type type)
         {
+            if (type == typeof(string))
+            {
+                return json;
+            }
             try
             {
                 return JsonConvert.DeserializeObject(json, type, ModelConverter.Instance);

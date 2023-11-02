@@ -37,6 +37,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
     public static class TestUtils
     {
         public static SlidesApi SlidesApi { get { return s_slidesApi ?? (s_slidesApi = new SlidesApi(Configuration)); } }
+        public static SlidesAsyncApi SlidesAsyncApi { get { return s_slidesAsyncApi ?? (s_slidesAsyncApi = new SlidesAsyncApi(Configuration)); } }
 
         public static Configuration Configuration { get { return s_configuration ?? (s_configuration = GetConfiguration()); } }
 
@@ -46,7 +47,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             return new Configuration
             {
                 DebugMode = GetBoolConfigValue("Debug", true),
-                ApiBaseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"] ?? "https://api-qa.aspose.cloud",
+                ApiBaseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"] ?? "https://slides-cloud.qa.aspose.cloud",
+                AsyncApiBaseUrl = ConfigurationManager.AppSettings["AsyncBaseUrl"]
+                    ?? ConfigurationManager.AppSettings["ApiBaseUrl"]
+                    ?? "https://slides-cloud-async-api.qa.aspose.cloud",
                 AuthBaseUrl = ConfigurationManager.AppSettings["AuthBaseUrl"]
                     ?? ConfigurationManager.AppSettings["BaseUrl"]
                     ?? "https://api-qa.aspose.cloud",
@@ -58,7 +62,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
             return new Configuration
             {
                 DebugMode = GetBoolConfigValue(config, "Debug", true),
-                ApiBaseUrl = config["BaseUrl"] ?? "https://api-qa.aspose.cloud",
+                ApiBaseUrl = config["ApiBaseUrl"] ?? "https://slides-cloud.qa.aspose.cloud",
+                AsyncApiBaseUrl = config["AsyncBaseUrl"] ?? config["BaseUrl"] ?? "https://slides-cloud-async-api.qa.aspose.cloud",
                 AuthBaseUrl = config["AuthBaseUrl"] ?? config["BaseUrl"] ?? "https://api-qa.aspose.cloud",
                 AppSid = config["ClientId"],
                 AppKey = config["ClientSecret"]
@@ -109,6 +114,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
         private const string c_versionFile = "version.txt";
         private static bool s_initialized;
         private static SlidesApi s_slidesApi;
+        private static SlidesAsyncApi s_slidesAsyncApi;
         private static Configuration s_configuration;
 
         private static TimeSpan m_timeout = new TimeSpan(0, 1, 0);
