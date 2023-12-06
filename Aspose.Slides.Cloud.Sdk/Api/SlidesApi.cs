@@ -6511,12 +6511,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref=""/></returns>            
-        public void ReplaceImage(string name, int imageIndex, System.IO.Stream image = null, string password = null, string folder = null, string storage = null)
+        public void ReplaceImage(string name, int imageIndex, System.IO.Stream image, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
             {
                 throw new ApiException(400, "Missing required parameter 'name' when calling ReplaceImage");
+            }
+            // verify the required parameter 'image' is set
+            if (image == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'image' when calling ReplaceImage");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/{name}/images/{imageIndex}/replace");
@@ -6543,12 +6548,17 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="image">Image data.</param> 
         /// <param name="password">Password.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream ReplaceImageOnline(System.IO.Stream document, int imageIndex, System.IO.Stream image = null, string password = null)
+        public System.IO.Stream ReplaceImageOnline(System.IO.Stream document, int imageIndex, System.IO.Stream image, string password = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
             {
                 throw new ApiException(400, "Missing required parameter 'document' when calling ReplaceImageOnline");
+            }
+            // verify the required parameter 'image' is set
+            if (image == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'image' when calling ReplaceImageOnline");
             }
             // create path and map variables
             string resourcePath = GetResourceUrl("/slides/images/{imageIndex}/replace");

@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="SlideReplaceResult.cs">
+// <copyright company="Aspose" file="OperationProgress.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,20 +35,30 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents slide replace result DTO.
+    /// Operation progress.
     /// </summary>  
-    public class SlideReplaceResult : Slide 
+    public class OperationProgress 
     {                       
         /// <summary>
-        /// Gets or sets the number of matches 
+        /// Description.
         /// </summary>
-        public int? Matches { get; set; }
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Current Step Index.
+        /// </summary>
+        public int? StepIndex { get; set; }
+
+        /// <summary>
+        /// Current Step Index.
+        /// </summary>
+        public int? StepCount { get; set; }
 
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static new Dictionary<string, object> TypeDeterminers
+        public static Dictionary<string, object> TypeDeterminers
         {
             get
             {
@@ -64,7 +74,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public SlideReplaceResult() : base()
+        public OperationProgress() : base()
         {
         }
 
@@ -75,22 +85,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class SlideReplaceResult {\n");
-            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-            sb.Append("  Width: ").Append(this.Width).Append("\n");
-            sb.Append("  Height: ").Append(this.Height).Append("\n");
-            sb.Append("  ShowMasterShapes: ").Append(this.ShowMasterShapes).Append("\n");
-            sb.Append("  SlideShowTransition: ").Append(this.SlideShowTransition).Append("\n");
-            sb.Append("  LayoutSlide: ").Append(this.LayoutSlide).Append("\n");
-            sb.Append("  Shapes: ").Append(this.Shapes).Append("\n");
-            sb.Append("  Theme: ").Append(this.Theme).Append("\n");
-            sb.Append("  Placeholders: ").Append(this.Placeholders).Append("\n");
-            sb.Append("  Images: ").Append(this.Images).Append("\n");
-            sb.Append("  Comments: ").Append(this.Comments).Append("\n");
-            sb.Append("  Background: ").Append(this.Background).Append("\n");
-            sb.Append("  NotesSlide: ").Append(this.NotesSlide).Append("\n");
-            sb.Append("  Matches: ").Append(this.Matches).Append("\n");
+            sb.Append("class OperationProgress {\n");
+            sb.Append("  Description: ").Append(this.Description).Append("\n");
+            sb.Append("  StepIndex: ").Append(this.StepIndex).Append("\n");
+            sb.Append("  StepCount: ").Append(this.StepCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

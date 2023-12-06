@@ -54,7 +54,27 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// <summary>
             /// Enum DownloadPresentation for "DownloadPresentation"
             /// </summary>
-            DownloadPresentation
+            DownloadPresentation,
+            
+            /// <summary>
+            /// Enum ConvertAndSave for "ConvertAndSave"
+            /// </summary>
+            ConvertAndSave,
+            
+            /// <summary>
+            /// Enum SavePresentation for "SavePresentation"
+            /// </summary>
+            SavePresentation,
+            
+            /// <summary>
+            /// Enum Merge for "Merge"
+            /// </summary>
+            Merge,
+            
+            /// <summary>
+            /// Enum MergeAndSave for "MergeAndSave"
+            /// </summary>
+            MergeAndSave
         }
 
         /// <summary>
@@ -109,6 +129,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Gets or sets Id
         /// </summary>
         public string Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets Progress
+        /// </summary>
+        public OperationProgress Progress { get; set; }
 
         /// <summary>
         /// Gets or sets Created
@@ -180,6 +205,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Id: ").Append(this.Id).Append("\n");
             sb.Append("  Method: ").Append(this.Method).Append("\n");
             sb.Append("  Status: ").Append(this.Status).Append("\n");
+            sb.Append("  Progress: ").Append(this.Progress).Append("\n");
             sb.Append("  Created: ").Append(this.Created).Append("\n");
             sb.Append("  Enqueued: ").Append(this.Enqueued).Append("\n");
             sb.Append("  Started: ").Append(this.Started).Append("\n");

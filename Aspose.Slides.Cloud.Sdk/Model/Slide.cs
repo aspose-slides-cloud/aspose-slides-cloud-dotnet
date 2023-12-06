@@ -55,6 +55,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public bool? ShowMasterShapes { get; set; }
 
         /// <summary>
+        /// Specifies if shapes of the master slide should be shown on the slide. True by default.
+        /// </summary>
+        public SlideShowTransition SlideShowTransition { get; set; }
+
+        /// <summary>
         /// Gets or sets the  link to the layout slide.
         /// </summary>
         public ResourceUri LayoutSlide { get; set; }
@@ -131,6 +136,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Width: ").Append(this.Width).Append("\n");
             sb.Append("  Height: ").Append(this.Height).Append("\n");
             sb.Append("  ShowMasterShapes: ").Append(this.ShowMasterShapes).Append("\n");
+            sb.Append("  SlideShowTransition: ").Append(this.SlideShowTransition).Append("\n");
             sb.Append("  LayoutSlide: ").Append(this.LayoutSlide).Append("\n");
             sb.Append("  Shapes: ").Append(this.Shapes).Append("\n");
             sb.Append("  Theme: ").Append(this.Theme).Append("\n");

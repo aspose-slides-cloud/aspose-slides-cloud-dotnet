@@ -213,6 +213,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\OneValueChartDataPoint.cs" />
     <Compile Include="Model\OneValueSeries.cs" />
     <Compile Include="Model\Operation.cs" />
+    <Compile Include="Model\OperationProgress.cs" />
     <Compile Include="Model\OrderedMergeRequest.cs" />
     <Compile Include="Model\OuterShadowEffect.cs" />
     <Compile Include="Model\OutputFile.cs" />
@@ -281,6 +282,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\SlideProperties.cs" />
     <Compile Include="Model\SlideReplaceResult.cs" />
     <Compile Include="Model\SlideShowProperties.cs" />
+    <Compile Include="Model\SlideShowTransition.cs" />
     <Compile Include="Model\Slides.cs" />
     <Compile Include="Model\SmartArt.cs" />
     <Compile Include="Model\SmartArtNode.cs" />

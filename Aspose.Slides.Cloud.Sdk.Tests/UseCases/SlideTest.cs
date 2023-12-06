@@ -119,7 +119,24 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Slide slide = TestUtils.SlidesApi.UpdateSlide(c_fileName, c_slideIndex, dto, c_password, c_folderName);
             Assert.IsTrue(slide.LayoutSlide.Href.Contains(c_layoutSlidePath));
         }
-        
+
+        [Test]
+        public void SetSlideTransition()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Slide dto = new Slide
+            {
+                SlideShowTransition = new SlideShowTransition
+                {
+                    Type = SlideShowTransition.TypeEnum.Circle,
+                    Speed = SlideShowTransition.SpeedEnum.Medium
+                }
+            };
+
+            Slide slide = TestUtils.SlidesApi.UpdateSlide(c_fileName, c_slideIndex, dto, c_password, c_folderName);
+            Assert.AreEqual(dto.SlideShowTransition.Type, slide.SlideShowTransition.Type);
+        }
+
         [Test]
         public void DeleteSlides()
         {

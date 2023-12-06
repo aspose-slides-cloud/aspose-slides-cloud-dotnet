@@ -132,6 +132,49 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <summary>
         ///  
         /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="format"></param> 
+        /// <param name="outPath"></param> 
+        /// <param name="password"></param> 
+        /// <param name="storage"></param> 
+        /// <param name="fontsFolder"></param> 
+        /// <param name="slides"></param> 
+        /// <param name="options"></param> 
+        /// <returns><see cref="string"/></returns>            
+        public string StartConvertAndSave(System.IO.Stream document, ExportFormat format, string outPath, string password = null, string storage = null, string fontsFolder = null, List<int> slides = null, ExportOptions options = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling StartConvertAndSave");
+            }
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling StartConvertAndSave");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/async/convert/{format}");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", outPath);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", slides);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeApi<string>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
         /// <param name="name"></param> 
         /// <param name="format"></param> 
         /// <param name="options"></param> 
@@ -161,6 +204,98 @@ namespace Aspose.Slides.Cloud.Sdk
             var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             return InvokeApi<string>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="files">Files to merge</param> 
+        /// <param name="request"></param> 
+        /// <param name="storage"></param> 
+        /// <returns><see cref="string"/></returns>            
+        public string StartMerge(List<FileInfo> files = null, OrderedMergeRequest request = null, string storage = null)
+        {
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/async/merge");
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            var postBody = SerializationHelper.Serialize(request); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            if (files != null) 
+            {
+                requestFiles.AddRange(files);
+            }
+            return InvokeApi<string>(resourcePath, "POST", postBody, null, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="outPath"></param> 
+        /// <param name="files">Files to merge</param> 
+        /// <param name="request"></param> 
+        /// <param name="storage"></param> 
+        /// <returns><see cref="string"/></returns>            
+        public string StartMergeAndSave(string outPath, List<FileInfo> files = null, OrderedMergeRequest request = null, string storage = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling StartMergeAndSave");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/async/merge");
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", outPath);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            var postBody = SerializationHelper.Serialize(request); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            if (files != null) 
+            {
+                requestFiles.AddRange(files);
+            }
+            return InvokeApi<string>(resourcePath, "PUT", postBody, null, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="name"></param> 
+        /// <param name="format"></param> 
+        /// <param name="outPath"></param> 
+        /// <param name="options"></param> 
+        /// <param name="password"></param> 
+        /// <param name="folder"></param> 
+        /// <param name="storage"></param> 
+        /// <param name="fontsFolder"></param> 
+        /// <param name="slides"></param> 
+        /// <returns><see cref="string"/></returns>            
+        public string StartSavePresentation(string name, ExportFormat format, string outPath, ExportOptions options = null, string password = null, string folder = null, string storage = null, string fontsFolder = null, List<int> slides = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling StartSavePresentation");
+            }
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling StartSavePresentation");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/async/{name}/{format}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", outPath);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "slides", slides);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<string>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
         }
 
         protected override string GetBaseUrl(Configuration configuration)

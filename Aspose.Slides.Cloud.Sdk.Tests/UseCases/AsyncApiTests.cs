@@ -26,6 +26,7 @@
 using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 
@@ -101,6 +102,123 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void AsyncConvertAndSave()
+        {
+            TestUtils.DeleteFile(c_outPath);
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            string operationId = TestUtils.SlidesAsyncApi.StartConvertAndSave(file, c_format, c_outPath, c_password);
+
+            Operation operation = null;
+
+            for (int i = 0; i < c_maxTries; i++)
+            {
+                Thread.Sleep(c_sleepTimeout);
+                operation = TestUtils.SlidesAsyncApi.GetOperationStatus(operationId);
+                if (operation.Status != Operation.StatusEnum.Created
+                    && operation.Status != Operation.StatusEnum.Enqueued
+                    && operation.Status != Operation.StatusEnum.Started)
+                {
+                    break;
+                }
+            }
+            Assert.AreEqual(Operation.StatusEnum.Finished, operation.Status);
+            Assert.IsNull(operation.Error);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
+            Assert.IsTrue(exists.Exists.Value);
+        }
+
+        [Test]
+        public void AsyncSavePresentation()
+        {
+            TestUtils.DeleteFile(c_outPath);
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            string operationId = TestUtils.SlidesAsyncApi.StartSavePresentation(c_fileName, c_format, c_outPath, null, c_password, c_folderName);
+
+            Operation operation = null;
+
+            for (int i = 0; i < c_maxTries; i++)
+            {
+                Thread.Sleep(c_sleepTimeout);
+                operation = TestUtils.SlidesAsyncApi.GetOperationStatus(operationId);
+                if (operation.Status != Operation.StatusEnum.Created
+                    && operation.Status != Operation.StatusEnum.Enqueued
+                    && operation.Status != Operation.StatusEnum.Started)
+                {
+                    break;
+                }
+            }
+            Assert.AreEqual(Operation.StatusEnum.Finished, operation.Status);
+            Assert.IsNull(operation.Error);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
+            Assert.IsTrue(exists.Exists.Value);
+        }
+
+        [Test]
+        public void AsyncMerge()
+        {
+            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
+            FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
+
+            string operationId = TestUtils.SlidesAsyncApi.StartMerge(new List<FileInfo> { file1, file2 });
+
+            Operation operation = null;
+
+            for (int i = 0; i < c_maxTries; i++)
+            {
+                Thread.Sleep(c_sleepTimeout);
+                operation = TestUtils.SlidesAsyncApi.GetOperationStatus(operationId);
+                if (operation.Status != Operation.StatusEnum.Created
+                    && operation.Status != Operation.StatusEnum.Enqueued
+                    && operation.Status != Operation.StatusEnum.Started)
+                {
+                    break;
+                }
+            }
+            Assert.AreEqual(Operation.StatusEnum.Finished, operation.Status);
+            Assert.IsNotNull(operation.Progress);
+            Assert.AreEqual(2, operation.Progress.StepCount);
+            Assert.AreEqual(operation.Progress.StepCount, operation.Progress.StepIndex);
+            Assert.IsNull(operation.Error);
+
+            Stream merged = TestUtils.SlidesAsyncApi.GetOperationResult(operationId);
+            Assert.IsNotNull(merged);
+            Assert.Greater(merged.Length, 0);
+            Assert.IsTrue(merged.CanRead);
+        }
+
+        [Test]
+        public void AsyncMergeAndSave()
+        {
+            TestUtils.DeleteFile(c_outPath);
+
+            FileInfo file1 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
+            FileInfo file2 = new FileInfo { Content = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName2)) };
+
+            string operationId = TestUtils.SlidesAsyncApi.StartMergeAndSave(c_outPath, new List<FileInfo> { file1, file2 });
+
+            Operation operation = null;
+
+            for (int i = 0; i < c_maxTries; i++)
+            {
+                Thread.Sleep(c_sleepTimeout);
+                operation = TestUtils.SlidesAsyncApi.GetOperationStatus(operationId);
+                if (operation.Status != Operation.StatusEnum.Created
+                    && operation.Status != Operation.StatusEnum.Enqueued
+                    && operation.Status != Operation.StatusEnum.Started)
+                {
+                    break;
+                }
+            }
+            Assert.AreEqual(Operation.StatusEnum.Finished, operation.Status);
+            Assert.IsNotNull(operation.Progress);
+            Assert.AreEqual(2, operation.Progress.StepCount);
+            Assert.AreEqual(operation.Progress.StepCount, operation.Progress.StepIndex);
+            Assert.IsNull(operation.Error);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(c_outPath);
+            Assert.IsTrue(exists.Exists.Value);
+        }
+
+        [Test]
         public void AsyncBadOperation()
         {
             string operationId = TestUtils.SlidesAsyncApi.StartDownloadPresentation("IDoNotExist.pptx", c_format);
@@ -122,5 +240,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         const ExportFormat c_format = ExportFormat.Pdf;
         const int c_sleepTimeout = 3000;
         const int c_maxTries = 10;
+        const string c_fileName2 = "test-unprotected.pptx";
+        const string c_outPath = c_folderName + "/converted.pdf";
     }
 }
