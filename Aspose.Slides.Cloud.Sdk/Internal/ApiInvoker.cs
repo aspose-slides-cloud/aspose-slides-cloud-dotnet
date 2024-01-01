@@ -86,6 +86,10 @@ namespace Aspose.Slides.Cloud.Sdk
                 }
                 throw;
             }
+            catch (NeedRepeatRequestException)
+            {
+                throw new ApiException(401, "Unauthorized");
+            }
             finally
             {
                 if (!typeof(Stream).IsAssignableFrom(returnType) && response != null)

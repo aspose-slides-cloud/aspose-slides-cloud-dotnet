@@ -98,6 +98,15 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void ShapeLoadAndSave()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            ShapeBase dto = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, 1, c_password, c_folderName);
+            ShapeBase shape = TestUtils.SlidesApi.UpdateShape(c_fileName, c_slideIndex, 1, dto, c_password, c_folderName);
+            Assert.IsInstanceOf<Chart>(shape);
+        }
+
+        [Test]
         public void ShapeEmpty()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
