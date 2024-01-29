@@ -41,7 +41,15 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void Cleanup()
         {
         }
-        
+
+        [Test]
+        public void GetAvailableFonts()
+        {
+            FontsData systemFonts = TestUtils.SlidesApi.GetAvailableFonts();
+            Assert.IsTrue(systemFonts.List.Count > 1);
+            Assert.IsFalse(systemFonts.List[0].IsCustom.HasValue);
+        }
+
         [Test]
         public void GetFonts()
         {

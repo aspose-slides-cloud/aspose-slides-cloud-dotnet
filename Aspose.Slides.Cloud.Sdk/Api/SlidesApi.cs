@@ -4054,6 +4054,22 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Returns presentation fonts info. 
+        /// </summary>
+        /// <param name="fontsFolder">Storage folder for custom fonts.</param> 
+        /// <param name="storage">Storage for custom fonts.</param> 
+        /// <returns><see cref="FontsData"/></returns>            
+        public FontsData GetAvailableFonts(string fontsFolder = null, string storage = null)
+        {
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/fonts/available");
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<FontsData>(resourcePath, "GET", null, null, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Read slide background info. 
         /// </summary>
         /// <param name="name">Document name.</param> 

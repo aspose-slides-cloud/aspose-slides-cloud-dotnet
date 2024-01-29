@@ -49,6 +49,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? IsEmbedded { get; set; }
 
+        /// <summary>
+        /// Returns true for a custom font (contained in fontsFolder directory).
+        /// </summary>
+        public bool? IsCustom { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -83,6 +88,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("class FontData {\n");
             sb.Append("  FontName: ").Append(this.FontName).Append("\n");
             sb.Append("  IsEmbedded: ").Append(this.IsEmbedded).Append("\n");
+            sb.Append("  IsCustom: ").Append(this.IsCustom).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
