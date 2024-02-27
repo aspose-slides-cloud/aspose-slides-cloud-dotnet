@@ -120,7 +120,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void CompressEmbeddedFontOnline()
+        public void CompressEmbeddedFontsOnline()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream resultEmbedded = TestUtils.SlidesApi.SetEmbeddedFontOnline(file, c_fontNameCalibri, false, c_password);

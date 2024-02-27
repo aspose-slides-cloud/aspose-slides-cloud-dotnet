@@ -182,7 +182,15 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.AreEqual(1, response.List.Count);
             Assert.IsInstanceOf(typeof(SlideModernComment), response.List[0]);
         }
-        
+
+        [Test]
+        public void GetCommentAuthors()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            CommentAuthors response = TestUtils.SlidesApi.GetCommentAuthors(c_fileName, c_password, c_folderName);
+            Assert.AreEqual(1, response.List.Count);
+        }
+
         const string c_author = "Test author";
         const string c_childCommentText = "Child comment text";
         const string c_commentText = "Comment text";  

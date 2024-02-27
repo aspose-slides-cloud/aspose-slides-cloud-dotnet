@@ -121,6 +121,8 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\ColorChangeEffect.cs" />
     <Compile Include="Model\ColorReplaceEffect.cs" />
     <Compile Include="Model\ColorScheme.cs" />
+    <Compile Include="Model\CommentAuthor.cs" />
+    <Compile Include="Model\CommentAuthors.cs" />
     <Compile Include="Model\CommonSlideViewProperties.cs" />
     <Compile Include="Model\Connector.cs" />
     <Compile Include="Model\CubicBezierToPathSegment.cs" />

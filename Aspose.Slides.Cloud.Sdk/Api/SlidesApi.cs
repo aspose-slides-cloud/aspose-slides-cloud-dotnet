@@ -4126,6 +4126,32 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Lists comment authors. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="CommentAuthors"/></returns>            
+        public CommentAuthors GetCommentAuthors(string name, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetCommentAuthors");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/comments/authors");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<CommentAuthors>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Get disc usage 
         /// </summary>
         /// <param name="storageName">Storage name</param> 

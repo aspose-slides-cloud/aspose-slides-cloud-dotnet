@@ -228,7 +228,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
-        public void GetParagraphRect()
+        public void GetParagraphRectangle()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             TextBounds response =TestUtils.SlidesApi.GetParagraphRectangle(c_fileName, c_slideIndex, c_shapeIndex, 1, c_password,
