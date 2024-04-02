@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="HtmlExportOptions.cs">
+// <copyright company="Aspose" file="HandoutLayoutingOptions.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,88 +35,83 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Provides options that control how a presentation is saved in Html format.
+    /// Handout layouting options
     /// </summary>  
-    public class HtmlExportOptions : ExportOptions 
+    public class HandoutLayoutingOptions : SlidesLayoutOptions 
     {                       
         /// <summary>
-        /// Represents the pictures compression level
+        /// Specified how many pages and in what sequence will be placed on the page.
         /// </summary>
-        /// <value>Represents the pictures compression level</value>
+        /// <value>Specified how many pages and in what sequence will be placed on the page.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum PicturesCompressionEnum
+        public enum HandoutEnum
         {
             
             /// <summary>
-            /// Enum Dpi330 for "Dpi330"
+            /// Enum Handouts1 for "Handouts1"
             /// </summary>
-            Dpi330,
+            Handouts1,
             
             /// <summary>
-            /// Enum Dpi220 for "Dpi220"
+            /// Enum Handouts2 for "Handouts2"
             /// </summary>
-            Dpi220,
+            Handouts2,
             
             /// <summary>
-            /// Enum Dpi150 for "Dpi150"
+            /// Enum Handouts3 for "Handouts3"
             /// </summary>
-            Dpi150,
+            Handouts3,
             
             /// <summary>
-            /// Enum Dpi96 for "Dpi96"
+            /// Enum Handouts4Horizontal for "Handouts4Horizontal"
             /// </summary>
-            Dpi96,
+            Handouts4Horizontal,
             
             /// <summary>
-            /// Enum Dpi72 for "Dpi72"
+            /// Enum Handouts4Vertical for "Handouts4Vertical"
             /// </summary>
-            Dpi72,
+            Handouts4Vertical,
             
             /// <summary>
-            /// Enum DocumentResolution for "DocumentResolution"
+            /// Enum Handouts6Horizontal for "Handouts6Horizontal"
             /// </summary>
-            DocumentResolution
+            Handouts6Horizontal,
+            
+            /// <summary>
+            /// Enum Handouts6Vertical for "Handouts6Vertical"
+            /// </summary>
+            Handouts6Vertical,
+            
+            /// <summary>
+            /// Enum Handouts9Horizontal for "Handouts9Horizontal"
+            /// </summary>
+            Handouts9Horizontal,
+            
+            /// <summary>
+            /// Enum Handouts9Vertical for "Handouts9Vertical"
+            /// </summary>
+            Handouts9Vertical
         }
 
         /// <summary>
-        /// Represents the pictures compression level
+        /// Specified how many pages and in what sequence will be placed on the page.
         /// </summary>
-        public PicturesCompressionEnum? PicturesCompression { get; set; }
+        public HandoutEnum? Handout { get; set; }
 
         /// <summary>
-        /// Get or sets flag for save presentation as zip file
+        /// True to print the displayed slide numbers.
         /// </summary>
-        public bool? SaveAsZip { get; set; }
+        public bool? PrintSlideNumbers { get; set; }
 
         /// <summary>
-        /// Get or set name of subdirectory in zip-file for store external files
+        /// True to display comments on slide.
         /// </summary>
-        public string SubDirectoryName { get; set; }
+        public bool? PrintComments { get; set; }
 
         /// <summary>
-        /// Specifies whether the generated document should include hidden slides or not. Default is false. 
+        /// True to draw frames around the displayed slides.
         /// </summary>
-        public bool? ShowHiddenSlides { get; set; }
-
-        /// <summary>
-        /// True to make layout responsive by excluding width and height attributes from svg container.
-        /// </summary>
-        public bool? SvgResponsiveLayout { get; set; }
-
-        /// <summary>
-        /// Returns or sets a value determining the quality of the JPEG images inside PDF document.
-        /// </summary>
-        public int? JpegQuality { get; set; }
-
-        /// <summary>
-        /// A boolean flag indicates if the cropped parts remain as part of the document. If true the cropped  parts will removed, if false they will be serialized in the document (which can possible lead to a  larger file)
-        /// </summary>
-        public bool? DeletePicturesCroppedAreas { get; set; }
-
-        /// <summary>
-        /// Slides layouting options
-        /// </summary>
-        public SlidesLayoutOptions SlidesLayoutOptions { get; set; }
+        public bool? PrintFrameSlide { get; set; }
 
 
         /// <summary>
@@ -129,7 +124,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("Format", "html");
+                    s_typeDeterminers.Add("LayoutType", LayoutTypeEnum.Handout);
                 }
                 return s_typeDeterminers;
             }
@@ -139,9 +134,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public HtmlExportOptions() : base()
+        public HandoutLayoutingOptions() : base()
         {
-            Format = "html";
+            LayoutType = LayoutTypeEnum.Handout;
         }
 
         /// <summary>
@@ -151,19 +146,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class HtmlExportOptions {\n");
-            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
-            sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
-            sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
-            sb.Append("  Format: ").Append(this.Format).Append("\n");
-            sb.Append("  SaveAsZip: ").Append(this.SaveAsZip).Append("\n");
-            sb.Append("  SubDirectoryName: ").Append(this.SubDirectoryName).Append("\n");
-            sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
-            sb.Append("  SvgResponsiveLayout: ").Append(this.SvgResponsiveLayout).Append("\n");
-            sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
-            sb.Append("  PicturesCompression: ").Append(this.PicturesCompression).Append("\n");
-            sb.Append("  DeletePicturesCroppedAreas: ").Append(this.DeletePicturesCroppedAreas).Append("\n");
-            sb.Append("  SlidesLayoutOptions: ").Append(this.SlidesLayoutOptions).Append("\n");
+            sb.Append("class HandoutLayoutingOptions {\n");
+            sb.Append("  LayoutType: ").Append(this.LayoutType).Append("\n");
+            sb.Append("  Handout: ").Append(this.Handout).Append("\n");
+            sb.Append("  PrintSlideNumbers: ").Append(this.PrintSlideNumbers).Append("\n");
+            sb.Append("  PrintComments: ").Append(this.PrintComments).Append("\n");
+            sb.Append("  PrintFrameSlide: ").Append(this.PrintFrameSlide).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

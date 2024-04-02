@@ -99,6 +99,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public bool? ShowNarration { get; set; }
 
         /// <summary>
+        /// Show media controls.
+        /// </summary>
+        public bool? ShowMediaControls { get; set; }
+
+        /// <summary>
         /// Use timings.
         /// </summary>
         public bool? UseTimings { get; set; }
@@ -148,6 +153,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  PenColor: ").Append(this.PenColor).Append("\n");
             sb.Append("  ShowAnimation: ").Append(this.ShowAnimation).Append("\n");
             sb.Append("  ShowNarration: ").Append(this.ShowNarration).Append("\n");
+            sb.Append("  ShowMediaControls: ").Append(this.ShowMediaControls).Append("\n");
             sb.Append("  UseTimings: ").Append(this.UseTimings).Append("\n");
             sb.Append("  SlideShowType: ").Append(this.SlideShowType).Append("\n");
             sb.Append("  ShowScrollbar: ").Append(this.ShowScrollbar).Append("\n");

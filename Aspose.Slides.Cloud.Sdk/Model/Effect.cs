@@ -1122,6 +1122,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// Preset class type.
+        /// </summary>
+        /// <value>Preset class type.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AnimateTextTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum AllAtOnce for "AllAtOnce"
+            /// </summary>
+            AllAtOnce,
+            
+            /// <summary>
+            /// Enum ByWord for "ByWord"
+            /// </summary>
+            ByWord,
+            
+            /// <summary>
+            /// Enum ByLetter for "ByLetter"
+            /// </summary>
+            ByLetter
+        }
+
+        /// <summary>
         /// Effect trigger type.
         /// </summary>
         /// <value>Effect trigger type.</value>
@@ -1217,6 +1241,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Preset class type.
         /// </summary>
         public PresetClassTypeEnum? PresetClassType { get; set; }
+
+        /// <summary>
+        /// Preset class type.
+        /// </summary>
+        public AnimateTextTypeEnum? AnimateTextType { get; set; }
 
         /// <summary>
         /// Effect trigger type.
@@ -1343,6 +1372,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  Subtype: ").Append(this.Subtype).Append("\n");
             sb.Append("  PresetClassType: ").Append(this.PresetClassType).Append("\n");
+            sb.Append("  AnimateTextType: ").Append(this.AnimateTextType).Append("\n");
             sb.Append("  ShapeIndex: ").Append(this.ShapeIndex).Append("\n");
             sb.Append("  ParagraphIndex: ").Append(this.ParagraphIndex).Append("\n");
             sb.Append("  TriggerType: ").Append(this.TriggerType).Append("\n");

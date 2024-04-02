@@ -127,6 +127,21 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsNotNull(stream);
         }
 
+        [Test]
+        public void DeletePictureCroppedAreas()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            TestUtils.SlidesApi.DeletePictureCroppedAreas(c_fileName, 2, 2, c_password, c_folderName);
+        }
+
+        [Test]
+        public void DeletePictureCroppedAreasWrongShapeType()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            //Should throw an exception if shape is not PictureFrame
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.DeletePictureCroppedAreas(c_fileName, 2, 3, c_password, c_folderName));
+        }
+
         private const int c_imageIndex = 1;
         private const string c_imageFileName = "watermark.png";
     }

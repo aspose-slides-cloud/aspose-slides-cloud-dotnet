@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="HtmlExportOptions.cs">
+// <copyright company="Aspose" file="NotesCommentsLayoutingOptions.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,88 +35,82 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Provides options that control how a presentation is saved in Html format.
+    /// Notes &amp;amp; comments layouting options.
     /// </summary>  
-    public class HtmlExportOptions : ExportOptions 
+    public class NotesCommentsLayoutingOptions : SlidesLayoutOptions 
     {                       
         /// <summary>
-        /// Represents the pictures compression level
+        /// Gets or sets the position of the notes on the page.
         /// </summary>
-        /// <value>Represents the pictures compression level</value>
+        /// <value>Gets or sets the position of the notes on the page.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum PicturesCompressionEnum
+        public enum NotesPositionEnum
         {
             
             /// <summary>
-            /// Enum Dpi330 for "Dpi330"
+            /// Enum None for "None"
             /// </summary>
-            Dpi330,
+            None,
             
             /// <summary>
-            /// Enum Dpi220 for "Dpi220"
+            /// Enum BottomFull for "BottomFull"
             /// </summary>
-            Dpi220,
+            BottomFull,
             
             /// <summary>
-            /// Enum Dpi150 for "Dpi150"
+            /// Enum BottomTruncated for "BottomTruncated"
             /// </summary>
-            Dpi150,
-            
-            /// <summary>
-            /// Enum Dpi96 for "Dpi96"
-            /// </summary>
-            Dpi96,
-            
-            /// <summary>
-            /// Enum Dpi72 for "Dpi72"
-            /// </summary>
-            Dpi72,
-            
-            /// <summary>
-            /// Enum DocumentResolution for "DocumentResolution"
-            /// </summary>
-            DocumentResolution
+            BottomTruncated
         }
 
         /// <summary>
-        /// Represents the pictures compression level
+        /// Gets or sets the position of the comments on the page.
         /// </summary>
-        public PicturesCompressionEnum? PicturesCompression { get; set; }
+        /// <value>Gets or sets the position of the comments on the page.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CommentsPositionEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>
+            Bottom,
+            
+            /// <summary>
+            /// Enum Right for "Right"
+            /// </summary>
+            Right
+        }
 
         /// <summary>
-        /// Get or sets flag for save presentation as zip file
+        /// Gets or sets the position of the notes on the page.
         /// </summary>
-        public bool? SaveAsZip { get; set; }
+        public NotesPositionEnum? NotesPosition { get; set; }
 
         /// <summary>
-        /// Get or set name of subdirectory in zip-file for store external files
+        /// Gets or sets the position of the comments on the page.
         /// </summary>
-        public string SubDirectoryName { get; set; }
+        public CommentsPositionEnum? CommentsPosition { get; set; }
 
         /// <summary>
-        /// Specifies whether the generated document should include hidden slides or not. Default is false. 
+        /// Gets or sets the width of the comment output area in pixels (Applies only if comments are displayed on the right).
         /// </summary>
-        public bool? ShowHiddenSlides { get; set; }
+        public int? CommentsAreaWidth { get; set; }
 
         /// <summary>
-        /// True to make layout responsive by excluding width and height attributes from svg container.
+        /// Gets or sets the color of comments area (Applies only if comments are displayed on the right).
         /// </summary>
-        public bool? SvgResponsiveLayout { get; set; }
+        public string CommentsAreaColor { get; set; }
 
         /// <summary>
-        /// Returns or sets a value determining the quality of the JPEG images inside PDF document.
+        /// True if comments that have no author are displayed. (Applies only if comments are displayed).
         /// </summary>
-        public int? JpegQuality { get; set; }
-
-        /// <summary>
-        /// A boolean flag indicates if the cropped parts remain as part of the document. If true the cropped  parts will removed, if false they will be serialized in the document (which can possible lead to a  larger file)
-        /// </summary>
-        public bool? DeletePicturesCroppedAreas { get; set; }
-
-        /// <summary>
-        /// Slides layouting options
-        /// </summary>
-        public SlidesLayoutOptions SlidesLayoutOptions { get; set; }
+        public bool? ShowCommentsByNoAuthor { get; set; }
 
 
         /// <summary>
@@ -129,7 +123,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("Format", "html");
+                    s_typeDeterminers.Add("LayoutType", LayoutTypeEnum.NotesComments);
                 }
                 return s_typeDeterminers;
             }
@@ -139,9 +133,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public HtmlExportOptions() : base()
+        public NotesCommentsLayoutingOptions() : base()
         {
-            Format = "html";
+            LayoutType = LayoutTypeEnum.NotesComments;
         }
 
         /// <summary>
@@ -151,19 +145,13 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class HtmlExportOptions {\n");
-            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
-            sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
-            sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
-            sb.Append("  Format: ").Append(this.Format).Append("\n");
-            sb.Append("  SaveAsZip: ").Append(this.SaveAsZip).Append("\n");
-            sb.Append("  SubDirectoryName: ").Append(this.SubDirectoryName).Append("\n");
-            sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
-            sb.Append("  SvgResponsiveLayout: ").Append(this.SvgResponsiveLayout).Append("\n");
-            sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
-            sb.Append("  PicturesCompression: ").Append(this.PicturesCompression).Append("\n");
-            sb.Append("  DeletePicturesCroppedAreas: ").Append(this.DeletePicturesCroppedAreas).Append("\n");
-            sb.Append("  SlidesLayoutOptions: ").Append(this.SlidesLayoutOptions).Append("\n");
+            sb.Append("class NotesCommentsLayoutingOptions {\n");
+            sb.Append("  LayoutType: ").Append(this.LayoutType).Append("\n");
+            sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
+            sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
+            sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
+            sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
+            sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

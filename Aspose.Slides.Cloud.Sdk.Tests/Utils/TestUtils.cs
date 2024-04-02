@@ -53,7 +53,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                     ?? "https://slides-cloud-async-api.qa.aspose.cloud",
                 AuthBaseUrl = ConfigurationManager.AppSettings["AuthBaseUrl"]
                     ?? ConfigurationManager.AppSettings["BaseUrl"]
-                    ?? "https://api-qa.aspose.cloud",
+                    ?? "https://id-qa.aspose.cloud",
                 AppSid = ConfigurationManager.AppSettings["ClientId"],
                 AppKey = ConfigurationManager.AppSettings["ClientSecret"]
             };
@@ -64,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests.Utils
                 DebugMode = GetBoolConfigValue(config, "Debug", true),
                 ApiBaseUrl = config["ApiBaseUrl"] ?? "https://slides-cloud.qa.aspose.cloud",
                 AsyncApiBaseUrl = config["AsyncBaseUrl"] ?? config["BaseUrl"] ?? "https://slides-cloud-async-api.qa.aspose.cloud",
-                AuthBaseUrl = config["AuthBaseUrl"] ?? config["BaseUrl"] ?? "https://api-qa.aspose.cloud",
+                AuthBaseUrl = config["AuthBaseUrl"] ?? config["BaseUrl"] ?? "https://id-qa.aspose.cloud",
                 AppSid = config["ClientId"],
                 AppKey = config["ClientSecret"]
             };

@@ -520,6 +520,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
             sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
             sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
+            sb.Append("  IsDecorative: ").Append(this.IsDecorative).Append("\n");
             sb.Append("  X: ").Append(this.X).Append("\n");
             sb.Append("  Y: ").Append(this.Y).Append("\n");
             sb.Append("  ZOrderPosition: ").Append(this.ZOrderPosition).Append("\n");

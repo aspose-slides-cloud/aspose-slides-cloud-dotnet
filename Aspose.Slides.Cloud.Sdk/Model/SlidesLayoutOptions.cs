@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="SummaryZoomSection.cs">
+// <copyright company="Aspose" file="SlidesLayoutOptions.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,32 +35,44 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents summary zoom section
+    /// Slides layouting options.
     /// </summary>  
-    public class SummaryZoomSection : SectionZoomFrame 
+    public class SlidesLayoutOptions 
     {                       
         /// <summary>
-        /// Section title
+        /// Gets or Sets LayoutType
         /// </summary>
-        public string Title { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum LayoutTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum NotesComments for "NotesComments"
+            /// </summary>
+            NotesComments,
+            
+            /// <summary>
+            /// Enum Handout for "Handout"
+            /// </summary>
+            Handout
+        }
 
         /// <summary>
-        /// Description of the Summary Zoom Section object. 
+        /// Gets or sets LayoutType
         /// </summary>
-        public string Description { get; set; }
+        public LayoutTypeEnum? LayoutType { get; protected set; }
 
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static new Dictionary<string, object> TypeDeterminers
+        public static Dictionary<string, object> TypeDeterminers
         {
             get
             {
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("Type", TypeEnum.SummaryZoomSection);
                 }
                 return s_typeDeterminers;
             }
@@ -70,9 +82,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public SummaryZoomSection() : base()
+        public SlidesLayoutOptions() : base()
         {
-            Type = TypeEnum.SummaryZoomSection;
         }
 
         /// <summary>
@@ -82,34 +93,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class SummaryZoomSection {\n");
-            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
-            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  Width: ").Append(this.Width).Append("\n");
-            sb.Append("  Height: ").Append(this.Height).Append("\n");
-            sb.Append("  AlternativeText: ").Append(this.AlternativeText).Append("\n");
-            sb.Append("  AlternativeTextTitle: ").Append(this.AlternativeTextTitle).Append("\n");
-            sb.Append("  Hidden: ").Append(this.Hidden).Append("\n");
-            sb.Append("  IsDecorative: ").Append(this.IsDecorative).Append("\n");
-            sb.Append("  X: ").Append(this.X).Append("\n");
-            sb.Append("  Y: ").Append(this.Y).Append("\n");
-            sb.Append("  ZOrderPosition: ").Append(this.ZOrderPosition).Append("\n");
-            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-            sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
-            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
-            sb.Append("  HyperlinkClick: ").Append(this.HyperlinkClick).Append("\n");
-            sb.Append("  HyperlinkMouseOver: ").Append(this.HyperlinkMouseOver).Append("\n");
-            sb.Append("  Type: ").Append(this.Type).Append("\n");
-            sb.Append("  ImageType: ").Append(this.ImageType).Append("\n");
-            sb.Append("  ReturnToParent: ").Append(this.ReturnToParent).Append("\n");
-            sb.Append("  ShowBackground: ").Append(this.ShowBackground).Append("\n");
-            sb.Append("  Image: ").Append(this.Image).Append("\n");
-            sb.Append("  TransitionDuration: ").Append(this.TransitionDuration).Append("\n");
-            sb.Append("  TargetSectionIndex: ").Append(this.TargetSectionIndex).Append("\n");
-            sb.Append("  Title: ").Append(this.Title).Append("\n");
-            sb.Append("  Description: ").Append(this.Description).Append("\n");
+            sb.Append("class SlidesLayoutOptions {\n");
+            sb.Append("  LayoutType: ").Append(this.LayoutType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

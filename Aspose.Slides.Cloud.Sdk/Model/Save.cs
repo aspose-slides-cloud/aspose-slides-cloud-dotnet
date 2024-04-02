@@ -170,7 +170,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// <summary>
             /// Enum Mpeg4 for "Mpeg4"
             /// </summary>
-            Mpeg4
+            Mpeg4,
+            
+            /// <summary>
+            /// Enum Md for "Md"
+            /// </summary>
+            Md
         }
 
         /// <summary>

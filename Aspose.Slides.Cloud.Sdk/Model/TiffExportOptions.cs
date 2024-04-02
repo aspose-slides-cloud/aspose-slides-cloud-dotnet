@@ -113,51 +113,52 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// Gets or sets the position of the notes on the page.
+        /// Specifies the algorithm for converting a color image into a black and white image. This option will applied only if Aspose.Slides.Export.TiffOptions.CompressionType is set to Aspose.Slides.Export.TiffCompressionTypes.CCITT4 or Aspose.Slides.Export.TiffCompressionTypes.CCITT3.
         /// </summary>
-        /// <value>Gets or sets the position of the notes on the page.</value>
+        /// <value>Specifies the algorithm for converting a color image into a black and white image. This option will applied only if Aspose.Slides.Export.TiffOptions.CompressionType is set to Aspose.Slides.Export.TiffCompressionTypes.CCITT4 or Aspose.Slides.Export.TiffCompressionTypes.CCITT3.</value>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum NotesPositionEnum
+        public enum BwConversionModeEnum
         {
             
             /// <summary>
-            /// Enum None for "None"
+            /// Enum Default for "Default"
             /// </summary>
-            None,
+            Default,
             
             /// <summary>
-            /// Enum BottomFull for "BottomFull"
+            /// Enum Dithering for "Dithering"
             /// </summary>
-            BottomFull,
+            Dithering,
             
             /// <summary>
-            /// Enum BottomTruncated for "BottomTruncated"
+            /// Enum DitheringFloydSteinberg for "DitheringFloydSteinberg"
             /// </summary>
-            BottomTruncated
-        }
-
-        /// <summary>
-        /// Gets or sets the position of the comments on the page.
-        /// </summary>
-        /// <value>Gets or sets the position of the comments on the page.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum CommentsPositionEnum
-        {
+            DitheringFloydSteinberg,
             
             /// <summary>
-            /// Enum None for "None"
+            /// Enum Auto for "Auto"
             /// </summary>
-            None,
+            Auto,
             
             /// <summary>
-            /// Enum Bottom for "Bottom"
+            /// Enum AutoOtsu for "AutoOtsu"
             /// </summary>
-            Bottom,
+            AutoOtsu,
             
             /// <summary>
-            /// Enum Right for "Right"
+            /// Enum Threshold25 for "Threshold25"
             /// </summary>
-            Right
+            Threshold25,
+            
+            /// <summary>
+            /// Enum Threshold50 for "Threshold50"
+            /// </summary>
+            Threshold50,
+            
+            /// <summary>
+            /// Enum Threshold75 for "Threshold75"
+            /// </summary>
+            Threshold75
         }
 
         /// <summary>
@@ -171,14 +172,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public PixelFormatEnum? PixelFormat { get; set; }
 
         /// <summary>
-        /// Gets or sets the position of the notes on the page.
+        /// Specifies the algorithm for converting a color image into a black and white image. This option will applied only if Aspose.Slides.Export.TiffOptions.CompressionType is set to Aspose.Slides.Export.TiffCompressionTypes.CCITT4 or Aspose.Slides.Export.TiffCompressionTypes.CCITT3.
         /// </summary>
-        public NotesPositionEnum? NotesPosition { get; set; }
-
-        /// <summary>
-        /// Gets or sets the position of the comments on the page.
-        /// </summary>
-        public CommentsPositionEnum? CommentsPosition { get; set; }
+        public BwConversionModeEnum? BwConversionMode { get; set; }
 
         /// <summary>
         /// Horizontal resolution, in dots per inch.
@@ -196,19 +192,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public bool? ShowHiddenSlides { get; set; }
 
         /// <summary>
-        /// Gets or sets the width of the comment output area in pixels (Applies only if comments are displayed on the right).
+        /// Slides layouting options
         /// </summary>
-        public int? CommentsAreaWidth { get; set; }
-
-        /// <summary>
-        /// Gets or sets the color of comments area (Applies only if comments are displayed on the right).
-        /// </summary>
-        public string CommentsAreaColor { get; set; }
-
-        /// <summary>
-        /// True if comments that have no author are displayed. (Applies only if comments are displayed).
-        /// </summary>
-        public bool? ShowCommentsByNoAuthor { get; set; }
+        public SlidesLayoutOptions SlidesLayoutOptions { get; set; }
 
 
         /// <summary>
@@ -255,11 +241,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  DpiY: ").Append(this.DpiY).Append("\n");
             sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
             sb.Append("  PixelFormat: ").Append(this.PixelFormat).Append("\n");
-            sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
-            sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
-            sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
-            sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
-            sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
+            sb.Append("  SlidesLayoutOptions: ").Append(this.SlidesLayoutOptions).Append("\n");
+            sb.Append("  BwConversionMode: ").Append(this.BwConversionMode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

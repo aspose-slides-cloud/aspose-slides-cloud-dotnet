@@ -2288,6 +2288,46 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Deletes cropped areas of a pictire. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index (must refer to a picture frame).</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void DeletePictureCroppedAreas(string name, int slideIndex, int shapeIndex, string password, string folder, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeletePictureCroppedAreas");
+            }
+            // verify the required parameter 'password' is set
+            if (password == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'password' when calling DeletePictureCroppedAreas");
+            }
+            // verify the required parameter 'folder' is set
+            if (folder == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'folder' when calling DeletePictureCroppedAreas");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/pictureCroppedAreas");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            InvokeVoidApi(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Remove a portion. 
         /// </summary>
         /// <param name="name">Document name.</param> 

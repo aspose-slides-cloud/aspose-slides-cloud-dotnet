@@ -160,7 +160,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// <summary>
             /// Enum Html5 for "Html5"
             /// </summary>
-            Html5
+            Html5,
+            
+            /// <summary>
+            /// Enum Md for "Md"
+            /// </summary>
+            Md
         }
 
         /// <summary>

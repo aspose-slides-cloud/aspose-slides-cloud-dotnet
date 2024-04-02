@@ -265,6 +265,24 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.Greater(response.Length, 0);
         }
 
+        [Test]
+        public void ConvertWithSlideLayoutOptions()
+        {
+            PdfExportOptions exportOptions = new PdfExportOptions
+            {
+                SlidesLayoutOptions = new HandoutLayoutingOptions
+                {
+                    Handout = HandoutLayoutingOptions.HandoutEnum.Handouts2,
+                    PrintSlideNumbers = true
+                }
+            };
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Stream response = TestUtils.SlidesApi.DownloadPresentation(
+                c_fileName, ExportFormat.Pdf, exportOptions, c_password, c_folderName);
+            Assert.IsNotNull(response);
+            Assert.Greater(response.Length, 0);
+        }
+
         const string c_outPath = c_folderName + "/converted.pdf";
         const ExportFormat c_format = ExportFormat.Pdf;
         const SlideExportFormat c_slideFormat = SlideExportFormat.Pdf;

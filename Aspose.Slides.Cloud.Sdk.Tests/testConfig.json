@@ -3,6 +3,6 @@
     "ClientSecret": "@your_client_secret@",
     "BaseUrl": "https://slides-cloud.qa.aspose.cloud",
     "AsyncBaseUrl": "https://slides-cloud-async-api.qa.aspose.cloud",
-    "AuthBaseUrl" : "https://api-qa.aspose.cloud",
+    "AuthBaseUrl" : "https://id-qa.aspose.cloud",
     "Debug" : false
 }

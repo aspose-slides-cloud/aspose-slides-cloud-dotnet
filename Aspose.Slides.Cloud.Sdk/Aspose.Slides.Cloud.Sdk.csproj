@@ -170,6 +170,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\GrayScaleEffect.cs" />
     <Compile Include="Model\GroupShape.cs" />
     <Compile Include="Model\GroupingCharacterElement.cs" />
+    <Compile Include="Model\HandoutLayoutingOptions.cs" />
     <Compile Include="Model\HeaderFooter.cs" />
     <Compile Include="Model\HslEffect.cs" />
     <Compile Include="Model\Html5ExportOptions.cs" />
@@ -207,6 +208,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\NaryOperatorElement.cs" />
     <Compile Include="Model\NoFill.cs" />
     <Compile Include="Model\NormalViewRestoredProperties.cs" />
+    <Compile Include="Model\NotesCommentsLayoutingOptions.cs" />
     <Compile Include="Model\NotesSlide.cs" />
     <Compile Include="Model\NotesSlideExportFormat.cs" />
     <Compile Include="Model\NotesSlideHeaderFooter.cs" />
@@ -286,6 +288,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\SlideShowProperties.cs" />
     <Compile Include="Model\SlideShowTransition.cs" />
     <Compile Include="Model\Slides.cs" />
+    <Compile Include="Model\SlidesLayoutOptions.cs" />
     <Compile Include="Model\SmartArt.cs" />
     <Compile Include="Model\SmartArtNode.cs" />
     <Compile Include="Model\SmartArtShape.cs" />

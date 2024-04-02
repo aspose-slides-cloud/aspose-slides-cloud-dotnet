@@ -49,6 +49,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? AnimateShapes { get; set; }
 
+        /// <summary>
+        /// Gets or sets embed images option.
+        /// </summary>
+        public bool? EmbedImages { get; set; }
+
+        /// <summary>
+        /// Slides layouting options
+        /// </summary>
+        public NotesCommentsLayoutingOptions NotesCommentsLayouting { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -89,6 +99,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  AnimateTransitions: ").Append(this.AnimateTransitions).Append("\n");
             sb.Append("  AnimateShapes: ").Append(this.AnimateShapes).Append("\n");
+            sb.Append("  EmbedImages: ").Append(this.EmbedImages).Append("\n");
+            sb.Append("  NotesCommentsLayouting: ").Append(this.NotesCommentsLayouting).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
