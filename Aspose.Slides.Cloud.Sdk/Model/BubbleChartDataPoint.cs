@@ -87,6 +87,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  Marker: ").Append(this.Marker).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("  XValue: ").Append(this.XValue).Append("\n");
             sb.Append("  YValue: ").Append(this.YValue).Append("\n");

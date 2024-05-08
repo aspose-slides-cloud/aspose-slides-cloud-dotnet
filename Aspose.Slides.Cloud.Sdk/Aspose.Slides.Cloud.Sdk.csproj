@@ -197,9 +197,11 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\LineToPathSegment.cs" />
     <Compile Include="Model\Literals.cs" />
     <Compile Include="Model\LuminanceEffect.cs" />
+    <Compile Include="Model\MarkdownExportOptions.cs" />
     <Compile Include="Model\MasterSlide.cs" />
     <Compile Include="Model\MasterSlides.cs" />
     <Compile Include="Model\MathElement.cs" />
+    <Compile Include="Model\MathFormat.cs" />
     <Compile Include="Model\MathParagraph.cs" />
     <Compile Include="Model\MatrixElement.cs" />
     <Compile Include="Model\Merge.cs" />

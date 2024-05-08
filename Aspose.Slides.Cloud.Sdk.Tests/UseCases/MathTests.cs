@@ -155,8 +155,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void MathDownload()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Stream mathMl = TestUtils.SlidesApi.DownloadPortionAsMathMl(
-                c_fileName, c_slideIndex, c_shapeIndex, c_paragraphIndex, c_portionIndex, c_password, c_folderName);
+            Stream mathMl = TestUtils.SlidesApi.DownloadMathPortion(
+                c_fileName, c_slideIndex, c_shapeIndex, c_paragraphIndex, c_portionIndex, MathFormat.MathML, c_password, c_folderName);
             Assert.IsNotNull(mathMl);
             Assert.Greater(mathMl.Length, 0);
             Assert.IsTrue(mathMl.CanRead);
@@ -166,8 +166,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void MathDownloadNull()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.DownloadPortionAsMathMl(
-                c_fileName, c_slideIndex, c_notMathShapeIndex, c_paragraphIndex, c_portionIndex, c_password, c_folderName));
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.DownloadMathPortion(
+                c_fileName, c_slideIndex, c_notMathShapeIndex, c_paragraphIndex, c_portionIndex, MathFormat.MathML, c_password, c_folderName));
         }
 
         [Test]
@@ -175,8 +175,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             const string outPath = c_folderName + "/mathml.xml";
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            TestUtils.SlidesApi.SavePortionAsMathMl(
-                c_fileName, c_slideIndex, c_shapeIndex, c_paragraphIndex, c_portionIndex, outPath, c_password, c_folderName);
+            TestUtils.SlidesApi.SaveMathPortion(
+                c_fileName, c_slideIndex, c_shapeIndex, c_paragraphIndex, c_portionIndex, MathFormat.MathML, outPath, c_password, c_folderName);
             ObjectExist exists = TestUtils.SlidesApi.ObjectExists(outPath);
             Assert.IsTrue(exists.Exists.Value);
         }

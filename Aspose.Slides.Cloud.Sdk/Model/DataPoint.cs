@@ -87,6 +87,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public LineFormat LineFormat { get; set; }
 
+        /// <summary>
+        /// Gets or sets the marker.
+        /// </summary>
+        public SeriesMarker Marker { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -123,6 +128,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
             sb.Append("  ThreeDFormat: ").Append(this.ThreeDFormat).Append("\n");
             sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("  Marker: ").Append(this.Marker).Append("\n");
             sb.Append("  Type: ").Append(this.Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

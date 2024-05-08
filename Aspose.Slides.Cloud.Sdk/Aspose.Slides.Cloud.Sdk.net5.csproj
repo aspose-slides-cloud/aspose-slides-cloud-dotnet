@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Aspose.Slides.Cloud.Sdk</AssemblyName>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>24.3.0</Version>
+    <Version>24.4.0</Version>
     <Product>Aspose.Slides for Cloud SDK</Product>
     <Authors />
     <Company>Aspose</Company>
