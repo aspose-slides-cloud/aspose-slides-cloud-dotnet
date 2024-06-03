@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ChartTitle.cs">
+// <copyright company="Aspose" file="PdfImportOptions.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,54 +35,14 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents chart title
+    /// PDF import options.
     /// </summary>  
-    public class ChartTitle 
+    public class PdfImportOptions 
     {                       
         /// <summary>
-        /// Get or sets the text.
+        /// True to detect tables.
         /// </summary>
-        public string Text { get; set; }
-
-        /// <summary>
-        /// the X location
-        /// </summary>
-        public double? X { get; set; }
-
-        /// <summary>
-        /// the Y location
-        /// </summary>
-        public double? Y { get; set; }
-
-        /// <summary>
-        /// Width
-        /// </summary>
-        public double? Width { get; set; }
-
-        /// <summary>
-        /// Height
-        /// </summary>
-        public double? Height { get; set; }
-
-        /// <summary>
-        /// true if other elements are allowed to overlay the legend
-        /// </summary>
-        public bool? Overlay { get; set; }
-
-        /// <summary>
-        /// Get or sets the fill format.
-        /// </summary>
-        public FillFormat FillFormat { get; set; }
-
-        /// <summary>
-        /// Get or sets the effect format.
-        /// </summary>
-        public EffectFormat EffectFormat { get; set; }
-
-        /// <summary>
-        /// Get or sets the line format.
-        /// </summary>
-        public LineFormat LineFormat { get; set; }
+        public bool? DetectTables { get; set; }
 
 
         /// <summary>
@@ -104,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public ChartTitle() : base()
+        public PdfImportOptions() : base()
         {
         }
 
@@ -115,16 +75,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class ChartTitle {\n");
-            sb.Append("  Text: ").Append(this.Text).Append("\n");
-            sb.Append("  X: ").Append(this.X).Append("\n");
-            sb.Append("  Y: ").Append(this.Y).Append("\n");
-            sb.Append("  Width: ").Append(this.Width).Append("\n");
-            sb.Append("  Height: ").Append(this.Height).Append("\n");
-            sb.Append("  Overlay: ").Append(this.Overlay).Append("\n");
-            sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");
-            sb.Append("  EffectFormat: ").Append(this.EffectFormat).Append("\n");
-            sb.Append("  LineFormat: ").Append(this.LineFormat).Append("\n");
+            sb.Append("class PdfImportOptions {\n");
+            sb.Append("  DetectTables: ").Append(this.DetectTables).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

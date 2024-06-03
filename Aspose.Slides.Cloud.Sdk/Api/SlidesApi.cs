@@ -6033,11 +6033,12 @@ namespace Aspose.Slides.Cloud.Sdk
         /// </summary>
         /// <param name="name">Document name.</param> 
         /// <param name="pdf">PDF data.</param> 
+        /// <param name="options">Import options.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Document"/></returns>            
-        public Document ImportFromPdf(string name, System.IO.Stream pdf, string password = null, string folder = null, string storage = null)
+        public Document ImportFromPdf(string name, System.IO.Stream pdf, PdfImportOptions options = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6057,12 +6058,13 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
             var requestFiles = new List<FileInfo>();
             if (pdf != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "pdf", Content = pdf });
             }
-            return InvokeApi<Document>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+            return InvokeApi<Document>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>

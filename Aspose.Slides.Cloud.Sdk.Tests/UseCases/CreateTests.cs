@@ -114,7 +114,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             int slideCount = TestUtils.SlidesApi.GetSlides(c_fileName, c_password, c_folderName).SlideList.Count;
             Stream pdf = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_pdfFileName));
-            Document updated = TestUtils.SlidesApi.ImportFromPdf(c_fileName, pdf, c_password, c_folderName);
+            PdfImportOptions options = new PdfImportOptions { DetectTables = false };
+            Document updated = TestUtils.SlidesApi.ImportFromPdf(c_fileName, pdf, options, c_password, c_folderName);
             Assert.IsNotNull(updated);
             Assert.Greater(TestUtils.SlidesApi.GetSlides(c_fileName, c_password, c_folderName).SlideList.Count, slideCount);
         }

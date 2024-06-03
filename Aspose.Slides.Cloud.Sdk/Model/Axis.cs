@@ -410,6 +410,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public bool? HasTitle { get; set; }
 
         /// <summary>
+        /// Axis title
+        /// </summary>
+        public ChartTitle Title { get; set; }
+
+        /// <summary>
         /// True the major unit of the axis is automatically assigned
         /// </summary>
         public bool? IsAutomaticMajorUnit { get; set; }
@@ -573,6 +578,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("class Axis {\n");
             sb.Append("  IsVisible: ").Append(this.IsVisible).Append("\n");
             sb.Append("  HasTitle: ").Append(this.HasTitle).Append("\n");
+            sb.Append("  Title: ").Append(this.Title).Append("\n");
             sb.Append("  Position: ").Append(this.Position).Append("\n");
             sb.Append("  DisplayUnit: ").Append(this.DisplayUnit).Append("\n");
             sb.Append("  BaseUnitScale: ").Append(this.BaseUnitScale).Append("\n");

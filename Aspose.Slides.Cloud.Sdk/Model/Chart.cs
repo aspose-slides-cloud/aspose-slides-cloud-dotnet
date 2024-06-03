@@ -484,6 +484,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public DataSource DataSourceForCategories { get; set; }
 
         /// <summary>
+        /// True if the chart has a title.
+        /// </summary>
+        public bool? HasTitle { get; set; }
+
+        /// <summary>
         /// Gets or sets the title.
         /// </summary>
         public ChartTitle Title { get; set; }
@@ -586,6 +591,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Series: ").Append(this.Series).Append("\n");
             sb.Append("  Categories: ").Append(this.Categories).Append("\n");
             sb.Append("  DataSourceForCategories: ").Append(this.DataSourceForCategories).Append("\n");
+            sb.Append("  HasTitle: ").Append(this.HasTitle).Append("\n");
             sb.Append("  Title: ").Append(this.Title).Append("\n");
             sb.Append("  BackWall: ").Append(this.BackWall).Append("\n");
             sb.Append("  SideWall: ").Append(this.SideWall).Append("\n");

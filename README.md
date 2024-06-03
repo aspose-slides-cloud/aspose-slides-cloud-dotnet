@@ -25,6 +25,13 @@ You may want to check out Aspose free [Powerpoint to PDF](https://products.aspos
 **Web:** HTML/HTML5
 **Other:** MPEG4, SWF (export whole presentations)
 
+## Enhancements in Version 24.5
+
+* Added **options** parameter to **ImportFromPdf** method. You can specify **options.DetectTables** property to control import behavior.
+* Added **Title** property to **Axis** class for charts.
+* Added **X**, **Y**, **Width**, **Height**, **Overlay**, **FillFormat**, **EffectFormat** and **LineFormat** properties to **ChartTitle** class.
+* Added **HasTitle** property to **Chart** class; removed **HasTitle** property from **ChartTitle** class.
+
 ## Enhancements in Version 24.4
 
 * Added **DownloadMathPortion** and **SaveMathPortion** methods to convert math portions to math markup formats (MathML or LaTeX). See [documentation](https://docs.aspose.cloud/slides/export-a-math-formula/) for more info. **DownloadPortionAsMathML** and **SavePortionAsMathML** methods are deprecated and will be removed after 24.6.
@@ -77,9 +84,10 @@ From Package Manager:
 The example code below converts a PowerPoint document to PDF format using Aspose.Slides-Cloud library:
 ```csharp
 SlidesApi slidesApi = new SlidesApi("MyClientId", "MyClientSecret");
-Stream presentation = File.OpenRead("MyPresentation.pptx");
-Stream pdf = slidesApi.Convert(presentation, ExportFormat.Pdf);
-pdf.CopyTo(File.OpenWrite("MyPresentation.pdf"));
+using Stream presentation = File.OpenRead("MyPresentation.pptx");
+using Stream result = slidesApi.Convert(presentation, ExportFormat.Pdf);
+using Stream pdf = File.OpenWrite("MyPresentation.pdf");
+result.CopyTo(pdf);
 ```
 You can check more [Examples](Examples) of using the SDK.
 

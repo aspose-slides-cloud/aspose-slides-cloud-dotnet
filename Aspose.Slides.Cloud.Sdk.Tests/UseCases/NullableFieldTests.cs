@@ -61,7 +61,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 ChartType = Chart.ChartTypeEnum.Line,
                 Width = 400,
                 Height = 300,
-                Title = new ChartTitle { HasTitle = true, Text = "MyTitle" },
+                HasTitle = true,
+                Title = new ChartTitle { Text = "MyTitle" },
                 Series = new List<Series>
                 {
                     new OneValueSeries
