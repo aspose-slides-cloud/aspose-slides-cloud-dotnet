@@ -197,6 +197,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public AccessPermissions AccessPermissions { get; set; }
 
+        /// <summary>
+        /// True to hide Ink elements in exported document.
+        /// </summary>
+        public bool? HideInk { get; set; }
+
+        /// <summary>
+        /// True to use ROP operation or Opacity for rendering brush.
+        /// </summary>
+        public bool? InterpretMaskOpAsOpacity { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -250,6 +260,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  ImageTransparentColor: ").Append(this.ImageTransparentColor).Append("\n");
             sb.Append("  ApplyImageTransparent: ").Append(this.ApplyImageTransparent).Append("\n");
             sb.Append("  AccessPermissions: ").Append(this.AccessPermissions).Append("\n");
+            sb.Append("  HideInk: ").Append(this.HideInk).Append("\n");
+            sb.Append("  InterpretMaskOpAsOpacity: ").Append(this.InterpretMaskOpAsOpacity).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -68,9 +68,16 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
             FormatHeaders(sb, request.Headers);
             if (streamToSend != null)
             {
-                streamToSend.Position = 0;
-                StreamHelper.CopyStreamToStringBuilder(sb, streamToSend);
-                streamToSend.Position = 0;
+                if (!request.ContentType.Contains("multipart"))
+                {
+                    streamToSend.Position = 0;
+                    StreamHelper.CopyStreamToStringBuilder(sb, streamToSend);
+                    streamToSend.Position = 0;
+                }
+                else
+                {
+                    sb.AppendLine(string.Format("Multipart content ({0} bytes)\n", streamToSend.Length));
+                }
             }
             Log(header, sb);            
         }
@@ -80,7 +87,16 @@ namespace Aspose.Slides.Cloud.Sdk.RequestHandlers
             string header = string.Format("\r\nResponse {0}: {1}", (int)response.StatusCode, response.StatusCode);
             StringBuilder sb = new StringBuilder();
             FormatHeaders(sb, response.Headers);
-            StreamHelper.CopyStreamToStringBuilder(sb, resultStream);
+            if (string.IsNullOrEmpty(response.ContentType)
+                || response.ContentType.Contains("json")
+                || response.ContentType.Contains("text"))
+            {
+                StreamHelper.CopyStreamToStringBuilder(sb, resultStream);
+            }
+            else
+            {
+                sb.AppendLine(string.Format("Binary content ({0} bytes)\n", resultStream.Length));
+            }
             Log(header, sb);
         }
 

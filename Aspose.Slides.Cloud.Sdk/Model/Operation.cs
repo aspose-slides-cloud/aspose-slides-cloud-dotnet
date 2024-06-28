@@ -141,11 +141,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public DateTime? Created { get; set; }
 
         /// <summary>
-        /// Gets or sets Enqueued
-        /// </summary>
-        public DateTime? Enqueued { get; set; }
-
-        /// <summary>
         /// Gets or sets Started
         /// </summary>
         public DateTime? Started { get; set; }
@@ -207,7 +202,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Status: ").Append(this.Status).Append("\n");
             sb.Append("  Progress: ").Append(this.Progress).Append("\n");
             sb.Append("  Created: ").Append(this.Created).Append("\n");
-            sb.Append("  Enqueued: ").Append(this.Enqueued).Append("\n");
             sb.Append("  Started: ").Append(this.Started).Append("\n");
             sb.Append("  Failed: ").Append(this.Failed).Append("\n");
             sb.Append("  Canceled: ").Append(this.Canceled).Append("\n");
