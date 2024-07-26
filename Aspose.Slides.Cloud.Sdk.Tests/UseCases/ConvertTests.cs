@@ -25,6 +25,7 @@
 
 using System.Collections.Generic;
 using System.IO;
+using System.Linq.Expressions;
 using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
@@ -279,6 +280,33 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Stream response = TestUtils.SlidesApi.DownloadPresentation(
                 c_fileName, ExportFormat.Pdf, exportOptions, c_password, c_folderName);
+            Assert.IsNotNull(response);
+            Assert.Greater(response.Length, 0);
+        }
+
+        [Test]
+        public void ConvertWithCustomHtml5Templates()
+        {
+            const string templatesPath = "Html5Templates";
+            const string templateFileName = "pictureFrame.html";
+            TestUtils.SlidesApi.CreateFolder(templatesPath);
+            TestUtils.Upload(templateFileName, templatesPath + "/" + templateFileName);
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Html5ExportOptions exportOptions = new Html5ExportOptions
+            {
+                TemplatesPath = templatesPath,
+                AnimateTransitions = true
+            };
+            Stream response = TestUtils.SlidesApi.DownloadPresentation(
+                c_fileName, ExportFormat.Html5, exportOptions, c_password, c_folderName);
+            Assert.IsNotNull(response);
+            Assert.Greater(response.Length, 0);
+        }
+
+        [Test]
+        public void GetHtml5Templates()
+        {
+            Stream response = TestUtils.SlidesApi.GetHtml5Templates();
             Assert.IsNotNull(response);
             Assert.Greater(response.Length, 0);
         }

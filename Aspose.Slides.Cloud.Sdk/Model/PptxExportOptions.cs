@@ -40,9 +40,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class PptxExportOptions : ExportOptions 
     {                       
         /// <summary>
-        /// The conformance class to which the PresentationML document conforms. Read/write Conformance.
+        /// The conformance class to which the PresentationML document conforms.
         /// </summary>
-        /// <value>The conformance class to which the PresentationML document conforms. Read/write Conformance.</value>
+        /// <value>The conformance class to which the PresentationML document conforms.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ConformanceEnum
         {
@@ -64,9 +64,38 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
-        /// The conformance class to which the PresentationML document conforms. Read/write Conformance.
+        /// Specifies whether the ZIP64 format is used for the Presentation document. The default value is Zip64Mode.IfNecessary.
+        /// </summary>
+        /// <value>Specifies whether the ZIP64 format is used for the Presentation document. The default value is Zip64Mode.IfNecessary.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum Zip64ModeEnum
+        {
+            
+            /// <summary>
+            /// Enum Never for "Never"
+            /// </summary>
+            Never,
+            
+            /// <summary>
+            /// Enum IfNecessary for "IfNecessary"
+            /// </summary>
+            IfNecessary,
+            
+            /// <summary>
+            /// Enum Always for "Always"
+            /// </summary>
+            Always
+        }
+
+        /// <summary>
+        /// The conformance class to which the PresentationML document conforms.
         /// </summary>
         public ConformanceEnum? Conformance { get; set; }
+
+        /// <summary>
+        /// Specifies whether the ZIP64 format is used for the Presentation document. The default value is Zip64Mode.IfNecessary.
+        /// </summary>
+        public Zip64ModeEnum? Zip64Mode { get; set; }
 
 
         /// <summary>
@@ -103,10 +132,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class PptxExportOptions {\n");
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
+            sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  Conformance: ").Append(this.Conformance).Append("\n");
+            sb.Append("  Zip64Mode: ").Append(this.Zip64Mode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -3775,40 +3775,6 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
-        /// Convert Mathematical Text to MathML Format 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="portionIndex">Portion index.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Document storage.</param> 
-        /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadPortionAsMathMl(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling DownloadPortionAsMathMl");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}/mathml");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
         /// Save a presentation to a specified format. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -4438,6 +4404,18 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<FormatScheme>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Get default templates for HTML5 export. 
+        /// </summary>
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream GetHtml5Templates()
+        {
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/html5Templates");
+            var requestFiles = new List<FileInfo>();
+            return InvokeBinaryApi(resourcePath, "GET", null, null, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -6696,11 +6674,12 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="oldValue">Text value to be replaced.</param> 
         /// <param name="newValue">Text value to replace with.</param> 
         /// <param name="ignoreCase">True if character case must be ignored.</param> 
+        /// <param name="wholeWordsOnly">True to replace whole words only.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="DocumentReplaceResult"/></returns>            
-        public DocumentReplaceResult ReplacePresentationText(string name, string oldValue, string newValue, bool? ignoreCase = null, string password = null, string folder = null, string storage = null)
+        public DocumentReplaceResult ReplacePresentationText(string name, string oldValue, string newValue, bool? ignoreCase = null, bool? wholeWordsOnly = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6724,6 +6703,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "oldValue", oldValue);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newValue", newValue);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignoreCase", ignoreCase);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "wholeWordsOnly", wholeWordsOnly);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
@@ -6738,9 +6718,10 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="oldValue">Text value to be replaced.</param> 
         /// <param name="newValue">Text value to replace with.</param> 
         /// <param name="ignoreCase">True if character case must be ignored.</param> 
+        /// <param name="wholeWordsOnly">True to replace whole words only.</param> 
         /// <param name="password">Document password.</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream ReplacePresentationTextOnline(System.IO.Stream document, string oldValue, string newValue, bool? ignoreCase = null, string password = null)
+        public System.IO.Stream ReplacePresentationTextOnline(System.IO.Stream document, string oldValue, string newValue, bool? ignoreCase = null, bool? wholeWordsOnly = null, string password = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -6764,6 +6745,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "oldValue", oldValue);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newValue", newValue);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignoreCase", ignoreCase);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "wholeWordsOnly", wholeWordsOnly);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             if (document != null) 
@@ -6984,47 +6966,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", outPath);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            InvokeVoidApi(resourcePath, "PUT", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Convert Mathematical Text to MathML Format and saves result to the storage 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
-        /// <param name="paragraphIndex">Paragraph index.</param> 
-        /// <param name="portionIndex">Portion index.</param> 
-        /// <param name="outPath">Path to save result.</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Presentation folder.</param> 
-        /// <param name="storage">Presentation storage.</param> 
-        /// <returns><see cref=""/></returns>            
-        public void SavePortionAsMathMl(string name, int slideIndex, int shapeIndex, int paragraphIndex, int portionIndex, string outPath, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling SavePortionAsMathMl");
-            }
-            // verify the required parameter 'outPath' is set
-            if (outPath == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'outPath' when calling SavePortionAsMathMl");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/paragraphs/{paragraphIndex}/portions/{portionIndex}/mathml");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "paragraphIndex", paragraphIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "portionIndex", portionIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", outPath);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);

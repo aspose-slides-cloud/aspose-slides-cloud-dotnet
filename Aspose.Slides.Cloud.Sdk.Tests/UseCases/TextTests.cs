@@ -62,11 +62,15 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             DocumentReplaceResult result = TestUtils.SlidesApi.ReplacePresentationText(
-                c_fileName, c_oldValue, c_newValue, null, c_password, c_folderName);
+                c_fileName, c_oldValue, c_newValue, null, null, c_password, c_folderName);
 
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             DocumentReplaceResult resultIgnoreCase = TestUtils.SlidesApi.ReplacePresentationText(
-                c_fileName, c_oldValue, c_newValue, true, c_password, c_folderName);
+                c_fileName, c_oldValue, c_newValue, true, null, c_password, c_folderName);
+
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            DocumentReplaceResult resultWholeWords = TestUtils.SlidesApi.ReplacePresentationText(
+                c_fileName, c_oldValue, c_newValue, true, true, c_password, c_folderName);
 
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             SlideReplaceResult slideResult = TestUtils.SlidesApi.ReplaceSlideText(
@@ -77,6 +81,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 c_fileName, c_slideIndex, c_oldValue, c_newValue, true, c_password, c_folderName);
 
             Assert.Less(result.Matches, resultIgnoreCase.Matches);
+            Assert.Less(resultWholeWords.Matches, resultIgnoreCase.Matches);
             Assert.Less(slideResult.Matches, result.Matches);
             Assert.Less(slideResult.Matches, slideResultIgnoreCase.Matches);
         }
@@ -85,8 +90,8 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         public void TextReplaceRequest()
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
-            Stream result = TestUtils.SlidesApi.ReplacePresentationTextOnline(file, c_oldValue, c_newValue, null, c_password);
-            Stream resultIgnoreCase = TestUtils.SlidesApi.ReplacePresentationTextOnline(file, c_oldValue, c_newValue, true, c_password);
+            Stream result = TestUtils.SlidesApi.ReplacePresentationTextOnline(file, c_oldValue, c_newValue, null, null, c_password);
+            Stream resultIgnoreCase = TestUtils.SlidesApi.ReplacePresentationTextOnline(file, c_oldValue, c_newValue, true, null, c_password);
             Stream slideResult = TestUtils.SlidesApi.ReplaceSlideTextOnline(file, c_slideIndex, c_oldValue, c_newValue, null, c_password);
             Stream slideResultIgnoreCase = TestUtils.SlidesApi.ReplaceSlideTextOnline(
                 file, c_slideIndex, c_oldValue, c_newValue, true, c_password);

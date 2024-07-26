@@ -173,6 +173,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public double? MarginBottom { get; set; }
 
         /// <summary>
+        /// Transparency.
+        /// </summary>
+        public double? Transparency { get; set; }
+
+        /// <summary>
         /// Fill properties set of the cell.
         /// </summary>
         public FillFormat FillFormat { get; set; }
@@ -266,6 +271,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  MarginRight: ").Append(this.MarginRight).Append("\n");
             sb.Append("  MarginLeft: ").Append(this.MarginLeft).Append("\n");
             sb.Append("  MarginBottom: ").Append(this.MarginBottom).Append("\n");
+            sb.Append("  Transparency: ").Append(this.Transparency).Append("\n");
             sb.Append("  TextAnchorType: ").Append(this.TextAnchorType).Append("\n");
             sb.Append("  TextVerticalType: ").Append(this.TextVerticalType).Append("\n");
             sb.Append("  FillFormat: ").Append(this.FillFormat).Append("\n");

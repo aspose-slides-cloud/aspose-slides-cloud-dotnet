@@ -478,6 +478,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? VerticalBanding { get; set; }
 
+        /// <summary>
+        /// Transparency.
+        /// </summary>
+        public double? Transparency { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -541,6 +546,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  LastRow: ").Append(this.LastRow).Append("\n");
             sb.Append("  RightToLeft: ").Append(this.RightToLeft).Append("\n");
             sb.Append("  VerticalBanding: ").Append(this.VerticalBanding).Append("\n");
+            sb.Append("  Transparency: ").Append(this.Transparency).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

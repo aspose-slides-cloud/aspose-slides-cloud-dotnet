@@ -170,7 +170,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Enum Md for "Md"
         /// </summary>
-        Md
+        Md,
+        
+        /// <summary>
+        /// Enum Xml for "Xml"
+        /// </summary>
+        Xml
     }
 
 }

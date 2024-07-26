@@ -207,6 +207,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? InterpretMaskOpAsOpacity { get; set; }
 
+        /// <summary>
+        /// True if text should be rasterized as a bitmap and saved to PDF when the font does not support bold styling. This approach can enhance the quality of text in the resulting PDF for certain fonts.
+        /// </summary>
+        public bool? RasterizeUnsupportedFontStyles { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -242,6 +247,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class PdfExportOptions {\n");
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
+            sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
@@ -262,6 +268,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  AccessPermissions: ").Append(this.AccessPermissions).Append("\n");
             sb.Append("  HideInk: ").Append(this.HideInk).Append("\n");
             sb.Append("  InterpretMaskOpAsOpacity: ").Append(this.InterpretMaskOpAsOpacity).Append("\n");
+            sb.Append("  RasterizeUnsupportedFontStyles: ").Append(this.RasterizeUnsupportedFontStyles).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
