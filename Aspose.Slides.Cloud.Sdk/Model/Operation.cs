@@ -74,7 +74,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// <summary>
             /// Enum MergeAndSave for "MergeAndSave"
             /// </summary>
-            MergeAndSave
+            MergeAndSave,
+            
+            /// <summary>
+            /// Enum Split for "Split"
+            /// </summary>
+            Split,
+            
+            /// <summary>
+            /// Enum UploadAndSplit for "UploadAndSplit"
+            /// </summary>
+            UploadAndSplit
         }
 
         /// <summary>
@@ -163,7 +173,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets Error
         /// </summary>
-        public string Error { get; set; }
+        public OperationError Error { get; set; }
 
 
         /// <summary>

@@ -298,6 +298,92 @@ namespace Aspose.Slides.Cloud.Sdk
             return InvokeApi<string>(resourcePath, "PUT", postBody, headerParams, requestFiles, "application/json");
         }
 
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="name"></param> 
+        /// <param name="format"></param> 
+        /// <param name="options"></param> 
+        /// <param name="width"></param> 
+        /// <param name="height"></param> 
+        /// <param name="from"></param> 
+        /// <param name="to"></param> 
+        /// <param name="destFolder"></param> 
+        /// <param name="password"></param> 
+        /// <param name="folder"></param> 
+        /// <param name="storage"></param> 
+        /// <param name="fontsFolder"></param> 
+        /// <returns><see cref="string"/></returns>            
+        public string StartSplit(string name, SlideExportFormat format, ExportOptions options = null, int? width = null, int? height = null, int? from = null, int? to = null, string destFolder = null, string password = null, string folder = null, string storage = null, string fontsFolder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling StartSplit");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/async/{name}/split/{format}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", width);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", height);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "from", from);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "to", to);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destFolder", destFolder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<string>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="format"></param> 
+        /// <param name="destFolder"></param> 
+        /// <param name="width"></param> 
+        /// <param name="height"></param> 
+        /// <param name="from"></param> 
+        /// <param name="to"></param> 
+        /// <param name="password"></param> 
+        /// <param name="storage"></param> 
+        /// <param name="fontsFolder"></param> 
+        /// <param name="options"></param> 
+        /// <returns><see cref="string"/></returns>            
+        public string StartUploadAndSplit(System.IO.Stream document, SlideExportFormat format, string destFolder = null, int? width = null, int? height = null, int? from = null, int? to = null, string password = null, string storage = null, string fontsFolder = null, ExportOptions options = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling StartUploadAndSplit");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/async/split/{format}");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destFolder", destFolder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "width", width);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "height", height);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "from", from);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "to", to);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsFolder", fontsFolder);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(options); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
+            }
+            return InvokeApi<string>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
         protected override string GetBaseUrl(Configuration configuration)
         {
             return configuration.GetSlidesAsyncApiRootUrl();

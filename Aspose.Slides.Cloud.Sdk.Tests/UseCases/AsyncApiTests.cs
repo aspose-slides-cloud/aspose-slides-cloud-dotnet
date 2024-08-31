@@ -219,6 +219,62 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void AsyncSplit()
+        {
+            const string outFolder = "splitResult";
+            TestUtils.SlidesApi.DeleteFolder(outFolder, null, true);
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            string operationId = TestUtils.SlidesAsyncApi.StartSplit(
+                c_fileName, SlideExportFormat.Png, null, null, null, null, null, outFolder, c_password, c_folderName);
+
+            Operation operation = null;
+
+            for (int i = 0; i < c_maxTries; i++)
+            {
+                Thread.Sleep(c_sleepTimeout);
+                operation = TestUtils.SlidesAsyncApi.GetOperationStatus(operationId);
+                if (operation.Status != Operation.StatusEnum.Created
+                    && operation.Status != Operation.StatusEnum.Enqueued
+                    && operation.Status != Operation.StatusEnum.Started)
+                {
+                    break;
+                }
+            }
+            Assert.AreEqual(Operation.StatusEnum.Finished, operation.Status);
+            Assert.IsNull(operation.Error);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(outFolder);
+            Assert.IsTrue(exists.Exists.Value);
+        }
+
+        [Test]
+        public void AsyncUploadAndSplit()
+        {
+            const string outFolder = "splitResult";
+            TestUtils.SlidesApi.DeleteFolder(outFolder, null, true);
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            string operationId = TestUtils.SlidesAsyncApi.StartUploadAndSplit(
+                file, SlideExportFormat.Png, outFolder, null, null, null, null, c_password);
+
+            Operation operation = null;
+
+            for (int i = 0; i < c_maxTries; i++)
+            {
+                Thread.Sleep(c_sleepTimeout);
+                operation = TestUtils.SlidesAsyncApi.GetOperationStatus(operationId);
+                if (operation.Status != Operation.StatusEnum.Created
+                    && operation.Status != Operation.StatusEnum.Enqueued
+                    && operation.Status != Operation.StatusEnum.Started)
+                {
+                    break;
+                }
+            }
+            Assert.AreEqual(Operation.StatusEnum.Finished, operation.Status);
+            Assert.IsNull(operation.Error);
+            ObjectExist exists = TestUtils.SlidesApi.ObjectExists(outFolder);
+            Assert.IsTrue(exists.Exists.Value);
+        }
+
+        [Test]
         public void AsyncBadOperation()
         {
             string operationId = TestUtils.SlidesAsyncApi.StartDownloadPresentation("IDoNotExist.pptx", c_format);

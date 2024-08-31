@@ -55,7 +55,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             FontsData response = TestUtils.SlidesApi.GetFonts(c_fileName, c_password, c_folderName);
-            Assert.AreEqual(3, response.List.Count);
+            Assert.AreEqual(4, response.List.Count);
         }
         
         [Test]
@@ -63,7 +63,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             FontsData response = TestUtils.SlidesApi.GetFontsOnline(file, c_password);
-            Assert.AreEqual(3, response.List.Count);
+            Assert.AreEqual(4, response.List.Count);
         }
         
         [Test]
@@ -71,7 +71,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             FontsData response = TestUtils.SlidesApi.SetEmbeddedFont(c_fileName, c_fontNameCalibri, false, c_password, c_folderName);
-            Assert.AreEqual(3, response.List.Count);
+            Assert.AreEqual(4, response.List.Count);
             Assert.IsFalse(response.List[0].IsEmbedded.HasValue);
             Assert.IsTrue(response.List[1].IsEmbedded.HasValue);
             Assert.AreEqual(c_fontNameCalibri, response.List[2].FontName);
@@ -92,7 +92,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Stream fontFile = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fontFileName));
             FontsData response = TestUtils.SlidesApi.SetEmbeddedFontFromRequest(fontFile, c_fileName, false, c_password, c_folderName);
-            Assert.AreEqual(3, response.List.Count);
+            Assert.AreEqual(4, response.List.Count);
             Assert.IsFalse(response.List[0].IsEmbedded.HasValue);
             Assert.IsTrue(response.List[1].IsEmbedded.HasValue);
             Assert.AreEqual(c_fontNameCalibri, response.List[2].FontName);

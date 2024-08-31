@@ -5886,17 +5886,102 @@ namespace Aspose.Slides.Cloud.Sdk
         /// Highlight all matches of sample in text frame text using specified color. 
         /// </summary>
         /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index.</param> 
         /// <param name="regex">Regular expression.</param> 
+        /// <param name="color">Highlighting color.</param> 
+        /// <param name="ignoreCase">True to search ignoring char case.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="DocumentReplaceResult"/></returns>            
+        public DocumentReplaceResult HighlightPresentationRegex(string name, string regex, string color, bool? ignoreCase = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling HighlightPresentationRegex");
+            }
+            // verify the required parameter 'regex' is set
+            if (regex == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'regex' when calling HighlightPresentationRegex");
+            }
+            // verify the required parameter 'color' is set
+            if (color == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'color' when calling HighlightPresentationRegex");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/highlightRegex");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "regex", regex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "color", color);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignoreCase", ignoreCase);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<DocumentReplaceResult>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Highlight all matches of sample using specified color. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="text">Text sample to highlight.</param> 
         /// <param name="color">Highlighting color.</param> 
         /// <param name="wholeWordsOnly">Match only whole words.</param> 
         /// <param name="ignoreCase">True to search ignoring char case.</param> 
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="DocumentReplaceResult"/></returns>            
+        public DocumentReplaceResult HighlightPresentationText(string name, string text, string color, bool? wholeWordsOnly = null, bool? ignoreCase = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling HighlightPresentationText");
+            }
+            // verify the required parameter 'text' is set
+            if (text == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'text' when calling HighlightPresentationText");
+            }
+            // verify the required parameter 'color' is set
+            if (color == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'color' when calling HighlightPresentationText");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/highlightText");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "text", text);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "color", color);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "wholeWordsOnly", wholeWordsOnly);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignoreCase", ignoreCase);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<DocumentReplaceResult>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Highlight all matches of sample in text frame text using specified color. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index.</param> 
+        /// <param name="regex">Regular expression.</param> 
+        /// <param name="color">Highlighting color.</param> 
+        /// <param name="ignoreCase">True to search ignoring char case.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
         /// <returns><see cref="Shape"/></returns>            
-        public Shape HighlightShapeRegex(string name, int slideIndex, int shapeIndex, string regex, string color, bool? wholeWordsOnly = null, bool? ignoreCase = null, string password = null, string folder = null, string storage = null)
+        public Shape HighlightShapeRegex(string name, int slideIndex, int shapeIndex, string regex, string color, bool? ignoreCase = null, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5921,7 +6006,6 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "regex", regex);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "color", color);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "wholeWordsOnly", wholeWordsOnly);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignoreCase", ignoreCase);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
@@ -6663,6 +6747,90 @@ namespace Aspose.Slides.Cloud.Sdk
             if (image != null) 
             {
                 requestFiles.Add(new FileInfo { Name = "image", Content = image });
+            }
+            return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Replace text with a new value using a regex. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="pattern">Text value pattern to be replaced.</param> 
+        /// <param name="newValue">Text value to replace with.</param> 
+        /// <param name="ignoreCase">True if character case must be ignored.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Document storage.</param> 
+        /// <returns><see cref="DocumentReplaceResult"/></returns>            
+        public DocumentReplaceResult ReplacePresentationRegex(string name, string pattern, string newValue, bool? ignoreCase = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling ReplacePresentationRegex");
+            }
+            // verify the required parameter 'pattern' is set
+            if (pattern == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'pattern' when calling ReplacePresentationRegex");
+            }
+            // verify the required parameter 'newValue' is set
+            if (newValue == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'newValue' when calling ReplacePresentationRegex");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/replaceRegex");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "pattern", pattern);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newValue", newValue);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignoreCase", ignoreCase);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<DocumentReplaceResult>(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Replace text with a new value using a regex. 
+        /// </summary>
+        /// <param name="document">Document data.</param> 
+        /// <param name="pattern">Text regex pattern to be replaced.</param> 
+        /// <param name="newValue">Text value to replace with.</param> 
+        /// <param name="ignoreCase">True if character case must be ignored.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream ReplacePresentationRegexOnline(System.IO.Stream document, string pattern, string newValue, bool? ignoreCase = null, string password = null)
+        {
+            // verify the required parameter 'document' is set
+            if (document == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling ReplacePresentationRegexOnline");
+            }
+            // verify the required parameter 'pattern' is set
+            if (pattern == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'pattern' when calling ReplacePresentationRegexOnline");
+            }
+            // verify the required parameter 'newValue' is set
+            if (newValue == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'newValue' when calling ReplacePresentationRegexOnline");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/replaceRegex");
+            var headerParams = new Dictionary<string, string>();
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "pattern", pattern);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "newValue", newValue);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "ignoreCase", ignoreCase);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            if (document != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
             return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
         }

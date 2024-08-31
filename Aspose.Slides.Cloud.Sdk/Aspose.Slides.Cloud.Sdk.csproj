@@ -219,6 +219,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\OneValueChartDataPoint.cs" />
     <Compile Include="Model\OneValueSeries.cs" />
     <Compile Include="Model\Operation.cs" />
+    <Compile Include="Model\OperationError.cs" />
     <Compile Include="Model\OperationProgress.cs" />
     <Compile Include="Model\OrderedMergeRequest.cs" />
     <Compile Include="Model\OuterShadowEffect.cs" />

@@ -65,6 +65,10 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
                 c_fileName, c_oldValue, c_newValue, null, null, c_password, c_folderName);
 
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            DocumentReplaceResult resultRegex = TestUtils.SlidesApi.ReplacePresentationRegex(
+                c_fileName, c_oldValue, c_newValue, null, c_password, c_folderName);
+
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             DocumentReplaceResult resultIgnoreCase = TestUtils.SlidesApi.ReplacePresentationText(
                 c_fileName, c_oldValue, c_newValue, true, null, c_password, c_folderName);
 
@@ -80,6 +84,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             SlideReplaceResult slideResultIgnoreCase = TestUtils.SlidesApi.ReplaceSlideText(
                 c_fileName, c_slideIndex, c_oldValue, c_newValue, true, c_password, c_folderName);
 
+            Assert.AreEqual(result.Matches, resultRegex.Matches);
             Assert.Less(result.Matches, resultIgnoreCase.Matches);
             Assert.Less(resultWholeWords.Matches, resultIgnoreCase.Matches);
             Assert.Less(slideResult.Matches, result.Matches);
@@ -91,11 +96,13 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream result = TestUtils.SlidesApi.ReplacePresentationTextOnline(file, c_oldValue, c_newValue, null, null, c_password);
+            Stream resultRegex = TestUtils.SlidesApi.ReplacePresentationRegexOnline(file, c_oldValue, c_newValue, null, c_password);
             Stream resultIgnoreCase = TestUtils.SlidesApi.ReplacePresentationTextOnline(file, c_oldValue, c_newValue, true, null, c_password);
             Stream slideResult = TestUtils.SlidesApi.ReplaceSlideTextOnline(file, c_slideIndex, c_oldValue, c_newValue, null, c_password);
             Stream slideResultIgnoreCase = TestUtils.SlidesApi.ReplaceSlideTextOnline(
                 file, c_slideIndex, c_oldValue, c_newValue, true, c_password);
             Assert.IsTrue(result.CanRead);
+            Assert.IsTrue(resultRegex.CanRead);
             Assert.IsTrue(resultIgnoreCase.CanRead);
             Assert.IsTrue(slideResult.CanRead);
             Assert.IsTrue(slideResultIgnoreCase.CanRead);
@@ -154,8 +161,45 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             const int shapeIndex = 1, slideIndex = 6, paragraphIndex = 1;
             
             TestUtils.SlidesApi.HighlightShapeRegex(
-                c_fileName, slideIndex, shapeIndex, c_highlightRegex, c_highlightColor, null, false, c_password, c_folderName);
+                c_fileName, slideIndex, shapeIndex, c_highlightRegex, c_highlightColor, false, c_password, c_folderName);
 
+            Paragraph para = TestUtils.SlidesApi.GetParagraph(c_fileName, slideIndex, shapeIndex, paragraphIndex, c_password, c_folderName);
+            Assert.AreNotEqual(para.PortionList[0].Text, c_textToHighlight);
+            Assert.AreNotEqual(para.PortionList[0].HighlightColor, c_highlightColor);
+            Assert.AreEqual(para.PortionList[1].Text, c_textToHighlight);
+            Assert.AreEqual(para.PortionList[1].HighlightColor, c_highlightColor);
+        }
+
+        [Test]
+        public void HighlightPresentationText()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            DocumentReplaceResult result = TestUtils.SlidesApi.HighlightPresentationText(
+                c_fileName, c_textToHighlight, c_highlightColor, null, false, c_password, c_folderName);
+            DocumentReplaceResult resultIgnoreCase = TestUtils.SlidesApi.HighlightPresentationText(
+                c_fileName, c_textToHighlight, c_highlightColor, null, true, c_password, c_folderName);
+            Assert.AreEqual(result.Matches, resultIgnoreCase.Matches);
+
+            const int shapeIndex = 1, slideIndex = 6, paragraphIndex = 1;
+            Paragraph para = TestUtils.SlidesApi.GetParagraph(c_fileName, slideIndex, shapeIndex, paragraphIndex, c_password, c_folderName);
+            Assert.AreNotEqual(para.PortionList[0].Text, c_textToHighlight);
+            Assert.AreNotEqual(para.PortionList[0].HighlightColor, c_highlightColor);
+            Assert.AreEqual(para.PortionList[1].Text, c_textToHighlight);
+            Assert.AreEqual(para.PortionList[1].HighlightColor, c_highlightColor);
+        }
+
+        [Test]
+        public void HighlightPresentationRegex()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+
+            DocumentReplaceResult result = TestUtils.SlidesApi.HighlightPresentationRegex(
+                c_fileName, c_highlightRegex, c_highlightColor, false, c_password, c_folderName);
+            DocumentReplaceResult resultIgnoreCase = TestUtils.SlidesApi.HighlightPresentationRegex(
+                c_fileName, c_highlightRegex, c_highlightColor, true, c_password, c_folderName);
+            Assert.AreEqual(result.Matches, resultIgnoreCase.Matches);
+
+            const int shapeIndex = 1, slideIndex = 6, paragraphIndex = 1;
             Paragraph para = TestUtils.SlidesApi.GetParagraph(c_fileName, slideIndex, shapeIndex, paragraphIndex, c_password, c_folderName);
             Assert.AreNotEqual(para.PortionList[0].Text, c_textToHighlight);
             Assert.AreNotEqual(para.PortionList[0].HighlightColor, c_highlightColor);
