@@ -58,6 +58,29 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <summary>
         ///  
         /// </summary>
+        /// <param name="path"></param> 
+        /// <param name="storageName"></param> 
+        /// <param name="versionId"></param> 
+        /// <returns><see cref="System.IO.Stream"/></returns>            
+        public System.IO.Stream Download(string path, string storageName = null, string versionId = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling Download");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/async/storage/file/{path}");
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", storageName);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "versionId", versionId);
+            var requestFiles = new List<FileInfo>();
+            return InvokeBinaryApi(resourcePath, "GET", null, null, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
         /// <param name="id"></param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
         public System.IO.Stream GetOperationResult(string id)
@@ -382,6 +405,38 @@ namespace Aspose.Slides.Cloud.Sdk
                 requestFiles.Add(new FileInfo { Name = "document", Content = document });
             }
             return InvokeApi<string>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="path"></param> 
+        /// <param name="file">File to upload</param> 
+        /// <param name="storageName"></param> 
+        /// <returns><see cref="FilesUploadResult"/></returns>            
+        public FilesUploadResult Upload(string path, System.IO.Stream file, string storageName = null)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'path' when calling Upload");
+            }
+            // verify the required parameter 'file' is set
+            if (file == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'file' when calling Upload");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/async/storage/file/{path}");
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "path", path);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storageName", storageName);
+            var requestFiles = new List<FileInfo>();
+            if (file != null) 
+            {
+                requestFiles.Add(new FileInfo { Name = "file", Content = file });
+            }
+            return InvokeApi<FilesUploadResult>(resourcePath, "PUT", null, null, requestFiles, "application/json");
         }
 
         protected override string GetBaseUrl(Configuration configuration)
