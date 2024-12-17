@@ -49,6 +49,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? VariableScale { get; set; }
 
+        /// <summary>
+        /// Drawing guides
+        /// </summary>
+        public List<DrawingGuide> DrawingGuides { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -83,6 +88,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("class CommonSlideViewProperties {\n");
             sb.Append("  Scale: ").Append(this.Scale).Append("\n");
             sb.Append("  VariableScale: ").Append(this.VariableScale).Append("\n");
+            sb.Append("  DrawingGuides: ").Append(this.DrawingGuides).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

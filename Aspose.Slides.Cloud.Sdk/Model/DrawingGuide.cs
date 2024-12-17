@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ImageExportOptions.cs">
+// <copyright company="Aspose" file="DrawingGuide.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,32 +35,50 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Provides options that control how a presentation is saved in an image format.
+    /// Drawing guide.
     /// </summary>  
-    public class ImageExportOptions : ImageExportOptionsBase 
+    public class DrawingGuide 
     {                       
         /// <summary>
-        /// Show hidden slides. If true, hidden are exported.
+        /// Last used view mode.
         /// </summary>
-        public bool? ShowHiddenSlides { get; set; }
+        /// <value>Last used view mode.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum OrientationEnum
+        {
+            
+            /// <summary>
+            /// Enum Horizontal for "Horizontal"
+            /// </summary>
+            Horizontal,
+            
+            /// <summary>
+            /// Enum Vertical for "Vertical"
+            /// </summary>
+            Vertical
+        }
 
         /// <summary>
-        /// Slides layouting options
+        /// Last used view mode.
         /// </summary>
-        public SlidesLayoutOptions SlidesLayoutOptions { get; set; }
+        public OrientationEnum? Orientation { get; set; }
+
+        /// <summary>
+        /// Horizontal bar state.
+        /// </summary>
+        public double? Position { get; set; }
 
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static new Dictionary<string, object> TypeDeterminers
+        public static Dictionary<string, object> TypeDeterminers
         {
             get
             {
                 if (s_typeDeterminers == null)
                 {
                     s_typeDeterminers = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-                    s_typeDeterminers.Add("Format", "image");
                 }
                 return s_typeDeterminers;
             }
@@ -70,9 +88,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public ImageExportOptions() : base()
+        public DrawingGuide() : base()
         {
-            Format = "image";
         }
 
         /// <summary>
@@ -82,17 +99,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class ImageExportOptions {\n");
-            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
-            sb.Append("  DeleteEmbeddedBinaryObjects: ").Append(this.DeleteEmbeddedBinaryObjects).Append("\n");
-            sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
-            sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
-            sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
-            sb.Append("  Format: ").Append(this.Format).Append("\n");
-            sb.Append("  Height: ").Append(this.Height).Append("\n");
-            sb.Append("  Width: ").Append(this.Width).Append("\n");
-            sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
-            sb.Append("  SlidesLayoutOptions: ").Append(this.SlidesLayoutOptions).Append("\n");
+            sb.Append("class DrawingGuide {\n");
+            sb.Append("  Orientation: ").Append(this.Orientation).Append("\n");
+            sb.Append("  Position: ").Append(this.Position).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

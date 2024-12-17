@@ -210,6 +210,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public CommonSlideViewProperties NotesViewProperties { get; set; }
 
+        /// <summary>
+        /// The grid spacing that should be used for the grid underlying the presentation document, in points.
+        /// </summary>
+        public double? GridSpacing { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -253,6 +258,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  SlideViewProperties: ").Append(this.SlideViewProperties).Append("\n");
             sb.Append("  NotesViewProperties: ").Append(this.NotesViewProperties).Append("\n");
             sb.Append("  ShowComments: ").Append(this.ShowComments).Append("\n");
+            sb.Append("  GridSpacing: ").Append(this.GridSpacing).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

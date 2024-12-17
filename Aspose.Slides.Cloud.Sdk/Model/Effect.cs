@@ -63,6 +63,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             Ascend,
             
             /// <summary>
+            /// Enum FloatUp for "FloatUp"
+            /// </summary>
+            FloatUp,
+            
+            /// <summary>
             /// Enum Blast for "Blast"
             /// </summary>
             Blast,
@@ -221,6 +226,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// Enum Descend for "Descend"
             /// </summary>
             Descend,
+            
+            /// <summary>
+            /// Enum Floatdown for "Floatdown"
+            /// </summary>
+            Floatdown,
             
             /// <summary>
             /// Enum Diamond for "Diamond"
@@ -860,6 +870,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// Enum Center for "Center"
             /// </summary>
             Center,
+            
+            /// <summary>
+            /// Enum ObjectCenter for "ObjectCenter"
+            /// </summary>
+            ObjectCenter,
+            
+            /// <summary>
+            /// Enum SlideCenter for "SlideCenter"
+            /// </summary>
+            SlideCenter,
             
             /// <summary>
             /// Enum Clockwise for "Clockwise"

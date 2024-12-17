@@ -40,6 +40,99 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class PictureFill : FillFormat 
     {                       
         /// <summary>
+        /// The way texture is aligned within the shape. This setting controls the starting point of the texture pattern and how it repeats across the shape.
+        /// </summary>
+        /// <value>The way texture is aligned within the shape. This setting controls the starting point of the texture pattern and how it repeats across the shape.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TileAlignmentEnum
+        {
+            
+            /// <summary>
+            /// Enum TopLeft for "TopLeft"
+            /// </summary>
+            TopLeft,
+            
+            /// <summary>
+            /// Enum Top for "Top"
+            /// </summary>
+            Top,
+            
+            /// <summary>
+            /// Enum TopRight for "TopRight"
+            /// </summary>
+            TopRight,
+            
+            /// <summary>
+            /// Enum Left for "Left"
+            /// </summary>
+            Left,
+            
+            /// <summary>
+            /// Enum Center for "Center"
+            /// </summary>
+            Center,
+            
+            /// <summary>
+            /// Enum Right for "Right"
+            /// </summary>
+            Right,
+            
+            /// <summary>
+            /// Enum BottomLeft for "BottomLeft"
+            /// </summary>
+            BottomLeft,
+            
+            /// <summary>
+            /// Enum Bottom for "Bottom"
+            /// </summary>
+            Bottom,
+            
+            /// <summary>
+            /// Enum BottomRight for "BottomRight"
+            /// </summary>
+            BottomRight,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
+        /// Flips the texture tile around its horizontal, vertical or both axis.
+        /// </summary>
+        /// <value>Flips the texture tile around its horizontal, vertical or both axis.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TileFlipEnum
+        {
+            
+            /// <summary>
+            /// Enum NoFlip for "NoFlip"
+            /// </summary>
+            NoFlip,
+            
+            /// <summary>
+            /// Enum FlipX for "FlipX"
+            /// </summary>
+            FlipX,
+            
+            /// <summary>
+            /// Enum FlipY for "FlipY"
+            /// </summary>
+            FlipY,
+            
+            /// <summary>
+            /// Enum FlipBoth for "FlipBoth"
+            /// </summary>
+            FlipBoth,
+            
+            /// <summary>
+            /// Enum NotDefined for "NotDefined"
+            /// </summary>
+            NotDefined
+        }
+
+        /// <summary>
         /// Fill mode.
         /// </summary>
         /// <value>Fill mode.</value>
@@ -57,6 +150,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             /// </summary>
             Stretch
         }
+
+        /// <summary>
+        /// The way texture is aligned within the shape. This setting controls the starting point of the texture pattern and how it repeats across the shape.
+        /// </summary>
+        public TileAlignmentEnum? TileAlignment { get; set; }
+
+        /// <summary>
+        /// Flips the texture tile around its horizontal, vertical or both axis.
+        /// </summary>
+        public TileFlipEnum? TileFlip { get; set; }
 
         /// <summary>
         /// Fill mode.
@@ -87,6 +190,26 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Picture resolution.
         /// </summary>
         public int? Dpi { get; set; }
+
+        /// <summary>
+        /// The horizontal offset of the texture from the shape's origin in points. A positive value moves the texture to the right, while a negative value moves it to the left.
+        /// </summary>
+        public double? TileOffsetX { get; set; }
+
+        /// <summary>
+        /// The vertical offset of the texture from the shape's origin in points. A positive value moves the texture down, while a negative value moves it up.
+        /// </summary>
+        public double? TileOffsetY { get; set; }
+
+        /// <summary>
+        /// The horizontal scale for the texture fill as a percentage.
+        /// </summary>
+        public double? TileScaleX { get; set; }
+
+        /// <summary>
+        /// The vertical scale for the texture fill as a percentage.
+        /// </summary>
+        public double? TileScaleY { get; set; }
 
         /// <summary>
         /// Internal image link.
@@ -148,6 +271,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  CropRight: ").Append(this.CropRight).Append("\n");
             sb.Append("  CropTop: ").Append(this.CropTop).Append("\n");
             sb.Append("  Dpi: ").Append(this.Dpi).Append("\n");
+            sb.Append("  TileOffsetX: ").Append(this.TileOffsetX).Append("\n");
+            sb.Append("  TileOffsetY: ").Append(this.TileOffsetY).Append("\n");
+            sb.Append("  TileScaleX: ").Append(this.TileScaleX).Append("\n");
+            sb.Append("  TileScaleY: ").Append(this.TileScaleY).Append("\n");
+            sb.Append("  TileAlignment: ").Append(this.TileAlignment).Append("\n");
+            sb.Append("  TileFlip: ").Append(this.TileFlip).Append("\n");
             sb.Append("  Image: ").Append(this.Image).Append("\n");
             sb.Append("  Base64Data: ").Append(this.Base64Data).Append("\n");
             sb.Append("  SvgData: ").Append(this.SvgData).Append("\n");

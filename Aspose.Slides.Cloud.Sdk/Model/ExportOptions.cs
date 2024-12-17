@@ -69,6 +69,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string DefaultRegularFont { get; set; }
 
         /// <summary>
+        /// True to delete delete all embedded binary objects.
+        /// </summary>
+        public bool? DeleteEmbeddedBinaryObjects { get; set; }
+
+        /// <summary>
         /// Gets of sets list of font fallback rules.
         /// </summary>
         public List<FontFallbackRule> FontFallbackRules { get; set; }
@@ -116,6 +121,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class ExportOptions {\n");
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
+            sb.Append("  DeleteEmbeddedBinaryObjects: ").Append(this.DeleteEmbeddedBinaryObjects).Append("\n");
             sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");

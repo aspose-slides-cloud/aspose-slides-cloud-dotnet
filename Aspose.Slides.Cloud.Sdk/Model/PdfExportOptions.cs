@@ -212,6 +212,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? RasterizeUnsupportedFontStyles { get; set; }
 
+        /// <summary>
+        /// True to convert all OLE data from the presentation to embedded files in the resulting PDF.
+        /// </summary>
+        public bool? IncludeOleData { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -247,6 +252,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class PdfExportOptions {\n");
             sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
+            sb.Append("  DeleteEmbeddedBinaryObjects: ").Append(this.DeleteEmbeddedBinaryObjects).Append("\n");
             sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
@@ -269,6 +275,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  HideInk: ").Append(this.HideInk).Append("\n");
             sb.Append("  InterpretMaskOpAsOpacity: ").Append(this.InterpretMaskOpAsOpacity).Append("\n");
             sb.Append("  RasterizeUnsupportedFontStyles: ").Append(this.RasterizeUnsupportedFontStyles).Append("\n");
+            sb.Append("  IncludeOleData: ").Append(this.IncludeOleData).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

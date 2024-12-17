@@ -182,6 +182,40 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Deletes cropped areas of a pictire. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index (must refer to a picture frame).</param> 
+        /// <param name="resolution">Target resolution in DPI.</param> 
+        /// <param name="deletePictureCroppedAreas">true to delete picture cropped areas.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void CompressImage(string name, int slideIndex, int shapeIndex, double? resolution = null, bool? deletePictureCroppedAreas = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CompressImage");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/compressImage");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "resolution", resolution);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "deletePictureCroppedAreas", deletePictureCroppedAreas);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            InvokeVoidApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Convert presentation from request content to format specified. 
         /// </summary>
         /// <param name="document">Document data.</param> 
@@ -2297,6 +2331,7 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Presentation storage.</param> 
         /// <returns><see cref=""/></returns>            
+        [System.Obsolete]
         public void DeletePictureCroppedAreas(string name, int slideIndex, int shapeIndex, string password = null, string folder = null, string storage = null)
         {
             // verify the required parameter 'name' is set
@@ -5143,7 +5178,7 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
         /// <param name="shapeType">Shape type.</param> 
-        /// <param name="subShape">Sub-shape path (e.g. \"3\", \"3/shapes/2).</param> 
+        /// <param name="subShape">Sub-shape path (e.g. \"3\", \"3/shapes/2\").</param> 
         /// <returns><see cref="Shapes"/></returns>            
         public Shapes GetShapes(string name, int slideIndex, string password = null, string folder = null, string storage = null, ShapeType? shapeType = null, string subShape = null)
         {

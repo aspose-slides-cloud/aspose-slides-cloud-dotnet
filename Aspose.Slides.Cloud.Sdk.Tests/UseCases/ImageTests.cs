@@ -128,10 +128,17 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void CompressImage()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            TestUtils.SlidesApi.CompressImage(c_fileName, 2, 2, 150, false, c_password, c_folderName);
+        }
+
+        [Test]
         public void DeletePictureCroppedAreas()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
-            TestUtils.SlidesApi.DeletePictureCroppedAreas(c_fileName, 2, 2, c_password, c_folderName);
+            TestUtils.SlidesApi.CompressImage(c_fileName, 2, 2, null, true, c_password, c_folderName);
         }
 
         [Test]
@@ -139,7 +146,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             //Should throw an exception if shape is not PictureFrame
-            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.DeletePictureCroppedAreas(c_fileName, 2, 3, c_password, c_folderName));
+            Assert.Throws<ApiException>(() => TestUtils.SlidesApi.CompressImage(c_fileName, 2, 3, null, true, c_password, c_folderName));
         }
 
         private const int c_imageIndex = 1;
