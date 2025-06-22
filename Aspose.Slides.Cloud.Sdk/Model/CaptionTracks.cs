@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ExportOptions.cs">
+// <copyright company="Aspose" file="CaptionTracks.cs">
 //   Copyright (c) 2018 Aspose.Slides for Cloud
 // </copyright>
 // <summary>
@@ -35,69 +35,20 @@ using System.Xml.Serialization;
 namespace Aspose.Slides.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents export options for whole presentation.
+    /// Represents list of Links to Paragraphs resources
     /// </summary>  
-    public class ExportOptions 
+    public class CaptionTracks : ResourceBase 
     {                       
         /// <summary>
-        /// Default regular font for rendering the presentation. 
+        /// List of caption tracks.
         /// </summary>
-        /// <value>Default regular font for rendering the presentation. </value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum GradientStyleEnum
-        {
-            
-            /// <summary>
-            /// Enum Default for "Default"
-            /// </summary>
-            Default,
-            
-            /// <summary>
-            /// Enum PowerPointUI for "PowerPointUI"
-            /// </summary>
-            PowerPointUI
-        }
-
-        /// <summary>
-        /// Default regular font for rendering the presentation. 
-        /// </summary>
-        public GradientStyleEnum? GradientStyle { get; set; }
-
-        /// <summary>
-        /// Default regular font for rendering the presentation. 
-        /// </summary>
-        public string DefaultRegularFont { get; set; }
-
-        /// <summary>
-        /// True to delete delete all embedded binary objects.
-        /// </summary>
-        public bool? DeleteEmbeddedBinaryObjects { get; set; }
-
-        /// <summary>
-        /// Gets of sets list of font fallback rules.
-        /// </summary>
-        public List<FontFallbackRule> FontFallbackRules { get; set; }
-
-        /// <summary>
-        /// Gets of sets list of font substitution rules.
-        /// </summary>
-        public List<FontSubstRule> FontSubstRules { get; set; }
-
-        /// <summary>
-        /// True to skip hyperlinks with javascript calls when saving the presentation.
-        /// </summary>
-        public bool? SkipJavaScriptLinks { get; set; }
-
-        /// <summary>
-        /// Gets or sets Format
-        /// </summary>
-        public string Format { get; protected set; }
+        public List<CaptionTrack> Items { get; set; }
 
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
         /// </summary>
-        public static Dictionary<string, object> TypeDeterminers
+        public static new Dictionary<string, object> TypeDeterminers
         {
             get
             {
@@ -113,7 +64,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Create an instance of the object
         /// </summary>
-        public ExportOptions() : base()
+        public CaptionTracks() : base()
         {
         }
 
@@ -124,14 +75,10 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class ExportOptions {\n");
-            sb.Append("  DefaultRegularFont: ").Append(this.DefaultRegularFont).Append("\n");
-            sb.Append("  DeleteEmbeddedBinaryObjects: ").Append(this.DeleteEmbeddedBinaryObjects).Append("\n");
-            sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
-            sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
-            sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
-            sb.Append("  SkipJavaScriptLinks: ").Append(this.SkipJavaScriptLinks).Append("\n");
-            sb.Append("  Format: ").Append(this.Format).Append("\n");
+            sb.Append("class CaptionTracks {\n");
+            sb.Append("  SelfUri: ").Append(this.SelfUri).Append("\n");
+            sb.Append("  AlternateLinks: ").Append(this.AlternateLinks).Append("\n");
+            sb.Append("  Items: ").Append(this.Items).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

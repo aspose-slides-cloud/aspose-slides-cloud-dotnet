@@ -97,6 +97,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public Zip64ModeEnum? Zip64Mode { get; set; }
 
+        /// <summary>
+        /// True to refresh the presentation thumbnail on save
+        /// </summary>
+        public bool? RefreshThumbnail { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -136,9 +141,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
+            sb.Append("  SkipJavaScriptLinks: ").Append(this.SkipJavaScriptLinks).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  Conformance: ").Append(this.Conformance).Append("\n");
             sb.Append("  Zip64Mode: ").Append(this.Zip64Mode).Append("\n");
+            sb.Append("  RefreshThumbnail: ").Append(this.RefreshThumbnail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

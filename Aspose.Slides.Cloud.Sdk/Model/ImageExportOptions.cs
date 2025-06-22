@@ -88,6 +88,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
+            sb.Append("  SkipJavaScriptLinks: ").Append(this.SkipJavaScriptLinks).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  Height: ").Append(this.Height).Append("\n");
             sb.Append("  Width: ").Append(this.Width).Append("\n");

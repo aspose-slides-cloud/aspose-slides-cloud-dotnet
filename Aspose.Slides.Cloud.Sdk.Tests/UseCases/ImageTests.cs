@@ -73,7 +73,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void ImagesDownloadRequest()
         {
-            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream images = TestUtils.SlidesApi.DownloadImagesDefaultFormatOnline(file, c_password);
             Stream imagesPng = TestUtils.SlidesApi.DownloadImagesOnline(file, ImageExportFormat.Png, c_password);
@@ -101,13 +100,35 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         [Test]
         public void ImageDownloadRequest()
         {
-            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
             Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
             Stream image = TestUtils.SlidesApi.DownloadImageDefaultFormatOnline(file, c_imageIndex, c_password);
             Stream imagePng = TestUtils.SlidesApi.DownloadImageOnline(file, c_imageIndex, ImageExportFormat.Png, c_password);
             Assert.IsTrue(image.CanRead);
             Assert.IsTrue(imagePng.CanRead);
             Assert.AreNotEqual(image.Length, imagePng.Length);
+        }
+
+        [Test]
+        public void ImageDownloadQuality()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Stream imageGood = TestUtils.SlidesApi.DownloadImage(c_fileName, c_imageIndex, ImageExportFormat.Jpeg, c_password, c_folderName, null, 100);
+            Stream imageBad = TestUtils.SlidesApi.DownloadImage(c_fileName, c_imageIndex, ImageExportFormat.Jpeg, c_password, c_folderName, null, 50);
+            Assert.IsTrue(imageGood.CanRead);
+            Assert.IsTrue(imageBad.CanRead);
+            Assert.Greater(imageGood.Length, imageBad.Length);
+        }
+
+        [Test]
+        public void ImageDownloadQualityUseless()
+        {
+            Stream file = File.OpenRead(Path.Combine(TestUtils.TestDataPath, c_fileName));
+            Stream imageGood = TestUtils.SlidesApi.DownloadImageOnline(file, c_imageIndex, ImageExportFormat.Png, c_password, 100);
+            Stream imageBad = TestUtils.SlidesApi.DownloadImageOnline(file, c_imageIndex, ImageExportFormat.Png, c_password, 50);
+            Assert.IsTrue(imageGood.CanRead);
+            Assert.IsTrue(imageBad.CanRead);
+            //Quality property only has effect on Jpeg images so these two must be identical
+            Assert.AreEqual(imageGood.Length, imageBad.Length);
         }
 
         [Test]

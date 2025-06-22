@@ -1625,6 +1625,45 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Create video captions track. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index (must refer to a picture frame).</param> 
+        /// <param name="label">Caption track label.</param> 
+        /// <param name="data">Caption track data.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <returns><see cref="CaptionTrack"/></returns>            
+        public CaptionTrack CreateVideoCaptionTrack(string name, int slideIndex, int shapeIndex, string label, string data = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling CreateVideoCaptionTrack");
+            }
+            // verify the required parameter 'label' is set
+            if (label == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'label' when calling CreateVideoCaptionTrack");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/captionTracks");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "label", label);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var postBody = SerializationHelper.Serialize(data); // http body (model) parameter
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<CaptionTrack>(resourcePath, "POST", postBody, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Adds a text watermark to each slide of the presentation. Text watermark can be setup via method arguments or withing Shape DTO for detailed customization. Both options are applicable simultaneously.  
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -2319,37 +2358,6 @@ namespace Aspose.Slides.Cloud.Sdk
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeApi<Paragraphs>(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
-        }
-
-        /// <summary>
-        /// Deletes cropped areas of a pictire. 
-        /// </summary>
-        /// <param name="name">Document name.</param> 
-        /// <param name="slideIndex">Slide index.</param> 
-        /// <param name="shapeIndex">Shape index (must refer to a picture frame).</param> 
-        /// <param name="password">Document password.</param> 
-        /// <param name="folder">Document folder.</param> 
-        /// <param name="storage">Presentation storage.</param> 
-        /// <returns><see cref=""/></returns>            
-        [System.Obsolete]
-        public void DeletePictureCroppedAreas(string name, int slideIndex, int shapeIndex, string password = null, string folder = null, string storage = null)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-            {
-                throw new ApiException(400, "Missing required parameter 'name' when calling DeletePictureCroppedAreas");
-            }
-            // create path and map variables
-            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/pictureCroppedAreas");
-            var headerParams = new Dictionary<string, string>();
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
-            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
-            UrlHelper.AddHeaderParameter(headerParams, "password", password);
-            var requestFiles = new List<FileInfo>();
-            InvokeVoidApi(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
         }
 
         /// <summary>
@@ -3399,6 +3407,68 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Delete video captions track. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index (must refer to a video frame).</param> 
+        /// <param name="captionsIndex">Captions track index.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void DeleteVideoCaptionTrack(string name, int slideIndex, int shapeIndex, int captionsIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteVideoCaptionTrack");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/captionTracks/{captionsIndex}");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "captionsIndex", captionsIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            InvokeVoidApi(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
+        /// Delete all video captions tracks. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index (must refer to a video frame).</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <returns><see cref=""/></returns>            
+        public void DeleteVideoCaptionTracks(string name, int slideIndex, int shapeIndex, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling DeleteVideoCaptionTracks");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/captionTracks");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            InvokeVoidApi(resourcePath, "DELETE", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Removes shapes with name \&quot;watermark\&quot; from the presentation. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -3486,8 +3556,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
+        /// <param name="quality">Image quality (0 to 100; has effect only on Jpeg format).</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadImage(string name, int index, ImageExportFormat format, string password = null, string folder = null, string storage = null)
+        public System.IO.Stream DownloadImage(string name, int index, ImageExportFormat format, string password = null, string folder = null, string storage = null, int? quality = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -3502,6 +3573,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "quality", quality);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeBinaryApi(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
@@ -3570,8 +3642,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="index">Image index.</param> 
         /// <param name="format">Export format (png, jpg, gif).</param> 
         /// <param name="password">Document password.</param> 
+        /// <param name="quality">Image quality (0 to 100; has effect only on Jpeg format).</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadImageOnline(System.IO.Stream document, int index, ImageExportFormat format, string password = null)
+        public System.IO.Stream DownloadImageOnline(System.IO.Stream document, int index, ImageExportFormat format, string password = null, int? quality = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -3584,6 +3657,7 @@ namespace Aspose.Slides.Cloud.Sdk
             var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "index", index);
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "quality", quality);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             if (document != null) 
@@ -3601,8 +3675,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
+        /// <param name="quality">Image quality (0 to 100; has effect only on Jpeg format).</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadImages(string name, ImageExportFormat format, string password = null, string folder = null, string storage = null)
+        public System.IO.Stream DownloadImages(string name, ImageExportFormat format, string password = null, string folder = null, string storage = null, int? quality = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -3616,6 +3691,7 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "quality", quality);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             return InvokeBinaryApi(resourcePath, "POST", null, headerParams, requestFiles, "application/json");
@@ -3679,8 +3755,9 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="document">Document data.</param> 
         /// <param name="format">Export format (png, jpg, gif).</param> 
         /// <param name="password">Document password.</param> 
+        /// <param name="quality">Image quality (0 to 100; has effect only on Jpeg format).</param> 
         /// <returns><see cref="System.IO.Stream"/></returns>            
-        public System.IO.Stream DownloadImagesOnline(System.IO.Stream document, ImageExportFormat format, string password = null)
+        public System.IO.Stream DownloadImagesOnline(System.IO.Stream document, ImageExportFormat format, string password = null, int? quality = null)
         {
             // verify the required parameter 'document' is set
             if (document == null)
@@ -3692,6 +3769,7 @@ namespace Aspose.Slides.Cloud.Sdk
             var headerParams = new Dictionary<string, string>();
             var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "format", format);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "quality", quality);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var requestFiles = new List<FileInfo>();
             if (document != null) 
@@ -5892,6 +5970,38 @@ namespace Aspose.Slides.Cloud.Sdk
         }
 
         /// <summary>
+        /// Gets video captions tracks. 
+        /// </summary>
+        /// <param name="name">Document name.</param> 
+        /// <param name="slideIndex">Slide index.</param> 
+        /// <param name="shapeIndex">Shape index (must refer to a picture frame).</param> 
+        /// <param name="includeData">true to include caption data string values in the response.</param> 
+        /// <param name="password">Document password.</param> 
+        /// <param name="folder">Document folder.</param> 
+        /// <param name="storage">Presentation storage.</param> 
+        /// <returns><see cref="CaptionTracks"/></returns>            
+        public CaptionTracks GetVideoCaptionTracks(string name, int slideIndex, int shapeIndex, bool? includeData = null, string password = null, string folder = null, string storage = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling GetVideoCaptionTracks");
+            }
+            // create path and map variables
+            string resourcePath = GetResourceUrl("/slides/{name}/slides/{slideIndex}/shapes/{shapeIndex}/captionTracks");
+            var headerParams = new Dictionary<string, string>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "slideIndex", slideIndex);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "shapeIndex", shapeIndex);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "includeData", includeData);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            UrlHelper.AddHeaderParameter(headerParams, "password", password);
+            var requestFiles = new List<FileInfo>();
+            return InvokeApi<CaptionTracks>(resourcePath, "GET", null, headerParams, requestFiles, "application/json");
+        }
+
+        /// <summary>
         /// Read presentation view properties. 
         /// </summary>
         /// <param name="name">Document name.</param> 
@@ -6105,8 +6215,10 @@ namespace Aspose.Slides.Cloud.Sdk
         /// <param name="password">Document password.</param> 
         /// <param name="folder">Document folder.</param> 
         /// <param name="storage">Document storage.</param> 
+        /// <param name="position">Slide index before which the HTML should be added (add to the end by default).</param> 
+        /// <param name="useSlideWithIndexAsStart">true to insert data starting from an empty space on the slide with the specified index; false to add data to the created slides.</param> 
         /// <returns><see cref="Document"/></returns>            
-        public Document ImportFromHtml(string name, string html = null, string password = null, string folder = null, string storage = null)
+        public Document ImportFromHtml(string name, string html = null, string password = null, string folder = null, string storage = null, int? position = null, bool? useSlideWithIndexAsStart = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6119,6 +6231,8 @@ namespace Aspose.Slides.Cloud.Sdk
             resourcePath = UrlHelper.AddPathParameter(resourcePath, "name", name);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", folder);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", storage);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "position", position);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "useSlideWithIndexAsStart", useSlideWithIndexAsStart);
             UrlHelper.AddHeaderParameter(headerParams, "password", password);
             var postBody = SerializationHelper.Serialize(html); // http body (model) parameter
             var requestFiles = new List<FileInfo>();

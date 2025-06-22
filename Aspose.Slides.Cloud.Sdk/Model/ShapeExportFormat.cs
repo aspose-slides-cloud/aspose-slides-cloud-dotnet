@@ -70,7 +70,12 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Enum Svg for "Svg"
         /// </summary>
-        Svg
+        Svg,
+        
+        /// <summary>
+        /// Enum Emf for "Emf"
+        /// </summary>
+        Emf
     }
 
 }

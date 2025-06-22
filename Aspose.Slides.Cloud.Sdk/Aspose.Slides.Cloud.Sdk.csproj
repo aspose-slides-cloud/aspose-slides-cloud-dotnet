@@ -110,6 +110,8 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\BubbleChartDataPoint.cs" />
     <Compile Include="Model\BubbleSeries.cs" />
     <Compile Include="Model\Camera.cs" />
+    <Compile Include="Model\CaptionTrack.cs" />
+    <Compile Include="Model\CaptionTracks.cs" />
     <Compile Include="Model\Chart.cs" />
     <Compile Include="Model\ChartCategory.cs" />
     <Compile Include="Model\ChartLinesFormat.cs" />

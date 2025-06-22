@@ -227,6 +227,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public string SvgData { get; set; }
 
         /// <summary>
+        /// true to delete picture cropped areas on save.
+        /// </summary>
+        public bool? DeletePictureCroppedAreas { get; set; }
+
+        /// <summary>
+        /// true to compress the picture image with the specified resolution (in dpi) on save.
+        /// </summary>
+        public double? Resolution { get; set; }
+
+        /// <summary>
         /// Image transform effects.
         /// </summary>
         public List<ImageTransformEffect> ImageTransformList { get; set; }
@@ -280,6 +290,8 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  Image: ").Append(this.Image).Append("\n");
             sb.Append("  Base64Data: ").Append(this.Base64Data).Append("\n");
             sb.Append("  SvgData: ").Append(this.SvgData).Append("\n");
+            sb.Append("  DeletePictureCroppedAreas: ").Append(this.DeletePictureCroppedAreas).Append("\n");
+            sb.Append("  Resolution: ").Append(this.Resolution).Append("\n");
             sb.Append("  PictureFillMode: ").Append(this.PictureFillMode).Append("\n");
             sb.Append("  ImageTransformList: ").Append(this.ImageTransformList).Append("\n");
             sb.Append("}\n");

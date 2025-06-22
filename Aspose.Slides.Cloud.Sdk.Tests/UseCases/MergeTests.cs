@@ -170,7 +170,7 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
             Assert.IsTrue(result.CanRead);
         }
 
-        const string c_urlPath = "https://drive.google.com/uc?export=download&id=1ycMzd7e--Ro9H8eH2GL5fPP7-2HjX4My";
+        const string c_urlPath = "https://www.dropbox.com/scl/fi/nz3yt2wpg4eugiw12bz3g/info.pptx?rlkey=wju4vbi6h46q8733tzzvfgufz&e=1&st=pqt66x86&dl=1";
         const string c_pdfFileName = "test.pdf";
         const string c_fileName2 = "test-unprotected.pptx";
         const string c_outpath = "merged.pptx";

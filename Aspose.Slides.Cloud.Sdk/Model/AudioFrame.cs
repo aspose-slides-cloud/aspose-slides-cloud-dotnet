@@ -153,6 +153,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public bool? PlayLoopMode { get; set; }
 
         /// <summary>
+        /// Audio volume percent.
+        /// </summary>
+        public double? VolumeValue { get; set; }
+
+        /// <summary>
         /// Audio data encoded in base64.
         /// </summary>
         public string Base64Data { get; set; }
@@ -166,6 +171,26 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Determines whether audio is automatically rewound to start after playing.
         /// </summary>
         public bool? RewindAudio { get; set; }
+
+        /// <summary>
+        /// Time duration for the initial fade-in of the media in milliseconds.
+        /// </summary>
+        public double? FadeInDuration { get; set; }
+
+        /// <summary>
+        /// Time duration for the ending fade-out of the media in milliseconds.
+        /// </summary>
+        public double? FadeOutDuration { get; set; }
+
+        /// <summary>
+        /// Time duration to be removed from the beginning of the media during playback in milliseconds.
+        /// </summary>
+        public double? TrimFromStart { get; set; }
+
+        /// <summary>
+        /// Time duration to be removed from the end of the media during playback in milliseconds.
+        /// </summary>
+        public double? TrimFromEnd { get; set; }
 
         /// <summary>
         /// Picture fill format.
@@ -235,9 +260,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  PlayLoopMode: ").Append(this.PlayLoopMode).Append("\n");
             sb.Append("  PlayMode: ").Append(this.PlayMode).Append("\n");
             sb.Append("  Volume: ").Append(this.Volume).Append("\n");
+            sb.Append("  VolumeValue: ").Append(this.VolumeValue).Append("\n");
             sb.Append("  Base64Data: ").Append(this.Base64Data).Append("\n");
             sb.Append("  PlayAcrossSlides: ").Append(this.PlayAcrossSlides).Append("\n");
             sb.Append("  RewindAudio: ").Append(this.RewindAudio).Append("\n");
+            sb.Append("  FadeInDuration: ").Append(this.FadeInDuration).Append("\n");
+            sb.Append("  FadeOutDuration: ").Append(this.FadeOutDuration).Append("\n");
+            sb.Append("  TrimFromStart: ").Append(this.TrimFromStart).Append("\n");
+            sb.Append("  TrimFromEnd: ").Append(this.TrimFromEnd).Append("\n");
             sb.Append("  PictureFillFormat: ").Append(this.PictureFillFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

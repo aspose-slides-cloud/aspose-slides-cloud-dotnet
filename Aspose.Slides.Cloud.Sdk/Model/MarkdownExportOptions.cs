@@ -217,6 +217,30 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         }
 
         /// <summary>
+        /// Specifies how repeated space characters are preserved to maintain visual alignment. 
+        /// </summary>
+        /// <value>Specifies how repeated space characters are preserved to maintain visual alignment. </value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum HandleRepeatedSpacesEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum AlternateSpacesToNbsp for "AlternateSpacesToNbsp"
+            /// </summary>
+            AlternateSpacesToNbsp,
+            
+            /// <summary>
+            /// Enum MultipleSpacesToNbsp for "MultipleSpacesToNbsp"
+            /// </summary>
+            MultipleSpacesToNbsp
+        }
+
+        /// <summary>
         /// Specifies markdown specification to convert presentation. Default is TextOnly.
         /// </summary>
         public ExportTypeEnum? ExportType { get; set; }
@@ -230,6 +254,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Specifies whether the generated document should have new lines of \\\\r(Macintosh), \\\\n(Unix) or \\\\r\\\\n(Windows). Default is Unix.
         /// </summary>
         public NewLineTypeEnum? NewLineType { get; set; }
+
+        /// <summary>
+        /// Specifies how repeated space characters are preserved to maintain visual alignment. 
+        /// </summary>
+        public HandleRepeatedSpacesEnum? HandleRepeatedSpaces { get; set; }
 
         /// <summary>
         /// Specifies folder name to save images. Default is Images. 
@@ -250,6 +279,16 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// Specifies whether the generated document should include hidden slides. Default is false. 
         /// </summary>
         public bool? ShowHiddenSlides { get; set; }
+
+        /// <summary>
+        /// true to remove empty or whitespace-only lines from the final Markdown output. Default is false. 
+        /// </summary>
+        public bool? RemoveEmptyLines { get; set; }
+
+        /// <summary>
+        /// The format of slide number headers. 
+        /// </summary>
+        public string SlideNumberFormat { get; set; }
 
 
         /// <summary>
@@ -290,6 +329,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
+            sb.Append("  SkipJavaScriptLinks: ").Append(this.SkipJavaScriptLinks).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  ExportType: ").Append(this.ExportType).Append("\n");
             sb.Append("  Flavor: ").Append(this.Flavor).Append("\n");
@@ -298,6 +338,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  ShowSlideNumber: ").Append(this.ShowSlideNumber).Append("\n");
             sb.Append("  ShowComments: ").Append(this.ShowComments).Append("\n");
             sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
+            sb.Append("  RemoveEmptyLines: ").Append(this.RemoveEmptyLines).Append("\n");
+            sb.Append("  HandleRepeatedSpaces: ").Append(this.HandleRepeatedSpaces).Append("\n");
+            sb.Append("  SlideNumberFormat: ").Append(this.SlideNumberFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

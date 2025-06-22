@@ -157,6 +157,11 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// </summary>
         public bool? UseFrameRotation { get; set; }
 
+        /// <summary>
+        /// true to disable ligatures in the rendered output.
+        /// </summary>
+        public bool? DisableFontLigatures { get; set; }
+
 
         /// <summary>
         /// Property values to determine the type when deserializing from Json
@@ -196,6 +201,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
+            sb.Append("  SkipJavaScriptLinks: ").Append(this.SkipJavaScriptLinks).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  VectorizeText: ").Append(this.VectorizeText).Append("\n");
             sb.Append("  MetafileRasterizationDpi: ").Append(this.MetafileRasterizationDpi).Append("\n");
@@ -208,6 +214,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  ExternalFontsHandling: ").Append(this.ExternalFontsHandling).Append("\n");
             sb.Append("  UseFrameSize: ").Append(this.UseFrameSize).Append("\n");
             sb.Append("  UseFrameRotation: ").Append(this.UseFrameRotation).Append("\n");
+            sb.Append("  DisableFontLigatures: ").Append(this.DisableFontLigatures).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

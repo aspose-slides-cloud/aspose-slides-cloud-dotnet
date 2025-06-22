@@ -40,64 +40,6 @@ namespace Aspose.Slides.Cloud.Sdk.Model
     public class SwfExportOptions : ExportOptions 
     {                       
         /// <summary>
-        /// Gets or sets the position of the notes on the page.
-        /// </summary>
-        /// <value>Gets or sets the position of the notes on the page.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum NotesPositionEnum
-        {
-            
-            /// <summary>
-            /// Enum None for "None"
-            /// </summary>
-            None,
-            
-            /// <summary>
-            /// Enum BottomFull for "BottomFull"
-            /// </summary>
-            BottomFull,
-            
-            /// <summary>
-            /// Enum BottomTruncated for "BottomTruncated"
-            /// </summary>
-            BottomTruncated
-        }
-
-        /// <summary>
-        /// Gets or sets the position of the comments on the page.
-        /// </summary>
-        /// <value>Gets or sets the position of the comments on the page.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum CommentsPositionEnum
-        {
-            
-            /// <summary>
-            /// Enum None for "None"
-            /// </summary>
-            None,
-            
-            /// <summary>
-            /// Enum Bottom for "Bottom"
-            /// </summary>
-            Bottom,
-            
-            /// <summary>
-            /// Enum Right for "Right"
-            /// </summary>
-            Right
-        }
-
-        /// <summary>
-        /// Gets or sets the position of the notes on the page.
-        /// </summary>
-        public NotesPositionEnum? NotesPosition { get; set; }
-
-        /// <summary>
-        /// Gets or sets the position of the comments on the page.
-        /// </summary>
-        public CommentsPositionEnum? CommentsPosition { get; set; }
-
-        /// <summary>
         /// Specifies whether the generated document should include hidden slides or not. Default is false. 
         /// </summary>
         public bool? ShowHiddenSlides { get; set; }
@@ -173,19 +115,9 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         public int? JpegQuality { get; set; }
 
         /// <summary>
-        /// Gets or sets the width of the comment output area in pixels (Applies only if comments are displayed on the right).
+        /// Slides layouting options
         /// </summary>
-        public int? CommentsAreaWidth { get; set; }
-
-        /// <summary>
-        /// Gets or sets the color of comments area (Applies only if comments are displayed on the right).
-        /// </summary>
-        public string CommentsAreaColor { get; set; }
-
-        /// <summary>
-        /// True if comments that have no author are displayed. (Applies only if comments are displayed).
-        /// </summary>
-        public bool? ShowCommentsByNoAuthor { get; set; }
+        public SlidesLayoutOptions SlidesLayoutOptions { get; set; }
 
 
         /// <summary>
@@ -226,6 +158,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
+            sb.Append("  SkipJavaScriptLinks: ").Append(this.SkipJavaScriptLinks).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  ShowHiddenSlides: ").Append(this.ShowHiddenSlides).Append("\n");
             sb.Append("  Compressed: ").Append(this.Compressed).Append("\n");
@@ -242,11 +175,7 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  LogoImage: ").Append(this.LogoImage).Append("\n");
             sb.Append("  LogoLink: ").Append(this.LogoLink).Append("\n");
             sb.Append("  JpegQuality: ").Append(this.JpegQuality).Append("\n");
-            sb.Append("  NotesPosition: ").Append(this.NotesPosition).Append("\n");
-            sb.Append("  CommentsPosition: ").Append(this.CommentsPosition).Append("\n");
-            sb.Append("  CommentsAreaWidth: ").Append(this.CommentsAreaWidth).Append("\n");
-            sb.Append("  CommentsAreaColor: ").Append(this.CommentsAreaColor).Append("\n");
-            sb.Append("  ShowCommentsByNoAuthor: ").Append(this.ShowCommentsByNoAuthor).Append("\n");
+            sb.Append("  SlidesLayoutOptions: ").Append(this.SlidesLayoutOptions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

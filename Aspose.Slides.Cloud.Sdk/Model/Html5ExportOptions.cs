@@ -57,12 +57,17 @@ namespace Aspose.Slides.Cloud.Sdk.Model
         /// <summary>
         /// Slides layouting options
         /// </summary>
-        public NotesCommentsLayoutingOptions NotesCommentsLayouting { get; set; }
+        public SlidesLayoutOptions SlidesLayoutOptions { get; set; }
 
         /// <summary>
         /// Path to custom templates
         /// </summary>
         public string TemplatesPath { get; set; }
+
+        /// <summary>
+        /// true to disable ligatures in the rendered output.
+        /// </summary>
+        public bool? DisableFontLigatures { get; set; }
 
 
         /// <summary>
@@ -103,12 +108,14 @@ namespace Aspose.Slides.Cloud.Sdk.Model
             sb.Append("  GradientStyle: ").Append(this.GradientStyle).Append("\n");
             sb.Append("  FontFallbackRules: ").Append(this.FontFallbackRules).Append("\n");
             sb.Append("  FontSubstRules: ").Append(this.FontSubstRules).Append("\n");
+            sb.Append("  SkipJavaScriptLinks: ").Append(this.SkipJavaScriptLinks).Append("\n");
             sb.Append("  Format: ").Append(this.Format).Append("\n");
             sb.Append("  AnimateTransitions: ").Append(this.AnimateTransitions).Append("\n");
             sb.Append("  AnimateShapes: ").Append(this.AnimateShapes).Append("\n");
             sb.Append("  EmbedImages: ").Append(this.EmbedImages).Append("\n");
-            sb.Append("  NotesCommentsLayouting: ").Append(this.NotesCommentsLayouting).Append("\n");
+            sb.Append("  SlidesLayoutOptions: ").Append(this.SlidesLayoutOptions).Append("\n");
             sb.Append("  TemplatesPath: ").Append(this.TemplatesPath).Append("\n");
+            sb.Append("  DisableFontLigatures: ").Append(this.DisableFontLigatures).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

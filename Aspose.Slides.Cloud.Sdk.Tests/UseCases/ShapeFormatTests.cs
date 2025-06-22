@@ -26,6 +26,8 @@
 using Aspose.Slides.Cloud.Sdk.Model;
 using Aspose.Slides.Cloud.Sdk.Tests.Utils;
 using NUnit.Framework;
+using System.IO;
+using System;
 
 namespace Aspose.Slides.Cloud.Sdk.Tests
 {
@@ -75,6 +77,25 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
         }
 
         [Test]
+        public void ShapeFormatPictureFill()
+        {
+            TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
+            Shape dto = new Shape
+            {
+                FillFormat = new PictureFill
+                {
+                    Base64Data = Convert.ToBase64String(File.ReadAllBytes(Path.Combine(TestUtils.TestDataPath, c_imageFileName))),
+                    Resolution = 150
+                }
+            };
+            ShapeBase shape = TestUtils.SlidesApi.UpdateShape(c_fileName, c_slideIndex, c_shapeIndex, dto, password: c_password, folder: c_folderName);
+            Assert.IsInstanceOf<Shape>(shape);
+            shape = TestUtils.SlidesApi.GetShape(c_fileName, c_slideIndex, c_shapeIndex, password: c_password, folder: c_folderName);
+            Assert.IsInstanceOf<Shape>(shape);
+            Assert.IsInstanceOf<PictureFill>(shape.FillFormat);
+        }
+
+        [Test]
         public void ShapeFormatEffect()
         {
             TestUtils.Upload(c_fileName, c_folderName + "/" + c_fileName);
@@ -115,5 +136,6 @@ namespace Aspose.Slides.Cloud.Sdk.Tests
 
         const int c_slideIndex = 1;
         const int c_shapeIndex = 1;
+        const string c_imageFileName = "watermark.png";
     }
 }
